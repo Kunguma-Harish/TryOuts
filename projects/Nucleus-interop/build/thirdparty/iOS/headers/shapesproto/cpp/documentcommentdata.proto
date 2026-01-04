@@ -1,0 +1,19 @@
+syntax="proto3";
+
+package com.zoho.comment.build;
+
+option java_package = "com.zoho.comment.build";
+option java_outer_classname = "DocumentCommentDataProtos";
+
+import "docbasemeta.proto";
+import "documentcomment.proto";
+
+message DocumentCommentData {
+
+	optional com.zoho.comment.DocumentComment docComment = 1;
+
+	optional com.zoho.common.DocBaseMeta baseMeta = 2;
+
+	optional string docCommentId = 3; //Document comment id (We don't have the client key for the document comment, so we're using the database ID instead)
+
+}

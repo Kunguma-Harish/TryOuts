@@ -1,0 +1,30 @@
+syntax="proto3";
+package com.zoho.theme;
+
+option java_package = "com.zoho.theme";
+option java_outer_classname = "ThemeProtos";
+
+import "fontscheme.proto";
+import "colorscheme.proto";
+import "fillscheme.proto";
+import "strokescheme.proto";
+import "google/protobuf/protoextensions.proto";
+
+message Theme {
+
+	// Name of the theme.	
+	optional string name = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	optional FontScheme fontScheme = 2 [(com.zoho.common.customOptions).requiredField = true];
+
+	optional ColorScheme colorScheme = 3 [(com.zoho.common.customOptions).requiredField = true];
+
+	optional FillScheme bgFillScheme = 4 [(com.zoho.common.customOptions).requiredField = true]; // background fill styles..
+
+	optional FillScheme fillScheme = 5 [(com.zoho.common.customOptions).requiredField = true]; // fill styles.
+
+	optional StrokeScheme strokeScheme = 6 [(com.zoho.common.customOptions).requiredField = true]; // stroke styles.
+	
+	// Theme document ID. This is only temporary data , any code should check for schemes (and any other needed stuffs) using this document id and if not present should continue its check in the full list of docs.
+	optional string themeId = 99; 
+}

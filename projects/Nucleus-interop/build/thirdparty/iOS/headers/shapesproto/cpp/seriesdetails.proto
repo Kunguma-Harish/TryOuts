@@ -1,0 +1,31 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "SeriesDetailsProtos";
+
+import "category.proto";
+import "seriestext.proto";
+import "seriesvalue.proto";
+import "properties.proto";
+import "datalabels.proto";
+import "datapoint.proto";
+
+message SeriesDetails {
+	
+	optional SeriesText tx = 1;	 
+	optional com.zoho.shapes.Category cat = 2;
+	optional SeriesValue val = 3;
+	
+	// Data Label for a series.
+	optional DataLabels dataLabel = 4;
+		
+	// Modified Shape properties.
+	optional com.zoho.shapes.Properties props = 5;	
+	
+	repeated DataPoint dataPoint = 6;	
+			
+	optional SeriesValue bubbleSize = 7; // Size of the bubble.
+}
+

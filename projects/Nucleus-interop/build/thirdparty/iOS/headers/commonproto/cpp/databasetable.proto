@@ -1,0 +1,31 @@
+syntax="proto3";
+package com.zoho.database;
+
+option java_package = "com.zoho.database";
+option java_outer_classname = "DatabaseTableProtos";
+
+import "fields.proto";
+import "databasetabledefinition.proto";
+import "selecttableview.proto";
+import "databasetablerow.proto";
+
+message DatabaseTable {
+
+	optional Show.DatabaseField.TableOrColumnCategory category = 1;
+
+	message ParentTable {
+
+		optional DatabaseTableDefinition dbTableDefinition = 1;
+
+		repeated DatabaseTableRow rows = 2;
+	}
+	optional ParentTable parent = 2;
+
+	message ChildTable {
+		optional string tableId = 1;	
+	}
+	optional ChildTable child = 3;	
+
+	optional SelectTableView select = 4;
+
+}	

@@ -1,0 +1,26 @@
+syntax="proto3";
+
+// Actual Font name.
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "FontProtos";
+
+import "fontref.proto";
+//import "fields.proto";
+import "fontfamily.proto";
+import "fontstyle.proto";
+
+message Font {
+	
+	optional FontRef ref = 1;
+	optional com.zoho.common.FontFamily fontFamily = 2;
+	optional com.zoho.common.FontFamily symbol = 3; // used mainly for symbol fonts.	
+	
+	// Font Styles supported by this Font.	
+	repeated com.zoho.common.FontStyle styles = 4;
+	
+	// Embedded Font details are available in document proto. Here only the id for the same is contained.
+	optional string embeddedFontId = 5;
+}
+

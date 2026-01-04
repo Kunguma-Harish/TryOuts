@@ -1,0 +1,69 @@
+syntax="proto2";
+
+package com.zoho.shapes;
+
+import "font.proto";
+import "fields.proto";
+import "fontreference.proto";
+import "tablecellstyle.proto";
+import "fill.proto";
+import "reference.proto";
+import "effects.proto";
+import "color.proto";
+import "parastyle.proto";
+import "verticalaligntype.proto";
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "TableStyleProtos";
+
+message TableStyle {
+
+	required string id = 1 ; // Unique Identifier.
+	optional string name = 2; // Name.
+	
+	message TableCellTextStyle {
+		optional FontReference fontRef = 1;
+		optional Font font = 2;
+		optional Color color = 3; // overwrite the fontRef Color with this color i.e. Color of the font.
+
+		optional bool bold = 4;
+		optional bool italic = 5;
+		
+		
+		optional float size = 6; // font size , in pt. Font Size alone is stored in Pt instead of pixel , as there are rendering differences in the browser between pixel and point. The font size will change accoring to the slide size and will be handled by Rendering engine. 
+
+		optional ParaStyle paraStyle = 7;	
+	}
+
+	message TablePartStyle {
+		optional TableCellStyle cellStyle = 1;
+		optional TableCellTextStyle cellTextStyle = 2;
+
+		optional com.zoho.common.VerticalAlignType valign = 3[default = TOP];
+
+		optional Show.TableField.TextDirection textDir = 4; //[default = HORIZONTAL];
+	}	
+
+	optional TablePartStyle table = 3;
+	optional TablePartStyle band1H = 4; // Odd numbered Rows i.e. 1,3,5
+	optional TablePartStyle band1V = 5; // Odd numbered Columns i.e. 1,3,5
+	optional TablePartStyle band2H = 6; // Even numbered Rows i.e. 2,4,6
+	optional TablePartStyle band2V = 7; // Even numbered Columns i.e. 2,4,6
+	optional TablePartStyle lastCol = 8; // Last Column
+	optional TablePartStyle firstCol = 9; // First Column.
+	optional TablePartStyle lastRow = 10; // Last Row
+	optional TablePartStyle firstRow = 11; // First Row
+	optional TablePartStyle seCell = 12; // South East Cell
+	optional TablePartStyle swCell = 13; // South West Cell
+	optional TablePartStyle neCell = 14; // North East Cell
+	optional TablePartStyle nwCell = 15; // North West Cell
+
+	message TableBackground {
+		optional Fill fill = 1;
+		optional Reference fillRef = 2;
+
+		optional Effects effects = 3;
+	}
+
+	optional TableBackground bg = 16;
+}	

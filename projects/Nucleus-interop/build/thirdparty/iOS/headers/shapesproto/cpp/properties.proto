@@ -1,0 +1,60 @@
+syntax="proto3";
+
+// Properties.
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PropertiesProtos";
+
+import "transform.proto";
+import "fill.proto";
+import "stroke.proto";
+import "shapegeometry.proto";
+import "effects.proto";
+import "animation.proto";
+import "animationdata.proto";
+import "blur.proto";
+import "fields.proto";
+import "animatethyself.proto";
+//import "stylereference.proto";
+import "stylereferencedetails.proto";
+import "background.proto";
+
+message Properties {
+		
+	optional Transform transform = 1; // 2D Transformation
+
+	optional Fill fill = 2; // Fill
+
+	optional Stroke stroke = 3; // Stroke
+
+	optional ShapeGeometry geom = 4; // Shape Geometry. 	
+
+	optional Effects effects = 5; // Effects list
+	
+	// Common Animation data for shape and all the paragraph in shape.
+	repeated Animation anim = 6; // Animation 
+
+	// If the animation for BG alone is changed this data will be updated.
+	repeated AnimationData animData = 7;
+	
+	//Use these when the shape is going to have multiple fill/stroke values.
+	repeated Fill fills = 8;
+
+	repeated Stroke strokes = 9;
+
+	// transparency ranges from 0-1 , 0 indicates none(opaque) , 1 indicates fully transparent.
+	optional float alpha = 10; 
+
+	optional Blur blur = 11;
+ 
+	optional Show.ShapeField.BlendMode blend = 12;
+
+	optional AnimateThyself animateThyself = 13;	
+
+	optional StyleReferenceDetails styleRef = 14;
+
+	optional Background background = 15;
+
+}

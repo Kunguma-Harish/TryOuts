@@ -1,0 +1,71 @@
+syntax="proto3";
+
+// Font Properties can be applied only for portions
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PortionPropsProtos";
+
+import "fill.proto";
+import "stroke.proto";
+import "font.proto";
+import "hyperlink.proto";
+import "linetype.proto";
+import "effects.proto";
+//import "blur.proto";
+//import "stylereference.proto";
+import "stylereferencedetails.proto";
+import "textlayerproperties.proto";
+
+import "fields.proto";
+
+message PortionProps {
+	
+	optional Font font = 1;	// font name
+	optional Fill fill = 2; // font fill
+	optional Stroke stroke = 3; // font stroke
+	optional float size = 4; // font size , in pt. Font Size alone is stored in Pt instead of pixel , as there are rendering differences in the browser between pixel and point. The font size will change accoring to the slide size and will be handled by Rendering engine. 
+	
+	optional bool bold = 5; // Bold -- Deprecated.
+	optional bool italic = 6; // Italic
+	optional LineType underline = 7; // Underline	
+
+	optional LineType strike = 8; // Strike through	
+
+	optional float baseline = 9; // As of now , any positive value indicates superscript and negative value indicates subscript. 0.3 represents 30% superscript and -0.25 represents 25% subscript. % indicates depends on font size.
+	optional Show.PortionField.FontVariant cap = 10;
+	
+	optional float space = 11; // Positive Value indicate expansion of Character space , negative values indicates contraction. indicated in Px.
+	
+	optional HyperLink click = 12; // Hyperlink action on click
+	optional HyperLink hover = 13; // Hyperlink action on mouse over.
+
+	// Replace "bold" with this enum.
+	optional Show.PortionField.FontWeight fontweight = 14; 
+		
+	// Indicates whether we have checked the contents for any spelling/grammar and if it has any errors.
+	message ReviewCheck {
+		enum ReviewState {
+			ERROR = 0;
+			PROCESSED = 1;
+			IGNORED = 2;
+		}
+		optional ReviewState state = 1;
+		
+		optional string lang = 2;
+	}
+	optional ReviewCheck chk = 15;
+
+	// Comments associated with this portion.
+	repeated string commentIds = 16;
+
+	optional Effects effects = 17; // Effects on a text i.e. Shadow , reflection etc..
+
+	optional string postScriptName = 18; // This is the font post script name. Required to handle all system based fonts. 
+
+	optional TextLayerProperties textLayerProps = 19;
+
+	optional StyleReferenceDetails styleRef = 20;
+	
+	optional Fill highlight = 21;
+}

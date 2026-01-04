@@ -1,0 +1,18 @@
+syntax="proto3";
+
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "ChartLineProtos";
+
+import "properties.proto";
+
+message ChartLine {
+	enum ChartLinePropsType {
+		STD = 0; // Follow default.
+		CUSTOM = 1;
+	}
+	optional ChartLinePropsType type = 1; //[default = STD];
+	optional com.zoho.shapes.Properties custom = 2;
+}	

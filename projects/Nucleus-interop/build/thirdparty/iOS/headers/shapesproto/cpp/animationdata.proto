@@ -1,0 +1,42 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "AnimationDataProtos";
+
+import "displayanimation.proto";
+import "styleanimation.proto";
+import "animationtrigger.proto";
+import "animationdetail.proto";
+import "pathanimation.proto";
+import "mediaanimation.proto";
+import "google/protobuf/protoextensions.proto";
+
+message AnimationData {
+
+	optional string id = 1 [(com.zoho.common.customOptions).requiredField = true];	// Animation id
+
+	enum AnimationVariant {
+		ENTRY = 0;
+		EXIT = 1;
+		EMPHASIS = 2;
+		PATH = 3; // Path Animation
+		MEDIA = 4;
+	}
+	optional AnimationVariant variant = 2 [(com.zoho.common.customOptions).requiredField = true];
+
+	optional DisplayAnimation entry = 3;
+	optional DisplayAnimation exit = 4;
+	optional StyleAnimation emphasis = 5;
+
+	optional AnimationTrigger trigger = 6 [(com.zoho.common.customOptions).requiredField = true];
+
+	optional AnimationDetail detail = 7; // Details about the animation.
+
+	// Whenever a para contains an animation , we need to know the animation it overrides.
+	// This variable will carry the id of the animationgroup overridden.
+	optional string parentId = 8;
+
+	optional PathAnimation path = 9;
+	optional MediaAnimation media = 10;
+}

@@ -1,0 +1,27 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "DocBaseMetaProtos";
+
+import "time.proto";
+import "applicationversion.proto";
+
+message DocBaseMeta {
+
+	optional com.zoho.common.Time createdTime = 1;
+
+	optional string author = 2;
+
+	optional string collaborationId = 3;
+
+	optional CurrentDetails current = 4;
+
+	message CurrentDetails {
+		optional int32 version = 1;
+		optional com.zoho.common.Time time = 2;
+		optional string modifiedBy = 3;
+		optional ApplicationVersion appversion = 4;
+	}
+
+}

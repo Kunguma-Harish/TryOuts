@@ -1,0 +1,44 @@
+syntax="proto3";
+package com.zoho.remoteboard;
+
+option java_package = "com.zoho.remoteboard";
+option java_outer_classname = "ProjectStateProtos";
+
+import "position.proto";
+
+message ProjectState {
+
+	optional string lastOpenedDocumentId = 1;
+
+	message DocumentState {
+
+		optional string documentId = 1;
+
+		optional float zoomFactor = 2;
+
+		optional com.zoho.common.Position leftEdge = 3;
+
+	}
+
+	repeated DocumentState documentState = 2;
+
+	optional bool commentMode = 3;
+
+
+	message Navigation {
+		enum NavigationType {
+			UNKNOWN_NAVIGATIONTYPE = 0;
+			NONE = 1;
+			ALL = 2;		// Others can follow/navigate along with me
+		}
+		optional NavigationType type = 1;
+
+		optional bool viewMyCursor = 2;
+		// Other users can view my cursorLocation
+	}
+	optional Navigation navigation = 4;
+
+	optional bool showCollaboratorsCursor = 5;
+	// Other users who have allowed to see their cursorLocation, will be visible in our space
+
+}

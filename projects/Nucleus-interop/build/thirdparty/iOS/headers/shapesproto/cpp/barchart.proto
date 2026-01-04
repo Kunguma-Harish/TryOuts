@@ -1,0 +1,24 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "BarChartProtos";
+
+import "barchartdetails.proto";
+import "chartline.proto";
+import "fields.proto";
+import "google/protobuf/protoextensions.proto";
+
+message BarChart {	
+	
+	optional Show.ChartField.BarChartField.BarType type = 1;
+
+	optional BarChartDetails details = 2 [(com.zoho.common.customOptions).requiredField = true];
+
+	// This specifies how much shall bars/columns overlap i.e. each series bar/column overlapping. ranges from -1 to +1 i.e. percent values.
+	optional float overlap = 3;	// This ll decide the horizontal position of each bar/column
+	
+	// Series lines
+	repeated ChartLine seriesLines = 4;		
+}

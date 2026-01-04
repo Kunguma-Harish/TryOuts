@@ -1,0 +1,65 @@
+syntax="proto3";
+package com.zoho.database;
+
+option java_package = "com.zoho.database";
+option java_outer_classname = "SelectClauseProtos";
+
+import "fields.proto";
+import "whereexpression.proto";
+import "columnidentifier.proto";
+import "columninput.proto";
+
+message SelectClause {
+
+	message SelectExpression{
+
+		enum SelectExpressionType {
+
+			DEFAULT_SELECT_CLAUSE = 0;
+			SELECT = 1;
+			FROM = 2;
+			WHERE = 3;
+			LOGICAL_OPERATOR = 4;
+			SUBQUERY_OPERATOR = 5;
+			SORT = 6;
+			LIMIT = 7;
+		}
+
+		optional SelectExpressionType type = 1;
+
+		message SelectInput {
+
+			repeated ColumnInput columns = 1;
+		}
+		optional SelectInput select = 2;
+
+		message FromExpression {
+
+			repeated ColumnIdentifier columns = 1;
+		}
+		optional FromExpression fromExp = 3;
+
+		optional WhereExpression whereExp = 4;
+
+		optional Show.DatabaseField.SubQueryOperator subQueryOperator = 5;
+
+		optional Show.DatabaseField.LogicalOperator logicalOperator = 6;
+
+		message SortBy {
+
+			optional ColumnIdentifier column = 1;
+
+			optional Show.DatabaseField.SortOrder sort = 2;
+		}
+
+		repeated SortBy sortBy = 7;
+
+		message Limit {
+			optional int32 maximum = 1;
+		}
+		optional Limit limit = 8;
+	}
+
+	repeated SelectExpression selectExpressions = 1;
+}
+

@@ -1,0 +1,86 @@
+syntax="proto3";
+
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "NetworkKitProtos";
+
+import "awsprops.proto";
+import "azureprops.proto";
+
+
+message NetworkKit {
+
+  enum networkCategory{
+    UNKNOWN_NETWORKKIT = 0;
+    GENERAL = 1;
+    AWS = 2;
+    AZURE = 3;
+  }
+
+  optional networkCategory type = 1;
+
+  message GeneralProps {
+    enum General {
+
+      DEFAULT_GENERAL_NETWORK_SYMBOL = 0;
+      PC = 1;
+      VIRTUAL_PC = 2;
+      TERMINAL = 3;
+      DATA_PC = 4;
+      TABLET = 5;
+      CRT_MONITOR = 6;
+      LAPTOP = 7;
+      PERSONAL_DIGITAL_ASSISTANT = 8;
+      LED_MONITOR = 9;
+      SWITCH = 10;
+      DIAGNOSTIC_DEVICE = 11;
+      REPEAT = 12;
+      CARD_READER = 13;
+      PATCH_PANEL = 14;
+      RADIO_TOWER = 15;
+      BIOMETRIC_READER = 16;
+      EXTERNAL_HARD_DRIVE = 17;
+      WEB_SERVICE = 18;
+      FIBER_OPTIC = 19;
+      SATELLITE_DISH = 20;
+      VOIP_PHONE = 21;
+      PBX_PHONE = 22;
+      WIFI_ACCESS_POINT = 23;
+      RING_NETWORK = 24;
+      ETHERNET_PORT = 25;
+      SERVER = 26;
+      MAIN_FRAME = 27;
+      ROUTER = 28;
+      FIREWALL = 29;
+      USER = 30;
+      SCANNER = 31;
+      COMMUNICATION_LINK = 32;
+      SUPER_COMPUTER = 33;
+      PRINTER = 34;
+      PLOTTER = 35;
+      PROJECTOR_SCREEN = 36;
+      COPIER = 37;
+      FAX_MACHINE = 38;
+      MULTI_FUNCTION_MACHINE = 39;
+      PROJECTOR = 40;
+      CELL_PHONE = 41;
+      HUB = 42;
+      MODEM = 43;
+      TELEPHONE = 44;
+      SMART_PHONE = 45;
+      CAMERA = 46;
+      VIDEO_CAMERA = 47;
+      PEN_DRIVE = 48;
+      VIRTUAL_SERVER = 49;
+      SATELLITE = 50;	
+    }
+    optional General type = 1;
+  }
+
+  optional GeneralProps general = 2;
+  optional AWSProps aws = 3;
+  optional AzureProps azure = 4;
+
+}
+

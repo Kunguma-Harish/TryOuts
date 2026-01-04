@@ -1,0 +1,24 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "UserLibraryProtos";
+
+message UserLibrary {
+	
+	message LibraryKit {
+
+        optional string id = 1;	// project id of library
+
+		message DocumentVersionMapping {
+
+			optional string documentId = 1;
+			
+			optional string versionId = 2; // published version Id
+
+		}
+		repeated DocumentVersionMapping documentVersionMapping = 2;
+    }
+
+	repeated LibraryKit libraryKit = 1;
+}

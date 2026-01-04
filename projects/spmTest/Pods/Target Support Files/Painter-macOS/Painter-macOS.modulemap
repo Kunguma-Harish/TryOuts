@@ -1,0 +1,6 @@
+framework module Painter {
+  umbrella header "Painter-macOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

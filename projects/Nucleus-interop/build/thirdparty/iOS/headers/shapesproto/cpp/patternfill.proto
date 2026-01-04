@@ -1,0 +1,62 @@
+syntax="proto2";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PatternFillProtos";
+
+import "fields.proto";
+
+import "solidfill.proto";
+import "gradientfill.proto";
+import "picturefill.proto";
+import "dimension.proto";
+import "shapegeometry.proto";
+
+message PatternFill {
+	
+	message FillValue {
+		required Show.FillField.FillType type = 1 [ default = SOLID] ; // type of fill
+
+		optional SolidFill solid = 2; // Solid fill
+		
+		optional GradientFill gradient = 3;
+	
+		optional PictureFill pict = 4; // Picture URL
+	}
+
+	message StrokeValue {
+		optional Show.StrokeField.StrokeType type = 1; // stroke type
+
+		optional float width = 2; // stroke width , indicated in px. 
+
+		optional FillValue fill = 3;
+	
+	}
+	
+	message ForegroundShape {
+		
+		optional com.zoho.common.Dimension dim = 1; // com.zoho.common.Dimension
+	
+		optional FillValue fill = 2;
+
+		optional StrokeValue stroke = 3;	
+		
+		optional ShapeGeometry geom = 4; // Shape Geometry. 	
+	}
+	// Mostly the first shape will be used for pattern creation. At times , when we need multiple shapes with different colors we will have them in this array.
+	repeated ForegroundShape foreground = 1;
+
+	optional FillValue background = 2;
+
+	message DistanceBetweenShapes {
+		optional float left = 1;
+		optional float top = 2;	
+	}
+	optional DistanceBetweenShapes distance = 3;
+
+	optional string preset = 4; // Added for PPTX compatibility.
+
+	optional int32 rotate = 5; // rotated value
+}
+

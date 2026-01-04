@@ -1,0 +1,136 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "StyleAnimationProtos";
+
+import "fill.proto";
+import "stroke.proto";
+import "transform.proto";
+import "effects.proto";
+import "portionprops.proto";
+import "pathanimation.proto";
+
+message StyleAnimation {
+
+	// For CYCLIC Animation , apply the specified property on the shape and use the Cyclic properties to carry on the animaion.
+	// For GRADUAL Animation ==> Move gradually towards the specified property (i.e Specified property is the end point)
+	// Return to the original state.
+
+	optional Transform transform = 1; // 2D Transformation
+
+	optional Fill fill = 2; // Fill
+
+	optional Stroke stroke = 3; // Stroke
+
+	optional Effects effects = 4; // Effects list
+		
+	optional PortionProps props = 5; // portion style
+
+	// This one is only to select a particular animation type in the UI.
+    optional StyleAnimationType type = 6;
+
+	enum StyleAnimationType {
+		// Contains both transparency (Fill - GRADUAL type) and dimension (transform - CYCLIC type)
+		PULSE = 0;
+		
+		// rotate the shape by some angle in both directions (basically , clockwise and anticlockwise) for said number of cycles. Say , a shape is of intial angle 0 , now for the starting point add the angle specified in the transform property (Say 12) and rotate. The number of animation cycles is 3 and the diff angle is 24 and toggle is true. The shape than rotates to -12 for the first cycle, than to +12 for the second cycle and finally to -12 for the third cycle and returns to the original position finally(here it is zero). 
+		TEETER = 1; // CYCLIC
+		
+		// rotate the shape for some cycle. transform.rotate = 360.
+		SPIN = 2; // CYCLIC
+		
+		// grow the shape by some value. transform.dim.width = 15 , transform.dim.height = 15. If there is no diff value keep on adding the initial value for the number of cycles.
+		GROW = 3; // CYCLIC
+		
+		// Apply color tweaks for fill and stroke color. Basically use fill.solid.color and stroke.fill.solid.color.
+		// All the animations are of type "Gradual"
+		DESATURATE = 4; // Saturation will be modified.
+		LIGHTEN = 5; // Modify Saturation and luminance.
+		DARKEN = 6; // Modify Saturation and luminance.
+		TRANSPARENCY = 7; // Modify Color transparency.
+		OBJECT_COLOR = 8; // Change object color to fill.solid.color = "accent2"
+		COMPLEMENTARY_COLOR = 9; // Modify hue for fill and stroke color.
+		CONTRAST_COLOR = 10; // Modify hue for fill and stroke color.
+		FILL_COLOR = 11; // Modify Fill color to "accent2"
+		STROKE_COLOR = 12; // Modify Stroke color to "accent2"	
+		COLORPULSE = 13; // Modify Fill Color to "bg1"
+
+		BRUSH = 14; // Fill Color to "accent2" in CYCLIC way , font color to "accent2" gradually
+
+		FONT_COLOR = 15; // Change font color to "accent2" - GRADUAL
+		UNDERLINE = 16; // Underline text - GRADUAL - PER_LETTER.
+		BOLD_REVEAL = 17; // Font weight - GRADUAL - PER_LETTER
+		BOLD_FLASH = 18; // Font Weight - CYCLIC
+		GROW_WITH_COLOR = 19; // Fill and Stroke Color to accent2 - GRADUAL , Increase Font Size - Cyclic , "order" for animation will be updated.
+		FLASH = 20; // Display Block-None - CYCLIC.
+		
+		// Transform - Add/Subract left position (by some num) for said number of cycles i.e. A shape will be shaked Horizontally. 
+		SHAKE = 21; // CYCLIC
+
+		BOUNCE = 22; // CYCLIC -- KN
+ 		WAVE = 23; // CYCLIC -- Depends on height
+ 		STRIKE = 24; // GRADUAL - Font Strike.
+
+ 		// Transform the shape in certain angle with pivot point to be 0,0 ( i.e. left top).
+ 		SHIMMER = 25; // CYCLIC
+
+		PATH = 26;
+
+
+		NONE = 99; // None animation type.
+	}
+	
+	repeated StyleAnimationValues values = 7;
+
+	enum StyleAnimationProp {
+		TRANSFORM = 0;
+		FILL = 1;
+		STROKE = 2;
+		EFFECTS = 3;
+		PROPS = 4;
+	}
+
+	message StyleAnimationValues {
+		
+		optional StyleAnimationProp propType = 1;
+		optional AnimationConfiguration config = 2;
+
+		message AnimationConfiguration {
+			enum StyleAnimationCategory {
+				CYCLIC = 0; // Cyclic animation
+				GRADUAL = 1; // Animate Gradually. 
+			}
+			optional StyleAnimationCategory category = 1;
+
+			message Cyclic {	
+				optional int32 cycle = 1; // Number of animation cycles. 
+				optional float diff = 2; // uniform difference between the initial property and the run time animation prop.
+
+				enum CyclicCategory {
+					TOGGLE = 0; //toggle between true/false or positive/negative values.
+					PEAK_AND_RETURN = 1; // Reach the peak value and than return. That is add the diff values upto a point and from there on subtract them.
+				}
+				optional CyclicCategory category = 3; 
+			}
+			optional Cyclic cyclic = 2;
+
+			enum Gradual {
+				UNTIL_PROP = 0; // Move gradually towards the specified prop.
+				UNTIL_END = 1; // Move gradully till the end point i.e. till animation reaches the original state.i.e. Animation moves from original state to a specified prop which is gradual , the return to original state should also be gradual 
+			}
+			optional Gradual gradual = 3;
+		}
+	}
+
+	optional bool returnToStart = 8;// Boolean for indication of the animation to return to original state.	
+
+	// By default the order for animation is all i.e. if we have fill and stroke color modification both will happen together.
+	// If for some particular animation we need to follow an order , it will be mentioned here.
+	repeated StyleAnimationProp order = 9; // Order for the props.
+	
+	optional PathAnimation path = 10;
+}
+
+

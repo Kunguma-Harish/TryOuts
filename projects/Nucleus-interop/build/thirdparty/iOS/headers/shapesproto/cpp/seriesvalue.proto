@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "SeriesValueProtos";
+
+import "numberreference.proto";
+import "animationdata.proto";
+import "google/protobuf/protoextensions.proto";
+
+message SeriesValue {
+	optional com.zoho.shapes.NumberReference numRef = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	// Animation data for each series shall be overridden here.	
+	repeated com.zoho.shapes.AnimationData animationDatas = 2;
+}	

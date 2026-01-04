@@ -1,0 +1,21 @@
+syntax="proto2";
+
+// Marker
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "MarkerProtos";
+
+import "fields.proto";
+
+message Marker {
+	
+	required Show.StrokeField.MarkerType type = 1 [ default = NONE] ; // marker type
+
+	required Show.StrokeField.Size width = 2 [ default = MEDIUM] ; // marker width - The actual width/height depends on the rendering engine.
+	required Show.StrokeField.Size height = 3 [ default = MEDIUM] ; // marker height
+
+	
+}
+

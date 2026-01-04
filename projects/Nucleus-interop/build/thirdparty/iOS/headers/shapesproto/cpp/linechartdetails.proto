@@ -1,0 +1,26 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "LineChartDetailsProtos";
+
+import "properties.proto";
+import "linechartseries.proto";
+import "animationdata.proto";
+
+message LineChartDetails {
+	
+	
+	repeated LineChartSeries series = 1;	
+	
+	// Show/Hide DropLines
+	optional bool showDropLines = 2; //[default = false];
+
+	// Line between the value and the axis
+	optional com.zoho.shapes.Properties dropLines = 3; 	
+	
+	// Animation details for each category 
+	repeated com.zoho.shapes.AnimationData catAnim = 4;
+
+}

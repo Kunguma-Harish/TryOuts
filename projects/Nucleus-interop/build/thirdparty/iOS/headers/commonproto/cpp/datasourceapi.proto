@@ -1,0 +1,73 @@
+syntax="proto3";
+package com.zoho.common; 
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "DataSourceAPIProtos";
+
+import "google/protobuf/protoextensions.proto";
+import "fields.proto";
+
+message DataSourceAPI {
+
+	optional string id = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	optional Show.DataSourceField.DataSourceServiceType externalSource = 2;	
+	
+	message EndPoint {
+
+		message EndPointModule {
+			//Some module keys are variable ex. api/sheet/<workbookid>.
+			enum ModuleType {
+				UNKNOWN_MODULE_TYPE = 0;
+				CONSTANT = 1;	//get from str
+				ARGUMENT = 2;	//Client will pass it from datafield arguements
+			}
+
+			optional ModuleType type = 1;
+			optional string str = 2;
+		}
+		repeated EndPointModule modules = 1;
+
+	}
+	optional EndPoint endPoint = 3;
+
+	message Request {
+		message RequestKey {
+			optional string str = 1;
+			optional string value = 2;//Certain param value remains same and client wont pass this. So keeping it here.
+		}
+		repeated RequestKey keys = 1;
+
+		enum RequestMethod {
+			UNKNOWN_REQUEST_METHOD = 0;
+			GET = 1;
+			POST = 2;
+		}
+		optional RequestMethod method = 2;
+		
+		repeated RequestKey headers = 3;
+	}
+	optional Request request = 4;
+
+	message Response {
+		message ResponseParams {
+			optional string str = 1;
+		}
+		repeated ResponseParams params = 1;
+
+		enum ResponseType {
+			UNKNOWN_REPONSE_TYPE = 0;
+			JSON = 1;
+			XML = 2;
+		}
+		optional ResponseType type = 2;
+		
+	}	
+
+	optional Response successResponse = 5;
+
+	optional Response errorResponse = 6;
+
+}
+
+

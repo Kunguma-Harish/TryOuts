@@ -1,0 +1,21 @@
+syntax="proto3";
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "EmailKitProtos";
+
+
+message EmailKit {
+
+    enum EmailKitCategory {
+        UNKNOWN_EMAILKIT = 0;
+        EMAILKIT_WELCOME = 1;
+        EMAILKIT_NEWSLETTER_PROMOTION = 2;
+        EMAILKIT_ANNOUNCEMENT = 3;
+        EMAILKIT_OUTREACH = 4;
+        EMAILKIT_NOTIFICATION = 5;
+    }
+
+    optional EmailKitCategory type = 1;
+
+}

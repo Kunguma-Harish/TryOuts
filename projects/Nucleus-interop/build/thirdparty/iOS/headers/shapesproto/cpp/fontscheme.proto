@@ -1,0 +1,20 @@
+syntax="proto3";
+
+// Font Style , two styles , one for heading and the other for Paragraph
+package com.zoho.theme;
+
+option java_package = "com.zoho.theme";
+option java_outer_classname = "FontSchemeProtos";
+
+import "font.proto";
+import "google/protobuf/protoextensions.proto";
+
+message FontScheme {
+	optional string id= 1 [(com.zoho.common.customOptions).requiredField = true]; // unique Id for the scheme.
+	optional string name = 2; // Name of the theme from which this font scheme is inherited , mainly for display purpose.
+	repeated com.zoho.shapes.Font latin = 3; // Will have two fonts 0-major , 1-minor.
+	optional bool modified = 4; // Indicates whether the fontscheme has been modified or not. Will be updated for imported presentations too. 
+	// Theme document ID. This is only temporary data , any code should check for schemes (and any other needed stuffs) using this document id and if not present should continue its check in the full list of docs.
+	optional string themeId = 99; 
+
+}

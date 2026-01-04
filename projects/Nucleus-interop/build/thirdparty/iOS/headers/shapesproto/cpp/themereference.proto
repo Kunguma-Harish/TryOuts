@@ -1,0 +1,19 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ThemeReferenceProtos";
+
+import "reference.proto";
+import "fontreference.proto";
+
+message ThemeReference {
+	
+	optional Reference fillRef = 1; // Fill Reference , 
+	optional Reference strokeRef = 2; // Stroke Reference
+	optional FontReference fontRef = 3;	// Font Reference.	
+
+	// Can be Used by shapes present in the Master Slide. If useBGFill is true , fillRef denotes to Background fill.
+	optional bool useBGFill = 4; 
+}

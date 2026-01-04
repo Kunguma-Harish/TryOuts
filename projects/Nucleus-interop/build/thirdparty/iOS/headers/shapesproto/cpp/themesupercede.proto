@@ -1,0 +1,18 @@
+syntax="proto3";
+package com.zoho.theme;
+
+option java_package = "com.zoho.theme";
+option java_outer_classname = "ThemeSupercedeProtos";
+
+import "fontscheme.proto";
+import "fillscheme.proto";
+import "colorscheme.proto";
+import "strokescheme.proto";
+
+message ThemeSupercede {
+	optional FontScheme fontScheme = 1;
+	optional ColorScheme colorScheme = 2;
+	optional FillScheme bgFillScheme = 3; 
+	optional FillScheme fillScheme = 4; 
+	optional StrokeScheme strokeScheme = 5;
+}

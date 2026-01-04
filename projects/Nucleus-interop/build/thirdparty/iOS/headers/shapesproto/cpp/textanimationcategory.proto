@@ -1,0 +1,14 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "TextAnimationCategoryProtos";
+
+enum TextAnimationCategory {
+	
+	PER_LETTER = 0; // Animate one letter , used only for text animations.
+	PER_WORD = 1; // Animate one word.
+	PER_LINE = 2; // Animate one line.
+	FULL_TEXT = 3; // Animate all the text.
+}
+

@@ -1,0 +1,35 @@
+syntax="proto3";
+package com.zoho.common; 
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "DataFieldProtos";
+
+import "compositevalue.proto";
+import "databasetable.proto";
+import "google/protobuf/protoextensions.proto";
+
+message DataField {
+	
+	optional string id = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	optional string name = 2;
+
+	enum DataFieldType {
+		
+		UNKNOWN_DATAFIELD = 0;
+		DIRECT = 1;	
+		EXTERNAL = 2;
+		DATABASE_TABLE = 3;
+	}
+	optional DataFieldType fieldType = 3;
+
+	// fieldValue and dbTable will be used either directly or as a cache for external data
+	
+	optional CompositeValue fieldValue = 4;
+
+	message DatabaseTableGrid {
+		optional com.zoho.database.DatabaseTable dbTable = 1;
+	}
+	optional DatabaseTableGrid dbTableGrid = 5;
+
+}

@@ -1,0 +1,43 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "NonVisualGroupShapeDrawingPropsProtos";
+
+import "locks.proto";
+import "fields.proto";
+import "smartdiagram.proto";
+import "stickynote.proto";
+import "smartelement.proto";
+import "structure.proto";
+
+
+message NonVisualGroupShapeDrawingProps {
+
+	optional Locks locks = 1;
+
+	optional bool isSmartElement = 2; //Deprecated
+
+	optional bool silhouette = 99; //[default = false]; // Specifies whether the group shape is a silhouette - used internally by the application for rendering/editing purpose.
+
+	enum GroupshapeType {
+		UNKNOWN = 0;
+		STICKYNOTE = 1;
+		SMART_ELEMENT = 2;
+		SMART_DIAGRAM = 3;
+		STRUCTURE = 4;
+	}
+
+	optional GroupshapeType groupshapeType = 3;
+
+	optional SmartElement smartElement = 4;
+
+	optional SmartDiagram smartDiagram = 5;
+
+	optional StickyNote stickyNote = 6;
+
+	optional Structure structure = 7;
+
+	optional bool childHiddenState = 8; //[default = false]; // Specifies whether the child shapes are hidden in the canvas.
+}

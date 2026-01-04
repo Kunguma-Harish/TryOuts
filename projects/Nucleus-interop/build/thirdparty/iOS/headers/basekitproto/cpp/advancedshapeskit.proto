@@ -1,0 +1,24 @@
+
+syntax="proto3";
+
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "AdvancedShapesKitProtos";
+
+message AdvancedShapesKit {
+
+	enum AdvancedShapesCategory{
+		UNKNOWN_ADVANCEDSHAPES = 0;
+        BASIC_SHAPES = 1;
+        BLOCK_ARROWS = 2;
+        FLOW_CHARTS = 3;
+        EQUATION_SHAPES = 4;
+        STARS = 5;
+        CALLOUTS = 6;
+        ACTION_BUTTONS = 7;
+        LINES = 8;
+	}
+
+	optional AdvancedShapesCategory type = 1;
+}

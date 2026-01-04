@@ -1,0 +1,46 @@
+syntax="proto3";
+/* Id: $ */
+
+package com.zoho.collaboration;
+
+import "collaboration.proto";
+import "google/protobuf/protoextensions.proto";
+
+option java_package = "com.zoho.collaboration";
+option java_outer_classname = "DeltaResponseProtos";
+
+
+message DeltaResponse {
+	oneof responseStatus {
+		SuccessResponse success = 1; //Delta has been composed, the response might contain deltas sent by other collaborators
+		ErrorResponse error = 2; //Failure
+		ResponseForPartialRequest partialSaveStatus = 3; //Acknowledgement sent for deltas that are too big
+	}
+}
+
+message ResponseForPartialRequest {
+	optional int32 requestNumber = 1;//Index of the last part received
+	optional int32 length = 2;//Total number of parts in this delta
+}
+
+message SuccessResponse {
+	repeated DocumentDelta documentDelta = 1;//List of deltas in the server since the received version
+}
+
+message ErrorResponse {
+	enum ErrorCode {
+		UNKNOWN_DELTA_ERROR = 0;
+		DELTA_ALREADY_RECEIVED = 1;//A delta with the same session ID has been received by the server
+		HAZELCAST_INACTIVE = 2;//Server error
+		DOCUMENT_ID_NULL = 3;//Request probably contains an invalid resource ID
+		NO_VERSION_MAP = 4;//Server error
+		DELTA_COMPOSE_ERROR = 5;//Compose error
+		INVALID_DELTA_VERSION = 6;//Client is sending a higher version
+		SAVE_ERROR = 7;//Server error
+		VERSION_TOO_FAR_BEHIND = 8;//Client should call fetch
+	}
+
+    optional ErrorCode code = 1[(com.zoho.common.customOptions).requiredField = true];
+    optional string errorId = 2;
+
+}

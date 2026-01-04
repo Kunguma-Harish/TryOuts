@@ -1,0 +1,20 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "FileObjectProtos";
+
+import "fields.proto";
+
+message FileObject {
+	
+	optional string fileId = 1;
+
+	optional Show.FileField.FileFormat format = 2;
+
+	optional string name = 3;
+			
+}
+
+

@@ -1,0 +1,25 @@
+syntax="proto3";
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "DFDPropsProtos";
+
+    message DFDProps{
+
+        enum DFDNotation{
+            UNKNOWN_DFD = 0;
+            NO_NOTATION = 1;
+            YOURDON_AND_COAD = 2;
+            GANE_AND_SARSON =3;
+        }
+        optional DFDNotation notation = 1;
+        
+        enum DFDComponent{
+            UNKNOWN = 0;
+            EXTERNAL_ENTITY = 1;
+            PROCESS = 2;
+            DATA_STORE = 3;     // this is rendered as table for all Notation type 
+            DATA_FLOW = 4;		// this is a connector. (optional) might need to show the difference b/w ordinary connector vs dfd connector .
+        }
+        optional DFDComponent type = 2;
+    }

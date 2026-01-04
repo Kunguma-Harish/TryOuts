@@ -1,0 +1,99 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "TextBodyProtos";
+
+import "textboxprops.proto";
+import "parastyle.proto";
+import "paragraph.proto";
+import "pointonpath.proto";
+import "dimension.proto";
+
+message TextBody {
+	
+	// body properties
+	optional TextBoxProps props = 1; // Textbox properties. Every Shape has a textbox inscribed in it and this message contains its properies.
+
+	repeated ParaStyle listStyles = 2; // List Styles for all level.
+
+	repeated Paragraph paras = 3;
+
+	// This datafieldId should ideally map to Array data type and will create paras dynamically as per Array values.	
+	optional string datafieldId = 4;
+
+    optional string textbodyId = 5;
+
+    message TextBoxDef{
+
+        enum TextBoxType{
+            DEFAULT_TEXT_BOX = 0;
+            PRESET_TEXT_BOX = 1;
+            CUSTOM_TEXT_BOX = 2;
+        }
+
+        optional TextBoxType textBoxType = 1;
+
+        message PresetTextBox{
+            optional int32 index = 1;   // If there are multiple text bodies, the index points to the apprpriate obj in the tbox-object-array created in the path generator.
+        }
+
+        optional PresetTextBox preset = 2;
+
+        
+        message customTextBox{
+            enum TextBoxPlacementType{
+                DEFAULT_TEXT_POSITIONING_TYPE = 0;
+                BESIDE_THE_PATH = 1;
+                ALONG_THE_PATH = 2;
+                ANY_WHERE_ON_SHAPE = 3;
+            }
+
+            optional TextBoxPlacementType textBoxPlacementType = 1;
+
+
+            optional com.zoho.common.Dimension dim = 2;
+
+            enum TextBoxSide{  // Determines the side of the path the text is placed on (relative to the path direction)
+                DEFAULT_TEXT_SIDE = 0;
+                LEFT = 1;
+                RIGHT = 2;
+                CENTER = 3;
+            }
+
+            enum TextBoxPositioningType{
+                DEFAULT_TEXTBOX_POSITION = 0;
+                START = 1;
+                END = 2;
+                MIDDLE = 3;
+                POINT_ON_PATH = 4;
+            }
+
+            // This defines, if the text path has to be positioned always normal to the path or rotating it straight and readable always.
+            enum RenderTextAs{
+                DEFAULT_TEXT_RENDERING = 0;
+                NATURAL = 1;
+                READABLE = 2;
+            }
+
+            optional TextBoxPositioningType textBoxPosType = 3; 
+            optional PointOnPath PointOnPath = 4;
+            optional TextBoxSide side = 5; 
+
+            // Incase of Along the path
+            // With dy = 0
+            // For Vertical alignment : Bottom, With Side : Left - The textbox is position placed above the path.
+
+            // Incase of Beside the path
+            // distance of the textbox from the point in the path
+            optional float dy = 6;    // distance of the textbox from the point in the path
+            optional RenderTextAs renderTextAs = 7;
+        }
+
+        optional customTextBox custom = 3;
+        
+    }
+
+    optional TextBoxDef textBoxDef = 6;
+	
+}

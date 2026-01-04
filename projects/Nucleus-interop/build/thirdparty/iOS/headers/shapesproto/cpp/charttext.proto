@@ -1,0 +1,23 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+import "textbody.proto";
+import "stringreference.proto";
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "ChartTextProtos";
+
+/** Text Element of Chart */
+message ChartText {
+	
+	enum TextType {
+		RICH = 0;
+		STR = 1;	
+	}
+	optional TextType type = 1;
+	
+	optional com.zoho.shapes.TextBody rich = 2;
+
+	optional com.zoho.shapes.StringReference strRef = 3;		
+}

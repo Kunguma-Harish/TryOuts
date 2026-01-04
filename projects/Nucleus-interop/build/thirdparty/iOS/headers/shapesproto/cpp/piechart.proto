@@ -1,0 +1,15 @@
+syntax="proto3";
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "PieChartProtos";
+
+import "piechartdetails.proto";
+import "google/protobuf/protoextensions.proto";
+
+message PieChart {
+
+	optional PieChartDetails details = 1 [(com.zoho.common.customOptions).requiredField = true];
+	
+	optional int32 firstSlideAngle = 2; //Angle of the first pie - similar to transform rotate.
+}

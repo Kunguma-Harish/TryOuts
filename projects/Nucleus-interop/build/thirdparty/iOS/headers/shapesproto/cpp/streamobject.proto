@@ -1,0 +1,22 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "StreamObjectProtos";
+
+import "fill.proto";
+
+message StreamObject {
+
+	optional string streamId = 1;
+	
+	message StreamBackground {
+
+		optional Fill fill = 1;
+
+	}
+	optional StreamBackground bg = 2;  //Background for the stream.
+
+}
+

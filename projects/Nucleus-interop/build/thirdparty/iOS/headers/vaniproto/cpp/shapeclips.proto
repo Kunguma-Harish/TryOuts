@@ -1,0 +1,26 @@
+syntax="proto3";
+// Used to store ShapeObjects for Clipboard.
+
+package com.zoho.clipboard;
+
+option java_package = "com.zoho.clipboard";
+option java_outer_classname = "ShapeClipsProtos";
+
+import "shapeobject.proto";
+import "animationlist.proto";
+import "google/protobuf/protoextensions.proto";
+
+message ShapeClips {
+
+	message ShapeClip {
+
+		optional com.zoho.shapes.ShapeObject shape = 1 [(com.zoho.common.customOptions).requiredField = true];
+		
+		optional com.zoho.shapes.ShapeObject source = 2;
+	}
+	repeated ShapeClip shapes = 1;
+
+	repeated com.zoho.show.AnimationList animList = 2;
+	
+}
+

@@ -1,0 +1,19 @@
+syntax="proto3";
+
+package com.zoho.common; 
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "DataSourceProtos";
+
+import "relationship.proto";
+import "google/protobuf/protoextensions.proto";
+
+message DataSource {
+			
+	optional string id = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	repeated Relationship arguments = 2;
+	
+	optional string dataSourceAPIId = 3;	
+}
+

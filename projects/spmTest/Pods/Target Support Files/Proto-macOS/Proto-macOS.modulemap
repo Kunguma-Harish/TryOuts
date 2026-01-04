@@ -1,0 +1,6 @@
+framework module Proto {
+  umbrella header "Proto-macOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

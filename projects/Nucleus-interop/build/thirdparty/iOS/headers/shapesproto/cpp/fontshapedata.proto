@@ -1,0 +1,13 @@
+syntax="proto3";
+package com.zoho.startwith.build;
+
+option java_package = "com.zoho.startwith.build";
+option java_outer_classname = "FontShapeDataProtos";
+
+import "fontshape.proto";
+
+message FontShapeData {
+
+    repeated com.zoho.shapes.FontShape fontShapes = 1;
+    
+}

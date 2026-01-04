@@ -1,0 +1,22 @@
+syntax="proto3";
+package com.zoho.theme;
+
+option java_package = "com.zoho.theme";
+option java_outer_classname = "FillSchemeProtos";
+
+import "fill.proto";
+import "google/protobuf/protoextensions.proto";
+
+message FillScheme {
+	
+	optional string id= 1 [(com.zoho.common.customOptions).requiredField = true]; // unique Id for the scheme.
+	optional string name = 2; // Fill Scheme can be from different theme.
+	
+	// As of now , we have 3 values in it.	
+	repeated com.zoho.shapes.Fill fill = 3;
+	optional bool modified = 4; // Indicates whether the fontscheme has been modified or not. Will be updated for imported presentations too. 
+	
+	// Theme document ID. This is only temporary data , any code should check for schemes (and any other needed stuffs) using this document id and if not present should continue its check in the full list of docs.
+	optional string themeId = 99; 
+
+}

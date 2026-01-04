@@ -1,0 +1,11 @@
+framework module Helper {
+  umbrella header "Helper-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Helper.Swift {
+  header "Helper-Swift.h"
+  requires objc
+}

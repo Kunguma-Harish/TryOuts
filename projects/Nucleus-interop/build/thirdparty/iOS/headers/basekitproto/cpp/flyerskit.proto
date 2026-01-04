@@ -1,0 +1,23 @@
+syntax="proto3";
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "FlyersKitProtos";
+
+message FlyersKit {
+
+	enum FlyersKitCategory {
+		UNKNOWN_FLYERS_CATEGORY = 0;
+		EVENT = 1;
+        SALES_AND_PROMOTIONS = 2;
+        COMMUNITY = 3;
+        PRODUCT = 4;
+        INFORMATIONAL = 5;
+        EDUCATIONAL = 6;
+        CORPORATE = 7;
+        RECRUITMENT = 8;
+        TRAVEL_AND_TOURISM = 9;
+	}
+	optional FlyersKitCategory type = 1;
+}
+

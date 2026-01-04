@@ -1,0 +1,23 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "PicPropertiesProtos";
+
+import "dimension.proto";
+import "picturetype.proto";
+import "google/protobuf/protoextensions.proto";
+
+message PicProperties {
+	optional string key = 1 [(com.zoho.common.customOptions).requiredField = true]; // DB Key Or Image Client ID ( For Nila and RB ).
+	optional Property prop = 2;    
+	message Property {    
+		optional com.zoho.common.Dimension dim = 1;
+	}
+
+	message MetaDetails {
+		optional string name = 1;
+		optional PictureType type = 2;
+	}
+	optional MetaDetails meta = 3;
+}

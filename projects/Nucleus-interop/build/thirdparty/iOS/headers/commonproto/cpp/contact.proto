@@ -1,0 +1,47 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "ContactProtos";
+
+import "email.proto";
+import "url.proto";
+
+message Contact {
+	
+	
+	message ContactName {	
+		
+		optional string first = 1;
+		
+		optional string middle = 2;
+		
+		optional string last = 3;	
+
+	}
+	optional ContactName name = 1;
+
+	message Phone {
+
+		enum PhoneType {
+			
+			DEAFUALT_PHONE_TYPE = 0;
+			PRIMARY = 1;
+			SECONDARY = 2;
+			HOME = 3;	
+		}
+		
+		optional PhoneType type = 1;
+		
+		optional string extensionCode = 2;
+		
+		// limited by regex defined for a valid phone number.
+		optional string number = 3;
+	}
+
+	repeated Phone phones = 2;
+
+	optional Email email = 3;
+
+	optional URL url = 4;
+}

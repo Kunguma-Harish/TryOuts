@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CollectionViewItem" customModule="KeyBinding" customModuleProvider="target">
+            <connections>
+                <outlet property="image" destination="tgA-98-Py9" id="35U-iV-Pml"/>
+                <outlet property="label" destination="MmK-WK-GPH" id="iRo-LY-NjM"/>
+                <outlet property="view" destination="c22-O7-iKe" id="0Jw-bL-YGg"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="CollectionViewCell" id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tgA-98-Py9">
+                    <rect key="frame" x="0.0" y="40" width="480" height="232"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSBonjour" id="ht5-o7-Gy2"/>
+                    <color key="contentTintColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                </imageView>
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MmK-WK-GPH">
+                    <rect key="frame" x="-2" y="11" width="484" height="19"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="dM4-zB-vbg">
+                        <font key="font" metaFont="system" size="15"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="tgA-98-Py9" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="18X-qY-kMO"/>
+                <constraint firstItem="MmK-WK-GPH" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="98h-le-yNv"/>
+                <constraint firstAttribute="bottom" secondItem="tgA-98-Py9" secondAttribute="bottom" constant="40" id="GQx-ew-fro"/>
+                <constraint firstAttribute="trailing" secondItem="tgA-98-Py9" secondAttribute="trailing" id="VaD-aM-kjf"/>
+                <constraint firstItem="tgA-98-Py9" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="VfQ-m3-GJa"/>
+                <constraint firstItem="MmK-WK-GPH" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="bottom" constant="-20" id="egU-lf-MNc"/>
+                <constraint firstAttribute="trailing" secondItem="MmK-WK-GPH" secondAttribute="trailing" id="wwj-aH-iyY"/>
+            </constraints>
+            <point key="canvasLocation" x="4" y="136"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSBonjour" width="32" height="32"/>
+    </resources>
+</document>

@@ -1,0 +1,37 @@
+syntax="proto3";
+
+// Transformation
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "TransformProtos";
+
+import "dimension.proto";
+import "position.proto";
+import "transformorigin.proto";
+
+message Transform {
+	
+	optional int32 rotate = 1; // rotated value
+	optional bool fliph = 2; // true , if flipped in horizontal axis.
+	optional bool flipv = 3; // true , if flipped in vertical axis.
+
+	optional com.zoho.common.Dimension dim = 4; // com.zoho.common.Dimension
+	optional com.zoho.common.Position pos = 5; // com.zoho.common.Position
+
+	// Individual Shape position = groupShapePos + (ShapePos - chPos in group);
+	optional com.zoho.common.Dimension chDim = 6; // Used by GroupShape, dimension of the child elements. 
+	optional com.zoho.common.Position chPos = 7; // Used by GroupShape, position of the child elements. The position of the child element starts from
+	optional TransformOrigin origin = 8;
+
+	// use this variable when you want to use rotation in float. As of now , used by StartWith
+	optional float rotAngle = 9;
+
+	message DimensionProperties {
+		optional com.zoho.common.Dimension minDim = 1;
+		optional com.zoho.common.Dimension maxDim = 2;
+	}
+
+	optional DimensionProperties dimProps = 10;
+}

@@ -1,0 +1,13 @@
+package com.zoho.remoteboard;
+
+
+import "tablestyle.proto";
+import "fill.proto";
+
+message SPStyle{
+    message TableStyleDefinition{
+      optional com.zoho.shapes.TableStyle style= 1;
+    }
+    repeated TableStyleDefinition styles= 1;
+    repeated com.zoho.shapes.Fill fill = 2;
+}

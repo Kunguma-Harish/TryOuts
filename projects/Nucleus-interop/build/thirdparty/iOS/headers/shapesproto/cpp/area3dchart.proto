@@ -1,0 +1,20 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "Area3DChartProtos";
+
+import "areachartdetails.proto";
+import "google/protobuf/protoextensions.proto";
+
+message Area3DChart {
+	
+	optional AreaChartDetails details = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	// Gap Depth, the z-axis. Ranges from 0-500
+	optional float 	depth = 2;
+
+}
+

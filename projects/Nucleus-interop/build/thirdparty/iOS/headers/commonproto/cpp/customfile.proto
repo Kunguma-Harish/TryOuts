@@ -1,0 +1,28 @@
+syntax="proto3";
+
+// File linked to the document
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "CustomFileProtos";
+
+import "relationship.proto";
+import "google/protobuf/protoextensions.proto";
+
+message CustomFile {
+	
+	enum FileType {
+		XML = 0;
+		CSV = 1;
+		SHEET = 2;
+		XLSX = 3;
+		XLS = 4;
+	}
+	optional FileType type = 1 [(com.zoho.common.customOptions).requiredField = true]; //[default = XML];
+	optional com.zoho.common.Relationship file = 2 [(com.zoho.common.customOptions).requiredField = true];
+	
+	optional FileType originalType = 3;
+	optional com.zoho.common.Relationship originalFile = 4;
+	
+}
+

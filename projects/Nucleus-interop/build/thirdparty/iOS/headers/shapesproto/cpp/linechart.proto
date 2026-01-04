@@ -1,0 +1,40 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "LineChartProtos";
+
+import "properties.proto";
+import "linechartdetails.proto";
+import "google/protobuf/protoextensions.proto";
+
+message LineChart {
+
+	optional LineChartDetails details = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	// Show/hide UpDownBars
+	optional bool showUpDownBars = 2; //[default = false];
+	
+	// Show/Hide HighLowLines
+	optional bool showHighLowLines = 3; //[default = false];
+
+	// Show/Hide data Marker.
+	optional bool showMarker = 4; //[default = false];
+
+	// Smoothen the lines or not.
+	optional bool smooth = 5; //[default = false];
+
+	message UpDownBars {
+		optional com.zoho.shapes.Properties upBar = 1;
+		optional com.zoho.shapes.Properties downBar = 2;
+		optional float gap = 3; // Gap size between each bar , in Pixel	
+	}
+
+	optional UpDownBars upDownBars = 6;
+
+	// Line between the highest value and lowest value in a point.
+	optional com.zoho.shapes.Properties highLowLines = 7;
+
+}
+	

@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "SmartTextFieldProtos";
+
+import "animatethyself.proto";
+import "smarttext.proto";
+
+message SmartTextField {
+
+	optional com.zoho.common.SmartText text = 1;
+
+	optional AnimateThyself animate = 2;		
+}
+

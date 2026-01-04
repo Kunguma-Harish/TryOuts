@@ -1,0 +1,1266 @@
+{
+    "Colaborate": {
+        "styles": {
+            "100": {
+                "fontId": "Colaborate-Thin"
+            },
+            "300": {
+                "fontId": "Colaborate-Light"
+            },
+            "400": {
+                "fontId": "Colaborate-Regular"
+            },
+            "500": {
+                "fontId": "Colaborate-Medium"
+            },
+            "700": {
+                "fontId": "Colaborate-Bold"
+            }
+        }
+    },
+    "Latin Modern Roman": {
+        "styles": {
+            "400": {
+                "fontId": "LMRoman10-Regular"
+            },
+            "600": {
+                "fontId": "LMRomanDemi10-Regular"
+            },
+            "700": {
+                "fontId": "LMRoman10-Bold"
+            },
+            "400i": {
+                "fontId": "LMRoman10-Italic"
+            },
+            "600i": {
+                "fontId": "LMRomanDemi10-Oblique"
+            },
+            "700i": {
+                "fontId": "LMRoman10-BoldItalic"
+            }
+        }
+    },
+    "TeX Gyre Heros Condensed": {
+        "styles": {
+            "400": {
+                "fontId": "TexGyreHerosCondensed-Regular"
+            },
+            "700": {
+                "fontId": "TexGyreHerosCondensed-Bold"
+            },
+            "400i": {
+                "fontId": "TexGyreHerosCondensed-Italic"
+            },
+            "700i": {
+                "fontId": "TexGyreHerosCondensed-BoldItalic"
+            }
+        }
+    },
+    "ChunkFive": {
+        "styles": {
+            "400": {
+                "fontId": "ChunkFive"
+            }
+        }
+    },
+    "Otama ep": {
+        "styles": {
+            "400": {
+                "fontId": "Otama-ep"
+            }
+        }
+    },
+    "Arial Narrow": {
+        "styles": {
+            "400": {
+                "fontId": "ArialNarrow"
+            },
+            "700": {
+                "fontId": "ArialNarrow-Bold"
+            },
+            "400i": {
+                "fontId": "ArialNarrow-Italic"
+            },
+            "700i": {
+                "fontId": "ArialNarrow-BoldItalic"
+            }
+        }
+    },
+    "Arial Black": {
+        "styles": {
+            "400": {
+                "fontId": "Arial-Black"
+            }
+        }
+    },
+    "Cambria": {
+        "styles": {
+            "400": {
+                "fontId": "Cambria"
+            },
+            "700": {
+                "fontId": "Cambria-Bold"
+            },
+            "400i": {
+                "fontId": "Cambria-Italic"
+            },
+            "700i": {
+                "fontId": "Cambria-BoldItalic"
+            }
+        }
+    },
+    "Impact": {
+        "styles": {
+            "400": {
+                "fontId": "Impact"
+            }
+        }
+    },
+    "Lucida Console": {
+        "styles": {
+            "400": {
+                "fontId": "LucidaConsole"
+            }
+        }
+    },
+    "MS Gothic": {
+        "styles": {
+            "400": {
+                "fontId": "MS-Gothic"
+            }
+        }
+    },
+    "MS Mincho": {
+        "styles": {
+            "400": {
+                "fontId": "MS-Mincho"
+            }
+        }
+    },
+    "MS PGothic": {
+        "styles": {
+            "400": {
+                "fontId": "MS-PGothic"
+            }
+        }
+    },
+    "MS PMincho": {
+        "styles": {
+            "400": {
+                "fontId": "MS-PMincho"
+            }
+        }
+    },
+    "Tahoma": {
+        "styles": {
+            "400": {
+                "fontId": "Tahoma"
+            },
+            "700": {
+                "fontId": "Tahoma-Bold"
+            }
+        }
+    },
+    "Book Antiqua": {
+        "styles": {
+            "400": {
+                "fontId": "BookAntiqua"
+            }
+        }
+    },
+    "Wingdings": {
+        "styles": {
+            "400": {
+                "fontId": "Wingdings-Regular"
+            }
+        }
+    },
+    "Calibri": {
+        "styles": {
+            "400": {
+                "fontId": "Calibri"
+            },
+            "700": {
+                "fontId": "Calibri-Bold"
+            },
+            "400i": {
+                "fontId": "Calibri-Italic"
+            },
+            "700i": {
+                "fontId": "Calibri-BoldItalic"
+            }
+        }
+    },
+    "Comic Sans MS": {
+        "styles": {
+            "400": {
+                "fontId": "ComicSansMS"
+            },
+            "700": {
+                "fontId": "ComicSansMS-Bold"
+            }
+        }
+    },
+    "Copperplate": {
+        "styles": {
+            "300": {
+                "fontId": "Copperplate-Light"
+            },
+            "400": {
+                "fontId": "Copperplate"
+            },
+            "700": {
+                "fontId": "Copperplate-Bold"
+            }
+        }
+    },
+    "Heiti SC": {
+        "styles": {
+            "300": {
+                "fontId": "STHeitiSC-Light"
+            },
+            "500": {
+                "fontId": "STHeitiSC-Medium"
+            }
+        }
+    },
+    "Kohinoor Telugu": {
+        "styles": {
+            "400": {
+                "fontId": "KohinoorTelugu-Regular"
+            },
+            "500": {
+                "fontId": "KohinoorTelugu-Medium"
+            },
+            "300": {
+                "fontId": "KohinoorTelugu-Light"
+            }
+        }
+    },
+    "Thonburi": {
+        "styles": {
+            "400": {
+                "fontId": "Thonburi"
+            },
+            "700": {
+                "fontId": "Thonburi-Bold"
+            },
+            "300": {
+                "fontId": "Thonburi-Light"
+            }
+        }
+    },
+    "Courier New": {
+        "styles": {
+            "700": {
+                "fontId": "CourierNewPS-BoldMT"
+            },
+            "400i": {
+                "fontId": "CourierNewPS-ItalicMT"
+            },
+            "400": {
+                "fontId": "CourierNewPSMT"
+            },
+            "700i": {
+                "fontId": "CourierNewPS-BoldItalicMT"
+            }
+        }
+    },
+    "Gill Sans": {
+        "styles": {
+            "400i": {
+                "fontId": "GillSans-Italic"
+            },
+            "700": {
+                "fontId": "GillSans-Bold"
+            },
+            "700i": {
+                "fontId": "GillSans-BoldItalic"
+            },
+            "300i": {
+                "fontId": "GillSans-LightItalic"
+            },
+            "400": {
+                "fontId": "GillSans"
+            },
+            "300": {
+                "fontId": "GillSans-Light"
+            },
+            "600": {
+                "fontId": "GillSans-SemiBold"
+            },
+            "600i": {
+                "fontId": "GillSans-SemiBoldItalic"
+            }
+        }
+    },
+    "Apple SD Gothic Neo": {
+        "styles": {
+            "700": {
+                "fontId": "AppleSDGothicNeo-Bold"
+            },
+            "200": {
+                "fontId": "AppleSDGothicNeo-UltraLight"
+            },
+            "100": {
+                "fontId": "AppleSDGothicNeo-Thin"
+            },
+            "400": {
+                "fontId": "AppleSDGothicNeo-Regular"
+            },
+            "300": {
+                "fontId": "AppleSDGothicNeo-Light"
+            },
+            "500": {
+                "fontId": "AppleSDGothicNeo-Medium"
+            },
+            "600": {
+                "fontId": "AppleSDGothicNeo-SemiBold"
+            }
+        }
+    },
+    "Marker Felt": {
+        "styles": {
+            "100": {
+                "fontId": "MarkerFelt-Thin"
+            }
+        }
+    },
+    "Avenir Next Condensed": {
+        "styles": {
+            "700i": {
+                "fontId": "AvenirNextCondensed-BoldItalic"
+            },
+            "800": {
+                "fontId": "AvenirNextCondensed-Heavy"
+            },
+            "500": {
+                "fontId": "AvenirNextCondensed-Medium"
+            },
+            "400": {
+                "fontId": "AvenirNextCondensed-Regular"
+            },
+            "800i": {
+                "fontId": "AvenirNextCondensed-HeavyItalic"
+            },
+            "500i": {
+                "fontId": "AvenirNextCondensed-MediumItalic"
+            },
+            "400i": {
+                "fontId": "AvenirNextCondensed-Italic"
+            },
+            "200i": {
+                "fontId": "AvenirNextCondensed-UltraLightItalic"
+            },
+            "200": {
+                "fontId": "AvenirNextCondensed-UltraLight"
+            },
+            "600": {
+                "fontId": "AvenirNextCondensed-DemiBold"
+            },
+            "700": {
+                "fontId": "AvenirNextCondensed-Bold"
+            },
+            "600i": {
+                "fontId": "AvenirNextCondensed-DemiBoldItalic"
+            }
+        }
+    },
+    "Tamil Sangam MN": {
+        "styles": {
+            "400": {
+                "fontId": "TamilSangamMN"
+            },
+            "700": {
+                "fontId": "TamilSangamMN-Bold"
+            }
+        }
+    },
+    "Helvetica Neue": {
+        "styles": {
+            "400i": {
+                "fontId": "HelveticaNeue-Italic"
+            },
+            "700": {
+                "fontId": "HelveticaNeue-Bold"
+            },
+            "200": {
+                "fontId": "HelveticaNeue-UltraLight"
+            },
+            "700i": {
+                "fontId": "HelveticaNeue-BoldItalic"
+            },
+            "500": {
+                "fontId": "HelveticaNeue-Medium"
+            },
+            "300": {
+                "fontId": "HelveticaNeue-Light"
+            },
+            "100": {
+                "fontId": "HelveticaNeue-Thin"
+            },
+            "100i": {
+                "fontId": "HelveticaNeue-ThinItalic"
+            },
+            "300i": {
+                "fontId": "HelveticaNeue-LightItalic"
+            },
+            "200i": {
+                "fontId": "HelveticaNeue-UltraLightItalic"
+            },
+            "500i": {
+                "fontId": "HelveticaNeue-MediumItalic"
+            },
+            "400": {
+                "fontId": "HelveticaNeue"
+            }
+        }
+    },
+    "Gurmukhi MN": {
+        "styles": {
+            "700": {
+                "fontId": "GurmukhiMN-Bold"
+            },
+            "400": {
+                "fontId": "GurmukhiMN"
+            }
+        }
+    },
+    "Times New Roman": {
+        "styles": {
+            "400": {
+                "fontId": "TimesNewRomanPSMT"
+            },
+            "700i": {
+                "fontId": "TimesNewRomanPS-BoldItalicMT"
+            },
+            "400i": {
+                "fontId": "TimesNewRomanPS-ItalicMT"
+            },
+            "700": {
+                "fontId": "TimesNewRomanPS-BoldMT"
+            }
+        }
+    },
+    "Georgia": {
+        "styles": {
+            "700i": {
+                "fontId": "Georgia-BoldItalic"
+            },
+            "400": {
+                "fontId": "Georgia"
+            },
+            "400i": {
+                "fontId": "Georgia-Italic"
+            },
+            "700": {
+                "fontId": "Georgia-Bold"
+            }
+        }
+    },
+    "Apple Color Emoji": {
+        "styles": {
+            "400": {
+                "fontId": "AppleColorEmoji"
+            }
+        }
+    },
+    "Arial Rounded MT Bold": {
+        "styles": {
+            "400": {
+                "fontId": "ArialRoundedMTBold"
+            }
+        }
+    },
+    "Kailasa": {
+        "styles": {
+            "700": {
+                "fontId": "Kailasa-Bold"
+            },
+            "400": {
+                "fontId": "Kailasa"
+            }
+        }
+    },
+    "Kohinoor Devanagari": {
+        "styles": {
+            "300": {
+                "fontId": "KohinoorDevanagari-Light"
+            },
+            "400": {
+                "fontId": "KohinoorDevanagari-Regular"
+            },
+            "600": {
+                "fontId": "KohinoorDevanagari-Semibold"
+            }
+        }
+    },
+    "Kohinoor Bangla": {
+        "styles": {
+            "600": {
+                "fontId": "KohinoorBangla-Semibold"
+            },
+            "400": {
+                "fontId": "KohinoorBangla-Regular"
+            },
+            "300": {
+                "fontId": "KohinoorBangla-Light"
+            }
+        }
+    },
+    "Chalkboard SE": {
+        "styles": {
+            "700": {
+                "fontId": "ChalkboardSE-Bold"
+            },
+            "300": {
+                "fontId": "ChalkboardSE-Light"
+            },
+            "400": {
+                "fontId": "ChalkboardSE-Regular"
+            }
+        }
+    },
+    "Sinhala Sangam MN": {
+        "styles": {
+            "700": {
+                "fontId": "SinhalaSangamMN-Bold"
+            },
+            "400": {
+                "fontId": "SinhalaSangamMN"
+            }
+        }
+    },
+    "PingFang TC": {
+        "styles": {
+            "500": {
+                "fontId": "PingFangTC-Medium"
+            },
+            "400": {
+                "fontId": "PingFangTC-Regular"
+            },
+            "300": {
+                "fontId": "PingFangTC-Light"
+            },
+            "200": {
+                "fontId": "PingFangTC-Ultralight"
+            },
+            "600": {
+                "fontId": "PingFangTC-Semibold"
+            },
+            "100": {
+                "fontId": "PingFangTC-Thin"
+            }
+        }
+    },
+    "Gujarati Sangam MN": {
+        "styles": {
+            "700": {
+                "fontId": "GujaratiSangamMN-Bold"
+            },
+            "400": {
+                "fontId": "GujaratiSangamMN"
+            }
+        }
+    },
+    "Damascus": {
+        "styles": {
+            "300": {
+                "fontId": "DamascusLight"
+            },
+            "700": {
+                "fontId": "DamascusBold"
+            },
+            "600": {
+                "fontId": "DamascusSemiBold"
+            },
+            "500": {
+                "fontId": "DamascusMedium"
+            },
+            "400": {
+                "fontId": "Damascus"
+            }
+        }
+    },
+    "Noteworthy": {
+        "styles": {
+            "300": {
+                "fontId": "Noteworthy-Light"
+            },
+            "700": {
+                "fontId": "Noteworthy-Bold"
+            }
+        }
+    },
+    "Geeza Pro": {
+        "styles": {
+            "400": {
+                "fontId": "GeezaPro"
+            },
+            "700": {
+                "fontId": "GeezaPro-Bold"
+            }
+        }
+    },
+    "Avenir": {
+        "styles": {
+            "500": {
+                "fontId": "Avenir-Medium"
+            },
+            "800i": {
+                "fontId": "Avenir-HeavyOblique"
+            },
+            "400": {
+                "fontId": "Avenir-Book"
+            },
+            "300": {
+                "fontId": "Avenir-Light"
+            },
+            "400i": {
+                "fontId": "Avenir-BookOblique"
+            },
+            "500i": {
+                "fontId": "Avenir-MediumOblique"
+            },
+            "900": {
+                "fontId": "Avenir-Black"
+            },
+            "900i": {
+                "fontId": "Avenir-BlackOblique"
+            },
+            "300i": {
+                "fontId": "Avenir-LightOblique"
+            },
+            "400i": {
+                "fontId": "Avenir-Oblique"
+            },
+            "800": {
+                "fontId": "Avenir-Heavy"
+            },
+            "800i": {
+                "fontId": "Avenir-HeavyOblique"
+            }
+        }
+    },
+    "Academy Engraved LET": {
+        "styles": {
+            "400": {
+                "fontId": "AcademyEngravedLetPlain"
+            }
+        }
+    },
+    "Mishafi": {
+        "styles": {
+            "400": {
+                "fontId": "DiwanMishafi"
+            }
+        }
+    },
+    "Futura": {
+        "styles": {
+            "500": {
+                "fontId": "Futura-Medium"
+            },
+            "500i": {
+                "fontId": "Futura-MediumItalic"
+            },
+            "700": {
+                "fontId": "Futura-Bold"
+            }
+        }
+    },
+    "Farah": {
+        "styles": {
+            "400": {
+                "fontId": "Farah"
+            }
+        }
+    },
+    "Kannada Sangam MN": {
+        "styles": {
+            "400": {
+                "fontId": "KannadaSangamMN"
+            },
+            "700": {
+                "fontId": "KannadaSangamMN-Bold"
+            }
+        }
+    },
+    "Arial Hebrew": {
+        "styles": {
+            "700": {
+                "fontId": "ArialHebrew-Bold"
+            },
+            "300": {
+                "fontId": "ArialHebrew-Light"
+            },
+            "400": {
+                "fontId": "ArialHebrew"
+            }
+        }
+    },
+    "Arial": {
+        "styles": {
+            "400": {
+                "fontId": "ArialMT"
+            },
+            "700i": {
+                "fontId": "Arial-BoldItalicMT"
+            },
+            "700": {
+                "fontId": "Arial-BoldMT"
+            },
+            "400i": {
+                "fontId": "Arial-ItalicMT"
+            }
+        }
+    },
+    "Party LET": {
+        "styles": {
+            "400": {
+                "fontId": "PartyLetPlain"
+            }
+        }
+    },
+    "Chalkduster": {
+        "styles": {
+            "400": {
+                "fontId": "Chalkduster"
+            }
+        }
+    },
+    "Hoefler Text": {
+        "styles": {
+            "400i": {
+                "fontId": "HoeflerText-Italic"
+            },
+            "400": {
+                "fontId": "HoeflerText-Regular"
+            },
+            "900": {
+                "fontId": "HoeflerText-Black"
+            },
+            "900i": {
+                "fontId": "HoeflerText-BlackItalic"
+            }
+        }
+    },
+    "Optima": {
+        "styles": {
+            "400": {
+                "fontId": "Optima-Regular"
+            },
+            "700i": {
+                "fontId": "Optima-BoldItalic"
+            },
+            "400i": {
+                "fontId": "Optima-Italic"
+            },
+            "700": {
+                "fontId": "Optima-Bold"
+            }
+        }
+    },
+    "Palatino": {
+        "styles": {
+            "700": {
+                "fontId": "Palatino-Bold"
+            },
+            "400": {
+                "fontId": "Palatino-Roman"
+            },
+            "700i": {
+                "fontId": "Palatino-BoldItalic"
+            },
+            "400i": {
+                "fontId": "Palatino-Italic"
+            }
+        }
+    },
+    "Lao Sangam MN": {
+        "styles": {
+            "400": {
+                "fontId": "LaoSangamMN"
+            }
+        }
+    },
+    "Malayalam Sangam MN": {
+        "styles": {
+            "700": {
+                "fontId": "MalayalamSangamMN-Bold"
+            },
+            "400": {
+                "fontId": "MalayalamSangamMN"
+            }
+        }
+    },
+    "Al Nile": {
+        "styles": {
+            "700": {
+                "fontId": "AlNile-Bold"
+            },
+            "400": {
+                "fontId": "AlNile"
+            }
+        }
+    },
+    "Bradley Hand": {
+        "styles": {
+            "700": {
+                "fontId": "BradleyHandITCTT-Bold"
+            }
+        }
+    },
+    "PingFang HK": {
+        "styles": {
+            "200": {
+                "fontId": "PingFangHK-Ultralight"
+            },
+            "600": {
+                "fontId": "PingFangHK-Semibold"
+            },
+            "100": {
+                "fontId": "PingFangHK-Thin"
+            },
+            "300": {
+                "fontId": "PingFangHK-Light"
+            },
+            "400": {
+                "fontId": "PingFangHK-Regular"
+            },
+            "500": {
+                "fontId": "PingFangHK-Medium"
+            }
+        }
+    },
+    "Trebuchet MS": {
+        "styles": {
+            "700i": {
+                "fontId": "Trebuchet-BoldItalic"
+            },
+            "400": {
+                "fontId": "TrebuchetMS"
+            },
+            "700": {
+                "fontId": "TrebuchetMS-Bold"
+            },
+            "400i": {
+                "fontId": "TrebuchetMS-Italic"
+            }
+        }
+    },
+    "Helvetica": {
+        "styles": {
+            "700": {
+                "fontId": "Helvetica-Bold"
+            },
+            "400": {
+                "fontId": "Helvetica"
+            },
+            "300i": {
+                "fontId": "Helvetica-LightOblique"
+            },
+            "400i": {
+                "fontId": "Helvetica-Oblique"
+            },
+            "700i": {
+                "fontId": "Helvetica-BoldOblique"
+            },
+            "300": {
+                "fontId": "Helvetica-Light"
+            }
+        }
+    },
+    "Courier": {
+        "styles": {
+            "700i": {
+                "fontId": "Courier-BoldOblique"
+            },
+            "400": {
+                "fontId": "Courier"
+            },
+            "700": {
+                "fontId": "Courier-Bold"
+            },
+            "400i": {
+                "fontId": "Courier-Oblique"
+            }
+        }
+    },
+    "Cochin": {
+        "styles": {
+            "700": {
+                "fontId": "Cochin-Bold"
+            },
+            "400": {
+                "fontId": "Cochin"
+            },
+            "400i": {
+                "fontId": "Cochin-Italic"
+            },
+            "700i": {
+                "fontId": "Cochin-BoldItalic"
+            }
+        }
+    },
+    "Hiragino Mincho ProN": {
+        "styles": {
+            "700": {
+                "fontId": "HiraMinProN-W6"
+            },
+            "400": {
+                "fontId": "HiraMinProN-W3"
+            }
+        }
+    },
+    "Devanagari Sangam MN": {
+        "styles": {
+            "400": {
+                "fontId": "DevanagariSangamMN"
+            },
+            "700": {
+                "fontId": "DevanagariSangamMN-Bold"
+            }
+        }
+    },
+    "Oriya Sangam MN": {
+        "styles": {
+            "400": {
+                "fontId": "OriyaSangamMN"
+            },
+            "700": {
+                "fontId": "OriyaSangamMN-Bold"
+            }
+        }
+    },
+    "Snell Roundhand": {
+        "styles": {
+            "700": {
+                "fontId": "SnellRoundhand-Bold"
+            },
+            "400": {
+                "fontId": "SnellRoundhand"
+            },
+            "900": {
+                "fontId": "SnellRoundhand-Black"
+            }
+        }
+    },
+    "Zapf Dingbats": {
+        "styles": {
+            "400": {
+                "fontId": "ZapfDingbatsITC"
+            }
+        }
+    },
+    "Bodoni 72": {
+        "styles": {
+            "700": {
+                "fontId": "BodoniSvtyTwoITCTT-Bold"
+            },
+            "400": {
+                "fontId": "BodoniSvtyTwoITCTT-Book"
+            },
+            "400i": {
+                "fontId": "BodoniSvtyTwoITCTT-BookIta"
+            }
+        }
+    },
+    "Verdana": {
+        "styles": {
+            "400i": {
+                "fontId": "Verdana-Italic"
+            },
+            "700i": {
+                "fontId": "Verdana-BoldItalic"
+            },
+            "400": {
+                "fontId": "Verdana"
+            },
+            "700": {
+                "fontId": "Verdana-Bold"
+            }
+        }
+    },
+    "American Typewriter": {
+        "styles": {
+            "400": {
+                "fontId": "AmericanTypewriter"
+            },
+            "300": {
+                "fontId": "AmericanTypewriter-Light"
+            },
+            "600": {
+                "fontId": "AmericanTypewriter-Semibold"
+            },
+            "700": {
+                "fontId": "AmericanTypewriter-Bold"
+            }
+        }
+    },
+    "Avenir Next": {
+        "styles": {
+            "200": {
+                "fontId": "AvenirNext-UltraLight"
+            },
+            "200i": {
+                "fontId": "AvenirNext-UltraLightItalic"
+            },
+            "700": {
+                "fontId": "AvenirNext-Bold"
+            },
+            "700i": {
+                "fontId": "AvenirNext-BoldItalic"
+            },
+            "600": {
+                "fontId": "AvenirNext-DemiBold"
+            },
+            "800": {
+                "fontId": "AvenirNext-Heavy"
+            },
+            "800i": {
+                "fontId": "AvenirNext-HeavyItalic"
+            },
+            "600i": {
+                "fontId": "AvenirNext-DemiBoldItalic"
+            },
+            "500": {
+                "fontId": "AvenirNext-Medium"
+            },
+            "400i": {
+                "fontId": "AvenirNext-Italic"
+            },
+            "400": {
+                "fontId": "AvenirNext-Regular"
+            },
+            "500i": {
+                "fontId": "AvenirNext-MediumItalic"
+            }
+        }
+    },
+    "Baskerville": {
+        "styles": {
+            "400i": {
+                "fontId": "Baskerville-Italic"
+            },
+            "600": {
+                "fontId": "Baskerville-SemiBold"
+            },
+            "700i": {
+                "fontId": "Baskerville-BoldItalic"
+            },
+            "600i": {
+                "fontId": "Baskerville-SemiBoldItalic"
+            },
+            "700": {
+                "fontId": "Baskerville-Bold"
+            },
+            "400": {
+                "fontId": "Baskerville"
+            }
+        }
+    },
+    "Khmer Sangam MN": {
+        "styles": {
+            "400": {
+                "fontId": "KhmerSangamMN"
+            }
+        }
+    },
+    "Didot": {
+        "styles": {
+            "400i": {
+                "fontId": "Didot-Italic"
+            },
+            "700": {
+                "fontId": "Didot-Bold"
+            },
+            "400": {
+                "fontId": "Didot"
+            }
+        }
+    },
+    "Savoye LET": {
+        "styles": {
+            "400": {
+                "fontId": "SavoyeLetPlain"
+            }
+        }
+    },
+    "Bodoni Ornaments": {
+        "styles": {
+            "400": {
+                "fontId": "BodoniOrnamentsITCTT"
+            }
+        }
+    },
+    "Symbol": {
+        "styles": {
+            "400": {
+                "fontId": "Symbol"
+            }
+        }
+    },
+    "Menlo": {
+        "styles": {
+            "400i": {
+                "fontId": "Menlo-Italic"
+            },
+            "700": {
+                "fontId": "Menlo-Bold"
+            },
+            "400": {
+                "fontId": "Menlo-Regular"
+            },
+            "700i": {
+                "fontId": "Menlo-BoldItalic"
+            }
+        }
+    },
+    "Bodoni 72 Smallcaps": {
+        "styles": {
+            "400": {
+                "fontId": "BodoniSvtyTwoSCITCTT-Book"
+            }
+        }
+    },
+    "Papyrus": {
+        "styles": {
+            "400": {
+                "fontId": "Papyrus"
+            }
+        }
+    },
+    "Hiragino Sans": {
+        "styles": {
+            "400": {
+                "fontId": "HiraginoSans-W3"
+            },
+            "700": {
+                "fontId": "HiraginoSans-W6"
+            }
+        }
+    },
+    "PingFang SC": {
+        "styles": {
+            "200": {
+                "fontId": "PingFangSC-Ultralight"
+            },
+            "400": {
+                "fontId": "PingFangSC-Regular"
+            },
+            "600": {
+                "fontId": "PingFangSC-Semibold"
+            },
+            "100": {
+                "fontId": "PingFangSC-Thin"
+            },
+            "300": {
+                "fontId": "PingFangSC-Light"
+            },
+            "500": {
+                "fontId": "PingFangSC-Medium"
+            }
+        }
+    },
+    "Myanmar Sangam MN": {
+        "styles": {
+            "700": {
+                "fontId": "MyanmarSangamMN-Bold"
+            },
+            "400": {
+                "fontId": "MyanmarSangamMN"
+            }
+        }
+    },
+    "Euphemia UCAS": {
+        "styles": {
+            "400i": {
+                "fontId": "EuphemiaUCAS-Italic"
+            },
+            "400": {
+                "fontId": "EuphemiaUCAS"
+            },
+            "700": {
+                "fontId": "EuphemiaUCAS-Bold"
+            }
+        }
+    },
+    "Telugu Sangam MN": {
+        "styles": {
+            "400": {
+                "fontId": "TeluguSangamMN"
+            },
+            "700": {
+                "fontId": "TeluguSangamMN-Bold"
+            }
+        }
+    },
+    "Bangla Sangam MN": {
+        "styles": {
+            "400": {
+                "fontId": "BanglaSangamMN"
+            },
+            "700": {
+                "fontId": "BanglaSangamMN-Bold"
+            }
+        }
+    },
+    "Zapfino": {
+        "styles": {
+            "400": {
+                "fontId": "Zapfino"
+            }
+        }
+    },
+    "Bodoni 72 Oldstyle": {
+        "styles": {
+            "400": {
+                "fontId": "BodoniSvtyTwoOSITCTT-Book"
+            },
+            "700": {
+                "fontId": "BodoniSvtyTwoOSITCTT-Bold"
+            },
+            "400i": {
+                "fontId": "BodoniSvtyTwoOSITCTT-BookIt"
+            }
+        }
+    },
+    "Francois One": {
+        "styles": {
+            "400": {
+                "fontId":"FrancoisOne-Regular"
+            }
+        }
+    },
+    "Brawler": {
+        "styles": {
+            "400": {
+                "fontId":"Brawler-Regular"
+            }
+        }
+    },
+    "Tuffy": {
+        "styles": {
+            "400": {
+                "fontId":"tuffy"
+            },
+            "700": {
+                "fontId":"tuffybold"
+            },
+            "400i": {
+                "fontId":"tuffyitalic"
+            },
+            "700i": {
+                "fontId":"tuffybolditalic"
+            }
+        }
+    },
+    "Existence Light": {
+        "styles": {
+            "300": {
+                "fontId":"existencelight"
+            }
+        }
+    }
+}

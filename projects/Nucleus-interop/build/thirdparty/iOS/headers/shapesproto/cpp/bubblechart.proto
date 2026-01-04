@@ -1,0 +1,37 @@
+syntax="proto2";
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "BubbleChartProtos";
+
+import "seriesdetails.proto";
+import "animationdata.proto";
+
+message BubbleChart {	
+
+	required BubbleChartDetails details = 1;
+
+	message BubbleChartDetails { 
+
+		repeated BubbleChartSeries series = 1;
+
+		message BubbleChartSeries {
+			optional SeriesDetails details = 1;
+		}
+
+		// These values for common for all series. As of now we do not support these values separately for each series.
+		optional RepresentBubbleSize representSize = 2 [default = AREA];
+		enum RepresentBubbleSize { 
+			WIDTH = 0;
+			AREA = 1;
+		}
+		
+		optional float scale = 3; // Varies from 0 to 300 percentage.
+
+		optional bool showNegative = 4[default = true];  
+	
+		// Animation details for each category
+		repeated com.zoho.shapes.AnimationData catAnim = 5;
+	}	
+	
+}

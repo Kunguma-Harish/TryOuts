@@ -1,0 +1,15 @@
+syntax="proto3";
+
+// Contains attributes for the editor. 
+// The reason for the existence of such attributes is either Migration or UnSupported-feature in HTML.
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "EditorCompatibleProtos";
+
+message EditorCompatible {
+
+	optional bool htmlbox = 1; // Denotes the shape has a HTML box.
+	optional string content = 2; // Text content for a shape used for migration.
+}

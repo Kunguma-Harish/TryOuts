@@ -1,0 +1,13 @@
+syntax="proto3";
+
+package com.zoho.clipboard;
+
+option java_package = "com.zoho.clipboard";
+option java_outer_classname = "ClipTypeProtos";
+
+
+enum ClipType {
+	PRINCIPAL = 0;
+	DEPENDENTS = 1;
+}
+

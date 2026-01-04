@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "ঠিক";
+"SSKit.common.cancel" = "বাতিল";
+"SSKit.common.continue" = "অব্যাহত ৰাখক";
+"SSKit.common.untitledDocument" = "শিৰোনামা-হীন ডকুমেণ্ট";
+"SSKit.common.noNetwork" = "নেটৱৰ্ক নাই";
+"SSKit.common.noNetworkMessage" = "নিশ্চিত কৰক যে আপোনাৰ ডিভাইচটো ইণ্টাৰনেটৰ সৈতে সংযোজিত হৈ আছে।";
+"SSKit.common.openSettings" = "ছেটিংচ খোলক";
+"SSKit.common.connected" = "সংযোজিত হৈছে";
+"SSKit.common.connecting" = "সংযোগ কৰা হৈছে";
+"SSKit.common.waiting" = "অপেক্ষা কৰি আছে";
+"SSKit.common.update" = "আপডেট";
+"SSKit.common.minimise" = "নিম্নতম কৰক";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "আৰম্ভ";
+"SSKit.slideshow.end" = "শেষ";
+"SSKit.slideshow.currentSlide" = "%i-ৰ %i শ্লাইড";
+"SSKit.slideshow.EndOfSlideshow" = "শ্লাইডশ্ব’ৰ সমাপ্তি";
+"SSKit.slideshow.blackout" = "স্ক্ৰীণ ব্লেক আউট কৰা হৈছে";
+"SSKit.slideshow.backToLive" = "লাইভ লৈ ঘূৰি যাওক";
+"SSKit.slideshow.notes" = "টোকাসমূহ";
+"SSKit.slideshow.clear" = "পৰিষ্কাৰ কৰক";
+"SSKit.slideshow.emptyNotes" = "এই শ্লাইডৰ বাবে কোনো টোকা উপলব্ধ নাই।";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "অধিবেশন সমাপ্ত কৰা হৈছে";
+"SSKit.shareplay.sessionTerminated.desc" = "আপোনাৰ শ্বেয়াৰপ্লে (SharePlay) অধিবেশন সমাপ্ত কৰা হৈছে। আপুনি আপোনাৰ অধিৱেশন পুনৰাৰম্ভ কৰিবলৈ বাছনি কৰিব পাৰে।";
+
+"SSKit.shareplay.syncWithPresenter" = "উপস্থাপকৰ সৈতে সংমিহলি কৰক";
+
+"SSKit.shareplay.end.title" = "শ্বেয়াৰপ্লে (SharePlay) সমাপ্ত কৰক";
+"SSKit.shareplay.end.description" = "আপুনি শ্বেয়াৰপ্লে (SharePlay) সমাপ্ত কৰিব বিচাৰে নেকি? শ্বেয়াৰপ্লে (SharePlay) সমাপ্ত কৰিলে অধিৱেশন সমাপ্ত হ’ব।";
+"SSKit.shareplay.requestToPresent.description" = "উপস্থাপন কৰিবলৈ অনুৰোধ কৰা হৈছে";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "ত্ৰুটি";
+"SSKit.error.message" = "এটা ত্ৰুটি ঘটিল। পিছত পুনৰ চেষ্টা কৰক";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "অডিঅ’ প্লেবেক কৰক";
+"SSKit.audio.resume" = "পুনৰাৰম্ভ কৰক";
+"SSKit.audio.pause" = "প’জ";
+"SSKit.audio.audioTitle" = "অডিঅ’";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "আপোনাৰ Apple TV বাছনি কৰক";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple TV বিচাৰি আছে";
+"SSKit.mcPeerListing.streamingDescription" = "আপোনাৰ ডিভাইচৰ পৰা Apple TV লৈ শ্লাইডবোৰ ষ্ট্ৰীম কৰিবলৈ।";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "স্থানীয় নেটৱৰ্ক প্ৰৱেশাধিকাৰ সক্ষম কৰক আৰু পুনৰ চেষ্টা কৰক";
+
+"SSKit.mcPeerListing.disconnect.title" = "সংযোগ বিচ্ছিন্ন কৰক";
+"SSKit.mcPeerListing.disconnect.message" = "আপুনি নিশ্চিতনে যে আপুনি Apple TV-ৰ পৰা সংযোগ বিচ্ছিন্ন কৰিব বিচাৰে?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@-ক বিচ্ছিন্ন কৰক";
+"SSKit.mcPeerListing.updateError" = "দেখা গৈছে যে সহকৰ্মীজনে পুৰণি সংস্কৰণত চলি আছে। নিশ্চিত কৰক যে টিভি এপ্পটো সাম্প্ৰতিক";

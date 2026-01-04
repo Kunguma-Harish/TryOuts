@@ -1,0 +1,18 @@
+syntax="proto3";
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "PageKitProtos";
+
+message PageKit {
+
+	enum PageKitCategory {
+		UNKNOWN_PAGE_CATEGORY = 0;
+		NOTES = 1;
+        ESSAY = 2;
+        JOURNAL = 3;
+	}
+	optional PageKitCategory type = 1;
+}
+
+

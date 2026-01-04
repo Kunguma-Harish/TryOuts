@@ -1,0 +1,91 @@
+syntax="proto3";
+// $Id$
+// Struture of a preset shape.
+
+package com.zoho.shapes.build;
+
+option java_package = "com.zoho.shapes.build";
+option java_outer_classname = "ShapeSelectionProtos";
+
+import "properties.proto";
+import "textbody.proto";
+import "picturevalue.proto";
+import "pictureproperties.proto";
+import "offset.proto";
+import "graphicframe.proto";
+import "nonvisualshapeprops.proto";
+import "nonvisualpictureprops.proto";
+import "nonvisualconnectorprops.proto";
+import "nonvisualgroupshapeprops.proto";
+import "nonvisualcombinedshapeprops.proto";
+import "nonvisualframeprops.proto";
+import "basekit.proto";
+
+message SelectedTableInfo{
+    message SelectedCellIndex{
+        optional int32 row = 1;
+        optional int32 col = 2;
+    }
+    repeated SelectedCellIndex cells = 1;
+    optional int32 rowIndex = 2;
+    optional int32 cellIndex = 3;
+    optional string selectionType = 4;
+}
+
+message SelectedShapeInfo{
+    // common
+    optional string type = 1;
+    optional com.zoho.shapes.NonVisualShapeProps nvShapeProps = 2;
+    optional com.zoho.shapes.NonVisualPictureProps nvPictureProps = 3;
+    optional com.zoho.shapes.NonVisualConnectorProps nvConnectorProps = 4;
+    optional com.zoho.shapes.NonVisualGroupShapeProps nvGroupShapeProps = 5;
+    optional com.zoho.shapes.GraphicFrame.NonVisualGraphicFrameProps nvGraphicFrameProps = 6;
+    optional com.zoho.shapes.NonVisualCombinedShapeProps nvCombinedShapeProps = 7;
+
+    optional com.zoho.shapes.Properties props = 8;
+
+    // shape
+    optional com.zoho.shapes.TextBody textBody = 9;
+
+    // picture
+    optional com.zoho.shapes.PictureValue value = 10;
+    optional com.zoho.shapes.PictureProperties pictureProps = 11;
+    optional com.zoho.shapes.Offset crop = 12;
+
+    // groupshape
+    repeated com.zoho.shapes.build.SelectedShapeInfo shapes = 13;
+    optional bool isInnerShape = 14;
+
+    // graphicframe
+    optional com.zoho.shapes.GraphicFrame.GraphicObject obj = 15;
+
+    // vani specific
+    optional bool isFrameShape = 16;
+    optional string parentFrameId = 17;
+    optional bool isStickyNote = 18;
+    optional string stickyParentId = 19;
+    optional bool drawTableAsImage = 20;
+    optional com.zoho.kits.BaseKit basekit = 21;
+
+    //connector
+    repeated com.zoho.shapes.TextBody textBodies =22;
+
+    repeated string frameIds = 23;
+
+    optional com.zoho.remoteboard.NonVisualFrameProps nvFrameProps = 24;
+}
+
+message SelectedShapesInfo{
+    optional com.zoho.shapes.build.SelectedShapeInfo data = 1;
+    repeated string parentIds = 2; 
+    optional com.zoho.shapes.build.SelectedTableInfo table = 3;
+    repeated com.zoho.shapes.build.SelectedShapeConnectInfo connector = 4;
+    optional string selectedTextBodyId = 5;
+}
+
+message SelectedShapeConnectInfo{
+    optional com.zoho.shapes.build.SelectedShapeInfo data = 1;
+    optional string shapeId = 2;
+    optional string paragraphId = 3;
+    optional string pos = 4;
+}

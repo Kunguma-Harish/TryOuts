@@ -1,0 +1,16 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "PictureAssociationProtos";
+
+import "picproperties.proto";
+
+message PictureAssociation {
+
+	optional string clientKey = 1; // Client ID.
+
+	repeated string ids = 2; // Unique picture value IDs, available in the shapeData (Ex: shapeobj.picture.value.id , shapeobj.shape.props.fill.image.value.id)
+
+	optional com.zoho.common.PicProperties picProps = 3;
+}

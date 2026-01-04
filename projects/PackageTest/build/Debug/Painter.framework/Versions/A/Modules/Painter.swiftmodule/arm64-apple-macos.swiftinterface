@@ -1,0 +1,1158 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-macos11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name Painter
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AppKit
+import Cocoa
+import CoreGraphics
+import CoreImage
+import Foundation
+import GraphikosAppleAssets
+import AppKit.NSAttributedString
+import AppKit.NSTextStorage
+@_exported import Painter
+import Proto
+import QuartzCore
+import Swift
+import SwiftProtobuf
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import simd
+public struct CoreAnimData {
+  public var keypath: Painter.AnimKeyPath
+  public var duration: Swift.Float
+  public var delay: Swift.Float
+  public var values: [Swift.Float]
+  public var keyTime: [Swift.Float]
+  public init(keypath: Painter.AnimKeyPath, duration: Swift.Float, delay: Swift.Float, values: [Swift.Float], keyTime: [Swift.Float])
+}
+public enum AnimKeyPath {
+  case position
+  case postionX
+  case postionY
+  case scale
+  case scaleX
+  case scaleY
+  case opacity
+  case rotation
+  case rotationX
+  case rotationY
+  public static func == (a: Painter.AnimKeyPath, b: Painter.AnimKeyPath) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Proto.Blur {
+  public struct BlurImage {
+  }
+}
+public struct Transform3D {
+  public let translate: Swift.SIMD3<Swift.Float>
+  public let rotate: Swift.SIMD3<Swift.Float>
+  public let scale: Swift.SIMD3<Swift.Float>
+}
+extension QuartzCore.CATransform3D {
+  public var identity: QuartzCore.CATransform3D {
+    get
+  }
+  public func decomposeTRS() -> Painter.Transform3D
+}
+extension CoreGraphics.CGColor {
+  public var color: Proto.Color {
+    get
+  }
+}
+extension CoreGraphics.CGImage {
+  public func applyingFilters(with components: [Painter.HSB]) -> CoreGraphics.CGImage?
+  public func applyingFilters(from pictureProps: Proto.PictureProperties) -> CoreGraphics.CGImage?
+}
+public enum PathElement {
+  case move(to: CoreFoundation.CGPoint)
+  case line(to: CoreFoundation.CGPoint)
+  case quadCurve(to: CoreFoundation.CGPoint, via: CoreFoundation.CGPoint)
+  case cubicCurve(to: CoreFoundation.CGPoint, v1: CoreFoundation.CGPoint, v2: CoreFoundation.CGPoint)
+  case close
+}
+extension CoreGraphics.CGPath {
+  public func apply(_ fn: @escaping (Painter.PathElement) -> Swift.Void)
+}
+extension CoreGraphics.CGPath {
+  public var isNan: Swift.Bool {
+    get
+  }
+  public var isValid: Swift.Bool {
+    get
+  }
+  public var nonZeroBoundingBoxOfPath: CoreFoundation.CGRect {
+    get
+  }
+  public var custom: Proto.CustomGeometry {
+    get
+  }
+  public var bezierpath: AppKit.NSBezierPath {
+    get
+  }
+  public func verticalFlip(in frame: CoreFoundation.CGRect) -> CoreGraphics.CGPath
+  public func horizontalFlip(in frame: CoreFoundation.CGRect) -> CoreGraphics.CGPath
+  public func rotate(byDegree degree: CoreFoundation.CGFloat) -> CoreGraphics.CGPath
+  public func enlargeBy(dx: CoreFoundation.CGFloat, dy: CoreFoundation.CGFloat) -> CoreGraphics.CGPath
+  public func affineTransform(to targetRect: CoreFoundation.CGRect, from sourceRect: CoreFoundation.CGRect? = nil) -> (scalingTrans: CoreFoundation.CGAffineTransform, translationTrans: CoreFoundation.CGAffineTransform, finalPath: CoreGraphics.CGPath)
+  public func transform(to targetRect: CoreFoundation.CGRect) -> CoreGraphics.CGPath
+  public func transform(to targetRect: CoreFoundation.CGRect, from sourceRect: CoreFoundation.CGRect) -> CoreGraphics.CGPath
+  public typealias Body = @convention(block) (CoreGraphics.CGPathElement) -> Swift.Void
+  public func forEach(body: @escaping @convention(block) (CoreGraphics.CGPathElement) -> Swift.Void)
+}
+extension CoreGraphics.CGPathElement {
+  public var toPathObject: Proto.PathObject {
+    get
+  }
+}
+extension CoreGraphics.CGPath {
+  public func getPathElementsPointsAndTypes() -> ([CoreFoundation.CGPoint], [CoreGraphics.CGPathElementType])
+  public func rotateBy(angle: CoreFoundation.CGFloat, rect: CoreFoundation.CGRect) -> CoreGraphics.CGPath
+  public func rotateAboutCenter(angle: CoreFoundation.CGFloat, rect: CoreFoundation.CGRect) -> CoreGraphics.CGPath
+  public func scaled(for rect: CoreFoundation.CGRect) -> CoreGraphics.CGPath
+}
+public struct LineSegment {
+}
+extension CoreFoundation.CGPoint {
+  public var point: Proto.PathObject.Point {
+    get
+  }
+  public init(_ x: CoreFoundation.CGFloat, _ y: CoreFoundation.CGFloat)
+  public init(_ x: Swift.Int, _ y: Swift.Int)
+  public init(_ x: Swift.Double, _ y: Swift.Double)
+  public init(_ x: Swift.Float, _ y: Swift.Float)
+  public func rotate(around point: CoreFoundation.CGPoint, byDegree degree: CoreFoundation.CGFloat) -> CoreFoundation.CGPoint
+  public func mirror(from midpoint: CoreFoundation.CGPoint) -> CoreFoundation.CGPoint
+  public func distance(from point: CoreFoundation.CGPoint) -> CoreFoundation.CGFloat
+  public static func + (lhs: CoreFoundation.CGPoint, rhs: CoreFoundation.CGPoint) -> CoreFoundation.CGPoint
+  public static func - (lhs: CoreFoundation.CGPoint, rhs: CoreFoundation.CGPoint) -> CoreFoundation.CGPoint
+  public static func -= (lhs: inout CoreFoundation.CGPoint, rhs: CoreFoundation.CGPoint)
+  public static func += (lhs: inout CoreFoundation.CGPoint, rhs: CoreFoundation.CGPoint)
+}
+extension CoreFoundation.CGRect {
+  public var center: CoreFoundation.CGPoint {
+    get
+    set
+  }
+  public var area: CoreFoundation.CGFloat {
+    get
+  }
+  public var vFlip: CoreFoundation.CGAffineTransform {
+    get
+  }
+  public init(x: Swift.Float, y: Swift.Float, width: Swift.Float, height: Swift.Float)
+  public func enlargeBy(dx: CoreFoundation.CGFloat, dy: CoreFoundation.CGFloat) -> CoreFoundation.CGRect
+  public func rotateAtCenter(byDegree degree: CoreFoundation.CGFloat) -> CoreFoundation.CGRect
+  public func rotate(byDegree degree: CoreFoundation.CGFloat, at anchor: CoreFoundation.CGPoint) -> CoreFoundation.CGRect
+  public var lowerLeft: CoreFoundation.CGPoint {
+    get
+    set
+  }
+  public var lowerMiddle: CoreFoundation.CGPoint {
+    get
+    set
+  }
+  public var lowerRight: CoreFoundation.CGPoint {
+    get
+    set
+  }
+  public var middleLeft: CoreFoundation.CGPoint {
+    get
+    set
+  }
+  public var middleRight: CoreFoundation.CGPoint {
+    get
+    set
+  }
+  public var upperLeft: CoreFoundation.CGPoint {
+    get
+    set
+  }
+  public var upperMiddle: CoreFoundation.CGPoint {
+    get
+    set
+  }
+  public var upperRight: CoreFoundation.CGPoint {
+    get
+    set
+  }
+  public var cgpath: CoreGraphics.CGPath {
+    get
+  }
+  public var transform: Proto.Transform {
+    get
+  }
+  public var isValid: Swift.Bool {
+    get
+  }
+}
+public typealias DeviceColor = AppKit.NSColor
+extension Proto.Color {
+  public var cgColor: CoreGraphics.CGColor {
+    get
+  }
+  public var platformColor: Painter.DeviceColor {
+    get
+  }
+  public var cgColorWithSRGB: CoreGraphics.CGColor {
+    get
+  }
+  public func getHSBArray() -> [Swift.Float]
+}
+public enum ColorConversion {
+  public static func rgbToHsb(rgb: [Swift.Float]) -> [Swift.Float]
+  public static func hsbToRgb(hsl: [Swift.Float]) -> [Swift.Float]
+  public static func convertHSLValueToNSColor(hslArray: [Swift.Float]) -> Painter.DeviceColor
+  public static func convertHSLValueToCGColor(hslArray: [Swift.Float]) -> CoreGraphics.CGColor
+  public static func convertRGBValueToNSColor(rgbArray: [Swift.Float]) -> Painter.DeviceColor
+  public static func convertNSColorToHSB(color: Painter.DeviceColor) -> [Swift.Float]
+}
+extension Proto.Color {
+  public mutating func applyTweaks(_ customTweaks: Proto.ColorTweaks? = nil)
+}
+extension Proto.ShapeObject.CombinedObject {
+  public var frame: CoreFoundation.CGRect {
+    get
+    set
+  }
+  public func booleanProps(using config: Painter.PainterConfig?) -> Proto.Properties
+  public func draw(in ctx: Painter.RenderingContext, withGroupProps gprops: Proto.Properties?, using config: Painter.PainterConfig?, matrix: Painter.OrientationMatrices, shouldDrawShadowAsImage: Swift.Bool = true)
+  public func drawableContentFrame(config: Painter.PainterConfig?, matrix: Painter.OrientationMatrices = .identity, gprops: Proto.Properties? = nil) -> CoreFoundation.CGRect
+}
+extension Proto.ShapeObject.CombinedObject.CombinedNode {
+  public var props: Proto.Properties {
+    get
+    set
+  }
+  public var trans: Proto.Transform {
+    get
+    set
+  }
+  public var shapeObject: Proto.ShapeObject {
+    get
+  }
+}
+extension Swift.Array where Element == Proto.ShapeObject.CombinedObject.CombinedNode {
+  public var areAllRulesNoRule: Swift.Bool {
+    get
+  }
+}
+extension Proto.Connector {
+  public var frame: CoreFoundation.CGRect {
+    get
+    set
+  }
+  public func draw(in ctx: Painter.RenderingContext, withGroupProps gprops: Proto.Properties?, using config: Painter.PainterConfig?, matrix: Painter.OrientationMatrices, shapeOrientation: Painter.ShapeOrientation, shouldDrawShadowAsImage: Swift.Bool = false)
+  public func drawableContentFrame(config: Painter.PainterConfig?) -> CoreFoundation.CGRect
+}
+extension Proto.CustomGeometry {
+  public var patternCgPath: CoreGraphics.CGPath {
+    get
+  }
+  public func applying(_ t: CoreFoundation.CGAffineTransform) -> Proto.CustomGeometry
+}
+extension Proto.PathObject.Point {
+  public var cgPoint: CoreFoundation.CGPoint {
+    get
+  }
+  public func cgPoint(width: Swift.Float, height: Swift.Float) -> CoreFoundation.CGPoint
+}
+extension Swift.Array where Element == Proto.CustomGeometry {
+  public var cgpath: CoreGraphics.CGPath {
+    get
+  }
+}
+extension Proto.CustomGeometry {
+  public var cgpath: CoreGraphics.CGPath {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class GraphicsContext {
+  open class var currentCGContext: CoreGraphics.CGContext? {
+    get
+  }
+  @objc deinit
+}
+extension Proto.Effects.Shadow {
+  public func getShadowOffset(for frame: CoreFoundation.CGRect, scale: CoreFoundation.CGFloat = 1.0, vflip: Swift.Bool = false) -> CoreFoundation.CGSize
+}
+public func CounterClockwiseTurn(_ point1: CoreFoundation.CGPoint, point2: CoreFoundation.CGPoint, point3: CoreFoundation.CGPoint) -> Swift.Double
+public func BezierWithPoints(_ degree: Swift.Int, bezierPoints: [CoreFoundation.CGPoint], parameter: Swift.Double, withCurves: Swift.Bool) -> (point: CoreFoundation.CGPoint, leftCurve: [CoreFoundation.CGPoint]?, rightCurve: [CoreFoundation.CGPoint]?)
+public struct FBBezierCurveLocation {
+}
+public func == (lhs: Painter.FBBezierCurve, rhs: Painter.FBBezierCurve) -> Swift.Bool
+@_hasMissingDesignatedInitializers public class FBBezierCurve : Swift.CustomDebugStringConvertible, Swift.CustomStringConvertible, Swift.Equatable {
+  public var isStartShared: Swift.Bool {
+    get
+  }
+  public init(endPoint1: CoreFoundation.CGPoint, controlPoint1: CoreFoundation.CGPoint, controlPoint2: CoreFoundation.CGPoint, endPoint2: CoreFoundation.CGPoint)
+  public var endPoint1: CoreFoundation.CGPoint {
+    get
+  }
+  public var endPoint2: CoreFoundation.CGPoint {
+    get
+  }
+  public var controlPoint1: CoreFoundation.CGPoint {
+    get
+  }
+  public var controlPoint2: CoreFoundation.CGPoint {
+    get
+  }
+  public var isStraightLine: Swift.Bool {
+    get
+  }
+  public func length() -> Swift.Double
+  public func lengthAtParameter(_ parameter: Swift.Double) -> Swift.Double
+  public func closestLocationToPoint(_ point: CoreFoundation.CGPoint) -> Painter.FBBezierCurveLocation
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FBBezierGraph {
+  public init(path: CoreGraphics.CGPath)
+  public func closestLocationToPoint(_ point: CoreFoundation.CGPoint) -> Painter.FBCurveLocation?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FBCurveLocation {
+  public var edge: Painter.FBBezierCurve {
+    get
+  }
+  public var parameter: Swift.Double {
+    get
+  }
+  @objc deinit
+}
+public func FBAreValuesCloseWithOptions(_ value1: Swift.Double, value2: Swift.Double, threshold: Swift.Double) -> Swift.Bool
+extension Proto.StrokeField.CapType {
+  public var cap: CoreGraphics.CGLineCap {
+    get
+  }
+}
+extension Proto.StrokeField.JoinType {
+  public var join: CoreGraphics.CGLineJoin {
+    get
+  }
+}
+extension Proto.FillField.FillRule {
+  public var fillRule: CoreGraphics.CGPathFillRule {
+    get
+  }
+}
+extension Proto.Fill {
+  public func draw(in ctx: Painter.RenderingContext, within rect: CoreFoundation.CGRect, withGroupFill groupFill: Proto.Fill? = nil, using config: Painter.PainterConfig? = nil, forId id: Swift.String? = nil, shapeTrans: [Proto.Transform]? = nil, shapeOrientation: Painter.ShapeOrientation = ShapeOrientation(), crop: Proto.Offset? = nil, isPictureObject: Swift.Bool = false)
+}
+public struct PictureFillImageData {
+  public var optimalMipImage: CoreGraphics.CGImage
+  public let sizeRatio: CoreFoundation.CGSize
+  public init(optimalMipImage: CoreGraphics.CGImage, sizeRatio: CoreFoundation.CGSize)
+}
+extension Proto.PictureFill.PictureFillType {
+  public func croppedFrame(for rect: CoreFoundation.CGRect, imageSize size: CoreFoundation.CGSize, ratio: CoreFoundation.CGSize) -> CoreFoundation.CGRect
+}
+public struct FontProps {
+}
+extension Proto.GraphicFrame {
+  public func frame(using config: Painter.PainterConfig? = nil) -> CoreFoundation.CGRect
+  public func draw(in ctx: Painter.RenderingContext, withGroupProps gprops: Proto.Properties?, using config: Painter.PainterConfig? = nil)
+}
+extension Proto.ShapeObject.GroupShape {
+  public var frame: CoreFoundation.CGRect {
+    get
+    set
+  }
+  public func draw(in ctx: Painter.RenderingContext, withGroupProps gprops: Proto.Properties?, using config: Painter.PainterConfig?, _ matrix: Painter.OrientationMatrices, shapeOrientation: Painter.ShapeOrientation, shouldDrawShadowAsImage: Swift.Bool = true, crop: Proto.Offset? = nil, isMultiPathPreset: Swift.Bool = false)
+  public func drawEffects(in ctx: Painter.RenderingContext, withGroupProps gprops: Proto.Properties?, using config: Painter.PainterConfig?, matrix: Painter.OrientationMatrices, shapeOrientation: Painter.ShapeOrientation, crop: Proto.Offset? = nil)
+  public func drawReflection(in ctx: Painter.RenderingContext, withGroupProps gprops: Proto.Properties?, using config: Painter.PainterConfig?, matrix: Painter.OrientationMatrices, shapeOrientation: Painter.ShapeOrientation, shouldDrawShadowAsImage: Swift.Bool)
+  public func drawOuterShadow(_ shadow: Proto.Effects.Shadow, in ctx: Painter.RenderingContext, withGroupProps gprops: Proto.Properties?, using config: Painter.PainterConfig?, matrix: Painter.OrientationMatrices, shapeOrientation: Painter.ShapeOrientation, crop: Proto.Offset? = nil)
+  public func drawableContentFrame(_ config: Painter.PainterConfig?, matrix: Painter.OrientationMatrices = .identity, gprops: Proto.Properties? = nil) -> CoreFoundation.CGRect
+  public func blurFrame(forTransform trans: Proto.Transform, using config: Painter.PainterConfig?) -> CoreFoundation.CGRect
+}
+extension Proto.ShapeObject.GroupShape {
+  public func getCompleteGroupObject(_ config: Painter.PainterConfig?, withVisualTransform: Swift.Bool = true) -> Proto.ShapeObject.GroupShape
+  public static func overrideText(followeShape: inout Proto.Shape, portions: [Proto.Portion])
+}
+extension Proto.ShapeObject.GroupShape {
+  public var isSmartGroupShape: Swift.Bool {
+    get
+  }
+  public func drawGroupFill(in ctx: Painter.RenderingContext, with gprops: Proto.Properties, using config: Painter.PainterConfig?, applying transArr: (rect: CoreFoundation.CGRect, rotationMatrix: CoreFoundation.CGAffineTransform), matrix: Painter.OrientationMatrices, isMultiPath: Swift.Bool)
+}
+extension Proto.ShapeObject.GroupShape {
+  public func getModifiedPropsAndMatrix(withGroupProps gprops: Proto.Properties?, using config: Painter.PainterConfig?, matrix: Painter.OrientationMatrices) -> (Proto.Properties, Painter.OrientationMatrices)
+}
+public class ReachableShapeObject {
+  public var shapeIDs: [Swift.String]
+  public var type: Proto.ShapeNodeType
+  public var object: Any
+  public init(type: Proto.ShapeNodeType, id: Swift.String, object: Any)
+  public func addParent(id: Swift.String)
+  public func hasParent() -> Swift.Bool
+  @objc deinit
+}
+extension Swift.Array where Element == Painter.ReachableShapeObject {
+  public func getShapeObjects() -> [Proto.ShapeObject]
+}
+extension Proto.ShapeObject {
+  public func contains(point: CoreFoundation.CGPoint, groupTransform gtrans: Proto.Transform? = nil, using config: Painter.PainterConfig?) -> Painter.ReachableShapeObject?
+}
+extension Proto.Shape {
+  public func contains(point: CoreFoundation.CGPoint, groupTransform gtrans: Proto.Transform? = nil, using config: Painter.PainterConfig?) -> Swift.String?
+}
+extension Proto.Picture {
+  public func contains(point: CoreFoundation.CGPoint, groupTransform gtrans: Proto.Transform? = nil, using config: Painter.PainterConfig?) -> Swift.String?
+}
+extension Proto.ShapeObject.GroupShape {
+  public func contains(point: CoreFoundation.CGPoint, groupTransform gtrans: Proto.Transform? = nil, using config: Painter.PainterConfig?) -> Painter.ReachableShapeObject?
+}
+extension Proto.ShapeObject.CombinedObject {
+  public func contains(point: CoreFoundation.CGPoint, groupTransform gtrans: Proto.Transform? = nil, using config: Painter.PainterConfig?) -> Painter.ReachableShapeObject?
+}
+extension Proto.Connector {
+  public func contains(point: CoreFoundation.CGPoint, groupTransform gtrans: Proto.Transform? = nil, using config: Painter.PainterConfig?) -> Swift.String?
+}
+extension Proto.Properties {
+  public func contains(point: CoreFoundation.CGPoint, groupTransform gtrans: Proto.Transform? = nil, id: Swift.String, using config: Painter.PainterConfig?) -> Swift.Bool
+}
+extension Proto.HorizontalAlignType {
+  public var alignment: AppKit.NSTextAlignment {
+    get
+  }
+}
+extension Swift.Int {
+  public var isEven: Swift.Bool {
+    get
+  }
+  public var isOdd: Swift.Bool {
+    get
+  }
+}
+public func getAngle(_ origin: CoreFoundation.CGPoint, _ other: CoreFoundation.CGPoint) -> CoreFoundation.CGFloat
+public func pointOnLineAtDistanceFromStartPoint(distance dt: CoreFoundation.CGFloat, startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint) -> CoreFoundation.CGPoint
+public func distanceBetweenPoints(_ from: CoreFoundation.CGPoint, _ to: CoreFoundation.CGPoint) -> CoreFoundation.CGFloat
+public func pointToPixel(_ point: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+public func pixelToPoint(_ pixel: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+public func getPositiveAngle(_ value: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+public func distanceOf(val1: CoreFoundation.CGPoint, val2: CoreFoundation.CGPoint, diffX: CoreFoundation.CGFloat, diffY: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+public func getAngleForPointOnEllipse(x: CoreFoundation.CGFloat, y: CoreFoundation.CGFloat, wR: CoreFoundation.CGFloat, hR: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+extension Foundation.NSAttributedString.Key {
+  public static let zsTextCase: Foundation.NSAttributedString.Key
+  public static let zsIsBullet: Foundation.NSAttributedString.Key
+  public static let zsListParaStyle: Foundation.NSAttributedString.Key
+  public static let originalFont: Foundation.NSAttributedString.Key
+  public static let zsFontFamilyInProto: Foundation.NSAttributedString.Key
+  public static let zsFontSizeWithoutBaseline: Foundation.NSAttributedString.Key
+  public static let zsTextLayerProps: Foundation.NSAttributedString.Key
+  public static let zsCharacterStyleRef: Foundation.NSAttributedString.Key
+  public static let zsCharacterParaStyleRef: Foundation.NSAttributedString.Key
+  public static let zsHyperLinkColor: Foundation.NSAttributedString.Key
+  public static let zsHyperLinkUnderLine: Foundation.NSAttributedString.Key
+  public static let zsDataFieldsBGColor: Foundation.NSAttributedString.Key
+  public static let zsHighlightBGColor: Foundation.NSAttributedString.Key
+  public static let zsTempTextSelectionBGColor: Foundation.NSAttributedString.Key
+}
+extension Foundation.NSAttributedString {
+  public var fullRange: Foundation.NSRange {
+    get
+  }
+  public var maxFontSize: CoreFoundation.CGFloat {
+    get
+  }
+  public func isValidSubRange(_ range: Foundation.NSRange) -> Swift.Bool
+  public func getAttributedSubString(from range: Foundation.NSRange) -> Foundation.NSAttributedString?
+  public var textBody: Proto.TextBody {
+    get
+  }
+  public var casedAttributedString: Foundation.NSMutableAttributedString {
+    get
+  }
+  public var casedString: Swift.String {
+    get
+  }
+  public func getMaxDefaultLineHeight(forRange range: Foundation.NSRange) -> CoreFoundation.CGFloat
+  public func getDefaultLineHeights(forRange range: Foundation.NSRange) -> [CoreFoundation.CGFloat]
+  public func getMaxBaselineOffset(range: Foundation.NSRange) -> (baselineOffset: CoreFoundation.CGFloat, font: Painter.DeviceFont)
+  public func getMaxDescender(forRange range: Foundation.NSRange) -> (descender: CoreFoundation.CGFloat, font: Painter.DeviceFont)
+}
+extension AppKit.NSMutableParagraphStyle {
+  public func setAbsoluteLineHeight(_ value: CoreFoundation.CGFloat)
+}
+extension AppKit.NSParagraphStyle {
+  public var absoluteLineHeight: CoreFoundation.CGFloat {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class PainterCache : ObjectiveC.NSObject {
+  public enum CacheInvalidationType : Swift.Int {
+    case _default
+    case all
+    case transform
+    case geometry
+    case fill
+    case stroke
+    case opacity
+    case shadow
+    case blend
+    case text
+    case refreshFrame
+    case blur
+    case picture
+    case picturecoloradjust
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public func setShapeLevelRefreshFrameMap(for id: Swift.String, value: (CoreFoundation.CGRect, Swift.String?))
+  public func setAttributedStringMap(for id: Swift.String, attributedString: Foundation.NSMutableAttributedString)
+  public func setRefreshFrameWithControlMap(for id: Swift.String, value: CoreFoundation.CGRect)
+  public func setRawGeomPathMap(for id: Swift.String, value: CoreGraphics.CGPath)
+  public func setRawGeomPathWithoutRadiusMap(for id: Swift.String, value: CoreGraphics.CGPath)
+  public func setTransformedPathMap(for id: Swift.String, value: (CoreGraphics.CGPath, Swift.Int))
+  public func setTransformedPathWithoutRadiusMap(for id: Swift.String, value: (CoreGraphics.CGPath, Swift.Int))
+  public func setStrokePathMap(for id: Swift.String, value: (CoreGraphics.CGPath, Swift.Int))
+  public func setCombinedShapeToPathMap(for key: Swift.Int, value: CoreGraphics.CGPath)
+  public func setCombinedShapeToPropsMap(for key: Swift.Int, value: Proto.Properties)
+  public func setModifiedTransformMap(for id: Swift.String, value: Proto.Transform)
+  public func setPictureMap(for id: Swift.String, value: CoreGraphics.CGImage)
+  public func setTableRowHeightsMap(for key: Swift.Int, value: [CoreFoundation.CGFloat])
+  public func setTableColWidthsMap(for key: Swift.Int, value: [CoreFoundation.CGFloat])
+  public func setTextAsPathMap(for id: Swift.String, value: (paths: [Painter.TextAsPath], origin: CoreFoundation.CGPoint))
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Painter.PainterCache {
+  public func removeCahces(for id: Swift.String, with types: [Painter.PainterCache.CacheInvalidationType])
+  public func hasCaches(for id: Swift.String, with types: [Painter.PainterCache.CacheInvalidationType]) -> Swift.Bool
+  public func removeAllTextStorageCache()
+}
+public class AnyContainer<T> {
+  final public let value: T
+  public init(value: T)
+  @objc deinit
+}
+public class HashableAnyContainer<T> : ObjectiveC.NSObject where T : Swift.Hashable {
+  final public let value: T
+  public init(value: T)
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc override dynamic public var hash: Swift.Int {
+    @objc get
+  }
+  @objc deinit
+}
+extension CoreFoundation.CGSize : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class PainterConfig {
+  public struct DataFieldInfo {
+    public let value: Swift.String
+    public let bgColor: Painter.DeviceColor?
+    public static let `default`: Painter.PainterConfig.DataFieldInfo
+    public init(value: Swift.String, bgColor: Painter.DeviceColor? = nil)
+  }
+  public var documentID: Swift.String?
+  public var cache: Painter.PainterCache?
+  final public let fontShapes: [Proto.FontShape]
+  public init(documentID: Swift.String? = nil, imageHandler: ((Proto.Picture, CoreFoundation.CGRect, CoreFoundation.CGSize, CoreFoundation.CGFloat, Swift.String?) -> CoreGraphics.CGImage?)? = nil, pictureFillHandler: ((Proto.PictureFill, Swift.String?, CoreFoundation.CGSize, CoreFoundation.CGFloat, Swift.String?) -> Painter.PictureFillImageData?)? = nil, imageFilterHandler: ((Proto.PictureValue, Proto.PictureProperties, CoreFoundation.CGRect, CoreFoundation.CGSize, CoreFoundation.CGFloat, Swift.String) -> CoreGraphics.CGImage?)? = nil, presetHandler: ((Painter.RenderingContext, Painter.PainterConfig, Painter.OrientationMatrices) -> Swift.Void)? = nil, fontHandler: ((Swift.String, Swift.String) -> Swift.String?)? = nil, smartObjectHandler: ((Proto.ShapeObject.GroupShape, Swift.Bool, Swift.String?) -> Proto.ShapeObject.GroupShape)? = nil, overrideHandler: ((Proto.ShapeObject.GroupShape, Swift.String?) -> Proto.ShapeObject.GroupShape)? = nil, shadowImageHandler: ((Swift.Bool, Swift.String, Swift.Int, CoreFoundation.CGFloat, CoreGraphics.CGImage?) -> (CoreGraphics.CGImage, CoreFoundation.CGSize)?)? = nil, fillImageHandler: ((Swift.Bool, Swift.String, Swift.Int, CoreFoundation.CGFloat, CoreGraphics.CGImage?, CoreFoundation.CGSize?) -> CoreGraphics.CGImage?)? = nil, shadowBitmapConstants: Painter.BitmapConstants? = nil, propsHandler: ((Proto.ShapeObject, Swift.String?) -> Proto.ShapeObject)? = nil, dataLinkHandler: ((Swift.String, Swift.String?) -> Painter.PainterConfig.DataFieldInfo)? = nil, dataFieldIdForName: ((Swift.String) -> Swift.String?)? = nil, cache: Painter.PainterCache? = nil, fontShapes: [Proto.FontShape]? = nil, highlightColorAlpha: ((Swift.String?) -> CoreFoundation.CGFloat?)? = nil, dataFieldsBGColor: Painter.DeviceColor? = nil)
+  public func switchingDocument(newDocumentID: Swift.String?, newCahe: Painter.PainterCache?)
+  public func getPicture(picture: Proto.Picture, for rect: CoreFoundation.CGRect, size: CoreFoundation.CGSize, level: CoreFoundation.CGFloat) -> CoreGraphics.CGImage?
+  public func getPicturFillOnlyConfig() -> Painter.PainterConfig
+  public func getPicture(from pictureFill: Proto.PictureFill, forId id: Swift.String?, size: CoreFoundation.CGSize, level: CoreFoundation.CGFloat) -> Painter.PictureFillImageData?
+  public func getHighlightColorAlpha(shapeId: Swift.String?) -> CoreFoundation.CGFloat
+  public func getDataFieldInfo(forDataLinkId dLinkId: Swift.String, shapeId: Swift.String?) -> Painter.PainterConfig.DataFieldInfo?
+  public func getDataFieldIdForName(forDataFieldName dName: Swift.String) -> Swift.String?
+  public static var defaultFontSize: Swift.Float
+  public static var shouldConvertFontSizeToPixels: Swift.Bool
+  public static var defaultVerticalTextAlignment: Proto.VerticalAlignType
+  @objc deinit
+}
+public class RenderingContext {
+  final public let cgContext: CoreGraphics.CGContext
+  final public let zoomFactor: CoreFoundation.CGFloat
+  public var scaleRatio: CoreFoundation.CGFloat
+  final public let isPDFContext: Swift.Bool
+  public var editingTextID: Swift.String?
+  public var editingShapeIds: [Swift.String]
+  public init(ctx: CoreGraphics.CGContext, zoomFactor: CoreFoundation.CGFloat = 1.0, canDrawEffects: Swift.Bool = true, vFlipShadow: Swift.Bool = false, isPDFContext: Swift.Bool = false)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class BitmapConstants {
+  public var colorSpace: CoreGraphics.CGColorSpace
+  public var bitmapInfo: CoreGraphics.CGBitmapInfo
+  public var bitsPerComponent: Swift.Int
+  public static let currentBitmapConstant: Painter.BitmapConstants
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PainterFontHandler : ObjectiveC.NSObject {
+  public static let shared: Painter.PainterFontHandler
+  @objc deinit
+}
+extension Painter.PainterFontHandler {
+  public func getFontWeight(forFont fontName: Swift.String) -> Proto.PortionField.FontWeight
+  public func getStyleId(for fontWeight: Proto.PortionField.FontWeight) -> Swift.String
+  public func getFontID(forFamily fontFamily: Swift.String, withStyle styleId: Swift.String, using config: Painter.PainterConfig? = nil) -> Swift.String
+}
+extension Proto.Paragraph {
+  public func draw(inContext ctx: Painter.RenderingContext, withGroupProps groupProps: Proto.Properties?)
+  public func getAttributedString(forBulletIndex bulletIndex: Swift.Int, with scaleProps: Painter.ScaleProps, and textStyleProps: Proto.TextBoxProps.TextStyleProps.TextProperties?, using config: Painter.PainterConfig?, canUseParaSpacing: (before: Swift.Bool, after: Swift.Bool), casedString: Swift.Bool, bulletFree: Swift.Bool, forShapeId shapeId: Swift.String? = nil) -> Foundation.NSMutableAttributedString
+  public var hasBullet: Swift.Bool {
+    get
+  }
+}
+extension Proto.ParaStyle {
+  public var hasBullet: Swift.Bool {
+    get
+  }
+  public func addFont(to attributedString: Foundation.NSMutableAttributedString, ofSize fontSize: CoreFoundation.CGFloat, using config: Painter.PainterConfig?)
+  public func getBulletSplitter(ofWidth bulletWidth: Swift.Float, andScale scale: Swift.Float) -> Swift.Float
+}
+extension Proto.ParaStyle.ListStyle.BulletData {
+  public func getBulletCharacter(forIndex paraIndex: Swift.Int) -> Swift.String
+}
+public enum RotationMode {
+  case x
+  case y
+  case z
+  public static func == (a: Painter.RotationMode, b: Painter.RotationMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol CoreAnimationProtocol : AnyObject {
+  func animationStarted(forAnimID id: Swift.String)
+  func animationEnded(forAnimID id: Swift.String, didComplete flag: Swift.Bool)
+}
+@objc public class PerformAnimation : ObjectiveC.NSObject, QuartzCore.CAAnimationDelegate {
+  weak public var delegate: (any Painter.CoreAnimationProtocol)?
+  public var groupAnimation: [QuartzCore.CAAnimation]
+  public var rotation: Painter.RotationMode
+  public var stayObjectAlong: Swift.Bool
+  public init(WithLayer layer: QuartzCore.CALayer, AndCoreAnimationData data: Proto.CoreAnimation, shouldStayObjectAlong: Swift.Bool = false)
+  public func start()
+  @objc public func animationDidStart(_ anim: QuartzCore.CAAnimation)
+  @objc public func animationDidStop(_ anim: QuartzCore.CAAnimation, finished flag: Swift.Bool)
+  @objc deinit
+}
+extension Painter.PerformAnimation {
+  public static func getTimingFunctionForEasing(animationEasing: Proto.AnimationEasing) -> QuartzCore.CAMediaTimingFunction
+}
+extension Painter.PerformAnimation {
+  public func prepareAnimation(data: Proto.CoreAnimation) -> [QuartzCore.CAAnimation]
+}
+extension Proto.Picture {
+  public var frame: CoreFoundation.CGRect {
+    get
+    set
+  }
+  public func draw(in ctx: Painter.RenderingContext, withGroupProps gprops: Proto.Properties?, using config: Painter.PainterConfig?, matrix: Painter.OrientationMatrices, shouldDrawShadowAsImage: Swift.Bool = true)
+  public func drawableContentFrame(config: Painter.PainterConfig?, matrix: Painter.OrientationMatrices = .identity, gprops: Proto.Properties? = nil) -> CoreFoundation.CGRect
+}
+extension Proto.Offset {
+  public func actualShapeFrame(from cropFrame: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+}
+public enum HSB {
+  case hue(angle: Swift.Float)
+  case saturation(value: Swift.Float)
+  case brightness(value: Swift.Float)
+  public var filterName: Swift.String {
+    get
+  }
+  public var parameters: [Swift.String : Any] {
+    get
+  }
+}
+extension Proto.PictureProperties {
+  public var brightness: Swift.Float {
+    get
+  }
+  public var contrast: Swift.Float {
+    get
+  }
+  public var saturation: Swift.Float {
+    get
+  }
+  public var hue: Swift.Float {
+    get
+  }
+  public var hueTweak: Proto.Tweak? {
+    get
+  }
+  public var saturationTweak: Proto.Tweak? {
+    get
+  }
+  public var luminanceTweak: Proto.Tweak? {
+    get
+  }
+  public var hsbComponents: [Painter.HSB] {
+    get
+  }
+}
+extension Proto.Portion {
+  public var fontProps: Painter.FontProps {
+    get
+  }
+  public func rawString(using config: Painter.PainterConfig?, casedString: Swift.Bool, dataField: Swift.String) -> Swift.String
+}
+extension Proto.PortionProps {
+  public func getAttributes(withFontScale fontScale: Swift.Float, withTextStyleProps textStyleProps: Proto.TextBoxProps.TextStyleProps.TextProperties?, using config: Painter.PainterConfig?, casedString: Swift.Bool, shapeId: Swift.String? = nil, dataFieldBgColor: Painter.DeviceColor? = nil) -> [Foundation.NSAttributedString.Key : Any]
+}
+extension Proto.PortionProps {
+  public var styleId: Swift.String {
+    get
+  }
+  public func getHighlightColor(with alpha: CoreFoundation.CGFloat) -> Painter.DeviceColor?
+}
+extension Proto.TextLayerProperties {
+  public var singleSolidFill: Proto.Fill? {
+    get
+  }
+}
+extension Swift.Dictionary where Key == Foundation.NSAttributedString.Key, Value == Any {
+  public mutating func updateBackgroundColor()
+}
+extension Proto.Preset {
+  public func handles(frame: CoreFoundation.CGRect, stroke: Proto.Stroke) -> [CoreFoundation.CGPoint]?
+  public func textFrame(frame: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+}
+extension Proto.ShapeObject {
+  public var isPeopleIndicator: Swift.Bool {
+    get
+  }
+  public var isMultiPathCropShape: Swift.Bool {
+    get
+  }
+  public var isSmartObjPreset: Swift.Bool {
+    get
+  }
+}
+extension Proto.Properties {
+  public var isMultiPathPreset: Swift.Bool {
+    get
+  }
+  public func cropPath(forId shapeId: Swift.String, using config: Painter.PainterConfig?) -> CoreGraphics.CGPath
+  public func getMultiPathGroupShape(gprops: Proto.Properties?) -> Proto.ShapeObject
+}
+extension Proto.Properties {
+  public var frame: CoreFoundation.CGRect {
+    get
+    set
+  }
+  public var isConnector: Swift.Bool {
+    get
+  }
+  public var shadowFills: [Proto.Fill] {
+    get
+  }
+  public var shadowStrokes: [Proto.Stroke] {
+    get
+  }
+  public func clip(_ ctx: Painter.RenderingContext, with path: CoreGraphics.CGPath)
+  public func drawFillAndStroke(in ctx: Painter.RenderingContext, on path: CoreGraphics.CGPath, within rect: CoreFoundation.CGRect, withGroupProps gprops: Proto.Properties?, isMultipathPreset: Swift.Bool, using config: Painter.PainterConfig?, forId id: Swift.String, shapeOrientation: Painter.ShapeOrientation = ShapeOrientation(), crop: Proto.Offset? = nil)
+  public func getModifiedProps(from gprops: Proto.Properties?, using config: Painter.PainterConfig?) -> Proto.Properties
+  public func transformedCGPath(forTransform trans: Proto.Transform, id: Swift.String, using config: Painter.PainterConfig?, isMultiPathPreset: Swift.Bool = false) -> CoreGraphics.CGPath
+  public func transformedCGPathWithoutRadius(forTransform trans: Proto.Transform, id: Swift.String, using config: Painter.PainterConfig?) -> CoreGraphics.CGPath
+  public func rawCGPath(forTransform trans: Proto.Transform, id: Swift.String, using config: Painter.PainterConfig?, isMultiPathPreset: Swift.Bool = false) -> CoreGraphics.CGPath
+  public func rawCGPathWithoutRadius(forTransform trans: Proto.Transform, id: Swift.String, using config: Painter.PainterConfig?) -> CoreGraphics.CGPath
+  public func transformedCGPath(id: Swift.String, using config: Painter.PainterConfig?, isMultiPathPreset: Swift.Bool = false) -> CoreGraphics.CGPath
+  public func rawCGPath(id: Swift.String, using config: Painter.PainterConfig?, isMultiPathPreset: Swift.Bool = false) -> CoreGraphics.CGPath
+  public func blurFrame(forTransform trans: Proto.Transform, id: Swift.String, using config: Painter.PainterConfig?) -> CoreFoundation.CGRect
+  public func setReflectionProps(reflectProps: inout Proto.Properties)
+}
+extension Proto.Properties {
+  public func draw(in ctx: Painter.RenderingContext, withGroupProps gprops: Proto.Properties?, using config: Painter.PainterConfig?, forId id: Swift.String, matrix: Painter.OrientationMatrices, shapeOrientation: Painter.ShapeOrientation = ShapeOrientation(), shouldDrawShadowAsImage: Swift.Bool = false, crop: Proto.Offset? = nil, isMultiPathPreset: Swift.Bool = false)
+  public func applyMask(in ctx: Painter.RenderingContext, withGroupProps gprops: Proto.Properties?, forId id: Swift.String, using config: Painter.PainterConfig?, matrix: Painter.OrientationMatrices, usingTextBody textBody: Proto.TextBody?, usingGroupshape groupshape: Proto.ShapeObject?)
+  public func getNewTransformBasedOnCustomPath(for trans: Proto.Transform, isMultiPathPreset: Swift.Bool = false) -> Proto.Transform
+}
+extension Proto.Properties {
+  public func modifyShapeFrame(_ rect: inout CoreFoundation.CGRect, mtrans: Proto.Transform)
+}
+public struct ScaleProps {
+  public let fontScale: Swift.Float
+  public let lineSpaceScale: Swift.Float
+  public init(fontScale: Swift.Float? = nil, lineSpaceScale: Swift.Float? = nil)
+}
+extension Painter.ScaleProps {
+  public var inverted: Painter.ScaleProps {
+    get
+  }
+  public func applyingScale(_ scale: CoreFoundation.CGFloat) -> Painter.ScaleProps
+}
+extension Proto.Shape {
+  public var frame: CoreFoundation.CGRect {
+    get
+    set
+  }
+  public var isMultiPathPreset: Swift.Bool {
+    get
+  }
+  public func drawableContentFrame(config: Painter.PainterConfig?, matrix: Painter.OrientationMatrices = .identity, gprops: Proto.Properties? = nil) -> CoreFoundation.CGRect
+}
+extension Proto.Shape {
+  public func draw(in ctx: Painter.RenderingContext, withGroupProps gprops: Proto.Properties?, using config: Painter.PainterConfig? = nil, matrix: Painter.OrientationMatrices, shapeOrientation: Painter.ShapeOrientation = ShapeOrientation(), shouldDrawShadowAsImage: Swift.Bool = false, crop: Proto.Offset? = nil, isMultiPathPresetShape: Swift.Bool = false)
+  public func textPathBbox(for bBox: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  public func drawTextBody(in ctx: Painter.RenderingContext, withGroupProps gprops: Proto.Properties?, using config: Painter.PainterConfig?, matrix: Painter.OrientationMatrices, shouldDrawShadowAsImage: Swift.Bool = false)
+}
+extension Proto.ShapeGeometry {
+  public func cgpath(id: Swift.String, stroke: Proto.Stroke? = nil, frame: CoreFoundation.CGRect? = nil, config: Painter.PainterConfig?) -> CoreGraphics.CGPath
+  public func patternCgPath(rect: CoreFoundation.CGRect, stroke: Proto.Stroke? = nil) -> CoreGraphics.CGPath
+}
+extension Proto.ShapeGeometry {
+  public var handleValues: [Proto.PresetShape.HandleValue] {
+    get
+  }
+  public var presetModifiers: [CoreFoundation.CGFloat] {
+    get
+  }
+  public func handles(frame: CoreFoundation.CGRect, stroke: Proto.Stroke) -> [CoreFoundation.CGPoint]?
+  public func connectorPoints(frame: CoreFoundation.CGRect, stroke: Proto.Stroke) -> [[CoreFoundation.CGFloat]]?
+  public func textFrame(frame: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  public func getEllipseCoordinates(angle1: CoreFoundation.CGFloat, angle2: CoreFoundation.CGFloat, rx: CoreFoundation.CGFloat, ry: CoreFoundation.CGFloat, mid: CoreFoundation.CGPoint) -> [CoreFoundation.CGFloat]
+}
+extension Proto.ShapeObject {
+  public func drawableContentFrame(config: Painter.PainterConfig?, hasParent: Swift.Bool = true, gProps: Proto.Properties? = nil, matrix: Painter.OrientationMatrices = .identity, isMultiPathPreset: Swift.Bool = false) -> CoreFoundation.CGRect
+  public func drawableContentFrameWithoutEffects(config: Painter.PainterConfig?, gProps: Proto.Properties? = nil, matrix: Painter.OrientationMatrices = .identity) -> CoreFoundation.CGRect
+  public func drawableContentFrameWithControl(_ config: Painter.PainterConfig?) -> CoreFoundation.CGRect
+  public func drawWithBlur(in ctx: Painter.RenderingContext, withGroupProps gprops: Proto.Properties?, using config: Painter.PainterConfig?, matrix: Painter.OrientationMatrices, shapeOrientation: Painter.ShapeOrientation, isMultiPathPreset: Swift.Bool = false)
+}
+extension Proto.ShapeObject {
+  public var hasEmbed: Swift.Bool {
+    get
+  }
+  public var isExternalEmbed: Swift.Bool {
+    get
+  }
+  public func getCompleteShapeObject(_ config: Painter.PainterConfig?, gProps: Proto.Properties? = nil, shouldConvertMultipath: Swift.Bool = true, withVisualTransform: Swift.Bool = true) -> Proto.ShapeObject
+  public func draw(in ctx: Painter.RenderingContext, withGroupProps gprops: Proto.Properties?, using config: Painter.PainterConfig? = nil, parentId: Swift.String? = nil, matrix: Painter.OrientationMatrices = .identity, shapeOrientation: Painter.ShapeOrientation = ShapeOrientation(), crop: Proto.Offset? = nil, isMultiPathPreset: Swift.Bool = false)
+  public func getShapeObjectForMultiPathCropShape() -> Proto.ShapeObject
+}
+extension Proto.ShapeObject {
+  public var isMultiPathPreset: Swift.Bool {
+    get
+  }
+  public var frame: CoreFoundation.CGRect {
+    get
+    set
+  }
+  public var rotatedFrame: CoreFoundation.CGRect {
+    get
+  }
+  public var props: Proto.Properties {
+    get
+    set
+  }
+  public var vflip: Swift.Bool {
+    get
+    set
+  }
+  public var hflip: Swift.Bool {
+    get
+    set
+  }
+  public var rotation: Swift.Float {
+    get
+    set
+  }
+  public var id: Swift.String {
+    get
+    set
+  }
+  public var isHidden: Swift.Bool {
+    get
+    set
+  }
+  public var nvProps: Proto.NonVisualProps? {
+    get
+    set
+  }
+  public var nvdProps: Proto.NonVisualDrawingProps? {
+    get
+  }
+}
+public func maxOf(_ s1: CoreFoundation.CGSize, _ s2: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+public func limit<T>(value: T, minValue: T, maxValue: T) -> T where T : Swift.Comparable
+extension Swift.String {
+  public var charBulletUnicode: Swift.String? {
+    get
+  }
+  public var isCharacterBullet: Swift.Bool {
+    get
+  }
+  public func matches(_ regex: Swift.String) -> Swift.Bool
+}
+extension Proto.Stroke {
+  public func draw(in ctx: Painter.RenderingContext, with path: CoreGraphics.CGPath, using config: Painter.PainterConfig? = nil, frame: CoreFoundation.CGRect? = nil, forId id: Swift.String, shapeOrientation: Painter.ShapeOrientation = ShapeOrientation())
+  public func contains(point: CoreFoundation.CGPoint, for path: CoreGraphics.CGPath) -> Swift.Bool
+  public func getStrokeFillPath(for path: CoreGraphics.CGPath, with id: Swift.String?, config: Painter.PainterConfig?) -> CoreGraphics.CGPath
+  public func drawHeadEnd(path: CoreGraphics.CGPath, frame: CoreFoundation.CGRect, matrix: Painter.OrientationMatrices) -> CoreGraphics.CGPath?
+  public func drawTailEnd(path: CoreGraphics.CGPath, frame: CoreFoundation.CGRect, matrix: Painter.OrientationMatrices) -> CoreGraphics.CGPath?
+}
+extension Proto.Table {
+  public struct TableCellIndex : Swift.Equatable {
+    public let rIndex: Swift.Int
+    public let cIndex: Swift.Int
+    public static let `default`: Proto.Table.TableCellIndex
+    public init(_ rIndex: Swift.Int, _ cIndex: Swift.Int)
+    public static func == (a: Proto.Table.TableCellIndex, b: Proto.Table.TableCellIndex) -> Swift.Bool
+  }
+  public struct TableCellInfo : Swift.Equatable {
+    public let frame: CoreFoundation.CGRect
+    public let indices: Proto.Table.TableCellIndex
+    public static let `default`: Proto.Table.TableCellInfo
+    public static func == (a: Proto.Table.TableCellInfo, b: Proto.Table.TableCellInfo) -> Swift.Bool
+  }
+  public func getTableHeight(using config: Painter.PainterConfig?) -> CoreFoundation.CGFloat
+  public func getTableWidth(using config: Painter.PainterConfig?) -> CoreFoundation.CGFloat
+  public func getTableHeights(using config: Painter.PainterConfig?) -> [CoreFoundation.CGFloat]
+  public func getTableCellsInfo(rect: CoreFoundation.CGRect, config: Painter.PainterConfig?) -> [Proto.Table.TableCellInfo]
+}
+public struct TextAsPath {
+  public var paths: [CoreGraphics.CGPath]
+  public var characters: [Swift.String]
+  public var textLayerProps: Proto.TextLayerProperties
+}
+extension Swift.Array where Element == Painter.TextAsPath {
+  public var boundingBoxOfPaths: CoreFoundation.CGRect {
+    get
+  }
+}
+public typealias DeviceFont = AppKit.NSFont
+public typealias DeviceImage = AppKit.NSImage
+extension Proto.TextBody {
+  public func draw(inside rect: CoreFoundation.CGRect, forId: Swift.String, using config: Painter.PainterConfig?)
+  public func textAttributedString(using config: Painter.PainterConfig? = nil, casedString: Swift.Bool = true, bulletFree: Swift.Bool = false, forShapeId shapeId: Swift.String? = nil) -> Foundation.NSMutableAttributedString
+  public func getParaAttributedString(at paraIndex: Swift.Int, textStyleProps: Proto.TextBoxProps.TextStyleProps.TextProperties? = nil, using config: Painter.PainterConfig? = nil, casedString: Swift.Bool = true, bulletFree: Swift.Bool = false) -> Foundation.NSMutableAttributedString
+  public func getTextBoxFrame(enclosedBy rect: CoreFoundation.CGRect, forId: Swift.String, using config: Painter.PainterConfig? = nil) -> CoreFoundation.CGRect
+  public func getTextBoxExactFrame(enclosedBy rect: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  public static func getContentSize(for attrbString: Foundation.NSAttributedString, basedOn frame: CoreFoundation.CGRect, shouldWrapText: Swift.Bool) -> CoreFoundation.CGSize
+  public static func getContentRect(for attrbString: Foundation.NSAttributedString, basedOn frame: CoreFoundation.CGRect, shouldWrapText: Swift.Bool) -> CoreFoundation.CGRect
+}
+extension Proto.TextBody {
+  public func isBulletTypeSame(forIndex curIndex: Swift.Int, andIndex prevIndex: Swift.Int) -> Swift.Bool
+  public func getBulletIndex(forIndex paraIndex: Swift.Int) -> Swift.Int
+  public func getCTFrame(for attrbString: Foundation.NSMutableAttributedString, inside textFrame: inout CoreFoundation.CGRect) -> CoreText.CTFrame
+  public func drawGlyphs(enclosing rect: CoreFoundation.CGRect, using config: Painter.PainterConfig?, for id: Swift.String)
+  public func getTextStorageFromCache(forId: Swift.String, size: CoreFoundation.CGSize, using config: Painter.PainterConfig?) -> AppKit.NSTextStorage
+}
+extension Proto.TextBody {
+  public func getImageBounds(forRect rect: CoreFoundation.CGRect, id shapeID: Swift.String, using config: Painter.PainterConfig?) -> CoreFoundation.CGRect
+}
+extension Proto.TextBody {
+  public func getTextAsPaths(withFrame frame: CoreFoundation.CGRect, id shapeID: Swift.String, using config: Painter.PainterConfig?, charactersRequired: Swift.Bool) -> [Painter.TextAsPath]
+}
+extension Proto.TextBody {
+  public func contains(point: CoreFoundation.CGPoint, forId shapeId: Swift.String, basedOn rect: CoreFoundation.CGRect, using config: Painter.PainterConfig?) -> Swift.Bool
+  public func getContentSize(basedOn rect: CoreFoundation.CGRect, bulletFree: Swift.Bool = false, withInset: Swift.Bool = false, shouldScaleInset: Swift.Bool = true, using config: Painter.PainterConfig? = nil) -> CoreFoundation.CGSize
+  public func getContentOrigin(basedOn rect: CoreFoundation.CGRect, bulletFree: Swift.Bool = false, withInset: Swift.Bool = false, shouldScaleInset: Swift.Bool = true, using config: Painter.PainterConfig? = nil) -> CoreFoundation.CGPoint
+  public static func getTextViewFrame(from attributedString: Foundation.NSAttributedString, basedOn frame: CoreFoundation.CGRect, with textBoxProps: Proto.TextBoxProps) -> CoreFoundation.CGRect
+  public func hasHAlignText() -> Swift.Bool
+  public func getWidthBasedOnWrap(actual width: CoreFoundation.CGFloat, forId: Swift.String, config: Painter.PainterConfig?) -> CoreFoundation.CGFloat
+  public func resolveTextBody(painterConfig: Painter.PainterConfig, isPasteOp: Swift.Bool = false) -> Proto.TextBody
+}
+extension Proto.TextBoxProps {
+  public static var `default`: Proto.TextBoxProps {
+    get
+  }
+}
+extension Proto.Portion {
+  public static var `default`: Proto.Portion {
+    get
+  }
+}
+extension Proto.ParaStyle {
+  public static var `default`: Proto.ParaStyle {
+    get
+  }
+}
+extension Proto.TextBoxProps {
+  public var scaleProps: Painter.ScaleProps {
+    get
+  }
+  public func getInset(withScale: Swift.Bool) -> Proto.Margin
+  public func getInsetRect(for rect: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  public func getTextOrigin(from shapeBbox: CoreFoundation.CGRect, and calculatedHeight: CoreFoundation.CGFloat) -> CoreFoundation.CGPoint
+}
+public struct OrientationMatrices {
+  public var scaleAndTranslateMatrix: CoreFoundation.CGAffineTransform
+  public var rotationAndFlipMatrix: CoreFoundation.CGAffineTransform
+  public static let identity: Painter.OrientationMatrices
+  public init()
+  public init(_ scaleAndTranslate: CoreFoundation.CGAffineTransform, _ rotationAndFlip: CoreFoundation.CGAffineTransform)
+}
+public class ShapeOrientation {
+  public init()
+  @objc deinit
+}
+extension Proto.Transform {
+  public var rect: CoreFoundation.CGRect {
+    get
+    set
+  }
+  public var chRect: CoreFoundation.CGRect {
+    get
+    set
+  }
+  public var rotatedFrame: CoreFoundation.CGRect {
+    get
+  }
+  public var rotationAndFlipMatrix: CoreFoundation.CGAffineTransform {
+    get
+  }
+  public var flipMatrix: CoreFoundation.CGAffineTransform {
+    get
+  }
+  public func getFlipMatrix(rect: CoreFoundation.CGRect) -> CoreFoundation.CGAffineTransform
+  public func getTransformWhenMovingInsideGroupShape(gtrans: Proto.Transform) -> Proto.Transform
+  public func getEndTranformWhenMovingInsideGroupShape(gtrans: Proto.Transform) -> Proto.Transform
+  public func getModifiedTransform(group gtrans: Proto.Transform?, using config: Painter.PainterConfig?) -> Proto.Transform
+  public func getEndTranformWhenMovingOutsideGroupShape(gtrans: Proto.Transform?, using config: Painter.PainterConfig?) -> Proto.Transform
+  public func applyRotateAndFlip(on ctx: Painter.RenderingContext)
+  public func applyRotate(on ctx: Painter.RenderingContext)
+  public func applyFlip(on ctx: Painter.RenderingContext)
+  public func getRotationFlipMatrix(rect: CoreFoundation.CGRect, fliph: Swift.Bool, flipv: Swift.Bool, rotation: CoreFoundation.CGFloat) -> CoreFoundation.CGAffineTransform
+  public func getScaleTranslateMatrix(gRect: CoreFoundation.CGRect, chRect: CoreFoundation.CGRect, rect: CoreFoundation.CGRect, rotation: CoreFoundation.CGFloat, discardScaling: Swift.Bool) -> CoreFoundation.CGAffineTransform
+  public func getMatrix(_ parentMatrix: Painter.OrientationMatrices, gTrans: Proto.Transform?, discardScaling: Swift.Bool = false) -> Painter.OrientationMatrices
+}
+extension Proto.Transform {
+  public var hasRotationAngle: Swift.Bool {
+    get
+  }
+  public var rotationAngle: Swift.Float {
+    get
+    set
+  }
+  public mutating func clearRotationAngle()
+}
+public class TransitionData {
+  public init(from: QuartzCore.CALayer, to: QuartzCore.CALayer, transitionType: Proto.DisplayAnimation, duration: Swift.Float, delay: Swift.Float, delegate: (any QuartzCore.CAAnimationDelegate)? = nil, isReverse: Swift.Bool = false, id: Swift.String = "", easing: QuartzCore.CAMediaTimingFunction? = nil)
+  @objc deinit
+}
+public typealias PlatformTextViewDelegate = AppKit.NSTextViewDelegate
+public typealias PlatformTextView = AppKit.NSTextView
+public typealias PlatformTextGranularity = AppKit.NSSelectionGranularity
+public typealias PlatformMenuItem = AppKit.NSMenuItem
+extension CoreGraphics.CGPath {
+  public func fb_union(_ path: CoreGraphics.CGPath) -> CoreGraphics.CGPath
+  public func fb_intersect(_ path: CoreGraphics.CGPath) -> CoreGraphics.CGPath
+  public func fb_difference(_ path: CoreGraphics.CGPath) -> CoreGraphics.CGPath
+  public func fb_xor(_ path: CoreGraphics.CGPath) -> CoreGraphics.CGPath
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZSBaseTextView : Painter.PlatformTextView {
+  @_Concurrency.MainActor(unsafe) final public let initialFrame: CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func cancelOperation(_ sender: Any?)
+  @_Concurrency.MainActor(unsafe) public var textViewCursorColor: Painter.DeviceColor {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func updateTextStorage(inRanges ranges: [Foundation.NSRange], with batchUpdates: (Foundation.NSMutableAttributedString, [Foundation.NSRange]) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) public func changeHorizontalTextAlignment(to hAlign: Proto.HorizontalAlignType, over ranges: [Foundation.NSRange]? = nil)
+  @_Concurrency.MainActor(unsafe) public func changeTextColor(to color: Painter.DeviceColor, over ranges: [Foundation.NSRange]? = nil)
+  @_Concurrency.MainActor(unsafe) public func changeTempSelectionBackgroundColor(to color: Painter.DeviceColor, over ranges: [Foundation.NSRange]? = nil)
+  @_Concurrency.MainActor(unsafe) public func removeTempSelectionBackgroundColor(over ranges: [Foundation.NSRange]? = nil)
+  @_Concurrency.MainActor(unsafe) public func changeHyperLinkUnderline(for type: Proto.HyperLink.LinkType, to lineType: Proto.LineType, over ranges: [Foundation.NSRange]? = nil)
+  @_Concurrency.MainActor(unsafe) public func changeHyperLinkTextColor(for type: Proto.HyperLink.LinkType, to hyperLinkColor: Painter.DeviceColor, over ranges: [Foundation.NSRange]? = nil)
+  @_Concurrency.MainActor(unsafe) public func changeHighlightColor(to highlightColor: Painter.DeviceColor?, over ranges: [Foundation.NSRange]? = nil)
+  @_Concurrency.MainActor(unsafe) public func updateBackgroundColor(over ranges: [Foundation.NSRange]?, highlightColor: Painter.DeviceColor?, dataFieldBGColor dfColor: Painter.DeviceColor)
+  @objc deinit
+}
+extension Painter.ZSBaseTextView {
+  @_Concurrency.MainActor(unsafe) public var textContent: (attributedString: Foundation.NSMutableAttributedString, selectedRanges: [Foundation.NSRange]) {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var selectionIsForTypingAttributes: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func getParagraphRangesOfSelection() -> [Foundation.NSRange]
+  @_Concurrency.MainActor(unsafe) public func makeSelectionInTextView(at point: CoreFoundation.CGPoint?, by selectOption: Painter.PlatformTextGranularity?)
+  @_Concurrency.MainActor(unsafe) public func endEditingAndRemoveView()
+  @_Concurrency.MainActor(unsafe) public func getMaxDefaultLineHeightForSelection() -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public func getDefaultLineHeightsForSelection() -> [CoreFoundation.CGFloat]
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZSLayoutManager : AppKit.NSLayoutManager {
+  public var shapeObjectFrame: CoreFoundation.CGRect
+  weak public var pictureFillConfig: Painter.PainterConfig?
+  public var isTextEditingMode: Swift.Bool
+  public var firstLineOffset: CoreFoundation.CGFloat
+  @objc override dynamic public func drawBackground(forGlyphRange glyphsToShow: Foundation.NSRange, at origin: CoreFoundation.CGPoint)
+  @objc override dynamic public func drawGlyphs(forGlyphRange glyphsToShow: Foundation.NSRange, at origin: CoreFoundation.CGPoint)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Painter.ZSLayoutManager {
+  public class func defaultLineHeight(for theFont: Painter.DeviceFont) -> CoreFoundation.CGFloat
+  public class func defaultBaselineOffset(for theFont: Painter.DeviceFont) -> CoreFoundation.CGFloat
+  public func enableTextEditingMode(with delegate: (any AppKit.NSLayoutManagerDelegate)?)
+  public func enableBulletDrawing(textBody: Proto.TextBody, affineTransform: CoreFoundation.CGAffineTransform)
+  public func updateBulletInfo(textBody: Proto.TextBody, selectedParaIndex: Swift.Int)
+}
+extension Painter.ZSLayoutManager : AppKit.NSLayoutManagerDelegate {
+  @objc dynamic public func layoutManager(_ layoutManager: AppKit.NSLayoutManager, shouldSetLineFragmentRect lineFragmentRect: Swift.UnsafeMutablePointer<CoreFoundation.CGRect>, lineFragmentUsedRect: Swift.UnsafeMutablePointer<CoreFoundation.CGRect>, baselineOffset: Swift.UnsafeMutablePointer<CoreFoundation.CGFloat>, in textContainer: AppKit.NSTextContainer, forGlyphRange glyphRange: Foundation.NSRange) -> Swift.Bool
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZSTextView : Painter.ZSBaseTextView {
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect, delegate: (any Painter.ZSTextViewDelegate)?, textContainer: AppKit.NSTextContainer, config: Painter.PainterConfig? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func replaceCharacters(in range: Foundation.NSRange, with string: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func copy(_ sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func paste(_ sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func drawInsertionPoint(in rect: Foundation.NSRect, color: AppKit.NSColor, turnedOn flag: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func keyDown(with event: AppKit.NSEvent)
+  @_Concurrency.MainActor(unsafe) public func changeTypeface(to family: Swift.String, over ranges: [Foundation.NSRange]? = nil)
+  @objc deinit
+}
+@available(iOS, deprecated: 16, message: "Use UITextViewDelegate's 'textView(_:editMenuForTextIn:suggestedActions:)' to handle text menu items")
+@objc extension Painter.ZSTextView {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func handleFormatMenuItemAction(sender: Painter.PlatformMenuItem)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func handleSelectMenuItemAction(sender: Painter.PlatformMenuItem)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func handleInsertSymbolMenuItemAction(sender: Painter.PlatformMenuItem)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func handleSelectAllMenuItemAction(sender: Painter.PlatformMenuItem)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func handleCutMenuItemAction(sender: Painter.PlatformMenuItem)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func handleCopyMenuItemAction(sender: Painter.PlatformMenuItem)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func handlePasteMenuItemAction(sender: Painter.PlatformMenuItem)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func handleDeleteMenuItemAction(sender: Painter.PlatformMenuItem)
+}
+extension Painter.ZSTextView {
+  @_Concurrency.MainActor(unsafe) public var nsTextStorage: AppKit.NSTextStorage {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func increaseFontSize(by stepValue: Swift.Double, over ranges: [Foundation.NSRange]? = nil)
+  @_Concurrency.MainActor(unsafe) public func changeFontWeight(over ranges: [Foundation.NSRange]? = nil, with fetchNewStyleIdBlock: @escaping ((Swift.String) -> Swift.String))
+  @_Concurrency.MainActor(unsafe) public func changeBaseline(to baselineValue: Swift.Float, over ranges: [Foundation.NSRange]? = nil)
+  @_Concurrency.MainActor(unsafe) public func changeHeadIndent(to value: CoreFoundation.CGFloat, over ranges: [Foundation.NSRange]? = nil, isLastPara: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) public func changeFirstLineHeadIndent(to value: CoreFoundation.CGFloat, over ranges: [Foundation.NSRange]? = nil, isLastPara: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) public func changeParagraphSpacing(from paraStyle: Proto.ParaStyle, with scaleProps: Painter.ScaleProps?, isBefore: Swift.Bool, over ranges: [Foundation.NSRange]? = nil)
+  @_Concurrency.MainActor(unsafe) public func updateParaStyle(to paraStyle: Proto.ParaStyle, over ranges: [Foundation.NSRange]? = nil, isLastPara: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) public func removeAttributes(withKeys keys: [Foundation.NSAttributedString.Key], over ranges: [Foundation.NSRange]?)
+  @_Concurrency.MainActor(unsafe) public func updateScale(from oldScaleProps: Painter.ScaleProps, to newScaleProps: Painter.ScaleProps)
+  @_Concurrency.MainActor(unsafe) public func changeLineSpacing(to values: [CoreFoundation.CGFloat], ofType type: Proto.ParaStyle.Spacing.SpacingValue.SpacingValueType, over ranges: [Foundation.NSRange]? = nil)
+  @_Concurrency.MainActor(unsafe) public func changeTextCase(to textCaseValue: Swift.Int, over ranges: [Foundation.NSRange]? = nil)
+  @_Concurrency.MainActor(unsafe) public func changeUnderline(to type: Proto.LineType, over ranges: [Foundation.NSRange]? = nil)
+  @_Concurrency.MainActor(unsafe) public func changeStrikeThrough(to type: Proto.LineType, over ranges: [Foundation.NSRange]? = nil)
+}
+public protocol ZSTextViewDelegate : AppKit.NSTextViewDelegate {
+  func stopTextEditing()
+  func downKeyPressed() -> Swift.Bool
+  func upKeyPressed() -> Swift.Bool
+  func enterKeyPressed() -> Swift.Bool
+  func cutText()
+  func copyText()
+  func pasteText()
+  func deleteText()
+  func getFontId(forFamily familyName: Swift.String, withStyleId styleId: Swift.String) -> Swift.String?
+  func resize(_ textView: Painter.ZSTextView)
+}
+extension Painter.AnimKeyPath : Swift.Equatable {}
+extension Painter.AnimKeyPath : Swift.Hashable {}
+extension Painter.PainterCache.CacheInvalidationType : Swift.Equatable {}
+extension Painter.PainterCache.CacheInvalidationType : Swift.Hashable {}
+extension Painter.PainterCache.CacheInvalidationType : Swift.RawRepresentable {}
+extension Painter.RotationMode : Swift.Equatable {}
+extension Painter.RotationMode : Swift.Hashable {}

@@ -1,0 +1,67 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "ElementCategoryProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+message ElementCategory {
+
+	enum ElementCategoryType {
+
+		NONE = 0;
+		LEADER = 1; // Leads others
+		FOLLOWER = 2; // Follows the leader.
+		ELEMENT_TEMPLATE = 3; // Template 
+	}
+
+	optional ElementCategoryType type = 1;
+
+	message ElementLeader {
+
+		message Follower {
+			optional string id = 1;
+
+			optional string documentId = 2;
+
+			optional string screenId = 3;
+
+			optional bool baseLeader = 4;
+		}
+		// Followers list will be removed in the future. Do not use.
+		repeated Follower followers = 1;
+
+		message BaseLeader {
+			optional string id = 1;
+
+			optional string documentId = 2;
+		}
+		optional BaseLeader baseLeader = 2;
+	}
+	optional ElementLeader leader = 2;
+
+	message ElementFollower {
+		optional string leaderId = 1 [(com.zoho.common.customOptions).requiredField = true]; // The leader/template id
+
+		optional string documentId = 2; // The document in which the leader/template is present
+
+		enum FollowerType {
+			UNKNOWN_FOLLOWER_TYPE = 0;
+			FOLLOWS_LEADER = 1;
+			FOLLOWS_TEMPLATE = 2;
+		}
+		optional FollowerType type = 3;
+
+	}
+	optional ElementFollower follower = 3;
+
+	message ElementTemplate {
+		// Template details are stored in document.
+		optional string templateId = 1;
+	}
+
+	optional ElementTemplate elementTemplate = 4;
+
+}

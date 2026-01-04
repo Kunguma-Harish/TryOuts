@@ -1,0 +1,84 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "NumberFormatProtos";
+
+
+message NumberFormat {
+	enum NumberFormatType {
+		UNKNOWN_NUMBERFORMAT_TYPE = 0;
+		REGULAR = 1; // 2 is just 2 , 
+		DECIMAL_NUMBER = 2; // 2 becomes 2.0
+		FRACTION = 3; // 2.2 beomes "2 1/5" or "2 10/50" or "2 100/500"
+		PERCENTAGE = 4;	// 2.2 becomes 220%
+	}
+
+	optional NumberFormatType type = 1;
+	
+	enum ThousandSeparatorType {
+		UNKNOWN_THOUSANDSEPARATOR_TYPE = 0;
+		INDIAN = 1;  
+		INTERNATIONAL = 2;
+	}
+	
+	optional ThousandSeparatorType thousandSeperatorType = 2;
+	
+	message NumberSeparator {
+
+		enum NumberSeparatorType {
+			UNKNOWN_NUMBERSEPARATOR_TYPE = 0;
+			COMMA = 1; //1,234,567.89	
+			PERIOD = 2; //1.234.567,89 
+			SPACE = 3; //1 234 567.89	1 234 567,89
+
+		}
+		optional NumberSeparatorType thousand = 1;
+
+		optional NumberSeparatorType decimal = 2;
+	}
+
+	optional NumberSeparator numberSeparator = 7;
+	
+	optional bool separateByThousand = 3;
+
+	optional int32 decimalPlaces = 4;
+
+	optional Currency currency = 5;
+	message Currency {
+		
+		enum CurrencyOfCountry {
+			UNKNOWN_COUNTRY =0;
+			INDIA = 1;
+			UNITED_STATES = 2;
+			EUROPE = 3;
+			UNITED_KINGDOM = 4;
+		}
+		optional CurrencyOfCountry currencyOfCountry = 1;
+		
+		enum CurrencyRepresentation {
+			UNKNOWN_CURRENCY_REPRESENTATION = 0;
+			CURRENCY_CODE = 1;
+			SYMBOL = 2;
+		}
+		
+		optional CurrencyRepresentation beforeValue = 2; // To be attached before value
+ 
+		optional CurrencyRepresentation afterValue = 3; // To be attached after value.
+		
+	} 
+
+	message FractionFormat {	
+		enum FractionFormatType {
+
+			UNKNOWN_FRACTIONFORMAT_TYPE = 0;
+			ONE_DIGIT = 1;	// 1/5
+			TWO_DIGITS = 2; // 10/50
+			THREE_DIGITS = 3; // 100/500
+		}
+		optional FractionFormatType type = 5;				
+	}
+	optional FractionFormat fractionFormat = 6;
+
+}
+

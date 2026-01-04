@@ -1,0 +1,13 @@
+syntax="proto3";
+package com.zoho.database;
+
+option java_package = "com.zoho.database";
+option java_outer_classname = "SelectTableViewProtos";
+
+import "selectclause.proto";
+
+message SelectTableView {
+
+	optional SelectClause select = 1;
+
+}

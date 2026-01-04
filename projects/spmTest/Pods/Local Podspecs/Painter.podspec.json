@@ -1,0 +1,88 @@
+{
+  "name": "Painter",
+  "version": "0.1.129",
+  "homepage": "https://git.csez.zohocorpin.com/zohoshow/shapespainter",
+  "authors": {
+    "show-ios": "show-ios@zohocorp.com"
+  },
+  "summary": "2D Drawing Framework for iOS, macOS and tvOS.",
+  "source": {
+    "git": "https://git.csez.zohocorpin.com/zohoshow/shapespainter.git",
+    "tag": "0.1.129"
+  },
+  "license": "ZOHO",
+  "platforms": {
+    "ios": "13.0",
+    "osx": "11.0",
+    "tvos": "13.0"
+  },
+  "libraries": "c++",
+  "xcconfig": {
+    "CLANG_CXX_LANGUAGE_STANDARD": "c++17",
+    "CLANG_CXX_LIBRARY": "libc++"
+  },
+  "swift_versions": "5.0",
+  "dependencies": {
+    "Proto/Shapes": [
+      "0.1.43-beta2"
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "Show",
+      "source_files": [
+        "Painter/Common/**/*.swift",
+        "Painter/Common/**/*.h",
+        "Painter/Common/**/*.hpp",
+        "Painter/Common/**/*.mm",
+        "Painter/Show/**/*.swift"
+      ],
+      "resource_bundles": {
+        "ShowPainterResources": [
+          "Painter/Show/Resources/PrivacyInfo.xcprivacy"
+        ]
+      },
+      "dependencies": {
+        "GraphikosAppleAssets/Painter/Show": [
+          "0.0.24"
+        ]
+      }
+    },
+    {
+      "name": "Startwith",
+      "source_files": [
+        "Painter/Common/**/*.swift",
+        "Painter/Common/**/*.h",
+        "Painter/Common/**/*.hpp",
+        "Painter/Common/**/*.mm",
+        "Painter/Startwith/**/*.swift"
+      ],
+      "dependencies": {
+        "GraphikosAppleAssets/Painter/Startwith": [
+          "0.0.24"
+        ]
+      }
+    },
+    {
+      "name": "WhiteBoard",
+      "source_files": [
+        "Painter/Common/**/*.swift",
+        "Painter/Common/**/*.h",
+        "Painter/Common/**/*.hpp",
+        "Painter/Common/**/*.mm",
+        "Painter/Show/**/*.swift"
+      ],
+      "resource_bundles": {
+        "WhiteBoardPainterResources": [
+          "Painter/Show/Resources/PrivacyInfo.xcprivacy"
+        ]
+      },
+      "dependencies": {
+        "GraphikosAppleAssets/Painter/Show": [
+          "0.0.24"
+        ]
+      }
+    }
+  ],
+  "swift_version": "5.0"
+}

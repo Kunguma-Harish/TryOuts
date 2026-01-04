@@ -1,0 +1,31 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+source 'https://git.csez.zohocorpin.com/zohoshow/apple/public/specs.git'
+source 'https://zrepository.zoho.com/zohocorp/zoho/zohopodspecs.git'
+
+def common 
+pod 'Proto/WhiteBoard', '0.1.43-beta2'
+pod 'Painter/Show', :git => 'https://git.csez.zohocorpin.com/zohoshow/apple/public/shapespainter.git', :branch => 'kungu/spm'
+pod 'GraphikosAppleAssets', :git => 'https://git.csez.zohocorpin.com/zohoshow/apple/public/graphikosappleassets.git', :branch => 'kungu/spm'
+end 
+
+target 'iOSSpmTest' do
+platform :ios, '13.0'
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iOSSpmTest
+common
+
+end
+
+target 'spmTest' do
+platform :macos, '11.0'
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for spmTest
+common
+
+end

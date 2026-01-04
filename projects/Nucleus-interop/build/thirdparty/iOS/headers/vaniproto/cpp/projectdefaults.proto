@@ -1,0 +1,50 @@
+syntax="proto3";
+
+package com.zoho.remoteboard;
+
+option java_package = "com.zoho.remoteboard";
+option java_outer_classname = "ProjectDefaultsProtos";
+
+
+import "fill.proto";
+import "font.proto";
+import "dimension.proto";
+import "sketchdefault.proto";
+import "stroke.proto";
+import "shapegeometry.proto";
+
+message ProjectDefaults {
+
+	message ShapeDefault {
+		optional com.zoho.shapes.Fill fill = 1;
+		optional com.zoho.common.Dimension dim = 2;	
+		optional com.zoho.shapes.Stroke stroke = 3;
+		repeated com.zoho.shapes.Fill fills = 4;
+		repeated com.zoho.shapes.Stroke strokes = 5;
+	}
+	optional ShapeDefault shape = 1;
+
+	message TextDefault {
+
+		optional com.zoho.shapes.Font font = 1;	// font name
+		optional com.zoho.shapes.Fill fill = 2;
+		optional com.zoho.common.Dimension dim = 3; 
+		optional float size = 4; 
+	}
+	optional TextDefault text = 2;
+
+	optional SketchDefault pencil = 3;
+
+	optional SketchDefault sketch = 4;
+
+	optional SketchDefault highlighter = 5;
+
+	message ConnectorDefault{
+		repeated com.zoho.shapes.Stroke strokes = 1;
+		optional com.zoho.shapes.ShapeGeometry geom = 2; //connector - shape geom
+	}
+
+	optional ConnectorDefault connector = 6;
+
+}
+

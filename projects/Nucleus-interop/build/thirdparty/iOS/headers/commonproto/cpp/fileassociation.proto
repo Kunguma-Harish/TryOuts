@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "FileAssociationProtos";
+
+import "fileproperties.proto";
+
+message FileAssociation {
+
+	optional string clientKey = 1; // Client ID.
+
+	repeated string ids = 2; // Unique Media ID present in  each shape. Example (nvProps.file.fileId)
+
+	optional com.zoho.common.FileProperties fileProps = 3;
+}

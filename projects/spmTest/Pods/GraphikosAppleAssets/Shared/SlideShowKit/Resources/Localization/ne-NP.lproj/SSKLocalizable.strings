@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "ठिक छ";
+"SSKit.common.cancel" = "रद्द गर्नुहोस्";
+"SSKit.common.continue" = "जारी राख्नुहोस्";
+"SSKit.common.untitledDocument" = "शीर्षक नभएको कागजात";
+"SSKit.common.noNetwork" = "नेटवर्क छैन";
+"SSKit.common.noNetworkMessage" = "तपाईंको डिभाइस इन्टरनेटमा कनेक्ट गरिएको छ भन्ने कुरा सुनिश्चित गर्नुहोस्।";
+"SSKit.common.openSettings" = "सेटिङ खोल्नुहोस्";
+"SSKit.common.connected" = "कनेक्ट गरिएको छ";
+"SSKit.common.connecting" = "कनेक्ट गरिँदै छ";
+"SSKit.common.waiting" = "प्रतीक्षा गरिँदै छ";
+"SSKit.common.update" = "अपडेट गर्नुहोस्";
+"SSKit.common.minimise" = "सानो बनाउनुहोस्";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "सुरु गर्नुहोस्";
+"SSKit.slideshow.end" = "अन्त्य गर्नुहोस्";
+"SSKit.slideshow.currentSlide" = "स्लाइड %i मध्ये %i";
+"SSKit.slideshow.EndOfSlideshow" = "स्लाइडसोको अन्त्य";
+"SSKit.slideshow.blackout" = "स्क्रिन ब्ल्याक आउट भएको छ";
+"SSKit.slideshow.backToLive" = "लाइभमा फर्कनुहोस्";
+"SSKit.slideshow.notes" = "नोटहरू";
+"SSKit.slideshow.clear" = "खाली गर्नुहोस्";
+"SSKit.slideshow.emptyNotes" = "यो स्लाइडको कुनै पनि नोट उपलब्ध छैन।";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "सत्र खारेज भएको छ";
+"SSKit.shareplay.sessionTerminated.desc" = "तपाईंको सेयरप्ले सत्र खारेज भएको छ। तपाईं आफ्नो सत्र रिस्टार्ट गर्ने विकल्प छनौट गर्न सक्नुहुन्छ।";
+
+"SSKit.shareplay.syncWithPresenter" = "प्रस्तुतकर्तासँग सिंक गर्नुहोस्";
+
+"SSKit.shareplay.end.title" = "सेयरप्ले अन्त्य गर्नुहोस्";
+"SSKit.shareplay.end.description" = "तपाईं सेयरप्ले अन्त्य गर्न चाहनुहुन्छ? तपाईंले सेयरप्ले अन्त्य गर्नुभयो भने सत्र सकिने छ।";
+"SSKit.shareplay.requestToPresent.description" = "ले प्रस्तुत गर्ने अनुरोध गर्दै हुनुहुन्छ";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "त्रुटि";
+"SSKit.error.message" = "कुनै त्रुटि भएको छ। पछि फेरि प्रयास गर्नुहोस्";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "प्लेब्याक अडियो";
+"SSKit.audio.resume" = "जारी राख्नुहोस्";
+"SSKit.audio.pause" = "पज गर्नुहोस्";
+"SSKit.audio.audioTitle" = "अडियो";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "आफ्नो Apple TV चयन गर्नुहोस्";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple TV हरू खोज्दै हुनुहुन्छ";
+"SSKit.mcPeerListing.streamingDescription" = "आफ्नो डिभाइसबाट Apple TV मा स्लाइडहरू स्ट्रिम गर्न।";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "स्थानीय नेटवर्कको एक्सेस अन गर्नुहोस् र फेरि प्रयास गर्नुहोस्";
+
+"SSKit.mcPeerListing.disconnect.title" = "डिस्कनेक्ट गर्नुहोस्";
+"SSKit.mcPeerListing.disconnect.message" = "तपाईंले Apple TV बाट डिस्कनेक्ट गर्न खोज्नुभएकै हो?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@ डिस्कनेक्ट गर्नुहोस्";
+"SSKit.mcPeerListing.updateError" = "पियर पुरानो संस्करणमा चलिरहेको छ जस्तो देखिन्छ। TV एप अपडेट गरिएको छ भन्ने कुरा सुनिश्चित गर्नुहोस्";

@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "Oke";
+"SSKit.common.cancel" = "Batalkan";
+"SSKit.common.continue" = "Lanjutkan";
+"SSKit.common.untitledDocument" = "Dokumen Tanpa Judul";
+"SSKit.common.noNetwork" = "Tidak Ada Jaringan";
+"SSKit.common.noNetworkMessage" = "Pastikan perangkat Anda terhubung ke internet.";
+"SSKit.common.openSettings" = "Buka Pengaturan";
+"SSKit.common.connected" = "Terhubung";
+"SSKit.common.connecting" = "Menghubungkan";
+"SSKit.common.waiting" = "Menunggu";
+"SSKit.common.update" = "Perbarui";
+"SSKit.common.minimise" = "Kecilkan";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "Mulai";
+"SSKit.slideshow.end" = "Akhir";
+"SSKit.slideshow.currentSlide" = "Slide %i dari %i";
+"SSKit.slideshow.EndOfSlideshow" = "Akhir Slideshow";
+"SSKit.slideshow.blackout" = "Layar telah menjadi hitam";
+"SSKit.slideshow.backToLive" = "Kembali ke Langsung";
+"SSKit.slideshow.notes" = "Catatan";
+"SSKit.slideshow.clear" = "Hapus";
+"SSKit.slideshow.emptyNotes" = "Tidak ada catatan yang tersedia untuk slide ini.";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "Sesi Diakhiri";
+"SSKit.shareplay.sessionTerminated.desc" = "Sesi Shareplay Anda telah diakhiri. Anda dapat memilih untuk memulai ulang sesi Anda.";
+
+"SSKit.shareplay.syncWithPresenter" = "Sinkronkan dengan presenter";
+
+"SSKit.shareplay.end.title" = "Akhiri SharePlay";
+"SSKit.shareplay.end.description" = "Anda ingin mengakhiri shareplay? Mengakhiri shareplay akan mengakhiri sesi.";
+"SSKit.shareplay.requestToPresent.description" = "meminta untuk melakukan presentasi";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "Kesalahan";
+"SSKit.error.message" = "Terjadi kesalahan. Coba lagi nanti";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "Putar Audio";
+"SSKit.audio.resume" = "Lanjutkan";
+"SSKit.audio.pause" = "Jeda";
+"SSKit.audio.audioTitle" = "Audio";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "Pilih Apple TV Anda";
+"SSKit.mcPeerListing.lookingForTvs" = "Mencari Apple TV";
+"SSKit.mcPeerListing.streamingDescription" = "Mulai melakukan streaming slide dari perangkat Anda ke Apple TV.";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "Aktifkan akses jaringan lokal lalu coba kembali";
+
+"SSKit.mcPeerListing.disconnect.title" = "Putuskan koneksi";
+"SSKit.mcPeerListing.disconnect.message" = "Yakin ingin memutuskan koneksi dari Apple TV?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "Putuskan koneksi %@";
+"SSKit.mcPeerListing.updateError" = "Sepertinya rekan beroperasi pada versi yang lebih lama. Pastikan aplikasi TV adalah yang terbaru";

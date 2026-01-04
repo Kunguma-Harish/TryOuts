@@ -1,0 +1,20 @@
+syntax="proto3";
+
+package com.zoho.clipboard.remoteboard;
+
+option java_package = "com.zoho.clipboard.remoteboard";
+option java_outer_classname = "FrameClipsProtos";
+
+import "frame.proto";
+import "google/protobuf/protoextensions.proto";
+
+message FrameClips {
+
+	message FrameClip {
+		optional com.zoho.remoteboard.Frame frame = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	}
+	repeated FrameClip frames = 1;
+
+}
+

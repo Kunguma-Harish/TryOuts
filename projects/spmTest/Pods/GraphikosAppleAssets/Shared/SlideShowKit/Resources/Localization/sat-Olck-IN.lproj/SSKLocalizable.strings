@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "ᱵᱮᱥ";
+"SSKit.common.cancel" = "ᱢᱩᱪᱮᱫ";
+"SSKit.common.continue" = "ᱞᱮᱛᱟᱲ";
+"SSKit.common.untitledDocument" = "ᱵᱟᱝ ᱧᱩᱛᱩᱢᱟᱜ ᱫᱚᱞᱤᱞ";
+"SSKit.common.noNetwork" = "ᱱᱮᱴᱣᱟᱨᱠ ᱵᱟᱱᱩᱜ-ᱟ";
+"SSKit.common.noNetworkMessage" = "ᱜᱚᱴᱟᱭ ᱢᱮ ᱡᱮ ᱟᱢᱟᱜ ᱭᱚᱱᱛᱨᱚ ᱫᱚ ᱤᱱᱴᱚᱨᱱᱮᱴ ᱥᱚᱛᱮᱜ ᱡᱩᱲᱟᱣ ᱢᱮᱱᱟᱜ-ᱟ᱾";
+"SSKit.common.openSettings" = "ᱥᱮᱴᱤᱸᱜ ᱡᱷᱤᱡ ᱢᱮ";
+"SSKit.common.connected" = "ᱡᱩᱲᱟ ᱟᱠᱟᱱᱟ";
+"SSKit.common.connecting" = "ᱡᱚᱲᱟᱣᱮᱫ ᱟ";
+"SSKit.common.waiting" = "ᱛᱟᱸᱜᱤᱭᱮᱫ ᱟ";
+"SSKit.common.update" = "ᱟᱯᱰᱮᱴ";
+"SSKit.common.minimise" = "ᱦᱩᱰᱤᱧ ᱩᱛᱟᱹᱨ ᱵᱮᱱᱟᱣ";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "ᱮᱦᱚᱵ";
+"SSKit.slideshow.end" = "ᱢᱩᱪᱮᱫ";
+"SSKit.slideshow.currentSlide" = "ᱥᱟᱞᱟᱤᱰ %i ᱨᱮᱭᱟᱜ %i";
+"SSKit.slideshow.EndOfSlideshow" = "ᱥᱟᱞᱟᱤᱰ ᱨᱮᱭᱟᱜ ᱢᱩᱪᱟᱹᱫ ᱨᱮ";
+"SSKit.slideshow.blackout" = "ᱤᱥᱠᱨᱤᱱ ᱫᱚ ᱦᱮᱸᱫᱮ ᱦᱚᱪᱚ ᱟᱠᱟᱱᱟ";
+"SSKit.slideshow.backToLive" = "ᱞᱟᱤᱵ ᱨᱮ ᱨᱩᱣᱟᱲ";
+"SSKit.slideshow.notes" = "ᱠᱷᱟᱴᱚ ᱚᱞ ᱠᱚ";
+"SSKit.slideshow.clear" = "ᱥᱟᱯᱷᱟ";
+"SSKit.slideshow.emptyNotes" = "ᱱᱚᱣᱟ ᱥᱟᱞᱟᱤᱰ ᱞᱟᱹᱜᱤᱫ ᱡᱟᱦᱟᱸᱱ ᱠᱷᱟᱴᱚ ᱚᱞ ᱠᱚ ᱵᱟᱭ ᱧᱟᱢᱚᱜ ᱟ.";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "ᱠᱟᱹᱢᱤ ᱚᱠᱛᱚ ᱢᱩᱪᱟ.ᱫ ᱟᱠᱟᱱᱟ";
+"SSKit.shareplay.sessionTerminated.desc" = "ᱟᱢᱟᱜ ᱦᱟᱹᱴᱤᱧ ᱩᱫᱩᱜ ᱠᱟᱹᱢᱤ ᱚᱠᱛᱚ ᱢᱩᱪᱟᱹᱫ ᱦᱚᱪᱚ ᱟᱠᱟᱱᱟ. ᱟᱢ ᱟᱢᱟᱜ ᱠᱟᱹᱢᱤ ᱚᱠᱛᱚ ᱫᱚᱦᱲᱟ ᱮᱦᱚᱵ ᱞᱟᱹᱜᱤᱫ ᱵᱟᱪᱷᱟᱣ ᱫᱟᱲᱮᱭᱟᱜ ᱟ.";
+
+"SSKit.shareplay.syncWithPresenter" = "ᱩᱫᱩᱜᱤᱡ ᱥᱟᱶ ᱥᱤᱸᱠ";
+
+"SSKit.shareplay.end.title" = "ᱦᱜᱟᱹᱴᱤᱧ ᱩᱫᱩᱜ ᱢᱩᱪᱟᱹᱫ";
+"SSKit.shareplay.end.description" = "ᱪᱮᱫ ᱟᱢ ᱦᱟᱹᱴᱤᱧ ᱩᱫᱩᱜ ᱢᱩᱪᱟᱹᱫ ᱥᱟᱱᱟᱢ ᱠᱟᱱᱟ? ᱦᱟᱹᱴᱤᱧ ᱩᱫᱩᱜ ᱢᱩᱪᱟᱫ ᱦᱚᱪᱚ ᱛᱮ ᱠᱟᱹᱢᱤ ᱚᱠᱛᱚ ᱪᱟᱵᱟᱜ ᱟ.";
+"SSKit.shareplay.requestToPresent.description" = "ᱥᱚᱫᱚᱨ ᱞᱟᱹᱜᱤᱫ ᱱᱮᱦᱚᱨ ᱮᱫᱟᱭ";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "ᱵᱷᱩᱞ";
+"SSKit.error.message" = "ᱢᱤᱫ ᱵᱷᱩᱞ ᱧᱟᱢ ᱭᱮᱱᱟ. ᱯᱚᱨᱮ ᱛᱮ ᱫᱚᱦᱚᱲᱟ ᱠᱩᱨᱩᱢᱩᱴᱩᱭ ᱢᱮ";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "ᱳᱰᱤᱭᱚ ᱥᱟᱰᱮ ᱨᱩᱣᱟᱹᱲ";
+"SSKit.audio.resume" = "ᱫᱚᱦᱲᱟ ᱧᱟᱢ";
+"SSKit.audio.pause" = "ᱛᱤᱸᱜᱩ";
+"SSKit.audio.audioTitle" = "ᱚᱰᱤᱭᱚ";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "ᱟᱢᱟᱜ Apple TV ᱵᱟᱪᱷᱟᱣ ᱢᱮ";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple TV ᱠᱚ ᱧᱮᱞ ᱫᱟᱭ";
+"SSKit.mcPeerListing.streamingDescription" = "ᱟᱢᱟᱜ ᱭᱚᱱᱛᱨᱚ ᱠᱷᱚᱱ Apple TV ᱨᱮ ᱥᱞᱟᱤᱰ ᱥᱴᱨᱤᱢ ᱞᱟᱹᱜᱤᱫ᱾";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "ᱟᱥᱛᱷᱟᱞᱤᱱᱮ ᱱᱮᱴᱣᱟᱨᱠ ᱜᱷᱟᱛ ᱨᱮ ᱥᱚᱠᱪᱷᱚᱢ ᱢᱮ ᱟᱨ ᱫᱚᱦᱚᱲᱟ ᱠᱩᱨᱩᱢᱩᱴᱩᱭ ᱢᱮ";
+
+"SSKit.mcPeerListing.disconnect.title" = "ᱡᱩᱲᱟᱣ ᱫᱚ ᱨᱟᱯᱩᱫ ᱟᱠᱟᱱᱟ";
+"SSKit.mcPeerListing.disconnect.message" = "ᱪᱮᱫ ᱟᱢ ᱥᱟᱨᱤ ᱛᱮ Apple TV ᱠᱷᱚᱱ ᱡᱩᱲᱟᱣ ᱨᱟᱯᱩᱫ ᱥᱟᱱᱟᱭᱮᱜ ᱢᱮᱭᱟ?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "ᱡᱩᱲᱟᱣ ᱫᱚ ᱨᱟᱯᱩᱫ ᱟᱠᱟᱱᱟ %@";
+"SSKit.mcPeerListing.updateError" = "ᱱᱚᱝᱠᱟ ᱵᱩᱡᱷᱮᱜ ᱠᱟᱱᱟ ᱡᱮ ᱥᱟᱦᱟᱣ ᱛᱮᱱ ᱠᱟᱹᱢᱤ ᱫᱚ ᱢᱟᱨᱤ ᱥᱟᱸᱥᱠᱟᱨᱚᱱ ᱮ ᱪᱟᱹᱞᱩ ᱮᱫᱟ᱾ ᱜᱚᱴᱟᱭ ᱢᱮ ᱡᱮ TV ᱮᱯ ᱫᱚ ᱟᱯᱰᱮᱴ ᱜᱮᱭᱟ";

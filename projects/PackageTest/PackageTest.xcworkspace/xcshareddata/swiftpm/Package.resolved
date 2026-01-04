@@ -1,0 +1,77 @@
+{
+  "pins" : [
+    {
+      "identity" : "ios_wms_api_swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://zrepository.zoho.com/zohocorp/zohowms_libraries/ios_wms_api_swift.git",
+      "state" : {
+        "revision" : "5fe2d26e3bfff8613cee79f4387b07b1617f9e7f",
+        "version" : "3.0.8"
+      }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e2b0aa8dbbafe1552d3cfbc9b8c8087615762f0c"
+      }
+    },
+    {
+      "identity" : "starscream",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/daltoniam/Starscream.git",
+      "state" : {
+        "revision" : "c6bfd1af48efcc9a9ad203665db12375ba6b145a",
+        "version" : "4.0.8"
+      }
+    },
+    {
+      "identity" : "tracekit-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://git.csez.zohocorpin.com/arattai/tracekit-ios.git",
+      "state" : {
+        "revision" : "562d63e330f0b8f33337394914ebd4c7e5ddb1af",
+        "version" : "0.0.7"
+      }
+    },
+    {
+      "identity" : "wbdependency",
+      "kind" : "remoteSourceControl",
+      "location" : "https://zrepository.zoho.com/zohocorp/user/Kunguma.hp/WBDependency.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "5851dc27ef4101841fcc82276d24fc86d3687b2d"
+      }
+    },
+    {
+      "identity" : "whiteboard-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://zrepository.zoho.com/zohocorp/user/Kunguma.hp/Whiteboard-iOS.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "8b8b38c97ace924cbdd04fd4b8dbf6a53cfc1806"
+      }
+    },
+    {
+      "identity" : "whiteboard-mac",
+      "kind" : "remoteSourceControl",
+      "location" : "https://zrepository.zoho.com/zohocorp/user/Kunguma.hp/Whiteboard-Mac.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "7bef26e1ebcbc77a57f3e698eba7b11f0d46d822"
+      }
+    },
+    {
+      "identity" : "whiteboard_apple",
+      "kind" : "remoteSourceControl",
+      "location" : "https://git.csez.zohocorpin.com/zohoshow/apple/public/whiteboard_apple.git",
+      "state" : {
+        "branch" : "kungu/spm",
+        "revision" : "8e904bf3560c369abbfeb1045ab6ce800282e2a5"
+      }
+    }
+  ],
+  "version" : 2
+}

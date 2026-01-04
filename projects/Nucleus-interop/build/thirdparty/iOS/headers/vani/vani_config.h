@@ -1,0 +1,17 @@
+#ifndef __REMOTEBOARD_CONFIG_H__
+#define __REMOTEBOARD_CONFIG_H__
+#include <nucleus/nucleus_config.h>
+
+#define REMOTEBOARD_BG_COLOR SkColorSetARGB(0xFF, 0xF3, 0xF4, 0xF4)
+/* #undef NUCLEUS_OVERLAY_COLOR */
+#define REMOTEBOARD_SCROLLSPEED 3
+#define REMOTEBOARD_ZOOMSPEED 1
+#define REMOTEBOARD_ANIMATION_REFRESHRATE 120
+/* #undef NUCLEUS_DEFAULT_FONTNAME */
+#define REMOTEBOARD_EMOJI_FONTNAME "Noto Color Emoji"
+#define REMOTEBOARD_MIN_ZOOM 0.1
+#define REMOTEBOARD_MAX_ZOOM 16
+
+#define NL_VANI_DESCRIPTION "Render vani projectdata"
+
+#endif

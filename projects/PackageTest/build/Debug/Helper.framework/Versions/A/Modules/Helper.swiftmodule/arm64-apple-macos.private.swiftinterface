@@ -1,0 +1,440 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-macos11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name Helper
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AppKit
+import CoreGraphics
+import CoreServices
+import Foundation
+@_exported import Helper
+import ImageIO
+import Proto
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc public class ANZSCollectionViewConfigurator : ObjectiveC.NSObject {
+  public enum SizeCategory {
+    case extraSmall
+    case small
+    case medium
+    case large
+    case extraLarge
+    public static func == (a: Helper.ANZSCollectionViewConfigurator.SizeCategory, b: Helper.ANZSCollectionViewConfigurator.SizeCategory) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum ExtraSpace : Swift.Hashable {
+    case none
+    case constant(value: CoreFoundation.CGFloat)
+    case percentage(value: CoreFoundation.CGFloat)
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: Helper.ANZSCollectionViewConfigurator.ExtraSpace, b: Helper.ANZSCollectionViewConfigurator.ExtraSpace) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var numberOfRows: Swift.Int
+  public init(minWidth: CoreFoundation.CGFloat, maxWidth: CoreFoundation.CGFloat, heightRatio: CoreFoundation.CGFloat = 1, extraSpace: Helper.ANZSCollectionViewConfigurator.ExtraSpace = .none, dataSource: (any Helper.CollectionViewConfiguratorDataSource)?)
+  @objc deinit
+}
+extension Helper.ANZSCollectionViewConfigurator {
+  public func getItemSize(in view: Helper.PlatformView) -> CoreFoundation.CGSize
+  public func getSizeCategory(for view: Helper.PlatformView) -> Helper.ANZSCollectionViewConfigurator.SizeCategory
+}
+extension Swift.Array where Element == Proto.Relationship {
+  public func helperGetDbID(for pictureId: Swift.String) -> Swift.String?
+}
+@objc public class BaseImageHandler : ObjectiveC.NSObject {
+  public init(identifier: Swift.String, networkHandler: Helper.NetworkHandler, cacheCountLimit: Swift.Int? = nil)
+  @objc deinit
+}
+extension Helper.BaseImageHandler {
+  public func deleteImages(in location: Swift.String, otherThan fileNameContains: [Swift.String] = [], shouldRemoveEmptyParentDirectory: Swift.Bool = false)
+  public func saveFile(with identifier: Swift.String, in location: Swift.String, image: Helper.PlatformImage, data: Foundation.Data? = nil, cacheInMemory: Swift.Bool = false, handler: @escaping (_ succeeded: Swift.Bool, _ error: Helper.ImageHandlerError?) -> Swift.Void)
+  public func fetchImage(for identifier: Swift.String, in location: Swift.String, source: Helper.ImageSource? = nil, cacheInMemory: Swift.Bool = true, handler: @escaping Helper.ImageRequestHandler) -> Helper.PlatformImage?
+  public func readImage(from location: Swift.String, with identifier: Swift.String, handler: @escaping (_ image: Helper.PlatformImage?, _ error: Helper.ImageHandlerError?) -> Swift.Void)
+  public func readImageSynchronously(from location: Swift.String, with identifier: Swift.String) -> Helper.PlatformImage?
+}
+extension Swift.BinaryInteger {
+  public var helperIsPowerOfTwo: Swift.Bool {
+    get
+  }
+}
+extension Swift.Bool {
+  public var helperControlStateValue: AppKit.NSControl.StateValue {
+    get
+  }
+}
+extension CoreGraphics.CGImage {
+  public var helperImage: AppKit.NSImage {
+    get
+  }
+}
+extension CoreGraphics.CGImage {
+  public func helperApplyingFilters(from pictureProps: Proto.PictureProperties) -> CoreGraphics.CGImage?
+}
+extension ImageIO.CGImageSource {
+  public var helperIsGIF: Swift.Bool {
+    get
+  }
+  public var helperAnimatedPlatformImage: Helper.PlatformImage? {
+    get
+  }
+  public var helperFrameImagesDurationList: [Swift.Double]? {
+    get
+  }
+}
+extension Proto.Chart {
+  public var helperChartType: Proto.ChartField.ChartType {
+    get
+  }
+  public var helperDefaultDataLabelPosition: Proto.ChartField.DataLabelPosition {
+    get
+  }
+}
+public protocol CollectionViewConfiguratorDataSource : AnyObject {
+  func getMinimumItemSpacing(for sizeCategory: Helper.ANZSCollectionViewConfigurator.SizeCategory) -> CoreFoundation.CGFloat
+  func getEdgeInsets(for sizeCategory: Helper.ANZSCollectionViewConfigurator.SizeCategory) -> Helper.PlatformEdgeInsets
+}
+extension Foundation.Data {
+  public var helperPlatformImage: Helper.PlatformImage? {
+    get
+  }
+  public var helperCheckIfDataIsGif: Swift.Bool {
+    get
+  }
+  public func helperSaveGifImageDurationInFile(with identifier: Swift.String, destinationDir: Foundation.URL)
+}
+extension Proto.DataLabelDetails.Separator.SeparatorType {
+  public var helperSeparatorText: Swift.String? {
+    get
+  }
+}
+extension Swift.Dictionary where Key : Swift.Encodable, Value : Swift.Encodable {
+  public var jsonString: Swift.String? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class DocumentImageHandler : Helper.BaseImageHandler {
+  override public init(identifier: Swift.String, networkHandler: Helper.NetworkHandler, cacheCountLimit: Swift.Int? = nil)
+  @objc deinit
+}
+extension Helper.DocumentImageHandler {
+  public func fetchImage(for pictureValue: Proto.PictureValue, with pictureProperties: Proto.PictureProperties?, sourceProvider: @escaping Helper.ImageSourceProvider, size: CoreFoundation.CGSize? = nil, handler: @escaping (Helper.PlatformImage?, Helper.ImageHandlerError?) -> Swift.Void) -> Helper.PlatformImage?
+}
+public typealias DownloadHandler = (Helper.DownloadStatus) -> Swift.Void
+public enum DownloadStatus {
+  case progress(progress: Swift.Double)
+  case success
+  case failure(error: any Swift.Error)
+}
+public protocol Downloader : AnyObject {
+  func download(_ path: Swift.String, parameters: [Swift.String : Swift.String], headers: [Swift.String : Swift.String], authenticate: Swift.Bool, destination url: Foundation.URL, handler: @escaping Helper.DownloadHandler)
+}
+@objc @_inheritsConvenienceInitializers open class DownloaderManager : ObjectiveC.NSObject {
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension Helper.DownloaderManager : Helper.Downloader {
+  public func download(_ path: Swift.String, parameters: [Swift.String : Swift.String], headers: [Swift.String : Swift.String] = [:], authenticate: Swift.Bool = false, destination url: Foundation.URL, handler: @escaping Helper.DownloadHandler)
+}
+extension Foundation.FileManager {
+  public var helperDocumentsDirectory: Foundation.URL {
+    get
+  }
+}
+public enum GlobalNetworkConfigurations {
+  public static var authenticationTokenProvider: (any Helper.RequestAuthenticationTokenProviderAPI)?
+  public static var userAgent: Swift.String?
+}
+public enum ImageHandlerError : Swift.Error {
+  case errorFetchingSessionDirectory
+  case imageNotFoundInFileCache
+  case dataNotFoundInFileURL
+  case dataNotFoundInFileCacheURL
+  case errorParsingImageFromData
+  case errorParsingDataFromImage
+  case failedFetchingImageFromSource
+  case failedFetchingImageFromFileCache
+  case errorCreatingDestinationDirectory
+  case failedToWriteImageToFileCache
+  case errorObtainingCGImageFromPlatformImage
+  case errorApplyingFilterToImage
+  public static func == (a: Helper.ImageHandlerError, b: Helper.ImageHandlerError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public typealias ImageSourceProvider = (_ imageId: Swift.String, _ type: Proto.PictureValue.PictureType, _ imageName: Swift.String?) -> Helper.ImageSource?
+public typealias ImageRequestHandler = (_ image: Helper.PlatformImage?, _ fromCache: Swift.Bool, _ error: Helper.ImageHandlerError?) -> Swift.Void
+public struct ImageDownloadInfo {
+  public init(url: Swift.String, parameters: [Swift.String : Swift.String] = [:], headers: [Swift.String : Swift.String] = [:], authenticate: Swift.Bool = false, overrideHash: Swift.Int? = nil)
+}
+public enum ImageSource {
+  case file(url: Foundation.URL)
+  case cloud(info: Helper.ImageDownloadInfo)
+  case donotfetch
+  public var hash: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class MultipartFormData : ObjectiveC.NSObject {
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension Helper.MultipartFormData {
+  public func append(fileURL: Foundation.URL, name: Swift.String, fileName: Swift.String, mimeType: Swift.String)
+  public func append(data: Foundation.Data, name: Swift.String, fileName: Swift.String, mimeType: Swift.String)
+  public func append(data: Foundation.Data, withName name: Swift.String)
+  public func append(stream: Foundation.InputStream, length: Swift.UInt64, headers: [Swift.String : Swift.String])
+}
+@objc @_inheritsConvenienceInitializers public class NetworkHandler : ObjectiveC.NSObject {
+  public static let shared: Helper.NetworkHandler
+  weak public var publicKeyPinnerHandler: (any Helper.PublicKeyPinnerHandler)?
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension Helper.NetworkHandler : Foundation.URLSessionDataDelegate {
+  @objc dynamic public func urlSession(_: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
+}
+extension Helper.NetworkHandler : Foundation.URLSessionTaskDelegate {
+  @objc dynamic public func urlSession(_: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  @objc dynamic public func urlSession(_: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData _: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
+  @objc dynamic public func urlSession(_: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+}
+extension Helper.NetworkHandler : Foundation.URLSessionDownloadDelegate {
+  @objc dynamic public func urlSession(_: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+  @objc dynamic public func urlSession(_: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData _: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)
+}
+extension Helper.NetworkHandler {
+  public func getRequest<T>(url: Swift.String, parameters: [Swift.String : Swift.String] = [:], headers: [Swift.String : Swift.String] = [:], authenticate: Swift.Bool = false, handler: @escaping (_ data: T?, _ error: Helper.NetworkHandlerError?) -> Swift.Void) where T : Helper.SupportedResponseType
+}
+extension Helper.NetworkHandler {
+  public func postRequest<T>(url: Swift.String, parameters: [Swift.String : Swift.String] = [:], headers: [Swift.String : Swift.String] = [:], authenticate: Swift.Bool = false, handler: @escaping (_ data: T?, _ error: Helper.NetworkHandlerError?) -> Swift.Void) where T : Helper.SupportedResponseType
+  public func postRequest<T>(url: Swift.String, headers: [Swift.String : Swift.String] = [:], httpBody: Foundation.Data? = nil, authenticate: Swift.Bool = false, progressHandler: Helper.ProgressHandler? = nil, handler: @escaping (_ data: T?, _ error: Helper.NetworkHandlerError?) -> Swift.Void) where T : Helper.SupportedResponseType
+}
+extension Helper.NetworkHandler {
+  public func downloadRequest(url: Swift.String, parameters: [Swift.String : Swift.String] = [:], headers: [Swift.String : Swift.String] = [:], authenticate: Swift.Bool = false, writeTo destination: Foundation.URL, progressHandler: Helper.ProgressHandler? = nil, handler: @escaping Helper.DownloadStatusHandler)
+}
+extension Helper.NetworkHandler {
+  public func multipartRequest<T>(multipartFormData: @escaping (_ formData: Helper.MultipartFormData) -> Swift.Void, url: Swift.String, parameters: [Swift.String : Swift.String] = [:], headers: [Swift.String : Swift.String] = [:], authenticate: Swift.Bool = false, progressHandler: Helper.ProgressHandler? = nil, handler: @escaping (_ data: T?, _ error: Helper.NetworkHandlerError?) -> Swift.Void) where T : Helper.SupportedResponseType
+}
+public enum NetworkHandlerError : Swift.Error {
+  case errorConstructingUrlComponents
+  case errorParsingResponse
+  case authenticationTokenProviderNotFound
+  case notASuccessStatus(code: Swift.Int, data: Foundation.Data?)
+  case failedToFetchAuthenticationToken(causedBy: (any Swift.Error)?)
+  case requestFailed(causedBy: (any Swift.Error)?)
+  case errorEncodingMultipartFormData
+  case errorWritingDownloadedContent
+  case appendedMultipartURLIsNotAFile
+  case appendedMultipartURLIsNotReachable
+  case appendedMultipartURLIsADirectory
+  case canNotExtractContentLengthOfAppendedFile
+  case canNotCreateInputStreamOfAppendedFile
+  case canNotEncodeMultipartBody
+  case errorCreatingMultipartDataTempDirectory
+  case multipartOutputStreamFileAlreadyExists
+  case invalidMultipartOutputStreamFile
+  case errorCreatingMultipartOutputStream
+  case inputStreamErrorEncodingMultipartData
+  case outputStreamErrorEncodingMultipartData
+  case responseDataIsNil
+  case responseDataIsEmpty
+}
+public typealias ProgressHandler = (_ progress: Swift.Double) -> Swift.Void
+public typealias DownloadStatusHandler = (_ succeeded: Swift.Bool?, _ error: Helper.NetworkHandlerError?) -> Swift.Void
+extension AppKit.NSAnimationContext {
+  public static func performAnimation(duration: Foundation.TimeInterval, animationBlock: @escaping () -> Swift.Void, completionBlock: (() -> Swift.Void)? = nil)
+}
+extension AppKit.NSCollectionViewItem {
+  @_Concurrency.MainActor(unsafe) public static var itemIdentifier: AppKit.NSUserInterfaceItemIdentifier {
+    get
+  }
+}
+extension AppKit.NSControl.StateValue {
+  public var helperIsOn: Swift.Bool {
+    get
+  }
+}
+extension AppKit.NSImage {
+  public var helperImages: [AppKit.NSImage]? {
+    get
+  }
+  public var helperCGImage: CoreGraphics.CGImage? {
+    get
+  }
+  public var helperPNGData: Foundation.Data? {
+    get
+  }
+  public func helperResizeImage(to targetSize: CoreFoundation.CGSize) -> Helper.PlatformImage
+  public static func helperGetAnimatedImage(with _: [AppKit.NSImage], duration _: Foundation.TimeInterval) -> AppKit.NSImage?
+}
+extension AppKit.NSTextField {
+  @_Concurrency.MainActor(unsafe) public func helperTextContentHeight(for name: Swift.String) -> CoreFoundation.CGFloat
+}
+extension AppKit.NSView {
+  @_Concurrency.MainActor(unsafe) public static var itemIdentifier: AppKit.NSUserInterfaceItemIdentifier {
+    get
+  }
+}
+@objc open class OutlineViewGroup : Helper.OutlineViewData {
+  public var items: [Helper.OutlineViewData]
+  public var isExpanded: Swift.Bool
+  final public let shouldCollapse: Swift.Bool
+  public init(items: [Helper.OutlineViewData], isExpanded: Swift.Bool, shouldCollapse: Swift.Bool, shouldSelect: Swift.Bool = false)
+  @objc deinit
+}
+@objc open class OutlineViewData : ObjectiveC.NSObject {
+  public var shouldSelect: Swift.Bool
+  public init(shouldSelect: Swift.Bool)
+  @objc deinit
+}
+extension Swift.Array where Element == Helper.OutlineViewData {
+  public func updatedData(of element: Helper.OutlineViewData, isExpanded: Swift.Bool)
+  public func indexOfItem(isValid: (_ outlineViewData: Helper.OutlineViewData) -> Swift.Bool) -> Swift.Int
+}
+extension AppKit.NSImage {
+  public func helperAspectSize(wrt targetSize: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+}
+extension Swift.Array where Element == AppKit.NSView {
+  public func helperHideAll()
+  public func helperShowAll()
+}
+extension AppKit.NSViewController {
+  @_Concurrency.MainActor(unsafe) public func embed(_ controller: Helper.PlatformViewController, parent parentView: Helper.PlatformView? = nil)
+  @_Concurrency.MainActor(unsafe) public func remove()
+}
+extension AppKit.NSView {
+  @_Concurrency.MainActor(unsafe) public func pinToSuperview()
+  @_Concurrency.MainActor(unsafe) public func removeSubViews(ofTypes types: [Swift.AnyClass])
+}
+extension AppKit.NSView {
+  @_Concurrency.MainActor(unsafe) public var baseLayer: Helper.PlatformLayer {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var platformBackgroundColor: Helper.PlatformColor? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var platformClipsToBounds: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public func removeBaseLayer()
+  @_Concurrency.MainActor(unsafe) public func insertSubView(view: Helper.PlatformView, below belowView: Helper.PlatformView)
+  @_Concurrency.MainActor(unsafe) public func bringSubviewToTheFront(subView: Helper.PlatformView)
+  @_Concurrency.MainActor(unsafe) public func platformSetNeedsRefresh()
+  @_Concurrency.MainActor(unsafe) public func platformLayoutView()
+}
+public protocol PublicKeyPinnerHandler : ObjectiveC.NSObject {
+  func processURLAuthentication(challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+}
+public protocol RequestAuthenticationTokenProviderAPI : AnyObject {
+  func token(handler: @escaping (_ token: Swift.String?, _ error: (any Swift.Error)?) -> Swift.Void)
+  func getMdmToken() -> Swift.String?
+  func getDeviceID() -> Swift.String?
+}
+extension Helper.RequestAuthenticationTokenProviderAPI {
+  public func getMdmToken() -> Swift.String?
+  public func getDeviceID() -> Swift.String?
+}
+extension Proto.ShapeObject {
+  public static var `default`: Proto.ShapeObject {
+    get
+  }
+}
+extension Proto.Shape {
+  public static var `default`: Proto.Shape {
+    get
+  }
+}
+extension Proto.Dimension {
+  public static var `default`: Proto.Dimension {
+    get
+  }
+}
+extension Proto.ThemeReference {
+  public static var `default`: Proto.ThemeReference {
+    get
+  }
+}
+extension Proto.ShapeObject {
+  public var helperPictureProps: Proto.PictureProperties? {
+    get
+  }
+  public var helperUniqueGifImageViewId: Swift.String? {
+    get
+  }
+  public var helperGifUrl: Swift.String? {
+    get
+  }
+  public func helperResetShapePropForPictureCrop() -> Proto.ShapeObject
+}
+extension Foundation.FileManager {
+  public func helperIsDirectory(path: Swift.String) -> Swift.Bool
+  public func helperReadImage(from url: Foundation.URL) throws -> Helper.PlatformImage?
+  public func helperReadData(from url: Foundation.URL) throws -> Foundation.Data?
+}
+public enum SharedHelperError {
+}
+public typealias PlatformImage = AppKit.NSImage
+public typealias PlatformEdgeInsets = Foundation.NSEdgeInsets
+public typealias PlatformView = AppKit.NSView
+public typealias PlatformViewController = AppKit.NSViewController
+public typealias PlatformColor = AppKit.NSColor
+public typealias PlatformLayer = QuartzCore.CALayer
+@objc open class SimpleOutlineViewData : Helper.OutlineViewData {
+  public var label: Swift.String
+  final public let icon: Helper.PlatformImage
+  public init(label: Swift.String, icon: Helper.PlatformImage, shouldSelect: Swift.Bool)
+  @objc deinit
+}
+@objc open class SimpleOutlineViewGroup : Helper.OutlineViewGroup {
+  public var label: Swift.String
+  public init(label: Swift.String, items: [Helper.OutlineViewData], isExpanded: Swift.Bool, shouldCollapse: Swift.Bool, shouldSelect: Swift.Bool = false)
+  @objc deinit
+}
+extension Swift.String {
+  public func helperReplace(regex: Swift.String, with string: Swift.String) -> Swift.String
+}
+public protocol CodableResponseType : Helper.SupportedResponseType, Swift.Decodable, Swift.Encodable {
+}
+public protocol SupportedResponseType {
+  static func parseNetworkResponse(data: Foundation.Data) throws -> Self
+}
+extension Helper.CodableResponseType {
+  public static func parseNetworkResponse(data: Foundation.Data) throws -> Self
+}
+extension Swift.String : Helper.SupportedResponseType {
+  public static func parseNetworkResponse(data: Foundation.Data) throws -> Swift.String
+}
+extension Foundation.Data : Helper.SupportedResponseType {
+  public static func parseNetworkResponse(data: Foundation.Data) throws -> Foundation.Data
+}
+extension AppKit.NSImage : Helper.SupportedResponseType {
+  public static func parseNetworkResponse(data: Foundation.Data) throws -> Self
+}
+extension Swift.Dictionary : Helper.SupportedResponseType {
+  public static func parseNetworkResponse(data: Foundation.Data) throws -> [Key : Value]
+}
+extension Swift.Array : Helper.SupportedResponseType where Element : Swift.Decodable, Element : Swift.Encodable {
+  public static func parseNetworkResponse(data: Foundation.Data) throws -> [Element]
+}
+extension Foundation.URL {
+  public mutating func helperAppend(component: Swift.String, isDirectory: Swift.Bool)
+  public var helperPath: Swift.String {
+    get
+  }
+  public func helperChildFile(component: Swift.String) -> Foundation.URL
+  public func helperChildDirectory(component: Swift.String) -> Foundation.URL
+}
+extension Helper.ANZSCollectionViewConfigurator.SizeCategory : Swift.Equatable {}
+extension Helper.ANZSCollectionViewConfigurator.SizeCategory : Swift.Hashable {}
+extension Helper.ImageHandlerError : Swift.Equatable {}
+extension Helper.ImageHandlerError : Swift.Hashable {}

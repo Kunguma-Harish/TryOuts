@@ -1,0 +1,54 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "ValueProtos";
+
+import "fields.proto";
+import "userfield.proto";
+import "datetimemodifiervalue.proto";
+import "contact.proto";
+import "email.proto";
+
+message Value {
+
+	optional Show.CommonField.ValueType valueType = 1;
+
+	optional bool booleanValue = 2;
+
+	optional string stringValue = 3;	
+
+	optional float floatValue = 4;
+
+	optional double doubleValue = 5;
+
+	optional int32 integerValue = 6;
+
+	optional int64 longValue = 7;
+
+	optional UserField person = 8;
+
+	optional DateTimeModifierValue datetime = 9;
+
+	optional Email email = 10;
+
+	optional Contact contact = 11;
+
+	message ValueMeta{
+		optional string id = 1;
+
+		enum Status{
+			DEFAULT_STATUS = 0;
+			ACTIVE = 1;
+			INACTIVE = 2;
+			DELETED = 3;
+		}
+		optional Status status = 2;
+	}
+	optional ValueMeta meta = 12;
+
+	optional string customValueId = 13; // ID for custom value proto, used for messages outside the common namespace
+}
+
+

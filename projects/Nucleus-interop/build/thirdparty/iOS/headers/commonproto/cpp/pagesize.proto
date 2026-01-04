@@ -1,0 +1,18 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "PageSizeProtos";
+
+import "fields.proto";
+import "google/protobuf/protoextensions.proto";
+
+message PageSize { 
+	
+	optional float width = 1 [(com.zoho.common.customOptions).requiredField = true]; // width in Pixel.
+	optional float height = 2 [(com.zoho.common.customOptions).requiredField = true]; // height in Pixel.
+
+	optional Show.CommonField.MeasuringUnit unit = 3;	
+}
+

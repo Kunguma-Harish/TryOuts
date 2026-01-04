@@ -1,0 +1,12 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "AreaChartSeriesProtos";
+
+import "seriesdetails.proto";
+
+message AreaChartSeries {
+	optional SeriesDetails details = 1; 
+}

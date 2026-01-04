@@ -1,0 +1,57 @@
+syntax="proto3";
+package com.zoho.clipboard.remoteboard;
+
+option java_package = "com.zoho.clipboard.remoteboard";
+option java_outer_classname = "RemoteBoardClipsProtos";
+
+import "cliptype.proto";
+import "dependent.proto";
+import "google/protobuf/protoextensions.proto";
+
+message RemoteBoardClips {
+
+	message RemoteBoardClip {
+		optional string id = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+		repeated Clip clips = 2;
+
+	}
+	repeated RemoteBoardClip remoteBoardClips = 1;
+
+	message Clip {
+
+		optional ClipType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+		message ClipDetail { // Details about clip
+			optional string docId = 1; // Document ID
+			optional string owner = 2; // Owner of the document
+			optional string frameId = 3; // Frame ID.	// Not used
+		}
+
+		optional ClipDetail detail = 2;
+
+		message RemoteBoardPrincipal {
+
+			message RemoteBoardElement {
+					enum RemoteBoardElementType {
+						UNKNOWN = 0;
+						SHAPE = 1;
+						TEXT = 2;
+						FRAME = 3;
+					}
+
+					optional RemoteBoardElementType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+					// Clipboard File ID , will contain ShapeClips / TextClips / FrameClips, refer remoteboardclips.proto , shapeclips.proto, textclips.proto , frameclips.proto
+					repeated string fileIds = 2;
+			}
+			repeated RemoteBoardElement elements = 1;
+		}
+
+		optional RemoteBoardPrincipal principal = 4;
+
+
+		repeated Dependent dependents = 5;
+	}
+
+}

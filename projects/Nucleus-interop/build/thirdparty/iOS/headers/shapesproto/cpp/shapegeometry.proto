@@ -1,0 +1,73 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ShapeGeometryProtos";
+
+import "preset.proto";
+import "customgeometry.proto";
+import "fields.proto";
+import "point.proto";
+import "pointonpath.proto";
+import "google/protobuf/protoextensions.proto";
+
+message ShapeGeometry {
+	
+	optional Show.GeometryField.ShapeGeometryType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+	
+	optional Preset preset = 2; // Preset Shape
+	optional CustomGeometry custom = 3; // Custom Geometry Shape.
+
+    message PresetSmartElement {	
+        optional Show.GeometryField.PresetSmartShapeGeometry preset = 1;
+    }
+    optional PresetSmartElement presetSmart = 4;		
+
+    enum ConnectorPointType{
+        DEFAULT_TYPE = 0;
+        PRESET = 1;
+        CUSTOM = 2;
+    }
+
+    message ConnectorPoint{
+        optional string id = 1; // This will be the ID which will be associated with the Connecting Connector
+        // This will be set in the start/end value in nonVisualConnectorDrawingProps
+
+        optional ConnectorPointType cpType = 2;
+
+        message PresetConnectorPoint{
+            optional int32 index = 1;   // In case of preset shapes, we predefine the connector points during the path calculation - it is denoted in an array.
+        }
+
+        message CustomConnectorPoint{
+
+            optional int32 angle = 1;   // angle of the connector point.
+
+            enum CustomConnectionPointType{
+                DEFAULT_CUSTOM_CONNECTION_POINT = 0;
+                POINT_ON_PATH = 1;
+                ANY_WHERE_ON_SHAPE = 2;
+            }
+
+            optional CustomConnectionPointType customCPType = 2;
+
+            optional PointOnPath pointOnPath = 3;
+
+            optional Point anyWhereOnShape = 4;
+
+            optional bool notTemporary = 5; 
+            // Normally CustomConnectorPoints are removed, when a the connector is disconnected from the CP.
+            // With this property "notTemporary", we can skip removing the CP on connector disconnection.
+            // This will help us in creating shapes for Kits (Ex. Circuit Diagrams) with Custom CPs at specific points, 
+            // these Custom CPs remains and connectors can be reconnected to these Custom CPs.
+        }
+        optional CustomConnectorPoint customCP = 3;
+        optional PresetConnectorPoint presetCP = 4;
+
+    }
+
+    repeated ConnectorPoint cp = 5;
+    
+
+}

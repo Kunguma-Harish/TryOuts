@@ -1,0 +1,14 @@
+syntax="proto3";
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "ResumesKitProtos";
+
+message ResumesKit {
+
+	enum ResumesKitCategory {
+		UNKNOWN_RESUMES_CATEGORY = 0;
+        GENERAL = 1;	
+	}
+	optional ResumesKitCategory type = 1;
+}

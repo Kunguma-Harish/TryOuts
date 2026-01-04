@@ -1,0 +1,13 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "TableElementLocatorProtos";
+
+
+message TableElementLocator{
+  optional string rowId = 1;
+  optional string colId = 2;
+  optional string cellId = 3;
+}

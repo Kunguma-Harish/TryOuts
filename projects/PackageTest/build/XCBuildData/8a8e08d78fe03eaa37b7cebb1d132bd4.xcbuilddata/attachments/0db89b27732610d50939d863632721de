@@ -1,0 +1,538 @@
+{
+  "" : {
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WhiteBoard-master.dia",
+    "emit-module-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WhiteBoard-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WhiteBoard-master-emit-module.dia",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WhiteBoard-master.swiftdeps"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/DerivedSources/resource_bundle_accessor.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/resource_bundle_accessor.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/resource_bundle_accessor.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/resource_bundle_accessor.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/resource_bundle_accessor.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/resource_bundle_accessor.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/resource_bundle_accessor.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/resource_bundle_accessor.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/resource_bundle_accessor~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/macOS/Editor/Controller/EditorViewController.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewController.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewController.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewController.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewController.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewController.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewController.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewController.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewController~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/macOS/Editor/View/DocumentRenderingView.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingView.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingView.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingView.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingView.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingView.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingView.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingView.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingView~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/macOS/Utilities/Storyboard+macOS.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard+macOS.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard+macOS.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard+macOS.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard+macOS.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard+macOS.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard+macOS.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard+macOS.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard+macOS~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Controller/EditorBaseViewController.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorBaseViewController.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorBaseViewController.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorBaseViewController.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorBaseViewController.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorBaseViewController.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorBaseViewController.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorBaseViewController.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorBaseViewController~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DataStruct/DocOpsWrapper.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocOpsWrapper.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocOpsWrapper.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocOpsWrapper.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocOpsWrapper.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocOpsWrapper.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocOpsWrapper.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocOpsWrapper.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocOpsWrapper~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DataStruct/DocumentRenderingViewState.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingViewState.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingViewState.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingViewState.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingViewState.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingViewState.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingViewState.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingViewState.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingViewState~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DataStruct/EditorState.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorState.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorState.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorState.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorState.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorState.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorState.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorState.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorState~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DataStruct/EditorViewState.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewState.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewState.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewState.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewState.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewState.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewState.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewState.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewState~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DataStruct/MergedDocData.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MergedDocData.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MergedDocData.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MergedDocData.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MergedDocData.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MergedDocData.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MergedDocData.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MergedDocData.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MergedDocData~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DataStruct/ProjectEditingState.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectEditingState.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectEditingState.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectEditingState.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectEditingState.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectEditingState.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectEditingState.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectEditingState.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectEditingState~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DataStruct/ProjectLoadingState.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectLoadingState.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectLoadingState.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectLoadingState.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectLoadingState.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectLoadingState.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectLoadingState.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectLoadingState.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectLoadingState~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DeltaHandler/Composer/ComponentDecoder.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ComponentDecoder.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ComponentDecoder.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ComponentDecoder.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ComponentDecoder.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ComponentDecoder.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ComponentDecoder.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ComponentDecoder.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ComponentDecoder~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DeltaHandler/Composer/StringTokenizer.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/StringTokenizer.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/StringTokenizer.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/StringTokenizer.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/StringTokenizer.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/StringTokenizer.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/StringTokenizer.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/StringTokenizer.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/StringTokenizer~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DeltaHandler/Composer/TextComposer.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposer.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposer.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposer.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposer.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposer.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposer.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposer.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposer~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DeltaHandler/Composer/TextComposerData.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposerData.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposerData.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposerData.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposerData.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposerData.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposerData.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposerData.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextComposerData~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DeltaHandler/Composer/TextConverter.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextConverter.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextConverter.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextConverter.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextConverter.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextConverter.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextConverter.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextConverter.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextConverter~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DeltaHandler/DeltaHandler.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandler.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandler.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandler.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandler.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandler.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandler.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandler.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandler~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DeltaHandler/DeltaHandlerDelegate.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandlerDelegate.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandlerDelegate.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandlerDelegate.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandlerDelegate.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandlerDelegate.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandlerDelegate.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandlerDelegate.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaHandlerDelegate~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DeltaHandler/DeltaVersion.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaVersion.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaVersion.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaVersion.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaVersion.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaVersion.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaVersion.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaVersion.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeltaVersion~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DeltaHandler/MessageQueue.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MessageQueue.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MessageQueue.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MessageQueue.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MessageQueue.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MessageQueue.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MessageQueue.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MessageQueue.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/MessageQueue~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DeltaHandler/Transformer/TransformData.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TransformData.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TransformData.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TransformData.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TransformData.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TransformData.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TransformData.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TransformData.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TransformData~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/DeltaHandler/Transformer/Transformer.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Transformer.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Transformer.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Transformer.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Transformer.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Transformer.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Transformer.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Transformer.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Transformer~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/Protocols/AuthenticatorAPI.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/AuthenticatorAPI.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/AuthenticatorAPI.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/AuthenticatorAPI.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/AuthenticatorAPI.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/AuthenticatorAPI.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/AuthenticatorAPI.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/AuthenticatorAPI.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/AuthenticatorAPI~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/Protocols/DocumentImageProvider.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentImageProvider.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentImageProvider.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentImageProvider.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentImageProvider.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentImageProvider.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentImageProvider.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentImageProvider.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentImageProvider~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/Protocols/EditorAPI.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPI.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPI.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPI.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPI.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPI.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPI.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPI.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPI~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/ViewModel/EditorAPIImplementation.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPIImplementation.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPIImplementation.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPIImplementation.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPIImplementation.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPIImplementation.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPIImplementation.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPIImplementation.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorAPIImplementation~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/ViewModel/EditorViewModel.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewModel.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewModel.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewModel.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewModel.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewModel.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewModel.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewModel.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/EditorViewModel~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/ViewModel/ImageHandler.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ImageHandler.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ImageHandler.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ImageHandler.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ImageHandler.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ImageHandler.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ImageHandler.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ImageHandler.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ImageHandler~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/Model/ViewModel/WBParameters.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBParameters.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBParameters.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBParameters.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBParameters.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBParameters.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBParameters.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBParameters.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBParameters~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Editor/View/DocumentRenderingBaseView.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingBaseView.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingBaseView.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingBaseView.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingBaseView.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingBaseView.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingBaseView.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingBaseView.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DocumentRenderingBaseView~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Extensions/Library/CGSize+Helpers.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CGSize+Helpers.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CGSize+Helpers.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CGSize+Helpers.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CGSize+Helpers.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CGSize+Helpers.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CGSize+Helpers.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CGSize+Helpers.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CGSize+Helpers~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Extensions/Library/FileManager+Helpers.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/FileManager+Helpers.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/FileManager+Helpers.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/FileManager+Helpers.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/FileManager+Helpers.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/FileManager+Helpers.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/FileManager+Helpers.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/FileManager+Helpers.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/FileManager+Helpers~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Extensions/Proto/Document+Helpers.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Document+Helpers.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Document+Helpers.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Document+Helpers.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Document+Helpers.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Document+Helpers.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Document+Helpers.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Document+Helpers.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Document+Helpers~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Extensions/Proto/Enum+Helpers.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Enum+Helpers.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Enum+Helpers.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Enum+Helpers.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Enum+Helpers.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Enum+Helpers.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Enum+Helpers.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Enum+Helpers.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Enum+Helpers~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Extensions/Proto/Message+Helpers.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Message+Helpers.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Message+Helpers.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Message+Helpers.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Message+Helpers.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Message+Helpers.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Message+Helpers.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Message+Helpers.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Message+Helpers~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Extensions/Proto/Portion+Helpers.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Portion+Helpers.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Portion+Helpers.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Portion+Helpers.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Portion+Helpers.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Portion+Helpers.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Portion+Helpers.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Portion+Helpers.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Portion+Helpers~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Extensions/Proto/ProjectData+Helpers.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectData+Helpers.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectData+Helpers.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectData+Helpers.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectData+Helpers.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectData+Helpers.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectData+Helpers.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectData+Helpers.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/ProjectData+Helpers~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Extensions/Proto/Stroke+Merge.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Stroke+Merge.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Stroke+Merge.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Stroke+Merge.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Stroke+Merge.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Stroke+Merge.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Stroke+Merge.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Stroke+Merge.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Stroke+Merge~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Extensions/Proto/TextBody+Helpers.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextBody+Helpers.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextBody+Helpers.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextBody+Helpers.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextBody+Helpers.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextBody+Helpers.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextBody+Helpers.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextBody+Helpers.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/TextBody+Helpers~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Extensions/RxSwift/BehaviourSubject+Helpers.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/BehaviourSubject+Helpers.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/BehaviourSubject+Helpers.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/BehaviourSubject+Helpers.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/BehaviourSubject+Helpers.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/BehaviourSubject+Helpers.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/BehaviourSubject+Helpers.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/BehaviourSubject+Helpers.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/BehaviourSubject+Helpers~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Utilities/Bundle.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Bundle.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Bundle.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Bundle.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Bundle.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Bundle.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Bundle.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Bundle.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Bundle~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Utilities/CommonConstants.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CommonConstants.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CommonConstants.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CommonConstants.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CommonConstants.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CommonConstants.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CommonConstants.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CommonConstants.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/CommonConstants~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Utilities/Debugger.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Debugger.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Debugger.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Debugger.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Debugger.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Debugger.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Debugger.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Debugger.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Debugger~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Utilities/DelayHelper.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DelayHelper.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DelayHelper.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DelayHelper.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DelayHelper.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DelayHelper.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DelayHelper.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DelayHelper.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DelayHelper~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Utilities/DeleteData.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeleteData.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeleteData.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeleteData.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeleteData.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeleteData.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeleteData.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeleteData.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/DeleteData~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Utilities/Math.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Math.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Math.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Math.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Math.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Math.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Math.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Math.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Math~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Utilities/Storyboard.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Storyboard~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Utilities/Typealias.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Typealias.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Typealias.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Typealias.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Typealias.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Typealias.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Typealias.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Typealias.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Typealias~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Utilities/Url.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Url.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Url.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Url.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Url.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Url.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Url.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Url.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/Url~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/Utilities/WBLocalizable.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBLocalizable.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBLocalizable.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBLocalizable.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBLocalizable.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBLocalizable.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBLocalizable.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBLocalizable.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBLocalizable~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/WBIntegType.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBIntegType.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBIntegType.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBIntegType.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBIntegType.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBIntegType.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBIntegType.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBIntegType.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBIntegType~partial.swiftmodule"
+  },
+  "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/Sources/WhiteBoard/Source/Shared/WBViewController.swift" : {
+    "const-values" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBViewController.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBViewController.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBViewController.dia",
+    "index-unit-output-path" : "/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBViewController.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBViewController.bc",
+    "object" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBViewController.o",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBViewController.swiftdeps",
+    "swiftmodule" : "/Users/kunguma-14252/Documents/Repos/spm/whiteboard_apple/WhiteBoard/build/WhiteBoard.build/Debug/WhiteBoard.build/Objects-normal/arm64/WBViewController~partial.swiftmodule"
+  }
+}

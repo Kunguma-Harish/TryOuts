@@ -1,0 +1,73 @@
+syntax="proto3";
+// $Id$
+// Struture of a preset shape.
+
+package com.zoho.shapes.build;
+
+option java_package = "com.zoho.shapes.build";
+option java_outer_classname = "PresetShapeProtos";
+
+import "colortweaks.proto";
+import "google/protobuf/protoextensions.proto";
+
+message PresetShape {
+
+	optional string name = 1 [(com.zoho.common.customOptions).requiredField = true];	
+
+	repeated float modifiers = 2;
+	
+	message HandleValue {
+
+		message Modifier {
+			
+			enum Origin {
+				END = 0;
+			}
+			
+			enum ModifierType {
+				X = 0;
+				Y = 1;
+				ANGLE = 2;
+				RADIUS = 3;
+			}
+			
+			optional ModifierType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+			optional Origin origin =  2;
+			optional float multiplier = 3;
+		}
+				
+		message Handle {	
+			message Limit {
+				optional float val = 1 [(com.zoho.common.customOptions).requiredField = true];
+				optional bool compute = 2;
+			}
+			optional int32 num = 1 [(com.zoho.common.customOptions).requiredField = true];
+			optional Modifier modifier = 2 [(com.zoho.common.customOptions).requiredField = true];
+			optional bool ssDependent = 3;
+			optional Limit max = 4;
+			optional Limit min = 5;
+		}
+		repeated Handle values = 1;
+	}
+	repeated HandleValue handles = 3;
+
+	message PathList {
+
+		enum FillXMLType {
+			NONE = 0;
+			NORMAL = 1;
+		}
+		message PathFill {
+			optional FillXMLType fill = 1;
+			optional com.zoho.shapes.ColorTweaks tweaks = 2;
+		}
+		optional PathFill fill =1;
+		optional PathFill stroke = 2;
+	}
+
+	repeated PathList pathList = 4;
+
+	// Path from the main shape used for shadow.
+	repeated int32 shadow = 5;
+}
+

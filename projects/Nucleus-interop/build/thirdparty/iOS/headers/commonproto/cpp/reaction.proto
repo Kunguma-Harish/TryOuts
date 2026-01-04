@@ -1,0 +1,63 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "ReactionProtos";
+
+import "time.proto";
+
+message Reaction { 
+	// Refer the emojis list here - https://learn.zoho.com/portal/zohocorp/team/graphikos-common/manual/graphikos-proto/article/reaction-proto-definitions
+	enum ReactionStatus { 
+
+		NO_REACTION = 0;
+		LIKE = 1;
+		LOVE = 2;
+		SHOUT_OUT = 3;
+		SAD = 4;
+		TEARS = 5;
+		ANGRY = 6;
+		CLAP = 7;
+		THINK = 8;
+		LAUGH = 9;
+		FOR_PLUS = 10;
+		AGAINST_MINUS = 11;
+		CONGRATS = 12; 
+		SUPER = 13;
+		COOL = 14;
+		CALM = 15;
+		IRRITATED = 16;
+		HEART_BROKEN = 17;
+		ANGUISH = 18;
+		WINK = 19;
+		SMILE = 20;
+		PRAY = 21;
+		DISLIKE = 22;
+		DISAPPROVE = 23;
+		ASTONISHED = 24;
+		CRYING = 25;
+		WORRIED = 26;
+		FIRE = 27;
+		HUNDRED_POINTS = 28;
+		RAISING_HAND = 29;
+		QUESTION_MARK = 30;
+		CROSS_MARK = 31;
+		TROPHY = 32;
+		CELEBRATION = 33; 
+		SURPRISE = 34;
+		HIGH_FIVE = 35;
+		FINGERS_CROSSED = 36;
+		AGREE = 37;
+		AFFECTION = 38;
+		ROMANCE = 39;
+	}
+
+	optional ReactionStatus status = 1;
+
+	// ZUID of the reacted user.
+	optional string zuid = 2;
+
+	optional com.zoho.common.Time time = 3; //Reacted time
+
+}
+

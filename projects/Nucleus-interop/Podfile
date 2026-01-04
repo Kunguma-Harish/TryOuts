@@ -1,0 +1,39 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Nucleus-interop' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Nucleus-interop
+
+end
+
+def pull_nucleus_dependencies
+    build_dir = Dir.pwd + "/build/thirdparty/iOS"
+
+    system("rm -rf #{build_dir}/libraries")
+    system("rm -rf #{build_dir}/headers")
+    system("rm -rf #{build_dir}/temp")
+
+    system("mkdir -p #{build_dir}/libraries")
+    system("mkdir -p #{build_dir}/headers")
+    system("mkdir -p #{build_dir}/temp")
+
+	source_path = "https://build.zohocorp.com/zoho/vani_nucleus/webhost/ios/viewportTextureManager/Apr_15_2025_5/vani-1.6.0-arm64-apple-ios13.0-release.tar.gz"
+#    source_path = "https://build.zohocorp.com/zoho/vani_nucleus/milestones/setup/iosrenderer_vani_font/VANI_NUCLEUS_1.5.3-alpha1/vani-1.2.0-arm64-apple-ios13.0-release.tar.gz"
+    if source_path.start_with?('https://')
+      system("wget #{source_path} -O #{build_dir}/temp/libs.tar.gz")
+    else
+      system("cp #{source_path} #{build_dir}/temp/libs.tar.gz")
+    end
+    system("tar -xzvf #{build_dir}/temp/libs.tar.gz -C #{build_dir}/temp")
+    system("find #{build_dir}/temp/lib -name '*.a' -exec mv {} #{build_dir}/libraries/ \\;")
+    system("cp -r #{build_dir}/temp/include/* #{build_dir}/headers/")
+
+    system("rm -rf #{build_dir}/temp")
+end
+
+post_install do |installer|
+    pull_nucleus_dependencies
+end

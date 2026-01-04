@@ -1,0 +1,150 @@
+syntax="proto3";
+// A Picture can be linked to a video file (Say a Youtube video)
+// EmbedFile message contains the type and code for the embed file.
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "NonVisualPropsProtos";
+
+import "placeholder.proto";
+import "dimension.proto";
+import "margin.proto";
+import "url.proto";
+import "value.proto";
+//import "time.proto";
+import "reaction.proto";
+import "exportoption.proto";
+import "mediaobject.proto";
+import "fileobject.proto";
+import "google/protobuf/protoextensions.proto";
+import "streamobject.proto";
+
+
+message NonVisualProps {
+
+	optional PlaceHolder placeHolder = 1; // indicates PlaceHolder type
+
+	message EmbedFile {
+		enum EmbedType {
+			INTERNAL = 0;
+			EXTERNAL = 1;
+			MEDIA = 2; // Video / Audio embed.
+			STREAM = 3; //Camera Feed
+			FILE = 4; // File embed.
+		}
+		optional EmbedType type = 1;
+
+		// The code belongs to a site allowed in "allows.txt".
+		// For Twitter , this will contain "twitterfeed" (Yes , i know this is bad design , this variable was introduced way before Twitter-Feed came-in , this variable could not be eliminated).
+		// We have decided containing the whole code in this string is a bad design by security construct and have decided to store only the essentials , because of that this will only contain "embedcode" for those.
+
+		optional string code = 2 [(com.zoho.common.customOptions).requiredField = true];
+
+		enum EmbeddedSite {
+			YOUTUBE = 0;
+			TWITTER = 1;
+			DAILYMOTION = 2;
+		}
+		optional EmbeddedSite site = 3;
+
+		message TwitterData {
+			enum TwitterType {
+				LIVE = 0;
+				MARKED = 1;
+			}
+			optional TwitterType type = 1;
+
+			// Hold the search strings.
+			repeated string keys = 2;
+
+			// Should we update the live tweets Automatically or Manually.
+			enum UpdateType {
+				MANUAL = 0;
+				AUTOMATIC = 1;
+			}
+			optional UpdateType update = 3;
+
+			// For Marked this will hold the tweet-ids.
+			repeated string ids = 4;
+
+			// Zoho Unique ID for the user who added the twitter data.
+			optional string userId = 5;
+		}
+		optional TwitterData twitter = 4;
+
+		// For now , this will be used to maintain the search strings for Youtube/DailyMotion Video.
+		repeated string searchKeys = 5;
+
+		message EmbedObject {
+
+			enum EmbedObjectType {
+				NOT_KNOWN = 0;
+				IFRAME = 1;
+			}
+
+			optional EmbedObjectType type = 1;
+
+			optional com.zoho.common.URL url = 2;
+
+			optional com.zoho.common.Dimension dim = 3;
+
+			optional Margin margin = 4;
+
+			message VariableMap {
+
+				message Key {
+					enum KeyType {
+						NO_TYPE = 0;
+						DEFINED = 1;
+					}
+					optional KeyType keyType = 1;
+
+					// properties of iframe.
+					enum DefinedKey {
+						UNDEFINED = 0;
+						SCROLLING = 1;
+						BORDER = 2;
+						FULLSCREEN = 3;
+						TRANSPARENCY = 4;
+					}
+
+					optional DefinedKey defined = 2;
+
+				}
+
+				optional Key key = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+				optional com.zoho.common.Value value = 2;
+			}
+			repeated VariableMap variables = 5;
+
+			optional string style = 6;
+
+			optional bool preload = 7;
+
+		}
+		optional EmbedObject embedObject = 6;
+
+		optional com.zoho.common.MediaObject mediaObject = 7;
+
+		optional com.zoho.shapes.StreamObject streamObject = 8;
+
+		optional com.zoho.common.FileObject fileObject = 9;
+
+	}
+	optional EmbedFile embed = 2;
+
+	// This boolean is used to indicate that this pariticular shape has been drawn by the User. Used in Layouts and Masters to differentiate the shapes in-built in them with others.
+	optional bool userDrawn = 3;
+
+	// Comments associated with this Shape.
+	repeated string commentIds = 4;
+
+
+	optional bool markedForExport = 5;
+
+	repeated com.zoho.common.Reaction reactions = 6;
+
+	repeated com.zoho.common.ExportOption exportOptions = 7;
+}

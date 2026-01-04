@@ -1,0 +1,24 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "ProjectSessionsProtos";
+
+import "documentstate.proto";
+
+message ProjectSessions {
+
+	message DiscussionDetails {
+	    
+		optional string id = 1;
+
+	    	optional string presenter = 2; // zuid of presenter
+
+		repeated string followers = 3;	// Everyone who follows the presenter
+
+		optional DocumentState presenterState = 4; // denotes location of the presenter
+	}
+
+	repeated DiscussionDetails discussions = 1;
+	
+}

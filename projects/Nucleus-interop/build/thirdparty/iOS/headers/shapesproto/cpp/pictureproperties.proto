@@ -1,0 +1,54 @@
+syntax="proto3";
+
+// Picture Properties
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PicturePropertiesProtos";
+
+import "color.proto";
+import "presetprops.proto";
+import "hsltweak.proto";
+import "google/protobuf/protoextensions.proto";
+
+message PictureProperties {
+	
+	message Luminance {
+		optional float brightness = 1; // ranges from -1 to 1.	
+		optional float contrast = 2; // ranges from -1 to 1.	
+	}
+	optional Luminance luminance = 1;
+
+	message ColorMode {
+		enum Mode {
+			NONE = 0; // No Recolor
+			GRAYSCALE = 1; // turned into GrayScale.
+			BILEVEL = 2; // turned into BlackAndWhite Image.
+			SEPIA = 3; // Sepia Mode
+			DUOTONE = 4; // Apply Duotone filter.
+		}
+		optional Mode mode = 1; // Color Mode applied to the picture.
+		repeated Color duotone = 2; // Array of colors using which the picture will be recolored , as of now only duotone recoloring is supported i.e. two colors in the array. 
+		optional float bilevel = 3; // Threshold value for bilevel, ranges from 0-1.
+	}
+	optional ColorMode colorMode = 2;
+
+	message ColorChange { // Mainly used to make a color transparent.
+		optional Color from = 1 [(com.zoho.common.customOptions).requiredField = true];
+		optional Color to = 2 [(com.zoho.common.customOptions).requiredField = true];
+	}
+	optional ColorChange colorChange = 3; // To Change one color in a picture to another color.	
+
+	optional PresetProps preset = 4; // Preset Color Properties.
+
+	// transparency ranges from 0-1 , 0 indicates none(opaque) , 1 indicates fully transparent.
+	optional float alpha = 5; 	
+
+	optional int32 rotate = 6; //[ default = 0 ];
+	optional bool fliph = 7; // true , if flipped in horizontal axis.
+	optional bool flipv = 8; // true , if flipped in vertical axis.
+
+	optional HSLTweak hsl = 9; // Change Hue , Saturation and luminance of the object.
+
+}

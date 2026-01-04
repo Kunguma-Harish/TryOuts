@@ -1,0 +1,104 @@
+syntax="proto2";
+
+// Textbox properties
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "TextBoxPropsProtos";
+
+import "margin.proto";
+import "verticalaligntype.proto";
+import "autofit.proto";
+import "fill.proto";
+import "stroke.proto";
+import "effects.proto";
+import "fields.proto";
+import "textlayerproperties.proto";
+
+message TextBoxProps {
+
+	optional com.zoho.common.VerticalAlignType valign = 1 [ default = TOP ] ;// Text Vertical alignment. This aligns all the paras inside the text box.
+
+	optional Margin inset = 2; // Internal Margin for the text box.
+
+	message ColumnLayout {
+		required int32 num = 1; // Number of Columns
+		optional int32 gap = 2; // Column gap
+	}
+	optional ColumnLayout column = 3; // Column Layout.
+
+	optional AutoFit autoFit = 4; // Auto Fit the text.
+
+	message ParaSpacingProps {
+		optional bool spcBefFirst = 1; // If set, space before attribute in para spacing should work for first para also.
+		optional bool spcAftLast = 2; // If set , space after attribute in para spacing should work for last para also.
+	}
+	optional ParaSpacingProps spcProps = 5;
+
+	// Wrap text.
+	enum TextWrap {
+		NONE = 0; // Do not wrap
+		RECT = 1; // Within boundary limits. 
+	}
+	optional TextWrap wrap = 6 [default = RECT];
+
+	optional bool breakWord = 7; // Do not break words while wrapping.
+
+	
+	message TextStyleProps {
+
+		enum ApplyTextStyle {
+
+			TEXT_RENDERED_PART = 0;
+			WHOLE = 1;
+		}
+		optional ApplyTextStyle applyStyle = 1;
+
+		optional TextProperties props = 2;
+
+		message TextProperties {
+
+			optional Fill fill = 1;
+
+			optional Stroke stroke = 2;
+
+			optional Effects effects = 3;
+		}
+
+		optional TextLayerProperties textLayerProps = 3;
+
+	}
+	optional TextStyleProps textStyle = 8;
+
+	optional float rotate = 9;	 
+	
+	enum TextWritingMode {
+		DEFAULT_WRITING_MODE = 0;
+		HORIZONTAL = 1;
+		VERTICAL = 2;
+		STACK = 3;	
+	}
+	optional TextWritingMode writingMode = 10;
+
+	enum TextDirection {
+		DEFAULT_DIRECTION = 0;
+		LEFT_TO_RIGHT = 1;
+		RIGHT_TO_LEFT = 2;
+	}
+	optional TextDirection direction = 11;
+
+	message BaseSetting {
+		message MinMaxValue {
+
+			optional Show.CommonField.ValueVariant valueVariant = 1;
+
+			optional float minimum = 2;
+			optional float maximum = 3;
+		}		
+		optional MinMaxValue fontSize = 1;
+
+		optional MinMaxValue fontScale = 2;
+	}
+	optional BaseSetting setting = 12; 
+
+}

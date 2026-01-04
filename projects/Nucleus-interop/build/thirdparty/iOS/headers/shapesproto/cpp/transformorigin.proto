@@ -1,0 +1,30 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "TransformOriginProtos";
+
+message TransformOrigin {
+
+    enum XPosition {
+        LEFT = 0;
+        RIGHT = 1;
+        CENTER = 2;
+        CUSTOM_X = 3;
+    }
+    optional XPosition xPos = 1;	
+    // 0 - 1 , with 1 indicating the width of the shape
+    optional float customX = 2;
+
+    enum YPosition {
+        TOP = 0;
+        BOTTOM = 1;
+        MIDDLE = 2;
+        CUSTOM_Y = 3;
+    }
+    optional YPosition yPos = 3;
+    // 0 - 1, with 1 indicating the height of the shape
+    optional float customY = 4;
+}
+

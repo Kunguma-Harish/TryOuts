@@ -1,0 +1,187 @@
+syntax="proto3";
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "UMLPropsProtos";
+
+import "designdiagramfields.proto";
+
+message UMLProps{
+  enum UMLDiagramType{
+    UNKNOWN_UML = 0;
+    CLASS_DIAGRAM = 1;
+    USECASE_DIAGRAM = 2;
+    SEQUENCE_DIAGRAM = 3;
+    COMPONENT_DIAGRAM = 4;
+    DEPLOYMENT_DIAGRAM = 5;
+    STATE_DIAGRAM = 6;
+    ACTIVITY_DIAGRAM = 7;
+  }
+
+  optional UMLDiagramType type = 1;
+
+  message ClassDiagram{
+    enum ClassDiagramComponent{
+      UNKNOWN_CLASS_DIAGRAM_COMPONENT = 0;
+      CLASS = 1;
+      ACTIVE_CLASS = 2;
+      SIMPLE_CLASS = 3;
+      INTERFACE = 4;
+      SIMPLE_INTERFACE = 5;
+      MULTIPLICITY = 6;
+      PACKAGE = 7;
+      CONSTRAINT = 8;
+      NOTE = 9;
+      TEXT = 10;
+      RELATIONSHIP = 11;
+    }
+
+    optional ClassDiagramComponent componentType = 1;
+
+    enum RelationshipType{
+      UNKNOWN_ASSOCIATION = 0;
+      DIRECTED_ASSOCIATION = 1;         // Solid line
+      NON_DIRECTED_ASSOCIATION = 2;     // Solid line
+      GENERALIZATION = 3;      // solid line
+      DEPENDENCY = 4;          // Dotted line
+      AGGREGATION = 5;  // Solid line
+      COMPOSITION = 6;  // Solid line
+      REALIZATION = 7;  // Dotted line
+      USAGE = 8;    // Dotted line with "<use>" text in the line.
+    }
+
+    message UMLClassConnection{
+      enum DirectedAssociationType{
+        // The arrow points from the class that initiates the association to the class that is being targeted or affected by the association.
+        UNKNOWN_DIRECTED_ASSOCIATION = 0;
+        INITIATOR = 1;
+        TARGET = 2; // Open-Arrow
+      }
+
+      enum Aggregation_Composition_Type{
+        // It denotes a stronger relationship where one class (the whole) contains or is composed of another class (the part). 
+        // Aggregation is represented by a diamond shape on the side of the whole class. 
+        // In this kind of relationship, the child class can exist independently of its parent class.
+        UNKNOWN_AGGREGATION = 0;
+        WHOLE = 1;  //  HOLLOW_DIAMOND
+        PART = 2; // none
+      }
+
+      enum GeneralizationType{
+        // Inheritance represents a relationship between classes, where one class (the subclass or child) inherits the properties and behaviors of another class (the superclass or parent).
+        // Inheritance is depicted by a solid line with a closed, hollow arrowhead pointing from the subclass to the superclass. 
+        UNKNOWN_GENERALIZATION = 0;
+        SUB_CLASS = 1;  //  NONE
+        SUPER_CLASS = 2; // HOLLOW_ARROW_HEAD
+      }
+
+      enum RealizationType{
+        // Realization indicates that a class implements the features of an interface. 
+        // It is often used in cases where a class realizes the operations defined by an interface. 
+        // Realization is depicted by a dashed line with an open arrowhead pointing from the implementing class to the interface. 
+        UNKNOWN_REALIZATION = 0;
+        IMPLEMENTING_CLASS = 1;  //  NONE
+        INTERFACE= 2; // HOLLOW_ARROW_HEAD
+      }
+
+      enum DependencyType{
+        // Realization indicates that a class implements the features of an interface. 
+        // It is often used in cases where a class realizes the operations defined by an interface. 
+        // Realization is depicted by a dashed line with an open arrowhead pointing from the implementing class to the interface. 
+        UNKNOWN_DEPENDENCY = 0;
+        SOURCE = 1;  //  OPEN_ARROW
+        DEPENDENT = 2; // NONE
+      }
+
+      enum UsageDependencyType{
+        // A usage dependency relationship in a UML class diagram indicates that one class (the client) utilizes or depends on another class (the supplier)
+        // to perform certain tasks or access certain functionality.
+        UNKNOWN_USAGE_TYPE = 0;
+        CLIENT = 1; // NONE
+        SUPPLIER = 2;   // OPEN_ARROW
+      }
+
+
+      optional DesignDiagramFields.Cardinality cardinality = 1; // Text box to be added in the appropriate end
+      optional DirectedAssociationType associationType = 2;
+      optional Aggregation_Composition_Type aggregationType = 3;
+      optional Aggregation_Composition_Type compositionType = 4;
+      optional GeneralizationType generalizationType = 5;
+      optional RealizationType relaizationType = 6;
+      optional DependencyType dependencyType = 7;
+    }
+
+    message UMLClassRelationship{
+      optional RelationshipType relationshipType = 1; // Defines the type of the line
+      optional UMLClassConnection start = 2;    // Defines the direction of the arrow head
+      optional UMLClassConnection end = 3;
+
+    }
+
+    optional UMLClassRelationship relationship = 2;
+  }
+
+
+  message UsecaseDiagram{
+    enum UsecaseDiagramComponent{
+      UNKNOWN_USECASE_DIAGRAM_COMPONENT = 0;
+      ACTOR = 1;
+      USECASE = 2;
+      USECASE_WITH_EXTENSION = 3;
+      CONTAINER_RECTANGLE = 4;
+      CONTAINER_OVAL = 5;
+      NOTE = 6;
+      TEXT = 7;
+    }
+
+    enum RelationshipType{
+      UNKNOWN_RELATIONSHIP = 0;
+      ASSOCIATION = 1;
+      INCLUDE = 2;
+      EXTEND = 3;
+      GENERALIZATION = 4;
+    }
+    
+    enum UsecaseExtendType{
+      UNKNOWN_EXTEND = 0;
+      BASE = 1;         // EXtends no-arrow
+      EXTENSION = 2;    // Extends open-arrow
+    }
+
+    enum UsecaseGeneralizationType{
+      UNKNOWN_GENERALIZATION = 0;
+      GENERAL = 1;   // Generalization Block-arrow
+      SPECIFIC = 2;  // Generalization no-arrow
+    }
+
+    enum UsecaseIncludeType{
+      UNKNOWN_INCLUDE = 0;
+      INCLUDING = 1;    // Include  no-arrow 
+      INCLUDED = 2;     // Include  open-arrow
+    }
+
+    message UMLUsecaseConnection{
+      optional UsecaseExtendType extendType = 1;
+      optional UsecaseGeneralizationType generalizationType = 2;
+      optional UsecaseIncludeType includeType = 3;
+    }
+
+    message UMLUsecaseRelationship{
+        optional RelationshipType type = 1;
+        optional UMLUsecaseConnection start = 2;
+        optional UMLUsecaseConnection end = 3;
+    }
+
+    
+    optional UsecaseDiagramComponent componentType = 1;
+    optional UMLUsecaseRelationship relationship = 2;
+
+  }
+
+  optional ClassDiagram classDiagram = 2;
+  optional UsecaseDiagram usecaseDiagram = 3;
+
+
+}
+
+

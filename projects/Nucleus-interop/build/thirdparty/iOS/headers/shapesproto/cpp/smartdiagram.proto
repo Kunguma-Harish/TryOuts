@@ -1,0 +1,45 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "SmartDiagramProtos";
+
+import "fields.proto";
+
+message SmartDiagram {
+
+  optional Show.PresetSmartDiagram.PresetSmartDiagramType smartDiagramType = 1;
+  
+  optional int32 steps = 3; //No of steps in the SmartDiagram
+  optional int32 min = 4; //Minimum allowed steps
+  optional int32 max = 5; //Maximum allowed steps
+
+  message ProcessSmartDiagram {
+
+    optional Show.PresetSmartDiagram.PresetProcessSmartDiagramType processSmartDiagramType = 1;
+    optional int32 steps = 2; //Deprecated 
+    optional int32 max = 3; //Deprecated
+
+  }
+
+  message PyramidSmartDiagram {
+    optional Show.PresetSmartDiagram.PresetPyramidSmartDiagramType pyramidSmartDiagramType = 1;
+  }
+
+  message CycleSmartDiagram {
+    optional Show.PresetSmartDiagram.PresetCycleSmartDiagramType cycleSmartDiagramType = 1;
+  }
+
+  message ListSmartDiagram {
+    optional Show.PresetSmartDiagram.PresetListSmartDiagramType listSmartDiagramType = 1;
+  }
+
+  optional ProcessSmartDiagram processSmartDiagram = 2;
+
+  optional PyramidSmartDiagram pyramidSmartDiagram = 6;
+  
+  optional CycleSmartDiagram cycleSmartDiagram = 7;
+
+  optional ListSmartDiagram listSmartDiagram = 8;
+
+}

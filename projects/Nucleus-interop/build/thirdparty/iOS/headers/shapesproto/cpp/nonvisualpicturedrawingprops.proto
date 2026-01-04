@@ -1,0 +1,13 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "NonVisualPictureDrawingPropsProtos";
+
+import "locks.proto";
+
+message NonVisualPictureDrawingProps {	
+	
+	optional Locks locks = 1;	
+}

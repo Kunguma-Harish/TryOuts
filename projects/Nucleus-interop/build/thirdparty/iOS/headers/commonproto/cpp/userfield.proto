@@ -1,0 +1,10 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "UserFieldProtos";
+
+message UserField {
+	optional string zuid = 1;		
+}

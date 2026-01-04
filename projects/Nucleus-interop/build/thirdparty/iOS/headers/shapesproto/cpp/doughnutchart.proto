@@ -1,0 +1,17 @@
+syntax="proto3";
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "DoughnutChartProtos";
+
+import "piechartdetails.proto";
+import "google/protobuf/protoextensions.proto";
+
+message DoughnutChart {
+
+	optional PieChartDetails details = 1 [(com.zoho.common.customOptions).requiredField = true];
+	
+	optional int32 firstSlideAngle = 2; //Angle of the first pie - similar to transform rotate.
+
+	optional int32 holeSize = 3; // The size of the hole denoted in percentage , will range from 20 to 90.
+}

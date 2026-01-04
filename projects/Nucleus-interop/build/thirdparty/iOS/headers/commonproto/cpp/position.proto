@@ -1,0 +1,128 @@
+syntax="proto3";
+
+// Position
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "PositionProtos";
+
+import "horizontalaligntype.proto";
+import "verticalaligntype.proto";
+import "spacing.proto";
+
+message Position {
+
+	optional float left = 1; // left position, in Pixel
+	optional float top = 2; // top	position , in Pixel
+	optional int32 zindex = 3; // zindex value.	
+
+	enum PositionType {
+		DEF_POSITION_TYPE = 0;  // This means absolute, 
+		ABSOLUTE = 1; // position the element based on left and top values - default
+		NATURAL = 2; // Ignore left and top values - position based on the flow.
+	}
+	optional PositionType positionType = 4;    // By default the position is ABSOLUTE and the left and top value will be used from transform.pos
+
+	// the left and top should have been part of that absolute property - But we didn't foresee at that time.
+	
+	message AbsolutePosition {
+
+		message Constraints {
+			message HorizontalConstraint {
+				enum HorizontalConstraintType {
+					DEF_HORIZONTAL_CONSTRAINT_TYPE = 0;
+					FIXED_LEFT_POSITION = 2;
+					FIXED_RIGHT_POSITION = 3;
+					FIXED_CENTER_POSITION = 4;
+					FIXED_LEFT_RIGHT_POSITION = 5;
+					//dimension.scaleType will have higher precedence over
+					//this property (this will change the dimension)
+				}
+				optional HorizontalConstraintType type = 1;
+			}
+
+			message VerticalConstraint {
+				enum VerticalConstraintType {
+					DEF_VERTICAL_CONSTRAINT_TYPE = 0;
+					FIXED_TOP_POSITION = 2;
+					FIXED_BOTTOM_POSITION = 3;
+					FIXED_CENTER_POSITION = 4;
+					FIXED_TOP_BOTTOM_POSITION = 5;
+					//dimension.scaleType will have higher precedence over
+					// this property (this will change the dimension)
+				}
+				optional VerticalConstraintType type = 1;
+			}
+
+			optional HorizontalConstraint horizontal = 1;
+			optional VerticalConstraint vertical = 2;
+		}
+
+		optional Constraints constraints = 1;
+
+		// Position is usually specified using left and top. However it could be done using right/center and bottom/middle.
+		// Setting positions using values other than left/top could actually help us in handling constraints too.
+		message HorizontalAnchorPosition {
+
+			optional float left = 1;
+			
+			optional float right = 2;
+
+			optional float center = 3;
+		}
+		optional HorizontalAnchorPosition horizontal = 2;
+
+		message VerticalAnchorPosition {
+
+			optional float top = 1;
+			
+			optional float bottom = 2;
+
+			optional float middle = 3;
+		}
+		optional VerticalAnchorPosition vertical = 3;
+	}
+
+	optional AbsolutePosition absolutePosition = 5;
+
+	message NaturalPosition {
+
+		enum NaturalPositionDirectionType {
+
+			DEF_NATURAL_POSITION_DIRECTION_TYPE = 0;
+			HORIZONTAL = 1;
+			VERTICAL = 2;
+		}
+		optional NaturalPositionDirectionType type = 1;
+		
+		enum NaturalPositionWrap {
+			
+			DEF_NATURAL_POSITION_WRAP = 0;
+			NO_WRAP = 1;
+			WRAP = 2;
+		}
+		optional NaturalPositionWrap positionWrap = 2;
+	
+
+		message ObjectAlignment{
+			
+			optional com.zoho.common.HorizontalAlignType horizontal = 1;
+
+			optional com.zoho.common.VerticalAlignType vertical = 2;
+		}
+		optional ObjectAlignment alignment = 3;
+
+		message ObjectSpacing {
+			
+			optional Spacing horizontal = 1;
+			
+			optional Spacing vertical = 2;
+		}
+		optional ObjectSpacing spacing = 4;
+	}
+
+	optional NaturalPosition naturalPosition = 6;
+}
+
+

@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "సరే";
+"SSKit.common.cancel" = "రద్దు చేయండి";
+"SSKit.common.continue" = "కొనసాగండి";
+"SSKit.common.untitledDocument" = "శీర్షిక లేని డాక్యుమెంట్";
+"SSKit.common.noNetwork" = "నెట్‌వర్క్ లేదు";
+"SSKit.common.noNetworkMessage" = "మీ పరికరం ఇంటర్నెట్‌కు కనెక్ట్ చేయబడిందని ధృవీకరించుకోండి.";
+"SSKit.common.openSettings" = "సెట్టింగ్‌లను తెరవండి";
+"SSKit.common.connected" = "కనెక్ట్ చేయబడింది";
+"SSKit.common.connecting" = "కనెక్ట్ చేస్తోంది";
+"SSKit.common.waiting" = "వేచి ఉంది";
+"SSKit.common.update" = "అప్‌డేట్ చేయి";
+"SSKit.common.minimise" = "కనిష్టం చేయడం";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "ప్రారంభించండి";
+"SSKit.slideshow.end" = "ముగింపు";
+"SSKit.slideshow.currentSlide" = "%i యొక్క స్లైడ్ %i";
+"SSKit.slideshow.EndOfSlideshow" = "స్లైడ్‌షో యొక్క ముగింపు";
+"SSKit.slideshow.blackout" = "స్క్రీన్ బ్లాక్‌అవుట్ అయింది";
+"SSKit.slideshow.backToLive" = "తిరిగి లైవ్‌కు";
+"SSKit.slideshow.notes" = "నోట్‌లు";
+"SSKit.slideshow.clear" = "క్లియర్ చేయండి";
+"SSKit.slideshow.emptyNotes" = "ఈ స్లైడ్ కొరకు ఎలాంటి నోట్‌లు లేవు.";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "సెషన్ రద్దు చేయబడింది";
+"SSKit.shareplay.sessionTerminated.desc" = "మీ Shareplay సెషన్ రద్దు చేయబడింది. మీరు మీ సెషన్‌ని తిరిగి ప్రారంభించాలని ఎంచుకోవచ్చు.";
+
+"SSKit.shareplay.syncWithPresenter" = "ప్రజంటర్‌తో సింక్ చేయడం";
+
+"SSKit.shareplay.end.title" = "SharePlay ముగించడం";
+"SSKit.shareplay.end.description" = "Shareplay ముగించాలని మీరు కోరుకుంటున్నారా? Shareplayను ముగించడం వల్ల సెషన్ రద్దు అవుతుంది.";
+"SSKit.shareplay.requestToPresent.description" = "ప్రజంట్ చేయడానికి అభ్యర్థించడం";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "దోషం";
+"SSKit.error.message" = "ఒక దోషం ఏర్పడింది. తర్వాత మళ్లీ ప్రయత్నించండి";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "ప్లేబ్యాక్ ఆడియో";
+"SSKit.audio.resume" = "తిరిగి కొనసాగించు";
+"SSKit.audio.pause" = "పాజ్ చేయండి";
+"SSKit.audio.audioTitle" = "ఆడియో";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "మీ Apple Tvని ఎంచుకోండి";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple Tvల కొరకు చూస్తోంది";
+"SSKit.mcPeerListing.streamingDescription" = "స్లైడ్‌లను మీ పరికరం నుండి ఆపిల్ TVకి స్ట్రీమ్ చేయడానికి.";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "స్థానిక నెట్‌వర్క్ యాక్సెస్‌ను ప్రారంభించి, మళ్లీ ప్రయత్నించండి";
+
+"SSKit.mcPeerListing.disconnect.title" = "డిస్‌కనెక్ట్ చేయి";
+"SSKit.mcPeerListing.disconnect.message" = "మీరు Apple TV నుంచి ఖచ్చితంగా డిస్‌కనెక్ట్ చేయాలని కోరుకుంటున్నారా?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@ డిస్‌కనెక్ట్ చేయండి";
+"SSKit.mcPeerListing.updateError" = "పాత వెర్షన్‌పై పీర్ రన్ అవుతున్నట్లుగా కనిపిస్తోంది. TV యాప్ అప్‌టూడేట్‌గా ఉన్నట్లుగా ధృవీకరించండి";

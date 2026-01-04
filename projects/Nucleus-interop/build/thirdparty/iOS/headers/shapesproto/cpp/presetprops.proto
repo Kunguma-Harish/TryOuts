@@ -1,0 +1,27 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PresetPropsProtos";
+
+enum PresetProps {
+	DEF_PRESET_PROPS = 0;
+	PRESET1 = 1;
+	PRESET2 = 2;
+	PRESET3 = 3;
+	PRESET4 = 4;
+	PRESET5 = 5;
+	PRESET6 = 6;
+	PRESET7 = 7;
+	PRESET8 = 8;
+	PRESET9 = 9;
+	PRESET10 = 10;
+	PRESET11 = 11;
+	PRESET12 = 12;
+	PRESET13 = 13;
+	PRESET14 = 14;
+	PRESET15 = 15;
+	PRESET16 = 16;
+	PRESET17 = 17;
+	PRESET18 = 18;
+}

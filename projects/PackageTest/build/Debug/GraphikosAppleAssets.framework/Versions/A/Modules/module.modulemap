@@ -1,0 +1,11 @@
+framework module GraphikosAppleAssets {
+  umbrella header "GraphikosAppleAssets-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module GraphikosAppleAssets.Swift {
+  header "GraphikosAppleAssets-Swift.h"
+  requires objc
+}

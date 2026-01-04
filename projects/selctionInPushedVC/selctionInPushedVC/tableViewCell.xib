@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3uS-QI-hMc" customClass="TableViewCellConfig" customModule="selctionInPushedVC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="59"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3uS-QI-hMc" id="9UG-op-MvG">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4Iy-cp-lwa">
+                        <rect key="frame" x="10" y="18.666666666666664" width="24" height="22.666666666666664"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="3lv-g5-WNh"/>
+                            <constraint firstAttribute="width" constant="24" id="XAL-c9-35s"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoho Corporation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNV-Cc-2S5">
+                        <rect key="frame" x="44" y="19" width="304" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G68-cK-eVM">
+                        <rect key="frame" x="368" y="21.333333333333336" width="22" height="17.333333333333336"/>
+                        <color key="tintColor" white="0.67000000000000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="4h6-5q-6K9"/>
+                            <constraint firstAttribute="width" constant="22" id="4ii-OK-Xz6"/>
+                        </constraints>
+                        <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSO-zh-xYd">
+                        <rect key="frame" x="44" y="29.666666666666668" width="101" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cNV-Cc-2S5" firstAttribute="centerY" secondItem="9UG-op-MvG" secondAttribute="centerY" id="2xL-5s-sor"/>
+                    <constraint firstItem="4Iy-cp-lwa" firstAttribute="centerY" secondItem="9UG-op-MvG" secondAttribute="centerY" id="4YN-f6-J6c"/>
+                    <constraint firstItem="GSO-zh-xYd" firstAttribute="centerY" secondItem="9UG-op-MvG" secondAttribute="centerY" id="LdH-N3-Xwj"/>
+                    <constraint firstItem="G68-cK-eVM" firstAttribute="leading" secondItem="GSO-zh-xYd" secondAttribute="trailing" constant="223" id="TwG-72-UQE"/>
+                    <constraint firstItem="GSO-zh-xYd" firstAttribute="leading" secondItem="4Iy-cp-lwa" secondAttribute="trailing" constant="10" id="VZ9-Mh-60k"/>
+                    <constraint firstAttribute="trailing" secondItem="G68-cK-eVM" secondAttribute="trailing" constant="10" id="Vtb-B1-DKQ"/>
+                    <constraint firstItem="G68-cK-eVM" firstAttribute="centerY" secondItem="9UG-op-MvG" secondAttribute="centerY" id="Zi3-a8-fHu"/>
+                    <constraint firstItem="G68-cK-eVM" firstAttribute="leading" relation="lessThanOrEqual" secondItem="cNV-Cc-2S5" secondAttribute="trailing" constant="20" id="qYH-pp-jJg"/>
+                    <constraint firstItem="cNV-Cc-2S5" firstAttribute="leading" secondItem="4Iy-cp-lwa" secondAttribute="trailing" constant="10" id="yGG-Xl-lk0"/>
+                    <constraint firstItem="4Iy-cp-lwa" firstAttribute="leading" secondItem="9UG-op-MvG" secondAttribute="leading" constant="10" id="zFv-9C-OcA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="OrgLable" destination="cNV-Cc-2S5" id="4Qk-UE-CiK"/>
+                <outlet property="afterSelection" destination="GSO-zh-xYd" id="P9k-hg-pA0"/>
+                <outlet property="arrowImageView" destination="G68-cK-eVM" id="Pys-94-ttd"/>
+                <outlet property="profileImage" destination="4Iy-cp-lwa" id="QYx-NU-TUM"/>
+            </connections>
+            <point key="canvasLocation" x="-31.297709923664122" y="-114.08450704225352"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="globe" catalog="system" width="128" height="123"/>
+    </resources>
+</document>

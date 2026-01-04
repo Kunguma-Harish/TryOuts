@@ -1,0 +1,35 @@
+syntax="proto3";
+package com.zoho.theme;
+
+option java_package = "com.zoho.theme";
+option java_outer_classname = "ThemeDefaultProtos";
+
+import "properties.proto";
+import "themereference.proto";
+import "colormap.proto";
+import "textbody.proto";
+import "google/protobuf/protoextensions.proto";
+
+message ThemeDefault {	
+	
+	// Can carry values from 0-2. This is the theme index value.
+	optional int32 bg = 1 [(com.zoho.common.customOptions).requiredField = true]; //[default = 0];
+	optional int32 fill = 2 [(com.zoho.common.customOptions).requiredField = true]; //[default = 0];
+	optional int32 stroke = 3 [(com.zoho.common.customOptions).requiredField = true]; //[default = 0];
+
+	// Color Values present in Theme are mapped to new values . bg1 is the default color for the background fill and a1 is the default color for the 
+	// fill shape.
+	optional com.zoho.shapes.ColorMap colorMap = 4 [(com.zoho.common.customOptions).requiredField = true];
+
+	message ObjectDefaults {
+		optional com.zoho.shapes.Properties props = 1;
+		optional com.zoho.shapes.ThemeReference themeRef = 2;
+		// Text box
+		
+		optional com.zoho.shapes.TextBody textBody = 3;
+	}
+	
+	optional ObjectDefaults shape = 5; 
+	optional ObjectDefaults line = 6;
+	optional ObjectDefaults text = 7;
+}

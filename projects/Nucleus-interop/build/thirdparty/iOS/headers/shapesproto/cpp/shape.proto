@@ -1,0 +1,35 @@
+syntax="proto3";
+
+// Shape Data.
+// The Shape will follow a Master Shape only when the PlaceHolder type is available. 
+// When a Shape in the SlideLayout/SlideMaster is removed , the isHidden Value will be made true , so that we can make it visible when needed. 
+// When a PlaceHolder in SlideLayout is removed , the properties of the following shapes (i.e the shapes following the Placeholder) will be the same. 
+// When a Shape in Slide is removed , the shape will be deleted and the documentrelationship proto will be updated. 
+
+
+package com.zoho.shapes;
+
+import "properties.proto";
+import "nonvisualshapeprops.proto";
+import "themereference.proto";
+import "textbody.proto";
+import "editorcompatible.proto";
+import "google/protobuf/protoextensions.proto";
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ShapeProtos";
+
+message Shape {
+
+	optional NonVisualShapeProps nvOProps = 1 [(com.zoho.common.customOptions).requiredField = true];// Non Visual Properties for Shape.
+	
+	optional Properties props = 2; // Shape properties.
+
+	optional ThemeReference themeRef = 3; // Theme Style.	
+		
+	optional TextBody textBody = 4; // Text body
+
+	optional EditorCompatible edit = 5; // Editor compatible attributes.
+
+}
+

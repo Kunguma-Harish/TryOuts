@@ -1,0 +1,16 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "MediaAssociationProtos";
+
+import "mediaproperties.proto";
+
+message MediaAssociation {
+
+	optional string clientKey = 1; // Client ID.
+
+	repeated string ids = 2; // Unique Media ID present in  each shape. Example (nvProps.media.mediaId)
+
+	optional com.zoho.common.MediaProperties mediaProps = 3;
+}

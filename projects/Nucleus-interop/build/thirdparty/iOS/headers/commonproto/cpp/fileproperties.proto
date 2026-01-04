@@ -1,0 +1,25 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "FilePropertiesProtos";
+
+import "fields.proto";
+
+message FileProperties {
+
+	optional string key = 1; // DB Key
+
+	optional string name = 2;
+
+	optional Show.FileField.FileFormat fileFormat = 3;
+
+	optional Show.FileField.DocumentFileType documentFileType = 4;
+	
+	optional Show.FileField.PresentationFileType presentationFileType = 5;
+	
+	optional Show.FileField.SpreadsheetFileType spreadsheetFileType = 6;
+
+	optional Show.FileField.LanguageFileType languageFileType = 7;
+}

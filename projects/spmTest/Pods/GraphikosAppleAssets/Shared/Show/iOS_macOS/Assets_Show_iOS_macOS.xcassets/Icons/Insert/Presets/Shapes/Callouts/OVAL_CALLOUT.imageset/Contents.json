@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "OVAL_CALLOUT.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

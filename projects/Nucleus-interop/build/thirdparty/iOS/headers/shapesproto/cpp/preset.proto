@@ -1,0 +1,23 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PresetProtos";
+
+import "fields.proto";
+import "smartmodifier.proto";
+import "google/protobuf/protoextensions.proto";
+import "corner.proto";
+
+message Preset {
+
+	optional Show.GeometryField.PresetShapeGeometry type = 1 [(com.zoho.common.customOptions).requiredField = true];
+	repeated float modifiers = 2;
+
+	repeated SmartModifier smartModifiers = 3;
+
+	optional float cornerRadius = 4;
+
+	repeated Corner corners = 5;
+}

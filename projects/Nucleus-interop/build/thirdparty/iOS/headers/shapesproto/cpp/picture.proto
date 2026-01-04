@@ -1,0 +1,25 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PictureProtos";
+
+import "offset.proto";
+import "pictureproperties.proto";
+import "picturevalue.proto";
+import "properties.proto";
+import "nonvisualpictureprops.proto";
+import "google/protobuf/protoextensions.proto";
+
+message Picture {
+
+	optional NonVisualPictureProps nvOProps = 1 [(com.zoho.common.customOptions).requiredField = true]; // Non Visual Properties for picture.
+
+	optional PictureValue value = 2 [(com.zoho.common.customOptions).requiredField = true];// Picture Value
+	optional Offset crop = 3; // crop values for picture , in Percent depending on the original size of the image.
+	optional PictureProperties pictureProps = 4; // picture properties	
+
+	optional Properties props = 5; // Properties 
+}
+

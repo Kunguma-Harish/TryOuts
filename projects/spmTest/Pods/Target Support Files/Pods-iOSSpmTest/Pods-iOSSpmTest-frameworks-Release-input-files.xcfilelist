@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-iOSSpmTest/Pods-iOSSpmTest-frameworks.sh
+${BUILT_PRODUCTS_DIR}/GraphikosAppleAssets-iOS/GraphikosAppleAssets.framework
+${BUILT_PRODUCTS_DIR}/Painter-iOS/Painter.framework
+${BUILT_PRODUCTS_DIR}/Proto-iOS/Proto.framework
+${BUILT_PRODUCTS_DIR}/SwiftProtobuf-iOS/SwiftProtobuf.framework

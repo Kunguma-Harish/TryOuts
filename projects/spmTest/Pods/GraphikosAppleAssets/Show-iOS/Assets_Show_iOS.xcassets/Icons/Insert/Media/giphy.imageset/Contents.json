@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "giphy.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

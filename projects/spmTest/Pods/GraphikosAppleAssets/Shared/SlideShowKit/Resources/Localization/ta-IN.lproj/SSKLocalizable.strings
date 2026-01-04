@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "சரி";
+"SSKit.common.cancel" = "இரத்து";
+"SSKit.common.continue" = "தொடர்க";
+"SSKit.common.untitledDocument" = "பெயரிடப்படாத ஆவணம்";
+"SSKit.common.noNetwork" = "நெட்வொர்க் இல்லை";
+"SSKit.common.noNetworkMessage" = "உங்கள் சாதனம் இணையத்துடன் இணைக்கப்பட்டுள்ளதை உறுதிசெய்துகொள்ளவும்.";
+"SSKit.common.openSettings" = "அமைப்புகளைத் திற";
+"SSKit.common.connected" = "இணைக்கப்பட்டது";
+"SSKit.common.connecting" = "இணைக்கிறது";
+"SSKit.common.waiting" = "காத்திருக்கிறது";
+"SSKit.common.update" = "புதுப்பி";
+"SSKit.common.minimise" = "அளவைக் குறை";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "தொடங்கு";
+"SSKit.slideshow.end" = "முடிவு";
+"SSKit.slideshow.currentSlide" = "%i/%i ஸ்லைடு";
+"SSKit.slideshow.EndOfSlideshow" = "ஸ்லைடுஷோவின் இறுதி";
+"SSKit.slideshow.blackout" = "திரை இருளாகிவிட்டது";
+"SSKit.slideshow.backToLive" = "நேரலைக்குச் செல்";
+"SSKit.slideshow.notes" = "குறிப்புகள்";
+"SSKit.slideshow.clear" = "அழி";
+"SSKit.slideshow.emptyNotes" = "இந்த ஸ்லைடுக்காக எந்தக் குறிப்புகளும் கிடைக்கவில்லை.";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "அமர்வு நிறுத்தப்பட்டது";
+"SSKit.shareplay.sessionTerminated.desc" = "உங்கள் ஷேர்பிளே அமர்வு நிறுத்தப்பட்டது. உங்கள் அமர்வை நீங்கள் மறுதொடக்கம் செய்யலாம்.";
+
+"SSKit.shareplay.syncWithPresenter" = "ஸ்கிரீனைப் பகிர்பவருடன் ஒத்திசையுங்கள்";
+
+"SSKit.shareplay.end.title" = "ஷேர்பிளேவை முடி";
+"SSKit.shareplay.end.description" = "ஷேர்பிளேயை முடிக்க விரும்புகிறீர்களா? ஷேர்பிளேயை முடித்தால் அமர்வு நிறுத்தப்படும்.";
+"SSKit.shareplay.requestToPresent.description" = "பகிரக் கோருகிறது";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "பிழை";
+"SSKit.error.message" = "ஒரு பிழை ஏற்பட்டுள்ளது. பின்னர் மீண்டும் முயற்சிக்கவும்";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "பிளேபேக் ஆடியோ";
+"SSKit.audio.resume" = "மீண்டும் தொடர்க";
+"SSKit.audio.pause" = "இடைநிறுத்து";
+"SSKit.audio.audioTitle" = "ஆடியோ";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "உங்கள் Apple TV-ஐத் தேர்வுசெய்யவும்";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple TV-ஐத் தேடுகிறது";
+"SSKit.mcPeerListing.streamingDescription" = "உங்கள் சாதனத்திலிருந்து Apple TVக்கு ஸ்லைடுகளை ஸ்ட்ரீம் செய்ய.";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "லோக்கல் நெட்வொர்க் அணுகலை இயக்கிவிட்டு, மீண்டும் முயற்சிக்கவும்";
+
+"SSKit.mcPeerListing.disconnect.title" = "இணைப்பை நீக்கு";
+"SSKit.mcPeerListing.disconnect.message" = "Apple TVயிலிருந்து நிச்சயமாக இணைப்பு நீக்க விரும்புகிறீர்களா?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@ இணைப்பு நீக்கு";
+"SSKit.mcPeerListing.updateError" = "பியர் பழைய பதிப்பில் இயங்குவதாகத் தெரிகிறது. TV செயலி புதுப்பித்த நிலையில் இருப்பதை உறுதிசெய்யவும்";

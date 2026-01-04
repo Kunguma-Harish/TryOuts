@@ -1,0 +1,31 @@
+@package com.zoho.nexus.customproto;
+include {
+ custom.pb.h;
+  }
+class Custom  : com::zoho::collaboration::Custom {
+  inherits Message;
+  constructor Custom : com::zoho::collaboration::Custom();
+  function CopyFrom : nx_void CopyFrom(Custom& arg0);
+  function Clear : nx_void Clear();
+  function has_documentordering : nx_bool has_documentordering();
+  property documentOrdering : [own] Custom_DocumentOrdering*  documentOrdering(nx_getter : temp_getdocumentOrdering, nx_setter : temp_setdocumentOrdering);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Custom : Custom;
+}
+
+class Custom_DocumentOrdering  : com::zoho::collaboration::Custom_DocumentOrdering {
+  inherits Message;
+  constructor Custom_DocumentOrdering : com::zoho::collaboration::Custom_DocumentOrdering();
+  function CopyFrom : nx_void CopyFrom(Custom_DocumentOrdering& arg0);
+  function Clear : nx_void Clear();
+  property documentIds  : [own] nx_repeated_field[nx_string]* documentIds(nx_getter : temp_getdocumentIds, nx_setter : temp_setdocumentIds);
+  function has_documentid : nx_bool has_documentid();
+  property documentId : nx_string documentId(nx_getter : documentid, nx_setter : set_documentid);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Custom_DocumentOrdering : Custom_DocumentOrdering;
+}
+

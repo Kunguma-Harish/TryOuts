@@ -1,0 +1,188 @@
+syntax="proto3";
+/* Id: $ */
+// Slide Data.
+
+package com.zoho.collaboration;
+
+option java_package = "com.zoho.collaboration";
+option java_outer_classname = "CollaborationProtos";
+
+import "custom.proto";
+import "applicationversion.proto";
+import "databasetableoperation.proto";
+import "google/protobuf/protoextensions.proto";
+
+message DocumentDeltas {
+	repeated DocumentDelta delta = 1; 
+	optional int32 lastSavedVersion = 2;
+}
+
+
+message DocumentDelta {
+
+	// Presentation version that the delta is intended to be applied to. 
+	optional int32 version = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	// ZUID/ ZGID. The author of this delta could be a group or user
+	optional string author = 2 [(com.zoho.common.customOptions).requiredField = true];
+
+	// Operations included in this delta 
+	repeated DocumentOperation docOp = 3; 
+
+	// Indicates the time at which the operation was performed 
+	optional string modTime = 4; 
+
+	/* 
+	 * For example, "show-team" group may be the explicit participant of
+	 * this presentation, and is set as the author of a delta. However, this group is
+	 * being asked to act on behalf of "vijayr@zohocorp.com", who is a member
+	 * of "show-team". In this example, the delta would be configured as :
+	 *  delta.author = "<show-team's group id>"
+	 *  delta.groupMember = <zuid of vijayr> 
+	 */
+	optional string grpMember = 5;
+
+	// csrf token of the user session
+	optional string uniqueId = 6;
+
+	optional string anonUserId = 7;
+
+	// Document ID , to be used on need.
+	optional string documentId = 8;
+
+	// Application version of the client that sends the delta
+	optional com.zoho.common.ApplicationVersion appVersion = 9;
+
+	enum DeltaOriginator {
+		UNKNOWN_DELTA_ORIGINATOR = 0;
+		USER = 1; //The User who is the default originator of the delta
+		CLIENT_SYSTEM = 2;
+		SERVER_SYSTEM = 3;
+	}
+
+	// Originator of the delta
+	optional DeltaOriginator originator = 10;
+}
+
+message DocumentOperation {
+
+	// Adds a new participant to the presentation (the moment a user joins the collaboration, we'll add them to our history)
+	optional string addParticipant = 1 ;
+
+	// Removes an existing participant 
+	optional string removeParticipant = 2 ;
+
+	// Mutates a document.
+	message MutateDocument { 
+		// this should not be confused with the presenation id. this mutateDocumentId can be a slide Id / master Id / presentation Id
+		optional string mDocId = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+		optional DocumentContentOperation contentOp = 3 [(com.zoho.common.customOptions).requiredField = true];
+
+		optional string mDocKey = 4;
+	}
+
+	optional MutateDocument mutateDocument = 3; 
+}
+
+message DocumentContentOperation {
+	message Component {
+		enum OperationType {
+			DEF_OPERATION_TYPE = 0;
+			INSERT = 1;
+			UPDATE = 2;
+			DELETE = 4;
+			TEXT = 5;
+			CUSTOM = 6;
+			REORDER = 7;
+			REORDER_INSERT = 8;
+			REORDER_DELETE = 9;
+			DATABASE_TABLE = 10;
+		}
+
+		optional OperationType opType = 2 [(com.zoho.common.customOptions).requiredField = true];
+
+		// The first position in the fields will hold the root element. 
+		optional string fields = 3 [(com.zoho.common.customOptions).requiredField = true];
+		//repeated int32 positions = 4;	
+
+		optional Value value = 5;
+
+		message Value {
+			// In case of Insert, new_value will hold the value 
+			// In case of Update, if the field is absent, the attribute should be removed/should be set to null.
+			optional string value = 1;
+
+			// Absent field means that the attribute is absent and/or null.
+			optional string oldValue = 2;
+
+			// maintains the fields that needs to be deleted from the message mentioned in "fields" variable
+			optional string deleteData = 3;
+
+			// if true, this will replace the current data present in the message with the 
+			// json string present in "value" field. 
+			optional bool replace = 4;
+			
+			// unique id, can be used for insert operation
+			repeated string ids = 5;			// Animation IDs - Which has to be maintained in the server during compose.
+
+			message InBytes {
+				
+				optional bytes value = 1;
+				optional bytes oldValue = 2;
+				optional bytes deleteData = 3;
+			}
+			optional InBytes inBytes = 6;
+			
+			optional string paraId = 7;	// while creating a new para - An id has to be assigned to a paragraph - Which has to be reflected, while saving the content in server too.
+		}
+
+		message Text {
+			optional OperationType at = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+			optional int32 si = 2 [(com.zoho.common.customOptions).requiredField = true];
+			optional int32 ei = 3 [(com.zoho.common.customOptions).requiredField = true];
+			//optional string t = 4;
+
+			enum UpdateType {
+				DEF_TEXT_UPDATE_TYPE = 0;
+				PORTION = 1;
+				PARA = 2;
+			}
+			optional UpdateType ut = 4;
+
+			optional Value value = 5;
+
+			optional bool doNotExtendProps = 6;
+
+
+		}
+		repeated Text text = 6;
+
+			
+
+		// this is used for undo/redo purposes. this should not be sent to the server. an unnecessary data for the server
+		message AssociatedTexts {
+			repeated Text texts = 1;
+		}
+		repeated AssociatedTexts associated = 7;
+
+		optional Custom custom = 8;
+
+		// in case of REORDER operation, this will hold the new index position
+
+		optional int32 ni = 9;
+		optional bool noRender = 10; // Use this , if we do not want this delta to be rendered. Basically this could be dependent on some other delta.
+		
+		optional DatabaseTableOperation databaseTable = 11;
+	}
+
+	repeated Component component = 1;
+
+	enum DocumentContentOperationType {
+		DEF_GROUP_TYPE = 0;
+		GROUP = 1;
+		UNGROUP = 2;
+	}
+	optional DocumentContentOperationType type = 2;
+}

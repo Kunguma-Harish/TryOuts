@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "MANUAL_INPUT.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

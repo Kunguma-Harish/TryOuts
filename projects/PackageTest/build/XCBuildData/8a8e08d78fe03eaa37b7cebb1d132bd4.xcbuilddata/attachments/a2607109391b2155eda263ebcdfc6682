@@ -1,0 +1,4 @@
+module Painter {
+umbrella "/Users/kunguma-14252/Documents/Painter/Sources/Painter/include"
+export *
+}

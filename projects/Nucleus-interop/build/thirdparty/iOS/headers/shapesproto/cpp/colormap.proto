@@ -1,0 +1,36 @@
+syntax="proto2";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ColorMapProtos";
+
+message ColorMap {
+
+	required ColorSchemeIndex bg1 = 1 [default = DARK2 ];
+	required ColorSchemeIndex tx1 = 2 [default = LIGHT2 ];
+	required ColorSchemeIndex bg2 = 3 ; //[default = DARK1];
+	required ColorSchemeIndex tx2 = 4 [default = LIGHT1];
+	required ColorSchemeIndex a1 = 5 [default = ACCENT1 ];
+	required ColorSchemeIndex a2 = 6 [default = ACCENT2];
+	required ColorSchemeIndex a3 = 7 [default = ACCENT3];
+	required ColorSchemeIndex a4 = 8 [default = ACCENT4];
+	required ColorSchemeIndex a5 = 9 [default = ACCENT5];
+	required ColorSchemeIndex a6 = 10 [default = ACCENT6];
+	required ColorSchemeIndex hlink = 11 [default = HLINK];
+	required ColorSchemeIndex followhlink = 12 [default = FOLLOWHLINK];
+
+	enum ColorSchemeIndex {
+		DARK1 = 0;
+		LIGHT1 = 1;
+		DARK2 = 2;
+		LIGHT2 = 3;
+		ACCENT1 = 4;
+		ACCENT2 = 5;
+		ACCENT3 = 6;
+		ACCENT4 = 7;
+		ACCENT5 = 8;
+		ACCENT6 = 9;
+		HLINK = 10;
+		FOLLOWHLINK = 11;
+	}
+}	

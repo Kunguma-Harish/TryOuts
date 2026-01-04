@@ -1,0 +1,19 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "TweakProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+// hue , saturation , luminance varies from 0-Any for OFFSET/ABSOLUTE values. Basically , hue ranges from 0-360 (in angles) here for an offset of 36 , 0.1 can be used. 
+message Tweak {
+	enum TweakMode { 
+		MODIFY = 0; // modify the value , ranges from 0 - any , 0.1 means (0.1 * original value)
+		OFFSET = 1; // offset the value , will be added to the original value after calculating modification.	
+		ABSOLUTE = 2; // change the attribute to this absolute value , 0.5 luminance means luminance=0.5 with what ever be the original value.
+	}
+	optional TweakMode mode = 1 [(com.zoho.common.customOptions).requiredField = true];
+	optional float value = 2;
+}	

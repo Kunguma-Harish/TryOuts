@@ -1,0 +1,68 @@
+syntax="proto3";
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "ChartProtos";
+
+import "colormap.proto";
+import "titleelement.proto";
+import "manuallayout.proto";
+import "properties.proto";
+import "textbody.proto";
+import "plotarea.proto";
+import "chartstyle.proto";
+import "picturevalue.proto";
+import "chartlayout.proto";
+import "google/protobuf/protoextensions.proto";
+import "fields.proto";
+
+// Root Node for Chart - similar to ChartSpace.
+message Chart {
+
+	optional ChartObj obj = 1 [(com.zoho.common.customOptions).requiredField = true];
+	message ChartObj {
+		
+		optional TitleElement title = 1;
+
+	
+		optional Legend legend = 2;	
+		
+		optional PlotArea plotArea = 3;
+
+		message Legend {
+			
+			optional Show.ChartField.PositionElement pos = 1;
+			optional com.zoho.shapes.Properties props = 2; // Only Fill, Stroke and effects are supported. 
+			optional bool overlay = 3; // Specified whether this element shall overlap the other elements.
+			optional ManualLayout layout  = 4; // If the legend is manually placed , we will have this entry.
+			optional com.zoho.shapes.TextBody textBody = 5; 
+		}
+
+		
+		enum DisplayBlank {
+			SPAN = 0;
+			GAP = 1;
+			ZERO = 2;
+		}
+		optional DisplayBlank dispBlankAs = 4; // How to display blank values.
+		
+		optional bool plotVisible = 5;// Should we plot only visible points or not. 	
+	}
+			
+	optional com.zoho.shapes.ColorMap colorMap = 2; // Overriding Color Map.
+	
+	optional com.zoho.shapes.TextBody textBody = 3;
+	optional com.zoho.shapes.Properties props = 4;
+	
+	optional ChartStyle style = 5;
+	optional int32 styleNumber = 6; // Added for compatability reasons, mainly for exporting.	
+
+	
+	optional com.zoho.shapes.PictureValue picture = 7;// Convert the chart as picture and store it here - It will be used by apps which are yet to support rendering.
+	
+	optional ChartLayout layout = 8;
+	
+	// This datafieldId should ideally map to matrix data type and will create a chart dynamically as per matrix terms.	
+	optional string datafieldId = 9;
+
+}

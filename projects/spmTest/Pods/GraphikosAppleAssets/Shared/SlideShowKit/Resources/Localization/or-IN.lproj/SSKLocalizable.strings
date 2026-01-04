@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "ଠିକ୍‌ ଅଛି";
+"SSKit.common.cancel" = "ବାତିଲ୍ କରନ୍ତୁ";
+"SSKit.common.continue" = "ଜାରି ରଖନ୍ତୁ";
+"SSKit.common.untitledDocument" = "ଟାଇଟଲ୍ ଦିଆଯାଇନଥିବା ଡକ୍ୟୁମେଣ୍ଟ";
+"SSKit.common.noNetwork" = "କୌଣସି ନେଟୱାର୍କ୍ ନାହିଁ";
+"SSKit.common.noNetworkMessage" = "ନିଶ୍ଚିତ କରନ୍ତୁ ଯେ ଆପଣଙ୍କ ଡିଭାଇସ୍ ଇଣ୍ଟର୍ନେଟ୍ କୁ ସଂଯୋଜିତ ହୋଇଛି।";
+"SSKit.common.openSettings" = "ସେଟିଂସ୍‌ ଖୋଲନ୍ତୁ";
+"SSKit.common.connected" = "ସଂଯୋଜିତ ହୋଇଛି";
+"SSKit.common.connecting" = "କନେକ୍ଟ ହେଉଛି";
+"SSKit.common.waiting" = "ଅପେକ୍ଷାରତ";
+"SSKit.common.update" = "ଅପଡେଟ୍ କରନ୍ତୁ";
+"SSKit.common.minimise" = "ମିନିମାଇଜ୍ କରନ୍ତୁ";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "ଆରମ୍ଭ କରନ୍ତୁ";
+"SSKit.slideshow.end" = "ଶେଷ";
+"SSKit.slideshow.currentSlide" = "%i ର %i ସ୍ଲାଇଡ୍";
+"SSKit.slideshow.EndOfSlideshow" = "ସ୍ଲାଇଡ୍ ଶୋ’ର ସମାପ୍ତି";
+"SSKit.slideshow.blackout" = "ସ୍କ୍ରୀନ୍ ବ୍ଲାକ୍ ଆଉଟ୍ ହୋଇଯାଇଛି";
+"SSKit.slideshow.backToLive" = "ଲାଇଭ୍‌କୁ ଫେରନ୍ତୁ";
+"SSKit.slideshow.notes" = "ନୋଟ୍ସ";
+"SSKit.slideshow.clear" = "ଖାଲି କରନ୍ତୁ";
+"SSKit.slideshow.emptyNotes" = "ଏହି ସ୍ଲାଇଡ୍ ପାଇଁ କୌଣସି ନୋଟ୍ ଉପଲବ୍ଧ ନାହିଁ।";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "ସେସନ୍‌କୁ ବନ୍ଦ କରିଦିଆଗଲା";
+"SSKit.shareplay.sessionTerminated.desc" = "ଆପଣଙ୍କର ଶେୟର୍‌ପ୍ଲେ ସେସନ୍‌କୁ ସମାପ୍ତ କରିଦିଆଗଲା ଆପଣ ନିଜ ସେସନ୍‌କୁ ରିଷ୍ଟାର୍ଟ କରିବାକୁ ବାଛିପାରିବେ।";
+
+"SSKit.shareplay.syncWithPresenter" = "ପ୍ରେଜେଣ୍ଟର୍ ସହିତ ସିଙ୍କ୍ କରନ୍ତୁ";
+
+"SSKit.shareplay.end.title" = "ଶେୟର୍‌ପ୍ଲେ ସମାପ୍ତ କରନ୍ତୁ";
+"SSKit.shareplay.end.description" = "ଆପଣ ଶେୟର୍‌ପ୍ଲେ ସମାପ୍ତ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି? ଶେୟର୍‌ପ୍ଲେ ସମାପ୍ତ କଲେ ସେସନ୍ ବନ୍ଦ ହୋଇଯିବ।";
+"SSKit.shareplay.requestToPresent.description" = "ଉପସ୍ଥାପନ କରିବାକୁ ଅନୁରୋଧ କରାଯାଉଛି";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "ତ୍ରୁଟି";
+"SSKit.error.message" = "ଏକ ତ୍ରୁଟି ଘଟିଛି। ପରେ ପୁନଃ ଚେଷ୍ଟା କରନ୍ତୁ";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "ପ୍ଲେବ୍ୟାକ୍ ଅଡିଓ";
+"SSKit.audio.resume" = "ପୁନଃ ଆରମ୍ଭ କରନ୍ତୁ";
+"SSKit.audio.pause" = "ଅଟକି ଯାଆନ୍ତୁ";
+"SSKit.audio.audioTitle" = "ଅଡିଓ";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "ଆପଣଙ୍କର Apple TV ଚୟନ କରନ୍ତୁ";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple TV ଖୋଜୁଛନ୍ତି";
+"SSKit.mcPeerListing.streamingDescription" = "ଆପଣଙ୍କ ଡିଭାଇସ୍ ରୁ Apple TVକୁ ସ୍ଲାଇଡ୍ ଷ୍ଟ୍ରିମ୍ କରିବାକୁ।";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "ସ୍ଥାନୀୟ ନେଟୱାର୍କ୍ ଆକସେସ୍ ସକ୍ଷମ କରନ୍ତୁ ଏବଂ ପୁନଃଚେଷ୍ଟା କରନ୍ତୁ";
+
+"SSKit.mcPeerListing.disconnect.title" = "ବିଚ୍ଛିନ୍ନ କରନ୍ତୁ";
+"SSKit.mcPeerListing.disconnect.message" = "ଆପଣ ନିଶ୍ଚିତ କି ଆପଣ Apple TVରୁ ବିଚ୍ଛିନ୍ନ ହେବାକୁ ଚାହୁଁଛନ୍ତି?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@ ବିଚ୍ଛିନ୍ନ କରନ୍ତୁ";
+"SSKit.mcPeerListing.updateError" = "ପୁରୁଣା ସଂସ୍କରଣରେ ପିଅର୍ ଚାଲୁଥିବା ଜଣାପଡୁଛି। ନିଶ୍ଚିତ କରନ୍ତୁ ଯେ TV ଆପ୍ଲିକେସନ୍ ଅପ-ଟୁ-ଡେଟ୍ ଅଛି";

@@ -1,0 +1,43 @@
+
+#ifndef SHAPESPAINTER_EXPORT_H
+#define SHAPESPAINTER_EXPORT_H
+
+#ifdef SHAPESPAINTER_STATIC_DEFINE
+#  define SHAPESPAINTER_EXPORT
+#  define SHAPESPAINTER_NO_EXPORT
+#else
+#  ifndef SHAPESPAINTER_EXPORT
+#    ifdef ShapesPainter_EXPORTS
+        /* We are building this library */
+#      define SHAPESPAINTER_EXPORT 
+#    else
+        /* We are using this library */
+#      define SHAPESPAINTER_EXPORT 
+#    endif
+#  endif
+
+#  ifndef SHAPESPAINTER_NO_EXPORT
+#    define SHAPESPAINTER_NO_EXPORT 
+#  endif
+#endif
+
+#ifndef SHAPESPAINTER_DEPRECATED
+#  define SHAPESPAINTER_DEPRECATED __attribute__ ((__deprecated__))
+#endif
+
+#ifndef SHAPESPAINTER_DEPRECATED_EXPORT
+#  define SHAPESPAINTER_DEPRECATED_EXPORT SHAPESPAINTER_EXPORT SHAPESPAINTER_DEPRECATED
+#endif
+
+#ifndef SHAPESPAINTER_DEPRECATED_NO_EXPORT
+#  define SHAPESPAINTER_DEPRECATED_NO_EXPORT SHAPESPAINTER_NO_EXPORT SHAPESPAINTER_DEPRECATED
+#endif
+
+/* NOLINTNEXTLINE(readability-avoid-unconditional-preprocessor-if) */
+#if 0 /* DEFINE_NO_DEPRECATED */
+#  ifndef SHAPESPAINTER_NO_DEPRECATED
+#    define SHAPESPAINTER_NO_DEPRECATED
+#  endif
+#endif
+
+#endif /* SHAPESPAINTER_EXPORT_H */

@@ -1,0 +1,64 @@
+PODS:
+  - GraphikosAppleAssets (0.0.24):
+    - GraphikosAppleAssets/Show (= 0.0.24)
+  - GraphikosAppleAssets/Core (0.0.24)
+  - GraphikosAppleAssets/OnDemandResources (0.0.24)
+  - GraphikosAppleAssets/Painter/Core (0.0.24)
+  - GraphikosAppleAssets/Painter/Show (0.0.24):
+    - GraphikosAppleAssets/Painter/Core
+  - GraphikosAppleAssets/RenderingResources/Core (0.0.24)
+  - GraphikosAppleAssets/Show (0.0.24):
+    - GraphikosAppleAssets/OnDemandResources
+    - GraphikosAppleAssets/SlideShowKitExtension
+  - GraphikosAppleAssets/SlideShowKitExtension (0.0.24):
+    - GraphikosAppleAssets/Core
+    - GraphikosAppleAssets/RenderingResources/Core
+  - Painter/Show (0.1.129):
+    - GraphikosAppleAssets/Painter/Show (= 0.0.24)
+    - Proto/Shapes (= 0.1.43-beta2)
+  - Proto/Comments (0.1.43-beta2):
+    - Proto/Shapes
+    - SwiftProtobuf (= 1.26.0-graphikos)
+  - Proto/Shapes (0.1.43-beta2):
+    - SwiftProtobuf (= 1.26.0-graphikos)
+  - Proto/WhiteBoard (0.1.43-beta2):
+    - Proto/Comments
+    - Proto/Shapes
+    - SwiftProtobuf (= 1.26.0-graphikos)
+  - SwiftProtobuf (1.26.0-graphikos)
+
+DEPENDENCIES:
+  - GraphikosAppleAssets (from `https://git.csez.zohocorpin.com/zohoshow/apple/public/graphikosappleassets.git`, branch `kungu/spm`)
+  - Painter/Show (from `https://git.csez.zohocorpin.com/zohoshow/apple/public/shapespainter.git`, branch `kungu/spm`)
+  - Proto/WhiteBoard (= 0.1.43-beta2)
+
+SPEC REPOS:
+  https://git.csez.zohocorpin.com/zohoshow/apple/public/specs.git:
+    - Proto
+    - SwiftProtobuf
+
+EXTERNAL SOURCES:
+  GraphikosAppleAssets:
+    :branch: kungu/spm
+    :git: https://git.csez.zohocorpin.com/zohoshow/apple/public/graphikosappleassets.git
+  Painter:
+    :branch: kungu/spm
+    :git: https://git.csez.zohocorpin.com/zohoshow/apple/public/shapespainter.git
+
+CHECKOUT OPTIONS:
+  GraphikosAppleAssets:
+    :commit: 2dcf3c89953d4ba8acf0ae8f4981ebe493693cbd
+    :git: https://git.csez.zohocorpin.com/zohoshow/apple/public/graphikosappleassets.git
+  Painter:
+    :commit: c1a7a95788423d090b28ee61ed6ab58d1363ef91
+    :git: https://git.csez.zohocorpin.com/zohoshow/apple/public/shapespainter.git
+
+SPEC CHECKSUMS:
+  GraphikosAppleAssets: 9df86f7968f2520f748e57291d92ff0ad8442be4
+  Painter: a93ae530e5aecdec1bc67eb0434e41d806deec29
+  Proto: a4b37a003d14040a46b719fea8f6c03bf9a5c696
+  SwiftProtobuf: 95698b1d3acb80eeed333eceac2e4cc80a18d35d
+
+PODFILE CHECKSUM: 095bbc0c368d85803d8bcdbce43a654f92809315
+
+COCOAPODS: 1.15.2

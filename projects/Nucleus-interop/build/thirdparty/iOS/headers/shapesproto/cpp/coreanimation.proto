@@ -1,0 +1,25 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "CoreAnimationProtos";
+
+import "customanimation.proto";
+import "animationeasing.proto";
+
+// Used in StartWith as of now.
+
+message CoreAnimation {
+
+	optional string id = 1;
+
+	optional float delay = 2; // Delay the animation for given seconds.
+	optional float duration = 3; // Animation Duration in seconds
+
+	optional CustomAnimation custom = 4;
+
+	optional AnimationEasing easing = 5; 
+
+}
+

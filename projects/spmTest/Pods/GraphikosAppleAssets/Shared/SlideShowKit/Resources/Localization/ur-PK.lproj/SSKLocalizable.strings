@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "ٹھیک ہے";
+"SSKit.common.cancel" = "منسوخ کریں";
+"SSKit.common.continue" = "جاری رکھیں";
+"SSKit.common.untitledDocument" = "بلا عنوان دستاویز";
+"SSKit.common.noNetwork" = "کوئی نیٹ ورک نہیں";
+"SSKit.common.noNetworkMessage" = "یقینی بنائیں کہ آپ کی ڈیوائس انٹرنیٹ سے مربوط شدہ ہے۔";
+"SSKit.common.openSettings" = "ترتیبات کھولیں";
+"SSKit.common.connected" = "مربوط کردہ";
+"SSKit.common.connecting" = "مربوط ہو رہا ہے";
+"SSKit.common.waiting" = "منتظر ہیں";
+"SSKit.common.update" = "اپ ڈیٹ کریں";
+"SSKit.common.minimise" = "کم کریں";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "شروع کریں";
+"SSKit.slideshow.end" = "اختتام";
+"SSKit.slideshow.currentSlide" = "%i کی %i سلائیڈ";
+"SSKit.slideshow.EndOfSlideshow" = "سلائیڈ شو ختم ہو گیا";
+"SSKit.slideshow.blackout" = "اسکرین تاریک ہو گئی";
+"SSKit.slideshow.backToLive" = "لائیو پر واپس جائیں";
+"SSKit.slideshow.notes" = "نوٹس";
+"SSKit.slideshow.clear" = "صاف کریں";
+"SSKit.slideshow.emptyNotes" = "اس سلائیڈ کے لیے کوئی نوٹس دستیاب نہیں ہیں۔";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "سیشن ختم ہو گیا";
+"SSKit.shareplay.sessionTerminated.desc" = "آپ کا شیئر پلے سیشن ختم ہو گیا ہے۔ آپ اپنا سیشن ری اسٹارٹ کرنے کا انتخاب کر سکتے ہیں۔";
+
+"SSKit.shareplay.syncWithPresenter" = "پیش کنندہ کے ساتھ سنک کریں";
+
+"SSKit.shareplay.end.title" = "شیئر پلے ختم کریں";
+"SSKit.shareplay.end.description" = "کیا آپ شیئر پلے ختم کرنا چاہتے ہیں؟ شیئر پلے ختم کرنے سے سیشن ختم ہو جائے گا۔";
+"SSKit.shareplay.requestToPresent.description" = "پیش کرنے کے لیے درخواست کر رہے ہیں";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "نقص";
+"SSKit.error.message" = "ایک نقص پیش آ گیا۔ بعد میں دوبارہ کوشش کریں";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "پلے بیک آڈیو";
+"SSKit.audio.resume" = "دوبارہ شروع کریں";
+"SSKit.audio.pause" = "توقف کریں";
+"SSKit.audio.audioTitle" = "آڈیو";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "اپنے Apple TV کو منتخب کریں";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple TVs تلاش کر رہے ہیں";
+"SSKit.mcPeerListing.streamingDescription" = "تاکہ آپ کی ڈیوائس سے Apple TV پر سلائیڈز اسٹریم کر سکیں۔";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "مقامی نیٹ ورک کی رسائی فعال کریں اور دوبارہ کوشش کریں";
+
+"SSKit.mcPeerListing.disconnect.title" = "غیر مربوط کریں";
+"SSKit.mcPeerListing.disconnect.message" = "کیا آپ واقعی Apple TV سےغیر مربوط ہونا چاہتے ہیں؟";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@ غیر مربوط کریں";
+"SSKit.mcPeerListing.updateError" = "لگتا ہے کہ پیئر پرانے ورژن پر چل رہا ہے۔ یقینی بنائیں کہ TV ایپ اپ ٹو ڈیٹ ہو";

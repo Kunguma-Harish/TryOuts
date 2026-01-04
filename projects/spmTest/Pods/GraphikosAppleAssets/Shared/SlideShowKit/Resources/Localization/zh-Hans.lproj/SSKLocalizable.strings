@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "确定";
+"SSKit.common.cancel" = "取消";
+"SSKit.common.continue" = "继续";
+"SSKit.common.untitledDocument" = "无标题文档";
+"SSKit.common.noNetwork" = "无网络";
+"SSKit.common.noNetworkMessage" = "确保您的设备已连接至因特网。";
+"SSKit.common.openSettings" = "打开设置";
+"SSKit.common.connected" = "已连接";
+"SSKit.common.connecting" = "正在连接";
+"SSKit.common.waiting" = "等待中";
+"SSKit.common.update" = "更新";
+"SSKit.common.minimise" = "最小化";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "开始";
+"SSKit.slideshow.end" = "结束";
+"SSKit.slideshow.currentSlide" = "幻灯片 %i/共 %i 张";
+"SSKit.slideshow.EndOfSlideshow" = "幻灯片播放结束";
+"SSKit.slideshow.blackout" = "屏幕已黑屏";
+"SSKit.slideshow.backToLive" = "返回至 Live";
+"SSKit.slideshow.notes" = "备注";
+"SSKit.slideshow.clear" = "清除";
+"SSKit.slideshow.emptyNotes" = "此幻灯片无备注。";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "会话已终止";
+"SSKit.shareplay.sessionTerminated.desc" = "您的 Shareplay 会话已终止。您可以选择重新启动您的会话。";
+
+"SSKit.shareplay.syncWithPresenter" = "与演示者同步";
+
+"SSKit.shareplay.end.title" = "结束 SharePlay";
+"SSKit.shareplay.end.description" = "是否要结束 shareplay？结束 shareplay 将终止该会话。";
+"SSKit.shareplay.requestToPresent.description" = "正在请求演示";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "错误";
+"SSKit.error.message" = "发生错误。稍后重试";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "Playback Audio";
+"SSKit.audio.resume" = "恢复";
+"SSKit.audio.pause" = "暂停";
+"SSKit.audio.audioTitle" = "音频";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "选择您的 Apple TV";
+"SSKit.mcPeerListing.lookingForTvs" = "正在查找 Apple TV";
+"SSKit.mcPeerListing.streamingDescription" = "将幻灯片从您的设备传送至 Apple TV。";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "启用本地网络访问并重试";
+
+"SSKit.mcPeerListing.disconnect.title" = "断开连接";
+"SSKit.mcPeerListing.disconnect.message" = "是否确定要从该 Apple TV 断开连接？";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "断开连接 %@";
+"SSKit.mcPeerListing.updateError" = "看起来同行正在较早版本上运行。确保 TV 应用保持最新";

@@ -1,0 +1,14 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "SeriesTextProtos";
+
+import "stringreference.proto";
+import "google/protobuf/protoextensions.proto";
+
+message SeriesText {
+	optional com.zoho.shapes.StringReference strRef = 1 [(com.zoho.common.customOptions).requiredField = true];
+}
+

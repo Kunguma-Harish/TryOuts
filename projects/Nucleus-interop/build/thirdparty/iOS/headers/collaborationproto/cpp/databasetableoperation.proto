@@ -1,0 +1,109 @@
+syntax="proto3";
+package com.zoho.collaboration;
+
+option java_package = "com.zoho.collaboration";
+option java_outer_classname = "DatabaseTableOperationProtos";
+
+import "fields.proto";
+import "databasetabledefinition.proto";
+import "databasetablecolumn.proto";
+import "selecttableview.proto";
+import "databasetablerow.proto";
+import "compositevalue.proto";
+import "columnidentifier.proto";
+
+
+message DatabaseTableOperation {
+
+	optional Show.DatabaseField.DataOperator op = 1; // Insert, modify, delete, Select
+
+	message TableColumnOperation {
+		optional string tableId = 1;
+		repeated com.zoho.database.DatabaseTableColumn columns = 2;
+	}
+	
+	enum TableRowOperationCategory {
+
+		DEFAULT_DELETE_ROW = 0;
+		DIRECT = 1;
+		SELECT = 2;
+	}
+	
+	message TableRowOperation {
+		optional string tableId = 1;
+		repeated com.zoho.database.DatabaseTableRow rows = 2;
+	}
+
+
+	message InsertOperation {
+
+		optional Show.DatabaseField.DataOperatedOn operatedOn = 1;
+
+		repeated com.zoho.database.DatabaseTableDefinition tables = 2;
+
+		repeated TableColumnOperation tableColumns = 3;
+
+		repeated TableRowOperation tableRows = 4;	
+	}
+	optional InsertOperation insertOp = 2;
+
+	message DeleteOperation {
+
+		optional Show.DatabaseField.DataOperatedOn operatedOn = 1;
+
+		repeated string tableIds = 2;
+
+		message DeleteTableColumn {
+			optional string tableId = 1;
+			repeated com.zoho.database.ColumnIdentifier columns = 2;
+		}
+		repeated DeleteTableColumn tableColumns = 3;
+
+		message DeleteTableRow {
+			optional string tableId = 1;
+			
+			optional TableRowOperationCategory category = 2;
+
+			repeated string rowIds = 3; // can directly delete rows using rowIds
+
+			optional com.zoho.database.SelectTableView select = 4; //can delete rows using a select query
+		}
+		repeated DeleteTableRow tableRows = 4;
+	}
+	optional DeleteOperation deleteOp = 3;
+
+	message ModifyOperation {
+
+		optional Show.DatabaseField.DataOperatedOn operatedOn = 1;
+
+		message ModifyTable {
+			optional string id = 1;
+			optional string name = 2;
+		}
+		repeated ModifyTable tables = 2;
+
+		repeated TableColumnOperation columns = 3;
+
+		message ModifyTableRow {
+			
+			optional string tableId = 1;
+			
+			optional TableRowOperationCategory category = 2;
+
+			repeated com.zoho.database.DatabaseTableRow rows = 3; // can directly modify rows using rowIds
+			
+			message SelectRowModify {
+				
+				optional com.zoho.database.SelectTableView select = 1;
+				
+				optional com.zoho.common.CompositeValue value = 2;
+			}
+			optional SelectRowModify select = 4; // can modify rows using select query
+				
+		}
+		repeated ModifyTableRow rows = 4;		
+	}
+
+	optional ModifyOperation modifyOp = 4;
+
+}

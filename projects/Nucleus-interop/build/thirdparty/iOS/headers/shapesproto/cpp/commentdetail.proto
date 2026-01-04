@@ -1,0 +1,51 @@
+syntax="proto3";
+
+package com.zoho.comment;
+
+option java_package = "com.zoho.comment";
+option java_outer_classname = "CommentDetailProtos";
+
+import "shapeobject.proto";
+import "time.proto";
+import "shape.proto";
+import "commentdata.proto";
+import "position.proto";
+import "google/protobuf/protoextensions.proto";
+
+message CommentDetail {
+	
+	optional string commentId = 1 [(com.zoho.common.customOptions).requiredField = true]; // Comment ID.
+
+	optional CommentData commenter = 2 [(com.zoho.common.customOptions).requiredField = true];// Commented-By and at what time.
+
+	repeated com.zoho.shapes.ShapeObject data = 3; // Comment could be a text/picture or any such shape object.
+
+	message CommentStatus {
+		enum CommentModification {
+			DELETED = 0;
+			EDITED = 1;
+		}
+		optional CommentModification state = 1;
+
+		optional com.zoho.common.Time date = 2; // State updated time.
+
+		// Update this only when the comment is deleted by some one (Owner/Co-Owner) who did not add this comment.
+		optional string zuid = 3;  
+	}
+	optional CommentStatus status = 4;
+
+	// Markings for a comment. This will let the user mark relevant areas and associate it with a comment - used for Picture-comments , Public-Slide-Comments , basically on an object which cannot be fragmented.
+	repeated com.zoho.shapes.Shape drawing = 5;
+
+	message QuoteForComment {
+		optional string commentId = 1; // Id of the Quoted Comment
+
+		repeated com.zoho.shapes.ShapeObject data = 2; // data of the quoted comment , just duplicating it for easeness.
+		
+	}
+	optional QuoteForComment quote = 6;
+
+	// Pinned positions for this comment.
+	repeated com.zoho.common.Position pins = 7;
+}
+

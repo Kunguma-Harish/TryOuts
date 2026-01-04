@@ -1,0 +1,107 @@
+syntax="proto2";
+// Hyperlink for a slide or portion.
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "HyperLinkProtos";
+
+import "url.proto";
+import "fill.proto";
+import "linetype.proto";
+import "email.proto";
+
+message HyperLink {
+
+	enum LinkType {
+		NONE = 0; // no link
+		LINK = 1; // url link
+		EMAIL = 2; // linked to email
+		SLIDE = 3; // linked to a slide
+		CUSTOM = 4; // Linked to a Custom Show.
+		ANCHOR_POINT = 5; // Linked to an anchor point
+		FRAME = 6;	// Linked to a frame
+		SHAPEOBJECT = 7;	// Linked to a shapeObject
+	}
+
+	required LinkType type = 1; //[ default = NONE ];// type of link
+
+	//<regex name="url" value="^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\:\'\/\\\+=&amp;%\$#_]*)?$"/>
+	// Use the linkUrl variabl instead of this.
+	optional string link = 2; // url link
+
+	optional com.zoho.common.Email email = 3; // email address link
+
+	message LinkSlide {
+
+		enum LinkSlideType {
+			DEF_LINK_SLIDE_TYPE = 0;
+			FIXED = 1; // fixed to a particular slide , will point to the slide unique id.
+			DYNAMIC = 2; // linked dynamically to a slide, meaning always linked to the previous slide etc...
+		}
+
+		enum DynamicSlideType {
+			DEF_DYNAMIC_SLIDE = 0;
+			NEXT = 1; // next slide
+			PREVIOUS = 2; // previous slide
+			FIRST = 3; // first slide
+			LAST = 4; // last slide
+			LASTVIEWED = 5; // last viewed slide.
+		}
+
+		required LinkSlideType type = 1 ; // slide link type
+
+		// <regex name="mathuuid"  value="^[a-f0-9A-F]{8}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{12}$" />
+		optional string fixed = 2; // fixed link, contains slide unique id.
+
+		optional DynamicSlideType dynamic = 3; // dynamic link
+	}
+	optional LinkSlide slide = 4; // linked to a slide.
+
+	message CustomShowLink {
+
+		// <regex name="mathuuid"  value="^[a-f0-9A-F]{8}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{12}$" />
+		required string id = 1 ; // Custom Show Unique ID.
+
+		optional bool return = 2 [default = true]; // Return to slideshow at the end of Custom show.
+	}
+	optional CustomShowLink custom = 5; // Linked to a Custom Show.
+
+	//<regex name="document_name" value="[0-9a-zA-Z_~`#%&amp;\^\*\(\)\{\}\[\]\+\*\|\=\-\.\$@\?\,\:;\'\/\!\P{InBasicLatin}\s]+"/>
+	optional string tooltip = 6; // tooltip for the slide.
+
+	enum LinkOpenType {
+		DEF_LINK_OPEN_TYPE = 0;
+		NEW = 1; // open in new window.
+		SELF = 2; // open in self.
+	}
+	optional LinkOpenType opentype = 7 [ default = NEW ];
+
+	// Using the URL proto instead of string. This will help us security wise.
+	optional com.zoho.common.URL linkUrl = 8;
+
+	optional HyperLinkStyle linkStyle = 9 ;
+	
+	message HyperLinkStyle {
+		optional Fill fill = 1; // click fill
+		optional LineType underline = 3; // Underline
+	}
+
+	message AnchorPointLink {
+		required string id = 1;
+	}
+
+	optional AnchorPointLink anchorPoint = 10;
+
+	message FrameLink {
+		required string id = 1;
+	}
+
+	optional FrameLink frame = 11;
+
+	message ShapeObjectLink {
+		required string id = 1;
+	}
+
+	optional ShapeObjectLink shapeObject = 12;
+
+}

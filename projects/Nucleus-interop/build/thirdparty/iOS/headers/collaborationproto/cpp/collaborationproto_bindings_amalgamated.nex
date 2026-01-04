@@ -1,0 +1,485 @@
+@package com.zoho.nexus.collaborationproto;
+@import commonproto_bindings_amalgamated.nex.nx;
+@import customproto_bindings_amalgamated.nex.nx;
+include {
+ collaboration.pb.h;
+  }
+class DocumentDeltas  : com::zoho::collaboration::DocumentDeltas {
+  inherits Message;
+  constructor DocumentDeltas : com::zoho::collaboration::DocumentDeltas();
+  function CopyFrom : nx_void CopyFrom(DocumentDeltas& arg0);
+  function Clear : nx_void Clear();
+  property delta  : [own] nx_repeated_ptr_field[protobuf_array_DocumentDelta]* delta(nx_getter : temp_getdelta, nx_setter : temp_setdelta);
+  function has_lastsavedversion : nx_bool has_lastsavedversion();
+  property lastSavedVersion : nx_int lastSavedVersion(nx_getter : lastsavedversion, nx_setter : set_lastsavedversion); 
+  }
+
+repeated_ptr_field  {
+protobuf_array_DocumentDeltas : DocumentDeltas;
+}
+
+class DocumentDelta  : com::zoho::collaboration::DocumentDelta {
+  inherits Message;
+  constructor DocumentDelta : com::zoho::collaboration::DocumentDelta();
+  function CopyFrom : nx_void CopyFrom(DocumentDelta& arg0);
+  function Clear : nx_void Clear();
+  function has_version : nx_bool has_version();
+  property version : nx_int version(nx_getter : version, nx_setter : set_version); 
+  function has_author : nx_bool has_author();
+  property author : nx_string author(nx_getter : author, nx_setter : set_author);
+  property docOp  : [own] nx_repeated_ptr_field[protobuf_array_DocumentOperation]* docOp(nx_getter : temp_getdocOp, nx_setter : temp_setdocOp);
+  function has_modtime : nx_bool has_modtime();
+  property modTime : nx_string modTime(nx_getter : modtime, nx_setter : set_modtime);
+  function has_grpmember : nx_bool has_grpmember();
+  property grpMember : nx_string grpMember(nx_getter : grpmember, nx_setter : set_grpmember);
+  function has_uniqueid : nx_bool has_uniqueid();
+  property uniqueId : nx_string uniqueId(nx_getter : uniqueid, nx_setter : set_uniqueid);
+  function has_anonuserid : nx_bool has_anonuserid();
+  property anonUserId : nx_string anonUserId(nx_getter : anonuserid, nx_setter : set_anonuserid);
+  function has_documentid : nx_bool has_documentid();
+  property documentId : nx_string documentId(nx_getter : documentid, nx_setter : set_documentid);
+  function has_appversion : nx_bool has_appversion();
+  property appVersion : [own] ApplicationVersion*  appVersion(nx_getter : temp_getappVersion, nx_setter : temp_setappVersion);
+  function has_originator : nx_bool has_originator();
+  property originator : nx_enum_string<DocumentDelta_DeltaOriginator> originator(nx_getter : originator, nx_setter : set_originator);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DocumentDelta : DocumentDelta;
+}
+
+class DocumentOperation  : com::zoho::collaboration::DocumentOperation {
+  inherits Message;
+  constructor DocumentOperation : com::zoho::collaboration::DocumentOperation();
+  function CopyFrom : nx_void CopyFrom(DocumentOperation& arg0);
+  function Clear : nx_void Clear();
+  function has_addparticipant : nx_bool has_addparticipant();
+  property addParticipant : nx_string addParticipant(nx_getter : addparticipant, nx_setter : set_addparticipant);
+  function has_removeparticipant : nx_bool has_removeparticipant();
+  property removeParticipant : nx_string removeParticipant(nx_getter : removeparticipant, nx_setter : set_removeparticipant);
+  function has_mutatedocument : nx_bool has_mutatedocument();
+  property mutateDocument : [own] DocumentOperation_MutateDocument*  mutateDocument(nx_getter : temp_getmutateDocument, nx_setter : temp_setmutateDocument);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DocumentOperation : DocumentOperation;
+}
+
+class DocumentOperation_MutateDocument  : com::zoho::collaboration::DocumentOperation_MutateDocument {
+  inherits Message;
+  constructor DocumentOperation_MutateDocument : com::zoho::collaboration::DocumentOperation_MutateDocument();
+  function CopyFrom : nx_void CopyFrom(DocumentOperation_MutateDocument& arg0);
+  function Clear : nx_void Clear();
+  function has_mdocid : nx_bool has_mdocid();
+  property mDocId : nx_string mDocId(nx_getter : mdocid, nx_setter : set_mdocid);
+  function has_contentop : nx_bool has_contentop();
+  property contentOp : [own] DocumentContentOperation*  contentOp(nx_getter : temp_getcontentOp, nx_setter : temp_setcontentOp);
+  function has_mdockey : nx_bool has_mdockey();
+  property mDocKey : nx_string mDocKey(nx_getter : mdockey, nx_setter : set_mdockey);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DocumentOperation_MutateDocument : DocumentOperation_MutateDocument;
+}
+
+class DocumentContentOperation  : com::zoho::collaboration::DocumentContentOperation {
+  inherits Message;
+  constructor DocumentContentOperation : com::zoho::collaboration::DocumentContentOperation();
+  function CopyFrom : nx_void CopyFrom(DocumentContentOperation& arg0);
+  function Clear : nx_void Clear();
+  property component  : [own] nx_repeated_ptr_field[protobuf_array_DocumentContentOperation_Component]* component(nx_getter : temp_getcomponent, nx_setter : temp_setcomponent);
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<DocumentContentOperation_DocumentContentOperationType> type(nx_getter : type, nx_setter : set_type);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DocumentContentOperation : DocumentContentOperation;
+}
+
+class DocumentContentOperation_Component  : com::zoho::collaboration::DocumentContentOperation_Component {
+  inherits Message;
+  constructor DocumentContentOperation_Component : com::zoho::collaboration::DocumentContentOperation_Component();
+  function CopyFrom : nx_void CopyFrom(DocumentContentOperation_Component& arg0);
+  function Clear : nx_void Clear();
+  function has_optype : nx_bool has_optype();
+  property opType : nx_enum_string<DocumentContentOperation_Component_OperationType> opType(nx_getter : optype, nx_setter : set_optype);
+  function has_fields : nx_bool has_fields();
+  property fields : nx_string fields(nx_getter : fields, nx_setter : set_fields);
+  function has_value : nx_bool has_value();
+  property value : [own] DocumentContentOperation_Component_Value*  value(nx_getter : temp_getvalue, nx_setter : temp_setvalue);
+  property text  : [own] nx_repeated_ptr_field[protobuf_array_DocumentContentOperation_Component_Text]* text(nx_getter : temp_gettext, nx_setter : temp_settext);
+  property associated  : [own] nx_repeated_ptr_field[protobuf_array_DocumentContentOperation_Component_AssociatedTexts]* associated(nx_getter : temp_getassociated, nx_setter : temp_setassociated);
+  function has_custom : nx_bool has_custom();
+  property custom : [own] Custom*  custom(nx_getter : temp_getcustom, nx_setter : temp_setcustom);
+  function has_ni : nx_bool has_ni();
+  property ni : nx_int ni(nx_getter : ni, nx_setter : set_ni); 
+  function has_norender : nx_bool has_norender();
+  property noRender : nx_bool noRender(nx_getter : norender, nx_setter : set_norender); 
+  function has_databasetable : nx_bool has_databasetable();
+  property databaseTable : [own] DatabaseTableOperation*  databaseTable(nx_getter : temp_getdatabaseTable, nx_setter : temp_setdatabaseTable);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DocumentContentOperation_Component : DocumentContentOperation_Component;
+}
+
+class DocumentContentOperation_Component_Value  : com::zoho::collaboration::DocumentContentOperation_Component_Value {
+  inherits Message;
+  constructor DocumentContentOperation_Component_Value : com::zoho::collaboration::DocumentContentOperation_Component_Value();
+  function CopyFrom : nx_void CopyFrom(DocumentContentOperation_Component_Value& arg0);
+  function Clear : nx_void Clear();
+  function has_value : nx_bool has_value();
+  property value : nx_string value(nx_getter : value, nx_setter : set_value);
+  function has_oldvalue : nx_bool has_oldvalue();
+  property oldValue : nx_string oldValue(nx_getter : oldvalue, nx_setter : set_oldvalue);
+  function has_deletedata : nx_bool has_deletedata();
+  property deleteData : nx_string deleteData(nx_getter : deletedata, nx_setter : set_deletedata);
+  function has_replace : nx_bool has_replace();
+  property replace : nx_bool replace(nx_getter : replace, nx_setter : set_replace); 
+  property ids  : [own] nx_repeated_field[nx_string]* ids(nx_getter : temp_getids, nx_setter : temp_setids);
+  function has_inbytes : nx_bool has_inbytes();
+  property inBytes : [own] DocumentContentOperation_Component_Value_InBytes*  inBytes(nx_getter : temp_getinBytes, nx_setter : temp_setinBytes);
+  function has_paraid : nx_bool has_paraid();
+  property paraId : nx_string paraId(nx_getter : paraid, nx_setter : set_paraid);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DocumentContentOperation_Component_Value : DocumentContentOperation_Component_Value;
+}
+
+class DocumentContentOperation_Component_Value_InBytes  : com::zoho::collaboration::DocumentContentOperation_Component_Value_InBytes {
+  inherits Message;
+  constructor DocumentContentOperation_Component_Value_InBytes : com::zoho::collaboration::DocumentContentOperation_Component_Value_InBytes();
+  function CopyFrom : nx_void CopyFrom(DocumentContentOperation_Component_Value_InBytes& arg0);
+  function Clear : nx_void Clear();
+  function has_value : nx_bool has_value();
+  property value : nx_string value(nx_getter : value, nx_setter : set_value);
+  function has_oldvalue : nx_bool has_oldvalue();
+  property oldValue : nx_string oldValue(nx_getter : oldvalue, nx_setter : set_oldvalue);
+  function has_deletedata : nx_bool has_deletedata();
+  property deleteData : nx_string deleteData(nx_getter : deletedata, nx_setter : set_deletedata);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DocumentContentOperation_Component_Value_InBytes : DocumentContentOperation_Component_Value_InBytes;
+}
+
+class DocumentContentOperation_Component_Text  : com::zoho::collaboration::DocumentContentOperation_Component_Text {
+  inherits Message;
+  constructor DocumentContentOperation_Component_Text : com::zoho::collaboration::DocumentContentOperation_Component_Text();
+  function CopyFrom : nx_void CopyFrom(DocumentContentOperation_Component_Text& arg0);
+  function Clear : nx_void Clear();
+  function has_at : nx_bool has_at();
+  property at : nx_enum_string<DocumentContentOperation_Component_OperationType> at(nx_getter : at, nx_setter : set_at);
+  function has_si : nx_bool has_si();
+  property si : nx_int si(nx_getter : si, nx_setter : set_si); 
+  function has_ei : nx_bool has_ei();
+  property ei : nx_int ei(nx_getter : ei, nx_setter : set_ei); 
+  function has_ut : nx_bool has_ut();
+  property ut : nx_enum_string<DocumentContentOperation_Component_Text_UpdateType> ut(nx_getter : ut, nx_setter : set_ut);
+  function has_value : nx_bool has_value();
+  property value : [own] DocumentContentOperation_Component_Value*  value(nx_getter : temp_getvalue, nx_setter : temp_setvalue);
+  function has_donotextendprops : nx_bool has_donotextendprops();
+  property doNotExtendProps : nx_bool doNotExtendProps(nx_getter : donotextendprops, nx_setter : set_donotextendprops); 
+  }
+
+repeated_ptr_field  {
+protobuf_array_DocumentContentOperation_Component_Text : DocumentContentOperation_Component_Text;
+}
+
+class DocumentContentOperation_Component_AssociatedTexts  : com::zoho::collaboration::DocumentContentOperation_Component_AssociatedTexts {
+  inherits Message;
+  constructor DocumentContentOperation_Component_AssociatedTexts : com::zoho::collaboration::DocumentContentOperation_Component_AssociatedTexts();
+  function CopyFrom : nx_void CopyFrom(DocumentContentOperation_Component_AssociatedTexts& arg0);
+  function Clear : nx_void Clear();
+  property texts  : [own] nx_repeated_ptr_field[protobuf_array_DocumentContentOperation_Component_Text]* texts(nx_getter : temp_gettexts, nx_setter : temp_settexts);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DocumentContentOperation_Component_AssociatedTexts : DocumentContentOperation_Component_AssociatedTexts;
+}
+
+enum DocumentDelta_DeltaOriginator : com::zoho::collaboration::DocumentDelta_DeltaOriginator {
+  UNKNOWN_DELTA_ORIGINATOR : com::zoho::collaboration::DocumentDelta_DeltaOriginator_UNKNOWN_DELTA_ORIGINATOR : 0;
+  USER : com::zoho::collaboration::DocumentDelta_DeltaOriginator_USER : 1;
+  CLIENT_SYSTEM : com::zoho::collaboration::DocumentDelta_DeltaOriginator_CLIENT_SYSTEM : 2;
+  SERVER_SYSTEM : com::zoho::collaboration::DocumentDelta_DeltaOriginator_SERVER_SYSTEM : 3;
+}
+enum DocumentContentOperation_DocumentContentOperationType : com::zoho::collaboration::DocumentContentOperation_DocumentContentOperationType {
+  DEF_GROUP_TYPE : com::zoho::collaboration::DocumentContentOperation_DocumentContentOperationType_DEF_GROUP_TYPE : 0;
+  GROUP : com::zoho::collaboration::DocumentContentOperation_DocumentContentOperationType_GROUP : 1;
+  UNGROUP : com::zoho::collaboration::DocumentContentOperation_DocumentContentOperationType_UNGROUP : 2;
+}
+enum DocumentContentOperation_Component_OperationType : com::zoho::collaboration::DocumentContentOperation_Component_OperationType {
+  DEF_OPERATION_TYPE : com::zoho::collaboration::DocumentContentOperation_Component_OperationType_DEF_OPERATION_TYPE : 0;
+  INSERT : com::zoho::collaboration::DocumentContentOperation_Component_OperationType_INSERT : 1;
+  UPDATE : com::zoho::collaboration::DocumentContentOperation_Component_OperationType_UPDATE : 2;
+  DELETE : com::zoho::collaboration::DocumentContentOperation_Component_OperationType_DELETE : 4;
+  TEXT : com::zoho::collaboration::DocumentContentOperation_Component_OperationType_TEXT : 5;
+  CUSTOM : com::zoho::collaboration::DocumentContentOperation_Component_OperationType_CUSTOM : 6;
+  REORDER : com::zoho::collaboration::DocumentContentOperation_Component_OperationType_REORDER : 7;
+  REORDER_INSERT : com::zoho::collaboration::DocumentContentOperation_Component_OperationType_REORDER_INSERT : 8;
+  REORDER_DELETE : com::zoho::collaboration::DocumentContentOperation_Component_OperationType_REORDER_DELETE : 9;
+  DATABASE_TABLE : com::zoho::collaboration::DocumentContentOperation_Component_OperationType_DATABASE_TABLE : 10;
+}
+enum DocumentContentOperation_Component_Text_UpdateType : com::zoho::collaboration::DocumentContentOperation_Component_Text_UpdateType {
+  DEF_TEXT_UPDATE_TYPE : com::zoho::collaboration::DocumentContentOperation_Component_Text_UpdateType_DEF_TEXT_UPDATE_TYPE : 0;
+  PORTION : com::zoho::collaboration::DocumentContentOperation_Component_Text_UpdateType_PORTION : 1;
+  PARA : com::zoho::collaboration::DocumentContentOperation_Component_Text_UpdateType_PARA : 2;
+}
+include {
+ databasetableoperation.pb.h;
+  }
+class DatabaseTableOperation  : com::zoho::collaboration::DatabaseTableOperation {
+  inherits Message;
+  constructor DatabaseTableOperation : com::zoho::collaboration::DatabaseTableOperation();
+  function CopyFrom : nx_void CopyFrom(DatabaseTableOperation& arg0);
+  function Clear : nx_void Clear();
+  function has_op : nx_bool has_op();
+  property op : nx_enum_string<DatabaseField_DataOperator> op(nx_getter : op, nx_setter : set_op);
+  function has_insertop : nx_bool has_insertop();
+  property insertOp : [own] DatabaseTableOperation_InsertOperation*  insertOp(nx_getter : temp_getinsertOp, nx_setter : temp_setinsertOp);
+  function has_deleteop : nx_bool has_deleteop();
+  property deleteOp : [own] DatabaseTableOperation_DeleteOperation*  deleteOp(nx_getter : temp_getdeleteOp, nx_setter : temp_setdeleteOp);
+  function has_modifyop : nx_bool has_modifyop();
+  property modifyOp : [own] DatabaseTableOperation_ModifyOperation*  modifyOp(nx_getter : temp_getmodifyOp, nx_setter : temp_setmodifyOp);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DatabaseTableOperation : DatabaseTableOperation;
+}
+
+class DatabaseTableOperation_TableColumnOperation  : com::zoho::collaboration::DatabaseTableOperation_TableColumnOperation {
+  inherits Message;
+  constructor DatabaseTableOperation_TableColumnOperation : com::zoho::collaboration::DatabaseTableOperation_TableColumnOperation();
+  function CopyFrom : nx_void CopyFrom(DatabaseTableOperation_TableColumnOperation& arg0);
+  function Clear : nx_void Clear();
+  function has_tableid : nx_bool has_tableid();
+  property tableId : nx_string tableId(nx_getter : tableid, nx_setter : set_tableid);
+  property columns  : [own] nx_repeated_ptr_field[protobuf_array_DatabaseTableColumn]* columns(nx_getter : temp_getcolumns, nx_setter : temp_setcolumns);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DatabaseTableOperation_TableColumnOperation : DatabaseTableOperation_TableColumnOperation;
+}
+
+class DatabaseTableOperation_TableRowOperation  : com::zoho::collaboration::DatabaseTableOperation_TableRowOperation {
+  inherits Message;
+  constructor DatabaseTableOperation_TableRowOperation : com::zoho::collaboration::DatabaseTableOperation_TableRowOperation();
+  function CopyFrom : nx_void CopyFrom(DatabaseTableOperation_TableRowOperation& arg0);
+  function Clear : nx_void Clear();
+  function has_tableid : nx_bool has_tableid();
+  property tableId : nx_string tableId(nx_getter : tableid, nx_setter : set_tableid);
+  property rows  : [own] nx_repeated_ptr_field[protobuf_array_DatabaseTableRow]* rows(nx_getter : temp_getrows, nx_setter : temp_setrows);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DatabaseTableOperation_TableRowOperation : DatabaseTableOperation_TableRowOperation;
+}
+
+class DatabaseTableOperation_InsertOperation  : com::zoho::collaboration::DatabaseTableOperation_InsertOperation {
+  inherits Message;
+  constructor DatabaseTableOperation_InsertOperation : com::zoho::collaboration::DatabaseTableOperation_InsertOperation();
+  function CopyFrom : nx_void CopyFrom(DatabaseTableOperation_InsertOperation& arg0);
+  function Clear : nx_void Clear();
+  function has_operatedon : nx_bool has_operatedon();
+  property operatedOn : nx_enum_string<DatabaseField_DataOperatedOn> operatedOn(nx_getter : operatedon, nx_setter : set_operatedon);
+  property tables  : [own] nx_repeated_ptr_field[protobuf_array_DatabaseTableDefinition]* tables(nx_getter : temp_gettables, nx_setter : temp_settables);
+  property tableColumns  : [own] nx_repeated_ptr_field[protobuf_array_DatabaseTableOperation_TableColumnOperation]* tableColumns(nx_getter : temp_gettableColumns, nx_setter : temp_settableColumns);
+  property tableRows  : [own] nx_repeated_ptr_field[protobuf_array_DatabaseTableOperation_TableRowOperation]* tableRows(nx_getter : temp_gettableRows, nx_setter : temp_settableRows);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DatabaseTableOperation_InsertOperation : DatabaseTableOperation_InsertOperation;
+}
+
+class DatabaseTableOperation_DeleteOperation  : com::zoho::collaboration::DatabaseTableOperation_DeleteOperation {
+  inherits Message;
+  constructor DatabaseTableOperation_DeleteOperation : com::zoho::collaboration::DatabaseTableOperation_DeleteOperation();
+  function CopyFrom : nx_void CopyFrom(DatabaseTableOperation_DeleteOperation& arg0);
+  function Clear : nx_void Clear();
+  function has_operatedon : nx_bool has_operatedon();
+  property operatedOn : nx_enum_string<DatabaseField_DataOperatedOn> operatedOn(nx_getter : operatedon, nx_setter : set_operatedon);
+  property tableIds  : [own] nx_repeated_field[nx_string]* tableIds(nx_getter : temp_gettableIds, nx_setter : temp_settableIds);
+  property tableColumns  : [own] nx_repeated_ptr_field[protobuf_array_DatabaseTableOperation_DeleteOperation_DeleteTableColumn]* tableColumns(nx_getter : temp_gettableColumns, nx_setter : temp_settableColumns);
+  property tableRows  : [own] nx_repeated_ptr_field[protobuf_array_DatabaseTableOperation_DeleteOperation_DeleteTableRow]* tableRows(nx_getter : temp_gettableRows, nx_setter : temp_settableRows);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DatabaseTableOperation_DeleteOperation : DatabaseTableOperation_DeleteOperation;
+}
+
+class DatabaseTableOperation_DeleteOperation_DeleteTableColumn  : com::zoho::collaboration::DatabaseTableOperation_DeleteOperation_DeleteTableColumn {
+  inherits Message;
+  constructor DatabaseTableOperation_DeleteOperation_DeleteTableColumn : com::zoho::collaboration::DatabaseTableOperation_DeleteOperation_DeleteTableColumn();
+  function CopyFrom : nx_void CopyFrom(DatabaseTableOperation_DeleteOperation_DeleteTableColumn& arg0);
+  function Clear : nx_void Clear();
+  function has_tableid : nx_bool has_tableid();
+  property tableId : nx_string tableId(nx_getter : tableid, nx_setter : set_tableid);
+  property columns  : [own] nx_repeated_ptr_field[protobuf_array_ColumnIdentifier]* columns(nx_getter : temp_getcolumns, nx_setter : temp_setcolumns);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DatabaseTableOperation_DeleteOperation_DeleteTableColumn : DatabaseTableOperation_DeleteOperation_DeleteTableColumn;
+}
+
+class DatabaseTableOperation_DeleteOperation_DeleteTableRow  : com::zoho::collaboration::DatabaseTableOperation_DeleteOperation_DeleteTableRow {
+  inherits Message;
+  constructor DatabaseTableOperation_DeleteOperation_DeleteTableRow : com::zoho::collaboration::DatabaseTableOperation_DeleteOperation_DeleteTableRow();
+  function CopyFrom : nx_void CopyFrom(DatabaseTableOperation_DeleteOperation_DeleteTableRow& arg0);
+  function Clear : nx_void Clear();
+  function has_tableid : nx_bool has_tableid();
+  property tableId : nx_string tableId(nx_getter : tableid, nx_setter : set_tableid);
+  function has_category : nx_bool has_category();
+  property category : nx_enum_string<DatabaseTableOperation_TableRowOperationCategory> category(nx_getter : category, nx_setter : set_category);
+  property rowIds  : [own] nx_repeated_field[nx_string]* rowIds(nx_getter : temp_getrowIds, nx_setter : temp_setrowIds);
+  function has_select : nx_bool has_select();
+  property select : [own] SelectTableView*  select(nx_getter : temp_getselect, nx_setter : temp_setselect);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DatabaseTableOperation_DeleteOperation_DeleteTableRow : DatabaseTableOperation_DeleteOperation_DeleteTableRow;
+}
+
+class DatabaseTableOperation_ModifyOperation  : com::zoho::collaboration::DatabaseTableOperation_ModifyOperation {
+  inherits Message;
+  constructor DatabaseTableOperation_ModifyOperation : com::zoho::collaboration::DatabaseTableOperation_ModifyOperation();
+  function CopyFrom : nx_void CopyFrom(DatabaseTableOperation_ModifyOperation& arg0);
+  function Clear : nx_void Clear();
+  function has_operatedon : nx_bool has_operatedon();
+  property operatedOn : nx_enum_string<DatabaseField_DataOperatedOn> operatedOn(nx_getter : operatedon, nx_setter : set_operatedon);
+  property tables  : [own] nx_repeated_ptr_field[protobuf_array_DatabaseTableOperation_ModifyOperation_ModifyTable]* tables(nx_getter : temp_gettables, nx_setter : temp_settables);
+  property columns  : [own] nx_repeated_ptr_field[protobuf_array_DatabaseTableOperation_TableColumnOperation]* columns(nx_getter : temp_getcolumns, nx_setter : temp_setcolumns);
+  property rows  : [own] nx_repeated_ptr_field[protobuf_array_DatabaseTableOperation_ModifyOperation_ModifyTableRow]* rows(nx_getter : temp_getrows, nx_setter : temp_setrows);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DatabaseTableOperation_ModifyOperation : DatabaseTableOperation_ModifyOperation;
+}
+
+class DatabaseTableOperation_ModifyOperation_ModifyTable  : com::zoho::collaboration::DatabaseTableOperation_ModifyOperation_ModifyTable {
+  inherits Message;
+  constructor DatabaseTableOperation_ModifyOperation_ModifyTable : com::zoho::collaboration::DatabaseTableOperation_ModifyOperation_ModifyTable();
+  function CopyFrom : nx_void CopyFrom(DatabaseTableOperation_ModifyOperation_ModifyTable& arg0);
+  function Clear : nx_void Clear();
+  function has_id : nx_bool has_id();
+  property id : nx_string id(nx_getter : id, nx_setter : set_id);
+  function has_name : nx_bool has_name();
+  property name : nx_string name(nx_getter : name, nx_setter : set_name);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DatabaseTableOperation_ModifyOperation_ModifyTable : DatabaseTableOperation_ModifyOperation_ModifyTable;
+}
+
+class DatabaseTableOperation_ModifyOperation_ModifyTableRow  : com::zoho::collaboration::DatabaseTableOperation_ModifyOperation_ModifyTableRow {
+  inherits Message;
+  constructor DatabaseTableOperation_ModifyOperation_ModifyTableRow : com::zoho::collaboration::DatabaseTableOperation_ModifyOperation_ModifyTableRow();
+  function CopyFrom : nx_void CopyFrom(DatabaseTableOperation_ModifyOperation_ModifyTableRow& arg0);
+  function Clear : nx_void Clear();
+  function has_tableid : nx_bool has_tableid();
+  property tableId : nx_string tableId(nx_getter : tableid, nx_setter : set_tableid);
+  function has_category : nx_bool has_category();
+  property category : nx_enum_string<DatabaseTableOperation_TableRowOperationCategory> category(nx_getter : category, nx_setter : set_category);
+  property rows  : [own] nx_repeated_ptr_field[protobuf_array_DatabaseTableRow]* rows(nx_getter : temp_getrows, nx_setter : temp_setrows);
+  function has_select : nx_bool has_select();
+  property select : [own] DatabaseTableOperation_ModifyOperation_ModifyTableRow_SelectRowModify*  select(nx_getter : temp_getselect, nx_setter : temp_setselect);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DatabaseTableOperation_ModifyOperation_ModifyTableRow : DatabaseTableOperation_ModifyOperation_ModifyTableRow;
+}
+
+class DatabaseTableOperation_ModifyOperation_ModifyTableRow_SelectRowModify  : com::zoho::collaboration::DatabaseTableOperation_ModifyOperation_ModifyTableRow_SelectRowModify {
+  inherits Message;
+  constructor DatabaseTableOperation_ModifyOperation_ModifyTableRow_SelectRowModify : com::zoho::collaboration::DatabaseTableOperation_ModifyOperation_ModifyTableRow_SelectRowModify();
+  function CopyFrom : nx_void CopyFrom(DatabaseTableOperation_ModifyOperation_ModifyTableRow_SelectRowModify& arg0);
+  function Clear : nx_void Clear();
+  function has_select : nx_bool has_select();
+  property select : [own] SelectTableView*  select(nx_getter : temp_getselect, nx_setter : temp_setselect);
+  function has_value : nx_bool has_value();
+  property value : [own] CompositeValue*  value(nx_getter : temp_getvalue, nx_setter : temp_setvalue);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DatabaseTableOperation_ModifyOperation_ModifyTableRow_SelectRowModify : DatabaseTableOperation_ModifyOperation_ModifyTableRow_SelectRowModify;
+}
+
+enum DatabaseTableOperation_TableRowOperationCategory : com::zoho::collaboration::DatabaseTableOperation_TableRowOperationCategory {
+  DEFAULT_DELETE_ROW : com::zoho::collaboration::DatabaseTableOperation_TableRowOperationCategory_DEFAULT_DELETE_ROW : 0;
+  DIRECT : com::zoho::collaboration::DatabaseTableOperation_TableRowOperationCategory_DIRECT : 1;
+  SELECT : com::zoho::collaboration::DatabaseTableOperation_TableRowOperationCategory_SELECT : 2;
+}
+include {
+ deltaresponse.pb.h;
+  }
+class DeltaResponse  : com::zoho::collaboration::DeltaResponse {
+  inherits Message;
+  constructor DeltaResponse : com::zoho::collaboration::DeltaResponse();
+  function CopyFrom : nx_void CopyFrom(DeltaResponse& arg0);
+  function Clear : nx_void Clear();
+  function has_success : nx_bool has_success();
+  property success : [own] SuccessResponse*  success(nx_getter : temp_getsuccess, nx_setter : temp_setsuccess);
+  function has_error : nx_bool has_error();
+  property error : [own] ErrorResponse*  error(nx_getter : temp_geterror, nx_setter : temp_seterror);
+  function has_partialsavestatus : nx_bool has_partialsavestatus();
+  property partialSaveStatus : [own] ResponseForPartialRequest*  partialSaveStatus(nx_getter : temp_getpartialSaveStatus, nx_setter : temp_setpartialSaveStatus);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DeltaResponse : DeltaResponse;
+}
+
+class ResponseForPartialRequest  : com::zoho::collaboration::ResponseForPartialRequest {
+  inherits Message;
+  constructor ResponseForPartialRequest : com::zoho::collaboration::ResponseForPartialRequest();
+  function CopyFrom : nx_void CopyFrom(ResponseForPartialRequest& arg0);
+  function Clear : nx_void Clear();
+  function has_requestnumber : nx_bool has_requestnumber();
+  property requestNumber : nx_int requestNumber(nx_getter : requestnumber, nx_setter : set_requestnumber); 
+  function has_length : nx_bool has_length();
+  property length : nx_int length(nx_getter : length, nx_setter : set_length); 
+  }
+
+repeated_ptr_field  {
+protobuf_array_ResponseForPartialRequest : ResponseForPartialRequest;
+}
+
+class SuccessResponse  : com::zoho::collaboration::SuccessResponse {
+  inherits Message;
+  constructor SuccessResponse : com::zoho::collaboration::SuccessResponse();
+  function CopyFrom : nx_void CopyFrom(SuccessResponse& arg0);
+  function Clear : nx_void Clear();
+  property documentDelta  : [own] nx_repeated_ptr_field[protobuf_array_DocumentDelta]* documentDelta(nx_getter : temp_getdocumentDelta, nx_setter : temp_setdocumentDelta);
+  }
+
+repeated_ptr_field  {
+protobuf_array_SuccessResponse : SuccessResponse;
+}
+
+class ErrorResponse  : com::zoho::collaboration::ErrorResponse {
+  inherits Message;
+  constructor ErrorResponse : com::zoho::collaboration::ErrorResponse();
+  function CopyFrom : nx_void CopyFrom(ErrorResponse& arg0);
+  function Clear : nx_void Clear();
+  function has_code : nx_bool has_code();
+  property code : nx_enum_string<ErrorResponse_ErrorCode> code(nx_getter : code, nx_setter : set_code);
+  function has_errorid : nx_bool has_errorid();
+  property errorId : nx_string errorId(nx_getter : errorid, nx_setter : set_errorid);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ErrorResponse : ErrorResponse;
+}
+
+enum ErrorResponse_ErrorCode : com::zoho::collaboration::ErrorResponse_ErrorCode {
+  UNKNOWN_DELTA_ERROR : com::zoho::collaboration::ErrorResponse_ErrorCode_UNKNOWN_DELTA_ERROR : 0;
+  DELTA_ALREADY_RECEIVED : com::zoho::collaboration::ErrorResponse_ErrorCode_DELTA_ALREADY_RECEIVED : 1;
+  HAZELCAST_INACTIVE : com::zoho::collaboration::ErrorResponse_ErrorCode_HAZELCAST_INACTIVE : 2;
+  DOCUMENT_ID_NULL : com::zoho::collaboration::ErrorResponse_ErrorCode_DOCUMENT_ID_NULL : 3;
+  NO_VERSION_MAP : com::zoho::collaboration::ErrorResponse_ErrorCode_NO_VERSION_MAP : 4;
+  DELTA_COMPOSE_ERROR : com::zoho::collaboration::ErrorResponse_ErrorCode_DELTA_COMPOSE_ERROR : 5;
+  INVALID_DELTA_VERSION : com::zoho::collaboration::ErrorResponse_ErrorCode_INVALID_DELTA_VERSION : 6;
+  SAVE_ERROR : com::zoho::collaboration::ErrorResponse_ErrorCode_SAVE_ERROR : 7;
+  VERSION_TOO_FAR_BEHIND : com::zoho::collaboration::ErrorResponse_ErrorCode_VERSION_TOO_FAR_BEHIND : 8;
+}

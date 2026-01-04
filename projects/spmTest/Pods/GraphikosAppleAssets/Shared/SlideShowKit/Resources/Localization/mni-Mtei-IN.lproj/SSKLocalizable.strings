@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "য়ারে";
+"SSKit.common.cancel" = "ককথৎলু";
+"SSKit.common.continue" = "মখা চত্থবীয়ু";
+"SSKit.common.untitledDocument" = "মমিং থোন্দবা দোক্যুমেন্ত";
+"SSKit.common.noNetwork" = "নেটৱাৰ্ক অমত্তা লৈতে";
+"SSKit.common.noNetworkMessage" = "অদোমগী দিভাইস অদু ইন্টরনেটতা শোয়দনা শম্লব্রা য়েংবীয়ু।";
+"SSKit.common.openSettings" = "সেটিংস হাংদোকপীয়ু";
+"SSKit.common.connected" = "কনেক্ট তৌরে";
+"SSKit.common.connecting" = "শম্নরি";
+"SSKit.common.waiting" = "ঙাইরি";
+"SSKit.common.update" = "অপদেট তৌবীয়ু";
+"SSKit.common.minimise" = "পীকশিল্লু";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "হৌবীয়ু";
+"SSKit.slideshow.end" = "অরোয়বা";
+"SSKit.slideshow.currentSlide" = "%i গী %i স্লাইদ";
+"SSKit.slideshow.EndOfSlideshow" = "স্লাইদশোগী অরোইবা";
+"SSKit.slideshow.blackout" = "স্ক্রীন উখিদ্রে";
+"SSKit.slideshow.backToLive" = "লাইবতা হল্লকউ";
+"SSKit.slideshow.notes" = "নোতশিং";
+"SSKit.slideshow.clear" = "ক্লিয়র তৌবিয়ু";
+"SSKit.slideshow.emptyNotes" = "স্লাইদ অসিগী নোৎ অমত্তা ফংদে।";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "সেসন তোক্লে";
+"SSKit.shareplay.sessionTerminated.desc" = "অদোমগী শিয়প্লে সেসন তোক্লে। অদোম্না অদোমগী সেসন অমুক হন্না হৌবা খনবা য়াই।";
+
+"SSKit.shareplay.syncWithPresenter" = "প্রজেন্তরগা লোইননা সিঙ্ক তৌ";
+
+"SSKit.shareplay.end.title" = "শিয়রপ্লে লোইশিল্লু";
+"SSKit.shareplay.end.description" = "অদোম শিয়রপ্লে লোইশিনবা পাম্বরা? শিয়রপ্লে লোইশিনবদা সেসন অসি তোকখিনি।";
+"SSKit.shareplay.requestToPresent.description" = "না প্রজেন্ট তৌনবা রিক্বেষ্ট তৌরি";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "অশোয়বা";
+"SSKit.error.message" = "অশোয়বা অমা থোকখ্রে। কোন্না অমুক পাঙথোকপীয়ু";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "ওদিও প্লেবেক তৌবীয়ু";
+"SSKit.audio.resume" = "মখা চত্থবীয়ু";
+"SSKit.audio.pause" = "ঙাইহাক লেপ্পীয়ু";
+"SSKit.audio.audioTitle" = "ওদিও";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "অদোমগী Apple TV খল্লু";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple TV শিং থিরি";
+"SSKit.mcPeerListing.streamingDescription" = "Apple TV দা অদোমগী দিভাইসতগী স্লাইদশিং ষ্ট্রীম তৌনবা।";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "লোকেল নেটৱাৰ্ক এক্সেস এনেবল তৌবীয়ু অদুগা অমুক পাঙথোকপীয়ু";
+
+"SSKit.mcPeerListing.disconnect.title" = "দিসকনেক্ট তৌবীয়ু";
+"SSKit.mcPeerListing.disconnect.message" = "অদোম্না Apple TV দগী দিসকনেক্ট তৌবা শোয়দনা পাম্লব্রা?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@ দিসকনেক্ট তৌবীয়ু";
+"SSKit.mcPeerListing.updateError" = "অরীবা ভর্সন্দা পীয়র রন তৌরিবা মাল্লি। TV অপ-টু-দেট শোয়দনা ওইহনবীয়ু";

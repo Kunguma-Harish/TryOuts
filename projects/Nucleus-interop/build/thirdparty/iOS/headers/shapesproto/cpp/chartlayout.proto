@@ -1,0 +1,126 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "ChartLayoutProtos";
+
+import "fields.proto";
+import "manuallayout.proto";
+import "datalabeldetails.proto";
+import "google/protobuf/protoextensions.proto";
+
+message ChartLayout {
+
+	optional ChartLayoutPosition title = 1;
+	
+	optional ChartLayoutPosition legend = 2;
+
+	repeated AxisLayoutData axis = 3;
+	
+	repeated ChartTypeSpecificData chart = 4;
+
+	message AxisLayoutData {
+
+		optional string axisId = 1 [(com.zoho.common.customOptions).requiredField = true];
+						
+		optional Show.ChartField.PositionElement axPos = 2;
+		optional ChartLayoutPosition title = 3;	
+	
+		optional bool majorGrid = 4;
+		optional bool minorGrid = 5;
+		
+		optional Show.ChartField.TickMarkType majorTickMark = 6;
+		optional Show.ChartField.TickMarkType minorTickMark = 7;
+		
+		optional Show.ChartField.LabelPos labelPos = 8;
+		
+		optional bool hidden = 9;
+
+		/* optional float lblOffset = 9 ;	
+		optional int32 skipTickLabel = 10;	
+		optional int32 skipTickMark = 11;
+		optional float majorDistance = 12;
+		optional float minorDistance = 13; */		
+	}
+
+	message ChartTypeSpecificData {
+	
+		optional Show.ChartField.ChartType type = 1;			
+	
+		message BarChartSpecific {
+			
+			optional float gap = 1;
+			
+			optional float overlap = 2;
+
+			optional bool showSeriesLine = 3;
+		}
+		optional BarChartSpecific bar = 2;
+
+		message LineChartSpecific {
+
+			optional bool showUpDownBars = 1;
+	
+			optional bool showHighLowLines = 2;	
+
+			optional bool showMarker = 3;
+
+			optional bool smooth = 4;
+			
+			optional bool showDropLines = 5;
+	
+		}
+		optional LineChartSpecific line = 3;
+
+		message AreaChartSpecific {
+	
+			optional bool showDropLines = 1;
+		}
+		optional AreaChartSpecific area = 4; 
+			
+		message PieChartSpecific {
+			
+			optional int32 firstSlideAngle = 1;
+
+			optional float explosion = 2;
+		}
+		optional PieChartSpecific pie = 5;	
+
+		message DoughnutChartSpecific {
+			
+			optional int32 firstSlideAngle = 1;
+
+			optional int32 holeSize = 2;
+				
+			optional float explosion = 3; // Distance the data point should be moved from the center of the pie. 
+		}
+		optional DoughnutChartSpecific doughnut = 6;
+
+		message RepresentivePieChartSpecific {
+
+			optional float gap = 1; // Gap size.
+			
+			optional float explosion = 2; // Distance the data point should be moved from the center of the pie. 
+
+			optional int32 secondPlotSize = 3; // Size of the representive pie in Percentage.
+		}	
+		optional RepresentivePieChartSpecific reppie = 7;
+
+		// Do not set textbody and properties data , rendering application relies on ChartStyle to provide styling informations. 
+		optional DataLabelDetails datalabel = 8;
+
+
+	}
+
+		
+			
+
+	message ChartLayoutPosition {
+		
+		optional Show.ChartField.PositionElement pos = 1;
+		optional bool overlay = 3; // Specified whether this element shall overlap the other elements.
+		optional ManualLayout layout  = 4; // If the legend is manually placed , we will have this entry.
+	}
+	
+}

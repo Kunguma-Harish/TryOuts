@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "FontReferenceProtos";
+
+import "fontref.proto";
+import "color.proto";
+import "google/protobuf/protoextensions.proto";
+
+message FontReference {	
+
+	optional FontRef ref = 1 [(com.zoho.common.customOptions).requiredField = true];
+	optional Color color = 2 [(com.zoho.common.customOptions).requiredField = true]; //Text Color for the reference.
+}
+

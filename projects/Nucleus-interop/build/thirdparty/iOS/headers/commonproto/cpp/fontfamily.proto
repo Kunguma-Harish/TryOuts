@@ -1,0 +1,15 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "FontFamilyProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+message FontFamily {		
+	//<regex name="alphaNumeric" value="[a-zA-Z0-9]+$"/>
+	optional string name = 1 [(com.zoho.common.customOptions).requiredField = true]; // name
+
+	optional int32 charset = 2; // Char set.	
+}

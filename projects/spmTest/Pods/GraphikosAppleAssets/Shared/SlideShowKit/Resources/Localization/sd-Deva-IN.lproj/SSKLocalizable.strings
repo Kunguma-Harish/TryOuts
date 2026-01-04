@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "ٺيڪ";
+"SSKit.common.cancel" = "منسوخ ڪريو";
+"SSKit.common.continue" = "جاري رکو";
+"SSKit.common.untitledDocument" = "بغير عنوان جو دستاويز";
+"SSKit.common.noNetwork" = "ڪو به نيٽ ورڪ ناهي";
+"SSKit.common.noNetworkMessage" = "پڪ ڪريو ته توهانجو ڊوائيس انٽرنيٽ سان ڪنيڪٽ ٿيل آهي.";
+"SSKit.common.openSettings" = "سيٽنگون کوليو";
+"SSKit.common.connected" = "ڪنيڪٽ ٿيل";
+"SSKit.common.connecting" = "ڪنيڪٽ ڪري پيو";
+"SSKit.common.waiting" = "انتظار ۾";
+"SSKit.common.update" = "اپڊيٽ";
+"SSKit.common.minimise" = "ننڍو ڪريو";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "شروع ڪريو";
+"SSKit.slideshow.end" = "پڇاڙي";
+"SSKit.slideshow.currentSlide" = "%i جي %i سلائيڊ";
+"SSKit.slideshow.EndOfSlideshow" = "سلائيڊ شو جي پڇاڙي";
+"SSKit.slideshow.blackout" = "اسڪرين ڪاري ٿي وئي آهي";
+"SSKit.slideshow.backToLive" = "لائيو ڏانهن واپسي";
+"SSKit.slideshow.notes" = "نوٽس";
+"SSKit.slideshow.clear" = "صارف ڪريو";
+"SSKit.slideshow.emptyNotes" = "هن سلائيڊ لاءِ ڪي به نوٽس دستياب ناهن.";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "سيشن ختم ٿيو";
+"SSKit.shareplay.sessionTerminated.desc" = "توهانجي شيئر پلي اسڪرين ختم ڪئي وئي آهي. توهان پنهنجي سيشن کي ٻيهر شروع ڪرڻ چونڊي سگهو ٿا.";
+
+"SSKit.shareplay.syncWithPresenter" = "پيش ڪار سان هم وقت ڪريو";
+
+"SSKit.shareplay.end.title" = "شيئر پلي ختم ڪريو";
+"SSKit.shareplay.end.description" = "ڇا توهان شيئر پلي کي ختم ڪرڻ چاهيو ٿا؟ شيئر پلي کي ختم ڪرڻ سان سيشن ختم ٿي ويندو.";
+"SSKit.shareplay.requestToPresent.description" = "پيش ڪرڻ جي درخواست ڪري پيو";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "نقص";
+"SSKit.error.message" = "هڪ نقص ٿيو پوءِ ٻيهر ڪوشش ڪريو";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "پلي بيڪ آڊيو";
+"SSKit.audio.resume" = "جاري ڪريو";
+"SSKit.audio.pause" = "روڪيو";
+"SSKit.audio.audioTitle" = "آڊيو";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "پنهنجي Apple TV چونڊيو";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple TVs لاءِ ڏسي پيو";
+"SSKit.mcPeerListing.streamingDescription" = "توهانجي ڊوائيس کان Apple TV ڏانهن سلائيڊون اسٽريم ڪرڻ لاءِ.";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "مقامي نيٽ ورڪ رسائي فعال ڪريو ۽ ٻيهر ڪوشش ڪريو";
+
+"SSKit.mcPeerListing.disconnect.title" = "ڊسڪنيڪٽ ڪريو";
+"SSKit.mcPeerListing.disconnect.message" = "ڇا توهانکي پڪ آهي ته توهان Apple TV کان ڊسڪنيڪٽ ڪرڻ چاهيو ٿا؟";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@ ڊسڪنيڪٽ ڪريو";
+"SSKit.mcPeerListing.updateError" = "لڳي ٿو ته ساٿي پراڻو ورزين هلائي رهيو آهي. پڪ ڪريو ته TV ائپ اپ-ٽو-ڊيٽ آهي";

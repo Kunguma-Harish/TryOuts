@@ -1,0 +1,78 @@
+syntax="proto3";
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "ERDPropsProtos";
+
+import "designdiagramfields.proto";
+message ERDProps{
+
+  enum ERDNotation{
+    UNKNOWN_ERD = 0;
+    TABLE_NOTATION = 1;
+    CHEN_NOTATION = 2;
+    CROW_NOTATION = 3;
+  }
+  optional ERDNotation notation = 1;
+
+  message TableNotation{
+    // Different components of the ERD diagram
+    enum TableNotationComponent{
+      UNKNOWN_TABLE_NOTATION_COMPONENT = 0;
+      ENTITY_TABLE = 1;   // Table
+      RELATIONSHIP = 2;    // The connection 
+    }
+
+
+    message ERDConnection{
+
+      optional DesignDiagramFields.Cardinality cardinality = 1;
+
+    }
+
+    // Relationship property
+    message ERDRelationship{
+      optional ERDConnection start = 1;
+      optional ERDConnection end = 2;
+    }
+
+    // Table Property
+    message ERDEntityTable{
+      enum ERDEntityTableColumnType{
+        UNKNOWN_COLUMN_TYPE = 0;
+        KEY = 1;
+        FIELD = 2;
+        TYPE = 3;
+      }
+
+      // ColumnType Ex: [Key, Field, Type], [Key, Field], [Field, Type], [Field]
+      repeated ERDEntityTableColumnType columnType = 1; 
+    }
+
+    optional TableNotationComponent component = 1;
+    optional ERDEntityTable entityTable = 2;
+    optional ERDRelationship relationship = 3;
+  }
+
+  optional TableNotation tableNotation = 2;
+
+
+  /*
+     enum ERDComponent{
+     UNKNOWN_ERD_COMPONENT = 0;
+     ENTITY = 1; // Rectangle
+     WEAK_ENTITY = 2;    // Double Stroked Rectangle
+     ATTRIBUTE = 3;  // Oval
+     MULTI_VALUED_ATTRIBUTE = 4; // Double stroked Oval
+     KEY_ATTRIBUTE = 5;  // Oval with the Key underlined
+     DERIVED_ATTRIBUTE = 6;  // Dotted oval
+
+     CHEN_TOTAL_PARTICIPATION = 7;    // Double Stroked line
+     CHEN_PARTIAL_PARTICIPATION = 8; 
+     CROW_RELATIONSHIP = 9;   // May have complex headend and tailend to showcase the relationship and participation
+
+     CONNECTION = 11;    // Used for composite Attribute connections
+     }
+   */
+}
+

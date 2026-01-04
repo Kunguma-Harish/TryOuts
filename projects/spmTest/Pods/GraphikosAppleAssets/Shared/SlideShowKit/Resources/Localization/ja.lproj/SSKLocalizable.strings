@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "OK";
+"SSKit.common.cancel" = "キャンセル";
+"SSKit.common.continue" = "続行";
+"SSKit.common.untitledDocument" = "無題のドキュメント";
+"SSKit.common.noNetwork" = "ネットワークが存在しません";
+"SSKit.common.noNetworkMessage" = "デバイスがインターネットに接続していることを確認してください。";
+"SSKit.common.openSettings" = "設定を開きます";
+"SSKit.common.connected" = "接続済み";
+"SSKit.common.connecting" = "接続中です";
+"SSKit.common.waiting" = "待機中";
+"SSKit.common.update" = "更新";
+"SSKit.common.minimise" = "最小化";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "開始";
+"SSKit.slideshow.end" = "終了";
+"SSKit.slideshow.currentSlide" = "スライド%iの%i";
+"SSKit.slideshow.EndOfSlideshow" = "プレゼンテーションの終了";
+"SSKit.slideshow.blackout" = "スクリーンがブラックアウトされました";
+"SSKit.slideshow.backToLive" = "ライブに戻る";
+"SSKit.slideshow.notes" = "メモ";
+"SSKit.slideshow.clear" = "消去";
+"SSKit.slideshow.emptyNotes" = "このスライドで利用可能なノートはありません。";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "セッションが終了しました";
+"SSKit.shareplay.sessionTerminated.desc" = "Shareplayセッションが終了しました。セッションを再開を選択できます。";
+
+"SSKit.shareplay.syncWithPresenter" = "プレゼンターと同期";
+
+"SSKit.shareplay.end.title" = "SharePlayを終了";
+"SSKit.shareplay.end.description" = "shareplayを終了しますか？shareplayを終了すると、セッションが終了します。";
+"SSKit.shareplay.requestToPresent.description" = "プレゼンテーションを要求しています";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "エラー";
+"SSKit.error.message" = "エラーが発生しました。あとでもう一度お試しください";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "Playback Audio";
+"SSKit.audio.resume" = "再開";
+"SSKit.audio.pause" = "一時停止";
+"SSKit.audio.audioTitle" = "オーディオ";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "Apple TVを選択";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple TVを探しています";
+"SSKit.mcPeerListing.streamingDescription" = "お使いのデバイスからAppleTVにスライドをストリーミング。";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "ローカルネットワークアクセスを有効にして、再試行してください";
+
+"SSKit.mcPeerListing.disconnect.title" = "切断";
+"SSKit.mcPeerListing.disconnect.message" = "Apple TVから切断してもよろしいですか？";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@から切断";
+"SSKit.mcPeerListing.updateError" = "同僚が古いバージョンで実行しているようです。TVアプリが最新であることを確認する";

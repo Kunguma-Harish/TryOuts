@@ -1,0 +1,22 @@
+syntax="proto3";
+
+package com.zoho.remoteboard;
+
+option java_package = "com.zoho.remoteboard";
+option java_outer_classname = "SketchToolProtos";
+
+import "sketchdefault.proto";
+
+message SketchTool {
+
+	enum SketchToolType {
+		DEF_SKETCH_TOOL = 0;
+		NO_SKETCH = 1;
+		PENCIL = 2;
+		SKETCH = 3;		
+	}
+	optional SketchToolType type = 1;
+
+	optional SketchDefault sketch = 2;
+}
+

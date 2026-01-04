@@ -1,0 +1,52 @@
+syntax="proto3";
+package com.zoho.clipboard;
+
+option java_package = "com.zoho.clipboard";
+option java_outer_classname = "DependentProtos";
+
+import "picproperties.proto";
+import "mediaproperties.proto";
+import "fileproperties.proto";
+import "google/protobuf/protoextensions.proto";
+
+message Dependent { 
+	enum DependentType {
+		PICT = 0;
+		XML = 1;
+		EXCEL = 2;
+		MEDIA = 3;
+		FILE = 4;
+	}		
+	optional DependentType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	message DependentDetails {
+		optional string fileId = 1 [(com.zoho.common.customOptions).requiredField = true]; // Pictures/Videos clipboard fileId
+
+		// shapeId and slideId.
+		message MasterDetails {
+			optional string shapeId = 1;
+			// Slide / Screen Id
+			optional string parentId = 2;
+		}
+		optional MasterDetails master = 2 [(com.zoho.common.customOptions).requiredField = true];
+
+		message PictureProps {
+			optional com.zoho.common.PicProperties picProps = 1;
+		}
+		optional PictureProps pict = 4;
+		
+		message MediaProps {
+			optional com.zoho.common.MediaProperties mediaProps = 1;
+		}
+
+		optional MediaProps media = 5;
+
+		message FileProps {
+			optional com.zoho.common.FileProperties fileProps = 1;
+		}
+
+		optional FileProps file = 6;
+
+	}
+	repeated DependentDetails details = 2;
+} 

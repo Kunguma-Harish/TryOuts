@@ -1,0 +1,14 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "NonVisualShapeDrawingPropsProtos";
+
+import "locks.proto";
+
+message NonVisualShapeDrawingProps {	
+	
+	optional Locks locks = 1;
+	optional bool textbox = 2; // To indicate whether the shape is a textbox or not , used for handling a few scenarios in editor.	
+}

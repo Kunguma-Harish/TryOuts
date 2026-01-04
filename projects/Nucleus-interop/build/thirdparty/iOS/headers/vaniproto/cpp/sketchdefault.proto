@@ -1,0 +1,15 @@
+syntax="proto3";
+
+
+package com.zoho.remoteboard;
+
+option java_package = "com.zoho.remoteboard";
+option java_outer_classname = "SketchDefaultProtos";
+
+import "color.proto";
+
+message SketchDefault {
+	optional com.zoho.shapes.Color color = 1;
+	optional float size = 2;	
+}
+

@@ -1,0 +1,21 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "CategoryProtos";
+
+import "stringreference.proto";
+import "numberreference.proto";
+
+message Category {
+	enum ElementType {
+		STR = 0;
+		NUM = 1;
+	}
+	optional ElementType type = 1;
+	optional StringReference strRef = 2;
+	optional NumberReference numRef = 3;
+	
+}
+

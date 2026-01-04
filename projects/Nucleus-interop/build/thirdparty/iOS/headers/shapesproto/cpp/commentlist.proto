@@ -1,0 +1,57 @@
+syntax="proto3";
+
+package com.zoho.comment;
+
+option java_package = "com.zoho.comment";
+option java_outer_classname = "CommentListProtos";
+
+import "commentdetail.proto";
+import "commentdata.proto";
+import "reaction.proto";
+import "google/protobuf/protoextensions.proto";
+
+message CommentList {
+
+	optional string listId = 1 [(com.zoho.common.customOptions).requiredField = true]; // Unique CommentList Id.
+
+	repeated CommentHandler comments = 2; // Comment and its relevant data
+
+	// Comment could be in two states - editing or complete. Basically , comments will also get auto-saved 
+	// hence , we are in need to know if it has been completed.
+	message CommentHandler {
+
+		optional string id = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+		enum CommentState {
+			COMPLETE = 0;
+			EDITING = 1;
+		}
+		optional CommentState state = 2 [(com.zoho.common.customOptions).requiredField = true];
+		
+		optional CommentDetail complete = 3;
+		optional CommentDetail editing = 4;
+
+			
+		repeated com.zoho.common.Reaction reactions = 5;	
+	}	
+	
+	// By Default a Comment-List will not have any ListStatus , so if the state is OPEN it means it has been Re-opened.
+	// We could maintain all status changes using a "repeated" field (for 'currentStatus'), but that could cause unnecssary data-explosion , so 
+	// maintaining only the last status. 
+	message ListStatus {
+		enum ListState {
+			OPENED = 0;
+			RESOLVED = 1;
+		}
+		optional ListState state = 1;
+		optional CommentData by = 3;
+	}
+	optional ListStatus currentStatus = 3;
+	
+	// Title for the comment thread.	
+	optional string title = 4;	
+
+	// If the commentlist is associated to a text object , we shall copy that string and have it here.	
+	optional string associatedText = 5; 
+}    
+

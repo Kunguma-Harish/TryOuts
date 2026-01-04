@@ -1,0 +1,18 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "NonVisualPicturePropsProtos";
+
+import "nonvisualpicturedrawingprops.proto";
+import "nonvisualdrawingprops.proto";
+import "nonvisualprops.proto";
+import "google/protobuf/protoextensions.proto";
+
+message NonVisualPictureProps {
+
+	optional NonVisualDrawingProps nvDProps = 1 [(com.zoho.common.customOptions).requiredField = true];
+	optional NonVisualPictureDrawingProps nvODProps = 2;	
+	optional NonVisualProps nvProps = 3;	
+}

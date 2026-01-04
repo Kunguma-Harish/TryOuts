@@ -1,0 +1,20 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "MediaAnimationProtos";
+
+message MediaAnimation {
+
+  enum MediaAnimationType {
+    
+    NONE = 0;
+    
+    PLAY = 1;
+
+	STOP = 2;
+  }
+
+  optional MediaAnimationType type = 1;
+
+}

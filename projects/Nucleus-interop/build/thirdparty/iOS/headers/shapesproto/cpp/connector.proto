@@ -1,0 +1,23 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ConnectorProtos";
+
+import "nonvisualconnectorprops.proto";
+import "properties.proto";
+import "themereference.proto";
+import "textbody.proto";
+import "google/protobuf/protoextensions.proto";
+
+message Connector {
+
+	optional NonVisualConnectorProps nvOProps = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	optional Properties props = 2;		
+	
+	optional ThemeReference themeRef = 3; // Theme Style.
+
+    repeated TextBody textBodies = 4;
+}

@@ -1,0 +1,47 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "BlurProtos";
+
+import "position.proto";
+import "google/protobuf/protoextensions.proto";
+
+message Blur {
+
+	enum BlurType {
+		UNKNOWN_TYPE = 0;
+		BOX = 1;
+		DISC = 2;
+		GAUSSIAN = 3;
+		MOTION = 4;
+		ZOOM = 5;
+		MASKED = 6;
+	}	
+	optional BlurType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	message BaseBlur {
+		optional float radius = 1;
+	}
+
+	optional BaseBlur box = 2;
+	optional BaseBlur disc = 3;
+	optional BaseBlur gaussian = 4;
+	
+	message MotionBlur {
+		optional float radius = 1;
+		optional float angle = 2;
+	}
+	optional MotionBlur motion = 5;
+
+	message ZoomBlur { 
+		optional com.zoho.common.Position center = 1;
+		optional float distance = 2; 
+	}
+	optional ZoomBlur zoom = 6;
+
+	optional BaseBlur masked = 7;
+	
+}
+

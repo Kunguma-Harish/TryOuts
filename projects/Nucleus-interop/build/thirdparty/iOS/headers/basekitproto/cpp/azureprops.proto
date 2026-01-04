@@ -1,0 +1,985 @@
+syntax="proto3";
+
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "AzurePropsProtos";
+
+message AzureProps {
+
+  enum AzureServiceType {
+    DEFAULT_SERVICE_TYPE = 0;
+    AI_MACHINE_LEARNING = 1;
+    ANALYTICS = 2;
+    APP_SERVICES = 3;
+    ECO_SYSTEM = 4;
+    STACK = 5;
+    BLOCK_CHAIN = 6;
+    COMPUTE = 7;
+    CONTAINERS = 8;
+    DATABASES = 9;
+    DEVOPS = 10;
+    GENERAL = 11;
+    HYBRID_MULTICLOUD = 12;
+    IDENTITY = 13;
+    INTEGRATION = 14;
+    INTUNE = 15;
+    IOT = 16;
+    MANAGEMENT_GOVRNANCE = 17;
+    MENU = 18;
+    MIGRATE = 19;
+    MIGRATION = 20;
+    MIXED_REALITY = 21;
+    MOBILE = 22;
+    MONITOR = 23;
+    NETWORKING = 24;
+    OTHER = 25;
+    SECURITY = 26;
+    STORAGE = 27;
+    WEB = 28;
+    NEWONES = 29;
+  }
+
+  message AIMachineLearning{ 
+    enum AIMachineLearningService {
+      DEFAULT_AI_MACHINE_LEARNING_SERVICE = 0;
+      BATCH_AI = 1;
+      MACHINE_LEARNING_STUDIO = 2;
+      GENOMICS = 3;
+      COMPUTER_VISION = 4;
+      CUSTOM_VISION = 5;
+      FACE_APIS = 6;
+      CONTENT_MODERATORS = 7;
+      PERSONALIZERS = 8;
+      SPEECH_SERVICES = 9;
+      QNA_MAKERS = 10;
+      TRANSLATOR_TEXT = 11;
+      LANGUAGE_UNDERSTANDING = 12;
+      IMMERSIVE_READERS = 13;
+      ANOMALY_DETECTOR = 14;
+      FORM_RECOGNIZERS = 15;
+      AZURE_EXPERIMENTATION_STUDIO = 16;
+      AZURE_OBJECT_UNDERSTANDING = 17;
+      METRICS_ADVISOR = 18;
+      AZURE_APPLIED_AI_SERVICES = 19;
+      LANGUAGE = 20;
+      COGNITIVE_SERVICES_DECISIONS = 21;
+      SERVERLESS_SEARCH = 22;
+      BONSAI = 23;
+      AZURE_OPENAI = 24;
+      AI_STUDIO = 25;
+      COGNITIVE_SEARCH = 26;
+      COGNITIVE_SERVICES = 27;
+      GENOMICS_ACCOUNTS = 28;
+      BOT_SERVICES = 29;
+      MACHINE_LEARNING = 30;
+      MACHINE_LEARNING_STUDIO_WORKSPACES = 31;
+      MACHINE_LEARNING_STUDIO_WEB_SERVICE_PLANS = 32;
+    }
+
+    optional AIMachineLearningService type = 1;
+  }
+
+  message Analytics{
+
+    enum AnalyticsService {
+      DEFAULT_ANALYTICS_SERVICE = 0;
+      LOG_ANALYTICS_WORKSPACES = 1;
+      EVENT_HUBS = 2;
+      STREAM_ANALYTICS_JOBS = 3;
+      ENDPOINT_ANALYTICS = 4;
+      AZURE_SYNAPSE_ANALYTICS = 5;
+      AZURE_WORKBOOKS = 6;
+      PRIVATE_LINK_SERVICES = 7;
+      POWER_BI_EMBEDDED = 8;
+      POWER_PLATFORM = 9;
+      DATA_FACTORIES = 10;
+      HD_INSIGHT_CLUSTERS = 11;
+      DATA_LAKE_ANALYTICS = 12;
+      AZURE_DATA_EXPLORER_CLUSTERS = 13;
+      ANALYSIS_SERVICES = 14;
+      EVENT_HUB_CLUSTERS = 15;
+      DATA_LAKE_STORE_GEN = 16;
+      AZURE_DATABRICKS = 17;
+    }
+    optional AnalyticsService type = 1;
+  }
+
+  message AppServices{
+    enum AppServicesService {
+      DEFAULT_APP_SERVICE = 0;		
+      APP_SERVICE_PLANS = 1;
+      APP_SERVICE_CERTIFICATES = 2;
+      APP_SERVICE_DOMAINS = 3;
+      CDN_PROFILES = 4;
+      APP_SERVICE = 5;
+      APP_COGNITIVE_SEARCH = 6;
+      NOTIFICATION_HUBS = 7;
+      APP_SERVICE_ENVIRONMENTS = 8;	
+    }
+
+    optional AppServicesService type = 1;
+  }
+
+  message EcoSystem{ 
+    enum EcoSystemService {
+      DEFAULT_ECO_SYSTEM_SERVICE = 0;		
+      COLLABORATIVE_SERVICE = 1;
+      APPLENS = 2;
+      AZURE_HYBRID_CENTER = 3;
+    }
+    optional EcoSystemService type = 1;
+  }
+
+  message Stack{ 
+
+    enum StackService {
+      DEFAULT_STACK_SERVICE = 0;
+      MULTI_TENANCY = 1;
+      INFRASTRUCTURE_BACKUP = 2;
+      CAPACITY = 3;
+      OFFERS = 4;
+      USER_SUBSCRIPTIONS = 5;
+      PLANS = 6;
+      UPDATES = 7;	
+    }
+    optional StackService type = 1;
+  }
+
+  message Blockchain{ 
+
+    enum BlockchainService {
+      DEFAULT_BLOCKCHAIN_SERVICE = 0;
+      BLOCKCHAIN_APPLICATIONS = 1;
+      OUTBOUND_CONNECTION = 2;
+      AZURE_BLOCKCHAIN_SERVICE = 3;
+      AZURE_TOKEN_SERVICE = 4;
+      ABS_MEMBER = 5;
+      CONSORTIUM = 6;
+    }
+    optional BlockchainService type = 1;
+  }
+
+  message Compute{
+
+    enum ComputeService {
+      DEFAULT_COMPUTES_SERVICE = 0;
+      MAINTENANCE_CONFIGURATION = 1;
+      HOST_POOLS = 2;
+      APPLICATION_GROUP = 3;
+      WORKSPACES = 4;
+      DISK_ENCRYPTION_SETS = 5;
+      COMP_WORKSPACES = 6;
+      AUTOMANAGED_VM = 7;
+      MANAGED_SERVICE_FABRIC = 8;
+      COMP_METRICS_ADVISOR = 9;
+      IMAGE_TEMPLATES = 10;
+      RESTORE_POINTS = 11;
+      RESTORE_POINTS_COLLECTIONS = 12;
+      AZURE_COMPUTE_GALLERIES = 13;
+      VIRTUAL_MACHINE = 14;
+      KUBERNETES_SERVICES = 15;
+      MESH_APPLICATIONS = 16;
+      AVAILABILITY_SETS = 17;
+      DISKS_SNAPSHOTS = 18;
+      OS_IMAGES_CLASSIC = 19;
+      VIRTUAL_MACHINES_CLASSIC = 20;
+      FUNCTION_APPS = 21;
+      CLOUD_SERVICES_CLASSIC = 22;
+      BATCH_ACCOUNTS = 23;
+      DISKS = 24;
+      IMAGES = 25;
+      VM_SCALE_SETS = 26;
+      COMP_APP_SERVICES = 27;
+      SERVICE_FABRIC_CLUSTERS = 28;
+      IMAGE_DEFINITIONS = 29;
+      IMAGE_VERSIONS = 30;
+      SHARED_IMAGE_GALLERIES = 31;
+      VM_IMAGES_CLASSIC = 32;
+      DISKS_CLASSIC = 33;
+      CONTAINER_SERVICES_DEPRECATED = 34;
+      CONTAINER_INSTANCES = 35;
+      HOST_GROUPS = 36;
+      HOSTS = 37;
+      AZURE_SPRING_APPS = 38;
+    }
+    optional ComputeService type = 1;
+
+  }
+
+  message Containers{ 
+
+    enum ContainersService {
+      DEFAULT_CONTAINERS_SERVICE = 0;
+      AZURE_RED_HAT_OPENSHIFT = 1;
+      CN_KUBERNETES_SERVICES = 2;
+      CN_BATCH_ACCOUNTS = 3;
+      CN_APP_SERVICES = 4;
+      CN_SERVICE_FABRIC_CLUSTERS = 5;
+      CN_CONTAINER_INSTANCES = 6;
+      CONTAINER_REGISTRIES = 7;
+    }
+    optional ContainersService type = 1;
+  }
+
+  message Databases{
+    enum DatabasesService {
+      DEFAULT_DATABASES_SERVICE = 0;
+      SQL_DATA_WAREHOUSES = 1;
+      DB_AZURE_SYNAPSE_ANALYTICS = 2;
+      AZURE_SQL = 3;
+      SSIS_LIFT_AND_SHIFT_IR = 4;
+      AZURE_PURVIEW_ACCOUNTS = 5;
+      AZURE_SQL_EDGE = 6;
+      AZURE_DATABASE_POSTGRESQL_SERVER_GROUP = 7;
+      ORACLE_DATABASE = 8;
+      AZURE_COSMOS_DB = 9;
+      AZURE_DATABASE_MYSQL_SERVER = 10;
+      AZURE_DATABASE_MARIADB_SERVER = 11;
+      AZURE_SQL_VM = 12;
+      DB_DATA_FACTORIES = 13;
+      VIRTUAL_CLUSTERS = 14;
+      ELASTIC_JOB_AGENTS = 15;
+      SQL_DATABASE = 16;
+      AZURE_DATABASE_POSTGRESQL_SERVER = 17;
+      SQL_SERVER = 18;
+      AZURE_DATABASE_MIGRATION_SERVICES = 19;
+      SQL_ELASTIC_POOLS = 20;
+      MANAGED_DATABASE = 21;
+      SQL_MANAGED_INSTANCE = 22;
+      AZURE_SQL_SERVER_STRETCH_DATABASES = 23;
+      CACHE_REDIS = 24;
+      INSTANCE_POOLS = 25;
+      DB_AZURE_DATA_EXPLORER_CLUSTERS = 26;
+      SQL_SERVER_REGISTRIES = 27;
+    } 
+    optional DatabasesService type = 1;
+  }
+
+  message Devops{
+    enum DevopsService {
+      DEFAULT_DEVOPS_SERVICE = 0;
+      APPLICATION_INSIGHTS = 1;
+      CHANGE_ANALYSIS = 2;
+      CLOUDTEST = 3;
+      LOAD_TESTING = 4;
+      LAB_ACCOUNTS = 5;
+      DEVOPS_STARTER = 6;
+      CODE_OPTIMIZATION = 7;
+      API_MANAGEMENT_SERVICES = 8;
+      API_CONNECTIONS = 9;
+      AZURE_DEVOPS = 10;
+      DEVTEST_LABS = 11;
+      LAB_SERVICES = 12;
+    }
+    optional DevopsService type = 1;
+  }
+
+  message General{
+
+    enum GeneralService {
+      DEFAULT_GENERAL_SERVICE = 0;
+      COST_MANAGEMENT_AND_BILLING = 1;
+      PREVIEW_FEATURES = 2;
+      ALL_RESOURCES = 3;
+      SUBSCRIPTIONS = 4;
+      RESERVATIONS = 5;
+      SERVICE_HEALTH = 6;
+      INFORMATION = 7;
+      RECENT = 8;
+      RESOURCE_GROUPS = 9;
+      MARKETPLACE = 10;
+      TEMPLATES = 11;
+      QUICKSTART_CENTER = 12;
+      MANAGEMENT_GROUPS = 13;
+      HELP_AND_SUPPORT = 14;
+      TAG = 15;
+      DASHBOARD = 16;
+      FREE_SERVICES = 17;
+      COST_MANAGEMENT =18;
+      MARKETPLACE_MANAGEMENT = 19;
+      REGION_MANAGEMENT = 20;
+      TROUBLESHOOT =21;
+      RESOURCE_EXPLORER = 22;
+      BIZ_TALK = 23;
+      BLOB_BLOCK = 24;
+      BLOB_PAGE = 25;
+      BRANCH = 26;
+      BROWSER = 27;
+      BUG = 28;
+      BUILDS = 29;
+      CACHE = 30;
+      CODE = 31;
+      COMMIT = 32;
+      CONTROLS = 33;
+      CONTROLS_HORIZONTAL = 34;
+      COST_ALERTS = 35;
+      COST_ANALYSIS = 36;
+      COST_BUDGETS = 37;
+      COUNTER = 38;
+      CUBES = 39;
+      DEV_CONSOLE = 40;
+      DOWNLOAD = 41;
+      ERROR = 42;
+      EXTENSIONS = 43;
+      FILE = 44;
+      FILES = 45;
+      FOLDER_BLANK = 46;
+      FOLDER_WEBSITE = 47;
+      FTP = 48;
+      GEAR = 49;
+      GLOBE_ERROR = 50;
+      GLOBE_SUCCESS = 51;
+      GLOBE_WARNING = 52;
+      GUIDE = 53;
+      HEART = 54;
+      IMAGE = 55;
+      INPUT_OUTPUT = 56;
+      JOURNEY_HUB = 57;
+      LAUNCH_PORTAL = 58;
+      LEARN = 59; 
+      LOAD_TEST= 60;
+      LOCATION = 61;
+      LOG_STREAMING = 62;
+      MANAGEMENT_PORTAL = 63;
+      MEDIA_FILE = 64;
+      G_MOBILE = 65;
+      MOBILE_ENGAGEMENT = 66;
+      POWER = 67;
+      POWERSHELL = 68;
+      POWER_UP = 69;
+      FEATURE_PREVIEWS = 70;
+      PROCESS_EXPLORER = 71;
+      PRODUCTION_READY_DATABASE = 72;
+      RESOURCE_GROUP_LIST = 73;
+      RESOURCE_LINKED = 74;
+      SCHEDULER = 75;
+      SEARCH = 76;
+      SERVER_FARM = 77;
+      SSD = 78;
+      STORAGE_AZURE_FILES = 79;
+      STORAGE_CONTAINER = 80;
+      STORAGE_QUEUE = 81;
+      TABLE = 82;
+      TAGS = 83;
+      TFS_VC_REPOSITORY = 84;
+      TOOLBOX = 85;
+      VERSIONS = 86;
+      WEBSITE_POWER = 87;
+      WEBSITE_STAGING = 88;
+      WEB_SLOTS = 89;
+      WEB_TEST = 90;
+      WORKBOOKS = 91;
+      WORKFLOW = 92;
+      BACKLOG = 93;
+      MEDIA = 94;
+      MODULE = 95;
+      SEARCH_GRID = 96;
+    }
+    optional GeneralService type = 1;
+
+  }
+
+  message HybridMulticloud{ 
+
+    enum HybridMulticloudService {
+      DEFAULT_HYBRID_MULTICLOUD_SERVICE = 0;
+      AZURE_OPERATOR_G_CORE = 1;
+      AZURE_OPERATOR_NEXUS = 2;
+      AZURE_OPERATOR_INSIGHTS = 3;
+      AZURE_OPERATOR_SERVICE_MANAGER = 4;
+      AZURE_PROGRAMMABLE_CONNECTIVITY = 5;
+    }
+
+    optional HybridMulticloudService type = 1;
+  }
+
+
+  message Identity {
+
+    enum IdentityService {
+      DEFAULT_IDENTITY_SERVICE = 0;
+      I_SECURITY = 1;
+      ADMINISTRATIVE_UNITS = 2;
+      VERIFIABLE_CREDENTIALS = 3;
+      AZURE_AD_PRIVLEGED_IDENTITY_MANAGEMENT = 4;
+      ENTRA_PRIVLEGED_IDENTITY_MANAGEMENT = 5;
+      API_PROXY = 6;
+      TENANT_PROPERTIES = 7;
+      CUSTOM_AZURE_AD_ROLES = 8;
+      AAD_LICENSES = 9;
+      ENTRA_CONNECT = 10;
+      ENTRA_VERIFIED_ID = 11;
+      GLOBAL_SECURE_ACCESS = 12;
+      EXTERNAL_IDENTITIES = 13;
+      PRIVATE_ACCESS = 14;
+      INTERNET_ACCESS = 15;
+      AZURE_ACTIVE_DIRECTORY = 16;
+      AZURE_AD_DOMAIN_SERVICES = 17;
+      ENTRA_DOMAIN_SERVICES = 18;
+      GROUPS = 19;
+      ACTIVE_DIRECTORY_CONNECT_HEALTH = 20;
+      ENTERPRISE_APPLICATIONS = 21;
+      ENTRA_MANAGED_IDENTITIES = 22;
+      MANAGED_IDENTITIES = 23;
+      AZURE_AD_BC = 24;
+      AZURE_INFORMATION_PROTECTION = 25;
+      USERS = 26;
+      AZURE_AD_IDENTITY_PROTECTION = 27;
+      ENTRA_ID_PROTECTION = 28;
+      APP_REGISTRATIONS = 29;
+      AZURE_AD_PRIVILEGE_IDENTITY_MANAGEMENT = 30;
+      IDENTITY_GOVERNANCE = 31;
+      AZURE_AD_ROLES_AND_ADMINISTRATORS = 32;
+      USER_SETTINGS = 33;
+    }
+
+    optional IdentityService type = 1;
+  }
+
+  message Integration {
+
+    enum IntegrationService {
+      DEFAULT_INTEGRATION_SERVICE = 0;
+      IN_SQL_DATA_WAREHOUSES = 1;
+      INTEGRATION_SERVICE_ENVIRONMENTS = 2;
+      AZURE_DATABOX_GATEWAY = 3;
+      PARTNER_TOPIC = 4;
+      SYSTEM_TOPIC = 5;
+      PARTNER_REGISTRATION = 6;
+      PARTNER_NAMESPACE = 7;
+      LOGIC_APPS = 8;
+      INT_POWER_PLATFORM = 9;
+      INTEGRATION_ENVIRONMENTS = 10;
+      INT_API_MANAGEMENT_SERVICES = 11;
+      INT_API_CONNECTIONS = 12;
+      STORSIMPLE_DEVICE_MANAGERS = 13;
+      AZURE_STACK_EDGE = 14;
+      INT_DATA_FACTORIES = 15;
+      INT_AZURE_SQL_SERVER_STRETCH_DATABASES = 16;
+      EVENT_GRID_TOPICS = 17;
+      RELAYS = 18;
+      AZURE_API_FOR_FHIR = 19;
+      SOFTWARE_AS_A_SERVICE = 20;
+      EVENT_GRID_DOMAINS = 21;
+      AZURE_DATA_CATALOG = 22;
+      INTEGRATION_ACCOUNTS = 23;
+      APP_CONFIGURATION = 24;
+      SENDGRID_ACCOUNTS = 25;
+      EVENT_GRID_SUBSCRIPTIONS = 26;
+      LOGIC_APPS_CUSTOM_CONNECTOR = 27;
+      AZURE_SERVICE_BUS = 28;
+    }
+
+    optional IntegrationService type = 1;
+  }
+
+  message Intune {
+
+    enum IntuneService {
+      DEFAULT_INTUNE_SERVICE = 0;
+      DEVICE_SECURITY_APPLE = 1;
+      DEVICE_SECURITY_GOOGLE = 2;
+      DEVICE_SECURITY_WINDOWS = 3;
+      IN_INTUNE = 4;
+      EBOOKS = 5;
+      CLIENT_APPS = 6;
+      DEVICES = 7;
+      DEVICE_COMPLIANCE = 8;
+      SOFTWARE_UPDATES = 9;
+      SECURITY_BASELINES = 10;
+      DEVICE_ENROLLMENT = 11;
+      DEVICE_CONFIGURATION = 12;
+      EXCHANGE_ACCESS = 13;
+      IN_AZURE_AD_ROLES_AND_ADMINISTRATORS = 14;
+      TENANT_STATUS = 15;
+      INTUNE_FOR_EDUCATION = 16;
+      INTUNE_APP_PROTECTION = 17;
+      MINDARO = 18;
+    }
+
+    optional IntuneService type = 1;
+  }
+
+  message AzureIOT{
+
+    enum AzureIOTService {
+      DEFAULT_IOT_SERVICE = 0;
+      MACHINE_LEARNING_STUDIO_CLASSIC_WEB_SERVICES = 1;
+      IOT_EVENT_HUBS = 2;
+      IOT_STREAM_ANALYTICS_JOBS = 3;
+      IOT_AZURE_DATABOX_GATEWAY = 4;
+      DIGITAL_TWINS = 5;
+      INDUSTRIAL_IOT = 6;
+      IOT_LOGIC_APPS = 7;
+      STACK_HCI_PREMIUM = 8;
+      AZURE_IOT_OPERATIONS = 9;
+      IOT_FUNCTION_APPS = 10;
+      IOT_NOTIFICATION_HUBS = 11;
+      NOTIFICATION_HUB_NAMESPACES = 12;
+      AZURE_STACK = 13;
+      IOT_AZURE_COSMOS_DB = 14;
+      IOT_EVENT_HUB_CLUSTERS = 15;
+      IOT_MACHINE_LEARNING_STUDIO_WORKSPACES = 16;
+      IOT_MACHINE_LEARNING_STUDIO_WEB_SERVICE_PLANS = 17;
+      TIME_SERIES_INSIGHTS_ENVIRONMENTS = 18;
+      IOT_HUB = 19;
+      IOT_CENTRAL_APPLICATIONS = 20;
+      AZURE_MAPS_ACCOUNTS =21;
+      IOT_EDGE = 22;
+      TIME_SERIES_INSIGHTS_EVENT_SOURCES = 23; 
+      TIME_SERIES_INSIGHTS_ACCESS_POLICIES = 24;
+      TIME_SERIES_DATA_SETS = 25;
+      WINDOWS_CORE_SERVICES = 26;
+      IOT_EVENT_GRID_SUBSCRIPTIONS = 27;
+      DEVICE_PROVISIONING_SERVICES = 28;
+    }
+
+    optional AzureIOTService type = 1;
+
+  }
+
+  message ManagementGovernance {
+
+    enum ManagementGovernanceService {
+      DEFAULT_MANAGEMENT_GOVERNANCE_SERVICE = 0;
+      MG_MONITOR = 1;
+      ALERTS = 2;
+      ADVISOR = 3;
+      MG_COST_MANAGEMENT_AND_BILLING = 4;
+      BLUEPRINTS = 5;
+      ACTIVITY_LOG = 6;
+      DIAGNOSTICS_SETTINGS = 7;
+      MG_LOG_ANALYTICS_WORKSPACES = 8;
+      SCHEDULER_JOB_COLLECTIONS = 9;
+      COMPLIANCE = 10;
+      MG_APPLICATION_INSIGHTS = 11;
+      MY_CUSTOMERS = 12;
+      RECOVERY_SERVICES_VAULTS = 13;
+      METRICS = 14;
+      SOLUTIONS = 15;
+      AUTOMATION_ACCOUNTS = 16;
+      OPERATION_LOG_CLASSIC = 17;
+      SERVICE_PROVIDERS = 18;
+      EDUCATION = 19;
+      SERVICE_CATALOG_MAD = 20;
+      INTUNE_TRENDS = 21;
+      AZURE_LIGHTHOUSE = 22;
+      UNIVERSAL_PRINT = 23;
+      AZURE_ARC = 24;
+      ARC_MACHINES = 25;
+      RESOURCES_PROVIDER = 26;
+      USER_PRIVACY = 27;
+      MANAGED_DESKTOP = 28;
+      MANAGED_APPLICATIONS_CENTER = 29;
+      CUSTOMER_LOCKBOX_FOR_MICROSOFT_AZURE = 30;
+      POLICY = 31;
+      RESOURCE_GRAPH_EXPLORER = 32;
+      MACHINESAZUREARC = 33;
+    }
+
+    optional ManagementGovernanceService type = 1;
+  }
+
+  message Menu {
+
+    enum MenuService {
+      DEFAULT_MENU_SERVICE = 0;
+      KEYS = 1;
+    }
+
+    optional MenuService type = 1;
+  }
+
+  message Migrate {
+
+    enum MigrateService {
+      DEFAULT_MIGRATE_SERVICE = 0;
+      M_COST_MANAGEMENT_AND_BILLING = 1;
+      M_RECOVERY_SERVICES_VAULTS = 2;
+      M_AZURE_DATABOX_GATEWAY = 3;
+      DATA_BOX = 4;
+      M_AZURE_STACK_EDGE = 5;
+      AZURE_MIGRATE = 6;
+    }
+
+    optional MigrateService type = 1;
+  }
+
+  message Migration {
+
+    enum MigrationService {
+      DEFAULT_MIGRATION_SERVICE = 0;
+      AZURE_DATABASE_MIGRATION = 1;
+    }
+
+    optional MigrationService type = 1;
+  }
+
+  message MixedReality {
+
+    enum MixedRealityService {
+      DEFAULT_MIXED_REALITY_SERVICE = 0;
+      REMOTE_RENDERING = 1;
+      SPATIAL_ANCHOR_ACCOUNTS = 2;
+    }
+
+    optional MixedRealityService type = 1;
+  }
+
+  message Mobile {
+
+    enum MobileService {
+      DEFAULT_MOBILE_SERVICE = 0;
+      MOBILE_POWER_PLATFORM = 1;
+      MOBILE_APPS = 2;
+      MOBILE_NOTIFICATION_HUBS = 3;
+    }
+
+    optional MobileService type = 1;
+  }
+
+  message Monitor {
+
+    enum MonitorService {
+      DEFAULT_MONITOR_SERVIVCE = 0;
+      M_MONITOR = 1;
+      M_ACTIVITY_LOG = 2;
+      M_DIAGNOSTICS_SETTINGS = 3;
+      M_LOG_ANALYTICS_WORKSPACES = 4;
+      M_APPLICATION_INSIGHTS = 5;
+      M_METRICS = 6;
+      AZURE_MONITORS_FOR_SAP_SOLUTIONS = 7;
+      M_CHANGE_ANALYSIS = 8;
+      M_AZURE_WORKBOOKS = 9;
+      NETWORK_WATCHER = 10;
+      AUTO_SCALE = 11;
+    }
+
+    optional MonitorService type = 1;
+  }
+
+  message Networking {
+
+    enum NetworkingService {
+      DEFAULT_NETWORKING_SERVICE = 0;
+      N_CDN_PROFILES = 1;
+      AZURE_FIREWALL_MANAGER = 2; 
+      AZURE_FIREWALL_POLICY = 3;
+      PRIVATE_LINK = 4;
+      IP_GROUPS = 5;
+      VIRTUAL_WAN_HUB = 6;
+      PRIVATE_LINK_SERVICE = 7;
+      RESOURCE_MANAGEMENT_PRIVATE_LINK = 8;
+      N_PRIVATE_LINK_SERVICES = 9;
+      LOAD_BALANCER_HUB = 10;
+      BASTIONS = 11;
+      VIRTUAL_ROUTER = 12;
+      CONNECTED_CACHE = 13;
+      SPOT_VMSS = 14;
+      SPOT_VM = 15;
+      SUBNET = 16;
+      DNS_PRIVATE_RESOLVER = 17;
+      AZURE_COMMUNICATIONS_GATEWAY = 18;
+      TRAFFIC_CONTROLLER = 19;
+      DNS_SECURITY_POLICY = 20;
+      DNS_MULTISTACK = 21;
+      ATM_MULTISTACK = 22;
+      IP_ADDRESS_MANAGER = 23;
+      VIRTUAL_NETWORKS = 24;
+      LOAD_BALANCERS = 25;
+      VIRTUAL_NETWORK_GATEWAYS = 26;
+      DNS_ZONES = 27;
+      TRAFFIC_MANAGER_PROFILES = 28;
+      N_NETWORK_WATCHER = 29;
+      NETWORK_SECURITY_GROUPS = 30;
+      PUBLIC_IP_ADDRESSES_CLASSIC = 31;
+      PUBLIC_IP_ADDRESSES = 32;
+      ON_PREMISES_DATA_GATEWAYS = 33;
+      ROUTE_FILTERS = 34;
+      DDOS_PROTECTION_PLANS = 35;
+      FRONT_DOOR_AND_CDN_PROFILES = 36;
+      VIRTUAL_NETWORKS_CLASSIC = 37;
+      APPLICATION_GATEWAYS = 38;
+      LOCAL_NETWORK_GATEWAYS = 39;
+      EXPRESSROUTE_CIRCUITS = 40;
+      NETWORK_INTERFACES = 41;
+      CONNECTIONS = 42;
+      ROUTE_TABLES = 43;
+      FIREWALLS = 44;
+      SERVICE_ENDPOINT_POLICIES = 45;
+      NAT = 46;
+      VIRTUAL_WANS = 47;
+      WEB_APPLICATION_FIREWALL_POLICIES_WAF = 48;
+      PROXIMITY_PLACEMENT_GROUPS = 49;
+      RESERVED_IP_ADDRESSES_CLASSIC = 50;
+      PUBLIC_IP_PREFIXES = 51;
+    }
+
+    optional NetworkingService type = 1;
+  }
+
+  message Other {
+
+    enum OtherService {
+      DEFAULT_OTHER_SERVICE = 0;
+      AZURE_VIRTUAL_DESKTOP = 1;
+      SSH_KEYS = 2;
+      INTERNET_ANALYZER_PROFILES = 3;
+      AZURE_CLOUD_SHELL = 4;
+      VIDEO_ANALYZERS = 5;
+      EXPRESSROUTE_DIRECT = 6;
+      COST_EXPORT = 7;	
+      AZURE_COMMUNICATION_SERVICES = 8;
+      PEERING_SERVICE = 9;
+      AZURE_NETWORK_FUNCTION_MANAGER_FUNCTIONS = 10;
+      LOG_ANALYTICS_QUERY_PACK = 11;
+      ARC_KUBERNETES = 12;
+      AZURE_VMWARE_SOLUTION = 13;
+      PEERINGS = 14;
+      DASHBOARD_HUB = 15;
+      AZURE_VIDEO_INDEXER = 16;
+      AVS_VM = 17;
+      ARC_POSTGRESQL = 18;
+      ARC_SQL_MANAGED_INSTANCE = 19;
+      ARC_SQL_SERVER = 20;
+      DATA_COLLECTION_RULES = 21;
+      RESOURCE_MOVER = 22;
+      AZURE_CHAOS_STUDIO = 23;
+      NETWORK_MANAGERS = 24;
+      DEDICATED_HSM = 25;
+      MODULAR_DATA_CENTER = 26;
+      TEMPLATE_SPECS = 27;
+      ARC_DATA_SERVICES = 28;
+      AZURE_BACKUP_CENTER = 29;
+      BACKUP_VAULT = 30;
+      DEVICE_UPDATE_IOT_HUB = 31;
+      FIJI = 32;
+      AZURE_MONITOR_DASHBOARD = 33;
+      SCVMM_MANAGEMENT_SERVERS= 34;
+      CLOUD_SERVICES_EXTENDED_SUPPORT = 35;
+      AZURE_SUPPORT_CENTER_BLUE = 36;
+      WEB_APP_DATABASE = 37;
+      AZURE_HPC_WORKBENCHES = 38;
+      DISK_POOL = 39;
+      BARE_METAL_INFRASTRUCTURE = 40;
+      PRIVATE_ENDPOINTS = 41;
+      OPEN_SUPPLY_CHAIN_PLATFORM = 42;
+      AQUILA = 43;
+      RESERVED_CAPACITY = 44;
+      CUSTOM_IP_PREFIX = 45;
+      FHIR_SERVICE = 46;
+      MEDTECH_SERVICE = 47;
+      MANAGED_INSTANCE_APACHE_CASSANDRA = 48;
+      CONFIDENTIAL_LEDGERS = 49;
+      O_AAD_LICENSES = 50;
+      TEST_BASE = 51;
+      AZURE_ORBITAL = 52;
+      CAPACITY_RESERVATION_GROUPS = 53;
+      WINDOWS_NOTIFICATION_SERVICES = 54;
+      AZURE_NETWORK_FUNCTION_MANAGER = 55;
+      MISSION_LANDING_ZONE = 56;
+      MOBILE_NETWORKS = 57;
+      VM_APP_DEFINITIONS = 58;
+      VM_APP_VERSIONS = 59;
+      AZURE_EDGE_HARDWARE_CENTER = 60;
+      RESOURCE_GUARD = 61;
+      CERES = 62;
+      AZURITE = 63;
+      UPDATE_MANAGEMENT_CENTER = 64;
+      O_AZURE_COMPUTE_GALLERIES = 65;
+      COMMUNITY_IMAGES = 66;
+      VM_IMAGE_VERSION = 67;
+      SAVINGS_PLANS = 68;
+      WORKER_CONTAINER_APP = 69;
+      AZURE_MANAGED_GRAFANA = 70;
+      TARGETS_MANAGEMENT = 71;
+      STORAGE_FUNCTIONS = 72;
+      SONIC_DASH = 73;
+      COMPLIANCE_CENTER = 74;
+      NETWORK_SECURITY_PERIMETERS = 75;
+      AZURE_LOAD_TESTING = 76;
+      VIRTUAL_VISITS_BUILDER = 77;
+      AZURE_QUOTAS = 78;
+      CONTAINER_APPS_ENVIRONMENTS = 79;
+      APP_COMPLIANCE_AUTOMATION = 80;
+      VIRTUAL_INSTANCE_FOR_SAP = 81;
+      AZURE_CENTER_FOR_SAP = 82;
+      AZURE_STORAGE_MOVER = 83;
+      CENTRAL_SERVICE_INSTANCE_FOR_SAP = 84;
+      KUBERNETES_FLEET_MANAGER = 85;
+      EXPRESS_ROUTE_TRAFFIC_COLLECTOR = 86;
+      DATABASE_INSTANCE_FOR_SAP = 87;
+      ELASTIC_SAN = 88;
+      MICROSOFT_DEV_BOX =89;
+      AZURE_DEPLOYMENT_ENVIRONMENTS = 90;
+      AZURE_DEV_TUNNELS = 91;
+      VIRTUAL_ENCLAVES = 92;
+      AKS_ISTIO = 93;
+      DEFENDER_CM_LOCAL_MANAGER = 94;
+      DEFENDER_EXTERNAL_MANAGEMENT = 95;
+      DEFENDER_FREEZER_MONITOR = 96;
+      DEFENDER_HISTORIAN = 97;
+      DEFENDER_HMI = 98;
+      DEFENDER_MARQUEE = 99;
+      DEFENDER_ROBOT_CONTROLLER = 100;
+      DEFENDER_SENSOR = 101;
+      DEFENDER_SLOT = 102; 
+      DEFENDER_WEB_GUIDING_SYSTEM = 103;
+      DEFENDER_DCS_CONTROLLER = 104;
+      DEFENDER_DISTRIBUTER_CONTROL_SYSTEM = 105;
+      DEFENDER_ENGINEERING_STATION = 106;
+      DEFENDER_INDUSTRIAL_PACKAGING_SYSTEM = 107;
+      DEFENDER_INDUSTRIAL_PRINTER = 108;
+      DEFENDER_INDUSTRIAL_SCALE_SYSTEM = 109;
+      DEFENDER_INDUSTRIAL_ROBOT = 110;
+      DEFENDER_METER = 111;
+      DEFENDER_PLC = 112;
+      DEFENDER_PNEUMATIC_DEVICE = 113;
+      DEFENDER_PROGRAMABLE_BOARD = 114;
+      DEFENDER_RELAY = 115;
+      DEFENDER_RTU = 116;
+      HDI_AKS_CLUSTER = 117;
+      AZURE_A = 118;
+      O_LOCAL_NETWORK_GATEWAYS = 119;
+      EDGE_MANAGEMENT = 120;
+      O_INSTANCE_POOLS = 121;
+      AZURE_SPHERE = 122;
+      O_APP_REGISTRATIONS = 123;
+      EXCHANGE_ON_PREMISES_ACCESS = 124;
+      WAC = 125;
+      AZUREATTESTATION = 126;
+      RTOS = 127;
+      WEB_JOBS = 128;
+    }
+
+    optional OtherService type = 1;
+  }
+
+  message Security {
+
+    enum SecurityService {
+      DEFAULT_SECURITY_SERVICE = 0;
+      DETONATION = 1;
+      MICROSOFT_DEFENDER_FOR_IOT = 2;
+      SEC_AZURE_AD_PRIVLEGED_IDENTITY_MANAGEMENT = 3;
+      MICROSOFT_DEFENDER_EASM = 4;
+      IDENTITY_SECURE_SCORE = 5;
+      AZURE_AD_RISKY_SIGNINS = 6;
+      AZURE_AD_RISKY_USERS = 7;
+      AZURE_AD_AUTHENTICATION_METHODS = 8;
+      MULTIFACTOR_AUTHENTICATION = 9;
+      SEC_AZURE_INFORMATION_PROTECTION = 10;
+      SEC_AZURE_AD_IDENTITY_PROTECTION = 11;
+      CONDITIONAL_ACCESS = 12;
+      MICROSOFT_DEFENDER_FOR_CLOUD = 13;
+      APPLICATION_SECURITY_GROUPS = 14;
+      KEY_VAULTS = 15;
+      AZURE_SENTINEL = 16;
+      SEC_USER_SETTINGS = 17;
+      EXTENDEDSECURITYUPDATES = 18;
+    }
+
+    optional SecurityService type = 1;
+  }
+
+  message Storage {
+
+    enum StorageService {
+      DEFAULT_STORAGE_SERVICE = 0;
+      STO_RECOVERY_SERVICES_VAULTS = 1;
+      STO_AZURE_DATABOX_GATEWAY = 2;
+      AZURE_HCP_CACHE = 3;
+      STORAGE_ACCOUNTS = 4;
+      STORAGE_ACCOUNTS_CLASSIC = 5;
+      STO_STORSIMPLE_DEVICE_MANAGERS = 6;
+      DATA_LAKE_STORAGE_GEN = 7;
+      STORAGE_EXPLORER = 8;
+      STORSIMPLE_DATA_MANAGERS = 9;
+      STORAGE_SYNC_SERVICES = 10;
+      STO_DATA_BOX = 11;
+      STO_AZURE_STACK_EDGE = 12;
+      AZURE_NETAPP_FILES = 13;
+      DATA_SHARE_INVITATIONS = 14;
+      DATA_SHARES = 15;
+      IMPORT_EXPORT_JOBS = 16;
+      AZURE_FILESHARES = 17;
+    }
+
+    optional StorageService type = 1;
+  }
+
+  message Web {
+
+    enum WebService {
+      DEFAULT_WEB_SERVICE = 0;
+      WEB_APP_SERVICE_PLANS = 1;
+      WEB_APP_SERVICE_CERTIFICATES = 2;
+      WEB_APP_SERVICE_DOMAINS = 3;
+      STATIC_APPS = 4;
+      API_CENTER = 5;
+      WEB_POWER_PLATFORM = 6;
+      APP_SPACE = 7;
+      WEB_APP_SERVICES = 8;
+      WEB_API_MANAGEMENT_SERVICES = 9;
+      WEB_COGNITIVE_SEARCH = 10;
+      WEB_APP_SERVICE_ENVIRONMENTS = 11;
+      WEB_API_CONNECTIONS = 12;
+      SIGNALR = 13;
+      WEB_NOTIFICATION_HUB_NAMESPACES = 14;
+      WEB_FRONT_DOOR_AND_CDN_PROFILES = 15;
+      WEB_COGNITIVE_SERVICES = 16;
+      AZURE_MEDIA_SERVICE = 17;
+      WEB_AZURE_SPRING_APPS = 18;
+    }
+
+    optional WebService type = 1;
+  }
+
+  message NewOnes {
+
+    enum NewOnesService {
+      DEFAULT_NEW_ONES_SERVICE = 0;
+      CONNECTED_VEHICLE_PLATFORM = 1;
+      AZURE_SUSTAINABILITY = 2;
+      ICM_TROUBLESHOOTING = 3;
+      OSCONFIG = 4;
+      STORAGE_ACTIONS = 5;
+      ENTRA_CONNECT_SYNC = 6;
+      ENTRA_CONNECT_HEALTH = 7;
+    }
+
+    optional NewOnesService type = 1;
+  }
+
+  optional AzureServiceType serviceType = 1;
+  optional AIMachineLearning aiMachineLearning = 2;
+  optional Analytics analytics = 3;
+  optional AppServices appServices = 4;
+  optional EcoSystem ecoSystem= 5;
+  optional Stack stack= 6;
+  optional Blockchain blockchain= 7;
+  optional Compute compute= 8;
+  optional Containers containers= 9;
+  optional Databases databases= 10;
+  optional Devops devops= 11;
+  optional General general= 12;
+  optional HybridMulticloud hybridMulticloud= 13;
+  optional Identity identity= 14;
+  optional Integration integration= 15;
+  optional Intune intune= 16;
+  optional AzureIOT iot= 17;
+  optional ManagementGovernance managementGovernance= 18;
+  optional Menu menu= 19;
+  optional Migrate migrate= 20;
+  optional Migration migration= 21;
+  optional MixedReality mixedReality= 22;
+  optional Mobile mobile= 23;
+  optional Monitor monitor= 24;
+  optional Networking networking= 25;
+  optional Other other= 26;
+  optional Security security= 27;
+  optional Storage storage= 28;
+  optional Web web= 29;
+  optional NewOnes newOnes= 30;
+} 

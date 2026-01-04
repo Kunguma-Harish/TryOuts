@@ -1,0 +1,73 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PictureValueProtos";
+
+import "url.proto";
+import "google/protobuf/protoextensions.proto";
+
+message PictureValue {
+	
+	optional string id = 1 [(com.zoho.common.customOptions).requiredField = true];	// Unique Picture ID
+	enum PictureType {
+		USERDEFINED = 0; // either Uploaded or imported.
+		THEMEBG = 1; // Theme Background.
+		CLIPART = 2; // Clip Art image
+		TEXTURE = 3; // Texture Image
+		EXTERNAL = 4; // Externally linked image
+		PLACEHOLDER = 5; // PlaceHolder image - will be used by layouts.
+	}
+	optional PictureType type = 2 [(com.zoho.common.customOptions).requiredField = true]; // Type of the picture. The URL for the picture will be generated according to the type.
+	
+	// use the 'pictureUrl" variable instead of this.
+	optional string url = 3; // Picture URL for external images.
+	optional string pictureName = 4; // Name of the picture 
+	optional string relId = 5; // Used for ClipArt/Texture/ThemeBG images.
+
+	message LicenseDetails {
+		enum SearchedFrom {
+			DEF_IMAGE_DOMAIN = 0;
+			FLICKR = 1;
+			GOOGLE = 2;
+			PICASA = 3;
+			UNSPLASH = 4;
+			PEXELS = 5;
+			PIXABAY = 6;
+		}
+		optional SearchedFrom from = 1 [(com.zoho.common.customOptions).requiredField = true];
+	
+		enum CreativeCommonsLicense {
+			DEF_CC_LICENSE = 0;
+			ANCS = 1; // Attribution Non Commercial Share Alike license , http://creativecommons.org/licenses/by-nc-sa/2.0/
+			ANC = 2; // Attribution Non Commercial license , http://creativecommons.org/licenses/by-nc/2.0/
+			ANN = 3; // Attribution Non Commercial No-Derivs license , http://creativecommons.org/licenses/by-nc-nd/2.0/
+			A = 4; // Attribution license , http://creativecommons.org/licenses/by/2.0/
+			AS = 5; // Attribution Share Alike , http://creativecommons.org/licenses/by-sa/2.0/
+			AN = 6; // Attribution No-Derivs , http://creativecommons.org/licenses/by-nd/2.0/
+			NO_ATT = 7; // grants you an irrevocable, nonexclusive, worldwide copyright license to download, copy, modify, distribute, perform, and use photos for free
+		}
+
+		optional CreativeCommonsLicense type = 2 [(com.zoho.common.customOptions).requiredField = true];
+				
+		optional int64 date = 3 [(com.zoho.common.customOptions).requiredField = true]; // Date at which this picture was downloaded.
+
+		optional com.zoho.common.URL url = 4 [(com.zoho.common.customOptions).requiredField = true]; // Actual Site URL of the picture.
+
+		message OwnerInfo {
+			optional string name = 1 [(com.zoho.common.customOptions).requiredField = true];
+			optional com.zoho.common.URL profileUrl = 2; // Owner profile page URL.
+			optional com.zoho.common.URL albumUrl = 3; // Pictures album URL.
+		}
+
+		optional OwnerInfo owner = 5 [(com.zoho.common.customOptions).requiredField = true]; // Owner of the picture.
+	}
+
+	optional LicenseDetails license = 6;
+	
+	// Using the URL proto instead of string. This will help us security wise.
+	optional com.zoho.common.URL pictureUrl = 7;
+	optional com.zoho.common.URL staticUrl = 8; // This will be used in case of alternate URLs for Gif images
+	optional string clientKey = 9; // Can use client key and picId map when we move to proto 3
+}
+

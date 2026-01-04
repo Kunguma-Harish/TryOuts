@@ -1,0 +1,6 @@
+framework module GraphikosAppleAssets {
+  umbrella header "GraphikosAppleAssets-macOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

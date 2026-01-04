@@ -1,0 +1,17 @@
+syntax="proto3";
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "ScatterChartDetailsProtos";
+
+import "linechartseries.proto";
+import "animationdata.proto";
+
+message ScatterChartDetails {
+	
+	repeated LineChartSeries series = 1;
+
+	// Animation for each category shall be stored here.
+	repeated com.zoho.shapes.AnimationData catAnim = 2;
+
+}

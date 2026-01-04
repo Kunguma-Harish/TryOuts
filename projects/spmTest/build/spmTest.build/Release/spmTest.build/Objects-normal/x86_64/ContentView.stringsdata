@@ -1,0 +1,20 @@
+{
+  "source": "/Users/kunguma-14252/Documents/projects/spmTest/spmTest/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Select an item"
+      },
+      {
+        "comment": "",
+        "key": "Item at %@"
+      },
+      {
+        "comment": "",
+        "key": "Add Item"
+      }
+    ]
+  },
+  "version": 1
+}

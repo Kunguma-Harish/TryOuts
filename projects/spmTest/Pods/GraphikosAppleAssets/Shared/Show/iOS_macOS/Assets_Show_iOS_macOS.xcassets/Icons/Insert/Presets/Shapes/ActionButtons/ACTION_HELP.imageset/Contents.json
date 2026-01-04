@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ACTION_HELP.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,44 @@
+# CocoaPods Podfile
+
+source 'https://git.csez.zohocorpin.com/zohoshow/apple/public/specs.git'
+source 'https://repository.zohocorpcloud.in/zohocorp/zoho/zohopodspecs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '17.0'
+ use_frameworks!
+ 
+ target 'showXwhiteboard' do
+   # Add your pods here, for example:
+   use_frameworks!
+
+#   pod 'WhiteBoardiOS', '1.0.5-beta1'
+   pod 'ShowPreviewKit', :path => '/Users/kunguma-14252/Documents/ProtoConflict/showiospreview'
+   pod 'WhiteBoardiOS/ZohoOne', :path => '/Users/kunguma-14252/Documents/ProtoConflict/WhiteboardiOS'
+   pod 'WhiteBoard/WhiteBoardProto', :path => '/Users/kunguma-14252/Documents/ProtoConflict/whiteboard_apple'
+   pod 'Proto/WhiteBoardProto', :path => '/Users/kunguma-14252/Documents/ProtoConflict/proto'
+   
+ end
+
+post_install do |installer|
+  edit_swiftprotobuf_files(installer)
+end
+
+def edit_swiftprotobuf_files(installer)
+    # Add SwiftProtobuf Extensions
+    namemap_computed_checksum = `md5 -q ./Pods/SwiftProtobuf/Sources/SwiftProtobuf/NameMap.swift`
+    namemap_desired_checksum = "7c174a92e0de3b1a1d5cfce720c08337\n"
+    enum_computed_checksum = `md5 -q ./Pods/SwiftProtobuf/Sources/SwiftProtobuf/Enum.swift`
+    enum_desired_checksum = "7cc973a47230f2d39df918f885f27b9a\n"
+    
+#    check if SwiftProtobufExtension was already added
+    if (!namemap_computed_checksum.eql? namemap_desired_checksum) || (!enum_computed_checksum.eql? enum_desired_checksum)
+        puts "\n*** Swift Protobuf Extensions ***\n"
+        if File.exist?('SwiftProtobufExtension')
+            FileUtils.remove_dir 'SwiftProtobufExtension'
+        end
+        system 'git clone https://git.csez.zohocorpin.com/zohoshow/apple/public/SwiftProtobufExtension.git'
+        require_relative 'SwiftProtobufExtension/native/CustomSwiftProtobuf'
+        editSwiftProtobuf(installer, namemap_computed_checksum, namemap_desired_checksum, enum_computed_checksum, enum_desired_checksum)
+        FileUtils.remove_dir 'SwiftProtobufExtension'
+    end
+end

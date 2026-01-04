@@ -1,0 +1,1304 @@
+syntax="proto3";
+
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "AWSPropsProtos";
+
+message AWSProps {
+
+  message AWSElements{
+
+    enum PrimaryDataType {
+      DEFAULT_DATA_TYPE = 0;
+      DATA_GROUP = 1;
+      ANALYTICS = 2;
+      APPLICATION_INTEGRATION = 3;
+      BLOCKCHAIN = 4;
+      BUSINESS_APPLICATIONS = 5;
+      CLOUD_FINANCIAL_MANAGEMENT = 6;
+      COMPUTE = 7;
+      CONTACT_CENTER = 8;
+      CONTAINERS = 9;
+      CUSOMER_ENABLEMENT = 10;
+      DATABASE = 11;
+      DEVELOPER_TOOLS = 12;
+      END_USER_COMPUTING = 13;
+      FRONT_END_MOBILE_WEB = 14;
+      GAMES = 15;
+      INTERNET_OF_THINGS = 16;
+      ARTIFICIAL_INTELLIGENCE = 17;
+      MANAGEMENT_AND_GOVERNANCE = 18;
+      MEDIA_SERVICES = 19;
+      MIGRATION_AND_MODERNIZATION = 20;
+      NETWORKING_AND_CONTENT_DELIVERY = 21;
+      QUANTUM_TECHNOLOGIES = 22;
+      ROBOTICS = 23;
+      SATELLITE = 24;
+      SECURITY_IDENTITY_COMPLIANCE = 25;
+      SERVERLESS = 26;
+      STORAGE = 27;
+      GENERAL = 28;
+    }
+
+
+    enum SecondaryDataType {
+      DEFAULT_SECONDARY_DATA_TYPE = 0;
+      AWS_SERVICE = 1;
+      AWS_RESOURCE = 2;
+      AWS_INSTANCE = 3;
+      AWS_CLASSES = 4;
+      CATEGORY_REPRESENTATIVE = 5;
+    }
+
+    message DataGroup{
+
+      enum DataGroupType {
+        DEFAULT_DATA_GROUP = 0;
+        AMAZON_CLOUD_DARK = 1;
+        AMAZON_CLOUD_LIGHT = 2;
+        AMAZON_AWS_LOGO_DARK = 3;
+        AMAZON_AWS_LOGO_LIGHT = 4;
+        REGION = 5;
+        AVAILABILITY_ZONE = 6;
+        SECURITY_GROUP = 7;
+        AUTO_SCALING_GROUP = 8;
+        VIRTUAL_PRIVATE__CLOUD___OP__VPC__CP__ = 9;
+        PRIVATE_SUBNET = 10;
+        PUBLIC_SUBNET = 11;
+        SERVER_CONTENTS = 12;
+        CORPORATE_DATA_CENTER = 13;
+        EC2_INSTANCE_CONTENTS = 14;
+        SPOT_FLEET = 15;
+        AWS_ACCOUNT = 16;
+        AWS_IOT_GREENGRASS_DEPLOYMENT = 17;
+        AWS_IOT_GREENGRASS = 18;
+        ELASTIC_BEANSTALK_CONTAINER = 19;
+        AWS_STEP_FUNCTIONS_WORKFLOW = 20;
+        GENERIC_GROUP = 21;
+        GENERIC_GROUP_DOTTED = 22;
+      }
+
+      optional DataGroupType type = 1;
+    }
+
+
+    message Analytics{
+
+      enum AnalyticsService {
+        DEFAULT_ANALYTICS_SERVICE_TYPE = 0;
+        AMAZON_CLOUDSEARCH = 1;
+        AMAZON_EMR = 2;
+        AWS_LAKE_FORMATION = 3;
+        AMAZON_KINESIS = 4;
+        AMAZON_KINESIS_VIDEO_STREAMS = 5;
+        KINESIS_DATA_STREAMS = 6;
+        AMAZON_DATA_FIREHOSE = 7;
+        AMAZON_MANAGED_SERVICE_FOR_APACHE_FLINK = 8;
+        AWS_GLUE = 9;
+        AMAZON_OPENSEARCH_SERVICE = 10;
+        AMAZON_REDSHIFT = 11;
+        AMAZON_QUICKSIGHT = 12;
+        AMAZON_FINSPACE = 13;
+        AMAZON_MANAGED_STREAMING_FOR_APACHE_KAFKA = 14;
+        AWS_DATA_EXCHANGE = 15;
+        AWS_GLUE_DATABREW = 16;
+        ENTITY_RESOLUTION = 17;
+        AMAZON_DATAZONE = 18;
+        AWS_CLEAN_ROOMS = 19;
+        AMAZON_ATHENA = 20;
+        AMAZON_SAGEMAKER = 21;
+      } 
+
+      enum AnalyticsResource {
+        DEFAULT_ANALYTICS_RESOURCE = 0;
+        SEARCH_DOCUMENTS = 1;
+        HDFS_CLUSTER = 2;
+        CLUSTER = 3;
+        EMR_ENGINE = 4;
+        DATA_LAKE = 5;
+        CRAWLER = 6;
+        AWS_GLUE_FOR_RAY = 7;
+        AWS_GLUE_DATA_CATALOG = 8;
+        AWS_GLUE_DATA_QUALITY = 9;
+        INDEX = 10;
+        DATA_NODE = 11;
+        ULTRAWARM_NODE = 12;
+        CLUSTER_ADMINISTRATOR_NODE = 13;
+        OPENSEARCH_DASHBOARDS = 14;
+        TRACES = 15;
+        OBSERVABILITY = 16;
+        OPENSEARCH_INGESTION = 17;
+        DENSE_COMPUTE_NODE = 18;
+        DENSE_STORAGE_NODE = 19;
+        RA3 = 20;
+        QUERY_EDITOR__HYP__V2__DOT__0 = 21;
+        REDSHIFT_ML = 22;
+        DATA_SHARING_GOVERNANCE = 23;
+        AUTO__HYP__COPY = 24;
+        STREAMING_INGESTION = 25;
+        PAGINATED_REPORTS = 26;
+        AMAZON_MSK_CONNECT = 27;
+        AWS_DATA_EXCHANGE_FOR_APIS = 28;
+        BUSINESS_DATA_CATALOG = 29;
+        DATA_PORTAL = 30;
+        DATA_PROJECTS = 31;
+        DATA_SOURCE_CONNECTORS = 32;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional AnalyticsService aws_service = 2;
+      optional AnalyticsResource aws_resource = 3;
+
+    }
+
+    message ApplicationIntegration{
+
+      enum ApplicationIntegrationService {
+        DEFAULT_APPLICATION_INTEGRATION_SERVICE = 0;
+        AMAZON_SIMPLE_NOTIFICATION_SERVICE___OP__AMAZON_SNS__CP__ = 1;
+        AMAZON_SIMPLE_QUEUE__SERVICE___OP__AMAZON_SQS__CP__ = 2;
+        AMAZON_MQ = 3;
+        AWS_APPSYNC = 4;
+        AWS_STEP_FUNCTIONS = 5;
+        AMAZON_EVENTBRIDGE = 6;
+        AMAZON_APPFLOW = 7;
+        AMAZON_MANAGED_WORKFLOWS_FOR_APACHE_AIRFLOW___OP__AMAZON_MWAA__CP__ = 8;
+        AWS_B2B_DATA_INTERCHANGE = 9;
+        AWS_EXPRESS_WORKFLOWS = 10;
+      }
+
+      enum ApplicationIntegrationResource {
+        DEFAULT_APPLICATION_INTEGRATION_RESOURCE = 0;
+        EMAIL_NOTIFICATION = 1;
+        HTTP_NOTIFICATION = 2;
+        TOPIC = 3;
+        MESSAGE = 4;
+        QUEUE = 5;
+        BROKER = 6;
+        EVENT = 7;
+        RULE = 8;
+        SAAS_PARTNER_EVENT = 9;
+        DEFAULT_EVENT_BUS = 10;
+        CUSTOM_EVENT_BUS = 11;
+        SCHEMA = 12;
+        SCHEMA_REGISTRY = 13;
+        SCHEDULER = 14;
+        PIPES = 15;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional ApplicationIntegrationService aws_service = 2;
+      optional ApplicationIntegrationResource aws_resource = 3;
+    }
+
+    message Blockchain{
+
+      enum BlockchainService {
+        DEFAULT_BLOCKCHAIN_SERVICE = 0;
+        AMAZON_MANAGED_BLOCKCHAIN = 1;
+        AMAZON_QUANTUM_LEDGER_DATABASE___OP__AMAZON_QLDB__CP__ = 2;
+      }
+
+      enum BlockchainResource {
+        DEFAULT_BLOCKCHAIN_RESOURCE = 0;
+        BLOCKCHAIN = 1;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional BlockchainService aws_service = 2;
+      optional BlockchainResource aws_resource = 3;
+
+    }
+
+
+    message  BusinessApplications{
+      enum BusinessApplicationsService {
+        DEFAULT_BUSINESS_APPLICATIONS_SERVICE = 0;
+        ALEXA_FOR_BUSINESS = 1;
+        AMAZON_CHIME = 2;
+        AMAZON_WORKMAIL = 3;
+        AMAZON_CONNECT = 4;
+        AMAZON_PINPOINT = 5;
+        AMAZON_SIMPLE_EMAIL_SERVICE___OP__AMAZON_SES__CP__ = 6;
+        AMAZON_WORKDOCS = 7;
+        AMAZON_CHIME_SDK = 8;
+        AMAZON_PINPOINT_APIS = 9;
+        AMAZON_WORKDOCS_SDK = 10;
+        AWS_WICKR = 11;
+        AWS_SUPPLY_CHAIN = 12;
+        AWS_APPFABRIC = 13;
+        AWS_END_USER_MESSAGING = 14;
+      }
+
+      enum BusinessApplicationsResource {
+        DEFAULT_BUSINESS_APPLICATIONS_RESOURCE = 0;
+        JOURNEY = 1;
+        EMAIL = 2;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional BusinessApplicationsService aws_service = 2;
+      optional BusinessApplicationsResource aws_resource = 3;
+
+    }
+
+
+    message  CloudFinancialManagement{
+
+      enum CloudFinancialManagementService {
+        DEFAULT_CLOUD_FINANCIAL_MANAGEMENT_SERVICE = 0;
+        AWS_BUDGETS = 1;
+        AWS_COST_AND_USAGE_REPORT = 2;
+        AWS_COST_EXPLORER = 3;
+        RESERVED_INSTANCE___OP__RI__CP___REPORTING = 4;
+        SAVINGS_PLANS = 5;
+        AWS_BILLING_CONDUCTOR = 6;
+      }
+
+      optional CloudFinancialManagementService aws_service = 1;
+      optional SecondaryDataType secondaryDataType = 2;
+    }
+
+
+    message Compute{
+
+      enum ComputeService {
+        DEFAULT_COMPUTE_SERVICE = 0;
+        AMAZON_ELASTIC_COMPUTE_CLOUD___OP__AMAZON_EC2__CP__ = 1;
+        AWS_ELASTIC_BEANSTALK = 2;
+        AWS_LAMBDA = 3;
+        AMAZON_LIGHTSAIL = 4;
+        AMAZON_EC2_AUTO_SCALING = 5;
+        AWS_OUTPOSTS_FAMILY = 6;
+        AWS_OUTPOSTS_RACK = 7;
+        AWS_OUTPOSTS_SERVERS = 8;
+        AWS_SERVERLESS_APPLICATION_REPOSITORY = 9;
+        AWS_WAVELENGTH = 10;
+        AWS_LOCAL_ZONES = 11;
+        AMAZON_EC2_IMAGE_BUILDER = 12;
+        BOTTLEROCKET = 13;
+        AWS_PARALLEL_CLUSTER = 14;
+        AMAZON_DCV = 15;
+        ELASTIC_FABRIC_ADAPTER = 16;
+        AWS_NITRO_ENCLAVES = 17;
+        AWS_APP_RUNNER = 18;
+        NICE_ENGINFRAME = 19;
+        AMAZON_LIGHTSAIL_FOR_RESEARCH = 20;
+        AWS_BATCH = 21;
+        AWS_SIMSPACE_WEAVER = 22;
+        AWS_PARALLEL_COMPUTING = 23;
+        AWS_COMPUTE_OPTIMIZER = 24;
+      }
+
+      enum ComputeResource {
+        DEFAULT_COMPUTE_RESOURCE = 0;
+        AMI = 1;
+        AUTO_SCALING = 2;
+        RESCUE = 3;
+        ELASTIC_IP_ADDRESS = 4;
+        AWS_MICROSERVICE_EXTRACTOR_FOR___DOT__NET = 5;
+        DEPLOYMENT = 6;
+        APPLICATION = 7;
+        LAMBDA_FUNCTION = 8;
+      }	
+
+      enum ComputeInstance {
+        DEFAULT_COMPUTE_INSTANCE = 0;
+        INSTANCE = 1;
+        DB_INSTANCE = 2;
+        INSTANCES = 3;
+        SPOT_INSTANCE = 4;
+        INSTANCE_WITH_CLOUDWATCH = 5;
+      }	
+      optional SecondaryDataType secondaryDataType = 1;
+      optional ComputeService aws_service = 2;
+      optional ComputeResource aws_resource = 3;
+      optional ComputeInstance aws_instance = 4;
+    }
+
+
+    message ContactCenter{
+
+      optional SecondaryDataType secondaryDataType = 1;
+    }
+
+    message Containers{
+
+      enum ContainersService {
+        DEFAULT_CONTAINERS_SERVICE = 0;
+        AMAZON_ELASTIC_KUBERNETES_SERVICE___OP__AMAZON_EKS__CP__ = 1;
+        AMAZON_ELASTIC_CONTAINER_REGISTRY___OP__AMAZON_ECR__CP__ = 2;
+        AMAZON_ELASTIC_CONTAINER_SERVICE___OP__AMAZON_ECS__CP__ = 3;
+        AMAZON_ECS_ANYWHERE = 4;
+        AMAZON_EKS_ANYWHERE = 5;
+        AMAZON_EKS_CLOUD = 6;
+        AMAZON_EKS_DISTRO = 7;
+        AWS_FARGATE = 8;
+        RED_HAT_OPENSHIFT_SERVICE_ON_AWS = 9;
+      }	
+
+      enum ContainersResource {
+        DEFAULT_CONTAINERS_RESOURCE = 0;
+        EKS_ON_OUTPOSTS = 1;
+        REGISTRY = 2;
+        IMAGE = 3;
+        CONTAINER_1 = 4;
+        CONTAINER_2 = 5;
+        CONTAINER_3 = 6;
+        TASK = 7;
+        SERVICE = 8;
+        ECS_SERVICE_CONNECT = 9;
+        COPILOT_CLI = 10;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional ContainersService aws_service = 2;
+      optional ContainersResource aws_resource = 3;
+    }
+
+
+    message CustomerEnablement{
+
+      enum CustomerEnablementService {
+        DEFAULT_CUSTOMER_ENABLEMENT_SERVICE = 0;
+        AWS_IQ = 1;
+        AWS_MANAGED_SERVICES = 2;
+        AWS_PROFESSIONAL_SERVICES = 3;
+        AWS_SUPPORT = 4;
+        AWS_TRAINING_AND_CERTIFICATION = 5;
+        AWS_ACTIVATE = 6;
+        AWS_RE__CL__POST = 7;
+        AWS_RE__CL__POST_PRIVATE = 8;
+      }
+
+      optional CustomerEnablementService aws_service = 1;
+      optional SecondaryDataType secondaryDataType = 2;
+    }
+
+    message Database{
+
+      enum DatabaseService {
+        DEFAULT_DATABASE_SERVICE = 0;
+        AMAZON_AURORA = 1;
+        AMAZON_DOCUMENTDB = 2;
+        AMAZON_DYNAMODB = 3;
+        AMAZON_KEYSPACES = 4;
+        AWS_DATABASE_MIGRATION_SERVICE___OP__AWS_DMS__CP__ = 5;
+        AMAZON_NEPTUNE = 6;
+        AMAZON_TIMESTREAM = 7;
+        AMAZON_RELATIONAL_DATABASE_SERVICE___OP__AMAZON_RDS__CP__ = 8;
+        AMAZON_MEMORYDB = 9;
+        AMAZON_ELASTICACHE = 10;
+        ORACLE_DATABASE__AT__AWS = 11;
+      }
+
+      enum DatabaseResource {
+        DEFAULT_DATABASE_RESOURCE = 0;
+        TRUSTED_LANGUAGE_EXTENSIONS_FOR_POSTGRESQL = 1;
+        AMAZON_DOCUMENTDB_ELASTIC_CLUSTERS = 2;
+        ITEM = 3;
+        ITEMS = 4;
+        ATTRIBUTE = 5;
+        ATTRIBUTES = 6;
+        TABLE = 7;
+        GLOBAL_SECONDARY_INDEX = 8;
+        AMAZON_DYNAMODB_ACCELERATOR___OP__DAX__CP__ = 9;
+        STANDARD_ACCESS_TABLE_CLASS = 10;
+        STANDARD__HYP__INFREQUENT_ACCESS_TABLE_CLASS = 11;
+        STREAM = 12;
+        DATABASE_MIGRATION_WORKFLOW_OR_JOB = 13;
+        MULTI__HYP__AZ = 14;
+        MULTI__HYP__AZ_DB_CLUSTER = 15;
+        BLUE__SLH__GREEN_DEPLOYMENTS = 16;
+        OPTIMIZED_WRITES = 17;
+        ELASTICACHE_FOR_REDIS = 18;
+        ELASTICACHE_FOR_MEMCACHED = 19;
+        CACHE_NODE = 20;
+        AMAZON_AURORA_INSTANCE = 21;
+        AMAZON_AURORA_INSTANCE_ALTERNATE = 22;
+        AMAZON_RDS_INSTANCE = 23;
+        AMAZON_RDS_INSTANCE_ALTERNATE = 24;
+        MYSQL_INSTANCE = 25;
+        MYSQL_INSTANCE_ALTERNATE = 26;
+        ORACLE_INSTANCE = 27;
+        ORACLE_INSTANCE_ALTERNATE = 28;
+        POSTGRESQL_INSTANCE = 29;
+        POSTGRESQL_INSTANCE_ALTERNATE = 30;
+        PIOPS_INSTANCE = 31;
+        AMAZON_RDS_PROXY_INSTANCE = 32;
+        AMAZON_RDS_PROXY_INSTANCE_ALTERNATE = 33;
+        MARIADB_INSTANCE = 34;
+        MARIADB_INSTANCE_ALTERNATE = 35;
+        SQL_SERVER_INSTANCE = 36;
+        SQL_SERVER_INSTANCE_ALTERNATE = 37;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional DatabaseService aws_service = 2;
+      optional DatabaseResource aws_resource = 3;
+
+    }
+
+    message DeveloperTools{
+      enum DeveloperToolsService {
+        DEFAULT_DEVELOPER_TOOLS_SERVICE = 0;
+        AWS_CLOUD9 = 1;
+        AWS_CODEBUILD = 2;
+        AWS_CODECOMMIT = 3;
+        AWS_CODEDEPLOY = 4;
+        AWS_CODEPIPELINE = 5;
+        AWS_COMMANDLINE_INTERFACE___OP__AWS_CLI__CP__ = 6;
+        AWS_TOOLS_AND_SDKS = 7;
+        AWS_X__HYP__RAY = 8;
+        AWS_CLOUD_DEVELOPMENT_KIT___OP__AWS_CDK__CP__ = 9;
+        AWS_CODEARTIFACT = 10;
+        AWS_CLOUDSHELL = 11;
+        AMAZON_CORRETTO = 12;
+        AWS_CLOUD_CONTROL_API = 13;
+        AMAZON_CODECATALYST = 14;
+        AWS_INFRASTRUCTURE_COMPOSER = 15;
+        AWS_FAULT_INJECTION_SERVICE = 16;
+      }
+
+      enum DevloperToolsResource {
+        DEFAULT_DEVELOPER_TOOLS_RESOURCE = 0;
+        CLOUD9 = 1;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional DeveloperToolsService aws_service = 2;
+      optional DevloperToolsResource aws_resource = 3;
+
+    }
+
+    message EndUserComputing{
+
+      enum EndUserComputingService {
+        DEFAULT_ENDUSER_COMPUTING_SERVICE = 0;
+        AMAZON_APPSTREAM_2__DOT__0 = 1;
+        AMAZON_WORKSPACES_FAMILY = 2;
+        AMAZON_WORKSPACES_THIN_CLIENT = 3;
+      }
+
+      enum EndUserComputingResource {
+        DEFAULT_ENDUSER_COMPUTING_RESOURCE = 0;
+        AMAZON_WORKSPACES = 1;
+        AMAZON_WORKSPACES_CORE = 2;
+        AMAZON_WORKSPACES_SECURE_BROWSER = 3;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional EndUserComputingService aws_service = 2;
+      optional EndUserComputingResource aws_resource = 3;
+
+    }
+
+    message FrontEndWebMobile{
+      enum FrontEndWebMobileService {
+        DEFAULT_FRONT_END_WEB_MOBILE_SERVICE = 0;
+        AWS_AMPLIFY = 1;
+        AWS_DEVICE_FARM = 2;
+        AMAZON_LOCATION_SERVICE = 3;
+      }
+
+      enum FrontEndWebMobileResource {
+        DEFAULT_FRONT_END_WEB_MOBILE_RESOURCE = 0;
+        AWS_AMPLIFY_STUDIO = 1;
+        TRACK = 2;
+        PLACE = 3;
+        MAP = 4;
+        GEOFENCE = 5;
+        ROUTES = 6;
+      }
+      optional SecondaryDataType secondaryDataType = 1;
+      optional FrontEndWebMobileService aws_service = 2;
+      optional FrontEndWebMobileResource aws_resource = 3;
+
+    }
+
+    message Games{
+
+      enum GamesService {
+        DEFAULT_GAMES_SERVICE = 0;
+        AMAZON_GAMELIFT = 1;
+        OPEN_3D_ENGINE = 2;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional GamesService aws_service = 2;
+
+    }
+
+    message InternetOfThings{ 
+
+      enum InternetOfThingsService {
+        DEFAULT_INTERNET_OF_THINGS_SERVICE = 0;
+        FREERTOS = 1;
+        AWS_IOT_ANALYTICS = 2;
+        AWS_IOT_BUTTON = 3;
+        AWS_IOT_CORE = 4;
+        AWS_IOT_DEVICE_DEFENDER = 5;
+        AWS_IOT_DEVICE_MANAGEMENT = 6;
+        AWS_IOT_EVENTS = 7;
+        AWS_IOT_GREENGRASS = 8;
+        AWS_IOT_SITEWISE = 9;
+        AWS_IOT_EXPRESSLINK = 10;
+        AWS_IOT_TWINMAKER = 11;
+        AWS_IOT_FLEETWISE = 12;
+      }
+
+      enum InternetOfThingsResource {
+        DEFAILT_INTERNET_OF_THINGS_RESOURCE = 0;
+        AWS_IOT_DEVICE_TESTER = 1;
+        CHANNEL = 2;
+        DATASET = 3;
+        PIPELINE = 4;
+        NOTEBOOK = 5;
+        DATA_STORE = 6;
+        DEVICE_ADVISOR = 7;
+        DEVICE_LOCATION = 8;
+        IOT_DEVICE_JOBS = 9;
+        FLEET_HUB = 10;
+        CONNECTOR = 11;
+        STREAM_MANAGER = 12;
+        ARTIFACT = 13;
+        COMPONENT = 14;
+        COMPONENT_MACHINE_LEARNING = 15;
+        COMPONENT_NUCLEUS = 16;
+        COMPONENT_PRIVATE = 17;
+        COMPONENT_PUBLIC = 18;
+        INTERPROCESS_COMMUNICATION = 19;
+        PROTOCOL = 20;
+        RECIPE = 21;
+        ASSET_MODEL = 22;
+        ASSET = 23;
+        ASSET_HIERARCHY = 24;
+        PROPERTIES = 25;
+        DATA_STREAMS = 26;
+        IOT_ACTION = 27;
+        IOT_ACTUATOR = 28;
+        IOT_CERTIFICATE = 29;
+        IOT_DESIRED_STATE = 30;
+        IOT_HARDWARE_BOARD = 31;
+        IOT_HTTP_PROTOCOL = 32;
+        IOT_HTTP__SLH__2_PROTOCOL = 33;
+        IOT_MQTT_PROTOCOL = 34;
+        IOT_POLICY = 35;
+        IOT_REPORTED_STATE = 36;
+        IOT_RULE = 37;
+        IOT_SENSOR = 38;
+        IOT_SERVO = 39;
+        IOT_SHADOW = 40;
+        IOT_SIMULATOR = 41;
+        IOT_TOPIC = 42;
+        ALEXA_SKILL = 43;
+        ALEXA_VOICE_SERVICE = 44;
+        ALEXA__HYP__ENABLED_DEVICE = 45;
+        ECHO = 46;
+        FIRE_TV = 47;
+        FIRE_TV_STICK = 48;
+        LAMBDA_FUNCTION = 49;
+        TEXT_BOX = 50;
+        DEVICE_GATEWAY = 51;
+        AWS_IOT_CORE_FOR_LORAWAN_PROTOCOL = 52;
+        LORAWAN_PROTOCOL = 53;
+        IOT_THING_BANK = 54;
+        IOT_THING_BICYCLE = 55;
+        IOT_THING_CAMERA = 56;
+        IOT_THING_CAR = 57;
+        IOT_THING_CART = 58;
+        IOT_THING_COFFEE_POT = 59;
+        IOT_THING_DOOR_LOCK = 60;
+        IOT_THING_FACTORY = 61;
+        IOT_THING_GENERIC = 62;
+        IOT_THING_HOUSE = 63;
+        IOT_THING_THERMOSTAT = 64;
+        IOT_THING_LIGHTBULB = 65;
+        IOT_THING_TRAVEL = 66;
+        IOT_THING_MEDICAL_EMERGENCY = 67;
+        IOT_THING_POLICE_EMERGENCY = 68;
+        IOT_THING_UTILITY = 69;
+        IOT_THING_WINDFARM = 70;
+        IOT_THING_HUMIDITY_SENSOR = 71;
+        IOT_THING_VIBRATION_SENSOR = 72;
+        IOT_THING_TEMPERATURE_SENSOR = 73;
+        IOT_THING_TEMPERATURE___AND___HUMIDITY_SENSOR = 74;
+        IOT_THING_TEMPERATURE___AND___VIBRATION_SENSOR = 75;
+        IOT_THING_RELAY = 76;
+        IOT_THING_STACK_LIGHT = 77;
+        IOT_THING_FREERTOS_DEVICE = 78;
+        IOT_THING_INDUSTRIAL_PC = 79;
+        IOT_THING_PLC = 80;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional InternetOfThingsService aws_service = 2;
+      optional InternetOfThingsResource aws_resource = 3;
+
+    }
+
+
+    message ArtificialIntelligence{
+
+      enum ArtificialIntelligenceService {
+        DEFAULT_ARTIFICIAL_INTELLIGENCE_SERVICE = 0;
+        AMAZON_COMPREHEND = 1;
+        AMAZON_ELASTIC_INFERENCE = 2;
+        AMAZON_FORECAST = 3;
+        AMAZON_LEX = 4;
+        AMAZON_PERSONALIZE = 5;
+        AMAZON_POLLY = 6;
+        AMAZON_REKOGNITION = 7;
+        AMAZON_SAGEMAKER_AI = 8;
+        AMAZON_SAGEMAKER_GROUND_TRUTH = 9;
+        AMAZON_TEXTRACT = 10;
+        AMAZON_TRANSCRIBE = 11;
+        AMAZON_TRANSLATE = 12;
+        AWS_DEEP_LEARNING_AMIS = 13;
+        AWS_DEEP_LEARNING_CONTAINERS = 14;
+        AWS_DEEPLENS = 15;
+        AWS_DEEPRACER = 16;
+        APACHE_MXNET_ON_AWS = 17;
+        TENSORFLOW_ON_AWS = 18;
+        AWS_DEEPCOMPOSER = 19;
+        AMAZON_AUGMENTED_AI___OP__AMAZON_A2I__CP__ = 20;
+        AMAZON_FRAUD_DETECTOR = 21;
+        AMAZON_KENDRA = 22;
+        AMAZON_CODEGURU = 23;
+        PYTORCH_ON_AWS = 24;
+        AMAZON_LOOKOUT_FOR_METRICS = 25;
+        AMAZON_LOOKOUT_FOR_VISION = 26;
+        AMAZON_MONITRON = 27;
+        AWS_NEURON = 28;
+        AMAZON_DEVOPS_GURU = 29;
+        AWS_HEALTHLAKE = 30;
+        AWS_PANORAMA = 31;
+        AMAZON_SAGEMAKER_STUDIO_LAB = 32;
+        AMAZON_COMPREHEND_MEDICAL = 33;
+        AWS_HEALTHOMICS = 34;
+        AWS_HEALTHIMAGING = 35;
+        AWS_HEALTHSCRIBE = 36;
+        AMAZON_BEDROCK = 37;
+        AMAZON_Q = 38;
+        AWS_APP_STUDIO = 39;
+        AMAZON_NOVA = 40;
+        AMAZON_CODEWHISPERER = 41;
+        AMAZON_LOOKOUT_FOR_EQUIPMENT = 42;
+      }
+
+      enum ArtificialIntelligenceResource {
+        DEFAULT_ARTIFICIAL_INTELLIGENCE_RESOURCE = 0;
+        AMAZON_REKOGNITION_IMAGE = 1;
+        AMAZON_REKOGNITION_VIDEO = 2;
+        NOTEBOOK = 3;
+        CANVAS = 4;
+        MODEL = 5;
+        TRAIN = 6;
+        SHADOW_TESTING = 7;
+        GEOSPATIAL_ML = 8;
+        ANALYZE_LENDING = 9;
+        INSIGHTS = 10;
+      }	
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional ArtificialIntelligenceService aws_service = 2;
+      optional ArtificialIntelligenceResource aws_resource = 3;
+
+    }
+
+    message ManagementAndGovernance{ 
+
+      enum ManagementAndGovernanceService {
+        DEFAULT_MANAGEMENT_AND_GOVERNMENT_SERVICE = 0;
+        AMAZON_CLOUDWATCH = 1;
+        AWS_AUTO_SCALING = 2;
+        AWS_CLOUDFORMATION = 3;
+        AWS_APPLICATION_AUTO_SCALING = 4;
+        AWS_CONFIG = 5;
+        AWS_LICENSE_MANAGER = 6;
+        AWS_HEALTH_DASHBOARD = 7;
+        AWS_MANAGEMENT_CONSOLE = 8;
+        AWS_CLOUDTRAIL = 9;
+        AWS_USER_NOTIFICATIONS = 10;
+        AWS_SERVICE_CATALOG = 11;
+        AWS_SYSTEMS_MANAGER = 12;
+        AWS_TRUSTED_ADVISOR = 13;
+        AWS_WELL__HYP__ARCHITECTED_TOOL = 14;
+        AWS_CONTROL_TOWER = 15;
+        AWS_ORGANIZATIONS = 16;
+        AWS_APPCONFIG = 17;
+        AWS_CHATBOT = 18;
+        AWS_BACKINT_AGENT = 19;
+        AMAZON_MANAGED_GRAFANA = 20;
+        AMAZON_MANAGED_SERVICE_FOR_PROMETHEUS = 21;
+        AWS_DISTRO_FOR_OPENTELEMETRY = 22;
+        AWS_SERVICE_MANAGEMENT_CONNECTOR___OP__SMC__CP__ = 23;
+        AWS_PROTON = 24;
+        AWS_LAUNCH_WIZARD = 25;
+        AWS_RESILIENCE_HUB = 26;
+        AWS_CONSOLE_MOBILE_APPLICATION = 27;
+        AWS_RESOURCE_EXPLORER = 28;
+        AWS_TELCO_NETWORK_BUILDER = 29;
+        AWS_COMPUTE_OPTIMIZER = 30;
+      }
+
+      enum ManagementAndGovernanceResource {
+        DEFAULT_MANAGEMENT_AND_GOVERNANCE_RESOURCE = 0;
+        ALARM = 1;
+        RULE = 2;
+        RUM = 3;
+        CROSS__HYP__ACCOUNT_OBSERVABILITY = 4;
+        EVENT___OP__TIME_BASED__CP__ = 5;
+        EVENT___OP__EVENT_BASED__CP__ = 6;
+        EVIDENTLY = 7;
+        DATA_PROTECTION = 8;
+        LOGS = 9;
+        SYNTHETICS = 10;
+        METRICS_INSIGHTS = 11;
+        CHANGE_SET = 12;
+        STACK = 13;
+        TEMPLATE = 14;
+        LICENSE_BLENDING = 15;
+        APPLICATION_DISCOVERY = 16;
+        CLOUDTRAIL_LAKE = 17;
+        AUTOMATION = 18;
+        DOCUMENTS = 19;
+        PATCH_MANAGER = 20;
+        PARAMETER_STORE = 21;
+        OPSCENTER = 22;
+        MAINTENANCE_WINDOWS = 23;
+        INVENTORY = 24;
+        STATE_MANAGER = 25;
+        RUN_COMMAND = 26;
+        INCIDENT_MANAGER = 27;
+        SESSION_MANAGER = 28;
+        CHANGE_MANAGER = 29;
+        CHANGE_CALENDAR = 30;
+        COMPLIANCE = 31;
+        APPLICATION_MANAGER = 32;
+        DISTRIBUTOR = 33;
+        CHECKLIST_COST = 34;
+        CHECKLIST_PERFORMANCE = 35;
+        CHECKLIST_SECURITY = 36;
+        CHECKLIST_FAULT_TOLERANT = 37;
+        CHECKLIST = 38;
+        ACCOUNT = 39;
+        ORGANIZATIONAL_UNIT = 40;
+        MANAGEMENT_ACCOUNT = 41;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional ManagementAndGovernanceService aws_service = 2;
+      optional ManagementAndGovernanceResource aws_resource = 3;
+
+    }
+
+
+    message MediaServices{ 
+
+      enum MediaServicesService {
+        DEFAULT_MEDIA_SERVICES_SERVICE = 0;
+        AMAZON_ELASTIC_TRANSCODER = 1;
+        AMAZON_KINESIS_VIDEO_STREAMS = 2;
+        AWS_ELEMENTAL_MEDIACONNECT = 3;
+        AWS_ELEMENTAL_MEDIACONVERT = 4;
+        AWS_ELEMENTAL_MEDIALIVE = 5;
+        AWS_ELEMENTAL_MEDIAPACKAGE = 6;
+        AWS_ELEMENTAL_MEDIASTORE = 7;
+        AWS_ELEMENTAL_MEDIATAILOR = 8;
+        AWS_ELEMENTAL_CONDUCTOR = 9;
+        AWS_ELEMENTAL_DELTA = 10;
+        AWS_ELEMENTAL_LIVE = 11;
+        AWS_ELEMENTAL_SERVER = 12;
+        AWS_ELEMENTAL_APPLIANCES___AND___SOFTWARE = 13;
+        AMAZON_INTERACTIVE_VIDEO_SERVICE = 14;
+        AWS_ELEMENTAL_LINK = 15;
+        AWS_DEADLINE_CLOUD = 16;
+        AWS_THINKBOX_KRAKATOA = 17;
+        AWS_THINKBOX_DEADLINE = 18;
+        AWS_THINKBOX_XMESH = 19;
+        AWS_THINKBOX_FROST = 20;
+        AWS_THINKBOX_STOKE = 21;
+        AWS_THINKBOX_SEQUOIA = 22;
+      }
+
+      enum MediaServicesResource {
+        DEFAULT_MEDIA_SERVICES_RESOURCE = 0;
+        AWS_CLOUD_DIGITAL_INTERFACE = 1;
+        MEDIACONNECT_GATEWAY = 2;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional MediaServicesService aws_service = 2;
+      optional MediaServicesResource aws_resource = 3;
+
+    }
+
+
+    message MigrationAndModernization{
+
+      enum MigrationAndModernizationService {
+        DEFAULT_MIGRATION_AND_TRANSFER_SERVICE = 0;
+        AWS_APPLICATION_DISCOVERY_SERVICE = 1;
+        AWS_TRANSFER_FAMILY = 2;
+        AWS_MIGRATION_EVALUATOR = 3;
+        AWS_APPLICATION_MIGRATION_SERVICE = 4;
+        AWS_DATASYNC = 5;
+        AWS_MIGRATION_HUB = 6;
+        AWS_MAINFRAME_MODERNIZATION = 7;
+        AWS_DATA_TRANSFER_TERMINAL = 8;
+        AMAZON_ELASTIC_VMWARE_SERVICE = 9;
+      }
+
+      enum MigrationAndModernizationResource {
+        DEFAULT_MIGRATION_AND_TRANSFER_RESOURCE = 0;
+        AGENTLESS_COLLECTOR = 1;
+        DISCOVERY_AGENT = 2;
+        MIGRATION_EVALUATOR_COLLECTOR = 3;
+        AGENT = 4;
+        DISCOVERY = 5;
+        ANALYZER = 6;
+        CONVERTER = 7;
+        REFACTOR_SPACES_APPLICATIONS = 8;
+        REFACTOR_SPACES_SERVICES = 9;
+        COMPILER = 10;
+        REFACTOR_SPACES_ENVIRONMENTS = 11;
+        DEVELOPER = 12;
+        RUNTIME = 13;
+        AWS_FTP = 14;
+        AWS_SFTP = 15;
+        AWS_FTPS = 16;
+        AWS_AS2 = 17;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional MigrationAndModernizationService aws_service = 2;
+      optional MigrationAndModernizationResource aws_resource = 3;
+
+    }
+
+    message NetworkingAndContentDelivery{
+
+      enum NetworkingAndContentDeliveryService {
+        DEFAULT_NETWORKING_CONTENT_DELIVERY_SERVICE = 0;
+        AWS_TRANSIT_GATEWAY = 1;
+        AMAZON_CLOUDFRONT = 2;
+        AMAZON_ROUTE_53 = 3;
+        AMAZON_VIRTUAL_PRIVATE_CLOUD___OP__AMAZON_VPC__CP__ = 4;
+        AWS_APP_MESH = 5;
+        AWS_CLOUD_MAP = 6;
+        AWS_DIRECT_CONNECT = 7;
+        AWS_GLOBAL_ACCELERATOR = 8;
+        AWS_CLIENT_VPN = 9;
+        AWS_SITE__HYP__TO__HYP__SITE_VPN = 10;
+        ELASTIC_LOAD_BALANCING = 11;
+        AWS_PRIVATELINK = 12;
+        AWS_CLOUD_WAN = 13;
+        AWS_PRIVATE_5G = 14;
+        AMAZON_VPC_LATTICE = 15;
+        AWS_VERIFIED_ACCESS = 16;
+        AMAZON_API_GATEWAY = 17;
+        AMAZON_APPLICATION_RECOVERY_CONTROLLER = 18;
+      }
+
+      enum NetworkingAndContentDeliveryResource {
+        DEFAULT_NETWORKING_CONTENT_DELIVERY_RESOURCE = 0;
+        ATTACHMENT = 1;
+        DOWNLOAD_DISTRIBUTION = 2;
+        EDGE_LOCATION = 3;
+        STREAMING_DISTRIBUTION = 4;
+        FUNCTIONS = 5;
+        HOSTED_ZONE = 6;
+        ROUTE_TABLE = 7;
+        READINESS_CHECKS = 8;
+        RESOLVER = 9;
+        RESOLVER_DNS_FIREWALL = 10;
+        ROUTING_CONTROLS = 11;
+        RESOLVER_QUERY_LOGGING = 12;
+        CUSTOMER_GATEWAY = 13;
+        INTERNET_GATEWAY = 14;
+        VPN_GATEWAY = 15;
+        FLOW_LOGS = 16;
+        ENDPOINTS = 17;
+        ROUTER = 18;
+        TRAFFIC_MIRRORING = 19;
+        NAT_GATEWAY = 20;
+        ELASTIC_NETWORK_INTERFACE = 21;
+        ELASTIC_NETWORK_ADAPTER = 22;
+        NETWORK_ACCESS_CONTROL_LIST = 23;
+        VPN_CONNECTION = 24;
+        PEERING_CONNECTION = 25;
+        REACHABILITY_ANALYZER = 26;
+        CARRIER_GATEWAY = 27;
+        NETWORK_ACCESS_ANALYZER = 28;
+        VIRTUAL_PRIVATE_CLOUD___OP__VPC__CP__ = 29;
+        MESH = 30;
+        VIRTUAL_GATEWAY = 31;
+        VIRTUAL_NODE = 32;
+        VIRTUAL_ROUTER = 33;
+        VIRTUAL_SERVICE = 34;
+        SERVICE = 35;
+        NAMESPACE = 36;
+        RESOURCE = 37;
+        GATEWAY = 38;
+        APPLICATION_LOAD_BALANCER = 39;
+        NETWORK_LOAD_BALANCER = 40;
+        CLASSIC_LOAD_BALANCER = 41;
+        GATEWAY_LOAD_BALANCER = 42;
+        SEGMENT_NETWORK = 43;
+        CORE_NETWORK_EDGE = 44;
+        TRANSIT_GATEWAY_ROUTE_TABLE_ATTACHMENT = 45;
+        ENDPOINT = 46;
+      }
+      optional SecondaryDataType secondaryDataType = 1;
+      optional NetworkingAndContentDeliveryService aws_service = 2;
+      optional NetworkingAndContentDeliveryResource aws_resource = 3;
+
+    }
+
+    message QuantumTechnologies{ 
+      enum QuantumTechnologiesService {
+        DEFAULT_QUANTUM_TECHNOLOGIES_SERVICE = 0;
+        AMAZON_BRAKET = 1;
+      }
+
+      enum QuantumTechnologiesResource {
+        DEFAULT_QUANTUM_TECHNOLOGIES_RESOURCE = 0;
+        CHANDELIER = 1;
+        CHIP = 2;
+        QPU = 3;
+        SIMULATOR = 4;
+        SIMULATOR_1 = 5;
+        SIMULATOR_2 = 6;
+        SIMULATOR_3 = 7;
+        SIMULATOR_4 = 8;
+        STATE_VECTOR = 9;
+        TENSOR_NETWORK = 10;
+        NOISE_SIMULATOR = 11;
+        EMBEDDED_SIMULATOR = 12;
+        MANAGED_SIMULATOR = 13;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional QuantumTechnologiesService aws_service = 2;
+      optional QuantumTechnologiesResource aws_resource = 3;
+    }
+
+
+    message Robotics{ 
+      enum RoboticsService {
+        DEFAULT_ROBOTICS_SERVICE = 0;
+        AWS_ROBOMAKER = 1;
+      }
+
+      enum RoboticsResource {
+        DEFAULT_ROBOTICS_RESOURCE = 0;
+        CLOUD_EXTENSIONS_ROS = 1;
+        DEVELOPMENT_ENVIRONMENT = 2;
+        FLEET_MANAGEMENT = 3;
+        SIMULATION = 4;
+      }
+
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional RoboticsService aws_service = 2;
+      optional RoboticsResource aws_resource = 3;
+
+    }
+
+    message Satellite{ 
+
+      enum SatelliteService {
+        DEFAULT_SATELLITE_SERVICE = 0;
+        AWS_GROUND_STATION = 1;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional SatelliteService aws_service = 2;
+    }
+
+    message SecurityIdentityCompliance{
+
+      enum SecurityIdentityComplianceService {
+        DEFAULT_SECURITY_IDENTITY_COMPLIANCE_SERVICE = 0;
+        AMAZON_CLOUD_DIRECTORY = 1;
+        AMAZON_COGNITO = 2;
+        AMAZON_GUARDDUTY = 3;
+        AMAZON_INSPECTOR = 4;
+        AMAZON_MACIE = 5;
+        AWS_ARTIFACT = 6;
+        AWS_CERTIFICATE_MANAGER___OP__ACM__CP__ = 7;
+        AWS_CLOUDHSM = 8;
+        AWS_DIRECTORY_SERVICE = 9;
+        AWS_FIREWALL_MANAGER = 10;
+        AWS_IDENTITY_AND_ACCESS_MANAGEMENT___OP__IAM__CP__ = 11;
+        AWS_KEY_MANAGEMENT_SERVICE___OP__AWS_KMS__CP__ = 12;
+        AWS_SECRETS_MANAGER = 13;
+        AWS_SECURITY_HUB = 14;
+        AWS_SHIELD = 15;
+        AWS_IAM_IDENTITY_CENTER = 16;
+        AWS_WAF = 17;
+        AMAZON_DETECTIVE = 18;
+        AWS_RESOURCE_ACCESS_MANAGER = 19;
+        AWS_AUDIT_MANAGER = 20;
+        AWS_NETWORK_FIREWALL = 21;
+        AWS_SIGNER = 22;
+        AWS_PRIVATE_CERTIFICATE_AUTHORITY = 23;
+        AMAZON_VERIFIED_PERMISSIONS = 24;
+        AMAZON_SECURITY_LAKE = 25;
+        AWS_PAYMENT_CRYPTOGRAPHY = 26;
+        AWS_SECURITY_INCIDENT_RESPONSE = 27;
+      }
+
+      enum SecurityIdentityComplianceResource {
+        DEFAULT_SECURITY_IDENTITY_COMPLIANCE_RESOURCE = 0;
+        AGENT = 1;
+        CERTIFICATE_AUTHORITY = 2;
+        SIMPLE_AD = 3;
+        AD_CONNECTOR = 4;
+        AWS_MANAGED_MICROSOFT_AD = 5;
+        ADD__HYP__ON = 6;
+        PERMISSIONS = 7;
+        MFA_TOKEN = 8;
+        ROLE = 9;
+        AWS_STS = 10;
+        AWS_STS_ALTERNATE = 11;
+        LONG__HYP__TERM_SECURITY_CREDENTIAL = 12;
+        IAM_ACCESS_ANALYZER = 13;
+        ENCRYPTED_DATA = 14;
+        DATA_ENCRYPTION_KEY = 15;
+        TEMPORARY_SECURITY_CREDENTIAL = 16;
+        IAM_ROLES_ANYWHERE = 17;
+        EXTERNAL_KEY_STORE___OP__XKS__CP__ = 18;
+        FINDING = 19;
+        AWS_SHIELD_ADVANCED = 20;
+        RULE = 21;
+        MANAGED_RULE = 22;
+        FILTERING_RULE = 23;
+        LABELS = 24;
+        BOT = 25;
+        BAD_BOT = 26;
+        BOT_CONTROL = 27;
+        ENDPOINTS = 28;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional SecurityIdentityComplianceService aws_service = 2;
+      optional SecurityIdentityComplianceResource aws_resource = 3;
+
+    }
+
+    message Serverless {
+
+      optional SecondaryDataType  secondaryDataType = 1;
+    }
+
+    message Storage{
+      enum StorageService {
+        DEFAULT_STORAGE_SERVICE = 0;
+        AMAZON_ELASTIC_BLOCK_STORE = 1;
+        AWS_STORAGE_GATEWAY = 2;
+        AMAZON_EFS = 3;
+        AWS_ELASTIC_DISASTER_RECOVERY___OP__AWS_DRS__CP__ = 4;
+        AMAZON_FSX = 5;
+        AMAZON_FSX_FOR_LUSTRE = 6;
+        AMAZON_FSX_FOR_WINDOWS_FILE_SERVER = 7;
+        AMAZON_FSX_FOR_NETAPP_ONTAP = 8;
+        AMAZON_FSX_FOR_OPENZFS = 9;
+        AWS_SNOWBALL_EDGE = 10;
+        AWS_SNOWBALL = 11;
+        AMAZON_FILE_CACHE = 12;
+        AWS_BACKUP = 13;
+        AMAZON_SIMPLE_STORAGE_SERVICE = 14;
+        AMAZON_S3_ON_OUTPOSTS = 15;
+        AMAZON_S3_GLACIER = 16;
+      }
+
+      enum StorageResource {	
+        DEFAULT_STORAGE_RESOURCE = 0;
+        SNAPSHOT = 1;
+        MULTIPLE_VOLUMES = 2;
+        AMAZON_DATA_LIFECYCLE_MANAGER = 3;
+        VOLUME = 4;
+        VOLUME_GP3 = 5;
+        NONCACHED_VOLUME = 6;
+        CACHED_VOLUME = 7;
+        AMAZON_FSX_FILE_GATEWAY = 8;
+        VIRTUAL_TAPE_LIBRARY = 9;
+        TAPE_GATEWAY = 10;
+        AMAZON_S3_FILE_GATEWAY = 11;
+        VOLUME_GATEWAY = 12;
+        FILE_GATEWAY = 13;
+        FILE_SYSTEM = 14;
+        EFS_STANDARD = 15;
+        EFS_STANDARD__HYP__INFREQUENT_ACCESS = 16;
+        EFS_INTELLIGENT__HYP__TIERING = 17;
+        EFS_ONE_ZONE = 18;
+        EFS_ONE_ZONE__HYP__INFREQUENT_ACCESS = 19;
+        ELASTIC_THROUGHPUT = 20;
+        SNOWBALL_IMPORT__HYP__EXPORT = 21;
+        ON__HYP__PREMISES_NFS_LINKED_DATASETS = 22;
+        HYBRID_NFS_LINKED_DATASETS = 23;
+        S3_LINKED_DATASETS = 24;
+        BACKUP_PLAN = 25;
+        BACKUP_VAULT = 26;
+        VIRTUAL_MACHINE = 27;
+        VIRTUAL_MACHINE_MONITOR = 28;
+        AWS_BACKUP_VAULT_LOCK = 29;
+        AWS_BACKUP_SUPPORT_FOR_VMWARE_WORKLOADS = 30;
+        AWS_BACKUP_FOR_AWS_CLOUDFORMATION = 31;
+        RECOVERY_POINT_OBJECTIVE = 32;
+        RECOVERY_TIME_OBJECTIVE = 33;
+        DATABASE = 34;
+        STORAGE = 35;
+        LEGAL_HOLD = 36;
+        AWS_BACKUP_SUPPORT_FOR_AMAZON_S3 = 37;
+        COMPLIANCE_REPORTING = 38;
+        BACKUP_RESTORE = 39;
+        GATEWAY = 40;
+        COMPUTE = 41;
+        AWS_BACKUP_AUDIT_MANAGER = 42;
+        AWS_BACKUP_SUPPORT_FOR_AMAZON_FSX_FOR_NETAPP_ONTAP = 43;
+        GENERAL_PURPOSE_BUCKET = 44;
+        DIRECTORY_BUCKET = 45;
+        BUCKET_WITH_OBJECTS = 46;
+        S3_REPLICATION = 47;
+        S3_REPLICATION_TIME_CONTROL = 48;
+        S3_STORAGE_LENS = 49;
+        ACCESS_POINTS = 50;
+        VPC_ACCESS_POINTS = 51;
+        S3_OBJECT_LAMBDA = 52;
+        S3_OBJECT_LAMBDA_ACCESS_POINTS = 53;
+        S3_MULTI__HYP__REGION_ACCESS_POINTS = 54;
+        S3_SELECT = 55;
+        S3_OBJECT_LOCK = 56;
+        S3_BATCH_OPERATIONS = 57;
+        S3_TABLES = 58;
+        OBJECT = 59;
+        ARCHIVE = 60;
+      }	
+
+      enum StorageClasses {
+        DEFAULT_STORAGE_CLASS = 0;
+        S3_STANDARD = 1;
+        S3_INTELLIGENT__HYP__TIERING = 2;
+        S3_STANDARD__HYP__IA = 3;
+        S3_ONE_ZONE__HYP__IA = 4;
+        S3_GLACIER_FLEXIBLE_RETRIEVAL = 5;
+        S3_GLACIER_DEEP_ARCHIVE = 6;
+        S3_GLACIER_INSTANT_RETRIEVAL = 7;
+        S3_ON_OUTPOSTS = 8;
+        S3_EXPRESS_ONE_ZONE = 9;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional StorageService aws_service = 2;
+      optional StorageResource aws_resource = 3;
+      optional StorageClasses aws_classes = 4;
+
+    }
+
+    message General{
+
+      enum GeneralService {
+        DEFAULT_GENERAL_SERVICE = 0;
+        AWS_MARKETPLACE = 1;
+      }
+
+      enum GeneralResource {
+        DEFAULT_GENERAL_RESOURCE = 0;
+        CLIENT = 1;
+        MOBILE_CLIENT = 2;
+        DISK = 3;
+        SERVER = 4;
+        SERVERS = 5;
+        TAPE_STORAGE = 6;
+        DATABASE = 7;
+        COLD_STORAGE = 8;
+        DATA_STREAM = 9;
+        INTERNET_ALT1 = 10;
+        INTERNET_ALT2 = 11;
+        GLOBE = 12;
+        OFFICE_BUILDING = 13;
+        FIREWALL = 14;
+        SAML_TOKEN = 15;
+        SSL_PADLOCK = 16;
+        CREDENTIALS = 17;
+        ALERT = 18;
+        TOOLKIT = 19;
+        SDK = 20;
+        USER = 21;
+        AUTHENTICATED_USER = 22;
+        USERS = 23;
+        FORUMS = 24;
+        CHAT = 25;
+        PROGRAMMING_LANGUAGE = 26;
+        SOURCE_CODE = 27;
+        LOGS = 28;
+        JSON_SCRIPT = 29;
+        DOCUMENT = 30;
+        DOCUMENTS = 31;
+        FOLDER = 32;
+        FOLDERS = 33;
+        MAGNIFYING_GLASS = 34;
+        GENERIC_APPLICATION = 35;
+        EMAIL = 36;
+        METRICS__CMA___DATA_VISUALIZATION = 37;
+        GIT_REPOSITORY = 38;
+        AWS_MANAGEMENT_CONSOLE = 39;
+        CAMERA = 40;
+        QUESTION = 41;
+        RECOVER = 42;
+        GEAR = 43;
+        DATA_TABLE = 44;
+        MULTIMEDIA = 45;
+        SHIELD = 46;
+        INTERNET = 47;
+      }
+
+      optional SecondaryDataType secondaryDataType = 1;
+      optional GeneralService aws_service = 2;
+      optional GeneralResource aws_resource = 3;
+
+    }
+
+    optional PrimaryDataType primaryDataType = 1;
+    optional DataGroup dataGroup = 2;
+    optional Analytics analytics = 3;
+    optional ApplicationIntegration applicationIntegration = 4;
+    optional Blockchain blockchain = 5;
+    optional BusinessApplications businessApplications = 6;
+    optional CloudFinancialManagement cloudFinancialManagement = 7;
+    optional Compute compute = 8;
+    optional ContactCenter contactCenter = 9;
+    optional Containers containers = 10;
+    optional CustomerEnablement customerEnablement = 11;
+    optional Database database = 12;
+    optional DeveloperTools developerTools = 13;
+    optional EndUserComputing endUserComputing = 14;
+    optional FrontEndWebMobile frontEndWebMobile = 15;
+    optional Games games = 16;
+    optional InternetOfThings internetOfThings = 17;
+    optional ArtificialIntelligence artificialIntelligence = 18;
+    optional ManagementAndGovernance managementAndGovernance = 19;
+    optional MediaServices mediaServices = 20;
+    optional MigrationAndModernization migrationAndModernization = 21;
+    optional NetworkingAndContentDelivery networkingAndContentDelivery = 22;
+    optional QuantumTechnologies quantumTechnologies = 23;
+    optional Robotics robotics = 24;
+    optional Satellite satellite = 25;
+    optional SecurityIdentityCompliance securityIdentityCompliance = 26;
+    optional Serverless serverless = 27;
+    optional Storage storage = 28;
+    optional General general = 29;
+  }
+
+  message AWS_2025{
+    optional string version = 1;
+    optional AWSElements aws = 2;
+  }
+
+  optional AWS_2025 aws2025 = 1;
+}
+

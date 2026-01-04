@@ -1,0 +1,43 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "EmbeddedFontProtos";
+
+
+import "fontdocument.proto";
+import "fontstyle.proto";
+import "fontfamily.proto";
+
+message EmbeddedFont {
+
+	optional string id = 1;		
+
+	enum EmbeddedFontType {
+
+		UNKNOWN_EMBEDDEDFONT = 0;
+		LINKED = 1;
+		NON_LINKED = 2;
+	}
+
+	optional EmbeddedFontType type = 2;
+
+	message LinkedEmbed {
+
+		optional string embeddedFontId = 1;
+		message EmbedFontVariant {
+			optional com.zoho.common.FontStyle style = 1;
+		}
+		repeated EmbedFontVariant variants = 2;
+		optional com.zoho.common.FontFamily fontFamily = 3;
+	}
+
+	optional LinkedEmbed linked = 3;
+
+	message NonLinkedEmbed {
+
+		optional com.zoho.common.FontDocument fontDocument = 1;
+	}
+	optional NonLinkedEmbed nonLinked = 4;
+
+}

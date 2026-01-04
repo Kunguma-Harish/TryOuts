@@ -1,0 +1,16 @@
+include {
+ frameorshape.pb.h;
+  }
+class FrameOrShape  : com::zoho::remoteboard::FrameOrShape {
+  inherits Message;
+  constructor FrameOrShape : com::zoho::remoteboard::FrameOrShape();
+  function CopyFrom : nx_void CopyFrom(FrameOrShape& arg0);
+  function Clear : nx_void Clear();
+  property frames  : [own] nx_repeated_ptr_field[protobuf_array_Frame]* frames(nx_getter : temp_getframes, nx_setter : temp_setframes);
+  property shapes  : [own] nx_repeated_ptr_field[protobuf_array_ShapeObject]* shapes(nx_getter : temp_getshapes, nx_setter : temp_setshapes);
+  }
+
+repeated_ptr_field  {
+protobuf_array_FrameOrShape : FrameOrShape;
+}
+

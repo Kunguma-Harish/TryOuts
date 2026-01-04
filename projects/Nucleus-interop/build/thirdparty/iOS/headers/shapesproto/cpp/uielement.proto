@@ -1,0 +1,378 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "UIElementProtos";
+
+import "userfield.proto";
+import "dimension.proto";
+import "picturevalue.proto";
+import "time.proto";
+import "color.proto";
+import "colortweaks.proto";
+
+message UIElement {
+
+	enum UIElementType{
+
+		UNKNOWN = 0;
+		USERELEMENT = 1;
+		SELECTIONELEMENT = 2;
+		SLIDER = 3;
+		CALENDAR = 4;
+		TOGGLE = 5; // Switch and checkbox
+		STEPPER = 6;
+		BUTTON = 7;
+		LABEL = 8;
+		RATING = 9;	
+	}
+	optional UIElementType type = 1;
+	
+	// Base dimension of the element
+	optional com.zoho.common.Dimension dim = 2;
+
+	message UserElement {
+
+		enum UserElementType{
+
+			UNKNOWN=0;
+			PROFILE_PICTURE=1; //purpose
+		}
+
+		message ProfilePicture{
+
+			enum ProfilePictureType{
+
+				UNKNOWN = 0;
+				ELLIPTICAL = 1;
+				RECTANGLE = 2;
+			}
+			optional ProfilePictureType type = 1;
+			optional com.zoho.common.Dimension dim = 2;
+
+		}
+		optional UserElementType type = 1;
+
+		optional ProfilePicture profilePicture = 2;
+
+		optional int32 maxUsersToBeShown = 3;
+		
+		message UserElementInput {
+			repeated com.zoho.common.UserField users = 1;
+		}
+		optional UserElementInput input = 4;
+	}
+
+	optional UserElement userElement = 3;
+	
+	message ListInput {
+		enum ListInputType {
+			DEFAULT_COMBO_INPUT_TYPE = 0;
+			TEXT = 1;
+			IMAGE = 2;
+			TEXT_IMAGE = 3;
+		}
+		optional ListInputType type = 1;
+
+		message TextList {
+			optional LabelElement label = 1;
+
+			optional bool def = 2;
+		}	
+		repeated TextList textLists = 2;
+
+		message ImageList {
+			optional PictureValue picture = 1;
+			
+			optional bool def = 2;
+		}
+		repeated ImageList imageLists = 3;
+
+		message TextImageList {
+			message TextImageListItem {
+				optional LabelElement label = 1;
+				optional PictureValue picture = 2;
+				optional bool def = 3;
+			}	
+			repeated TextImageListItem items = 1;
+
+			// True - Render Picture and than text.	False - text followed by picture.
+			optional bool startWithPicture = 2;	
+		}
+		optional TextImageList textImageList = 4;		
+	}
+		
+	message ListSelection {
+		enum SelectionFunction {
+			DEFAULT_FUNCTION = 0;
+			SINGLE = 1;
+			MULTIPLE = 2;
+		}
+		optional SelectionFunction function = 1;
+
+		message SingleSelection {
+			optional SelectionFormat type = 1;
+		}
+		optional SingleSelection single = 2;
+
+		enum SelectionFormat {
+			DEFAULT_SELECTION_FORMAT = 0;
+			NONE = 1;
+			TICK = 2;
+			SQUARE = 3;
+			CIRCLE = 4; // Radio-button like
+		}
+
+		message MultipleSelection {
+			optional SelectionFormat type = 1;
+		}
+		optional MultipleSelection multiple = 3; 
+
+	}
+
+
+	// Defines both combo and normal list.
+	message SelectionElement {
+
+		enum SelectionElementType {
+			DEFAULT_SELECTION_ELEMENT = 0;
+			LIST = 1;
+			COMBO = 2;
+		}
+		optional SelectionElementType type = 1;
+
+		optional ListSelection list = 2;
+		
+		optional ListInput selectionInput = 3;
+	}
+	optional SelectionElement selectionElement = 4;
+
+	message SliderElement {
+		
+		enum SliderType {
+			
+			DEFAULT_SLIDER_TYPE = 0;
+			LINEAR = 1;
+			CIRCULAR = 2;
+		}
+		optional SliderType type = 1;
+
+		message SliderInput {
+			
+			optional float maxVal = 1;
+			
+			optional float minVal = 2;
+
+			message SliderInterval {
+				
+				optional float interval = 1;
+
+				enum SliderIntervalType {
+					DEFAULT_SLIDE_INTERVAL = 0;
+					MAJOR_INTERVAL = 1;
+					MINOR_INTERVAL = 2;
+				}
+				optional SliderIntervalType type = 2;
+			}
+			repeated SliderInterval intervals = 3;
+
+			optional float incrementVal = 4;
+
+			optional float defVal = 5;
+		}
+		optional SliderInput sliderInput = 2;
+
+		enum LinearSliderType {
+			DEFAULT_LINEAR_SLIDER_TYPE = 0;
+			HORIZONTAL = 1;
+			VERTICAL = 2;
+		}
+		optional LinearSliderType linearType = 3;
+	}
+	optional SliderElement sliderElement = 5;		
+
+	message CalendarElement {
+	
+		enum CalendarType {
+			DEFAULT_CALENDAR_TYPE = 0;
+			DATE_TIME_PICKER = 1;
+			DATE_PICKER = 2;
+		}	
+		optional CalendarType type = 1;	
+
+		enum DatePickerFormat {
+			DEFAULT_DATE_PICKER_FORMAT = 0;
+			YEAR_MONTH_DAY = 1;
+			YEAR_MONTH = 2;
+		}
+		optional DatePickerFormat dateFormat = 2;
+
+		enum TimePickerFormat {
+			DEFAULT_TIME_PICKER_FORMAT = 0;
+			HOUR_MINUTE_SECOND = 1;
+			HOUR_MINUTE = 2;
+		}
+		optional TimePickerFormat timeFormat = 3;
+		
+		enum ClockFormat {
+			DEFAULT_TIME_FORMAT = 0;
+			FULL_DAY_HOUR = 1; // 24 hr format
+			HALF_DAY_HOUR = 2; // 12 hr format
+		}
+		optional ClockFormat clockFormat = 4;
+
+		message CalendarInput {
+			optional com.zoho.common.Time date = 1;
+
+			optional com.zoho.common.Time maxDate = 2;
+			
+			optional com.zoho.common.Time minDate = 3;
+		}
+		optional CalendarInput calendarInput = 5;
+	}
+	optional CalendarElement calendarElement = 6;
+
+	message ToggleElement {
+
+		enum ToggleElementType {
+			DEFAULT_TOGGLE_ELEMENT_TYPE = 0;
+			CHECKBOX = 1;
+			SWITCH = 2;
+		}
+		optional ToggleElementType type = 1;
+		
+		optional bool label = 2;
+
+		enum LabelPosition {
+			DEFAULT_LABEL_POSITION = 0;
+			INSIDE = 1;
+			OUTSIDE = 2;
+		}
+		optional LabelPosition labelPos = 3;		
+
+		optional bool icon = 4;	
+		
+		message ToggleInput {
+			
+			optional bool state = 1;
+				
+			message DataForState {
+				
+				optional string onState = 1;
+
+				optional string offState = 2;
+			}
+			optional DataForState label = 2;
+			
+			optional DataForState icon = 3;
+		}
+		optional ToggleInput toggleInput = 5;	
+		
+	}
+	optional ToggleElement toggleElement = 7;
+
+	message StepperElement {
+	
+		message StepperInput {
+			
+			optional float defVal = 1;
+			
+			optional float maxVal = 2;
+			
+			optional float minVal = 3;
+			
+			optional float incermentVal = 4;
+		}	
+
+		optional StepperInput stepperInput = 1;
+
+		optional bool wrapVal = 2;
+	}
+	optional StepperElement stepperElement = 8;
+
+	message LabelElement {
+
+		enum LabelElementType {
+			DEFAULT_LABEL_ELEMENT = 0;
+			BG = 1;
+			STATUS = 2;
+		}
+		
+		optional LabelElementType type = 1;
+
+		optional string text = 2;	
+		
+		message BGLabel {
+			optional Color color = 1;
+		}
+		optional BGLabel bgLabel = 3;
+		
+		message StatusLabel {
+			optional Color color = 1;
+			
+			message StatusSymbol {
+				
+				enum StatusSymbolType {
+					DEFAULT_STATUS_SYMBOL_TYPE = 0;
+					CIRCLE = 1;
+					SQUARE = 2;
+					STAR = 3;
+				}
+				optional StatusSymbolType type = 1;	
+				
+				// Tweak the base color for status dot.
+				optional ColorTweaks tweaks = 2;
+			}
+			optional StatusSymbol symbol = 2;
+		}
+		optional StatusLabel statusLabel = 4;
+	}
+	
+	optional LabelElement labelElement = 9;
+
+	message RatingElement {
+		
+		message RatingInput {
+			optional float defVal = 1;
+			
+			optional float maxVal = 2;
+			
+			optional float minVal = 3;
+		}
+		optional RatingInput ratingInput = 1;
+
+		enum RatingElementType {
+			DEFAULT_RATING_ELEMENT = 0;
+			STAR = 1;
+			HEART = 2;
+			SMILEY = 3;
+		}
+		optional RatingElementType type = 2;
+
+		optional int32 numberOfItems = 3;
+		
+		enum RatingVariable {
+			DEFAULT_RATING_VARIABLE = 0;
+			FULL = 1;
+			HALF = 2;
+			QUARTER = 3;
+		}
+		optional RatingVariable allowedVariable = 4;
+
+		enum RatingConcept {
+			DEFAULT_RATING_CONCEPT = 0;
+			STATIC = 1;
+			ASCENDING = 2;
+			DESCENDING = 3;
+		}
+		optional RatingConcept ratingConcept = 5;
+			
+	}
+	optional RatingElement ratingElement = 10;
+
+	message ButtonElement {
+				
+	}
+	optional ButtonElement buttonElement = 11;
+}

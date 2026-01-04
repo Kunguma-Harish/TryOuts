@@ -1,0 +1,17 @@
+syntax="proto3";
+package com.zoho.theme;
+
+option java_package = "com.zoho.theme";
+option java_outer_classname = "ThemeInfoProtos";
+
+import "theme.proto";
+import "themedefault.proto";
+import "google/protobuf/protoextensions.proto";
+
+message ThemeInfo {
+	// Theme associated with this Master.	
+	optional Theme theme = 1 [(com.zoho.common.customOptions).requiredField = true];
+	
+    // Default Values for the theme , to be used by this master.
+	optional ThemeDefault defaultValues = 2 [(com.zoho.common.customOptions).requiredField = true];
+}

@@ -1,0 +1,44 @@
+syntax="proto3";
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "DataLabelDetailsProtos";
+
+import "textbody.proto";
+import "properties.proto";
+
+import "fields.proto";
+import "numberformat.proto";
+import "google/protobuf/protoextensions.proto";
+
+message DataLabelDetails {
+
+	optional Show.ChartField.DataLabelPosition pos = 1;// Data Label position.
+
+	optional bool bubbleSize = 2; // Show Bubble Size or not , for Bubble-Charts.
+	optional bool categoryName = 3; // Show Category name or not.
+	optional bool legendKey = 4; // Show LegendKey or not.
+	optional bool value = 5; // Show Value or not.
+	optional bool percent = 6; // Show Percent or not.
+	optional bool seriesName = 7; // Show Series Name or not.
+	optional bool leaderLine = 8; // Show Leader lines or not.
+
+	message Separator {
+		enum SeparatorType {
+			COMMA = 0;
+			SEMICOLON = 1;
+			PERIOD = 2;
+			NEWLINE = 3;
+			SPACE = 4;
+			ANY = 5;
+		}
+		optional SeparatorType type = 1 [(com.zoho.common.customOptions).requiredField = true]; //[default = COMMA];
+		optional string t = 2;
+	}	
+	optional Separator sep = 9;
+
+	optional com.zoho.shapes.TextBody textBody = 10; // Text
+	optional com.zoho.shapes.Properties props = 11;// Properties
+	optional com.zoho.common.NumberFormat numberFormat = 12;
+}
+

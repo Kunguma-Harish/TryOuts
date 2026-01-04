@@ -1,0 +1,1526 @@
+@package com.zoho.nexus.vaniproto;
+@import shapesproto_bindings_amalgamated.nex.nx;
+@import collaborationproto_bindings_amalgamated.nex.nx;
+include {
+ animationlist.pb.h;
+  }
+class AnimationList  : com::zoho::show::AnimationList {
+  inherits Message;
+  constructor AnimationList : com::zoho::show::AnimationList();
+  function CopyFrom : nx_void CopyFrom(AnimationList& arg0);
+  function Clear : nx_void Clear();
+  function has_shapeid : nx_bool has_shapeid();
+  property shapeId : nx_string shapeId(nx_getter : shapeid, nx_setter : set_shapeid);
+  function has_animid : nx_bool has_animid();
+  property animId : nx_string animId(nx_getter : animid, nx_setter : set_animid);
+  function has_target : nx_bool has_target();
+  property target : [own] AnimationList_AnimationTarget*  target(nx_getter : temp_gettarget, nx_setter : temp_settarget);
+  function has_parentid : nx_bool has_parentid();
+  property parentId : nx_string parentId(nx_getter : parentid, nx_setter : set_parentid);
+  }
+
+repeated_ptr_field  {
+protobuf_array_AnimationList : AnimationList;
+}
+
+class AnimationList_AnimationTarget  : com::zoho::show::AnimationList_AnimationTarget {
+  inherits Message;
+  constructor AnimationList_AnimationTarget : com::zoho::show::AnimationList_AnimationTarget();
+  function CopyFrom : nx_void CopyFrom(AnimationList_AnimationTarget& arg0);
+  function Clear : nx_void Clear();
+  function has_node : nx_bool has_node();
+  property node : nx_enum_string<AnimationList_AnimationTarget_AnimationNode> node(nx_getter : node, nx_setter : set_node);
+  function has_para : nx_bool has_para();
+  property para : nx_int para(nx_getter : para, nx_setter : set_para); 
+  }
+
+repeated_ptr_field  {
+protobuf_array_AnimationList_AnimationTarget : AnimationList_AnimationTarget;
+}
+
+enum AnimationList_AnimationTarget_AnimationNode : com::zoho::show::AnimationList_AnimationTarget_AnimationNode {
+  BG : com::zoho::show::AnimationList_AnimationTarget_AnimationNode_BG : 0;
+  PARA : com::zoho::show::AnimationList_AnimationTarget_AnimationNode_PARA : 1;
+  CATEGORY : com::zoho::show::AnimationList_AnimationTarget_AnimationNode_CATEGORY : 2;
+  SERIES_VALUE : com::zoho::show::AnimationList_AnimationTarget_AnimationNode_SERIES_VALUE : 3;
+  PER_SERIES_VALUE : com::zoho::show::AnimationList_AnimationTarget_AnimationNode_PER_SERIES_VALUE : 4;
+  PER_CATEGORY : com::zoho::show::AnimationList_AnimationTarget_AnimationNode_PER_CATEGORY : 5;
+  TABLE_ROW : com::zoho::show::AnimationList_AnimationTarget_AnimationNode_TABLE_ROW : 6;
+  TABLE_COLUMN : com::zoho::show::AnimationList_AnimationTarget_AnimationNode_TABLE_COLUMN : 7;
+  TABLE_CELL : com::zoho::show::AnimationList_AnimationTarget_AnimationNode_TABLE_CELL : 8;
+}
+include {
+ chartshape.pb.h;
+  }
+class ChartShape  : com::zoho::chart::cache::ChartShape {
+  inherits Message;
+  constructor ChartShape : com::zoho::chart::cache::ChartShape();
+  function CopyFrom : nx_void CopyFrom(ChartShape& arg0);
+  function Clear : nx_void Clear();
+  function has_title : nx_bool has_title();
+  property title : [own] Shape*  title(nx_getter : temp_gettitle, nx_setter : temp_settitle);
+  property legends  : [own] nx_repeated_ptr_field[protobuf_array_Shape]* legends(nx_getter : temp_getlegends, nx_setter : temp_setlegends);
+  function has_plotarea : nx_bool has_plotarea();
+  property plotArea : [own] ChartShape_PlotAreaShape*  plotArea(nx_getter : temp_getplotArea, nx_setter : temp_setplotArea);
+  function has_chartareabox : nx_bool has_chartareabox();
+  property chartAreaBox : [own] ManualLayout*  chartAreaBox(nx_getter : temp_getchartAreaBox, nx_setter : temp_setchartAreaBox);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ChartShape : ChartShape;
+}
+
+class ChartShape_AxisShape  : com::zoho::chart::cache::ChartShape_AxisShape {
+  inherits Message;
+  constructor ChartShape_AxisShape : com::zoho::chart::cache::ChartShape_AxisShape();
+  function CopyFrom : nx_void CopyFrom(ChartShape_AxisShape& arg0);
+  function Clear : nx_void Clear();
+  function has_axis : nx_bool has_axis();
+  property axis : [own] Shape*  axis(nx_getter : temp_getaxis, nx_setter : temp_setaxis);
+  function has_title : nx_bool has_title();
+  property title : [own] Shape*  title(nx_getter : temp_gettitle, nx_setter : temp_settitle);
+  property majorGrids  : [own] nx_repeated_ptr_field[protobuf_array_Shape]* majorGrids(nx_getter : temp_getmajorGrids, nx_setter : temp_setmajorGrids);
+  property minorGrids  : [own] nx_repeated_ptr_field[protobuf_array_Shape]* minorGrids(nx_getter : temp_getminorGrids, nx_setter : temp_setminorGrids);
+  property labels  : [own] nx_repeated_ptr_field[protobuf_array_Shape]* labels(nx_getter : temp_getlabels, nx_setter : temp_setlabels);
+  property majorTickMarks  : [own] nx_repeated_ptr_field[protobuf_array_Shape]* majorTickMarks(nx_getter : temp_getmajorTickMarks, nx_setter : temp_setmajorTickMarks);
+  property minorTickMarks  : [own] nx_repeated_ptr_field[protobuf_array_Shape]* minorTickMarks(nx_getter : temp_getminorTickMarks, nx_setter : temp_setminorTickMarks);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ChartShape_AxisShape : ChartShape_AxisShape;
+}
+
+class ChartShape_CategoryShape  : com::zoho::chart::cache::ChartShape_CategoryShape {
+  inherits Message;
+  constructor ChartShape_CategoryShape : com::zoho::chart::cache::ChartShape_CategoryShape();
+  function CopyFrom : nx_void CopyFrom(ChartShape_CategoryShape& arg0);
+  function Clear : nx_void Clear();
+  property seriesShapes  : [own] nx_repeated_ptr_field[protobuf_array_ChartShape_CategoryShape_SeriesShape]* seriesShapes(nx_getter : temp_getseriesShapes, nx_setter : temp_setseriesShapes);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ChartShape_CategoryShape : ChartShape_CategoryShape;
+}
+
+class ChartShape_CategoryShape_SeriesShape  : com::zoho::chart::cache::ChartShape_CategoryShape_SeriesShape {
+  inherits Message;
+  constructor ChartShape_CategoryShape_SeriesShape : com::zoho::chart::cache::ChartShape_CategoryShape_SeriesShape();
+  function CopyFrom : nx_void CopyFrom(ChartShape_CategoryShape_SeriesShape& arg0);
+  function Clear : nx_void Clear();
+  function has_shape : nx_bool has_shape();
+  property shape : [own] Shape*  shape(nx_getter : temp_getshape, nx_setter : temp_setshape);
+  function has_label : nx_bool has_label();
+  property label : [own] Shape*  label(nx_getter : temp_getlabel, nx_setter : temp_setlabel);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ChartShape_CategoryShape_SeriesShape : ChartShape_CategoryShape_SeriesShape;
+}
+
+class ChartShape_PlotAreaShape  : com::zoho::chart::cache::ChartShape_PlotAreaShape {
+  inherits Message;
+  constructor ChartShape_PlotAreaShape : com::zoho::chart::cache::ChartShape_PlotAreaShape();
+  function CopyFrom : nx_void CopyFrom(ChartShape_PlotAreaShape& arg0);
+  function Clear : nx_void Clear();
+  function has_horizontal : nx_bool has_horizontal();
+  property horizontal : [own] ChartShape_AxisShape*  horizontal(nx_getter : temp_gethorizontal, nx_setter : temp_sethorizontal);
+  function has_vertical : nx_bool has_vertical();
+  property vertical : [own] ChartShape_AxisShape*  vertical(nx_getter : temp_getvertical, nx_setter : temp_setvertical);
+  property categoryShapes  : [own] nx_repeated_ptr_field[protobuf_array_ChartShape_CategoryShape]* categoryShapes(nx_getter : temp_getcategoryShapes, nx_setter : temp_setcategoryShapes);
+  property seriesLines  : [own] nx_repeated_ptr_field[protobuf_array_Shape]* seriesLines(nx_getter : temp_getseriesLines, nx_setter : temp_setseriesLines);
+  property dropLines  : [own] nx_repeated_ptr_field[protobuf_array_Shape]* dropLines(nx_getter : temp_getdropLines, nx_setter : temp_setdropLines);
+  property upDownBars  : [own] nx_repeated_ptr_field[protobuf_array_Shape]* upDownBars(nx_getter : temp_getupDownBars, nx_setter : temp_setupDownBars);
+  property markers  : [own] nx_repeated_ptr_field[protobuf_array_Shape]* markers(nx_getter : temp_getmarkers, nx_setter : temp_setmarkers);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ChartShape_PlotAreaShape : ChartShape_PlotAreaShape;
+}
+
+include {
+ cliptype.pb.h;
+  }
+enum ClipType : com::zoho::clipboard::ClipType {
+  PRINCIPAL : com::zoho::clipboard::ClipType::PRINCIPAL : 0;
+  DEPENDENTS : com::zoho::clipboard::ClipType::DEPENDENTS : 1;
+}
+include {
+ customrenderer.pb.h;
+  }
+class CustomRenderer  : com::zoho::remoteboard::CustomRenderer {
+  inherits Message;
+  constructor CustomRenderer : com::zoho::remoteboard::CustomRenderer();
+  function CopyFrom : nx_void CopyFrom(CustomRenderer& arg0);
+  function Clear : nx_void Clear();
+  function has_id : nx_bool has_id();
+  property id : nx_string id(nx_getter : id, nx_setter : set_id);
+  function has_renderobject : nx_bool has_renderobject();
+  property renderObject : [own] ShapeObject*  renderObject(nx_getter : temp_getrenderObject, nx_setter : temp_setrenderObject);
+  }
+
+repeated_ptr_field  {
+protobuf_array_CustomRenderer : CustomRenderer;
+}
+
+include {
+ dependent.pb.h;
+  }
+class Dependent  : com::zoho::clipboard::Dependent {
+  inherits Message;
+  constructor Dependent : com::zoho::clipboard::Dependent();
+  function CopyFrom : nx_void CopyFrom(Dependent& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<Dependent_DependentType> type(nx_getter : type, nx_setter : set_type);
+  property details  : [own] nx_repeated_ptr_field[protobuf_array_Dependent_DependentDetails]* details(nx_getter : temp_getdetails, nx_setter : temp_setdetails);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Dependent : Dependent;
+}
+
+class Dependent_DependentDetails  : com::zoho::clipboard::Dependent_DependentDetails {
+  inherits Message;
+  constructor Dependent_DependentDetails : com::zoho::clipboard::Dependent_DependentDetails();
+  function CopyFrom : nx_void CopyFrom(Dependent_DependentDetails& arg0);
+  function Clear : nx_void Clear();
+  function has_fileid : nx_bool has_fileid();
+  property fileId : nx_string fileId(nx_getter : fileid, nx_setter : set_fileid);
+  function has_master : nx_bool has_master();
+  property master : [own] Dependent_DependentDetails_MasterDetails*  master(nx_getter : temp_getmaster, nx_setter : temp_setmaster);
+  function has_pict : nx_bool has_pict();
+  property pict : [own] Dependent_DependentDetails_PictureProps*  pict(nx_getter : temp_getpict, nx_setter : temp_setpict);
+  function has_media : nx_bool has_media();
+  property media : [own] Dependent_DependentDetails_MediaProps*  media(nx_getter : temp_getmedia, nx_setter : temp_setmedia);
+  function has_file : nx_bool has_file();
+  property file : [own] Dependent_DependentDetails_FileProps*  file(nx_getter : temp_getfile, nx_setter : temp_setfile);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Dependent_DependentDetails : Dependent_DependentDetails;
+}
+
+class Dependent_DependentDetails_MasterDetails  : com::zoho::clipboard::Dependent_DependentDetails_MasterDetails {
+  inherits Message;
+  constructor Dependent_DependentDetails_MasterDetails : com::zoho::clipboard::Dependent_DependentDetails_MasterDetails();
+  function CopyFrom : nx_void CopyFrom(Dependent_DependentDetails_MasterDetails& arg0);
+  function Clear : nx_void Clear();
+  function has_shapeid : nx_bool has_shapeid();
+  property shapeId : nx_string shapeId(nx_getter : shapeid, nx_setter : set_shapeid);
+  function has_parentid : nx_bool has_parentid();
+  property parentId : nx_string parentId(nx_getter : parentid, nx_setter : set_parentid);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Dependent_DependentDetails_MasterDetails : Dependent_DependentDetails_MasterDetails;
+}
+
+class Dependent_DependentDetails_PictureProps  : com::zoho::clipboard::Dependent_DependentDetails_PictureProps {
+  inherits Message;
+  constructor Dependent_DependentDetails_PictureProps : com::zoho::clipboard::Dependent_DependentDetails_PictureProps();
+  function CopyFrom : nx_void CopyFrom(Dependent_DependentDetails_PictureProps& arg0);
+  function Clear : nx_void Clear();
+  function has_picprops : nx_bool has_picprops();
+  property picProps : [own] PicProperties*  picProps(nx_getter : temp_getpicProps, nx_setter : temp_setpicProps);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Dependent_DependentDetails_PictureProps : Dependent_DependentDetails_PictureProps;
+}
+
+class Dependent_DependentDetails_MediaProps  : com::zoho::clipboard::Dependent_DependentDetails_MediaProps {
+  inherits Message;
+  constructor Dependent_DependentDetails_MediaProps : com::zoho::clipboard::Dependent_DependentDetails_MediaProps();
+  function CopyFrom : nx_void CopyFrom(Dependent_DependentDetails_MediaProps& arg0);
+  function Clear : nx_void Clear();
+  function has_mediaprops : nx_bool has_mediaprops();
+  property mediaProps : [own] MediaProperties*  mediaProps(nx_getter : temp_getmediaProps, nx_setter : temp_setmediaProps);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Dependent_DependentDetails_MediaProps : Dependent_DependentDetails_MediaProps;
+}
+
+class Dependent_DependentDetails_FileProps  : com::zoho::clipboard::Dependent_DependentDetails_FileProps {
+  inherits Message;
+  constructor Dependent_DependentDetails_FileProps : com::zoho::clipboard::Dependent_DependentDetails_FileProps();
+  function CopyFrom : nx_void CopyFrom(Dependent_DependentDetails_FileProps& arg0);
+  function Clear : nx_void Clear();
+  function has_fileprops : nx_bool has_fileprops();
+  property fileProps : [own] FileProperties*  fileProps(nx_getter : temp_getfileProps, nx_setter : temp_setfileProps);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Dependent_DependentDetails_FileProps : Dependent_DependentDetails_FileProps;
+}
+
+enum Dependent_DependentType : com::zoho::clipboard::Dependent_DependentType {
+  PICT : com::zoho::clipboard::Dependent_DependentType_PICT : 0;
+  XML : com::zoho::clipboard::Dependent_DependentType_XML : 1;
+  EXCEL : com::zoho::clipboard::Dependent_DependentType_EXCEL : 2;
+  MEDIA : com::zoho::clipboard::Dependent_DependentType_MEDIA : 3;
+  FILE : com::zoho::clipboard::Dependent_DependentType_FILE : 4;
+}
+include {
+ document.pb.h;
+  }
+class Document  : com::zoho::remoteboard::Document {
+  inherits Message;
+  constructor Document : com::zoho::remoteboard::Document();
+  function CopyFrom : nx_void CopyFrom(Document& arg0);
+  function Clear : nx_void Clear();
+  function has_id : nx_bool has_id();
+  property id : nx_string id(nx_getter : id, nx_setter : set_id);
+  function has_meta : nx_bool has_meta();
+  property meta : [own] BaseMeta*  meta(nx_getter : temp_getmeta, nx_setter : temp_setmeta);
+  property elements  : [own] nx_repeated_ptr_field[protobuf_array_Document_ScreenOrShapeElement]* elements(nx_getter : temp_getelements, nx_setter : temp_setelements);
+  property pictureAssociation  : [own] nx_repeated_ptr_field[protobuf_array_PictureAssociation]* pictureAssociation(nx_getter : temp_getpictureAssociation, nx_setter : temp_setpictureAssociation);
+  property anchors  : [own] nx_repeated_ptr_field[protobuf_array_Document_AnchorPoint]* anchors(nx_getter : temp_getanchors, nx_setter : temp_setanchors);
+  property mediaAssociation  : [own] nx_repeated_ptr_field[protobuf_array_MediaAssociation]* mediaAssociation(nx_getter : temp_getmediaAssociation, nx_setter : temp_setmediaAssociation);
+  property flows  : [own] nx_repeated_ptr_field[protobuf_array_Flow]* flows(nx_getter : temp_getflows, nx_setter : temp_setflows);
+  property externalPictureProps  : [own] nx_repeated_ptr_field[protobuf_array_PicProperties]* externalPictureProps(nx_getter : temp_getexternalPictureProps, nx_setter : temp_setexternalPictureProps);
+  property fileAssociation  : [own] nx_repeated_ptr_field[protobuf_array_FileAssociation]* fileAssociation(nx_getter : temp_getfileAssociation, nx_setter : temp_setfileAssociation);
+  property dataLink  : [own] nx_repeated_ptr_field[protobuf_array_DataLink]* dataLink(nx_getter : temp_getdataLink, nx_setter : temp_setdataLink);
+  property customValueRels  : [own] nx_repeated_ptr_field[protobuf_array_Document_CustomValueRels]* customValueRels(nx_getter : temp_getcustomValueRels, nx_setter : temp_setcustomValueRels);
+  property customRendererRels  : [own] nx_repeated_ptr_field[protobuf_array_Document_CustomRendererRels]* customRendererRels(nx_getter : temp_getcustomRendererRels, nx_setter : temp_setcustomRendererRels);
+  property templates  : [own] nx_repeated_ptr_field[protobuf_array_Document_ObjectTemplate]* templates(nx_getter : temp_gettemplates, nx_setter : temp_settemplates);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Document : Document;
+}
+
+class Document_ScreenOrShapeElement  : com::zoho::remoteboard::Document_ScreenOrShapeElement {
+  inherits Message;
+  constructor Document_ScreenOrShapeElement : com::zoho::remoteboard::Document_ScreenOrShapeElement();
+  function CopyFrom : nx_void CopyFrom(Document_ScreenOrShapeElement& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<Document_ScreenOrShapeElement_ElementObjectType> type(nx_getter : type, nx_setter : set_type);
+  function has_frameid : nx_bool has_frameid();
+  property frameId : nx_string frameId(nx_getter : frameid, nx_setter : set_frameid);
+  function has_shapeobject : nx_bool has_shapeobject();
+  property shapeObject : [own] ShapeObject*  shapeObject(nx_getter : temp_getshapeObject, nx_setter : temp_setshapeObject);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Document_ScreenOrShapeElement : Document_ScreenOrShapeElement;
+}
+
+class Document_AnchorPoint  : com::zoho::remoteboard::Document_AnchorPoint {
+  inherits Message;
+  constructor Document_AnchorPoint : com::zoho::remoteboard::Document_AnchorPoint();
+  function CopyFrom : nx_void CopyFrom(Document_AnchorPoint& arg0);
+  function Clear : nx_void Clear();
+  function has_id : nx_bool has_id();
+  property id : nx_string id(nx_getter : id, nx_setter : set_id);
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<Document_AnchorPoint_AnchorPointType> type(nx_getter : type, nx_setter : set_type);
+  function has_elementbased : nx_bool has_elementbased();
+  property elementBased : [own] Document_AnchorPoint_ElementAnchor*  elementBased(nx_getter : temp_getelementBased, nx_setter : temp_setelementBased);
+  function has_positionbased : nx_bool has_positionbased();
+  property positionBased : [own] Document_AnchorPoint_PositionAnchor*  positionBased(nx_getter : temp_getpositionBased, nx_setter : temp_setpositionBased);
+  function has_title : nx_bool has_title();
+  property title : nx_string title(nx_getter : title, nx_setter : set_title);
+  function has_description : nx_bool has_description();
+  property description : nx_string description(nx_getter : description, nx_setter : set_description);
+  property tags  : [own] nx_repeated_field[nx_string]* tags(nx_getter : temp_gettags, nx_setter : temp_settags);
+  function has_time : nx_bool has_time();
+  property time : [own] Time*  time(nx_getter : temp_gettime, nx_setter : temp_settime);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Document_AnchorPoint : Document_AnchorPoint;
+}
+
+class Document_AnchorPoint_ElementAnchor  : com::zoho::remoteboard::Document_AnchorPoint_ElementAnchor {
+  inherits Message;
+  constructor Document_AnchorPoint_ElementAnchor : com::zoho::remoteboard::Document_AnchorPoint_ElementAnchor();
+  function CopyFrom : nx_void CopyFrom(Document_AnchorPoint_ElementAnchor& arg0);
+  function Clear : nx_void Clear();
+  function has_objectid : nx_bool has_objectid();
+  property objectId : nx_string objectId(nx_getter : objectid, nx_setter : set_objectid);
+  function has_frameid : nx_bool has_frameid();
+  property frameId : nx_string frameId(nx_getter : frameid, nx_setter : set_frameid);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Document_AnchorPoint_ElementAnchor : Document_AnchorPoint_ElementAnchor;
+}
+
+class Document_AnchorPoint_PositionAnchor  : com::zoho::remoteboard::Document_AnchorPoint_PositionAnchor {
+  inherits Message;
+  constructor Document_AnchorPoint_PositionAnchor : com::zoho::remoteboard::Document_AnchorPoint_PositionAnchor();
+  function CopyFrom : nx_void CopyFrom(Document_AnchorPoint_PositionAnchor& arg0);
+  function Clear : nx_void Clear();
+  function has_pos : nx_bool has_pos();
+  property pos : [own] Position*  pos(nx_getter : temp_getpos, nx_setter : temp_setpos);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Document_AnchorPoint_PositionAnchor : Document_AnchorPoint_PositionAnchor;
+}
+
+class Document_CustomValueRels  : com::zoho::remoteboard::Document_CustomValueRels {
+  inherits Message;
+  constructor Document_CustomValueRels : com::zoho::remoteboard::Document_CustomValueRels();
+  function CopyFrom : nx_void CopyFrom(Document_CustomValueRels& arg0);
+  function Clear : nx_void Clear();
+  function has_tableid : nx_bool has_tableid();
+  property tableId : nx_string tableId(nx_getter : tableid, nx_setter : set_tableid);
+  property customValues  : [own] nx_repeated_ptr_field[protobuf_array_CustomValue]* customValues(nx_getter : temp_getcustomValues, nx_setter : temp_setcustomValues);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Document_CustomValueRels : Document_CustomValueRels;
+}
+
+class Document_CustomRendererRels  : com::zoho::remoteboard::Document_CustomRendererRels {
+  inherits Message;
+  constructor Document_CustomRendererRels : com::zoho::remoteboard::Document_CustomRendererRels();
+  function CopyFrom : nx_void CopyFrom(Document_CustomRendererRels& arg0);
+  function Clear : nx_void Clear();
+  function has_tableid : nx_bool has_tableid();
+  property tableId : nx_string tableId(nx_getter : tableid, nx_setter : set_tableid);
+  property customRenderer  : [own] nx_repeated_ptr_field[protobuf_array_CustomRenderer]* customRenderer(nx_getter : temp_getcustomRenderer, nx_setter : temp_setcustomRenderer);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Document_CustomRendererRels : Document_CustomRendererRels;
+}
+
+class Document_ObjectTemplate  : com::zoho::remoteboard::Document_ObjectTemplate {
+  inherits Message;
+  constructor Document_ObjectTemplate : com::zoho::remoteboard::Document_ObjectTemplate();
+  function CopyFrom : nx_void CopyFrom(Document_ObjectTemplate& arg0);
+  function Clear : nx_void Clear();
+  function has_templateid : nx_bool has_templateid();
+  property templateId : nx_string templateId(nx_getter : templateid, nx_setter : set_templateid);
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<Document_ObjectTemplate_TemplateType> type(nx_getter : type, nx_setter : set_type);
+  function has_shapeobjecttemplate : nx_bool has_shapeobjecttemplate();
+  property shapeObjectTemplate : [own] Document_ObjectTemplate_ShapeObjectTemplate*  shapeObjectTemplate(nx_getter : temp_getshapeObjectTemplate, nx_setter : temp_setshapeObjectTemplate);
+  function has_frametemplate : nx_bool has_frametemplate();
+  property frameTemplate : [own] Document_ObjectTemplate_FrameTemplate*  frameTemplate(nx_getter : temp_getframeTemplate, nx_setter : temp_setframeTemplate);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Document_ObjectTemplate : Document_ObjectTemplate;
+}
+
+class Document_ObjectTemplate_ShapeObjectTemplate  : com::zoho::remoteboard::Document_ObjectTemplate_ShapeObjectTemplate {
+  inherits Message;
+  constructor Document_ObjectTemplate_ShapeObjectTemplate : com::zoho::remoteboard::Document_ObjectTemplate_ShapeObjectTemplate();
+  function CopyFrom : nx_void CopyFrom(Document_ObjectTemplate_ShapeObjectTemplate& arg0);
+  function Clear : nx_void Clear();
+  function has_shape : nx_bool has_shape();
+  property shape : [own] ShapeObject*  shape(nx_getter : temp_getshape, nx_setter : temp_setshape);
+  function has_connector : nx_bool has_connector();
+  property connector : [own] Connector*  connector(nx_getter : temp_getconnector, nx_setter : temp_setconnector);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Document_ObjectTemplate_ShapeObjectTemplate : Document_ObjectTemplate_ShapeObjectTemplate;
+}
+
+class Document_ObjectTemplate_FrameTemplate  : com::zoho::remoteboard::Document_ObjectTemplate_FrameTemplate {
+  inherits Message;
+  constructor Document_ObjectTemplate_FrameTemplate : com::zoho::remoteboard::Document_ObjectTemplate_FrameTemplate();
+  function CopyFrom : nx_void CopyFrom(Document_ObjectTemplate_FrameTemplate& arg0);
+  function Clear : nx_void Clear();
+  function has_frameid : nx_bool has_frameid();
+  property frameId : nx_string frameId(nx_getter : frameid, nx_setter : set_frameid);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Document_ObjectTemplate_FrameTemplate : Document_ObjectTemplate_FrameTemplate;
+}
+
+enum Document_ScreenOrShapeElement_ElementObjectType : com::zoho::remoteboard::Document_ScreenOrShapeElement_ElementObjectType {
+  FRAME : com::zoho::remoteboard::Document_ScreenOrShapeElement_ElementObjectType_FRAME : 0;
+  OBJECT : com::zoho::remoteboard::Document_ScreenOrShapeElement_ElementObjectType_OBJECT : 1;
+}
+enum Document_AnchorPoint_AnchorPointType : com::zoho::remoteboard::Document_AnchorPoint_AnchorPointType {
+  UNKNOWN_ANCHOR_TYPE : com::zoho::remoteboard::Document_AnchorPoint_AnchorPointType_UNKNOWN_ANCHOR_TYPE : 0;
+  ELEMENT_BASED : com::zoho::remoteboard::Document_AnchorPoint_AnchorPointType_ELEMENT_BASED : 1;
+  POSITION_BASED : com::zoho::remoteboard::Document_AnchorPoint_AnchorPointType_POSITION_BASED : 2;
+}
+enum Document_ObjectTemplate_TemplateType : com::zoho::remoteboard::Document_ObjectTemplate_TemplateType {
+  UNKNOWN_TEMPLATE_TYPE : com::zoho::remoteboard::Document_ObjectTemplate_TemplateType_UNKNOWN_TEMPLATE_TYPE : 0;
+  SHAPE_OBJECT : com::zoho::remoteboard::Document_ObjectTemplate_TemplateType_SHAPE_OBJECT : 1;
+  FRAME : com::zoho::remoteboard::Document_ObjectTemplate_TemplateType_FRAME : 2;
+}
+include {
+ documentdata.pb.h;
+  }
+class DocumentData  : com::zoho::remoteboard::build::DocumentData {
+  inherits Message;
+  constructor DocumentData : com::zoho::remoteboard::build::DocumentData();
+  function CopyFrom : nx_void CopyFrom(DocumentData& arg0);
+  function Clear : nx_void Clear();
+  function has_document : nx_bool has_document();
+  property document : [own] Document*  document(nx_getter : temp_getdocument, nx_setter : temp_setdocument);
+  property frames  : [own] nx_repeated_ptr_field[protobuf_array_Frame]* frames(nx_getter : temp_getframes, nx_setter : temp_setframes);
+  function has_basemeta : nx_bool has_basemeta();
+  property baseMeta : [own] DocBaseMeta*  baseMeta(nx_getter : temp_getbaseMeta, nx_setter : temp_setbaseMeta);
+  }
+
+repeated_ptr_field  {
+protobuf_array_DocumentData : DocumentData;
+}
+
+include {
+ flow.pb.h;
+  }
+class Flow  : com::zoho::remoteboard::Flow {
+  inherits Message;
+  constructor Flow : com::zoho::remoteboard::Flow();
+  function CopyFrom : nx_void CopyFrom(Flow& arg0);
+  function Clear : nx_void Clear();
+  function has_id : nx_bool has_id();
+  property id : nx_string id(nx_getter : id, nx_setter : set_id);
+  property states  : [own] nx_repeated_ptr_field[protobuf_array_Flow_FlowState]* states(nx_getter : temp_getstates, nx_setter : temp_setstates);
+  function has_preference : nx_bool has_preference();
+  property preference : [own] Flow_FlowPreference*  preference(nx_getter : temp_getpreference, nx_setter : temp_setpreference);
+  function has_title : nx_bool has_title();
+  property title : nx_string title(nx_getter : title, nx_setter : set_title);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Flow : Flow;
+}
+
+class Flow_FlowState  : com::zoho::remoteboard::Flow_FlowState {
+  inherits Message;
+  constructor Flow_FlowState : com::zoho::remoteboard::Flow_FlowState();
+  function CopyFrom : nx_void CopyFrom(Flow_FlowState& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<Flow_FlowState_FlowStateType> type(nx_getter : type, nx_setter : set_type);
+  function has_framestate : nx_bool has_framestate();
+  property frameState : [own] Flow_FlowState_FrameState*  frameState(nx_getter : temp_getframeState, nx_setter : temp_setframeState);
+  function has_anchorpointstate : nx_bool has_anchorpointstate();
+  property anchorPointState : [own] Flow_FlowState_AnchorPointState*  anchorPointState(nx_getter : temp_getanchorPointState, nx_setter : temp_setanchorPointState);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Flow_FlowState : Flow_FlowState;
+}
+
+class Flow_FlowState_FrameState  : com::zoho::remoteboard::Flow_FlowState_FrameState {
+  inherits Message;
+  constructor Flow_FlowState_FrameState : com::zoho::remoteboard::Flow_FlowState_FrameState();
+  function CopyFrom : nx_void CopyFrom(Flow_FlowState_FrameState& arg0);
+  function Clear : nx_void Clear();
+  function has_frameid : nx_bool has_frameid();
+  property frameId : nx_string frameId(nx_getter : frameid, nx_setter : set_frameid);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Flow_FlowState_FrameState : Flow_FlowState_FrameState;
+}
+
+class Flow_FlowState_AnchorPointState  : com::zoho::remoteboard::Flow_FlowState_AnchorPointState {
+  inherits Message;
+  constructor Flow_FlowState_AnchorPointState : com::zoho::remoteboard::Flow_FlowState_AnchorPointState();
+  function CopyFrom : nx_void CopyFrom(Flow_FlowState_AnchorPointState& arg0);
+  function Clear : nx_void Clear();
+  function has_anchorpointid : nx_bool has_anchorpointid();
+  property anchorPointId : nx_string anchorPointId(nx_getter : anchorpointid, nx_setter : set_anchorpointid);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Flow_FlowState_AnchorPointState : Flow_FlowState_AnchorPointState;
+}
+
+class Flow_FlowPreference  : com::zoho::remoteboard::Flow_FlowPreference {
+  inherits Message;
+  constructor Flow_FlowPreference : com::zoho::remoteboard::Flow_FlowPreference();
+  function CopyFrom : nx_void CopyFrom(Flow_FlowPreference& arg0);
+  function Clear : nx_void Clear();
+  function has_transition : nx_bool has_transition();
+  property transition : [own] Flow_FlowPreference_FlowTransition*  transition(nx_getter : temp_gettransition, nx_setter : temp_settransition);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Flow_FlowPreference : Flow_FlowPreference;
+}
+
+class Flow_FlowPreference_FlowTransition  : com::zoho::remoteboard::Flow_FlowPreference_FlowTransition {
+  inherits Message;
+  constructor Flow_FlowPreference_FlowTransition : com::zoho::remoteboard::Flow_FlowPreference_FlowTransition();
+  function CopyFrom : nx_void CopyFrom(Flow_FlowPreference_FlowTransition& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<Flow_FlowPreference_FlowTransition_FlowTransitionType> type(nx_getter : type, nx_setter : set_type);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Flow_FlowPreference_FlowTransition : Flow_FlowPreference_FlowTransition;
+}
+
+enum Flow_FlowState_FlowStateType : com::zoho::remoteboard::Flow_FlowState_FlowStateType {
+  UNKNOWN_FLOW_STATE : com::zoho::remoteboard::Flow_FlowState_FlowStateType_UNKNOWN_FLOW_STATE : 0;
+  FRAME_STATE : com::zoho::remoteboard::Flow_FlowState_FlowStateType_FRAME_STATE : 1;
+  ANCHOR_POINT_STATE : com::zoho::remoteboard::Flow_FlowState_FlowStateType_ANCHOR_POINT_STATE : 2;
+}
+enum Flow_FlowPreference_FlowTransition_FlowTransitionType : com::zoho::remoteboard::Flow_FlowPreference_FlowTransition_FlowTransitionType {
+  UNKNOWN_FLOW_TRANSITION_TYPE : com::zoho::remoteboard::Flow_FlowPreference_FlowTransition_FlowTransitionType_UNKNOWN_FLOW_TRANSITION_TYPE : 0;
+  STATIC : com::zoho::remoteboard::Flow_FlowPreference_FlowTransition_FlowTransitionType_STATIC : 1;
+  MOTION : com::zoho::remoteboard::Flow_FlowPreference_FlowTransition_FlowTransitionType_MOTION : 2;
+}
+include {
+ frame.pb.h;
+  }
+class Frame  : com::zoho::remoteboard::Frame {
+  inherits Message;
+  constructor Frame : com::zoho::remoteboard::Frame();
+  function CopyFrom : nx_void CopyFrom(Frame& arg0);
+  function Clear : nx_void Clear();
+  function has_id : nx_bool has_id();
+  property id : nx_string id(nx_getter : id, nx_setter : set_id);
+  function has_meta : nx_bool has_meta();
+  property meta : [own] BaseMeta*  meta(nx_getter : temp_getmeta, nx_setter : temp_setmeta);
+  function has_props : nx_bool has_props();
+  property props : [own] Properties*  props(nx_getter : temp_getprops, nx_setter : temp_setprops);
+  property shapes  : [own] nx_repeated_ptr_field[protobuf_array_ShapeObject]* shapes(nx_getter : temp_getshapes, nx_setter : temp_setshapes);
+  property reactions  : [own] nx_repeated_ptr_field[protobuf_array_Reaction]* reactions(nx_getter : temp_getreactions, nx_setter : temp_setreactions);
+  function has_nvoprops : nx_bool has_nvoprops();
+  property nvOProps : [own] NonVisualFrameProps*  nvOProps(nx_getter : temp_getnvOProps, nx_setter : temp_setnvOProps);
+  function has_framedata : nx_bool has_framedata();
+  property frameData : [own] FrameData*  frameData(nx_getter : temp_getframeData, nx_setter : temp_setframeData);
+  function has_basekit : nx_bool has_basekit();
+  property basekit : [own] BaseKit*  basekit(nx_getter : temp_getbasekit, nx_setter : temp_setbasekit);
+  property frameIds  : [own] nx_repeated_field[nx_string]* frameIds(nx_getter : temp_getframeIds, nx_setter : temp_setframeIds);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Frame : Frame;
+}
+
+include {
+ frameclips.pb.h;
+  }
+class FrameClips  : com::zoho::clipboard::remoteboard::FrameClips {
+  inherits Message;
+  constructor FrameClips : com::zoho::clipboard::remoteboard::FrameClips();
+  function CopyFrom : nx_void CopyFrom(FrameClips& arg0);
+  function Clear : nx_void Clear();
+  property frames  : [own] nx_repeated_ptr_field[protobuf_array_FrameClips_FrameClip]* frames(nx_getter : temp_getframes, nx_setter : temp_setframes);
+  }
+
+repeated_ptr_field  {
+protobuf_array_FrameClips : FrameClips;
+}
+
+class FrameClips_FrameClip  : com::zoho::clipboard::remoteboard::FrameClips_FrameClip {
+  inherits Message;
+  constructor FrameClips_FrameClip : com::zoho::clipboard::remoteboard::FrameClips_FrameClip();
+  function CopyFrom : nx_void CopyFrom(FrameClips_FrameClip& arg0);
+  function Clear : nx_void Clear();
+  function has_frame : nx_bool has_frame();
+  property frame : [own] Frame*  frame(nx_getter : temp_getframe, nx_setter : temp_setframe);
+  }
+
+repeated_ptr_field  {
+protobuf_array_FrameClips_FrameClip : FrameClips_FrameClip;
+}
+
+include {
+ framedata.pb.h;
+  }
+class FrameData  : com::zoho::remoteboard::FrameData {
+  inherits Message;
+  constructor FrameData : com::zoho::remoteboard::FrameData();
+  function CopyFrom : nx_void CopyFrom(FrameData& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<FrameData_FrameType> type(nx_getter : type, nx_setter : set_type);
+  function has_page : nx_bool has_page();
+  property page : [own] FrameData_PageFrame*  page(nx_getter : temp_getpage, nx_setter : temp_setpage);
+  function has_category : nx_bool has_category();
+  property category : [own] ElementCategory*  category(nx_getter : temp_getcategory, nx_setter : temp_setcategory);
+  }
+
+repeated_ptr_field  {
+protobuf_array_FrameData : FrameData;
+}
+
+class FrameData_PageFrame  : com::zoho::remoteboard::FrameData_PageFrame {
+  inherits Message;
+  constructor FrameData_PageFrame : com::zoho::remoteboard::FrameData_PageFrame();
+  function CopyFrom : nx_void CopyFrom(FrameData_PageFrame& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<FrameData_PageFrame_PageFrameType> type(nx_getter : type, nx_setter : set_type);
+  function has_subtype : nx_bool has_subtype();
+  property subType : nx_enum_string<FrameData_PageFrame_PageFrameSubType> subType(nx_getter : subtype, nx_setter : set_subtype);
+  }
+
+repeated_ptr_field  {
+protobuf_array_FrameData_PageFrame : FrameData_PageFrame;
+}
+
+enum FrameData_FrameType : com::zoho::remoteboard::FrameData_FrameType {
+  UNKNOWN_FRAME_TYPE : com::zoho::remoteboard::FrameData_FrameType_UNKNOWN_FRAME_TYPE : 0;
+  PAGE : com::zoho::remoteboard::FrameData_FrameType_PAGE : 1;
+}
+enum FrameData_PageFrame_PageFrameType : com::zoho::remoteboard::FrameData_PageFrame_PageFrameType {
+  UNKNOWN_PAGE_FRAME_TYPE : com::zoho::remoteboard::FrameData_PageFrame_PageFrameType_UNKNOWN_PAGE_FRAME_TYPE : 0;
+  A4 : com::zoho::remoteboard::FrameData_PageFrame_PageFrameType_A4 : 1;
+  A3 : com::zoho::remoteboard::FrameData_PageFrame_PageFrameType_A3 : 2;
+}
+enum FrameData_PageFrame_PageFrameSubType : com::zoho::remoteboard::FrameData_PageFrame_PageFrameSubType {
+  UNKNOWN_PAGE_FRAME_SUB_TYPE : com::zoho::remoteboard::FrameData_PageFrame_PageFrameSubType_UNKNOWN_PAGE_FRAME_SUB_TYPE : 0;
+  JOURNAL : com::zoho::remoteboard::FrameData_PageFrame_PageFrameSubType_JOURNAL : 1;
+  ESSAY : com::zoho::remoteboard::FrameData_PageFrame_PageFrameSubType_ESSAY : 2;
+  NOTES : com::zoho::remoteboard::FrameData_PageFrame_PageFrameSubType_NOTES : 3;
+}
+include {
+ kit.pb.h;
+  }
+class Kit  : com::zoho::remoteboard::build::Kit {
+  inherits Message;
+  constructor Kit : com::zoho::remoteboard::build::Kit();
+  function CopyFrom : nx_void CopyFrom(Kit& arg0);
+  function Clear : nx_void Clear();
+  function has_kitdata : nx_bool has_kitdata();
+  property kitData : [own] Kit_KitData*  kitData(nx_getter : temp_getkitData, nx_setter : temp_setkitData);
+  property resourceMapping  : [own] nx_repeated_ptr_field[protobuf_array_Kit_KitResourceMapping]* resourceMapping(nx_getter : temp_getresourceMapping, nx_setter : temp_setresourceMapping);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit : Kit;
+}
+
+class Kit_KitData  : com::zoho::remoteboard::build::Kit_KitData {
+  inherits Message;
+  constructor Kit_KitData : com::zoho::remoteboard::build::Kit_KitData();
+  function CopyFrom : nx_void CopyFrom(Kit_KitData& arg0);
+  function Clear : nx_void Clear();
+  function has_id : nx_bool has_id();
+  property id : nx_string id(nx_getter : id, nx_setter : set_id);
+  function has_meta : nx_bool has_meta();
+  property meta : [own] BaseMeta*  meta(nx_getter : temp_getmeta, nx_setter : temp_setmeta);
+  function has_parent : nx_bool has_parent();
+  property parent : [own] Kit_KitData_Root*  parent(nx_getter : temp_getparent, nx_setter : temp_setparent);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitData : Kit_KitData;
+}
+
+class Kit_KitData_UIDetails  : com::zoho::remoteboard::build::Kit_KitData_UIDetails {
+  inherits Message;
+  constructor Kit_KitData_UIDetails : com::zoho::remoteboard::build::Kit_KitData_UIDetails();
+  function CopyFrom : nx_void CopyFrom(Kit_KitData_UIDetails& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<Kit_KitData_UIDetails_UIType> type(nx_getter : type, nx_setter : set_type);
+  function has_tab : nx_bool has_tab();
+  property tab : [own] Kit_KitData_UIDetails_Tab*  tab(nx_getter : temp_gettab, nx_setter : temp_settab);
+  function has_grouping : nx_bool has_grouping();
+  property grouping : [own] Kit_KitData_UIDetails_Grouping*  grouping(nx_getter : temp_getgrouping, nx_setter : temp_setgrouping);
+  function has_listing : nx_bool has_listing();
+  property listing : [own] Kit_KitData_UIDetails_Lisitng*  listing(nx_getter : temp_getlisting, nx_setter : temp_setlisting);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitData_UIDetails : Kit_KitData_UIDetails;
+}
+
+class Kit_KitData_UIDetails_Tab  : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Tab {
+  inherits Message;
+  constructor Kit_KitData_UIDetails_Tab : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Tab();
+  function CopyFrom : nx_void CopyFrom(Kit_KitData_UIDetails_Tab& arg0);
+  function Clear : nx_void Clear();
+  function has_tabtype : nx_bool has_tabtype();
+  property tabType : nx_enum_string<Kit_KitData_UIDetails_Tab_TabType> tabType(nx_getter : tabtype, nx_setter : set_tabtype);
+  function has_needalltab : nx_bool has_needalltab();
+  property needAllTab : nx_bool needAllTab(nx_getter : needalltab, nx_setter : set_needalltab); 
+  function has_horizontaltab : nx_bool has_horizontaltab();
+  property horizontalTab : [own] Kit_KitData_UIDetails_Tab_HorizontalTab*  horizontalTab(nx_getter : temp_gethorizontalTab, nx_setter : temp_sethorizontalTab);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitData_UIDetails_Tab : Kit_KitData_UIDetails_Tab;
+}
+
+class Kit_KitData_UIDetails_Tab_HorizontalTab  : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Tab_HorizontalTab {
+  inherits Message;
+  constructor Kit_KitData_UIDetails_Tab_HorizontalTab : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Tab_HorizontalTab();
+  function CopyFrom : nx_void CopyFrom(Kit_KitData_UIDetails_Tab_HorizontalTab& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<Kit_KitData_UIDetails_Tab_HorizontalTab_HorizontalTabType> type(nx_getter : type, nx_setter : set_type);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitData_UIDetails_Tab_HorizontalTab : Kit_KitData_UIDetails_Tab_HorizontalTab;
+}
+
+class Kit_KitData_UIDetails_Grouping  : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Grouping {
+  inherits Message;
+  constructor Kit_KitData_UIDetails_Grouping : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Grouping();
+  function CopyFrom : nx_void CopyFrom(Kit_KitData_UIDetails_Grouping& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<Kit_KitData_UIDetails_Grouping_GroupingType> type(nx_getter : type, nx_setter : set_type);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitData_UIDetails_Grouping : Kit_KitData_UIDetails_Grouping;
+}
+
+class Kit_KitData_UIDetails_Lisitng  : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Lisitng {
+  inherits Message;
+  constructor Kit_KitData_UIDetails_Lisitng : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Lisitng();
+  function CopyFrom : nx_void CopyFrom(Kit_KitData_UIDetails_Lisitng& arg0);
+  function Clear : nx_void Clear();
+  function has_view : nx_bool has_view();
+  property view : nx_enum_string<Kit_KitData_UIDetails_Lisitng_ListingView> view(nx_getter : view, nx_setter : set_view);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitData_UIDetails_Lisitng : Kit_KitData_UIDetails_Lisitng;
+}
+
+class Kit_KitData_Category  : com::zoho::remoteboard::build::Kit_KitData_Category {
+  inherits Message;
+  constructor Kit_KitData_Category : com::zoho::remoteboard::build::Kit_KitData_Category();
+  function CopyFrom : nx_void CopyFrom(Kit_KitData_Category& arg0);
+  function Clear : nx_void Clear();
+  function has_id : nx_bool has_id();
+  property id : nx_string id(nx_getter : id, nx_setter : set_id);
+  function has_meta : nx_bool has_meta();
+  property meta : [own] BaseMeta*  meta(nx_getter : temp_getmeta, nx_setter : temp_setmeta);
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<Kit_KitData_Category_CategoryType> type(nx_getter : type, nx_setter : set_type);
+  function has_leaf : nx_bool has_leaf();
+  property leaf : [own] Kit_KitData_Category_Leaf*  leaf(nx_getter : temp_getleaf, nx_setter : temp_setleaf);
+  function has_child : nx_bool has_child();
+  property child : [own] Kit_KitData_Category_Child*  child(nx_getter : temp_getchild, nx_setter : temp_setchild);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitData_Category : Kit_KitData_Category;
+}
+
+class Kit_KitData_Category_Leaf  : com::zoho::remoteboard::build::Kit_KitData_Category_Leaf {
+  inherits Message;
+  constructor Kit_KitData_Category_Leaf : com::zoho::remoteboard::build::Kit_KitData_Category_Leaf();
+  function CopyFrom : nx_void CopyFrom(Kit_KitData_Category_Leaf& arg0);
+  function Clear : nx_void Clear();
+  function has_details : nx_bool has_details();
+  property details : [own] Kit_KitData_UIDetails*  details(nx_getter : temp_getdetails, nx_setter : temp_setdetails);
+  function has_contentlocatorid : nx_bool has_contentlocatorid();
+  property contentLocatorId : nx_string contentLocatorId(nx_getter : contentlocatorid, nx_setter : set_contentlocatorid);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitData_Category_Leaf : Kit_KitData_Category_Leaf;
+}
+
+class Kit_KitData_Category_Child  : com::zoho::remoteboard::build::Kit_KitData_Category_Child {
+  inherits Message;
+  constructor Kit_KitData_Category_Child : com::zoho::remoteboard::build::Kit_KitData_Category_Child();
+  function CopyFrom : nx_void CopyFrom(Kit_KitData_Category_Child& arg0);
+  function Clear : nx_void Clear();
+  function has_details : nx_bool has_details();
+  property details : [own] Kit_KitData_UIDetails*  details(nx_getter : temp_getdetails, nx_setter : temp_setdetails);
+  property categories  : [own] nx_repeated_ptr_field[protobuf_array_Kit_KitData_Category]* categories(nx_getter : temp_getcategories, nx_setter : temp_setcategories);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitData_Category_Child : Kit_KitData_Category_Child;
+}
+
+class Kit_KitData_Root  : com::zoho::remoteboard::build::Kit_KitData_Root {
+  inherits Message;
+  constructor Kit_KitData_Root : com::zoho::remoteboard::build::Kit_KitData_Root();
+  function CopyFrom : nx_void CopyFrom(Kit_KitData_Root& arg0);
+  function Clear : nx_void Clear();
+  function has_details : nx_bool has_details();
+  property details : [own] Kit_KitData_UIDetails*  details(nx_getter : temp_getdetails, nx_setter : temp_setdetails);
+  property categories  : [own] nx_repeated_ptr_field[protobuf_array_Kit_KitData_Category]* categories(nx_getter : temp_getcategories, nx_setter : temp_setcategories);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitData_Root : Kit_KitData_Root;
+}
+
+class Kit_KitResource  : com::zoho::remoteboard::build::Kit_KitResource {
+  inherits Message;
+  constructor Kit_KitResource : com::zoho::remoteboard::build::Kit_KitResource();
+  function CopyFrom : nx_void CopyFrom(Kit_KitResource& arg0);
+  function Clear : nx_void Clear();
+  function has_id : nx_bool has_id();
+  property id : nx_string id(nx_getter : id, nx_setter : set_id);
+  function has_contenttype : nx_bool has_contenttype();
+  property contentType : nx_enum_string<Kit_KitResource_ContentType> contentType(nx_getter : contenttype, nx_setter : set_contenttype);
+  function has_resource : nx_bool has_resource();
+  property resource : [own] Kit_KitResource_ResourceIdentifier*  resource(nx_getter : temp_getresource, nx_setter : temp_setresource);
+  property auxilaries  : [own] nx_repeated_ptr_field[protobuf_array_Kit_KitResource_AuxilaryResourceIdentifier]* auxilaries(nx_getter : temp_getauxilaries, nx_setter : temp_setauxilaries);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitResource : Kit_KitResource;
+}
+
+class Kit_KitResource_ResourceIdentifier  : com::zoho::remoteboard::build::Kit_KitResource_ResourceIdentifier {
+  inherits Message;
+  constructor Kit_KitResource_ResourceIdentifier : com::zoho::remoteboard::build::Kit_KitResource_ResourceIdentifier();
+  function CopyFrom : nx_void CopyFrom(Kit_KitResource_ResourceIdentifier& arg0);
+  function Clear : nx_void Clear();
+  function has_projectid : nx_bool has_projectid();
+  property projectId : nx_string projectId(nx_getter : projectid, nx_setter : set_projectid);
+  function has_documentid : nx_bool has_documentid();
+  property documentId : nx_string documentId(nx_getter : documentid, nx_setter : set_documentid);
+  function has_frameid : nx_bool has_frameid();
+  property frameId : nx_string frameId(nx_getter : frameid, nx_setter : set_frameid);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitResource_ResourceIdentifier : Kit_KitResource_ResourceIdentifier;
+}
+
+class Kit_KitResource_AuxilaryResourceIdentifier  : com::zoho::remoteboard::build::Kit_KitResource_AuxilaryResourceIdentifier {
+  inherits Message;
+  constructor Kit_KitResource_AuxilaryResourceIdentifier : com::zoho::remoteboard::build::Kit_KitResource_AuxilaryResourceIdentifier();
+  function CopyFrom : nx_void CopyFrom(Kit_KitResource_AuxilaryResourceIdentifier& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<Kit_KitResource_AuxilaryResourceIdentifier_AuxilaryResourceType> type(nx_getter : type, nx_setter : set_type);
+  function has_resourceid : nx_bool has_resourceid();
+  property resourceId : nx_string resourceId(nx_getter : resourceid, nx_setter : set_resourceid);
+  function has_pictureresource : nx_bool has_pictureresource();
+  property pictureResource : [own] Kit_KitResource_AuxilaryResourceIdentifier_PictureResource*  pictureResource(nx_getter : temp_getpictureResource, nx_setter : temp_setpictureResource);
+  function has_styleresource : nx_bool has_styleresource();
+  property styleResource : [own] Kit_KitResource_AuxilaryResourceIdentifier_StyleResource*  styleResource(nx_getter : temp_getstyleResource, nx_setter : temp_setstyleResource);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitResource_AuxilaryResourceIdentifier : Kit_KitResource_AuxilaryResourceIdentifier;
+}
+
+class Kit_KitResource_AuxilaryResourceIdentifier_PictureResource  : com::zoho::remoteboard::build::Kit_KitResource_AuxilaryResourceIdentifier_PictureResource {
+  inherits Message;
+  constructor Kit_KitResource_AuxilaryResourceIdentifier_PictureResource : com::zoho::remoteboard::build::Kit_KitResource_AuxilaryResourceIdentifier_PictureResource();
+  function CopyFrom : nx_void CopyFrom(Kit_KitResource_AuxilaryResourceIdentifier_PictureResource& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<PictureType> type(nx_getter : type, nx_setter : set_type);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitResource_AuxilaryResourceIdentifier_PictureResource : Kit_KitResource_AuxilaryResourceIdentifier_PictureResource;
+}
+
+class Kit_KitResource_AuxilaryResourceIdentifier_StyleResource  : com::zoho::remoteboard::build::Kit_KitResource_AuxilaryResourceIdentifier_StyleResource {
+  inherits Message;
+  constructor Kit_KitResource_AuxilaryResourceIdentifier_StyleResource : com::zoho::remoteboard::build::Kit_KitResource_AuxilaryResourceIdentifier_StyleResource();
+  function CopyFrom : nx_void CopyFrom(Kit_KitResource_AuxilaryResourceIdentifier_StyleResource& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<StyleSheetType> type(nx_getter : type, nx_setter : set_type);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitResource_AuxilaryResourceIdentifier_StyleResource : Kit_KitResource_AuxilaryResourceIdentifier_StyleResource;
+}
+
+class Kit_KitResourceMapping  : com::zoho::remoteboard::build::Kit_KitResourceMapping {
+  inherits Message;
+  constructor Kit_KitResourceMapping : com::zoho::remoteboard::build::Kit_KitResourceMapping();
+  function CopyFrom : nx_void CopyFrom(Kit_KitResourceMapping& arg0);
+  function Clear : nx_void Clear();
+  function has_id : nx_bool has_id();
+  property id : nx_string id(nx_getter : id, nx_setter : set_id);
+  function has_resource : nx_bool has_resource();
+  property resource : [own] Kit_KitResource*  resource(nx_getter : temp_getresource, nx_setter : temp_setresource);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Kit_KitResourceMapping : Kit_KitResourceMapping;
+}
+
+enum Kit_KitData_UIDetails_UIType : com::zoho::remoteboard::build::Kit_KitData_UIDetails_UIType {
+  UNKNOWN : com::zoho::remoteboard::build::Kit_KitData_UIDetails_UIType_UNKNOWN : 0;
+  TAB : com::zoho::remoteboard::build::Kit_KitData_UIDetails_UIType_TAB : 1;
+  GROUPING : com::zoho::remoteboard::build::Kit_KitData_UIDetails_UIType_GROUPING : 2;
+  LISTING : com::zoho::remoteboard::build::Kit_KitData_UIDetails_UIType_LISTING : 3;
+}
+enum Kit_KitData_UIDetails_Tab_TabType : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Tab_TabType {
+  UNKNOWN_TAB_TYPE : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Tab_TabType_UNKNOWN_TAB_TYPE : 0;
+  HORIZONTAL : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Tab_TabType_HORIZONTAL : 1;
+  VERTICAL : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Tab_TabType_VERTICAL : 2;
+}
+enum Kit_KitData_UIDetails_Tab_HorizontalTab_HorizontalTabType : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Tab_HorizontalTab_HorizontalTabType {
+  UNKNOWN_HORIZONTAL_TAB_TYPE : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Tab_HorizontalTab_HorizontalTabType_UNKNOWN_HORIZONTAL_TAB_TYPE : 0;
+  TYPE_1 : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Tab_HorizontalTab_HorizontalTabType_TYPE_1 : 1;
+  TYPE_2 : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Tab_HorizontalTab_HorizontalTabType_TYPE_2 : 2;
+  TYPE_3 : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Tab_HorizontalTab_HorizontalTabType_TYPE_3 : 3;
+}
+enum Kit_KitData_UIDetails_Grouping_GroupingType : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Grouping_GroupingType {
+  UNKNOWN_GROUPING : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Grouping_GroupingType_UNKNOWN_GROUPING : 0;
+  HORIZONTAL : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Grouping_GroupingType_HORIZONTAL : 1;
+  VERTICAL : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Grouping_GroupingType_VERTICAL : 2;
+}
+enum Kit_KitData_UIDetails_Lisitng_ListingView : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Lisitng_ListingView {
+  UNKNOWN_LISING_TYPE : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Lisitng_ListingView_UNKNOWN_LISING_TYPE : 0;
+  THUMBNAIL : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Lisitng_ListingView_THUMBNAIL : 1;
+  TABLE : com::zoho::remoteboard::build::Kit_KitData_UIDetails_Lisitng_ListingView_TABLE : 2;
+}
+enum Kit_KitData_Category_CategoryType : com::zoho::remoteboard::build::Kit_KitData_Category_CategoryType {
+  UNKNOWN : com::zoho::remoteboard::build::Kit_KitData_Category_CategoryType_UNKNOWN : 0;
+  LEAF : com::zoho::remoteboard::build::Kit_KitData_Category_CategoryType_LEAF : 1;
+  CHILD : com::zoho::remoteboard::build::Kit_KitData_Category_CategoryType_CHILD : 2;
+}
+enum Kit_KitResource_ContentType : com::zoho::remoteboard::build::Kit_KitResource_ContentType {
+  UNKNOWN_CONTENT_TYPE : com::zoho::remoteboard::build::Kit_KitResource_ContentType_UNKNOWN_CONTENT_TYPE : 0;
+  WHOLE_FRAME : com::zoho::remoteboard::build::Kit_KitResource_ContentType_WHOLE_FRAME : 1;
+  ELEMENT_LEVEL : com::zoho::remoteboard::build::Kit_KitResource_ContentType_ELEMENT_LEVEL : 2;
+}
+enum Kit_KitResource_AuxilaryResourceIdentifier_AuxilaryResourceType : com::zoho::remoteboard::build::Kit_KitResource_AuxilaryResourceIdentifier_AuxilaryResourceType {
+  DEFAULT_AUXILARY_RESOURCE_TYPE : com::zoho::remoteboard::build::Kit_KitResource_AuxilaryResourceIdentifier_AuxilaryResourceType_DEFAULT_AUXILARY_RESOURCE_TYPE : 0;
+  PICTURE : com::zoho::remoteboard::build::Kit_KitResource_AuxilaryResourceIdentifier_AuxilaryResourceType_PICTURE : 1;
+  STYLE : com::zoho::remoteboard::build::Kit_KitResource_AuxilaryResourceIdentifier_AuxilaryResourceType_STYLE : 2;
+}
+include {
+ nonvisualframeprops.pb.h;
+  }
+class NonVisualFrameProps  : com::zoho::remoteboard::NonVisualFrameProps {
+  inherits Message;
+  constructor NonVisualFrameProps : com::zoho::remoteboard::NonVisualFrameProps();
+  function CopyFrom : nx_void CopyFrom(NonVisualFrameProps& arg0);
+  function Clear : nx_void Clear();
+  function has_nvodprops : nx_bool has_nvodprops();
+  property nvODProps : [own] NonVisualFrameProps_NonVisualFrameDrawingProps*  nvODProps(nx_getter : temp_getnvODProps, nx_setter : temp_setnvODProps);
+  }
+
+repeated_ptr_field  {
+protobuf_array_NonVisualFrameProps : NonVisualFrameProps;
+}
+
+class NonVisualFrameProps_NonVisualFrameDrawingProps  : com::zoho::remoteboard::NonVisualFrameProps_NonVisualFrameDrawingProps {
+  inherits Message;
+  constructor NonVisualFrameProps_NonVisualFrameDrawingProps : com::zoho::remoteboard::NonVisualFrameProps_NonVisualFrameDrawingProps();
+  function CopyFrom : nx_void CopyFrom(NonVisualFrameProps_NonVisualFrameDrawingProps& arg0);
+  function Clear : nx_void Clear();
+  function has_locks : nx_bool has_locks();
+  property locks : [own] Locks*  locks(nx_getter : temp_getlocks, nx_setter : temp_setlocks);
+  function has_framenameprops : nx_bool has_framenameprops();
+  property frameNameProps : [own] NonVisualFrameProps_NonVisualFrameDrawingProps_FrameNameProperties*  frameNameProps(nx_getter : temp_getframeNameProps, nx_setter : temp_setframeNameProps);
+  }
+
+repeated_ptr_field  {
+protobuf_array_NonVisualFrameProps_NonVisualFrameDrawingProps : NonVisualFrameProps_NonVisualFrameDrawingProps;
+}
+
+class NonVisualFrameProps_NonVisualFrameDrawingProps_FrameNameProperties  : com::zoho::remoteboard::NonVisualFrameProps_NonVisualFrameDrawingProps_FrameNameProperties {
+  inherits Message;
+  constructor NonVisualFrameProps_NonVisualFrameDrawingProps_FrameNameProperties : com::zoho::remoteboard::NonVisualFrameProps_NonVisualFrameDrawingProps_FrameNameProperties();
+  function CopyFrom : nx_void CopyFrom(NonVisualFrameProps_NonVisualFrameDrawingProps_FrameNameProperties& arg0);
+  function Clear : nx_void Clear();
+  function has_hidden : nx_bool has_hidden();
+  property hidden : nx_bool hidden(nx_getter : hidden, nx_setter : set_hidden); 
+  }
+
+repeated_ptr_field  {
+protobuf_array_NonVisualFrameProps_NonVisualFrameDrawingProps_FrameNameProperties : NonVisualFrameProps_NonVisualFrameDrawingProps_FrameNameProperties;
+}
+
+include {
+ project.pb.h;
+  }
+class Project  : com::zoho::remoteboard::Project {
+  inherits Message;
+  constructor Project : com::zoho::remoteboard::Project();
+  function CopyFrom : nx_void CopyFrom(Project& arg0);
+  function Clear : nx_void Clear();
+  property documentIds  : [own] nx_repeated_field[nx_string]* documentIds(nx_getter : temp_getdocumentIds, nx_setter : temp_setdocumentIds);
+  function has_meta : nx_bool has_meta();
+  property meta : [own] BaseMeta*  meta(nx_getter : temp_getmeta, nx_setter : temp_setmeta);
+  property mappings  : [own] nx_repeated_ptr_field[protobuf_array_Project_ProjectDetailMapping]* mappings(nx_getter : temp_getmappings, nx_setter : temp_setmappings);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Project : Project;
+}
+
+class Project_ProjectDetailMapping  : com::zoho::remoteboard::Project_ProjectDetailMapping {
+  inherits Message;
+  constructor Project_ProjectDetailMapping : com::zoho::remoteboard::Project_ProjectDetailMapping();
+  function CopyFrom : nx_void CopyFrom(Project_ProjectDetailMapping& arg0);
+  function Clear : nx_void Clear();
+  function has_zuid : nx_bool has_zuid();
+  property zuid : nx_string zuid(nx_getter : zuid, nx_setter : set_zuid);
+  function has_state : nx_bool has_state();
+  property state : [own] ProjectState*  state(nx_getter : temp_getstate, nx_setter : temp_setstate);
+  function has_defaults : nx_bool has_defaults();
+  property defaults : [own] ProjectDefaults*  defaults(nx_getter : temp_getdefaults, nx_setter : temp_setdefaults);
+  property sketchTools  : [own] nx_repeated_ptr_field[protobuf_array_SketchTool]* sketchTools(nx_getter : temp_getsketchTools, nx_setter : temp_setsketchTools);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Project_ProjectDetailMapping : Project_ProjectDetailMapping;
+}
+
+include {
+ projectconfigurations.pb.h;
+  }
+class ProjectConfigurations  : com::zoho::remoteboard::ProjectConfigurations {
+  inherits Message;
+  constructor ProjectConfigurations : com::zoho::remoteboard::ProjectConfigurations();
+  function CopyFrom : nx_void CopyFrom(ProjectConfigurations& arg0);
+  function Clear : nx_void Clear();
+  property projectConfigMap  : [own] nx_repeated_ptr_field[protobuf_array_ProjectConfigurations_ProjectConfigMapping]* projectConfigMap(nx_getter : temp_getprojectConfigMap, nx_setter : temp_setprojectConfigMap);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ProjectConfigurations : ProjectConfigurations;
+}
+
+class ProjectConfigurations_UserConfig  : com::zoho::remoteboard::ProjectConfigurations_UserConfig {
+  inherits Message;
+  constructor ProjectConfigurations_UserConfig : com::zoho::remoteboard::ProjectConfigurations_UserConfig();
+  function CopyFrom : nx_void CopyFrom(ProjectConfigurations_UserConfig& arg0);
+  function Clear : nx_void Clear();
+  function has_state : nx_bool has_state();
+  property state : [own] ProjectState*  state(nx_getter : temp_getstate, nx_setter : temp_setstate);
+  function has_defaults : nx_bool has_defaults();
+  property defaults : [own] ProjectDefaults*  defaults(nx_getter : temp_getdefaults, nx_setter : temp_setdefaults);
+  property sketchTools  : [own] nx_repeated_ptr_field[protobuf_array_SketchTool]* sketchTools(nx_getter : temp_getsketchTools, nx_setter : temp_setsketchTools);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ProjectConfigurations_UserConfig : ProjectConfigurations_UserConfig;
+}
+
+class ProjectConfigurations_ProjectConfigMapping  : com::zoho::remoteboard::ProjectConfigurations_ProjectConfigMapping {
+  inherits Message;
+  constructor ProjectConfigurations_ProjectConfigMapping : com::zoho::remoteboard::ProjectConfigurations_ProjectConfigMapping();
+  function CopyFrom : nx_void CopyFrom(ProjectConfigurations_ProjectConfigMapping& arg0);
+  function Clear : nx_void Clear();
+  function has_zuid : nx_bool has_zuid();
+  property zuid : nx_string zuid(nx_getter : zuid, nx_setter : set_zuid);
+  function has_userconfig : nx_bool has_userconfig();
+  property UserConfig : [own] ProjectConfigurations_UserConfig*  UserConfig(nx_getter : temp_getUserConfig, nx_setter : temp_setUserConfig);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ProjectConfigurations_ProjectConfigMapping : ProjectConfigurations_ProjectConfigMapping;
+}
+
+include {
+ projectdata.pb.h;
+  }
+class ProjectData  : com::zoho::remoteboard::build::ProjectData {
+  inherits Message;
+  constructor ProjectData : com::zoho::remoteboard::build::ProjectData();
+  function CopyFrom : nx_void CopyFrom(ProjectData& arg0);
+  function Clear : nx_void Clear();
+  function has_id : nx_bool has_id();
+  property id : nx_string id(nx_getter : id, nx_setter : set_id);
+  property docDatas  : [own] nx_repeated_ptr_field[protobuf_array_DocumentData]* docDatas(nx_getter : temp_getdocDatas, nx_setter : temp_setdocDatas);
+  function has_meta : nx_bool has_meta();
+  property meta : [own] BaseMeta*  meta(nx_getter : temp_getmeta, nx_setter : temp_setmeta);
+  function has_state : nx_bool has_state();
+  property state : [own] ProjectState*  state(nx_getter : temp_getstate, nx_setter : temp_setstate);
+  function has_defaults : nx_bool has_defaults();
+  property defaults : [own] ProjectDefaults*  defaults(nx_getter : temp_getdefaults, nx_setter : temp_setdefaults);
+  property sketchTools  : [own] nx_repeated_ptr_field[protobuf_array_SketchTool]* sketchTools(nx_getter : temp_getsketchTools, nx_setter : temp_setsketchTools);
+  function has_isfavourite : nx_bool has_isfavourite();
+  property isFavourite : nx_bool isFavourite(nx_getter : isfavourite, nx_setter : set_isfavourite); 
+  function has_basemeta : nx_bool has_basemeta();
+  property baseMeta : [own] DocBaseMeta*  baseMeta(nx_getter : temp_getbaseMeta, nx_setter : temp_setbaseMeta);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ProjectData : ProjectData;
+}
+
+include {
+ projectdefaults.pb.h;
+  }
+class ProjectDefaults  : com::zoho::remoteboard::ProjectDefaults {
+  inherits Message;
+  constructor ProjectDefaults : com::zoho::remoteboard::ProjectDefaults();
+  function CopyFrom : nx_void CopyFrom(ProjectDefaults& arg0);
+  function Clear : nx_void Clear();
+  function has_shape : nx_bool has_shape();
+  property shape : [own] ProjectDefaults_ShapeDefault*  shape(nx_getter : temp_getshape, nx_setter : temp_setshape);
+  function has_text : nx_bool has_text();
+  property text : [own] ProjectDefaults_TextDefault*  text(nx_getter : temp_gettext, nx_setter : temp_settext);
+  function has_pencil : nx_bool has_pencil();
+  property pencil : [own] SketchDefault*  pencil(nx_getter : temp_getpencil, nx_setter : temp_setpencil);
+  function has_sketch : nx_bool has_sketch();
+  property sketch : [own] SketchDefault*  sketch(nx_getter : temp_getsketch, nx_setter : temp_setsketch);
+  function has_highlighter : nx_bool has_highlighter();
+  property highlighter : [own] SketchDefault*  highlighter(nx_getter : temp_gethighlighter, nx_setter : temp_sethighlighter);
+  function has_connector : nx_bool has_connector();
+  property connector : [own] ProjectDefaults_ConnectorDefault*  connector(nx_getter : temp_getconnector, nx_setter : temp_setconnector);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ProjectDefaults : ProjectDefaults;
+}
+
+class ProjectDefaults_ShapeDefault  : com::zoho::remoteboard::ProjectDefaults_ShapeDefault {
+  inherits Message;
+  constructor ProjectDefaults_ShapeDefault : com::zoho::remoteboard::ProjectDefaults_ShapeDefault();
+  function CopyFrom : nx_void CopyFrom(ProjectDefaults_ShapeDefault& arg0);
+  function Clear : nx_void Clear();
+  function has_fill : nx_bool has_fill();
+  property fill : [own] Fill*  fill(nx_getter : temp_getfill, nx_setter : temp_setfill);
+  function has_dim : nx_bool has_dim();
+  property dim : [own] Dimension*  dim(nx_getter : temp_getdim, nx_setter : temp_setdim);
+  function has_stroke : nx_bool has_stroke();
+  property stroke : [own] Stroke*  stroke(nx_getter : temp_getstroke, nx_setter : temp_setstroke);
+  property fills  : [own] nx_repeated_ptr_field[protobuf_array_Fill]* fills(nx_getter : temp_getfills, nx_setter : temp_setfills);
+  property strokes  : [own] nx_repeated_ptr_field[protobuf_array_Stroke]* strokes(nx_getter : temp_getstrokes, nx_setter : temp_setstrokes);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ProjectDefaults_ShapeDefault : ProjectDefaults_ShapeDefault;
+}
+
+class ProjectDefaults_TextDefault  : com::zoho::remoteboard::ProjectDefaults_TextDefault {
+  inherits Message;
+  constructor ProjectDefaults_TextDefault : com::zoho::remoteboard::ProjectDefaults_TextDefault();
+  function CopyFrom : nx_void CopyFrom(ProjectDefaults_TextDefault& arg0);
+  function Clear : nx_void Clear();
+  function has_font : nx_bool has_font();
+  property font : [own] Font*  font(nx_getter : temp_getfont, nx_setter : temp_setfont);
+  function has_fill : nx_bool has_fill();
+  property fill : [own] Fill*  fill(nx_getter : temp_getfill, nx_setter : temp_setfill);
+  function has_dim : nx_bool has_dim();
+  property dim : [own] Dimension*  dim(nx_getter : temp_getdim, nx_setter : temp_setdim);
+  function has_size : nx_bool has_size();
+  property size : nx_float size(nx_getter : size, nx_setter : set_size); 
+  }
+
+repeated_ptr_field  {
+protobuf_array_ProjectDefaults_TextDefault : ProjectDefaults_TextDefault;
+}
+
+class ProjectDefaults_ConnectorDefault  : com::zoho::remoteboard::ProjectDefaults_ConnectorDefault {
+  inherits Message;
+  constructor ProjectDefaults_ConnectorDefault : com::zoho::remoteboard::ProjectDefaults_ConnectorDefault();
+  function CopyFrom : nx_void CopyFrom(ProjectDefaults_ConnectorDefault& arg0);
+  function Clear : nx_void Clear();
+  property strokes  : [own] nx_repeated_ptr_field[protobuf_array_Stroke]* strokes(nx_getter : temp_getstrokes, nx_setter : temp_setstrokes);
+  function has_geom : nx_bool has_geom();
+  property geom : [own] ShapeGeometry*  geom(nx_getter : temp_getgeom, nx_setter : temp_setgeom);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ProjectDefaults_ConnectorDefault : ProjectDefaults_ConnectorDefault;
+}
+
+include {
+ projectstate.pb.h;
+  }
+class ProjectState  : com::zoho::remoteboard::ProjectState {
+  inherits Message;
+  constructor ProjectState : com::zoho::remoteboard::ProjectState();
+  function CopyFrom : nx_void CopyFrom(ProjectState& arg0);
+  function Clear : nx_void Clear();
+  function has_lastopeneddocumentid : nx_bool has_lastopeneddocumentid();
+  property lastOpenedDocumentId : nx_string lastOpenedDocumentId(nx_getter : lastopeneddocumentid, nx_setter : set_lastopeneddocumentid);
+  property documentState  : [own] nx_repeated_ptr_field[protobuf_array_ProjectState_DocumentState]* documentState(nx_getter : temp_getdocumentState, nx_setter : temp_setdocumentState);
+  function has_commentmode : nx_bool has_commentmode();
+  property commentMode : nx_bool commentMode(nx_getter : commentmode, nx_setter : set_commentmode); 
+  function has_navigation : nx_bool has_navigation();
+  property navigation : [own] ProjectState_Navigation*  navigation(nx_getter : temp_getnavigation, nx_setter : temp_setnavigation);
+  function has_showcollaboratorscursor : nx_bool has_showcollaboratorscursor();
+  property showCollaboratorsCursor : nx_bool showCollaboratorsCursor(nx_getter : showcollaboratorscursor, nx_setter : set_showcollaboratorscursor); 
+  }
+
+repeated_ptr_field  {
+protobuf_array_ProjectState : ProjectState;
+}
+
+class ProjectState_DocumentState  : com::zoho::remoteboard::ProjectState_DocumentState {
+  inherits Message;
+  constructor ProjectState_DocumentState : com::zoho::remoteboard::ProjectState_DocumentState();
+  function CopyFrom : nx_void CopyFrom(ProjectState_DocumentState& arg0);
+  function Clear : nx_void Clear();
+  function has_documentid : nx_bool has_documentid();
+  property documentId : nx_string documentId(nx_getter : documentid, nx_setter : set_documentid);
+  function has_zoomfactor : nx_bool has_zoomfactor();
+  property zoomFactor : nx_float zoomFactor(nx_getter : zoomfactor, nx_setter : set_zoomfactor); 
+  function has_leftedge : nx_bool has_leftedge();
+  property leftEdge : [own] Position*  leftEdge(nx_getter : temp_getleftEdge, nx_setter : temp_setleftEdge);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ProjectState_DocumentState : ProjectState_DocumentState;
+}
+
+class ProjectState_Navigation  : com::zoho::remoteboard::ProjectState_Navigation {
+  inherits Message;
+  constructor ProjectState_Navigation : com::zoho::remoteboard::ProjectState_Navigation();
+  function CopyFrom : nx_void CopyFrom(ProjectState_Navigation& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<ProjectState_Navigation_NavigationType> type(nx_getter : type, nx_setter : set_type);
+  function has_viewmycursor : nx_bool has_viewmycursor();
+  property viewMyCursor : nx_bool viewMyCursor(nx_getter : viewmycursor, nx_setter : set_viewmycursor); 
+  }
+
+repeated_ptr_field  {
+protobuf_array_ProjectState_Navigation : ProjectState_Navigation;
+}
+
+enum ProjectState_Navigation_NavigationType : com::zoho::remoteboard::ProjectState_Navigation_NavigationType {
+  UNKNOWN_NAVIGATIONTYPE : com::zoho::remoteboard::ProjectState_Navigation_NavigationType_UNKNOWN_NAVIGATIONTYPE : 0;
+  NONE : com::zoho::remoteboard::ProjectState_Navigation_NavigationType_NONE : 1;
+  ALL : com::zoho::remoteboard::ProjectState_Navigation_NavigationType_ALL : 2;
+}
+include {
+ protofielddefinition.pb.h;
+  }
+class ProtoFieldDefinition  : com::zoho::show::build::ProtoFieldDefinition {
+  inherits Message;
+  constructor ProtoFieldDefinition : com::zoho::show::build::ProtoFieldDefinition();
+  function CopyFrom : nx_void CopyFrom(ProtoFieldDefinition& arg0);
+  function Clear : nx_void Clear();
+  function has_name : nx_bool has_name();
+  property name : nx_string name(nx_getter : name, nx_setter : set_name);
+  function has_rule : nx_bool has_rule();
+  property rule : nx_string rule(nx_getter : rule, nx_setter : set_rule);
+  function has_type : nx_bool has_type();
+  property type : nx_string type(nx_getter : type, nx_setter : set_type);
+  function has_number : nx_bool has_number();
+  property number : nx_int number(nx_getter : number, nx_setter : set_number); 
+  property values  : [own] nx_repeated_field[nx_string]* values(nx_getter : temp_getvalues, nx_setter : temp_setvalues);
+  function has_messagename : nx_bool has_messagename();
+  property messageName : nx_string messageName(nx_getter : messagename, nx_setter : set_messagename);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ProtoFieldDefinition : ProtoFieldDefinition;
+}
+
+include {
+ remoteboardclips.pb.h;
+  }
+class RemoteBoardClips  : com::zoho::clipboard::remoteboard::RemoteBoardClips {
+  inherits Message;
+  constructor RemoteBoardClips : com::zoho::clipboard::remoteboard::RemoteBoardClips();
+  function CopyFrom : nx_void CopyFrom(RemoteBoardClips& arg0);
+  function Clear : nx_void Clear();
+  property remoteBoardClips  : [own] nx_repeated_ptr_field[protobuf_array_RemoteBoardClips_RemoteBoardClip]* remoteBoardClips(nx_getter : temp_getremoteBoardClips, nx_setter : temp_setremoteBoardClips);
+  }
+
+repeated_ptr_field  {
+protobuf_array_RemoteBoardClips : RemoteBoardClips;
+}
+
+class RemoteBoardClips_RemoteBoardClip  : com::zoho::clipboard::remoteboard::RemoteBoardClips_RemoteBoardClip {
+  inherits Message;
+  constructor RemoteBoardClips_RemoteBoardClip : com::zoho::clipboard::remoteboard::RemoteBoardClips_RemoteBoardClip();
+  function CopyFrom : nx_void CopyFrom(RemoteBoardClips_RemoteBoardClip& arg0);
+  function Clear : nx_void Clear();
+  function has_id : nx_bool has_id();
+  property id : nx_string id(nx_getter : id, nx_setter : set_id);
+  property clips  : [own] nx_repeated_ptr_field[protobuf_array_RemoteBoardClips_Clip]* clips(nx_getter : temp_getclips, nx_setter : temp_setclips);
+  }
+
+repeated_ptr_field  {
+protobuf_array_RemoteBoardClips_RemoteBoardClip : RemoteBoardClips_RemoteBoardClip;
+}
+
+class RemoteBoardClips_Clip  : com::zoho::clipboard::remoteboard::RemoteBoardClips_Clip {
+  inherits Message;
+  constructor RemoteBoardClips_Clip : com::zoho::clipboard::remoteboard::RemoteBoardClips_Clip();
+  function CopyFrom : nx_void CopyFrom(RemoteBoardClips_Clip& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<ClipType> type(nx_getter : type, nx_setter : set_type);
+  function has_detail : nx_bool has_detail();
+  property detail : [own] RemoteBoardClips_Clip_ClipDetail*  detail(nx_getter : temp_getdetail, nx_setter : temp_setdetail);
+  function has_principal : nx_bool has_principal();
+  property principal : [own] RemoteBoardClips_Clip_RemoteBoardPrincipal*  principal(nx_getter : temp_getprincipal, nx_setter : temp_setprincipal);
+  property dependents  : [own] nx_repeated_ptr_field[protobuf_array_Dependent]* dependents(nx_getter : temp_getdependents, nx_setter : temp_setdependents);
+  }
+
+repeated_ptr_field  {
+protobuf_array_RemoteBoardClips_Clip : RemoteBoardClips_Clip;
+}
+
+class RemoteBoardClips_Clip_ClipDetail  : com::zoho::clipboard::remoteboard::RemoteBoardClips_Clip_ClipDetail {
+  inherits Message;
+  constructor RemoteBoardClips_Clip_ClipDetail : com::zoho::clipboard::remoteboard::RemoteBoardClips_Clip_ClipDetail();
+  function CopyFrom : nx_void CopyFrom(RemoteBoardClips_Clip_ClipDetail& arg0);
+  function Clear : nx_void Clear();
+  function has_docid : nx_bool has_docid();
+  property docId : nx_string docId(nx_getter : docid, nx_setter : set_docid);
+  function has_owner : nx_bool has_owner();
+  property owner : nx_string owner(nx_getter : owner, nx_setter : set_owner);
+  function has_frameid : nx_bool has_frameid();
+  property frameId : nx_string frameId(nx_getter : frameid, nx_setter : set_frameid);
+  }
+
+repeated_ptr_field  {
+protobuf_array_RemoteBoardClips_Clip_ClipDetail : RemoteBoardClips_Clip_ClipDetail;
+}
+
+class RemoteBoardClips_Clip_RemoteBoardPrincipal  : com::zoho::clipboard::remoteboard::RemoteBoardClips_Clip_RemoteBoardPrincipal {
+  inherits Message;
+  constructor RemoteBoardClips_Clip_RemoteBoardPrincipal : com::zoho::clipboard::remoteboard::RemoteBoardClips_Clip_RemoteBoardPrincipal();
+  function CopyFrom : nx_void CopyFrom(RemoteBoardClips_Clip_RemoteBoardPrincipal& arg0);
+  function Clear : nx_void Clear();
+  property elements  : [own] nx_repeated_ptr_field[protobuf_array_RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement]* elements(nx_getter : temp_getelements, nx_setter : temp_setelements);
+  }
+
+repeated_ptr_field  {
+protobuf_array_RemoteBoardClips_Clip_RemoteBoardPrincipal : RemoteBoardClips_Clip_RemoteBoardPrincipal;
+}
+
+class RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement  : com::zoho::clipboard::remoteboard::RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement {
+  inherits Message;
+  constructor RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement : com::zoho::clipboard::remoteboard::RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement();
+  function CopyFrom : nx_void CopyFrom(RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement_RemoteBoardElementType> type(nx_getter : type, nx_setter : set_type);
+  property fileIds  : [own] nx_repeated_field[nx_string]* fileIds(nx_getter : temp_getfileIds, nx_setter : temp_setfileIds);
+  }
+
+repeated_ptr_field  {
+protobuf_array_RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement : RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement;
+}
+
+enum RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement_RemoteBoardElementType : com::zoho::clipboard::remoteboard::RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement_RemoteBoardElementType {
+  UNKNOWN : com::zoho::clipboard::remoteboard::RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement_RemoteBoardElementType_UNKNOWN : 0;
+  SHAPE : com::zoho::clipboard::remoteboard::RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement_RemoteBoardElementType_SHAPE : 1;
+  TEXT : com::zoho::clipboard::remoteboard::RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement_RemoteBoardElementType_TEXT : 2;
+  FRAME : com::zoho::clipboard::remoteboard::RemoteBoardClips_Clip_RemoteBoardPrincipal_RemoteBoardElement_RemoteBoardElementType_FRAME : 3;
+}
+include {
+ shapeclips.pb.h;
+  }
+class ShapeClips  : com::zoho::clipboard::ShapeClips {
+  inherits Message;
+  constructor ShapeClips : com::zoho::clipboard::ShapeClips();
+  function CopyFrom : nx_void CopyFrom(ShapeClips& arg0);
+  function Clear : nx_void Clear();
+  property shapes  : [own] nx_repeated_ptr_field[protobuf_array_ShapeClips_ShapeClip]* shapes(nx_getter : temp_getshapes, nx_setter : temp_setshapes);
+  property animList  : [own] nx_repeated_ptr_field[protobuf_array_AnimationList]* animList(nx_getter : temp_getanimList, nx_setter : temp_setanimList);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ShapeClips : ShapeClips;
+}
+
+class ShapeClips_ShapeClip  : com::zoho::clipboard::ShapeClips_ShapeClip {
+  inherits Message;
+  constructor ShapeClips_ShapeClip : com::zoho::clipboard::ShapeClips_ShapeClip();
+  function CopyFrom : nx_void CopyFrom(ShapeClips_ShapeClip& arg0);
+  function Clear : nx_void Clear();
+  function has_shape : nx_bool has_shape();
+  property shape : [own] ShapeObject*  shape(nx_getter : temp_getshape, nx_setter : temp_setshape);
+  function has_source : nx_bool has_source();
+  property source : [own] ShapeObject*  source(nx_getter : temp_getsource, nx_setter : temp_setsource);
+  }
+
+repeated_ptr_field  {
+protobuf_array_ShapeClips_ShapeClip : ShapeClips_ShapeClip;
+}
+
+include {
+ sketchdefault.pb.h;
+  }
+class SketchDefault  : com::zoho::remoteboard::SketchDefault {
+  inherits Message;
+  constructor SketchDefault : com::zoho::remoteboard::SketchDefault();
+  function CopyFrom : nx_void CopyFrom(SketchDefault& arg0);
+  function Clear : nx_void Clear();
+  function has_color : nx_bool has_color();
+  property color : [own] Color*  color(nx_getter : temp_getcolor, nx_setter : temp_setcolor);
+  function has_size : nx_bool has_size();
+  property size : nx_float size(nx_getter : size, nx_setter : set_size); 
+  }
+
+repeated_ptr_field  {
+protobuf_array_SketchDefault : SketchDefault;
+}
+
+include {
+ sketchtool.pb.h;
+  }
+class SketchTool  : com::zoho::remoteboard::SketchTool {
+  inherits Message;
+  constructor SketchTool : com::zoho::remoteboard::SketchTool();
+  function CopyFrom : nx_void CopyFrom(SketchTool& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<SketchTool_SketchToolType> type(nx_getter : type, nx_setter : set_type);
+  function has_sketch : nx_bool has_sketch();
+  property sketch : [own] SketchDefault*  sketch(nx_getter : temp_getsketch, nx_setter : temp_setsketch);
+  }
+
+repeated_ptr_field  {
+protobuf_array_SketchTool : SketchTool;
+}
+
+enum SketchTool_SketchToolType : com::zoho::remoteboard::SketchTool_SketchToolType {
+  DEF_SKETCH_TOOL : com::zoho::remoteboard::SketchTool_SketchToolType_DEF_SKETCH_TOOL : 0;
+  NO_SKETCH : com::zoho::remoteboard::SketchTool_SketchToolType_NO_SKETCH : 1;
+  PENCIL : com::zoho::remoteboard::SketchTool_SketchToolType_PENCIL : 2;
+  SKETCH : com::zoho::remoteboard::SketchTool_SketchToolType_SKETCH : 3;
+}
+include {
+ textclips.pb.h;
+  }
+class TextClips  : com::zoho::clipboard::TextClips {
+  inherits Message;
+  constructor TextClips : com::zoho::clipboard::TextClips();
+  function CopyFrom : nx_void CopyFrom(TextClips& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_enum_string<TextClips_TextType> type(nx_getter : type, nx_setter : set_type);
+  property paras  : [own] nx_repeated_ptr_field[protobuf_array_TextClips_ParaNode]* paras(nx_getter : temp_getparas, nx_setter : temp_setparas);
+  property portions  : [own] nx_repeated_ptr_field[protobuf_array_TextClips_PortionNode]* portions(nx_getter : temp_getportions, nx_setter : temp_setportions);
+  }
+
+repeated_ptr_field  {
+protobuf_array_TextClips : TextClips;
+}
+
+class TextClips_ParaNode  : com::zoho::clipboard::TextClips_ParaNode {
+  inherits Message;
+  constructor TextClips_ParaNode : com::zoho::clipboard::TextClips_ParaNode();
+  function CopyFrom : nx_void CopyFrom(TextClips_ParaNode& arg0);
+  function Clear : nx_void Clear();
+  function has_para : nx_bool has_para();
+  property para : [own] Paragraph*  para(nx_getter : temp_getpara, nx_setter : temp_setpara);
+  function has_source : nx_bool has_source();
+  property source : [own] Paragraph*  source(nx_getter : temp_getsource, nx_setter : temp_setsource);
+  }
+
+repeated_ptr_field  {
+protobuf_array_TextClips_ParaNode : TextClips_ParaNode;
+}
+
+class TextClips_PortionNode  : com::zoho::clipboard::TextClips_PortionNode {
+  inherits Message;
+  constructor TextClips_PortionNode : com::zoho::clipboard::TextClips_PortionNode();
+  function CopyFrom : nx_void CopyFrom(TextClips_PortionNode& arg0);
+  function Clear : nx_void Clear();
+  function has_portion : nx_bool has_portion();
+  property portion : [own] Portion*  portion(nx_getter : temp_getportion, nx_setter : temp_setportion);
+  function has_source : nx_bool has_source();
+  property source : [own] Portion*  source(nx_getter : temp_getsource, nx_setter : temp_setsource);
+  }
+
+repeated_ptr_field  {
+protobuf_array_TextClips_PortionNode : TextClips_PortionNode;
+}
+
+enum TextClips_TextType : com::zoho::clipboard::TextClips_TextType {
+  PARA : com::zoho::clipboard::TextClips_TextType_PARA : 0;
+  PORTION : com::zoho::clipboard::TextClips_TextType_PORTION : 1;
+}

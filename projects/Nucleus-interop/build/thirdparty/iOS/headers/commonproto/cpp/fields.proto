@@ -1,0 +1,1068 @@
+syntax="proto3";
+package Show;
+
+option java_package = "Show";
+option java_outer_classname = "Fields";
+
+message CommonField {
+
+	enum UseParentProps {
+		NONE = 0;
+		TEXTBOX = 1;
+	}
+
+	enum MeasuringUnit {
+		PIXEL = 0;
+		INCH = 1;
+		CM = 2;
+	}
+
+	enum ValueVariant {
+		UNKNOWN_VARIANT = 0;
+		RELATIVE = 1; // In Percentage
+		ABSOLUTE = 2;
+	}
+
+	enum ValueType {
+		UNKNOWN = 0;
+		BOOLEAN = 1;
+		STRING = 2;
+		FLOAT = 3;
+		DOUBLE = 4;
+		INTEGER = 5;
+		LONG = 6;
+		PERSON = 7;
+		DATETIME = 8;
+		EMAIL = 9;
+		CONTACT = 10;
+		CUSTOM = 11;
+	}
+
+	enum CompositeValueType {
+		DEFAULT_VALUE = 0;
+		BASIC = 1;
+		ARRAY = 2;
+		MATRIX = 3;
+		DATA_MAP = 4;
+		JSON_MAP = 5;
+	}
+}
+
+message FileField {
+
+	enum FileFormat {
+		UNKNOWN_FILE_FORMAT = 0;
+		DOCUMENT = 1;
+		PRESENTATION = 2;
+		SPREADSHEET = 3;
+		LANGUAGE = 4;
+	}
+
+	enum DocumentFileType {
+		
+		UNKNOWN_DOCUMENT_FILE_TYPE = 0;
+		DOC = 1;
+		DOCX = 2;
+		TXT = 3;
+		RTF = 4;
+		DOCM = 5;
+		DOT = 6;
+		DOTM = 7;		
+		DOTX = 8;
+		ODT = 9;
+		PDF = 10;
+	}	
+
+	enum PresentationFileType {
+		
+		UNKNOWN_PRESENTATION_FILE_TYPE = 0;
+		PPT = 1;
+		PPTX = 2;
+		PPS = 3;
+		PPSX = 4;
+		ODP = 5;
+		SXI = 6;
+		KEY = 7;
+	}
+
+	enum SpreadsheetFileType {
+		
+		UNKNOWN_SPREADSHEET_FILE_TYPE = 0;
+		XLS = 1;
+		XLSX = 2;
+		XLSM = 3;
+		TSV = 4;
+		CSV = 5;
+		ODS = 6;
+		SXC = 7;
+		NUMBERS = 8;	
+	}
+
+	enum LanguageFileType {
+		
+		UNKNOWN_DEVELOPER_FILE_TYPE = 0;
+		HTML = 1;
+		CSS = 2;
+		JS = 3;
+		JAVA = 4;
+		CMD = 5;	//Command Prompt file
+		LESS = 6;
+		JSP = 7;
+		JSON = 8;
+		PY = 9;
+		PROTO = 10;
+		XML = 11;
+		SQL = 12;
+		BAT = 13;	//Batch file
+		SWIFT = 14;
+		CPP = 15;
+		PROPERTIES = 16;
+		GO = 17;	
+		ATOM = 18;	
+		BASH = 19;	//Bourne-Again SHell
+		HPP = 20;
+		LOG = 21;
+		SH = 22;	//shell script
+		COFFEE = 23;
+		DART = 24;
+		MD = 25;	//Markdown
+		DS = 26;	
+		MK = 27;	//makefile
+		PALI = 28;	
+		PL = 29;	//Perl Script file
+		PHP = 30;
+		INI = 31;
+		RB = 32;	//Ruby source file
+		RS = 33;	//Rust Source file
+		YAML = 34;	//Yet another markup language
+		YML = 35;	
+		TEX = 36;	//LaTeX source file
+		ADOC = 37;	//AsciiDoc file
+		BF = 38;
+		CLJ = 39;	//Clojure Source file
+		CR = 40;	//Crystal programming language source file
+		CONF = 41;	
+		CS = 42;
+		C = 43;
+		ERL = 44;	//Erlang source code file
+		GOLO = 45;
+		GROOVY = 46;
+		GSH = 47;
+		HTM = 48;
+		HS = 49;	//Haskell Script file
+		HX = 50;	//Haxe Source Code file
+		IRB = 51;
+		LUA = 52;
+		MAK = 53;
+		ML = 54;	//MetaLanguage file
+		SCALA = 55;
+		SCM = 56;
+		TS = 57;	//Typescript file.
+		VB = 58;	//Visual Basic files
+		VIM = 59;
+		XHTML = 60;
+		XSL = 61;	//Extensible Stylesheet file
+		ST = 62;
+		PERL = 63;	//Perl Script file
+		SS = 64;	//SilverStripe 
+		F95 = 65;	//Fortran 95 source code file
+	}
+}
+
+message StrokeField {
+	enum CapType {
+		DEF_CAP_TYPE = 0;
+		FLAT = 1;
+		CAPROUND = 2;
+		SQUARE = 3;
+	}
+
+	// NO line means none fill for the line
+	enum StrokeType {
+		SOLID = 0; // solid
+		DASH = 1; // dashed
+		ROUND_DOT = 2; // Round Dot
+		SQUARE_DOT = 3; // Square Dot
+		LONG_DASH = 4; // long dashes
+		DASHDOT = 5; // dash dot
+		LONG_DASH_DOT = 6; // long dash dot
+		LONG_DASH_DOT_DOT = 7; // long dash dot dot
+		DASH_PATTERN = 8; // User defined dash pattern.
+	}
+
+	enum JoinType {
+		DEF_JOIN_TYPE = 0;
+		ROUND = 1;
+		BEVEL = 2;
+		MITER = 3;
+	}
+
+	enum MarkerType {
+		DEF_MARKER_TYPE = 0;
+		NONE = 1;
+		OPEN = 2;
+		BLOCK = 3;
+		CLASSIC = 4;
+		DIAMOND = 5;
+		OVAL = 6;
+		HOLLOW_DIAMOND=7;
+		HOLLOW_ARROW_HEAD=8;
+		HOLLOW_CIRCLE=9;
+		AGGREGATION=10;
+		COMPOSITION=11;
+		TERMINATE=12;
+		ZERO_OR_ONE=13;
+		ONE=14;
+		ONE_OPTIONAL=15;
+		MANY=16;
+		ZERO_OR_MANY=17;
+		ONE_MANDATORY=18;
+		ONE_OR_MANY=19;
+		PORT_SYMBOL=20;
+		DIAMOND_START=21;
+		OVAL_START=22;
+		HOLLOW_DIAMOND_START=23;
+		HOLLOW_CIRCLE_START=24;
+	}
+
+	enum Size {
+		DEF_MARKER_SIZE = 0;
+		NARROW = 1;
+		MEDIUM = 2;
+		WIDE = 3;
+		EXTRA_WIDE = 4;
+	}
+
+	enum StrokePosition {
+		UNKNOWN_POSITION = 0;
+		CENTER = 1;
+		INSIDE = 2;
+		OUTSIDE = 3;
+	}
+}
+
+message GeometryField {
+
+	enum ShapeGeometryType {
+		PRESET = 0;
+		CUSTOM = 1;
+		PRESET_SMART = 2;
+	}
+
+	enum PresetShapeGeometry {
+		DEF_PRESET_SHAPE = 0;
+		RECT = 1;
+		ROUND_RECT = 2;
+		SNIP_SINGLE_RECT = 3;
+		SNIP_SAMESIDE_RECT = 4;
+		SNIP_DIAGONAL_RECT = 5;
+		SNIP_ROUND_SINGLE_RECT = 6;
+		ROUND_SINGLE_RECT = 7;
+		ROUND_SAMESIDE_RECT = 8;
+		ROUND_DIAGONAL_RECT = 9;
+		OVAL = 10;
+		ISOSCELES_TRIANGLE = 11;
+		RIGHT_TRIANGLE = 12;
+		PARALLELOGRAM = 13;
+		TRAPEZOID = 14;
+		DIAMOND = 15;
+		PENTAGON = 16;
+		HEXAGON = 17;
+		HEPTAGON = 18;
+		OCTAGON = 19;
+		DECAGON = 20;
+		DODECAGON = 21;
+		PIE = 22;
+		CHORD = 23;
+		TEARDROP = 24;
+		FRAME = 25;
+		HALF_FRAME = 26;
+		LSHAPE = 27;
+		DIAGONAL_STRIPE = 28;
+		CROSS = 29;
+		PLAQUE = 30;
+		CAN = 31;
+		CUBE = 32;
+		BEVEL = 33;
+		DONUT = 34;
+		NO_SYMBOL = 35;
+		BLOCK_ARC = 36;
+		FOLDED_CORNER = 37;
+		SMILEY = 38;
+		HEART = 39;
+		LIGHTNING_BOLT = 40;
+		SUN = 41;
+		MOON = 42;
+		CLOUD = 43;
+		ARC = 44;
+		DOUBLE_BRACKET = 45;
+		DOUBLE_BRACE = 46;
+		LEFT_BRACKET = 47;
+		RIGHT_BRACKET = 48;
+		LEFT_BRACE = 49;
+		RIGHT_BRACE = 50;
+		CLOCK = 51;
+		RIGHT_ARROW = 52;
+		LEFT_ARROW = 53;
+		UP_ARROW = 54;
+		DOWN_ARROW = 55;
+		LEFT_RIGHT_ARROW = 56;
+		UP_DOWN_ARROW = 57;
+		QUAD_ARROW = 58;
+		LEFT_RIGHT_UP_ARROW = 59;
+		BENT_ARROW = 60;
+		U_TURN_ARROW = 61;
+		LEFT_UP_ARROW = 62;
+		BENT_UP_ARROW = 63;
+		CURVED_RIGHT_ARROW = 64;
+		CURVED_LEFT_ARROW = 65;
+		CURVED_UP_ARROW = 66;
+		CURVED_DOWN_ARROW = 67;
+		STRIPED_RIGHT_ARROW = 68;
+		NOTCHED_RIGHT_ARROW = 69;
+		PENTAGON_ARROW = 70;
+		CHEVRON = 71;
+		RIGHT_ARROW_CALLOUT = 72;
+		DOWN_ARROW_CALLOUT = 73;
+		LEFT_ARROW_CALLOUT = 74;
+		UP_ARROW_CALLOUT = 75;
+		LEFT_RIGHT_ARROW_CALLOUT = 76;
+		QUAD_ARROW_CALLOUT = 77;
+		CIRCULAR_ARROW = 78;
+		PLUS = 79;
+		MINUS = 80;
+		MULTIPLY = 81;
+		DIVIDE = 82;
+		EQUAL = 83;
+		NOT_EQUAL = 84;
+		PROCESS = 85;
+		ALTERNATE_PROCESS = 86;
+		DECISION = 87;
+		DATA = 88;
+		PREDEFINED_PROCESS = 89;
+		INTERNAL_STORAGE = 90;
+		FLOWCHART_DOCUMENT = 91;
+		MULTI_DOCUMENT = 92;
+		TERMINATOR = 93;
+		PREPARATION = 94;
+		MANUAL_INPUT = 95;
+		MANUAL_OPERATION = 96;
+		FLOWCHART_CONNECTOR = 97;
+		OFFPAGE_CONNECTOR = 98;
+		PUNCHED_CARD = 99;
+		PUNCHED_TAPE = 100;
+		SUMMING_JUNCTION = 101;
+		OR = 102;
+		COLLATE = 103;
+		SORT = 104;
+		EXTRACT = 105;
+		MERGE = 106;
+		STORED_DATA = 107;
+		DELAY = 108;
+		SEQUENTIAL_ACCESS_STORAGE = 109;
+		MAGNETIC_DISK = 110;
+		DIRECT_ACCESS_STORAGE = 111;
+		DISPLAY = 112;
+		EXPLOSION1 = 113;
+		EXPLOSION2 = 114;
+		FOUR_POINT_STAR = 115;
+		FIVE_POINT_STAR = 116;
+		SIX_POINT_STAR = 117;
+		SEVEN_POINT_STAR = 118;
+		EIGHT_POINT_STAR = 119;
+		TEN_POINT_STAR = 120;
+		TWELVE_POINT_STAR = 121;
+		SIXTEEN_POINT_STAR = 122;
+		TWENTY_FOUR_POINT_STAR = 123;
+		THIRTY_TWO_POINT_STAR = 124;
+		UP_RIBBON = 125;
+		DOWN_RIBBON = 126;
+		CURVED_UP_RIBBON = 127;
+		CURVED_DOWN_RIBBON = 128;
+		VERTICAL_SCROLL = 129;
+		HORIZONTAL_SCROLL = 130;
+		WAVE = 131;
+		DOUBLE_WAVE = 132;
+		RECTANGULAR_CALLOUT = 133;
+		ROUNDED_RECTANGULAR_CALLOUT = 134;
+		OVAL_CALLOUT = 135;
+		CLOUD_CALLOUT = 136;
+		CALLOUT1 = 137;
+		CALLOUT2 = 138;
+		CALLOUT3 = 139;
+		ACCENT_CALLOUT1 = 140;
+		ACCENT_CALLOUT2 = 141;
+		ACCENT_CALLOUT3 = 142;
+		BORDER_CALLOUT1 = 143;
+		BORDER_CALLOUT2 = 144;
+		BORDER_CALLOUT3 = 145;
+		ACCENT_BORDER_CALLOUT1 = 146;
+		ACCENT_BORDER_CALLOUT2 = 147;
+		ACCENT_BORDER_CALLOUT3 = 148;
+		ACTION_PREVIOUS = 149;
+		ACTION_NEXT = 150;
+		ACTION_BEGIN = 151;
+		ACTION_END = 152;
+		ACTION_HOME = 153;
+		ACTION_INFORMATION = 154;
+		ACTION_RETURN = 155;
+		ACTION_MOVIE = 156;
+		ACTION_DOCUMENT = 157;
+		ACTION_SOUND = 158;
+		ACTION_HELP = 159;
+		ACTION_CUSTOM = 160;
+		LINE = 161;
+		ELBOW_CONNECTOR2 = 162;
+		ELBOW_CONNECTOR3 = 163;
+		ELBOW_CONNECTOR4 = 164;
+		ELBOW_CONNECTOR5 = 165;
+		CURVED_CONNECTOR2 = 166;
+		CURVED_CONNECTOR3 = 167;
+		CURVED_CONNECTOR4 = 168;
+		CURVED_CONNECTOR5 = 169;
+		LOCK_SYMBOL = 170;
+		GRID = 171;
+		TABLECELL = 172;
+		CROP_FRAME = 173;
+		CIRCLE_QUOTE = 174;
+		RECT_QUOTE = 175;
+		BORDER_QUOTE = 176;
+		TWO_EDGED_FRAME = 177;
+		FOUR_EDGED_FRAME = 178;
+		TOP_BANNER = 179;
+		LEFT_BANNER = 180;
+		SQUARE_ON_CIRCLE_BOARD = 181;
+		RHOMBUS_ON_BOW_BOARD = 182;
+		TWIN_COMET = 183;
+		DOTTED_SIGN = 184;
+		MAN = 185;
+		WOMAN = 186;
+		METER_NEEDLE = 187;
+		CLOCK_NEEDLE = 188;
+		TIMER_SCALE = 189;
+		HORIZONTAL_SLIDER = 190;
+		VERTICAL_SLIDER = 191;
+		MOD_RECT = 192;
+		MOD_CAN = 193;
+		MOD_PARALLELOGRAM = 194;
+		MOD_ROUND_RECT = 195;
+		CIRCLE_FILLER = 196;
+		ELLIPSE_FILLER = 197;
+		STAR = 198;
+		POLYGON = 199;
+		AUDIO = 200;
+		ROUND_DIAMOND = 201;
+		DFD_EXTERNAL_ENTITY_1 = 202;
+		ERD_ASSOCIATIVE_ENTITY = 203;
+	}
+
+	enum PresetSmartShapeGeometry {
+
+		HORIZONTAL_BLOCK_BATTERY = 0;
+		VERTICAL_BLOCK_BATTERY = 1;
+		WALL_CLOCK = 2;
+		TIMER_CLOCK = 3;
+		PEOPLE_INDICATOR = 4;
+		CIRCULAR_PLAIN_INDICATOR = 5;
+		CIRCULAR_ENCIRCLED_INDICATOR = 6;
+		CIRCULAR_PLAINFILL_INDICATOR = 7;
+		CIRCULAR_VERTICALFILL_INDICATOR = 8;
+		HORIZONTAL_PLAIN_INDICATOR = 9;
+		HORIZONTAL_CENTERCIRCLE_INDICATOR = 10;
+		HORIZONTAL_BLOCK_INDICATOR = 11;
+		VERTICAL_PLAIN_INDICATOR = 12;
+		VERTICAL_CENTERBUBLE_INDICATOR = 13;
+		VERTICAL_CENTERPOINT_INDICATOR = 14;
+		VERTICAL_BLOCK_INDICATOR = 15;
+		ARC_PLAIN_METER = 16;
+		ARC_NEEDLE_METER = 17;
+		ARC_SPEED_METER = 18;
+		DIGITAL_CLOCK = 19;
+
+	}
+
+}
+
+message EffectsField {
+	enum ShadowType {
+		INNER = 0;
+		OUTER = 1;
+	}
+}
+
+
+message PresetSmartDiagram {
+
+	enum PresetSmartDiagramType {
+
+		UNKNOWN_SMART_DIAGRAM = 0;
+		PROCESS_DIAGRAM = 1;
+		PYRAMID_DIAGRAM = 2;
+		CYCLE_DIAGRAM = 3;
+		LIST_DIAGRAM = 4;
+	}
+
+	enum PresetProcessSmartDiagramType {
+
+		UNKNOWN_PROCESS = 0;
+		HEXAGON_PROCESS = 1;
+		STEPS_FLOW_PROCESS = 2;
+		DROPLET_PROCESS = 3;
+		TEAR_DROP_PROCESS = 4;
+		OCTAGON_PROCESS = 5;
+		ROUNDED_RECTANGLE_PROCESS = 6; 
+	}
+
+	enum PresetPyramidSmartDiagramType {
+
+		UNKNOWN_PYRAMID = 0;
+		TRIANGULAR_PYRAMID = 1;
+		INSCRIBED_PYRAMID = 2;
+		THREE_DIM_PYRAMID = 3;
+		SIMPLE_PYRAMID = 4;
+		TILTED_PYRAMID = 5;
+		FLAGGED_PYRAMID = 6;
+	}
+
+	enum PresetCycleSmartDiagramType {
+		UNKNOWN_CYCLE = 0;
+		TRAPEZOID_CYCLE = 1;
+		ARC_CIRCLES_CYCLE = 2;
+		SQUARE_CYCLE = 3;
+		LOOP_CYCLE = 4;
+		DOUGHNUT_CYCLE = 5;
+		CONNECTOR_CYCLE = 6;
+	}
+	enum PresetListSmartDiagramType {
+		UNKNOWN_LIST = 0;
+		FLAG_LIST = 1;
+		DROP_LIST = 2;
+		RIBBON_LIST = 3;
+		STRIP_LIST = 4;
+		SHAFT_LIST = 5;
+		STACK_CARD_LIST = 6;
+		TIER_LIST = 7;
+		PETAL_LIST = 8;
+		ALTER_LIST = 9;
+		DECK_LIST = 10;
+	}
+
+}
+
+message ShapeField {
+
+	enum PlaceHolderType {
+
+		TITLE = 0; // Title box
+		TXTBODY = 1; // Text box with bullet styles
+		DATETIME = 2; // Date Time
+		FOOTER = 3; // Footer
+		SLIDENUM = 4; // slide number
+		CONTENT = 5; // Can carry any content , both text and any other shape.
+		TXT = 6; // Text PH for usage in slide layout
+		SUBTITLE = 7; // A Subtitle PH for usage in slide layout
+		PICT = 8; // Picture PH
+		CLIPART = 9; // to insert clip art
+		CHART = 10; // to insert Chart
+		TABLE = 11; // for table
+		SMARTART = 12;	// for smart art.
+		MEDIA = 13; //For video, audio files
+		BODY = 14; 	// For Vani, body elements in Page Templates(used inside Frame)
+		FILE = 15; // For file objects.
+	}
+
+	enum BlendMode {
+		NORMAL = 0;
+		MULTIPLY = 1;
+		SCREEN = 2;
+		OVERLAY = 3;
+		DARKEN = 4;
+		LIGHTEN = 5;
+		COLOR_DODGE = 6;
+		COLOR_BURN = 7;
+		SOFT_LIGHT = 8;
+		HARD_LIGHT = 9;
+		DIFFERENCE = 10;
+		EXCLUSION = 11;
+		HUE = 12;
+		SATURATION = 13;
+		COLOR = 14;
+		LUMINOSITY = 15;
+	}
+
+	enum CombineRule {
+		NO_RULE = 0;
+		UNION = 1;
+		INTERSECT = 2;
+		COMBINE = 3;
+		SUBTRACT = 4;
+		INVERSE_INTERSECT = 5;
+	}
+
+}
+
+message SlideField {
+
+	enum LayoutType {
+		BLANK = 0; // Blank Slide
+		TITLE = 1; // Title and SubTitle slide.
+		OBJ = 2; // Title and Object
+		SEC_HEADER = 3; // Section Header and SubTitle.
+		TWO_OBJ = 4; // Title , Object On left , Object On right.
+		TXT = 5; // Title and Text.
+		TWO_TXT = 6; // Title , Text On left , Text On right.
+		TWO_OBJ_TWO_TXT = 7; // Title , Two Object each with text on top.
+		TITLE_ONLY = 8; // Title alone.
+		OBJ_AND_TXT = 9; // Title , Object on left , Text on right
+		TXT_OBJ = 10; // Title , Text on left , Object on right
+		OBJ_TXT = 11; // Title over Text on left, Object on right
+		PIC_TXT = 12; // Title , Picture
+		OBJ_ONLY = 13; // Object alone.
+		TWO_OBJ_TXT = 14; // Title , Two Objects on left , text on right.
+		TXT_TWO_OBJ = 15; // Title , Text on left , Two objects on right.
+		OBJ_TWO_OBJ = 16; // Title, Obj on left, Two obj in two rows on right.
+		TWO_OBJ_OBJ = 17; // Title, Two obj in two rows on left, Obj on right.
+		FOUR_OBJ = 18; 		// Title, Four obj in two rows and two columns.
+		TXT_OVER_OBJ = 19; 	// Title, Text on top, Content on bottom
+		OBJ_OVER_TXT = 20;  // Title, Content on top, Text on bottom
+		TXT_CLIPART = 21; 	// Title, Text on left, ClipArt on right.
+		CLIPART_TXT = 22; 	// Title, ClipArt on left, Text on right.
+		TXT_CHART = 23; 	// Title, Text on left, Chart on right.
+		CHART_TXT = 24; 	// Title, Chart on left, Text on right.
+		TXT_MEDIA = 25; 	// Title, Text on left, Media on right.
+		MEDIA_TXT = 26; 	// Title, Media on left, Text on right.
+		TABLE = 27; 		// Title and Table
+		SMARTART = 28; //Title and Smart Art
+		CHART = 29;		//Title and Chart
+		VERT_TXT = 30;	//Title and Text rotated 90 degrees.
+		VERT_TITLE_TXT = 31;  // Title rotated 90 degrees on right and Text rotated 90 degrees on left
+		TITLE_THREE_PICT_TXT = 33; // Title with three pictures and text , new one.
+		TITLE_FOUR_PICT = 34; // Title with Four pictures , new one.
+		TITLE_TXT_TWO_PICT = 35; // Title with txt and two pictres , new one.
+		TWO_OBJ_OVER_TXT = 36; // Title , Two objects on top , text on bottom.
+		CLIPART_VERT_TXT = 37; // Title, ClipArt on left, Vertical text on right.
+		VERT_TITLE_TX_OVER_CHART = 38; // Vertical title on right, vertical text on top, chart on bottom
+		PIC_TITLE_RGT = 39; // Picture with title on the right side.
+		PIC_TITLE_LFT = 40; // Picture with title on the left side.
+		PIC_TITLE_CENTER = 41; // Picture with title on Center side.
+		PIC_TITLE_TXT_LFT = 42; // Picture with title , text on left.
+		PIC_TITLE_TXT_RGT = 43; // Picture with title , text on right.
+		THREE_PICT_TXT = 44; // Layout with Three pictures and text over it.
+
+		CUSTOM = 32; // Custom user created layout.
+	}
+
+}
+
+message PortionField {
+
+	enum SlideNumberField {
+		NUM1 = 0; // In Words one, two, three
+		NUM2 = 1; // In Numbers 1, 2, 3...
+	}
+
+	enum DateTimeField {
+		DEF_DATE_TIME_FIELD_FORMAT = 0;
+		FORMAT1 = 1; // 2/16/2010 -> mm/dd/yyyy
+		FORMAT2 = 2; // Tuesday , February 16, 2010
+		FORMAT3 = 3; // 16 February 2010
+		FORMAT4 = 4; // February 16, 2010
+		FORMAT5 = 5; // 16-Feb-10
+		FORMAT6 = 6; // February 10
+		FORMAT7 = 7; // Feb 10
+		FORMAT8 = 8; // 2/16/2010 12:22 PM
+		FORMAT9 = 9; // 2/16/2010 12:22:16 PM
+		FORMAT10 = 10; // 12:22
+		FORMAT11 = 11; // 12:22:16
+		FORMAT12 = 12; // 12:22 PM
+		FORMAT13 = 13; // 12:22:16 PM
+		FORMAT14 = 14; // 2010/2/16
+		FORMAT15 = 15; // JPFULLYEAR/JPMONTH/JPDATE , JP Stands for JAPAN
+	}
+
+	enum FontVariant {
+		SMALLCAPS = 0; // Lowercase
+		ALLCAPS = 1; // Uppercase
+		NONE = 2; // none
+		CAPITALIZE = 3;	// Capitalize -- First letter in every word is in Capital.
+	}
+
+	enum FontWeight {
+		THIN = 0; // font-weight : 100
+		EXTRA_LIGHT = 1; // font-weight : 200
+		LIGHT = 2; // font-weight : 300
+		NORMAL = 4; // font-weight : 400/normal
+		MEDIUM = 5; // font-weight : 500
+		DEMI_BOLD = 6; // font-weight : 600
+		BOLD = 7; // font-weight : 700/bold , This will replace the already existing "bold" value.
+		HEAVY = 8; // font-weight : 800
+		BLACK = 9; // font-weight : 900
+	}
+}
+
+message FillField {
+
+	enum FillType {
+ 		DEF_FILL = 0;
+		NONE = 1; // No fill
+		SOLID = 2; // Solid fill
+		GRADIENT = 3; // gradient fill
+		PICT = 4; // picture fill.
+		GRP = 5; // Indicates Group Fill i.e. Fill is present in the parent group element.
+		PATTERN = 6; // Pattern Fill
+		TEXTBOX = 7; // Indicates to use the fill present in the text box , will be used for text fill.
+	}
+
+	enum GradientFillType {
+		LINEAR = 0; // linear gradient fill
+		RADIAL = 1; // radial
+		RECTANGULAR = 2; // rectangular
+		PATH = 3; // Path
+		ANGULAR = 4; // Angular
+	}
+
+	enum FillRule {
+		NO_RULE = 0;
+		NON_ZERO = 1;
+		EVEN_ODD = 2;
+	}
+
+
+}
+
+message ChartField {
+
+	enum ChartType {
+		BAR = 0;
+		BAR3D = 1;
+		LINE = 2;
+		LINE3D = 3;
+		AREA = 4;
+		AREA3D = 5;
+		PIE = 6;
+		PIE3D = 7;
+		REPPIE = 8;
+		DOUGHNUT = 9;
+		SCATTER = 10;
+		BUBBLE = 11;
+	}
+
+	enum Grouping {
+		STANDARD = 0;
+		CLUSTERED = 1;
+		STACKED = 2;
+		PERCENTSTACKED = 3;
+	}
+
+	message BarChartField {
+		enum BarType {
+			BAR = 0;
+			COL = 1;
+		}
+	}
+
+
+	enum DataLabelPosition {
+		BESTFIT = 0;
+		BOTTOM = 1;
+		CENTER = 2;
+		INBASE = 3;
+		INEND = 4;
+		LEFT = 5;
+		OUTEND = 6;
+		RIGHT = 7;
+		TOP = 8;
+	}
+
+	enum PositionElement {
+		T = 0; // Top
+		L = 1; // Left
+		B = 2; // Bottom
+		R = 3; // Right
+		TR = 4; // TopRight
+		MANUAL = 5; // Manual
+		C = 6; // Center
+	}
+
+	enum TickMarkType {
+		NONE = 0;
+		IN = 1; // Inside the axis.
+		OUT = 2; // Outside/Other-side of the axis.
+		CROSS = 3; // Cross the axis
+	}
+
+	enum LabelPos {
+		NIL = 0;
+		HIGH = 1; // On Top
+		LOW = 2; // Below the axix
+		NEXTTO = 3; // Next to the axis
+	}
+
+}
+
+message TableField {
+
+	enum TextDirection {
+		HORIZONTAL = 0;
+		VERTICAL = 1;
+		VERTICAL270 = 2;
+		WORDARTVERTICAL = 3;
+	}
+
+}
+
+message AnimationField {
+
+	enum TransitionType {
+		NONE = 0;
+		BLINDS = 1;
+		CHECKERS = 2;
+		CIRCLE = 3; // Use Shape Animation with Circle instead of this one.
+		COMB = 4;
+		COVER = 5;
+		CUT = 6;
+		DIAMOND = 7;
+		DISSOLVE = 8;
+		FADE = 9;
+		NEWSFLASH = 10;
+		PLUS = 11;
+		PULL = 12; // Uncover
+		PUSH = 13;
+		RANDOM = 14;
+		RANDOMBAR = 15;
+		SPLIT = 16;
+		STRIPS = 17;
+		WEDGE = 18; // Clock with wedge.
+		WHEEL = 19; // Clock - clockwise.
+		WIPE = 20;
+		ZOOM = 21;
+		FLY = 22;
+		FLOAT = 23; // Matches FLOAT_IN.
+		APPEAR = 24;
+		REVOLVINGDOOR = 25;// KN
+		PIVOT = 26; // KN
+		TWIRL = 27; // KN
+		SWAP = 28; // KN -- Switch
+		FLIP = 29;
+		CUBE = 30;
+		GALLERY = 31;
+		FALL = 32; // KN
+		REVEAL = 33;
+		GEOMETRIC = 34; // Shape
+		FLASH = 35;
+		RIPPLE = 36;
+		HONEYCOMB = 37;
+		GLITTER = 38;
+		VORTEX = 39;
+		PEEK = 40;
+		EXPAND_OR_CONTRACT = 41; // Entry - Expand , Exit - Contract.
+		FADED_SWIVEL = 42;
+		FADED_ZOOM = 43;
+		CENTER_REVOLVE = 44;
+		GROW_OR_SHRINK_AND_TURN = 45;
+		RISEUP_SINKDOWN = 46;
+		SPINNER = 47;
+		BOOMER = 48;
+		BOUNCE = 49;
+		CREDITS = 50;
+		CURVE_UP_OR_DOWN = 51;
+		PIN_WHEEL = 52;
+		SPIRAL = 53;
+		SWIVEL = 54;
+		WHIP = 55;
+		CURVY_FLOAT = 56;
+		DROP = 57;
+		PAN = 58;
+		FERRISWHEEL = 59;
+		CONVEYOR = 60;
+		ROTATE = 61;
+		WINDOW = 62;
+		ORBIT = 63;
+		FLYTHRU = 64;
+		BOX = 65;
+		DOOR = 66;
+		SHRED = 67;
+		WHEEL_WIPE = 68;
+		METEOR = 69; // KN - Animation
+		PATH = 70;
+		DRAW = 71;
+		MORPH = 72;
+	}
+
+	enum Axis {
+		HOR = 0;
+		VER = 1;
+	}
+
+	enum Direction {
+		LEFT = 0;
+		DOWN = 1;
+		RIGHT = 2;
+		UP = 3;
+		LEFT_DOWN = 4;
+		LEFT_UP = 5;
+		RIGHT_DOWN = 6;
+		RIGHT_UP = 7;
+		CENTER = 8; // For transitions like Ripple.
+	}
+
+	enum TransitionDirection {
+		IN = 0;
+		OUT = 1;
+		IN_SLIGHTLY = 2;
+		OUT_SLIGHTLY = 3;
+		IN_FROM_CENTER = 4;
+		OUT_FROM_BOTTOM = 5;
+		OUT_TO_CENTER = 6;
+		IN_TO_BOTTOM = 7;
+	}
+
+	enum RotateDirection {
+		CLOCKWISE = 0;
+		ANTI_CLOCKWISE = 1;
+	}
+
+	enum ObjectType {
+		STRIP = 0;
+		PARTICLE = 1;
+	}
+
+	enum AnimationStart {
+		CLICK = 0; // On Click
+		WITHEFFECT = 1; // Start with the previous effect
+		AFTEREFFECT = 2; // Start after the previous effect
+	}
+
+	enum AnimationMatchType {
+		UNKNOWN_MATCH_TYPE = 0;
+		OBJECT = 1;
+		WORD = 2;
+		CHAR = 3;
+	}
+
+	enum AnimationMatchBasis {
+		UNKNOWN_MATCH_BASIS = 0;
+		OBJECT_NAME = 1; // Name starts with ~ will not be matched
+	}
+
+}
+
+message MemberField {
+
+	enum MemberRoleType {
+		UNKNOWN_MEMBER_ROLE_TYPE = 0;
+        ADMIN = 1;
+        EDITOR = 2;
+        VIEWER = 3;
+        GUEST_EDITOR = 4;
+        GUEST_COMMENTER = 5;
+        GUEST_VIEWER = 6;
+	}
+
+}
+
+message DocumentStatusField {
+    enum DocumentStatusType {
+        UNKNOWN_STATUS = 0;
+		DESIGN_IN_PROGRESS = 1;
+        UNDER_DISCUSSION = 2;
+        READY_FOR_DEVELOPMENT = 3;
+        CUSTOM = 4;
+		UNDER_DEVELOPMENT = 5;
+        DEVELOPED = 6;
+        REQUEST_FOR_MODIFICATION = 7;
+        MODIFICATION_IN_PROGRESS = 8;
+        DISCREPANCY_NOTED = 9;
+        RELEASED = 10;
+    }
+}
+
+message DataSourceField {
+	enum DataSourceServiceType {
+		UNKNOWN_SERVICE = 0;
+		ZOHO_SHEET = 1;
+		ZOHO_CRM = 2;
+		ZOHO_SURVEY = 3;
+	}
+}
+
+message DatabaseField {
+
+	enum TableOrColumnCategory {
+		
+		DEFAULT_TABLE_COLUMN = 0;
+		PARENT = 1;
+		CHILD = 2;// Child of an existing table or table-column - Foreign
+	}
+
+	enum WhereOperator {
+		
+		DEFAULT_WHERE_OPERATOR = 0;
+		COMPARISON = 1;
+		PATTERN = 2;
+	}
+	
+	enum ComparisonOperator {
+		
+		DEFAULT_COMPARISON_OPERATOR = 0;
+		EQUALS = 1;
+		NOT_EQUALS = 2;
+		GREATER_THAN = 3;
+		LESSER_THAN = 4;
+		GREATER_THAN_OR_EQUALS = 5;
+		LESSER_THAN_OR_EQUALS = 6;
+	}
+	
+	enum LogicalOperator {
+		
+		DEFAULT_LOGICAL_OPERATOR = 0;
+		AND = 1;
+		OR = 2;
+		NOT = 3;
+	}
+
+	enum SubQueryOperator {
+
+		DEFAULT_SUB_QUERY_OPERATOR = 0;
+		START_SUB_QUERY = 1;
+		END_SUB_QUERY = 2;
+	}
+
+	enum PatternOperator {
+		
+		DEFAULT_PATTERN_OPERATOR = 0;
+		IN = 1;
+		BETWEEN = 2;
+		LIKE = 3;
+		STARTS_WITH = 4;
+		ENDS_WITH = 5;
+		EXISTS = 6;
+		SOME = 7;
+		ANY = 8;
+		ALL = 9;
+	}
+
+	enum SortOrder {
+		
+		DEFAULT_SORT_ORDER = 0;
+		ASCENDING = 1;
+		DESCENDING = 2;
+	}
+	
+	enum DataOperator {
+		
+		DEFAULT_DATA_OPERATOR = 0;
+		INSERT = 1;
+		MODIFY = 2;
+		DELETE = 3;
+		SELECT = 4;
+	}
+	
+	enum DataOperatedOn {
+			
+		DEFAULT_DATA_OPERATED_ON = 0;
+		TABLE = 1;
+		COLUMN = 2;
+		ROW = 3;
+	}
+}

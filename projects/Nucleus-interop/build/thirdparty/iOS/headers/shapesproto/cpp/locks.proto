@@ -1,0 +1,69 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "LocksProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+message Locks {
+
+	// Default is false for all the locks
+	optional bool noHandles = 1;
+	optional bool noAspectChange = 2;
+	optional bool noArrowHeadChange = 3;
+	optional bool noRotation = 4;
+	optional bool noResize = 5;
+	optional bool noMove = 6;
+	optional bool noShapeTypeChange = 7;
+	optional bool noCrop = 8;
+	optional bool noGroup = 9;
+	optional bool noUnGroup = 10;
+	optional bool noSelect = 11;
+	optional bool noModify = 12;
+	optional bool noFill = 14;
+	optional bool noStroke = 15;
+	optional bool noEffects = 16;
+	optional bool noStyle = 17;
+	optional bool noTextProps = 18;
+	optional bool noParaProps = 19;
+	optional bool noPortionProps = 20;
+	optional bool noTextBodyProps = 21;
+	optional bool noShapePropsModify = 22;
+	optional bool noTextInput = 23;
+	optional bool noShapePropsModifySansTextOp = 24;
+	optional bool noBbox = 25;
+
+	message LockedBy {
+		enum LockProp {
+			HANDLES = 0;
+			ASPECT_CHANGE = 1;
+			ARROW_HEAD_CHANGE = 2;
+			ROTATION = 3;
+			RESIZE = 4;
+			MOVE = 5;
+			SHAPE_TYPE_CHANGE = 6;
+			CROP = 7;
+			GROUP = 8;
+			UNGROUP = 9;
+			SELECT = 10;
+			MODIFY = 11;
+			FILL = 12;
+			STROKE = 13;
+			EFFECTS = 14;
+			STYLE = 15;
+			TEXT_PROPS = 16;
+			PARA_PROPS = 17;
+			PORTION_PROPS = 18;
+			TEXTBODY_PROPS = 19;
+			SHAPE_PROPS = 20;
+			TEXT_INPUT = 21;
+		}
+
+		optional LockProp prop = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+		// The zuid of the person who locks that property.
+		optional string locker = 2 [(com.zoho.common.customOptions).requiredField = true];
+	}
+	repeated LockedBy lockers = 13;
+}

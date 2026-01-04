@@ -1,0 +1,14 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "AreaChartProtos";
+
+import "areachartdetails.proto";
+import "google/protobuf/protoextensions.proto";
+
+message AreaChart {
+
+	optional AreaChartDetails details = 1 [(com.zoho.common.customOptions).requiredField = true];
+}

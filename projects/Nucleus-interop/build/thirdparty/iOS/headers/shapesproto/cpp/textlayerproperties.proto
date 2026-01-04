@@ -1,0 +1,31 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "TextLayerPropertiesProto";
+
+import "fill.proto";
+import "stroke.proto";
+import "effects.proto";
+import "blur.proto";
+import "stylereferencedetails.proto";
+
+import "fields.proto";
+
+message TextLayerProperties {
+    repeated Fill fills = 1;
+
+    repeated Stroke strokes = 2;
+
+    optional Effects effects = 3;
+
+    optional float alpha = 4; 
+
+    optional Blur blur  = 5;
+
+    optional Show.ShapeField.BlendMode blend = 6;
+
+    optional StyleReferenceDetails styleRef = 7;
+}
+

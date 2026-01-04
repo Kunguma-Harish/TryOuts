@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "ശരി";
+"SSKit.common.cancel" = "റദ്ദാക്കുക";
+"SSKit.common.continue" = "തുടരുക";
+"SSKit.common.untitledDocument" = "പേരില്ലാത്ത രേഖ";
+"SSKit.common.noNetwork" = "നെറ്റ്‌വർക്ക് ഇല്ല";
+"SSKit.common.noNetworkMessage" = "നിങ്ങളുടെ ഉപകരണം ഇന്റർനെറ്റിലേക്ക് കണക്‌റ്റ് ചെയ്‌തിട്ടുണ്ടെന്ന് ഉറപ്പാക്കുക.";
+"SSKit.common.openSettings" = "ക്രമീകരണം തുറക്കുക";
+"SSKit.common.connected" = "ബന്ധിപ്പിച്ചു";
+"SSKit.common.connecting" = "ബന്ധിപ്പിക്കുന്നു";
+"SSKit.common.waiting" = "കാത്തിരിക്കുന്നു";
+"SSKit.common.update" = "അപ്‌ഡേറ്റ് ചെയ്യുക";
+"SSKit.common.minimise" = "മിനിമൈസ് ചെയ്യുക";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "ആരംഭിക്കുക";
+"SSKit.slideshow.end" = "അവസാനിച്ചു";
+"SSKit.slideshow.currentSlide" = "സ്ലൈഡ് %i / %i";
+"SSKit.slideshow.EndOfSlideshow" = "സ്ലൈഡ്ഷോയുടെ അവസാനം";
+"SSKit.slideshow.blackout" = "സ്‌ക്രീൻ ഇരുട്ടായി";
+"SSKit.slideshow.backToLive" = "ലൈവിലേക്ക് തിരികെ";
+"SSKit.slideshow.notes" = "കുറിപ്പുകൾ";
+"SSKit.slideshow.clear" = "മായ്‌ക്കുക";
+"SSKit.slideshow.emptyNotes" = "ഈ സ്ലൈഡിന് കുറിപ്പുകളൊന്നും ലഭ്യമല്ല.";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "സെഷൻ അവസാനിച്ചു";
+"SSKit.shareplay.sessionTerminated.desc" = "നിങ്ങളുടെ Shareplay സെഷൻ അവസാനിപ്പിച്ചു. നിങ്ങളുടെ സെഷൻ പുനരാരംഭിക്കാൻ നിങ്ങൾക്ക് തിരഞ്ഞെടുക്കാം.";
+
+"SSKit.shareplay.syncWithPresenter" = "പ്രസന്ററുമായി സമന്വയിപ്പിക്കുക";
+
+"SSKit.shareplay.end.title" = "SharePlay അവസാനിപ്പിക്കുക";
+"SSKit.shareplay.end.description" = "നിങ്ങൾ Shareplay അവസാനിപ്പിക്കാൻ ആഗ്രഹിക്കുന്നുണ്ടോ? ഷെയർപ്ലേ അവസാനിപ്പിക്കുന്നത് സെഷൻ അവസാനിപ്പിക്കും.";
+"SSKit.shareplay.requestToPresent.description" = "അവതരിപ്പിക്കാൻ അഭ്യർത്ഥിക്കുന്നു";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "പിശക്";
+"SSKit.error.message" = "ഒരു പിശക് സംഭവിച്ചു. പിന്നീട് വീണ്ടും ശ്രമിക്കുക";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "പ്ലേബാക്ക് ഓഡിയോ";
+"SSKit.audio.resume" = "തുടരുക";
+"SSKit.audio.pause" = "താൽക്കാലികമായി നിർത്തുക";
+"SSKit.audio.audioTitle" = "ഓഡിയോ";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "നിങ്ങളുടെ Apple TV തിരഞ്ഞെടുക്കുക";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple TV-കൾക്കായി തിരയുന്നു";
+"SSKit.mcPeerListing.streamingDescription" = "നിങ്ങളുടെ ഉപകരണത്തിൽ നിന്ന് Apple TV-യിലേക്ക് സ്ലൈഡുകൾ സ്ട്രീം ചെയ്യാൻ.";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "പ്രാദേശിക നെറ്റ്‌വർക്ക് ആക്‌സസ് പ്രവർത്തനക്ഷമമാക്കി വീണ്ടും ശ്രമിക്കുക";
+
+"SSKit.mcPeerListing.disconnect.title" = "വിച്ഛേദിക്കുക";
+"SSKit.mcPeerListing.disconnect.message" = "Apple TV-യിൽ നിന്ന് വിച്ഛേദിക്കണമെന്ന് തീർച്ചയാണോ?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@വിച്ഛേദിക്കുക";
+"SSKit.mcPeerListing.updateError" = "പിയർ പഴയ പതിപ്പിൽ പ്രവർത്തിക്കുന്നതായി തോന്നുന്നു. ടിവി ആപ്പ് കാലികമാണെന്ന് ഉറപ്പാക്കുക";

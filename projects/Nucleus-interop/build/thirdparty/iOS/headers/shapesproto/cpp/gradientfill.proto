@@ -1,0 +1,59 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "GradientFillProtos";
+
+import "fields.proto";
+import "color.proto";
+import "offset.proto";
+import "google/protobuf/protoextensions.proto";
+
+message GradientFill {
+
+	optional Show.FillField.GradientFillType type = 1; // type of the gradient fill.
+
+	optional int32 rotate = 2; //[ default = 0 ]; // Angle of the gradient fill , ranges from 0-360.
+	message Stop {
+		optional Color color = 1; // color
+		optional float position = 2 [(com.zoho.common.customOptions).requiredField = true]; // stop offset, ranges from 0-1
+	}
+	repeated Stop stops = 3; // Stops for the gradient.
+
+	// This has been used for Radial , Rectangular for now. 
+	message GradientProperties {
+		
+		//fillToRect - This rectangle specifies the focus rectangle of the center shape.
+		//tileRect - the rectangular region in which the gradient has to be filled.
+		// Example 1 : Fill a shape with Radial gradient to spread fill from center
+		// fillToRect - L T R B = 0.5 0.5 0.5 0.5
+		// tileRect - L T R B = 0 0 0 0 
+		// Example 2 : Radial gradient to spread fill from Right Bottom.
+		// fillToRect - L T R B = 1 1 0 0 
+		// tileRect - L T R B = 0 0 -1 -1
+		// In both the above examples fillToRect is a single point in the shape.
+		// Example 3 : Rectangular gradient to spread from a basic rectangle and fill the shape.
+		// fillToRect - L T R B = 0.2 0.3 0.2 0.3
+		// tilRect - L T R B = 0 0 0 0
+		optional Offset fillToRect = 1; 
+		optional Offset tileRect = 2;
+
+
+		optional bool fliph = 3; // true , if flipped in horizontal axis.
+		optional bool flipv = 4; // true , if flipped in vertical axis.
+		optional Offset cornerOffset = 5;
+		optional int32 rotate = 6; //[ default = 0 ];
+	}
+
+	optional GradientProperties radial = 4;
+	optional GradientProperties rect = 5;
+	optional GradientProperties path = 7;
+
+	// The rotate property at the top will be used for linear gradients passing through the center of the shape. For more advanced ones , we shall use this.
+	message LinearGradientProperties {
+		optional Offset start = 1;
+		optional Offset end = 2;	
+	}
+	optional LinearGradientProperties linear = 6;
+}
+

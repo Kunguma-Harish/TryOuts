@@ -1,0 +1,32 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ScrollProtos";
+
+message Scroll {
+		enum ScrollDirection {
+			NOSCROLL = 0;
+			HORIZONTAL = 1;
+			VERTICAL = 2;
+			BOTH = 3;
+		}
+		optional ScrollDirection direction = 1;
+
+		message ScrollBar {
+			enum Style {
+				UNKNOWN = 0;
+				REGULAR = 1;
+				HIDDEN = 2;
+			}
+			optional Style style = 1;
+			optional float width = 2;
+		}
+
+		// there can be no scrollbar or any one or both
+		optional ScrollBar verticalScrollBar = 2;
+		optional ScrollBar horizontalScrollBar = 3;
+		
+		// hide the scrollbars when no scroll activity
+		optional bool autohide = 4;
+}

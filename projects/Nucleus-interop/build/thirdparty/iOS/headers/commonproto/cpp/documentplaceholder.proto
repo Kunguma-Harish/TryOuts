@@ -1,0 +1,30 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "DocumentPlaceHolderProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+message DocumentPlaceHolder {
+
+	message FramePlaceHolder {	
+	
+		optional string frameId = 1;
+		
+		repeated PlaceHolderData placeHolderDatas = 2;
+	}
+	repeated FramePlaceHolder framePlaceHolders = 1;
+	
+	message PlaceHolderData {
+
+		optional string relId = 1 [(com.zoho.common.customOptions).requiredField = true];
+		
+		optional string content = 2;	
+
+		repeated string parentIds = 3;	
+	}
+	
+	repeated PlaceHolderData placeHolderDatas = 2;
+
+}

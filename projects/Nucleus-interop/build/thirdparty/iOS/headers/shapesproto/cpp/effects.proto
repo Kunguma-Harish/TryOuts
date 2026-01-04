@@ -1,0 +1,70 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "EffectsProtos";
+
+import "color.proto";
+import "presetprops.proto";
+import "scale.proto";
+import "fields.proto";
+import "google/protobuf/protoextensions.proto";
+
+message Effects {
+	
+	optional Reflection reflection = 1;
+	
+	message Reflection {
+		
+		message Range {
+			optional float st = 1;
+			optional float end = 2;
+		} 
+		
+		optional Range alpha = 1;
+		optional Range pos = 2;
+ 		optional Distance distance = 3;
+		optional Scale scale = 4;
+		optional PresetProps preset = 5;
+	
+		optional Show.CommonField.UseParentProps useParentProps = 6;
+
+		optional bool hidden = 7;
+	}	
+
+	message Distance {
+		optional float radius = 1;
+		optional float angle = 2;
+	}
+
+	message Skew {
+		optional float xAngle = 1;
+		optional float yAngle = 2;
+	}
+
+	message ShadowBlur {
+		// The value for radius is in Points.	 
+		optional float radius = 1;
+	}
+
+	optional Shadow shadow = 2;
+
+	message Shadow {	
+		optional Show.EffectsField.ShadowType type = 1 [(com.zoho.common.customOptions).requiredField = true]; //[default = INNER];
+		optional Color color = 2;
+		optional Distance distance = 3;	
+		optional Scale scale = 4;
+		optional PresetProps preset = 5;
+		optional Skew skew = 6;
+		optional ShadowBlur blur = 7;	
+		
+		optional Show.CommonField.UseParentProps useParentProps = 11;	
+
+		optional bool hidden = 8;	
+	}
+	
+	// Will be used when there is more than one shadow.	
+	repeated Shadow shadows = 3;	
+}
+	

@@ -1,0 +1,29 @@
+
+syntax="proto3";
+package com.zoho.database;
+
+option java_package = "com.zoho.database";
+option java_outer_classname = "ColumnIdentifierProtos";
+
+message ColumnIdentifier {
+        
+    optional string columnId = 1;
+
+	optional string tableId = 2;
+
+	/** If the column contains JSON data, we could use the key of that JSON data as identifer */
+	message JSONColumn {
+
+		enum JSONKeyDependency {
+			DEFAULT_JSON_TYPE = 0;
+			ALL = 1;
+			PARTIAL = 2;
+		}
+		optional JSONKeyDependency type = 1;
+
+		repeated string key = 2;
+	}
+    
+	optional JSONColumn jsonColumn = 3;
+
+}

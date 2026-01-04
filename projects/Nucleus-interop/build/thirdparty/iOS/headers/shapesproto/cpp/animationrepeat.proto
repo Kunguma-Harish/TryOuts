@@ -1,0 +1,19 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "AnimationRepeatProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+message AnimationRepeat { // Repeat the Animation
+	enum AnimationRepeatType {
+		NEXTCLICK = 0;  // Until Next Click
+		NEXTSLIDE = 1; // Until Next Slide
+		REPEATCOUNT = 2; // repeat for a count.
+	}
+	optional AnimationRepeatType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+	optional int32 repeatCount = 2; // Animation Repeat Count
+}
+

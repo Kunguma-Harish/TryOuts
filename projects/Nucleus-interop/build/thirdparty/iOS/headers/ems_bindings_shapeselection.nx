@@ -1,0 +1,130 @@
+include {
+ shapeselection.pb.h;
+  }
+class SelectedTableInfo  : com::zoho::shapes::build::SelectedTableInfo {
+  inherits Message;
+  constructor SelectedTableInfo : com::zoho::shapes::build::SelectedTableInfo();
+  function CopyFrom : nx_void CopyFrom(SelectedTableInfo& arg0);
+  function Clear : nx_void Clear();
+  property cells  : [own] nx_repeated_ptr_field[protobuf_array_SelectedTableInfo_SelectedCellIndex]* cells(nx_getter : temp_getcells, nx_setter : temp_setcells);
+  function has_rowindex : nx_bool has_rowindex();
+  property rowIndex : nx_int rowIndex(nx_getter : rowindex, nx_setter : set_rowindex); 
+  function has_cellindex : nx_bool has_cellindex();
+  property cellIndex : nx_int cellIndex(nx_getter : cellindex, nx_setter : set_cellindex); 
+  function has_selectiontype : nx_bool has_selectiontype();
+  property selectionType : nx_string selectionType(nx_getter : selectiontype, nx_setter : set_selectiontype);
+  }
+
+repeated_ptr_field  {
+protobuf_array_SelectedTableInfo : SelectedTableInfo;
+}
+
+class SelectedTableInfo_SelectedCellIndex  : com::zoho::shapes::build::SelectedTableInfo_SelectedCellIndex {
+  inherits Message;
+  constructor SelectedTableInfo_SelectedCellIndex : com::zoho::shapes::build::SelectedTableInfo_SelectedCellIndex();
+  function CopyFrom : nx_void CopyFrom(SelectedTableInfo_SelectedCellIndex& arg0);
+  function Clear : nx_void Clear();
+  function has_row : nx_bool has_row();
+  property row : nx_int row(nx_getter : row, nx_setter : set_row); 
+  function has_col : nx_bool has_col();
+  property col : nx_int col(nx_getter : col, nx_setter : set_col); 
+  }
+
+repeated_ptr_field  {
+protobuf_array_SelectedTableInfo_SelectedCellIndex : SelectedTableInfo_SelectedCellIndex;
+}
+
+class SelectedShapeInfo  : com::zoho::shapes::build::SelectedShapeInfo {
+  inherits Message;
+  constructor SelectedShapeInfo : com::zoho::shapes::build::SelectedShapeInfo();
+  function CopyFrom : nx_void CopyFrom(SelectedShapeInfo& arg0);
+  function Clear : nx_void Clear();
+  function has_type : nx_bool has_type();
+  property type : nx_string type(nx_getter : type, nx_setter : set_type);
+  function has_nvshapeprops : nx_bool has_nvshapeprops();
+  property nvShapeProps : [own] NonVisualShapeProps*  nvShapeProps(nx_getter : temp_getnvShapeProps, nx_setter : temp_setnvShapeProps);
+  function has_nvpictureprops : nx_bool has_nvpictureprops();
+  property nvPictureProps : [own] NonVisualPictureProps*  nvPictureProps(nx_getter : temp_getnvPictureProps, nx_setter : temp_setnvPictureProps);
+  function has_nvconnectorprops : nx_bool has_nvconnectorprops();
+  property nvConnectorProps : [own] NonVisualConnectorProps*  nvConnectorProps(nx_getter : temp_getnvConnectorProps, nx_setter : temp_setnvConnectorProps);
+  function has_nvgroupshapeprops : nx_bool has_nvgroupshapeprops();
+  property nvGroupShapeProps : [own] NonVisualGroupShapeProps*  nvGroupShapeProps(nx_getter : temp_getnvGroupShapeProps, nx_setter : temp_setnvGroupShapeProps);
+  function has_nvgraphicframeprops : nx_bool has_nvgraphicframeprops();
+  property nvGraphicFrameProps : [own] GraphicFrame_NonVisualGraphicFrameProps*  nvGraphicFrameProps(nx_getter : temp_getnvGraphicFrameProps, nx_setter : temp_setnvGraphicFrameProps);
+  function has_nvcombinedshapeprops : nx_bool has_nvcombinedshapeprops();
+  property nvCombinedShapeProps : [own] NonVisualCombinedShapeProps*  nvCombinedShapeProps(nx_getter : temp_getnvCombinedShapeProps, nx_setter : temp_setnvCombinedShapeProps);
+  function has_props : nx_bool has_props();
+  property props : [own] Properties*  props(nx_getter : temp_getprops, nx_setter : temp_setprops);
+  function has_textbody : nx_bool has_textbody();
+  property textBody : [own] TextBody*  textBody(nx_getter : temp_gettextBody, nx_setter : temp_settextBody);
+  function has_value : nx_bool has_value();
+  property value : [own] PictureValue*  value(nx_getter : temp_getvalue, nx_setter : temp_setvalue);
+  function has_pictureprops : nx_bool has_pictureprops();
+  property pictureProps : [own] PictureProperties*  pictureProps(nx_getter : temp_getpictureProps, nx_setter : temp_setpictureProps);
+  function has_crop : nx_bool has_crop();
+  property crop : [own] Offset*  crop(nx_getter : temp_getcrop, nx_setter : temp_setcrop);
+  property shapes  : [own] nx_repeated_ptr_field[protobuf_array_SelectedShapeInfo]* shapes(nx_getter : temp_getshapes, nx_setter : temp_setshapes);
+  function has_isinnershape : nx_bool has_isinnershape();
+  property isInnerShape : nx_bool isInnerShape(nx_getter : isinnershape, nx_setter : set_isinnershape); 
+  function has_obj : nx_bool has_obj();
+  property obj : [own] GraphicFrame_GraphicObject*  obj(nx_getter : temp_getobj, nx_setter : temp_setobj);
+  function has_isframeshape : nx_bool has_isframeshape();
+  property isFrameShape : nx_bool isFrameShape(nx_getter : isframeshape, nx_setter : set_isframeshape); 
+  function has_parentframeid : nx_bool has_parentframeid();
+  property parentFrameId : nx_string parentFrameId(nx_getter : parentframeid, nx_setter : set_parentframeid);
+  function has_isstickynote : nx_bool has_isstickynote();
+  property isStickyNote : nx_bool isStickyNote(nx_getter : isstickynote, nx_setter : set_isstickynote); 
+  function has_stickyparentid : nx_bool has_stickyparentid();
+  property stickyParentId : nx_string stickyParentId(nx_getter : stickyparentid, nx_setter : set_stickyparentid);
+  function has_drawtableasimage : nx_bool has_drawtableasimage();
+  property drawTableAsImage : nx_bool drawTableAsImage(nx_getter : drawtableasimage, nx_setter : set_drawtableasimage); 
+  function has_basekit : nx_bool has_basekit();
+  property basekit : [own] BaseKit*  basekit(nx_getter : temp_getbasekit, nx_setter : temp_setbasekit);
+  property textBodies  : [own] nx_repeated_ptr_field[protobuf_array_TextBody]* textBodies(nx_getter : temp_gettextBodies, nx_setter : temp_settextBodies);
+  property frameIds  : [own] nx_repeated_field[nx_string]* frameIds(nx_getter : temp_getframeIds, nx_setter : temp_setframeIds);
+  function has_nvframeprops : nx_bool has_nvframeprops();
+  property nvFrameProps : [own] NonVisualFrameProps*  nvFrameProps(nx_getter : temp_getnvFrameProps, nx_setter : temp_setnvFrameProps);
+  }
+
+repeated_ptr_field  {
+protobuf_array_SelectedShapeInfo : SelectedShapeInfo;
+}
+
+class SelectedShapesInfo  : com::zoho::shapes::build::SelectedShapesInfo {
+  inherits Message;
+  constructor SelectedShapesInfo : com::zoho::shapes::build::SelectedShapesInfo();
+  function CopyFrom : nx_void CopyFrom(SelectedShapesInfo& arg0);
+  function Clear : nx_void Clear();
+  function has_data : nx_bool has_data();
+  property data : [own] SelectedShapeInfo*  data(nx_getter : temp_getdata, nx_setter : temp_setdata);
+  property parentIds  : [own] nx_repeated_field[nx_string]* parentIds(nx_getter : temp_getparentIds, nx_setter : temp_setparentIds);
+  function has_table : nx_bool has_table();
+  property table : [own] SelectedTableInfo*  table(nx_getter : temp_gettable, nx_setter : temp_settable);
+  property connector  : [own] nx_repeated_ptr_field[protobuf_array_SelectedShapeConnectInfo]* connector(nx_getter : temp_getconnector, nx_setter : temp_setconnector);
+  function has_selectedtextbodyid : nx_bool has_selectedtextbodyid();
+  property selectedTextBodyId : nx_string selectedTextBodyId(nx_getter : selectedtextbodyid, nx_setter : set_selectedtextbodyid);
+  }
+
+repeated_ptr_field  {
+protobuf_array_SelectedShapesInfo : SelectedShapesInfo;
+}
+
+class SelectedShapeConnectInfo  : com::zoho::shapes::build::SelectedShapeConnectInfo {
+  inherits Message;
+  constructor SelectedShapeConnectInfo : com::zoho::shapes::build::SelectedShapeConnectInfo();
+  function CopyFrom : nx_void CopyFrom(SelectedShapeConnectInfo& arg0);
+  function Clear : nx_void Clear();
+  function has_data : nx_bool has_data();
+  property data : [own] SelectedShapeInfo*  data(nx_getter : temp_getdata, nx_setter : temp_setdata);
+  function has_shapeid : nx_bool has_shapeid();
+  property shapeId : nx_string shapeId(nx_getter : shapeid, nx_setter : set_shapeid);
+  function has_paragraphid : nx_bool has_paragraphid();
+  property paragraphId : nx_string paragraphId(nx_getter : paragraphid, nx_setter : set_paragraphid);
+  function has_pos : nx_bool has_pos();
+  property pos : nx_string pos(nx_getter : pos, nx_setter : set_pos);
+  }
+
+repeated_ptr_field  {
+protobuf_array_SelectedShapeConnectInfo : SelectedShapeConnectInfo;
+}
+

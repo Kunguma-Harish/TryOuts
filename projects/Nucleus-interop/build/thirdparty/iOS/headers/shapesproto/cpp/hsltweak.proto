@@ -1,0 +1,16 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "HSLTweakProtos";
+
+import "tweak.proto";
+
+message HSLTweak {	
+	repeated com.zoho.common.Tweak luminance = 1; // modify luminance
+	repeated com.zoho.common.Tweak hue = 2; // modify hue value
+	repeated com.zoho.common.Tweak saturation = 3; // modify saturation
+}
+
+

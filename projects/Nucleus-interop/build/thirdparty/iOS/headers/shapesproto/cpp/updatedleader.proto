@@ -1,0 +1,14 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "UpdatedLeaderProtos";
+
+message UpdatedLeader {
+
+    // Child now follows this new leader instead of the designated one.
+    optional string leaderId = 1;		
+
+    // document which contains the leader.
+    optional string documentId = 2; 	
+}

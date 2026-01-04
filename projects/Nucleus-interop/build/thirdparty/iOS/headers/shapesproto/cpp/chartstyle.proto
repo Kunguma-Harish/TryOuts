@@ -1,0 +1,84 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "ChartStyleProtos";
+
+import "fill.proto";
+import "stroke.proto";
+import "themereference.proto";
+import "portionprops.proto";
+
+message ChartStyle {
+		
+	optional StyleData axis = 1; 
+
+	optional StyleData axisTitle = 2;
+
+	optional StyleData chartArea = 3;
+
+	optional StyleData chartTitle = 4;
+
+	optional StyleData dataLabels = 5;
+
+	optional StyleData dataTable = 6;
+	
+	optional StyleData downBars = 7;
+
+	optional StyleData floor = 8;
+
+	optional StyleData legend = 9;
+
+	optional StyleData majorGridlines = 10;
+
+	optional StyleData minorGridlines = 11;
+
+	optional StyleData otherLines = 12;
+
+	optional StyleData plotArea = 13;
+
+	optional StyleData upBars = 14;
+	
+	optional StyleData walls = 15;
+
+	repeated StyleData dataPoint = 16; // Fill Data point.
+
+	repeated StyleData dataPointLine = 17; // Line Data point
+
+	repeated StyleData dataPointMarker = 18; // Marker for Data point
+
+	repeated StyleData categoryAxis = 19;
+	
+	repeated StyleData valueAxis = 20;
+
+	repeated StyleData seriesAxis = 21;
+
+	repeated StyleData dateAxis = 22;
+
+	repeated StyleData dropLines = 23;
+
+	repeated StyleData hiLowLine = 24;
+
+	repeated StyleData leaderLine = 25; 
+	
+	message StyleData {
+		
+		optional com.zoho.shapes.ThemeReference themeRef = 1;
+		optional com.zoho.shapes.Fill fill = 2;
+
+		optional com.zoho.shapes.Stroke stroke = 3;
+		
+		enum PatternType {	
+			NONE = 0;
+			FADE = 1;
+		}
+		
+		optional PatternType fillPattern = 4;		
+		optional PatternType strokePatern = 5;
+		
+		optional com.zoho.shapes.PortionProps defPrProps = 6;
+	}
+
+	optional com.zoho.shapes.PortionProps defPrProps = 26;
+}	

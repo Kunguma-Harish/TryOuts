@@ -1,0 +1,69 @@
+syntax="proto3";
+
+package com.zoho.chart.cache;
+
+option java_package = "com.zoho.chart.cache";
+option java_outer_classname = "ChartShapeProtos";
+
+import "shape.proto";
+import "manuallayout.proto";
+
+message ChartShape {
+	
+	optional com.zoho.shapes.Shape title = 1;
+	
+	repeated com.zoho.shapes.Shape legends = 2;
+
+	message AxisShape {
+
+		optional com.zoho.shapes.Shape axis = 1; // actual axis
+		
+		optional com.zoho.shapes.Shape title = 2;
+
+		repeated com.zoho.shapes.Shape majorGrids = 3;
+		
+		repeated com.zoho.shapes.Shape minorGrids = 4;
+
+		repeated com.zoho.shapes.Shape labels = 5;
+
+		repeated com.zoho.shapes.Shape majorTickMarks = 6;
+
+		repeated com.zoho.shapes.Shape minorTickMarks = 7;		
+
+	}
+
+	message CategoryShape {
+		
+		repeated SeriesShape seriesShapes = 1;
+
+		message SeriesShape {
+		
+			optional com.zoho.shapes.Shape shape = 1;
+
+			optional com.zoho.shapes.Shape label = 2;
+		}
+	}
+	
+
+	message PlotAreaShape {
+		
+		optional AxisShape horizontal = 1;
+
+		optional AxisShape vertical = 2;
+	
+		repeated CategoryShape categoryShapes = 3;
+
+		repeated com.zoho.shapes.Shape seriesLines = 4;
+
+		repeated com.zoho.shapes.Shape dropLines = 5;
+
+		repeated com.zoho.shapes.Shape upDownBars = 6;
+
+		repeated com.zoho.shapes.Shape markers = 7;		
+
+	}
+	
+	optional PlotAreaShape plotArea = 3;	
+	
+	optional ManualLayout chartAreaBox = 4;
+}

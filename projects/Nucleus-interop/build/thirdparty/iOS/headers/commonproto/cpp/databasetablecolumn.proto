@@ -1,0 +1,86 @@
+syntax="proto3";
+package com.zoho.database;
+
+option java_package = "com.zoho.database";
+option java_outer_classname = "DatabaseTableColumnProtos";
+
+import "compositevalue.proto";
+import "fields.proto";
+import "columnidentifier.proto";
+
+message DatabaseTableColumn {
+
+	optional ColumnIdentifier column = 1;
+
+	optional string name = 2;
+
+	optional Show.DatabaseField.TableOrColumnCategory category = 3;
+
+	message ParentColumn {
+		// Specifies the data-type and contains the available value.
+		optional com.zoho.common.CompositeValue columnValue = 1;
+
+		optional string customRendererId = 2; // This ID is referenced in the document proto to obtain the custom renderer for rendering the UI element
+	}
+	optional ParentColumn parent = 4;
+
+	message ChildColumn {
+
+		optional string tableId = 1;
+
+		optional string columnId = 2;
+	}
+	optional ChildColumn child = 5;
+
+	optional bool hide = 6;
+
+	optional string dbColumnId = 7;
+
+	enum ColumnConstraint {
+		DEFAULT_CONSTRAINT = 0;
+		PRIMARY_KEY = 1;
+		UNIQUE = 2;
+		NOT_NULL = 3;
+		AUTO_INCREMENT = 4;
+	}
+
+	optional ColumnConstraint constraint = 8;
+
+	message Lock {
+
+		enum LockType{
+			DEFAULT_LOCK = 0;
+			NONE = 1;
+			USER = 2;
+		}
+		optional LockType type = 1;
+
+		optional string zuid = 2; // zuid for user lock
+	}
+
+	optional Lock lock = 9;
+	
+	enum ColumnType {
+		DEFAULT_COLUMN_TYPE = 0;
+		USER = 1;
+		SYSTEM = 2;
+	}
+	optional ColumnType type = 10;
+
+	message SystemManage {
+
+		enum AuditType {
+			DEFAULT_AUDIT_TYPE = 0;
+			CREATED_TIME = 1;
+			CREATED_BY = 2;
+			LAST_MODIFIED_TIME = 3;
+			LAST_MODIFIED_BY = 4;
+		}
+
+		optional AuditType auditType = 1;
+
+	}
+	optional SystemManage system = 11;
+
+}
+

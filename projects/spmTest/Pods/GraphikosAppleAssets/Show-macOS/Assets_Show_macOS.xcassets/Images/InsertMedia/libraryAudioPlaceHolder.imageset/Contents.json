@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "libraryAudioPlaceHolder_light.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "libraryAudioPlaceHolder_dark.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

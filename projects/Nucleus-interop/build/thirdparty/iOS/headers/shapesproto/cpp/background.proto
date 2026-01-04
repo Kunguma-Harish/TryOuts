@@ -1,0 +1,25 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "BackgroundProtos";
+
+import "fill.proto";
+import "reference.proto";
+import "stroke.proto";
+import "offset.proto";
+
+message Background {
+	optional Reference bgRef = 1;
+	optional Fill fill = 2;
+
+	// Can be used by background of a slide, If useShapeFill is true , the bgRef refers to fillRef in themes.
+	optional bool useShapeFill = 3;
+
+	repeated Fill fills = 4;
+
+	repeated Stroke strokes = 5;
+
+	optional Offset offset = 6;
+}

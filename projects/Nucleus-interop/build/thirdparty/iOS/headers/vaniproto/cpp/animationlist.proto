@@ -1,0 +1,36 @@
+syntax="proto3";
+package com.zoho.show;
+
+option java_package = "com.zoho.show";
+option java_outer_classname = "AnimationListProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+message AnimationList {
+		
+	optional string shapeId = 1 [(com.zoho.common.customOptions).requiredField = true]; // Shape ID
+
+	optional string animId = 2 [(com.zoho.common.customOptions).requiredField = true]; // Animation ID
+
+	message AnimationTarget {
+		// For Charts you will have Category numbers 
+		enum AnimationNode {
+			BG = 0;
+			PARA = 1;
+			CATEGORY = 2;
+			SERIES_VALUE = 3;
+			PER_SERIES_VALUE = 4;
+			PER_CATEGORY = 5;
+			TABLE_ROW = 6;
+			TABLE_COLUMN = 7;
+			TABLE_CELL = 8;
+		}
+		optional AnimationNode node = 1 [(com.zoho.common.customOptions).requiredField = true]; //[default = BG];
+		optional int32 para = 2; // Paragraph index for animation.- deprecated
+	}
+
+	optional AnimationTarget target = 3;
+	// If we have target which is inherit/overwrite 
+	// shapeObject's props animation this will set
+	optional string parentId = 4;
+}

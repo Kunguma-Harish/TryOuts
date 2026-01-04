@@ -1,0 +1,6 @@
+framework module Proto {
+  umbrella header "Proto-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

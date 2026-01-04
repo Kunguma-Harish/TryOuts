@@ -1,0 +1,133 @@
+syntax="proto3";
+package com.zoho.remoteboard;
+
+option java_package = "com.zoho.remoteboard";
+option java_outer_classname = "DocumentProtos";
+
+import "basemeta.proto";
+import "pictureassociation.proto";
+import "shapeobject.proto";
+import "position.proto";
+import "time.proto";
+import "mediaassociation.proto";
+import "flow.proto";
+import "picproperties.proto";
+import "datalink.proto";
+import "fileassociation.proto";
+import "customvalue.proto";
+import "customrenderer.proto";
+import "connector.proto";
+import "google/protobuf/protoextensions.proto";
+
+message Document {
+
+	optional string id = 1 [(com.zoho.common.customOptions).requiredField = true]; // Unique ID
+
+	optional com.zoho.common.BaseMeta meta = 2;
+
+	// List of Frame / Shape Elements
+	message ScreenOrShapeElement {
+
+		enum ElementObjectType {
+			FRAME = 0;
+			OBJECT = 1;
+		}
+		optional ElementObjectType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+		optional string frameId = 2;
+
+		optional com.zoho.shapes.ShapeObject shapeObject = 3;
+	}
+	repeated ScreenOrShapeElement elements = 3;
+
+	repeated com.zoho.common.PictureAssociation pictureAssociation = 4;
+
+	message AnchorPoint {
+
+		optional string id = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+		enum AnchorPointType {
+			UNKNOWN_ANCHOR_TYPE = 0;
+			ELEMENT_BASED = 1;
+			POSITION_BASED = 2;
+		}
+		optional AnchorPointType type = 2;
+
+		message ElementAnchor {
+			optional string objectId = 1;
+			optional string frameId = 2;
+		}
+		optional ElementAnchor elementBased = 3;
+
+		message PositionAnchor {
+			optional com.zoho.common.Position pos = 1;
+		}
+		optional PositionAnchor positionBased = 4;
+
+		optional string title = 5;
+		optional string description = 6;
+
+		repeated string tags = 7;
+
+		optional com.zoho.common.Time time = 8;
+
+	}
+	repeated AnchorPoint anchors = 5;
+
+	repeated com.zoho.common.MediaAssociation mediaAssociation = 6;
+
+	repeated Flow flows = 7;
+
+	repeated com.zoho.common.PicProperties externalPictureProps = 8;
+
+	repeated com.zoho.common.FileAssociation fileAssociation = 9;
+
+	repeated com.zoho.common.DataLink dataLink = 10;
+
+	message CustomValueRels{
+		
+		optional string tableId = 1;
+
+		repeated com.zoho.shapes.CustomValue customValues = 2; // custom values used in the value proto for non-common usage
+	}
+
+	repeated CustomValueRels customValueRels = 11;
+
+	message CustomRendererRels{
+
+		optional string tableId = 1;
+
+		repeated CustomRenderer customRenderer = 2; // each table can have multiple custom renderers
+	}
+
+	repeated CustomRendererRels customRendererRels = 12;
+
+	message ObjectTemplate {
+		
+		optional string templateId = 1;
+
+		enum TemplateType {
+			UNKNOWN_TEMPLATE_TYPE = 0;
+			SHAPE_OBJECT = 1;
+			FRAME = 2;
+		}
+		optional TemplateType type = 2;
+
+		message ShapeObjectTemplate {
+
+			optional com.zoho.shapes.ShapeObject shape = 1;
+
+			optional com.zoho.shapes.Connector connector = 2;
+		}
+		optional ShapeObjectTemplate shapeObjectTemplate = 3;
+
+		message FrameTemplate {
+			
+			optional string frameId = 1;
+		}
+		optional FrameTemplate frameTemplate = 4;
+	}
+	
+	repeated ObjectTemplate templates =  13;
+
+}

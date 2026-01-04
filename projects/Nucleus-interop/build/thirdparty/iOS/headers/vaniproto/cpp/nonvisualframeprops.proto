@@ -1,0 +1,22 @@
+syntax="proto3";
+
+package com.zoho.remoteboard;
+
+option java_package = "com.zoho.remoteboard";
+option java_outer_classname = "NonVisualFramePropsProtos";
+
+import "locks.proto";
+
+message NonVisualFrameProps {
+    message NonVisualFrameDrawingProps {
+
+        message FrameNameProperties{
+            optional bool hidden = 1;
+        }
+
+        optional com.zoho.shapes.Locks locks = 1;
+        optional FrameNameProperties frameNameProps = 2;
+    }
+    
+    optional NonVisualFrameDrawingProps nvODProps = 1;
+}

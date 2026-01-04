@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "ٹھیک";
+"SSKit.common.cancel" = "منسوخ کریو";
+"SSKit.common.continue" = "جاری";
+"SSKit.common.untitledDocument" = "بےٛ عنوان دستاویز";
+"SSKit.common.noNetwork" = "کٕہ نیٹ ورک چھُ نٔہ";
+"SSKit.common.noNetworkMessage" = "یقینی بنٲیوٗ تُہنٛد آلہ چھُ انٹرنیٹ ہس سٕتۍ مربوط کٔرِتھۍ۔";
+"SSKit.common.openSettings" = "ترتیبات کھولیو";
+"SSKit.common.connected" = "مربوط";
+"SSKit.common.connecting" = "مربوط کَران";
+"SSKit.common.waiting" = "پئران";
+"SSKit.common.update" = "اپڈیٹ";
+"SSKit.common.minimise" = "لکُٹ کٔرِو";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "شروع";
+"SSKit.slideshow.end" = "اختتام";
+"SSKit.slideshow.currentSlide" = "سلائڈ %iاز%i";
+"SSKit.slideshow.EndOfSlideshow" = "سلائیڈ شو ہیند اختتام";
+"SSKit.slideshow.blackout" = "سکرین چھُ بلیک آؤٹ کرنٕہ آمِژ";
+"SSKit.slideshow.backToLive" = "واپس براہ راست پٮ۪ٹھۍ";
+"SSKit.slideshow.notes" = "نوٹ";
+"SSKit.slideshow.clear" = "صاف کٔرِو";
+"SSKit.slideshow.emptyNotes" = "ییتٕہ چھُ نَہ یتھ سلائڈِ باپتھ کانٛہ نوٹ دستیاب۔";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "سیشن آؤ ختم کرنٕہ";
+"SSKit.shareplay.sessionTerminated.desc" = "تُہنٛد Shareplay سیشن چھُ ختم آمُت کرنٕہ۔ تُہۍ ہِکیو تُہنٛد سیشن دُبارٕ چالو کرُن چُنِتھۍ۔";
+
+"SSKit.shareplay.syncWithPresenter" = "پریزنٹر سٕتۍ کٔرِو سینک";
+
+"SSKit.shareplay.end.title" = "Shareplay کٔرِو ختم";
+"SSKit.shareplay.end.description" = "کیاہ تُہۍ چھُوا shareplay یژھان ختم کرُن؟ shareplay ختم کرُن کرٕ سیشن ختم۔";
+"SSKit.shareplay.requestToPresent.description" = "پیش کرنہ ہینز درخواست";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "خرٲبی";
+"SSKit.error.message" = "خرأبی چھے آمٔژ لبنٕ۔ کٔرِو پتہ پہہم دُبارٕ کوشش";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "پلے بیک آڈیو";
+"SSKit.audio.resume" = "دوبارہ چلاوُن";
+"SSKit.audio.pause" = "ٹھراوُن";
+"SSKit.audio.audioTitle" = "آڈِیو";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "تُہنٛد Apple TV کٔرِو منتخب";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple TV ہینز تلاش چھَ";
+"SSKit.mcPeerListing.streamingDescription" = "تَہنٛدٕ آلہ پٮ۪ٹھۍ Apple TV سٕتۍ سلائیڈس سٹریم کرنٕہ باپتھ۔";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "مَقٲمی نیٹ رسٲئی کٔرِو فعال تٕہ دُبارٕ کٔرِو کوشش";
+
+"SSKit.mcPeerListing.disconnect.title" = "مُنقطع";
+"SSKit.mcPeerListing.disconnect.message" = "کیاہ تُہۍ چھُوا واقعی یژھان Apple TV پٮ۪ٹھۍ منقطع کرُن؟";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "مُنقطع %@";
+"SSKit.mcPeerListing.updateError" = "باسان چھُ پیئر چھُ پریٖنِس ورژن پٮ۪ٹھۍ چَلان۔ یقینی بنائیو کئہ TV ایپ چھُ اپ ٹو ڈیٹ";

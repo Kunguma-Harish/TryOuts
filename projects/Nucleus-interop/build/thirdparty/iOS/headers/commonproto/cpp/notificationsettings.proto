@@ -1,0 +1,165 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "NotificationSettingsProtos";
+
+import "operationfields.proto";
+import "time.proto";
+import "fields.proto";
+
+message NotificationSettingOptions {
+    optional bool mail = 1;
+    optional bool push = 2;
+    optional bool app = 3;
+    optional bool bot = 4;
+
+    message MuteNotification {
+
+        optional com.zoho.common.Time mutedAt = 1;
+
+        optional com.zoho.common.Time muteFor = 2;
+
+    }
+
+    optional MuteNotification muteNotification = 5;
+}
+
+message NotificationSettings {
+
+    optional NotificationSettingOptions options = 1; //it will turn off globally
+
+    optional ProjectLevelSettings projectSettings = 2;
+
+    optional OrgLevelSettings orgSettings = 3;
+
+}
+
+enum SettingLevelType {
+    UNKNOWN_TYPE = 0;
+    ALL = 1;
+    GRANULAR = 2;
+}
+
+message MemberLevelSetting {
+    optional SettingLevelType memberLevelType = 1;
+
+    message GranularMemberLevel {
+        optional com.zoho.common.OperationFields.MemberOperationType memberOperationType = 1;
+    }
+
+    repeated GranularMemberLevel memberGranular = 2;
+}
+
+message ProjectLevelSettings {
+
+    optional SettingLevelType projectLevel = 1;
+
+    message GranularProjectLevelSetting {       // GRANULAR
+        optional com.zoho.common.OperationFields.OperationFieldType opType = 1;
+
+        message ShareLevelSetting {
+            optional SettingLevelType shareLevelType = 1;
+
+            message GranularShareLevel {
+                optional com.zoho.common.OperationFields.ShareOperationType shareOperationType = 1;
+            }
+
+            repeated GranularShareLevel shareGranular = 2;
+        }
+        optional ShareLevelSetting shareLevel = 2;
+
+        message FileLevelSetting {
+            optional SettingLevelType fileLevelType = 1;
+
+            message GranularFileLevel {
+                optional com.zoho.common.OperationFields.FileOperationType fileOperationType = 1;
+            }
+            repeated GranularFileLevel fileGranular = 2;
+        }
+        optional FileLevelSetting fileLevel = 3;
+
+        message PublishLevelSetting {
+            optional SettingLevelType publishLevelType = 1;
+
+            message GranularPublishLevel {
+                optional com.zoho.common.OperationFields.PublishOperationType publishOperationType = 1;
+            }
+            repeated GranularPublishLevel publishGranular = 2;
+        }
+        optional PublishLevelSetting publishLevel = 4;
+
+        message EditLevelSetting {
+            optional SettingLevelType editLevelType = 1;
+
+            message GranularEditLevel {
+                optional com.zoho.common.OperationFields.EditOperationType editOperationType = 1;
+            }
+            repeated GranularEditLevel editGranular = 2;
+
+            message ModifyLevelSetting {
+                optional SettingLevelType modifyLevelType = 1;
+
+                message GranularModifyLevel {
+                    optional com.zoho.common.OperationFields.ModifyOperationType modifyOperationType = 1;
+                }
+                repeated GranularModifyLevel modifyGranular = 2;
+
+                message MetaLevelSetting {
+                    optional SettingLevelType metaLevelType = 1;
+
+                    message GranularMetaLevel {
+                        optional com.zoho.common.OperationFields.MetaOperationType metaOperationType = 1;
+                    }
+                    repeated GranularMetaLevel metaGranular = 2;
+
+                    message DocumentStatusLevelSetting {
+                        optional SettingLevelType documentStatusLevelType = 1;
+
+                        message GranularDocumentStatusLevel {
+                            optional Show.DocumentStatusField.DocumentStatusType documentStatusOperationType = 1;
+                        }
+                        repeated GranularDocumentStatusLevel documentStatusGranular = 2;
+                    }
+                    optional DocumentStatusLevelSetting documentStatusLevel = 4;
+                }
+                optional MetaLevelSetting metaLevel = 4;
+
+            }
+            optional ModifyLevelSetting modifyLevel = 4;
+
+            message CommentLevelSetting {
+                optional SettingLevelType commentLevelType = 1;
+
+                message GranularCommentLevel {
+                    optional com.zoho.common.OperationFields.CommentOperationType commentOperationType = 1;
+                    optional bool unmute = 2; // NotPresent/True - UnMuted.  False - Muted
+                }
+                repeated GranularCommentLevel commentGranular = 2;
+
+            }
+            optional CommentLevelSetting commentLevel = 5;
+
+        }
+        optional EditLevelSetting editLevel = 5;
+
+        optional MemberLevelSetting memberLevel = 6;
+
+    }
+
+    repeated GranularProjectLevelSetting granularProjectLevelSetting = 2;
+}
+
+message OrgLevelSettings {
+
+    optional SettingLevelType orgLevel = 1;
+
+    message GranularOrgLevelSetting {       // GRANULAR
+        optional com.zoho.common.OperationFields.OperationFieldType opType = 1;
+
+        optional MemberLevelSetting memberLevel = 2;
+    }
+
+    repeated GranularOrgLevelSetting granularOrgLevelSetting = 2;
+
+}

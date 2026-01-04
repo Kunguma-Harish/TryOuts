@@ -1,0 +1,334 @@
+{
+  "name": "GraphikosAppleAssets",
+  "version": "0.0.24",
+  "summary": "Manages assets of multiple products under Graphikos team.",
+  "description": "Manages assets such as icons, images and named colors across multiple products like Show, Whiteboard, etc., under Graphikos team",
+  "homepage": "https://git.csez.zohocorpin.com/zohoshow/apple/graphikosappleassets",
+  "license": "ZOHO",
+  "authors": {
+    "show-ios": "show-ios@zohocorp.com"
+  },
+  "source": {
+    "git": "https://git.csez.zohocorpin.com/zohoshow/apple/public/graphikosappleassets.git",
+    "tag": "0.0.24"
+  },
+  "prepare_command": "sh \"Scripts/Podspec/downloadResources.sh\"",
+  "default_subspecs": "Show",
+  "swift_versions": "5.8",
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "visionos": null,
+    "watchos": null
+  },
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "Shared/AssetManager/Core/**/*.swift",
+      "resource_bundles": {
+        "GraphikosAppleAssetsResources": [
+          "Shared/Common/Resources/PrivacyInfo.xcprivacy"
+        ]
+      },
+      "platforms": {
+        "ios": "13.0",
+        "osx": "11.0",
+        "tvos": "13.0"
+      }
+    },
+    {
+      "name": "Show",
+      "source_files": "Shared/Common/**/*.swift",
+      "ios": {
+        "source_files": "Show-iOS/**/*.swift",
+        "resource_bundles": {
+          "ShowResources": [
+            "Show-iOS/Resources/*",
+            "Shared/Show/iOS_macOS/Resources/*"
+          ]
+        }
+      },
+      "tvos": {
+        "source_files": "Show-tvOS/**/*.swift"
+      },
+      "osx": {
+        "source_files": "Show-macOS/**/*.swift",
+        "resource_bundles": {
+          "ShowResources": [
+            "Show-macOS/Resources/*",
+            "Shared/Show/iOS_macOS/Resources/*"
+          ]
+        }
+      },
+      "preserve_paths": [
+        "Scripts/Development/CopyAssets.sh",
+        "Show-*/**/*.xcassets",
+        "SlideShowKit-*/**/*.xcassets",
+        "Shared/**/*.xcassets"
+      ],
+      "platforms": {
+        "ios": "13.0",
+        "osx": "11.0",
+        "tvos": "13.0"
+      },
+      "dependencies": {
+        "GraphikosAppleAssets/SlideShowKitExtension": [
+
+        ],
+        "GraphikosAppleAssets/OnDemandResources": [
+
+        ]
+      }
+    },
+    {
+      "name": "RenderingResources",
+      "platforms": {
+        "ios": "13.0",
+        "osx": "11.0",
+        "tvos": "13.0"
+      },
+      "subspecs": [
+        {
+          "name": "Core",
+          "resource_bundles": {
+            "RenderingResources": [
+              "Shared/Common/Resources/**/*.txt"
+            ]
+          },
+          "osx": {
+            "resource_bundles": {
+              "RenderingResources": [
+                "Shared/Common/Resources/**/*.bundle"
+              ]
+            }
+          }
+        },
+        {
+          "name": "ShowPreviewKitZohoDocs",
+          "resource_bundles": {
+            "RenderingResources": [
+              "Shared/Common/Resources/**/*.txt",
+              "Shared/Common/Resources/**/Textures.bundle"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "OnDemandResources",
+      "ios": {
+        "source_files": [
+          "Shared/AssetManager/iOS_tvOS/Utilities/OnDemandResourceManager.swift",
+          "Shared/AssetManager/Core/Utilities/ResourceBundleType.swift",
+          "Shared/AssetManager/Core/Utilities/GAADebugger.swift"
+        ]
+      },
+      "osx": {
+        "source_files": "Shared/AssetManager/Core/Utilities/GAADebugger.swift"
+      },
+      "tvos": {
+        "source_files": [
+          "Shared/AssetManager/iOS_tvOS/Utilities/OnDemandResourceManager.swift",
+          "Shared/AssetManager/Core/Utilities/ResourceBundleType.swift",
+          "Shared/AssetManager/Core/Utilities/GAADebugger.swift"
+        ]
+      },
+      "on_demand_resources": {
+        "Fonts": [
+          "Shared/Common/Resources/Fonts.bundle"
+        ],
+        "Textures": [
+          "Shared/Common/Resources/Textures.bundle"
+        ]
+      },
+      "platforms": {
+        "ios": "13.0",
+        "osx": "11.0",
+        "tvos": "13.0"
+      }
+    },
+    {
+      "name": "Painter",
+      "platforms": {
+        "ios": "13.0",
+        "osx": "11.0",
+        "tvos": "13.0",
+        "watchos": "6.0"
+      },
+      "subspecs": [
+        {
+          "name": "Core",
+          "source_files": [
+            "Shared/AssetManager/Core/Utilities/FontHandler.swift",
+            "Shared/AssetManager/Core/Utilities/String+Regex.swift",
+            "Shared/AssetManager/Core/Utilities/Bundle+Helpers.swift",
+            "Shared/AssetManager/Core/Utilities/GAADebugger.swift"
+          ]
+        },
+        {
+          "name": "Show",
+          "resource_bundles": {
+            "PainterResources": [
+              "Shared/Painter/Common/Resources/*",
+              "Shared/Painter/Show/Resources/*"
+            ]
+          },
+          "dependencies": {
+            "GraphikosAppleAssets/Painter/Core": [
+
+            ]
+          }
+        },
+        {
+          "name": "Startwith",
+          "resource_bundles": {
+            "PainterResources": [
+              "Shared/Painter/Common/Resources/*"
+            ]
+          },
+          "dependencies": {
+            "GraphikosAppleAssets/Painter/Core": [
+
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "SlideShowKitExtension",
+      "ios": {
+        "source_files": [
+          "Shared/SlideShowKit/**/*.swift",
+          "SlideShowKit-iOS/**/*.swift"
+        ]
+      },
+      "osx": {
+        "source_files": [
+          "Shared/SlideShowKit/**/*.swift",
+          "SlideShowKit-macOS/**/*.swift"
+        ]
+      },
+      "tvos": {
+        "source_files": [
+          "Shared/SlideShowKit/**/*.swift",
+          "SlideShowKit-tvOS/**/*.swift"
+        ]
+      },
+      "resources": [
+        "Shared/SlideShowKit/**/*.lproj"
+      ],
+      "platforms": {
+        "ios": "13.0",
+        "osx": "11.0",
+        "tvos": "13.0"
+      },
+      "dependencies": {
+        "GraphikosAppleAssets/Core": [
+
+        ],
+        "GraphikosAppleAssets/RenderingResources/Core": [
+
+        ]
+      }
+    },
+    {
+      "name": "SlideShowKit",
+      "source_files": "Shared/Common/**/*.swift",
+      "ios": {
+        "resources": [
+          "SlideShowKit-iOS/**/*.xcassets",
+          "Shared/SlideShowKit/**/*.xcassets",
+          "Shared/Common/**/*.xcassets"
+        ]
+      },
+      "osx": {
+        "resources": [
+          "SlideShowKit-macOS/**/*.xcassets",
+          "Shared/SlideShowKit/**/*.xcassets",
+          "Shared/Common/**/*.xcassets"
+        ]
+      },
+      "tvos": {
+        "resources": [
+          "Shared/SlideShowKit/**/*.xcassets",
+          "Shared/Common/**/*.xcassets"
+        ]
+      },
+      "platforms": {
+        "ios": "13.0",
+        "osx": "11.0",
+        "tvos": "13.0"
+      },
+      "dependencies": {
+        "GraphikosAppleAssets/SlideShowKitExtension": [
+
+        ],
+        "GraphikosAppleAssets/OnDemandResources": [
+
+        ]
+      }
+    },
+    {
+      "name": "ShowPreviewKit",
+      "platforms": {
+        "ios": "13.0",
+        "osx": "11.0",
+        "tvos": "13.0"
+      },
+      "subspecs": [
+        {
+          "name": "Core",
+          "source_files": [
+            "Shared/ShowPreviewKit/Common/**/*.swift",
+            "Shared/Common/Utilities/**/*.swift"
+          ],
+          "resources": [
+            "Shared/Common/Placeholders.xcassets",
+            "Shared/Common/EmbedMedia.xcassets"
+          ],
+          "dependencies": {
+            "GraphikosAppleAssets/Core": [
+
+            ],
+            "GraphikosAppleAssets/OnDemandResources": [
+
+            ],
+            "GraphikosAppleAssets/RenderingResources/Core": [
+
+            ]
+          }
+        },
+        {
+          "name": "ZohoDocs",
+          "source_files": [
+            "Shared/ShowPreviewKit/ZohoDocs/**/*.swift",
+            "Shared/ShowPreviewKit/Common/**/*.swift",
+            "Shared/Common/Utilities/**/*.swift",
+            "Shared/AssetManager/Core/**/*.swift"
+          ],
+          "exclude_files": [
+            "Shared/AssetManager/Core/Utilities/ResourceBundleType+BundleURL.swift",
+            "Shared/Common/Utilities/ShowFontManager+RegisterFont.swift"
+          ],
+          "resources": [
+            "Shared/Common/Placeholders.xcassets",
+            "Shared/Common/EmbedMedia.xcassets"
+          ],
+          "dependencies": {
+            "GraphikosAppleAssets/RenderingResources/ShowPreviewKitZohoDocs": [
+
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "WhiteBoard",
+      "resource_bundles": {
+        "GraphikosAppleAssetsWhiteBoardResources": "Shared/Common/Resources/PrivacyInfo.xcprivacy"
+      }
+    }
+  ],
+  "swift_version": "5.8"
+}

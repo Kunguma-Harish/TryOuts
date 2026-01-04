@@ -1,0 +1,54 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "AnimationEasingProtos";
+
+message AnimationEasing {
+
+	enum EasingBase {
+		NONE = 0; // No Easing , follows linear motion.
+		EASE_IN = 1;
+		EASE_OUT = 2;
+		EASE_IN_OUT = 3;
+	}
+	optional EasingBase base = 1;
+
+	// Each easing curve is based on a formula. Check the following web pages to understand in detail. 
+	// http://easings.net/ , https://docs.microsoft.com/en-us/dotnet/framework/wpf/graphics-multimedia/easing-functions , 
+	// http://gizma.com/easing/
+	enum EasingCurve {
+		DEF_ANIMATION_EASING_CURVE = 0;
+		SINE = 1; // f(t) = 1 - (Sin(1-t) * PI/2)
+		CUBIC = 2; // f(t) = t^3
+		QUINTIC = 3; // f(t) = t^5
+		CIRCLE = 4; // f(t) = 1 - sqrt(1-t^2)
+		QUADRATIC = 5;// f(t) = t^2
+		QUARTIC = 6; // f(t) = t^4
+		EXPONENTIAL = 7; // f(t) = (e(at) - 1) / (e(a) - 1)
+		BACK = 8; // f(t) = t^3 - t * a * Sin(t * PI)
+		BOUNCE = 9; 
+		ELASTIC = 10;
+		POWER = 11; // f(t) = t^n	
+	}
+	optional EasingCurve curve = 2;
+
+	message BounceOrElasticCurve {
+
+		optional int32 num = 1;
+
+		// Amplitude of the next bounce / elastic-behaviour. If 2 is specified , the second bounce/elastic-behaviour will be twice the first one during ease-in and will be half during easeout.
+
+		optional float factor = 2;
+	}
+
+	optional BounceOrElasticCurve bounce = 3;
+	optional BounceOrElasticCurve elastic = 4; 
+
+	message PowerCurve {
+		optional float value = 1;
+	}		
+	optional PowerCurve power = 5;
+}
+

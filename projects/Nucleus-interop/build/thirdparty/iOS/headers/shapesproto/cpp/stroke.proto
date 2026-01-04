@@ -1,0 +1,50 @@
+syntax="proto2";
+
+// Stroke Properties
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "StrokeProtos";
+
+import "fill.proto";
+import "marker.proto";
+import "fields.proto";
+
+message Stroke {
+	
+	optional Show.StrokeField.StrokeType type = 1; // stroke type
+
+	optional float width = 2; // stroke width , indicated in px. 
+
+  	optional Show.StrokeField.JoinType jointype = 3 [ default = MITER] ; // Join type
+
+	optional Fill fill = 4;// fill value for stroke
+		
+	optional Show.StrokeField.CapType captype = 5;// cap type
+
+	optional Marker headend = 6; // marker at the head end
+	optional Marker tailend = 7; // marker at tail end.
+
+	optional Show.ShapeField.BlendMode blend = 8;
+
+	optional Show.StrokeField.StrokePosition position = 9;
+	
+	// Stroke Dash pattern - specifies the widths of the dashes, alternating between the painted and unpainted segments of the line
+	repeated float dashPattern = 10;
+	
+	optional Show.CommonField.UseParentProps useParentProps = 11;
+
+	message StrokeGrid{
+
+		enum StrokeGridType{
+			UKNOWN_STROKE_GRID_TYPE = 0;
+			DOUBLE = 1;
+		}
+		optional StrokeGridType strokeGridType = 1;
+
+		optional float gap = 2;
+
+	}
+	optional StrokeGrid strokeGrid = 12;
+}

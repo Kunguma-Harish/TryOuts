@@ -1,0 +1,16 @@
+syntax="proto3";
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "BrochuresKitProtos";
+
+message BrochuresKit {
+
+	enum BrochuresKitCategory {
+		UNKNOWN_BROCHURES_CATEGORY = 0;
+        CORPORATE = 1;	
+        PROMOTIONAL = 2;
+        EVENTS = 3;
+	}
+	optional BrochuresKitCategory type = 1;
+}

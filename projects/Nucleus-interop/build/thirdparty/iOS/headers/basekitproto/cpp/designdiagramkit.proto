@@ -1,0 +1,28 @@
+syntax="proto3";
+
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "DesignDiagramKitProtos";
+
+import "dfdprops.proto";
+import "erdprops.proto";
+import "umlprops.proto";
+
+message DesignDiagramKit {
+  enum DesignDiagramType {
+    UNKNOWN_DIAGRAM = 0;
+    DFD = 1;
+    ERD = 2;
+    UML = 3;
+  }
+  optional DesignDiagramType type = 1;
+
+  optional DFDProps dfd = 2;
+
+  optional ERDProps erd = 3;
+
+  optional UMLProps uml = 4;
+
+}
+

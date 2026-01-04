@@ -1,0 +1,80 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "MediaPropertiesProtos";
+
+import "dimension.proto";
+import "time.proto";
+
+message MediaProperties {
+
+	optional string key = 1; // DB Key
+
+	optional string name = 2;
+
+	enum MediaFormat {
+
+		UNKNOWN_MEDIA_FORMAT = 0;
+		AUDIO = 1;
+		VIDEO = 2;
+	}
+	optional MediaFormat format = 3;
+
+	message AudioMedia {
+
+		enum AudioFormat {
+			UNKNOWN_AUDIO_FORMAT = 0;
+			MP3 = 1;
+			WAV = 2;
+			WMA = 3;
+			MPEG = 4;
+			M4A = 5;
+		}
+
+		optional AudioFormat format = 1;
+	}
+
+	optional AudioMedia audio = 4;
+
+	message VideoMedia {
+
+		enum VideoFormat {
+			UNKNOWN_VIDEO_FORMAT = 0;
+			MP4 = 1;
+			MOV = 2;
+			WMV = 3;
+			AVI = 4;
+			WEBM = 5;
+			M4V = 6;
+			MKV = 7;
+			MPEG = 8;
+			MWV = 9;
+			MPG = 10;
+		}
+		optional VideoFormat format = 1;
+
+		optional com.zoho.common.Dimension dim = 2;
+
+	}
+	optional VideoMedia video = 5;
+
+	optional string duration = 6;
+
+	enum MediaInsertType {
+		UNKNOWN_TYPE = 0;
+		UPLOADED = 1;
+		RECORDED = 2;
+	}
+
+	optional MediaInsertType type = 7;
+	// By default, it is of UPLOADED type
+
+	message RecordMetadata {
+		optional string zuid = 1;
+		optional string userName = 2;	// save userName, if the zuid left the organization, we can use this.
+		optional com.zoho.common.Time date = 3; // Date in current time millis. It denotes the recorded date and time.
+	}
+	optional RecordMetadata recordInfo = 8;
+
+}

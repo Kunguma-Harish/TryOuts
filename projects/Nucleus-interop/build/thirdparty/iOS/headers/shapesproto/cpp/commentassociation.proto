@@ -1,0 +1,51 @@
+syntax="proto3";
+package com.zoho.comment;
+
+option java_package = "com.zoho.comment";
+option java_outer_classname = "CommentAssociationProtos";
+
+import "position.proto";
+import "google/protobuf/protoextensions.proto";
+import "tableelementlocator.proto";
+
+message CommentAssociation {
+
+	optional string commentId = 1 [(com.zoho.common.customOptions).requiredField = true]; // List Id or Comment ID. If it is CommentID - listID will be available in parentListId.
+	optional string shapeId = 2; // If there is no Shape-ID the commentList is associated to the screen.
+
+	enum AssociatedObj {
+		PARA = 0;
+		PORTION = 1;
+        TABLE = 2;
+	}
+	optional AssociatedObj obj = 3;
+
+	optional bool disAssociated = 4; // Enable this when the associated object is deleted.
+
+	// Should be used when a comment has to be associcated with multiple shapes. If no shapes are listed , the comment is associated to screen. 
+	repeated string associatedShapeIds = 5;
+ 
+	// If this variable is "true" and if there are no shapes associated , the comment is associated to the first marking instead of screen.
+	optional bool associatedToMarkings = 6;
+
+	message AssociatedParaObject {
+		
+		optional string shapeId = 1;
+
+		repeated string paraId = 2;  
+	}
+
+	repeated AssociatedParaObject associatedParaobj  = 7;
+	
+	repeated com.zoho.common.Position pins = 8;
+	
+	optional string parentListId = 9;
+
+    message AssociatedTableObject {
+      optional string shapeId = 1;
+
+      repeated com.zoho.shapes.TableElementLocator tableElement = 2;    // Can map more than one row for a comment
+    }
+
+    repeated AssociatedTableObject associatedTableobj = 10;
+} 

@@ -1,0 +1,18 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "PictureTypeProtos";
+
+enum PictureType {
+    UNKNOWN_PICT = 0;
+    JPG = 1;
+    JPEG = 2;
+    GIF = 3;
+    PNG = 4;
+    TIFF = 5;
+    BMP = 6;
+    WEBP = 7;
+    SVG = 8;
+    WMF = 9;
+}

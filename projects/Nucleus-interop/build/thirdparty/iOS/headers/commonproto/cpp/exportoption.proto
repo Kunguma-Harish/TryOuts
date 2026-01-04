@@ -1,0 +1,79 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "ExportOptionProtos";
+
+import "picturetype.proto";
+
+message ExportOption {
+
+	message ExportScale {
+		enum ExportScaleType {
+			UNKNOWN_SCALE_TYPE = 0;
+			ON_THE_WHOLE = 1;
+			WIDTH_BASED = 2;
+			HEIGHT_BASED = 3;
+		}
+
+		optional ExportScaleType type = 1;
+		
+		message ExportScaleValue {
+			enum ExportScaleValueType {
+				UNKNONWN_EXPORTSCALEVALUE_TYPE = 0;
+				FACTOR = 1;
+				ABSOLUTE = 2;
+			}
+			optional ExportScaleValueType type = 1;
+
+			// For values like 0.5x, 2x , 3x etc..
+			optional float factor = 2;
+			
+			// For absolute pixel values , mainly used for height or width based scale type.
+			optional float absolute = 3;
+		}
+		optional ExportScaleValue value = 2;
+	} 	
+
+	optional ExportScale scale = 1;
+
+	message ExportFileOptions {
+
+		message Affix {
+			enum AffixType {
+				UNKNOWN_AFFIX = 0;
+				PREFIX = 1;
+				SUFFIX = 2;
+				BOTH = 3;
+			}
+			optional AffixType type = 1;
+			optional string prefix = 2;
+			optional string suffix = 3;
+		}
+		optional Affix affix = 1;
+
+		message FileFormat {
+			enum FileFormatType {
+				UNKNOWN_FILE_FORMAT = 0;
+				PICTURE_FORMAT = 1;
+				DOCUMENT_FORMAT = 2;
+			}
+			optional FileFormatType type = 1;
+
+			optional PictureType pictureFormat = 2;
+
+			enum DocumentFormatType {
+				UNKNOWN_DOCUMENT_FORMAT = 0;
+				PDF = 1;
+				HTML = 2;
+				DOCX = 3;
+				PPTX = 4;
+			}
+			optional DocumentFormatType documentFormat = 3;
+		}
+		optional FileFormat format = 2;
+	}
+
+	optional ExportFileOptions fileOptions = 2;
+
+}

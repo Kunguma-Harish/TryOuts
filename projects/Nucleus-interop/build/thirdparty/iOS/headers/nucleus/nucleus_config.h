@@ -1,0 +1,40 @@
+#ifndef __NUCLEUS_CONFIG_H__
+#define __NUCLEUS_CONFIG_H__
+
+inline SkColor gl_hsv_to_color(float h, float s, float v) {
+    const SkScalar hsvColor[3] = {h, s, v};
+    return SkHSVToColor(hsvColor);
+}
+
+#define GRAPHICS_CORE_PRODUCT "Generic"
+#define GRAPHICS_CORE_BUILD_TIME "2025-04-15T14:48:03"
+/* #undef NUCLEUS_COMMIT_MSG */
+/* #undef SHAPESPAINTER_COMMIT_MSG */
+#define GRAPHICSCORE_MIN_ZOOM 0.01
+#define GRAPHICSCORE_MAX_ZOOM 256
+#define GRAPHICSCORE_ANIMATION_REFRESHRATE 80
+#define NL_DEFERRED_RENDERING_THRESHOLD 150
+#define NL_DEFERRED_RENDERING_THRESHOLD_COUNT 1000
+#define NUCLEUS_SCROLLSPEED 1
+#define NUCLEUS_ZOOMSPEED 1
+#define NUCLEUS_BG_COLOR SkColorSetARGB(0xFF, 0xF0, 0xF0, 0xF0)
+#define NUCLEUS_DEFAULT_FONTSIZE 10
+#define NUCLEUS_DEFAULT_FONTNAME "Noto Sans"
+#define SELECTION_OFFSET 3.0
+#define NUCLEUS_OVERLAY_COLOR gl_hsv_to_color(0.59 * 360.0f, 0.6f, 0.89f)
+#define NL_SCROLL_BAR_WIDTH 10
+#define NL_SURFACE_COUNT 1
+
+#define NL_MAX_TEXTURE_SIZE 4096
+
+#define NL_METAL_DEVICE_STR "MtkDevice"
+#define NL_METAL_QUEUE_STR "MtkQueue"
+#define NL_METAL_MTKVIEW_STR "MtkView"
+
+#define NL_IDXGIADAPTER1_STR "IDXGIAdapter1"
+#define NL_IDXGISWAPCHAIN1_STR "IDXGISwapChain1"
+#define NL_ID3D12DEVICE_STR "ID3D12Device"
+#define NL_ID3D12COMMANDQUEUE_STR "ID3D12CommandQueue"
+#define NL_ID3D12FENCE_STR "ID3D12Fence"
+
+#endif

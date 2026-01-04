@@ -1,0 +1,53 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "AutoFitProtos";
+
+import "dimension.proto";
+import "google/protobuf/protoextensions.proto";
+
+message AutoFit {
+	enum AutoFitType {
+		NONE = 0;
+		NORMAL = 1;
+		SHAPE = 2; // Resize the shape to fit the text.
+		BEST = 3;	// Always keep the text filled to the shape
+		RESTRICT = 4;	// Text will not allowed to type / rendered outside the shape.
+	}
+
+	optional AutoFitType type = 1 [(com.zoho.common.customOptions).requiredField = true]; //[default = NONE]; // None Auto Fit.
+	message NormalAutoFit {
+		optional float fontScale = 1; // Varies from 0 - any , mostly less than 1 - 0.9 represents 90% fontScale
+		optional float lineSpaceScale = 2; // Varies from 0 - any , mostly less than 1 - 0.9 represents 90% lineSpace Scale.
+	}
+	optional NormalAutoFit normal = 2;
+
+	message ShapeAutoFit {
+		enum ShapeAutoFitType {
+			NO_BOUNDARY = 0;
+			DEFINED_BOUNDARY = 1;
+		}
+		optional ShapeAutoFitType type = 1;
+
+		message DefinedBoundary {
+			optional com.zoho.common.Dimension maxDim = 1;
+
+			optional float fontScale = 2;
+			optional float lineSpaceScale = 3;
+		}
+		optional DefinedBoundary definedBoundary = 2;
+	}
+	optional ShapeAutoFit shape = 3;
+
+	message BestAutoFit {
+		optional float fontScale = 1; // Varies from 0 - any Positive Value. - 0.9 represents 90% fontScale
+		optional float lineSpaceScale = 2; // Varies from 0 - any, mostly less than 1 - 0.9 represents 90% lineSpace Scale.
+		// As per the current algorithm, we are not reducing lineSpaceScale value. So, Default value is 1.
+	}
+
+	optional BestAutoFit best = 4;
+	// Text Fits within the confined Shape and this fit will avoid breaking of breakwords.
+
+}

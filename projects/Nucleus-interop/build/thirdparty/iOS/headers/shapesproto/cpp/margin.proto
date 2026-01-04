@@ -1,0 +1,16 @@
+syntax="proto3";
+
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "MarginProtos";
+
+message Margin {
+	
+	// All four values are in px. All px values will be modified according to the screen size. 
+	optional float left = 1; 
+	optional float top = 2; 
+	optional float right = 3;
+	optional float bottom = 4; 
+}

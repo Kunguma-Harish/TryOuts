@@ -1,0 +1,13 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "SmartElementProtos";
+
+import "fields.proto";
+
+message SmartElement {
+
+  	optional Show.GeometryField.PresetSmartShapeGeometry smartElementType = 1;
+
+}

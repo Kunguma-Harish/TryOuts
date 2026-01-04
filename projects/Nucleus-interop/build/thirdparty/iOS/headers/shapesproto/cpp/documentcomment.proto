@@ -1,0 +1,52 @@
+syntax="proto3";
+
+package com.zoho.comment;
+
+option java_package = "com.zoho.comment";
+option java_outer_classname = "DocumentCommentProtos";
+
+import "commentlist.proto";
+import "commentassociation.proto";
+import "time.proto";
+import "pictureassociation.proto";
+import "google/protobuf/protoextensions.proto";
+
+message DocumentComment {
+
+	// List for all comment threads.
+    repeated com.zoho.comment.CommentList commentList = 1;
+
+
+	repeated ScreenComment screenComments = 2;
+	message ScreenComment {
+
+		optional string screenId = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+		// Comments associated with screen and its objects
+		repeated com.zoho.comment.CommentAssociation commentAssociation = 2;
+	}
+
+	// Comments associated with objects directly attached to document.
+	repeated com.zoho.comment.CommentAssociation commentAssociation = 3;
+
+	repeated com.zoho.common.PictureAssociation pictureAssociation = 4;
+
+	message CommentAccess {
+		optional string zuid = 1;
+
+		optional LastReadComment lastReadComment = 2;
+		message LastReadComment {
+			optional string id = 1;
+			optional com.zoho.common.Time read = 2;
+		}
+	}
+
+	message CommentAccessMapping {
+
+		optional string listId = 1;
+
+		repeated CommentAccess access = 2;
+	}
+
+	repeated CommentAccessMapping accessMapping = 5;
+}

@@ -1,0 +1,29 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "CornerProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+message Corner {
+
+	enum CornerType {
+		DEFAULT_CORNER = 0;
+		ROUNDED_CORNER = 1;
+		SMOOTH_CORNER = 2;
+		ANGLE_CORNER = 3;
+		INSIDE_SQUARE_CORNER = 4;
+		INSIDE_ARC_CORNER = 5;
+	}
+
+	optional CornerType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	optional float radius = 2 [(com.zoho.common.customOptions).requiredField = true];
+
+	message SmoothCorner {
+		optional float smoothness = 1;
+	}
+	optional SmoothCorner smoothcorner = 3;  // has effect only on SMOOTH_CORNER type
+}

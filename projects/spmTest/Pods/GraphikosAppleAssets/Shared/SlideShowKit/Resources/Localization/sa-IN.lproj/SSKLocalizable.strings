@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "आम्";
+"SSKit.common.cancel" = "निरस्यताम्";
+"SSKit.common.continue" = "अनुवर्तताम्";
+"SSKit.common.untitledDocument" = "अनामक-प्रलेखः";
+"SSKit.common.noNetwork" = "सञ्जालं नास्ति";
+"SSKit.common.noNetworkMessage" = "भवतः संयत्न्रम् आन्तर्जालेन सह संलग्नम् अस्ति इति सुनिश्चितीकरोतु।";
+"SSKit.common.openSettings" = "विधानम् उद्घाटयतु";
+"SSKit.common.connected" = "सन्नीतम्";
+"SSKit.common.connecting" = "सन्नीयमानम्";
+"SSKit.common.waiting" = "प्रतीक्षते";
+"SSKit.common.update" = "अद्यतनं करोतु";
+"SSKit.common.minimise" = "न्यूनतमं कुरुत";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "आरभ्यताम्";
+"SSKit.slideshow.end" = "पिदधातु";
+"SSKit.slideshow.currentSlide" = "%i इत्यस्य %i अवसर्पिणी";
+"SSKit.slideshow.EndOfSlideshow" = "अवसर्पिणी-दृश्यस्य अन्तः";
+"SSKit.slideshow.blackout" = "पटलं कृष्णं जातमस्ति";
+"SSKit.slideshow.backToLive" = "पुनः जीवितुं";
+"SSKit.slideshow.notes" = "टिप्पण्यः";
+"SSKit.slideshow.clear" = "प्रोञ्छतु";
+"SSKit.slideshow.emptyNotes" = "अस्य स्लाइड् कृते टिप्पणीः उपलब्धाः न सन्ति।";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "सत्रं समाप्तम्";
+"SSKit.shareplay.sessionTerminated.desc" = "भवतः SharePlay सत्रं समाप्तम् अस्ति। भवान् स्वस्य सत्रस्य पुनः आरम्भं कर्तुं शक्नोति।";
+
+"SSKit.shareplay.syncWithPresenter" = "प्रस्तोता सह समाकलनम्";
+
+"SSKit.shareplay.end.title" = "SharePlay समापयतु";
+"SSKit.shareplay.end.description" = "किं भवन्तः SharePlay इत्यस्य समाप्तिम् इच्छन्ति ? SharePlay इत्यस्य समाप्तिः सत्रस्य समाप्तिः भविष्यति।";
+"SSKit.shareplay.requestToPresent.description" = "विनयमानः अस्ति प्रस्तौतुम्";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "दोषः";
+"SSKit.error.message" = "दोषः सम्प्राप्तः। अनन्तरं पुनः प्रयतितव्यम्";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "प्लेबैक ऑडियो";
+"SSKit.audio.resume" = "पुनरारभ्यताम्";
+"SSKit.audio.pause" = "स्थगयतु";
+"SSKit.audio.audioTitle" = "श्रव्यम्";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "भवतः Apple TV इति चिनोतु";
+"SSKit.mcPeerListing.lookingForTvs" = "ऐप्पलदूरचित्रवाणीन् गवेषते";
+"SSKit.mcPeerListing.streamingDescription" = "भवतः यत्नात् सर्पिण्यः ऐपल् दूरदर्शनोपरि प्रसारयतु।";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "स्थानीयजालकृति अभिगम्यता समर्थीकरोतु तथा पुनः प्रयततात्";
+
+"SSKit.mcPeerListing.disconnect.title" = "वियुक्तीकरोतु";
+"SSKit.mcPeerListing.disconnect.message" = "ऐप्पल-दूरचित्रवाणीतः भवान् वियुक्तीकर्तुं निश्चयेन हि इच्छति?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@ वियुक्तीकरोतु";
+"SSKit.mcPeerListing.updateError" = "इति प्रतिभाति यत् तुल्ययन्त्रजालम् सनीयसि संस्करणे प्रचलत् अस्ति। भवतः ऐपलदूरदर्शनं अद्यतनम् इत्यस्य सुनिश्चयं करोतु";

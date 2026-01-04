@@ -1,0 +1,43 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "FontDocumentProtos";
+
+import "fontstyle.proto";
+import "fontfamily.proto";
+
+message FontDocument {
+	
+	optional string id = 1;
+
+	optional com.zoho.common.FontFamily fontFamily = 2;
+
+	message FontFile {
+		
+		// Base font file	
+		optional string key = 1;
+
+		enum FontFileFormat {
+			DEF_FONT_FORMAT = 0;
+			UNKNOWN_FONT_FILE = 1;
+			TTF = 2;
+			OTF = 3;
+			WOFF = 4;
+			WOFF2 = 5;	
+		}
+		optional FontFileFormat format = 2;
+
+		// Each font will have multiple files, with each file pertaining to a font variant.
+		message FontVariant {
+			optional string key = 1;
+
+			optional com.zoho.common.FontStyle style = 2;
+		}
+		repeated FontVariant variants = 3;
+	}
+	// Each Font can have multiple font files.
+	repeated FontFile fontFiles = 3;	
+
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "LEFT_UP_ARROW.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

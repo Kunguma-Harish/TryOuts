@@ -1,0 +1,44 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PathAnimationProtos";
+
+import "pathobject.proto";
+
+message PathAnimation {
+
+	
+	// Path will be related to shape and in reference with slide.
+	// Ex : M 0 0 L 0.45 0.33 , here 0.45 = 0.45 * slide_width, 0.33 = 0.33 * slide_height. 
+	// The animation starts from the shape i.e. 0 , 0 means shape's position.
+	repeated PathObject list = 1;
+
+	enum RelatedMode {
+		FIXED = 0; 
+		RELATIVE = 1; // Path is related to shape i.e. if you move the shape path will move along.
+	}
+	optional RelatedMode mode = 2;
+
+	optional int32 rotate = 3; // relative angle of the motion path.
+		
+	enum OriginRelation {
+		SLIDE = 0;
+		PARENT = 1;
+	}
+	optional OriginRelation origin = 4;
+		
+	message PathMovement {
+		
+		enum MovementMode {
+			DEF_MOVEMENT_MODE = 0;
+			NONE = 1;
+			ROTATE_OBJECT_ALONG = 2;
+		}
+		optional MovementMode mode = 1;
+
+		optional bool backToInitialRotation = 2;
+	}
+
+	optional PathMovement pathMovement = 5;	
+}

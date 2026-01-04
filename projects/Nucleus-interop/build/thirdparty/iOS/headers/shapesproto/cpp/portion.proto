@@ -1,0 +1,37 @@
+syntax="proto3";
+
+// Text portion.
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PortionProtos";
+
+import "portionprops.proto";
+import "textfield.proto";
+import "position.proto";
+import "dimension.proto";
+
+message Portion {
+
+	optional string t = 1; // Text content	, will also be used to update Fixed Date Time text content.
+	enum PortionType {
+		FIELD = 0;
+		LINEBREAK = 1;
+	}
+	optional PortionType type = 2;
+	optional TextField field = 3;
+	optional PortionProps props = 4; // portion style
+
+	message CharacterBox {
+
+		optional int32 glyphIndex = 1;
+		optional com.zoho.common.Position pos = 2;
+		optional com.zoho.common.Dimension dim = 3;
+		optional string character = 4;
+	}
+
+	repeated CharacterBox chBoxes = 5;
+
+	optional string id = 6;
+}

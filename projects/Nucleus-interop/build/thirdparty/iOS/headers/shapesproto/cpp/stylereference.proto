@@ -1,0 +1,15 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "StyleReferenceProtos";
+
+
+message StyleReference {
+
+	optional string styleId = 1;
+
+	optional string libraryDocId = 2;
+}	
+

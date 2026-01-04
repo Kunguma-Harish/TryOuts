@@ -1,0 +1,14 @@
+syntax="proto3";
+
+//  Scale the object size.
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ScaleProtos";
+
+message Scale {
+	
+	// ranges from 0-1 , depends on the object size holding this value.
+	optional float x = 1; // scale width 
+	optional float y = 2; // scale height
+}

@@ -1,0 +1,18 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "TitleElementProtos";
+
+import "manuallayout.proto";
+import "charttext.proto";
+import "properties.proto";
+
+message TitleElement {
+	
+	optional ManualLayout layout  = 1; 
+	optional bool overlay = 2; // Specified whether this element shall overlap the other elements.
+	optional com.zoho.shapes.Properties props = 3; // Only Fill, Stroke and effects are supported. 
+	optional ChartText tx = 4; // Text		
+}

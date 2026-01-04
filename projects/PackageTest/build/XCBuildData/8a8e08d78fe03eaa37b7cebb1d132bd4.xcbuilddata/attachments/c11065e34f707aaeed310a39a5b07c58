@@ -1,0 +1,4 @@
+module WhiteBoard {
+header "WhiteBoard-Swift.h"
+export *
+}

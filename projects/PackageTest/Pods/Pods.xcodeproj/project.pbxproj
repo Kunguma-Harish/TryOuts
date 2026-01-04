@@ -1,0 +1,1549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0347E8057BD3DD67B8C613B1487642D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A00DE3FFDA2326F732F9B19D2EA4421 /* Foundation.framework */; };
+		034E670D6D71E946604FD2EE0EF23883 /* SSOLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 37970108D73449A735F0B90C7582709E /* SSOLogger.m */; };
+		04DB2FDF62900C14BE97E8CF9F5D7C6D /* SSORequestBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = DBA6DF0327EBEB8F3EB4F186CA2E0EFB /* SSORequestBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06D32FE6F0004A0D86853339076E71B4 /* ZIAMUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E5DF1D7C05BB676E5F56DA595BB5E /* ZIAMUtil.m */; };
+		0760C9FFF8F2018BC836FF30A8B229D3 /* ZIAMToken.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C2D9C22B1602C4B992015A534907 /* ZIAMToken.m */; };
+		07775F4F2560A60F4607017BAB6A327E /* SSOKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C6EC0D23FF7A87539E670D787B8872E /* SSOKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08BC03B1E335603D6E6E85C05A262E5A /* ZSSOProfileData.m in Sources */ = {isa = PBXBuildFile; fileRef = B14080390100DCF2B0A656682F141597 /* ZSSOProfileData.m */; };
+		0A7306230123AE5AC7B00921270E6BC0 /* ZMacAuthKeychainUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = E3F92C3F22CE0324A2732FAD246A4222 /* ZMacAuthKeychainUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C1396C1E5334822F8757AB762AB5A79 /* SSOLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 93D94D75919ED2A2C81049A9B4E5CA1C /* SSOLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E31D08B76DEE2DB94717F26B2E83FD6 /* th.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6886DFF05FFC9757600475098ED474C8 /* th.lproj */; };
+		102F9739A959092B2D18EADAEC185D86 /* ZMacAuth_NSData+AES.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D893E0EF9C80081303B61D541EB2689 /* ZMacAuth_NSData+AES.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		118E6E077024947D1752432F0AEF94B7 /* SSOKeyChainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D1BB889DEA022F4F77F03CE723E458 /* SSOKeyChainWrapper.m */; };
+		183DD4055E364BFB960E7EF69B4BBBA3 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1FB94408CC7C7AC1ED2CD32533BA8F5B /* en.lproj */; };
+		185BC285EC9BF99D7457C973BF8F4D6D /* SSOUserAccountsTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B439E927D2D0E470539F1C20689A128 /* SSOUserAccountsTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		185E4269506F248F3E7A19872490E7E8 /* ZMacAuthKeyChainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 189B492F4C31FE50B8A49660F966C468 /* ZMacAuthKeyChainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18A97223D74FD327B5ED425C36771675 /* ZMacAuthNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4253527D9C7E6B835BBA2DA748A3E8E4 /* ZMacAuthNetworkManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1919F280206DFB37C241E1CC87ED811B /* ZMacAuthHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D9DF75D029FFE626AFD2408F35E66 /* ZMacAuthHelpers.m */; };
+		19246EEB4F2E70A9EF9DCBB8B960F9EA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485C42A6CF2B63AD72435F963BB36B91 /* Cocoa.framework */; };
+		1C1C9682F2735E9CFFE5338F87EC3F7B /* ZSSOUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 100FF67636337AB94C936007FAD7813E /* ZSSOUser.m */; };
+		237419C2E86FA18278004EB6990DDDF4 /* ZMacAuthErrorHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = A49B835CD45BFBC60F6F0F68715D5843 /* ZMacAuthErrorHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28683BDECE574B4B320B4F938BAA6A91 /* ZMacAuthErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 608531DEA97A40691BF8A785B9850C8E /* ZMacAuthErrorHandler.m */; };
+		291096C22AA4863E072CCB0E83F87F28 /* ZIAMUtilConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = C462DFCDC66388998019ECF455F08D90 /* ZIAMUtilConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A79F21EFE5AF8718D07FFA04712EB91 /* ZIAMHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 454B6A3F96BF4F65E69126C7FE6428E9 /* ZIAMHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F57907645A51182D5E9B1FB7FC73C84 /* ZMacAuthNSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 57F5F2F2AEEE095B4F60768C565F9DE8 /* ZMacAuthNSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		328CAA74935C56DB0711766E876AFCB9 /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C346791C6786F0A7B45A04ED79589C42 /* pt-BR.lproj */; };
+		39919B4957011F6AC1508D97F7262A8D /* ZSSOProfileData.h in Headers */ = {isa = PBXBuildFile; fileRef = DCA00CC955115E5FD761551F9A486711 /* ZSSOProfileData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A098D80C0CE565A2E4542BD1EC38DC9 /* ZSSOProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 719798F941685EE1685B7F4E953148A7 /* ZSSOProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A736146D2C111875FCA3A3DA58C7BAF /* SSO_NSData+AES.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B8686C1BAA309CD3CEB900B132FB3EE /* SSO_NSData+AES.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B3368FEFE45926BC5AB106285CD4B69 /* SSOKit_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8197F07D4835E1AD874B8388AA5E15FC /* SSOKit_Assets.xcassets */; };
+		3FA15D365B5B23B4CD3F6EEDCAB1665B /* ZMacAuthNSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = B0433097605097729DC9291A68F01201 /* ZMacAuthNSData+Base64.m */; };
+		3FE171C2014162E2DBA4606FF5F35FFA /* UIView+ZIAMView.h in Headers */ = {isa = PBXBuildFile; fileRef = F5166754E74FAAE2740CB4164D50C0A1 /* UIView+ZIAMView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4110507D696F2FC141E0D1295665A45A /* SSOSFSafariViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1584E1C035E32FA7914431853BD3D9 /* SSOSFSafariViewController.m */; };
+		42BC1DE8535EC43EAE8535EA98C48F23 /* SSO_NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = E08A2479C53DFE4ADE022A4BA968C674 /* SSO_NSData+AES.m */; };
+		451BCF3CB0F88AF9F7E8CC14BBF4BE05 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 36AAB72C0B77F452EEABB7BDF1A49DAB /* zh-Hans.lproj */; };
+		452F8DF044C1765D7995E402425A16E2 /* SSOEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 93BB42991527A5C4E7E2F55E7CC9C5AD /* SSOEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		459A92E6B6948AD2AFFA70E43AA59F54 /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3EC2F90E489EA1EB5F64BEF40447AE87 /* da.lproj */; };
+		46BE8196C8ACCBD4EADB8327601503C2 /* ZMacAuthNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C306FE06AB211ACB0118880E32B97F /* ZMacAuthNetworkManager.m */; };
+		471EBB12E43BCB9EC53A389FBE7A186B /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7D2ECC44CCC00D9F17A1561FCD3DD4A6 /* nl.lproj */; };
+		49E93B972E46E72BB48ABBCB49F3FA66 /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AA205DEFA49CC2141A650D1EAE38AC96 /* hu.lproj */; };
+		4A7B019B544568A2491534F7EECCE3F7 /* ZMacAuthUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E74F11D0C5F17694F514B8E1B8EE5B /* ZMacAuthUser.m */; };
+		4C18352551CE930E32B39D5DD6C4653B /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 225E8E83A57B886AB44C378D2FD18817 /* ar.lproj */; };
+		4C23E9DE486922291EFF08DE276CAC01 /* UIView+ZIAMView.m in Sources */ = {isa = PBXBuildFile; fileRef = D32F53EB9A006AA3302A303FD95B82C3 /* UIView+ZIAMView.m */; };
+		4C74E95B77BABCF0B45A7A1043B2806A /* ZMacAuthLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B35B780CF315BEC0B00BA3D71A703544 /* ZMacAuthLoginViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CF6DCD7D798A11419F7FD27878846A1 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 69CCF054F457966060C1389A585F032B /* ja.lproj */; };
+		4D9AF4B950B173172FF56E2CE9E548EF /* SSOKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB0B79DF174AA2FF18A9B0B94D94E88 /* SSOKit-dummy.m */; };
+		4DA1419CECF923FEBC4320DE22C6E457 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485C42A6CF2B63AD72435F963BB36B91 /* Cocoa.framework */; };
+		512AF60726EFE8CF8D5ABC4B37BE149B /* ZMacAuthLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B2205C9AE90B2E2913602C0F2A02EE /* ZMacAuthLoginViewController.m */; };
+		5195EB9E03C797621DE63C318FA05E32 /* SSOSFSafariViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D2EBA25244D6F767ECDD1BFB79A5DBE2 /* SSOSFSafariViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		519E4F8F27EC1A177BCBC3647E87AF10 /* ZSSOUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3750A04D6724B74F0C4BE4E9BB0ED2C4 /* ZSSOUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		582D2108C8E5A8A21CAD08B713BD979A /* SSOKit-SSOKitBundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D8A885470B1BD0038BB12914A884752 /* SSOKit-SSOKitBundle */; };
+		589BDE0DDA30BB7389D4FB6612104648 /* ZMacAuthHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 6546FF2D6D374993C49A3CDE5FA37F3E /* ZMacAuthHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58E9538F45BF95A91B622224EFFF645A /* ZMacAuthConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 26C6456458896C1E1343FF1604B9771C /* ZMacAuthConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		598CBC44F8BA432229F720ACBDF92C66 /* SSONetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 21014FC9C9029479BB3E37F7535C06E7 /* SSONetworkManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C23D976EB2ACC05716034E11E30A1DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9549A2323CDDA0B3FFED8BAD991538 /* Foundation.framework */; };
+		610EBE973BE59AD87AB5EA7D1AFA82F6 /* he.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1FED16BB026A620F4CB5AC83AB22FF7C /* he.lproj */; };
+		6508FE2D93A0BB8EC4E22C49BF713343 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3CCC586F6AEEA9DBF6B378FE7FADDF69 /* es.lproj */; };
+		658D0D10EB0B09684DC6C5555A1DE68F /* ZSSOUser+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A38D0BDC3268E4AC3CB0397FE103B6A1 /* ZSSOUser+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67A28EED5CAF47387852B9FA7532F121 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9549A2323CDDA0B3FFED8BAD991538 /* Foundation.framework */; };
+		690C6F5619A380C95C20D3F29DEA896E /* SSOUserAccountsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8543AEE6CA4DFF2C8A1933CF5CA041C /* SSOUserAccountsTableViewController.m */; };
+		6A45146D69B8C651E2EDE781217486DA /* SSOTokenFetch.h in Headers */ = {isa = PBXBuildFile; fileRef = FD70113F0FED7DE07FB14AE19F2F4875 /* SSOTokenFetch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E26AE488DC751626C66B387A7C6C08E /* ZSSODCLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E19E83982C57FEB17A94E83CCA9D46 /* ZSSODCLUtil.m */; };
+		714D1FCE210C27F37919E31498F1AD2F /* ZIAMUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 5296ECB5F8F4CD597E6DA12FFDA6158D /* ZIAMUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73CDBFEC4012033FBC884ABF93611588 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2E9958443794F2FC71711B9803837CFE /* tr.lproj */; };
+		74A4685D0EF7212C72016EDF8A8FA222 /* ZMacAuthProfileData.h in Headers */ = {isa = PBXBuildFile; fileRef = 83C03CCEA60132368BCE52F81C405EF9 /* ZMacAuthProfileData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75526F4F3D2502DCE6CA0A319FAC6E2A /* ZMacAuthKeyPairUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = F1CD0F959604E395A96951C99DF56602 /* ZMacAuthKeyPairUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77F1FC732067D0D49B6EF6CD6AD72F7D /* Pods-PackageTest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 391BDD5443FAB6FB5BF77218D650CFAE /* Pods-PackageTest-dummy.m */; };
+		7B2B2DDCD2577628DDD82F12354567B9 /* Pods-PackageTest-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C79EFBEB06701BBB03CC54DF99A0BB4D /* Pods-PackageTest-iOS-dummy.m */; };
+		7CE287C68F6A9BCBC89851C1BAABEC1A /* en-GB.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 78F942F3CE6EAE03A7447A38F8442269 /* en-GB.lproj */; };
+		81120D26A820221AF0564B1C92699941 /* SSOKeyChainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 281EA059DFA7BA11FFC9B3F00403A2BE /* SSOKeyChainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81DCE0E80C06A80818DE2034BFD0CFCB /* ZSSOKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E352B131E626CC1D95B1EAE48F6A44C2 /* ZSSOKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82EFFC771919FE35A8BC9C0201617D27 /* ZMacAuthProfileData.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CEE5B23DCA8E5B13374679E924BE01 /* ZMacAuthProfileData.m */; };
+		8799BF39096EB4CEC8DAFCD29F10170F /* ZMacAuthZIAMUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 108B4A09904BFC26805EBEB9C7ECE8F3 /* ZMacAuthZIAMUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87C79087912BDEFCDA013F21D348B8AA /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC4F5DC5559771CE521C6D9E06BEB7 /* vi.lproj */; };
+		884AC5BE71FA9A0EB0F311B26956A880 /* ZIAMHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E1683BD3D9574F2ABFA1C622A236E4 /* ZIAMHelpers.m */; };
+		88889A118859D0A9F49F83AE3937F78B /* ZIAMErrorHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 19F054168D584CFFB500FE17ECE37DD9 /* ZIAMErrorHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89FDAA542E9A8CA11FBC1A8CA5B02772 /* ZMacAuth_NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CDEEDA1DB80AD41220976F5B4C354B /* ZMacAuth_NSData+AES.m */; };
+		8E7001B2B2948CC14A4007842A004790 /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4CBF91F3C55C6663620E772FF3BD80AD /* pl.lproj */; };
+		917A1E5969461E37DF89A4614DEC2B67 /* ZMacAuthTokenFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0307DCD51133BFC9F64F9E5C3C2B85AB /* ZMacAuthTokenFetch.m */; };
+		94986B70488A7C78EC73E81198096AE4 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F4D524D9DDF088FF9A1489D1C6280618 /* fr.lproj */; };
+		94B6F9CBC602FEB03970263FDEFEB5DB /* SSOTokenFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B170D95BC91CE152C9B01EC7DE7154 /* SSOTokenFetch.m */; };
+		9514F794F2B36D5F703D6D6E88CDB115 /* ZMacAuthUser+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5CAA8FA8BFD6B06D1BFA6BEE069D44 /* ZMacAuthUser+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99451A42D30F9ABA9E680B62B0A6FFA9 /* WeChatUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E96C285B51F0350C45B043EE88927D4 /* WeChatUtil.m */; };
+		9E95C454475B450E8AF21F095E6E2E92 /* Pods-PackageTest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6941C688C64B0E1AAE5B0021E8DEA6DA /* Pods-PackageTest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1AC71B9E378CF66B0BDA6039F4140BB /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 742319FF68C53D3C86A611D6FBEB252C /* NSData+Base64.m */; };
+		A58E7FEB4068A4053E20E1CC65B71944 /* ZMacAuthTokenFetch.h in Headers */ = {isa = PBXBuildFile; fileRef = 178C03B4160264749AFD1360A7A34C47 /* ZMacAuthTokenFetch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8C812A7CB696093F332E9CBACA40241 /* ZMacAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C5C7C907DFE2044EB226BA2D17E851E /* ZMacAuth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9AC5FA85D62A474E18F482F69F68A96 /* ZMacAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DCCFD29819703718C74654B573AE16C /* ZMacAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA22997E942DC85AE5B2DBB8F779C062 /* hi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D766C25FABD2711D13B5817879B538AA /* hi.lproj */; };
+		AAD02C3E85573316423B75024701359F /* SSONetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F324A5075EC3FAB93F47B225208EBE1 /* SSONetworkManager.m */; };
+		B21881EEF4F00C3148E2CB11F88EF73B /* SSOConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = E57AD53FB5F5F63E2CC2D95700C5AD5D /* SSOConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B60A430918BBCC95C5FCF1C4A838C80A /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 021E71D8BCAF6CBFEA756F74F7672CB7 /* ru.lproj */; };
+		B646475DB12EAD7794ED38579D6CA740 /* ZMacAuthProfileData+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C26E2CB9B9DDD0EA1442941EF7306419 /* ZMacAuthProfileData+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6A5665EDE69008EC6AD60FA721BF57A /* bg.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 915DA43DBC99AA53C43BCD8495A118C1 /* bg.lproj */; };
+		B70629B77025A9A03C7FA03D5DED7DD8 /* ZMacAuthRequestBlocks+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F2813D7CB8A281CE7F92CB330073C996 /* ZMacAuthRequestBlocks+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8F7C387EFFC3D6AF236E192699672B9 /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AA6DEC41A8A59710AD68D8EBE6B5D04A /* pt-PT.lproj */; };
+		BC83655E3E69E7D1A5CFCCC3D709A82C /* ZSSODCLUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 308C5F232CF18382638A010B8C0BAB58 /* ZSSODCLUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDD3D1B907D1EF24AC8B6706E23B1B20 /* WeChatUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = F1BFEB373B473A42C021CF7607AC0267 /* WeChatUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1A1EE68708FF1D74A12A43C0192E3EB /* ZIAMToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C39AC9730C38F58A25871E53D611BF3 /* ZIAMToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C98F314F540D23F72E3D6DBCE792D008 /* ZIAMKeyChainUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B937A4AA4EF8F418F6F9FF6CF16C153 /* ZIAMKeyChainUtil.m */; };
+		C9C4385D4722FE9994CD10E42FCA07F8 /* ZMacAuthZIAMUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 68062C1353695FB223BDD4C6B3B5CB68 /* ZMacAuthZIAMUtil.m */; };
+		CA8B4FF78B844AFCB02411223A111166 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CA36A7B87CCACC8F8A901D16EC2A9939 /* de.lproj */; };
+		CB1C96E98F6B37EA59FD79121CCD3D20 /* ZMacAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 77ADB6B2FB1771C69C939D6F5427FC9D /* ZMacAuth.m */; };
+		CC6FDA995C0CB5E7571479E3CDDAAB60 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F90E82D07D44BF1FBF09B9C5FAE53A /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE59714B94A511022F63C1D7A10DE933 /* ZSSOProfileData+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F712BDB24DD354EAF4D6C8A9B7B62EA /* ZSSOProfileData+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF92A72703D7681F5DDB14CF4799F9FC /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A78D3541901CA2CC58902C4194DBC35C /* sv.lproj */; };
+		D48515D59EB0D557C3878BDBB549B4BA /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2AE81384053A8CE45A09EA75C0206DC8 /* ko.lproj */; };
+		D5EB6386DCA48C6B45E7E1044DB7B24B /* SSOKeyPairUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD82B6258CEFFBCAFBCBEBA935AB902 /* SSOKeyPairUtil.m */; };
+		D8B43BB7D7117765473362278BD22F3F /* ZMacAuthUtilConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 9327AF3BBA3081631F4C5FBAA034A156 /* ZMacAuthUtilConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D90E13C701498447163F9B6D5355C9EE /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7A596B31690E6CE97FB637B3A8DE9016 /* zh-Hant.lproj */; };
+		DA426854616117E37EE06D91F77E18EC /* ZMacAuthUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DD219E6CCB2E8413E2C20D33DACA970 /* ZMacAuthUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB8CA506FE17289BB09EFDA251B573E0 /* Pods-PackageTest-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7206F21BEE3EA62243B6CF973BA09867 /* Pods-PackageTest-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDA307D6B75F3788F1D5FE72C9A34D59 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0A2FC760098B6C96367D225386119330 /* it.lproj */; };
+		E1C730CE4B066BE8F11D85DD4B871B03 /* ZMacAuthEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 31E7D92ECC557998F19F387A7B660E4E /* ZMacAuthEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E49551FE179FF2829F9AFBD511E29966 /* ZMacAuthKeychainUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF04E7AD5A6B84E04A1C6F8C451D035 /* ZMacAuthKeychainUtil.m */; };
+		E51D5A45ACCD417532965B78EBBB9EDE /* ZMacAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC90F9B62A1F3E318A22C0993DE90142 /* ZMacAuth-dummy.m */; };
+		E5E8C55FD24697638955DA55464CEE3F /* SSORequestBlocks+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C15B872E5651AD486473266B7945E9D /* SSORequestBlocks+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E72EADB23E42BDE3A34E049E0CC0BC4F /* SSOKeyPairUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B40D26EC6DE92E3B03ED590F8CB1C96 /* SSOKeyPairUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E915019AA9F6C69B4F4C08B14D4915FE /* SSOStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F5DBEB16544541C69D078701B05C49 /* SSOStoryboard.storyboard */; };
+		EC5DB1ACB4DDBE142800697D3EABC3F2 /* ZMacAuthKeyPairUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 833F6B8299024E4D1D0FBF8BECEE820C /* ZMacAuthKeyPairUtil.m */; };
+		EC95AE32FE9CC3198016C94563446988 /* ZIAMKeyChainUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A615F61094FA0A7FF43185D287C31DC /* ZIAMKeyChainUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECA4F5C9710725A56CA8CDB195AA9944 /* ZIAMToken+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C8B717CB5AAA557B440CFD091A0CDE /* ZIAMToken+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEB61CAFE93078438C02B305A2D8B059 /* ZIAMErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E50B16B1285DF3F94F3F609ECC71D2 /* ZIAMErrorHandler.m */; };
+		F4ACF27ED59576FDBF6377664E497936 /* cs.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 076F3D3F68F3C23ECD1824058D40214C /* cs.lproj */; };
+		F858B215756B065AA538968B75DAC7C5 /* id.lproj in Resources */ = {isa = PBXBuildFile; fileRef = EDB6764DE8A2541689ED5502D8C76856 /* id.lproj */; };
+		F8721ED9F18793C09256F4EA7B1BAE44 /* ZSSOKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E52E17E92BF18422E522C7868E20A1A7 /* ZSSOKit.m */; };
+		F9EFE812E65C406A65B46810204527AB /* ZMacAuthKeyChainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D771CB9A6D73F4E5D711815B7D7D1C39 /* ZMacAuthKeyChainWrapper.m */; };
+		FFDCA678079220CE6593FE7A865118E2 /* ZMacAuthRequestBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 156835540BF53BDD9700BE3CEC13B4E1 /* ZMacAuthRequestBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34D72D3E755C3B93AB09986C39AE2926 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C020ABA44473EEA76ED11CFCF1C69810;
+			remoteInfo = SSOKit;
+		};
+		988C38273C6B8E67AB8CD50BCFE85B3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33E3D0EDA767ECBE0776418B828CEE71;
+			remoteInfo = ZMacAuth;
+		};
+		EA4DC2BD5E87AB62E9E8C73EC7CD5280 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4DBD4666A9A8493D9D8FE65D313D228;
+			remoteInfo = "SSOKit-SSOKitBundle";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		021E71D8BCAF6CBFEA756F74F7672CB7 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ru.lproj; path = native/SSO_Library/IAM_SSO/Resources/ru.lproj; sourceTree = "<group>"; };
+		0307DCD51133BFC9F64F9E5C3C2B85AB /* ZMacAuthTokenFetch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZMacAuthTokenFetch.m; path = native/IAM_ZMacAuth/IAM_ZMacAuth/Utils/ZMacAuthTokenFetch.m; sourceTree = "<group>"; };
+		076F3D3F68F3C23ECD1824058D40214C /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = cs.lproj; path = native/SSO_Library/IAM_SSO/Resources/cs.lproj; sourceTree = "<group>"; };
+		0A2FC760098B6C96367D225386119330 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = it.lproj; path = native/SSO_Library/IAM_SSO/Resources/it.lproj; sourceTree = "<group>"; };
+		0C5C7C907DFE2044EB226BA2D17E851E /* ZMacAuth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZMacAuth-umbrella.h"; sourceTree = "<group>"; };
+		0D5D9DF75D029FFE626AFD2408F35E66 /* ZMacAuthHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZMacAuthHelpers.m; path = native/IAM_ZMacAuth/IAM_ZMacAuth/Utils/ZMacAuthHelpers.m; sourceTree = "<group>"; };
+		0F98CB0385E22E61FA5CFB9F632AA668 /* SSOKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSOKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		100FF67636337AB94C936007FAD7813E /* ZSSOUser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZSSOUser.m; path = native/SSO_Library/IAM_SSO/ZSSOUser.m; sourceTree = "<group>"; };
+		108B4A09904BFC26805EBEB9C7ECE8F3 /* ZMacAuthZIAMUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthZIAMUtil.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/Utils/ZMacAuthZIAMUtil.h; sourceTree = "<group>"; };
+		11615B5EC04170657C7EC75C3EEE8861 /* Pods-PackageTest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PackageTest-acknowledgements.markdown"; sourceTree = "<group>"; };
+		156835540BF53BDD9700BE3CEC13B4E1 /* ZMacAuthRequestBlocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthRequestBlocks.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthRequestBlocks.h; sourceTree = "<group>"; };
+		156C4BC3F00B42A1BC1E6752CBF09194 /* Pods-PackageTest-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PackageTest-Info.plist"; sourceTree = "<group>"; };
+		16E74F11D0C5F17694F514B8E1B8EE5B /* ZMacAuthUser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZMacAuthUser.m; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthUser.m; sourceTree = "<group>"; };
+		178C03B4160264749AFD1360A7A34C47 /* ZMacAuthTokenFetch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthTokenFetch.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/Utils/ZMacAuthTokenFetch.h; sourceTree = "<group>"; };
+		189B492F4C31FE50B8A49660F966C468 /* ZMacAuthKeyChainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthKeyChainWrapper.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/Utils/ZMacAuthKeyChainWrapper.h; sourceTree = "<group>"; };
+		19F054168D584CFFB500FE17ECE37DD9 /* ZIAMErrorHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZIAMErrorHandler.h; path = native/SSO_Library/IAM_SSO/ZIAMErrorHandler.h; sourceTree = "<group>"; };
+		1C39AC9730C38F58A25871E53D611BF3 /* ZIAMToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZIAMToken.h; path = native/SSO_Library/IAM_SSO/ZIAMToken.h; sourceTree = "<group>"; };
+		1FB94408CC7C7AC1ED2CD32533BA8F5B /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = native/SSO_Library/IAM_SSO/Resources/en.lproj; sourceTree = "<group>"; };
+		1FED16BB026A620F4CB5AC83AB22FF7C /* he.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = he.lproj; path = native/SSO_Library/IAM_SSO/Resources/he.lproj; sourceTree = "<group>"; };
+		20CDEEDA1DB80AD41220976F5B4C354B /* ZMacAuth_NSData+AES.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ZMacAuth_NSData+AES.m"; path = "native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuth_NSData+AES.m"; sourceTree = "<group>"; };
+		21014FC9C9029479BB3E37F7535C06E7 /* SSONetworkManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSONetworkManager.h; path = native/SSO_Library/IAM_SSO/SSONetworkManager.h; sourceTree = "<group>"; };
+		225E8E83A57B886AB44C378D2FD18817 /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ar.lproj; path = native/SSO_Library/IAM_SSO/Resources/ar.lproj; sourceTree = "<group>"; };
+		26C6456458896C1E1343FF1604B9771C /* ZMacAuthConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthConstants.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthConstants.h; sourceTree = "<group>"; };
+		281EA059DFA7BA11FFC9B3F00403A2BE /* SSOKeyChainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSOKeyChainWrapper.h; path = native/SSO_Library/IAM_SSO/SSOKeyChainWrapper.h; sourceTree = "<group>"; };
+		2A615F61094FA0A7FF43185D287C31DC /* ZIAMKeyChainUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZIAMKeyChainUtil.h; path = native/SSO_Library/IAM_SSO/ZIAMKeyChainUtil.h; sourceTree = "<group>"; };
+		2AE81384053A8CE45A09EA75C0206DC8 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ko.lproj; path = native/SSO_Library/IAM_SSO/Resources/ko.lproj; sourceTree = "<group>"; };
+		2D8A885470B1BD0038BB12914A884752 /* SSOKit-SSOKitBundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "SSOKit-SSOKitBundle"; path = SSOKitBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E9958443794F2FC71711B9803837CFE /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = tr.lproj; path = native/SSO_Library/IAM_SSO/Resources/tr.lproj; sourceTree = "<group>"; };
+		2F712BDB24DD354EAF4D6C8A9B7B62EA /* ZSSOProfileData+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ZSSOProfileData+Internal.h"; path = "native/SSO_Library/IAM_SSO/ZSSOProfileData+Internal.h"; sourceTree = "<group>"; };
+		308C5F232CF18382638A010B8C0BAB58 /* ZSSODCLUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZSSODCLUtil.h; path = native/SSO_Library/IAM_SSO/ZSSODCLUtil.h; sourceTree = "<group>"; };
+		31E7D92ECC557998F19F387A7B660E4E /* ZMacAuthEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthEnums.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthEnums.h; sourceTree = "<group>"; };
+		34E19E83982C57FEB17A94E83CCA9D46 /* ZSSODCLUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZSSODCLUtil.m; path = native/SSO_Library/IAM_SSO/ZSSODCLUtil.m; sourceTree = "<group>"; };
+		36AAB72C0B77F452EEABB7BDF1A49DAB /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hans.lproj"; path = "native/SSO_Library/IAM_SSO/Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
+		3750A04D6724B74F0C4BE4E9BB0ED2C4 /* ZSSOUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZSSOUser.h; path = native/SSO_Library/IAM_SSO/ZSSOUser.h; sourceTree = "<group>"; };
+		37970108D73449A735F0B90C7582709E /* SSOLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSOLogger.m; path = native/SSO_Library/IAM_SSO/SSOLogger.m; sourceTree = "<group>"; };
+		391BDD5443FAB6FB5BF77218D650CFAE /* Pods-PackageTest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PackageTest-dummy.m"; sourceTree = "<group>"; };
+		3A80537F717361CE54EAC20AC7819AF6 /* Pods-PackageTest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PackageTest-acknowledgements.plist"; sourceTree = "<group>"; };
+		3B439E927D2D0E470539F1C20689A128 /* SSOUserAccountsTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSOUserAccountsTableViewController.h; path = native/SSO_Library/IAM_SSO/SSOUserAccountsTableViewController.h; sourceTree = "<group>"; };
+		3CCC586F6AEEA9DBF6B378FE7FADDF69 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = es.lproj; path = native/SSO_Library/IAM_SSO/Resources/es.lproj; sourceTree = "<group>"; };
+		3E96C285B51F0350C45B043EE88927D4 /* WeChatUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WeChatUtil.m; path = native/SSO_Library/IAM_SSO/WeChatUtil.m; sourceTree = "<group>"; };
+		3EB0B79DF174AA2FF18A9B0B94D94E88 /* SSOKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSOKit-dummy.m"; sourceTree = "<group>"; };
+		3EC2F90E489EA1EB5F64BEF40447AE87 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = da.lproj; path = native/SSO_Library/IAM_SSO/Resources/da.lproj; sourceTree = "<group>"; };
+		4253527D9C7E6B835BBA2DA748A3E8E4 /* ZMacAuthNetworkManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthNetworkManager.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthNetworkManager.h; sourceTree = "<group>"; };
+		454B6A3F96BF4F65E69126C7FE6428E9 /* ZIAMHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZIAMHelpers.h; path = native/SSO_Library/IAM_SSO/ZIAMHelpers.h; sourceTree = "<group>"; };
+		485C42A6CF2B63AD72435F963BB36B91 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		4ABC4F5DC5559771CE521C6D9E06BEB7 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = vi.lproj; path = native/SSO_Library/IAM_SSO/Resources/vi.lproj; sourceTree = "<group>"; };
+		4BB20F3135A1188AAF9651F2B4173673 /* ResourceBundle-SSOKitBundle-SSOKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SSOKitBundle-SSOKit-Info.plist"; sourceTree = "<group>"; };
+		4CBF91F3C55C6663620E772FF3BD80AD /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pl.lproj; path = native/SSO_Library/IAM_SSO/Resources/pl.lproj; sourceTree = "<group>"; };
+		4DCCFD29819703718C74654B573AE16C /* ZMacAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuth.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuth.h; sourceTree = "<group>"; };
+		5296ECB5F8F4CD597E6DA12FFDA6158D /* ZIAMUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZIAMUtil.h; path = native/SSO_Library/IAM_SSO/ZIAMUtil.h; sourceTree = "<group>"; };
+		53EB0C2CEEF01EAC79DC54650E017287 /* SSOKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSOKit.modulemap; sourceTree = "<group>"; };
+		57F5F2F2AEEE095B4F60768C565F9DE8 /* ZMacAuthNSData+Base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ZMacAuthNSData+Base64.h"; path = "native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthNSData+Base64.h"; sourceTree = "<group>"; };
+		5B0E5DF1D7C05BB676E5F56DA595BB5E /* ZIAMUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZIAMUtil.m; path = native/SSO_Library/IAM_SSO/ZIAMUtil.m; sourceTree = "<group>"; };
+		5C6EC0D23FF7A87539E670D787B8872E /* SSOKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSOKit-umbrella.h"; sourceTree = "<group>"; };
+		5DD82B6258CEFFBCAFBCBEBA935AB902 /* SSOKeyPairUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSOKeyPairUtil.m; path = native/SSO_Library/IAM_SSO/SSOKeyPairUtil.m; sourceTree = "<group>"; };
+		608531DEA97A40691BF8A785B9850C8E /* ZMacAuthErrorHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZMacAuthErrorHandler.m; path = native/IAM_ZMacAuth/IAM_ZMacAuth/Utils/ZMacAuthErrorHandler.m; sourceTree = "<group>"; };
+		634B5975E01C15196E646E60CA3BD106 /* Pods-PackageTest-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PackageTest-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		63C4E697FA7C1E09DA8958E01BB3E717 /* ZMacAuth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZMacAuth.modulemap; sourceTree = "<group>"; };
+		64C8B717CB5AAA557B440CFD091A0CDE /* ZIAMToken+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ZIAMToken+Internal.h"; path = "native/SSO_Library/IAM_SSO/ZIAMToken+Internal.h"; sourceTree = "<group>"; };
+		6546FF2D6D374993C49A3CDE5FA37F3E /* ZMacAuthHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthHelpers.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/Utils/ZMacAuthHelpers.h; sourceTree = "<group>"; };
+		66D7B99C99E07D8FAE789B7C34AE95D2 /* SSOKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSOKit.release.xcconfig; sourceTree = "<group>"; };
+		68062C1353695FB223BDD4C6B3B5CB68 /* ZMacAuthZIAMUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZMacAuthZIAMUtil.m; path = native/IAM_ZMacAuth/IAM_ZMacAuth/Utils/ZMacAuthZIAMUtil.m; sourceTree = "<group>"; };
+		6886DFF05FFC9757600475098ED474C8 /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = th.lproj; path = native/SSO_Library/IAM_SSO/Resources/th.lproj; sourceTree = "<group>"; };
+		6941C688C64B0E1AAE5B0021E8DEA6DA /* Pods-PackageTest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PackageTest-umbrella.h"; sourceTree = "<group>"; };
+		69CCF054F457966060C1389A585F032B /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ja.lproj; path = native/SSO_Library/IAM_SSO/Resources/ja.lproj; sourceTree = "<group>"; };
+		69D84BCF5C22BFFA5497BAAE27D5F993 /* ZMacAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZMacAuth.debug.xcconfig; sourceTree = "<group>"; };
+		6D893E0EF9C80081303B61D541EB2689 /* ZMacAuth_NSData+AES.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ZMacAuth_NSData+AES.h"; path = "native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuth_NSData+AES.h"; sourceTree = "<group>"; };
+		719798F941685EE1685B7F4E953148A7 /* ZSSOProtocols.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZSSOProtocols.h; path = native/SSO_Library/IAM_SSO/ZSSOProtocols.h; sourceTree = "<group>"; };
+		7206F21BEE3EA62243B6CF973BA09867 /* Pods-PackageTest-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PackageTest-iOS-umbrella.h"; sourceTree = "<group>"; };
+		742319FF68C53D3C86A611D6FBEB252C /* NSData+Base64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "native/SSO_Library/IAM_SSO/NSData+Base64.m"; sourceTree = "<group>"; };
+		77ADB6B2FB1771C69C939D6F5427FC9D /* ZMacAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZMacAuth.m; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuth.m; sourceTree = "<group>"; };
+		78F942F3CE6EAE03A7447A38F8442269 /* en-GB.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "en-GB.lproj"; path = "native/SSO_Library/IAM_SSO/Resources/en-GB.lproj"; sourceTree = "<group>"; };
+		7A596B31690E6CE97FB637B3A8DE9016 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hant.lproj"; path = "native/SSO_Library/IAM_SSO/Resources/zh-Hant.lproj"; sourceTree = "<group>"; };
+		7B8686C1BAA309CD3CEB900B132FB3EE /* SSO_NSData+AES.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SSO_NSData+AES.h"; path = "native/SSO_Library/IAM_SSO/SSO_NSData+AES.h"; sourceTree = "<group>"; };
+		7D2ECC44CCC00D9F17A1561FCD3DD4A6 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = nl.lproj; path = native/SSO_Library/IAM_SSO/Resources/nl.lproj; sourceTree = "<group>"; };
+		806E80AF4CC6B350EEA3A8D4DA0C8462 /* Pods-PackageTest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PackageTest.modulemap"; sourceTree = "<group>"; };
+		8197F07D4835E1AD874B8388AA5E15FC /* SSOKit_Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = SSOKit_Assets.xcassets; path = native/SSO_Library/IAM_SSO/SSOKit_Assets.xcassets; sourceTree = "<group>"; };
+		81F5DBEB16544541C69D078701B05C49 /* SSOStoryboard.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = SSOStoryboard.storyboard; path = native/SSO_Library/IAM_SSO/SSOStoryboard.storyboard; sourceTree = "<group>"; };
+		833F6B8299024E4D1D0FBF8BECEE820C /* ZMacAuthKeyPairUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZMacAuthKeyPairUtil.m; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthKeyPairUtil.m; sourceTree = "<group>"; };
+		83C03CCEA60132368BCE52F81C405EF9 /* ZMacAuthProfileData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthProfileData.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthProfileData.h; sourceTree = "<group>"; };
+		8A00DE3FFDA2326F732F9B19D2EA4421 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8AB958E2CFBBB2B398EDF6B57BCDA8FD /* ZMacAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZMacAuth-prefix.pch"; sourceTree = "<group>"; };
+		8B40D26EC6DE92E3B03ED590F8CB1C96 /* SSOKeyPairUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSOKeyPairUtil.h; path = native/SSO_Library/IAM_SSO/SSOKeyPairUtil.h; sourceTree = "<group>"; };
+		8B937A4AA4EF8F418F6F9FF6CF16C153 /* ZIAMKeyChainUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZIAMKeyChainUtil.m; path = native/SSO_Library/IAM_SSO/ZIAMKeyChainUtil.m; sourceTree = "<group>"; };
+		8C5B8854DE9C2C1F0566A18DCCA67D46 /* ZMacAuth */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZMacAuth; path = ZMacAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DB780AB07C82C692367D756AD86CFED /* Pods-PackageTest-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PackageTest-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8F324A5075EC3FAB93F47B225208EBE1 /* SSONetworkManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSONetworkManager.m; path = native/SSO_Library/IAM_SSO/SSONetworkManager.m; sourceTree = "<group>"; };
+		915DA43DBC99AA53C43BCD8495A118C1 /* bg.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = bg.lproj; path = native/SSO_Library/IAM_SSO/Resources/bg.lproj; sourceTree = "<group>"; };
+		929FFB636AD3C1191FDA44E6B9C17F3F /* Pods-PackageTest-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PackageTest-iOS-Info.plist"; sourceTree = "<group>"; };
+		9327AF3BBA3081631F4C5FBAA034A156 /* ZMacAuthUtilConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthUtilConstants.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthUtilConstants.h; sourceTree = "<group>"; };
+		93BB42991527A5C4E7E2F55E7CC9C5AD /* SSOEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSOEnums.h; path = native/SSO_Library/IAM_SSO/SSOEnums.h; sourceTree = "<group>"; };
+		93D94D75919ED2A2C81049A9B4E5CA1C /* SSOLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSOLogger.h; path = native/SSO_Library/IAM_SSO/SSOLogger.h; sourceTree = "<group>"; };
+		9A408FC35AC8280AC555C16AF86AC965 /* Pods-PackageTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PackageTest.debug.xcconfig"; sourceTree = "<group>"; };
+		9C15B872E5651AD486473266B7945E9D /* SSORequestBlocks+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SSORequestBlocks+Internal.h"; path = "native/SSO_Library/IAM_SSO/SSORequestBlocks+Internal.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DD219E6CCB2E8413E2C20D33DACA970 /* ZMacAuthUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthUser.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthUser.h; sourceTree = "<group>"; };
+		A0953CFD3FA1A7876229BA05D9867000 /* Pods-PackageTest */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PackageTest"; path = Pods_PackageTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2CEE5B23DCA8E5B13374679E924BE01 /* ZMacAuthProfileData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZMacAuthProfileData.m; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthProfileData.m; sourceTree = "<group>"; };
+		A38D0BDC3268E4AC3CB0397FE103B6A1 /* ZSSOUser+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ZSSOUser+Internal.h"; path = "native/SSO_Library/IAM_SSO/ZSSOUser+Internal.h"; sourceTree = "<group>"; };
+		A49B835CD45BFBC60F6F0F68715D5843 /* ZMacAuthErrorHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthErrorHandler.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/Utils/ZMacAuthErrorHandler.h; sourceTree = "<group>"; };
+		A78D3541901CA2CC58902C4194DBC35C /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = sv.lproj; path = native/SSO_Library/IAM_SSO/Resources/sv.lproj; sourceTree = "<group>"; };
+		AA205DEFA49CC2141A650D1EAE38AC96 /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = hu.lproj; path = native/SSO_Library/IAM_SSO/Resources/hu.lproj; sourceTree = "<group>"; };
+		AA6DEC41A8A59710AD68D8EBE6B5D04A /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "pt-PT.lproj"; path = "native/SSO_Library/IAM_SSO/Resources/pt-PT.lproj"; sourceTree = "<group>"; };
+		B0433097605097729DC9291A68F01201 /* ZMacAuthNSData+Base64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ZMacAuthNSData+Base64.m"; path = "native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthNSData+Base64.m"; sourceTree = "<group>"; };
+		B10CAE92DD6D37B034F7B7590C5C98E6 /* Pods-PackageTest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PackageTest-frameworks.sh"; sourceTree = "<group>"; };
+		B14080390100DCF2B0A656682F141597 /* ZSSOProfileData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZSSOProfileData.m; path = native/SSO_Library/IAM_SSO/ZSSOProfileData.m; sourceTree = "<group>"; };
+		B2E1683BD3D9574F2ABFA1C622A236E4 /* ZIAMHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZIAMHelpers.m; path = native/SSO_Library/IAM_SSO/ZIAMHelpers.m; sourceTree = "<group>"; };
+		B35B780CF315BEC0B00BA3D71A703544 /* ZMacAuthLoginViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthLoginViewController.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthLoginViewController.h; sourceTree = "<group>"; };
+		B87D389617C6A7EEAC8C5ED91C49A93F /* Pods-PackageTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PackageTest.release.xcconfig"; sourceTree = "<group>"; };
+		B8A53268DF79B104604F8AB470209E8C /* Pods-PackageTest-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PackageTest-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		B8D1BB889DEA022F4F77F03CE723E458 /* SSOKeyChainWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSOKeyChainWrapper.m; path = native/SSO_Library/IAM_SSO/SSOKeyChainWrapper.m; sourceTree = "<group>"; };
+		BFF04E7AD5A6B84E04A1C6F8C451D035 /* ZMacAuthKeychainUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZMacAuthKeychainUtil.m; path = native/IAM_ZMacAuth/IAM_ZMacAuth/Utils/ZMacAuthKeychainUtil.m; sourceTree = "<group>"; };
+		C1575167FBA11B46BD189BD17A5FF53D /* ZMacAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZMacAuth.release.xcconfig; sourceTree = "<group>"; };
+		C26E2CB9B9DDD0EA1442941EF7306419 /* ZMacAuthProfileData+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ZMacAuthProfileData+Internal.h"; path = "native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthProfileData+Internal.h"; sourceTree = "<group>"; };
+		C2B170D95BC91CE152C9B01EC7DE7154 /* SSOTokenFetch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSOTokenFetch.m; path = native/SSO_Library/IAM_SSO/SSOTokenFetch.m; sourceTree = "<group>"; };
+		C346791C6786F0A7B45A04ED79589C42 /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "pt-BR.lproj"; path = "native/SSO_Library/IAM_SSO/Resources/pt-BR.lproj"; sourceTree = "<group>"; };
+		C462DFCDC66388998019ECF455F08D90 /* ZIAMUtilConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZIAMUtilConstants.h; path = native/SSO_Library/IAM_SSO/ZIAMUtilConstants.h; sourceTree = "<group>"; };
+		C79EFBEB06701BBB03CC54DF99A0BB4D /* Pods-PackageTest-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PackageTest-iOS-dummy.m"; sourceTree = "<group>"; };
+		C982AF3F7EA4DE6B5A1A1E6A31F6DF79 /* SSOKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSOKit.debug.xcconfig; sourceTree = "<group>"; };
+		CA0ADCE421587A1811E528F026CDC18D /* ZMacAuth-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZMacAuth-Info.plist"; sourceTree = "<group>"; };
+		CA36A7B87CCACC8F8A901D16EC2A9939 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = native/SSO_Library/IAM_SSO/Resources/de.lproj; sourceTree = "<group>"; };
+		CE9549A2323CDDA0B3FFED8BAD991538 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CFA8DCB3D8083046F22D941E1E616B48 /* Pods-PackageTest-iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PackageTest-iOS"; path = Pods_PackageTest_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B8E69CAD673F6EAA3FC7565C907E3D /* Pods-PackageTest-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PackageTest-iOS-frameworks.sh"; sourceTree = "<group>"; };
+		D1C306FE06AB211ACB0118880E32B97F /* ZMacAuthNetworkManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZMacAuthNetworkManager.m; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthNetworkManager.m; sourceTree = "<group>"; };
+		D2EBA25244D6F767ECDD1BFB79A5DBE2 /* SSOSFSafariViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSOSFSafariViewController.h; path = native/SSO_Library/IAM_SSO/SSOSFSafariViewController.h; sourceTree = "<group>"; };
+		D32F53EB9A006AA3302A303FD95B82C3 /* UIView+ZIAMView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ZIAMView.m"; path = "native/SSO_Library/IAM_SSO/UIView+ZIAMView.m"; sourceTree = "<group>"; };
+		D60F2D4A903B515DCFE80F598B14674D /* Pods-PackageTest-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PackageTest-iOS.modulemap"; sourceTree = "<group>"; };
+		D766C25FABD2711D13B5817879B538AA /* hi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = hi.lproj; path = native/SSO_Library/IAM_SSO/Resources/hi.lproj; sourceTree = "<group>"; };
+		D771CB9A6D73F4E5D711815B7D7D1C39 /* ZMacAuthKeyChainWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZMacAuthKeyChainWrapper.m; path = native/IAM_ZMacAuth/IAM_ZMacAuth/Utils/ZMacAuthKeyChainWrapper.m; sourceTree = "<group>"; };
+		DAB0C2D9C22B1602C4B992015A534907 /* ZIAMToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZIAMToken.m; path = native/SSO_Library/IAM_SSO/ZIAMToken.m; sourceTree = "<group>"; };
+		DBA6DF0327EBEB8F3EB4F186CA2E0EFB /* SSORequestBlocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSORequestBlocks.h; path = native/SSO_Library/IAM_SSO/SSORequestBlocks.h; sourceTree = "<group>"; };
+		DC1B84B08A7A5DE23EC47F8E595FA50D /* SSOKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSOKit-prefix.pch"; sourceTree = "<group>"; };
+		DC90F9B62A1F3E318A22C0993DE90142 /* ZMacAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZMacAuth-dummy.m"; sourceTree = "<group>"; };
+		DCA00CC955115E5FD761551F9A486711 /* ZSSOProfileData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZSSOProfileData.h; path = native/SSO_Library/IAM_SSO/ZSSOProfileData.h; sourceTree = "<group>"; };
+		DEA92DA83AAC7E3D399F729D1D89B531 /* Pods-PackageTest-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PackageTest-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		DFFB3E24680DF159D66C596805104AF8 /* SSOKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SSOKit-Info.plist"; sourceTree = "<group>"; };
+		E08A2479C53DFE4ADE022A4BA968C674 /* SSO_NSData+AES.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SSO_NSData+AES.m"; path = "native/SSO_Library/IAM_SSO/SSO_NSData+AES.m"; sourceTree = "<group>"; };
+		E352B131E626CC1D95B1EAE48F6A44C2 /* ZSSOKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZSSOKit.h; path = native/SSO_Library/IAM_SSO/ZSSOKit.h; sourceTree = "<group>"; };
+		E3F92C3F22CE0324A2732FAD246A4222 /* ZMacAuthKeychainUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthKeychainUtil.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/Utils/ZMacAuthKeychainUtil.h; sourceTree = "<group>"; };
+		E52E17E92BF18422E522C7868E20A1A7 /* ZSSOKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZSSOKit.m; path = native/SSO_Library/IAM_SSO/ZSSOKit.m; sourceTree = "<group>"; };
+		E57AD53FB5F5F63E2CC2D95700C5AD5D /* SSOConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSOConstants.h; path = native/SSO_Library/IAM_SSO/SSOConstants.h; sourceTree = "<group>"; };
+		E7E50B16B1285DF3F94F3F609ECC71D2 /* ZIAMErrorHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZIAMErrorHandler.m; path = native/SSO_Library/IAM_SSO/ZIAMErrorHandler.m; sourceTree = "<group>"; };
+		E7F90E82D07D44BF1FBF09B9C5FAE53A /* NSData+Base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "native/SSO_Library/IAM_SSO/NSData+Base64.h"; sourceTree = "<group>"; };
+		E8B2205C9AE90B2E2913602C0F2A02EE /* ZMacAuthLoginViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZMacAuthLoginViewController.m; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthLoginViewController.m; sourceTree = "<group>"; };
+		EC5CAA8FA8BFD6B06D1BFA6BEE069D44 /* ZMacAuthUser+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ZMacAuthUser+Internal.h"; path = "native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthUser+Internal.h"; sourceTree = "<group>"; };
+		EDB6764DE8A2541689ED5502D8C76856 /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = id.lproj; path = native/SSO_Library/IAM_SSO/Resources/id.lproj; sourceTree = "<group>"; };
+		EE1584E1C035E32FA7914431853BD3D9 /* SSOSFSafariViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSOSFSafariViewController.m; path = native/SSO_Library/IAM_SSO/SSOSFSafariViewController.m; sourceTree = "<group>"; };
+		F1BFEB373B473A42C021CF7607AC0267 /* WeChatUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WeChatUtil.h; path = native/SSO_Library/IAM_SSO/WeChatUtil.h; sourceTree = "<group>"; };
+		F1CD0F959604E395A96951C99DF56602 /* ZMacAuthKeyPairUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMacAuthKeyPairUtil.h; path = native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthKeyPairUtil.h; sourceTree = "<group>"; };
+		F2813D7CB8A281CE7F92CB330073C996 /* ZMacAuthRequestBlocks+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ZMacAuthRequestBlocks+Internal.h"; path = "native/IAM_ZMacAuth/IAM_ZMacAuth/ZMacAuthRequestBlocks+Internal.h"; sourceTree = "<group>"; };
+		F4D524D9DDF088FF9A1489D1C6280618 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fr.lproj; path = native/SSO_Library/IAM_SSO/Resources/fr.lproj; sourceTree = "<group>"; };
+		F5166754E74FAAE2740CB4164D50C0A1 /* UIView+ZIAMView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ZIAMView.h"; path = "native/SSO_Library/IAM_SSO/UIView+ZIAMView.h"; sourceTree = "<group>"; };
+		F8543AEE6CA4DFF2C8A1933CF5CA041C /* SSOUserAccountsTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSOUserAccountsTableViewController.m; path = native/SSO_Library/IAM_SSO/SSOUserAccountsTableViewController.m; sourceTree = "<group>"; };
+		FD70113F0FED7DE07FB14AE19F2F4875 /* SSOTokenFetch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSOTokenFetch.h; path = native/SSO_Library/IAM_SSO/SSOTokenFetch.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		010E6B1334B545E8482941A4F727B51F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA1419CECF923FEBC4320DE22C6E457 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3189423A4108651884F20D893A84101A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C23D976EB2ACC05716034E11E30A1DC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE9D4731FDAFB76A7EDF37AAE5BEF062 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0FBC1364AC8F02B9A10247B810EDDF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19246EEB4F2E70A9EF9DCBB8B960F9EA /* Cocoa.framework in Frameworks */,
+				0347E8057BD3DD67B8C613B1487642D4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E392BAEF45DE40B787B0E8A95920FE87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67A28EED5CAF47387852B9FA7532F121 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11DE6193594AF41D0DCD2AA74B941D92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				225E8E83A57B886AB44C378D2FD18817 /* ar.lproj */,
+				915DA43DBC99AA53C43BCD8495A118C1 /* bg.lproj */,
+				076F3D3F68F3C23ECD1824058D40214C /* cs.lproj */,
+				3EC2F90E489EA1EB5F64BEF40447AE87 /* da.lproj */,
+				CA36A7B87CCACC8F8A901D16EC2A9939 /* de.lproj */,
+				1FB94408CC7C7AC1ED2CD32533BA8F5B /* en.lproj */,
+				78F942F3CE6EAE03A7447A38F8442269 /* en-GB.lproj */,
+				3CCC586F6AEEA9DBF6B378FE7FADDF69 /* es.lproj */,
+				F4D524D9DDF088FF9A1489D1C6280618 /* fr.lproj */,
+				1FED16BB026A620F4CB5AC83AB22FF7C /* he.lproj */,
+				D766C25FABD2711D13B5817879B538AA /* hi.lproj */,
+				AA205DEFA49CC2141A650D1EAE38AC96 /* hu.lproj */,
+				EDB6764DE8A2541689ED5502D8C76856 /* id.lproj */,
+				0A2FC760098B6C96367D225386119330 /* it.lproj */,
+				69CCF054F457966060C1389A585F032B /* ja.lproj */,
+				2AE81384053A8CE45A09EA75C0206DC8 /* ko.lproj */,
+				7D2ECC44CCC00D9F17A1561FCD3DD4A6 /* nl.lproj */,
+				4CBF91F3C55C6663620E772FF3BD80AD /* pl.lproj */,
+				C346791C6786F0A7B45A04ED79589C42 /* pt-BR.lproj */,
+				AA6DEC41A8A59710AD68D8EBE6B5D04A /* pt-PT.lproj */,
+				021E71D8BCAF6CBFEA756F74F7672CB7 /* ru.lproj */,
+				8197F07D4835E1AD874B8388AA5E15FC /* SSOKit_Assets.xcassets */,
+				81F5DBEB16544541C69D078701B05C49 /* SSOStoryboard.storyboard */,
+				A78D3541901CA2CC58902C4194DBC35C /* sv.lproj */,
+				6886DFF05FFC9757600475098ED474C8 /* th.lproj */,
+				2E9958443794F2FC71711B9803837CFE /* tr.lproj */,
+				4ABC4F5DC5559771CE521C6D9E06BEB7 /* vi.lproj */,
+				36AAB72C0B77F452EEABB7BDF1A49DAB /* zh-Hans.lproj */,
+				7A596B31690E6CE97FB637B3A8DE9016 /* zh-Hant.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		164150875368D20B41DEB1A7F5AF6F0E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				63C4E697FA7C1E09DA8958E01BB3E717 /* ZMacAuth.modulemap */,
+				DC90F9B62A1F3E318A22C0993DE90142 /* ZMacAuth-dummy.m */,
+				CA0ADCE421587A1811E528F026CDC18D /* ZMacAuth-Info.plist */,
+				8AB958E2CFBBB2B398EDF6B57BCDA8FD /* ZMacAuth-prefix.pch */,
+				0C5C7C907DFE2044EB226BA2D17E851E /* ZMacAuth-umbrella.h */,
+				69D84BCF5C22BFFA5497BAAE27D5F993 /* ZMacAuth.debug.xcconfig */,
+				C1575167FBA11B46BD189BD17A5FF53D /* ZMacAuth.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ZMacAuth";
+			sourceTree = "<group>";
+		};
+		16F958D82E39BE1509A6B122698E312F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0953CFD3FA1A7876229BA05D9867000 /* Pods-PackageTest */,
+				CFA8DCB3D8083046F22D941E1E616B48 /* Pods-PackageTest-iOS */,
+				0F98CB0385E22E61FA5CFB9F632AA668 /* SSOKit.framework */,
+				2D8A885470B1BD0038BB12914A884752 /* SSOKit-SSOKitBundle */,
+				8C5B8854DE9C2C1F0566A18DCCA67D46 /* ZMacAuth */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DBF5628F5B73E42A7EC9DF30BAC5C7C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BB20F3135A1188AAF9651F2B4173673 /* ResourceBundle-SSOKitBundle-SSOKit-Info.plist */,
+				53EB0C2CEEF01EAC79DC54650E017287 /* SSOKit.modulemap */,
+				3EB0B79DF174AA2FF18A9B0B94D94E88 /* SSOKit-dummy.m */,
+				DFFB3E24680DF159D66C596805104AF8 /* SSOKit-Info.plist */,
+				DC1B84B08A7A5DE23EC47F8E595FA50D /* SSOKit-prefix.pch */,
+				5C6EC0D23FF7A87539E670D787B8872E /* SSOKit-umbrella.h */,
+				C982AF3F7EA4DE6B5A1A1E6A31F6DF79 /* SSOKit.debug.xcconfig */,
+				66D7B99C99E07D8FAE789B7C34AE95D2 /* SSOKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SSOKit";
+			sourceTree = "<group>";
+		};
+		3C2DC57AC67A6D56795220FDF90AC1B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA791F90E6F98DF1EC03A9E752501F01 /* SSOKit */,
+				C0092CC381A0334B4743CE7DD9A2FAFB /* ZMacAuth */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		593D7DAC07FA8FD14F5AB883876DF3AF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CE9549A2323CDDA0B3FFED8BAD991538 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		929BA100236B0E1B9CF60C8F58A6B301 /* Pods-PackageTest */ = {
+			isa = PBXGroup;
+			children = (
+				806E80AF4CC6B350EEA3A8D4DA0C8462 /* Pods-PackageTest.modulemap */,
+				11615B5EC04170657C7EC75C3EEE8861 /* Pods-PackageTest-acknowledgements.markdown */,
+				3A80537F717361CE54EAC20AC7819AF6 /* Pods-PackageTest-acknowledgements.plist */,
+				391BDD5443FAB6FB5BF77218D650CFAE /* Pods-PackageTest-dummy.m */,
+				B10CAE92DD6D37B034F7B7590C5C98E6 /* Pods-PackageTest-frameworks.sh */,
+				156C4BC3F00B42A1BC1E6752CBF09194 /* Pods-PackageTest-Info.plist */,
+				6941C688C64B0E1AAE5B0021E8DEA6DA /* Pods-PackageTest-umbrella.h */,
+				9A408FC35AC8280AC555C16AF86AC965 /* Pods-PackageTest.debug.xcconfig */,
+				B87D389617C6A7EEAC8C5ED91C49A93F /* Pods-PackageTest.release.xcconfig */,
+			);
+			name = "Pods-PackageTest";
+			path = "Target Support Files/Pods-PackageTest";
+			sourceTree = "<group>";
+		};
+		A1C8220B97BB77E1BF099DB1580DC027 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				485C42A6CF2B63AD72435F963BB36B91 /* Cocoa.framework */,
+				8A00DE3FFDA2326F732F9B19D2EA4421 /* Foundation.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		A8CA5B9EB594F5F45E9CDB5DF0B2EBBD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				929BA100236B0E1B9CF60C8F58A6B301 /* Pods-PackageTest */,
+				C4EF4BD7E154974D3B409BFF10B10E3C /* Pods-PackageTest-iOS */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BEAF173CF7BAF5537488976CEC756DA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				593D7DAC07FA8FD14F5AB883876DF3AF /* iOS */,
+				A1C8220B97BB77E1BF099DB1580DC027 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0092CC381A0334B4743CE7DD9A2FAFB /* ZMacAuth */ = {
+			isa = PBXGroup;
+			children = (
+				4DCCFD29819703718C74654B573AE16C /* ZMacAuth.h */,
+				77ADB6B2FB1771C69C939D6F5427FC9D /* ZMacAuth.m */,
+				6D893E0EF9C80081303B61D541EB2689 /* ZMacAuth_NSData+AES.h */,
+				20CDEEDA1DB80AD41220976F5B4C354B /* ZMacAuth_NSData+AES.m */,
+				26C6456458896C1E1343FF1604B9771C /* ZMacAuthConstants.h */,
+				31E7D92ECC557998F19F387A7B660E4E /* ZMacAuthEnums.h */,
+				A49B835CD45BFBC60F6F0F68715D5843 /* ZMacAuthErrorHandler.h */,
+				608531DEA97A40691BF8A785B9850C8E /* ZMacAuthErrorHandler.m */,
+				6546FF2D6D374993C49A3CDE5FA37F3E /* ZMacAuthHelpers.h */,
+				0D5D9DF75D029FFE626AFD2408F35E66 /* ZMacAuthHelpers.m */,
+				E3F92C3F22CE0324A2732FAD246A4222 /* ZMacAuthKeychainUtil.h */,
+				BFF04E7AD5A6B84E04A1C6F8C451D035 /* ZMacAuthKeychainUtil.m */,
+				189B492F4C31FE50B8A49660F966C468 /* ZMacAuthKeyChainWrapper.h */,
+				D771CB9A6D73F4E5D711815B7D7D1C39 /* ZMacAuthKeyChainWrapper.m */,
+				F1CD0F959604E395A96951C99DF56602 /* ZMacAuthKeyPairUtil.h */,
+				833F6B8299024E4D1D0FBF8BECEE820C /* ZMacAuthKeyPairUtil.m */,
+				B35B780CF315BEC0B00BA3D71A703544 /* ZMacAuthLoginViewController.h */,
+				E8B2205C9AE90B2E2913602C0F2A02EE /* ZMacAuthLoginViewController.m */,
+				4253527D9C7E6B835BBA2DA748A3E8E4 /* ZMacAuthNetworkManager.h */,
+				D1C306FE06AB211ACB0118880E32B97F /* ZMacAuthNetworkManager.m */,
+				57F5F2F2AEEE095B4F60768C565F9DE8 /* ZMacAuthNSData+Base64.h */,
+				B0433097605097729DC9291A68F01201 /* ZMacAuthNSData+Base64.m */,
+				83C03CCEA60132368BCE52F81C405EF9 /* ZMacAuthProfileData.h */,
+				A2CEE5B23DCA8E5B13374679E924BE01 /* ZMacAuthProfileData.m */,
+				C26E2CB9B9DDD0EA1442941EF7306419 /* ZMacAuthProfileData+Internal.h */,
+				156835540BF53BDD9700BE3CEC13B4E1 /* ZMacAuthRequestBlocks.h */,
+				F2813D7CB8A281CE7F92CB330073C996 /* ZMacAuthRequestBlocks+Internal.h */,
+				178C03B4160264749AFD1360A7A34C47 /* ZMacAuthTokenFetch.h */,
+				0307DCD51133BFC9F64F9E5C3C2B85AB /* ZMacAuthTokenFetch.m */,
+				9DD219E6CCB2E8413E2C20D33DACA970 /* ZMacAuthUser.h */,
+				16E74F11D0C5F17694F514B8E1B8EE5B /* ZMacAuthUser.m */,
+				EC5CAA8FA8BFD6B06D1BFA6BEE069D44 /* ZMacAuthUser+Internal.h */,
+				9327AF3BBA3081631F4C5FBAA034A156 /* ZMacAuthUtilConstants.h */,
+				108B4A09904BFC26805EBEB9C7ECE8F3 /* ZMacAuthZIAMUtil.h */,
+				68062C1353695FB223BDD4C6B3B5CB68 /* ZMacAuthZIAMUtil.m */,
+				164150875368D20B41DEB1A7F5AF6F0E /* Support Files */,
+			);
+			path = ZMacAuth;
+			sourceTree = "<group>";
+		};
+		C4EF4BD7E154974D3B409BFF10B10E3C /* Pods-PackageTest-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D60F2D4A903B515DCFE80F598B14674D /* Pods-PackageTest-iOS.modulemap */,
+				634B5975E01C15196E646E60CA3BD106 /* Pods-PackageTest-iOS-acknowledgements.markdown */,
+				DEA92DA83AAC7E3D399F729D1D89B531 /* Pods-PackageTest-iOS-acknowledgements.plist */,
+				C79EFBEB06701BBB03CC54DF99A0BB4D /* Pods-PackageTest-iOS-dummy.m */,
+				D1B8E69CAD673F6EAA3FC7565C907E3D /* Pods-PackageTest-iOS-frameworks.sh */,
+				929FFB636AD3C1191FDA44E6B9C17F3F /* Pods-PackageTest-iOS-Info.plist */,
+				7206F21BEE3EA62243B6CF973BA09867 /* Pods-PackageTest-iOS-umbrella.h */,
+				8DB780AB07C82C692367D756AD86CFED /* Pods-PackageTest-iOS.debug.xcconfig */,
+				B8A53268DF79B104604F8AB470209E8C /* Pods-PackageTest-iOS.release.xcconfig */,
+			);
+			name = "Pods-PackageTest-iOS";
+			path = "Target Support Files/Pods-PackageTest-iOS";
+			sourceTree = "<group>";
+		};
+		CA791F90E6F98DF1EC03A9E752501F01 /* SSOKit */ = {
+			isa = PBXGroup;
+			children = (
+				E7F90E82D07D44BF1FBF09B9C5FAE53A /* NSData+Base64.h */,
+				742319FF68C53D3C86A611D6FBEB252C /* NSData+Base64.m */,
+				7B8686C1BAA309CD3CEB900B132FB3EE /* SSO_NSData+AES.h */,
+				E08A2479C53DFE4ADE022A4BA968C674 /* SSO_NSData+AES.m */,
+				E57AD53FB5F5F63E2CC2D95700C5AD5D /* SSOConstants.h */,
+				93BB42991527A5C4E7E2F55E7CC9C5AD /* SSOEnums.h */,
+				281EA059DFA7BA11FFC9B3F00403A2BE /* SSOKeyChainWrapper.h */,
+				B8D1BB889DEA022F4F77F03CE723E458 /* SSOKeyChainWrapper.m */,
+				8B40D26EC6DE92E3B03ED590F8CB1C96 /* SSOKeyPairUtil.h */,
+				5DD82B6258CEFFBCAFBCBEBA935AB902 /* SSOKeyPairUtil.m */,
+				93D94D75919ED2A2C81049A9B4E5CA1C /* SSOLogger.h */,
+				37970108D73449A735F0B90C7582709E /* SSOLogger.m */,
+				21014FC9C9029479BB3E37F7535C06E7 /* SSONetworkManager.h */,
+				8F324A5075EC3FAB93F47B225208EBE1 /* SSONetworkManager.m */,
+				DBA6DF0327EBEB8F3EB4F186CA2E0EFB /* SSORequestBlocks.h */,
+				9C15B872E5651AD486473266B7945E9D /* SSORequestBlocks+Internal.h */,
+				D2EBA25244D6F767ECDD1BFB79A5DBE2 /* SSOSFSafariViewController.h */,
+				EE1584E1C035E32FA7914431853BD3D9 /* SSOSFSafariViewController.m */,
+				FD70113F0FED7DE07FB14AE19F2F4875 /* SSOTokenFetch.h */,
+				C2B170D95BC91CE152C9B01EC7DE7154 /* SSOTokenFetch.m */,
+				3B439E927D2D0E470539F1C20689A128 /* SSOUserAccountsTableViewController.h */,
+				F8543AEE6CA4DFF2C8A1933CF5CA041C /* SSOUserAccountsTableViewController.m */,
+				F5166754E74FAAE2740CB4164D50C0A1 /* UIView+ZIAMView.h */,
+				D32F53EB9A006AA3302A303FD95B82C3 /* UIView+ZIAMView.m */,
+				F1BFEB373B473A42C021CF7607AC0267 /* WeChatUtil.h */,
+				3E96C285B51F0350C45B043EE88927D4 /* WeChatUtil.m */,
+				19F054168D584CFFB500FE17ECE37DD9 /* ZIAMErrorHandler.h */,
+				E7E50B16B1285DF3F94F3F609ECC71D2 /* ZIAMErrorHandler.m */,
+				454B6A3F96BF4F65E69126C7FE6428E9 /* ZIAMHelpers.h */,
+				B2E1683BD3D9574F2ABFA1C622A236E4 /* ZIAMHelpers.m */,
+				2A615F61094FA0A7FF43185D287C31DC /* ZIAMKeyChainUtil.h */,
+				8B937A4AA4EF8F418F6F9FF6CF16C153 /* ZIAMKeyChainUtil.m */,
+				1C39AC9730C38F58A25871E53D611BF3 /* ZIAMToken.h */,
+				DAB0C2D9C22B1602C4B992015A534907 /* ZIAMToken.m */,
+				64C8B717CB5AAA557B440CFD091A0CDE /* ZIAMToken+Internal.h */,
+				5296ECB5F8F4CD597E6DA12FFDA6158D /* ZIAMUtil.h */,
+				5B0E5DF1D7C05BB676E5F56DA595BB5E /* ZIAMUtil.m */,
+				C462DFCDC66388998019ECF455F08D90 /* ZIAMUtilConstants.h */,
+				308C5F232CF18382638A010B8C0BAB58 /* ZSSODCLUtil.h */,
+				34E19E83982C57FEB17A94E83CCA9D46 /* ZSSODCLUtil.m */,
+				E352B131E626CC1D95B1EAE48F6A44C2 /* ZSSOKit.h */,
+				E52E17E92BF18422E522C7868E20A1A7 /* ZSSOKit.m */,
+				DCA00CC955115E5FD761551F9A486711 /* ZSSOProfileData.h */,
+				B14080390100DCF2B0A656682F141597 /* ZSSOProfileData.m */,
+				2F712BDB24DD354EAF4D6C8A9B7B62EA /* ZSSOProfileData+Internal.h */,
+				719798F941685EE1685B7F4E953148A7 /* ZSSOProtocols.h */,
+				3750A04D6724B74F0C4BE4E9BB0ED2C4 /* ZSSOUser.h */,
+				100FF67636337AB94C936007FAD7813E /* ZSSOUser.m */,
+				A38D0BDC3268E4AC3CB0397FE103B6A1 /* ZSSOUser+Internal.h */,
+				11DE6193594AF41D0DCD2AA74B941D92 /* Resources */,
+				1DBF5628F5B73E42A7EC9DF30BAC5C7C /* Support Files */,
+			);
+			path = SSOKit;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				BEAF173CF7BAF5537488976CEC756DA3 /* Frameworks */,
+				3C2DC57AC67A6D56795220FDF90AC1B8 /* Pods */,
+				16F958D82E39BE1509A6B122698E312F /* Products */,
+				A8CA5B9EB594F5F45E9CDB5DF0B2EBBD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1CE72BCEC960EB2C0E32620FB591D1CB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E95C454475B450E8AF21F095E6E2E92 /* Pods-PackageTest-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308F3F1CE2FE36C903A788E374D48620 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC6FDA995C0CB5E7571479E3CDDAAB60 /* NSData+Base64.h in Headers */,
+				3A736146D2C111875FCA3A3DA58C7BAF /* SSO_NSData+AES.h in Headers */,
+				B21881EEF4F00C3148E2CB11F88EF73B /* SSOConstants.h in Headers */,
+				452F8DF044C1765D7995E402425A16E2 /* SSOEnums.h in Headers */,
+				81120D26A820221AF0564B1C92699941 /* SSOKeyChainWrapper.h in Headers */,
+				E72EADB23E42BDE3A34E049E0CC0BC4F /* SSOKeyPairUtil.h in Headers */,
+				07775F4F2560A60F4607017BAB6A327E /* SSOKit-umbrella.h in Headers */,
+				0C1396C1E5334822F8757AB762AB5A79 /* SSOLogger.h in Headers */,
+				598CBC44F8BA432229F720ACBDF92C66 /* SSONetworkManager.h in Headers */,
+				04DB2FDF62900C14BE97E8CF9F5D7C6D /* SSORequestBlocks.h in Headers */,
+				E5E8C55FD24697638955DA55464CEE3F /* SSORequestBlocks+Internal.h in Headers */,
+				5195EB9E03C797621DE63C318FA05E32 /* SSOSFSafariViewController.h in Headers */,
+				6A45146D69B8C651E2EDE781217486DA /* SSOTokenFetch.h in Headers */,
+				185BC285EC9BF99D7457C973BF8F4D6D /* SSOUserAccountsTableViewController.h in Headers */,
+				3FE171C2014162E2DBA4606FF5F35FFA /* UIView+ZIAMView.h in Headers */,
+				BDD3D1B907D1EF24AC8B6706E23B1B20 /* WeChatUtil.h in Headers */,
+				88889A118859D0A9F49F83AE3937F78B /* ZIAMErrorHandler.h in Headers */,
+				2A79F21EFE5AF8718D07FFA04712EB91 /* ZIAMHelpers.h in Headers */,
+				EC95AE32FE9CC3198016C94563446988 /* ZIAMKeyChainUtil.h in Headers */,
+				C1A1EE68708FF1D74A12A43C0192E3EB /* ZIAMToken.h in Headers */,
+				ECA4F5C9710725A56CA8CDB195AA9944 /* ZIAMToken+Internal.h in Headers */,
+				714D1FCE210C27F37919E31498F1AD2F /* ZIAMUtil.h in Headers */,
+				291096C22AA4863E072CCB0E83F87F28 /* ZIAMUtilConstants.h in Headers */,
+				BC83655E3E69E7D1A5CFCCC3D709A82C /* ZSSODCLUtil.h in Headers */,
+				81DCE0E80C06A80818DE2034BFD0CFCB /* ZSSOKit.h in Headers */,
+				39919B4957011F6AC1508D97F7262A8D /* ZSSOProfileData.h in Headers */,
+				CE59714B94A511022F63C1D7A10DE933 /* ZSSOProfileData+Internal.h in Headers */,
+				3A098D80C0CE565A2E4542BD1EC38DC9 /* ZSSOProtocols.h in Headers */,
+				519E4F8F27EC1A177BCBC3647E87AF10 /* ZSSOUser.h in Headers */,
+				658D0D10EB0B09684DC6C5555A1DE68F /* ZSSOUser+Internal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77C9571C0DB1DC33751CACBA4BF234AD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9AC5FA85D62A474E18F482F69F68A96 /* ZMacAuth.h in Headers */,
+				A8C812A7CB696093F332E9CBACA40241 /* ZMacAuth-umbrella.h in Headers */,
+				102F9739A959092B2D18EADAEC185D86 /* ZMacAuth_NSData+AES.h in Headers */,
+				58E9538F45BF95A91B622224EFFF645A /* ZMacAuthConstants.h in Headers */,
+				E1C730CE4B066BE8F11D85DD4B871B03 /* ZMacAuthEnums.h in Headers */,
+				237419C2E86FA18278004EB6990DDDF4 /* ZMacAuthErrorHandler.h in Headers */,
+				589BDE0DDA30BB7389D4FB6612104648 /* ZMacAuthHelpers.h in Headers */,
+				0A7306230123AE5AC7B00921270E6BC0 /* ZMacAuthKeychainUtil.h in Headers */,
+				185E4269506F248F3E7A19872490E7E8 /* ZMacAuthKeyChainWrapper.h in Headers */,
+				75526F4F3D2502DCE6CA0A319FAC6E2A /* ZMacAuthKeyPairUtil.h in Headers */,
+				4C74E95B77BABCF0B45A7A1043B2806A /* ZMacAuthLoginViewController.h in Headers */,
+				18A97223D74FD327B5ED425C36771675 /* ZMacAuthNetworkManager.h in Headers */,
+				2F57907645A51182D5E9B1FB7FC73C84 /* ZMacAuthNSData+Base64.h in Headers */,
+				74A4685D0EF7212C72016EDF8A8FA222 /* ZMacAuthProfileData.h in Headers */,
+				B646475DB12EAD7794ED38579D6CA740 /* ZMacAuthProfileData+Internal.h in Headers */,
+				FFDCA678079220CE6593FE7A865118E2 /* ZMacAuthRequestBlocks.h in Headers */,
+				B70629B77025A9A03C7FA03D5DED7DD8 /* ZMacAuthRequestBlocks+Internal.h in Headers */,
+				A58E7FEB4068A4053E20E1CC65B71944 /* ZMacAuthTokenFetch.h in Headers */,
+				DA426854616117E37EE06D91F77E18EC /* ZMacAuthUser.h in Headers */,
+				9514F794F2B36D5F703D6D6E88CDB115 /* ZMacAuthUser+Internal.h in Headers */,
+				D8B43BB7D7117765473362278BD22F3F /* ZMacAuthUtilConstants.h in Headers */,
+				8799BF39096EB4CEC8DAFCD29F10170F /* ZMacAuthZIAMUtil.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADF643268585D740D2BE1AC88A884BD9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB8CA506FE17289BB09EFDA251B573E0 /* Pods-PackageTest-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		33E3D0EDA767ECBE0776418B828CEE71 /* ZMacAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4ED4371CCC81EF8C035B2A31C753254 /* Build configuration list for PBXNativeTarget "ZMacAuth" */;
+			buildPhases = (
+				77C9571C0DB1DC33751CACBA4BF234AD /* Headers */,
+				525104F90B1713E212514696EFB52AC5 /* Sources */,
+				D0FBC1364AC8F02B9A10247B810EDDF4 /* Frameworks */,
+				A7EB070EEBE8B12888F0CDED8655E133 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZMacAuth;
+			productName = ZMacAuth;
+			productReference = 8C5B8854DE9C2C1F0566A18DCCA67D46 /* ZMacAuth */;
+			productType = "com.apple.product-type.framework";
+		};
+		39E251B4947C730CA41733BFAAEC8E1D /* Pods-PackageTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36A38585F979451E02724E6D6D786DD4 /* Build configuration list for PBXNativeTarget "Pods-PackageTest" */;
+			buildPhases = (
+				1CE72BCEC960EB2C0E32620FB591D1CB /* Headers */,
+				D23251518F7A090A938F8539E2A05DCC /* Sources */,
+				010E6B1334B545E8482941A4F727B51F /* Frameworks */,
+				95A0CC33E2EC1DB1EA86F0F8DC176690 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A685AA1A794CADDC84C40376EFBD505 /* PBXTargetDependency */,
+			);
+			name = "Pods-PackageTest";
+			productName = Pods_PackageTest;
+			productReference = A0953CFD3FA1A7876229BA05D9867000 /* Pods-PackageTest */;
+			productType = "com.apple.product-type.framework";
+		};
+		B4DBD4666A9A8493D9D8FE65D313D228 /* SSOKit-SSOKitBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAB6DB26E5E3455778D8B37E031D3572 /* Build configuration list for PBXNativeTarget "SSOKit-SSOKitBundle" */;
+			buildPhases = (
+				85D3E583EF4EFD3BC8B551A08F21BA74 /* Sources */,
+				BE9D4731FDAFB76A7EDF37AAE5BEF062 /* Frameworks */,
+				32BC25D90D9840A8D568031FA3DC8959 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SSOKit-SSOKitBundle";
+			productName = SSOKitBundle;
+			productReference = 2D8A885470B1BD0038BB12914A884752 /* SSOKit-SSOKitBundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		C020ABA44473EEA76ED11CFCF1C69810 /* SSOKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA721E0C69E4E259F125F72A8F562CFF /* Build configuration list for PBXNativeTarget "SSOKit" */;
+			buildPhases = (
+				308F3F1CE2FE36C903A788E374D48620 /* Headers */,
+				C25DD93363DE648A666D8DDFF8621373 /* Sources */,
+				3189423A4108651884F20D893A84101A /* Frameworks */,
+				BD67586A7C5789EC4BC987BD7175E143 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CD3873D02438CE974A0CC95F280426F /* PBXTargetDependency */,
+			);
+			name = SSOKit;
+			productName = SSOKit;
+			productReference = 0F98CB0385E22E61FA5CFB9F632AA668 /* SSOKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E20D70A87D85EA076182AF88436D0AAE /* Pods-PackageTest-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E85B6C9B23BD47000BAFB0677E271F0 /* Build configuration list for PBXNativeTarget "Pods-PackageTest-iOS" */;
+			buildPhases = (
+				ADF643268585D740D2BE1AC88A884BD9 /* Headers */,
+				F5A493FFC9C8D89D7AD24F4752F7BF5C /* Sources */,
+				E392BAEF45DE40B787B0E8A95920FE87 /* Frameworks */,
+				D45F11292E9EF9DBB4574F9F90679A27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB8BE49FABE0957B11B954690D20B43A /* PBXTargetDependency */,
+			);
+			name = "Pods-PackageTest-iOS";
+			productName = Pods_PackageTest_iOS;
+			productReference = CFA8DCB3D8083046F22D941E1E616B48 /* Pods-PackageTest-iOS */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				ar,
+				bg,
+				cs,
+				da,
+				de,
+				en,
+				"en-GB",
+				es,
+				fr,
+				he,
+				hi,
+				hu,
+				id,
+				it,
+				ja,
+				ko,
+				nl,
+				pl,
+				"pt-BR",
+				"pt-PT",
+				ru,
+				sv,
+				th,
+				tr,
+				vi,
+				"zh-Hans",
+				"zh-Hant",
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 16F958D82E39BE1509A6B122698E312F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39E251B4947C730CA41733BFAAEC8E1D /* Pods-PackageTest */,
+				E20D70A87D85EA076182AF88436D0AAE /* Pods-PackageTest-iOS */,
+				C020ABA44473EEA76ED11CFCF1C69810 /* SSOKit */,
+				B4DBD4666A9A8493D9D8FE65D313D228 /* SSOKit-SSOKitBundle */,
+				33E3D0EDA767ECBE0776418B828CEE71 /* ZMacAuth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32BC25D90D9840A8D568031FA3DC8959 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B3368FEFE45926BC5AB106285CD4B69 /* SSOKit_Assets.xcassets in Resources */,
+				E915019AA9F6C69B4F4C08B14D4915FE /* SSOStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95A0CC33E2EC1DB1EA86F0F8DC176690 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7EB070EEBE8B12888F0CDED8655E133 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD67586A7C5789EC4BC987BD7175E143 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C18352551CE930E32B39D5DD6C4653B /* ar.lproj in Resources */,
+				B6A5665EDE69008EC6AD60FA721BF57A /* bg.lproj in Resources */,
+				F4ACF27ED59576FDBF6377664E497936 /* cs.lproj in Resources */,
+				459A92E6B6948AD2AFFA70E43AA59F54 /* da.lproj in Resources */,
+				CA8B4FF78B844AFCB02411223A111166 /* de.lproj in Resources */,
+				183DD4055E364BFB960E7EF69B4BBBA3 /* en.lproj in Resources */,
+				7CE287C68F6A9BCBC89851C1BAABEC1A /* en-GB.lproj in Resources */,
+				6508FE2D93A0BB8EC4E22C49BF713343 /* es.lproj in Resources */,
+				94986B70488A7C78EC73E81198096AE4 /* fr.lproj in Resources */,
+				610EBE973BE59AD87AB5EA7D1AFA82F6 /* he.lproj in Resources */,
+				AA22997E942DC85AE5B2DBB8F779C062 /* hi.lproj in Resources */,
+				49E93B972E46E72BB48ABBCB49F3FA66 /* hu.lproj in Resources */,
+				F858B215756B065AA538968B75DAC7C5 /* id.lproj in Resources */,
+				DDA307D6B75F3788F1D5FE72C9A34D59 /* it.lproj in Resources */,
+				4CF6DCD7D798A11419F7FD27878846A1 /* ja.lproj in Resources */,
+				D48515D59EB0D557C3878BDBB549B4BA /* ko.lproj in Resources */,
+				471EBB12E43BCB9EC53A389FBE7A186B /* nl.lproj in Resources */,
+				8E7001B2B2948CC14A4007842A004790 /* pl.lproj in Resources */,
+				328CAA74935C56DB0711766E876AFCB9 /* pt-BR.lproj in Resources */,
+				B8F7C387EFFC3D6AF236E192699672B9 /* pt-PT.lproj in Resources */,
+				B60A430918BBCC95C5FCF1C4A838C80A /* ru.lproj in Resources */,
+				582D2108C8E5A8A21CAD08B713BD979A /* SSOKit-SSOKitBundle in Resources */,
+				CF92A72703D7681F5DDB14CF4799F9FC /* sv.lproj in Resources */,
+				0E31D08B76DEE2DB94717F26B2E83FD6 /* th.lproj in Resources */,
+				73CDBFEC4012033FBC884ABF93611588 /* tr.lproj in Resources */,
+				87C79087912BDEFCDA013F21D348B8AA /* vi.lproj in Resources */,
+				451BCF3CB0F88AF9F7E8CC14BBF4BE05 /* zh-Hans.lproj in Resources */,
+				D90E13C701498447163F9B6D5355C9EE /* zh-Hant.lproj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D45F11292E9EF9DBB4574F9F90679A27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		525104F90B1713E212514696EFB52AC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1C96E98F6B37EA59FD79121CCD3D20 /* ZMacAuth.m in Sources */,
+				E51D5A45ACCD417532965B78EBBB9EDE /* ZMacAuth-dummy.m in Sources */,
+				89FDAA542E9A8CA11FBC1A8CA5B02772 /* ZMacAuth_NSData+AES.m in Sources */,
+				28683BDECE574B4B320B4F938BAA6A91 /* ZMacAuthErrorHandler.m in Sources */,
+				1919F280206DFB37C241E1CC87ED811B /* ZMacAuthHelpers.m in Sources */,
+				E49551FE179FF2829F9AFBD511E29966 /* ZMacAuthKeychainUtil.m in Sources */,
+				F9EFE812E65C406A65B46810204527AB /* ZMacAuthKeyChainWrapper.m in Sources */,
+				EC5DB1ACB4DDBE142800697D3EABC3F2 /* ZMacAuthKeyPairUtil.m in Sources */,
+				512AF60726EFE8CF8D5ABC4B37BE149B /* ZMacAuthLoginViewController.m in Sources */,
+				46BE8196C8ACCBD4EADB8327601503C2 /* ZMacAuthNetworkManager.m in Sources */,
+				3FA15D365B5B23B4CD3F6EEDCAB1665B /* ZMacAuthNSData+Base64.m in Sources */,
+				82EFFC771919FE35A8BC9C0201617D27 /* ZMacAuthProfileData.m in Sources */,
+				917A1E5969461E37DF89A4614DEC2B67 /* ZMacAuthTokenFetch.m in Sources */,
+				4A7B019B544568A2491534F7EECCE3F7 /* ZMacAuthUser.m in Sources */,
+				C9C4385D4722FE9994CD10E42FCA07F8 /* ZMacAuthZIAMUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85D3E583EF4EFD3BC8B551A08F21BA74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25DD93363DE648A666D8DDFF8621373 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1AC71B9E378CF66B0BDA6039F4140BB /* NSData+Base64.m in Sources */,
+				42BC1DE8535EC43EAE8535EA98C48F23 /* SSO_NSData+AES.m in Sources */,
+				118E6E077024947D1752432F0AEF94B7 /* SSOKeyChainWrapper.m in Sources */,
+				D5EB6386DCA48C6B45E7E1044DB7B24B /* SSOKeyPairUtil.m in Sources */,
+				4D9AF4B950B173172FF56E2CE9E548EF /* SSOKit-dummy.m in Sources */,
+				034E670D6D71E946604FD2EE0EF23883 /* SSOLogger.m in Sources */,
+				AAD02C3E85573316423B75024701359F /* SSONetworkManager.m in Sources */,
+				4110507D696F2FC141E0D1295665A45A /* SSOSFSafariViewController.m in Sources */,
+				94B6F9CBC602FEB03970263FDEFEB5DB /* SSOTokenFetch.m in Sources */,
+				690C6F5619A380C95C20D3F29DEA896E /* SSOUserAccountsTableViewController.m in Sources */,
+				4C23E9DE486922291EFF08DE276CAC01 /* UIView+ZIAMView.m in Sources */,
+				99451A42D30F9ABA9E680B62B0A6FFA9 /* WeChatUtil.m in Sources */,
+				EEB61CAFE93078438C02B305A2D8B059 /* ZIAMErrorHandler.m in Sources */,
+				884AC5BE71FA9A0EB0F311B26956A880 /* ZIAMHelpers.m in Sources */,
+				C98F314F540D23F72E3D6DBCE792D008 /* ZIAMKeyChainUtil.m in Sources */,
+				0760C9FFF8F2018BC836FF30A8B229D3 /* ZIAMToken.m in Sources */,
+				06D32FE6F0004A0D86853339076E71B4 /* ZIAMUtil.m in Sources */,
+				6E26AE488DC751626C66B387A7C6C08E /* ZSSODCLUtil.m in Sources */,
+				F8721ED9F18793C09256F4EA7B1BAE44 /* ZSSOKit.m in Sources */,
+				08BC03B1E335603D6E6E85C05A262E5A /* ZSSOProfileData.m in Sources */,
+				1C1C9682F2735E9CFFE5338F87EC3F7B /* ZSSOUser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D23251518F7A090A938F8539E2A05DCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77F1FC732067D0D49B6EF6CD6AD72F7D /* Pods-PackageTest-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A493FFC9C8D89D7AD24F4752F7BF5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B2B2DDCD2577628DDD82F12354567B9 /* Pods-PackageTest-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A685AA1A794CADDC84C40376EFBD505 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZMacAuth;
+			target = 33E3D0EDA767ECBE0776418B828CEE71 /* ZMacAuth */;
+			targetProxy = 988C38273C6B8E67AB8CD50BCFE85B3E /* PBXContainerItemProxy */;
+		};
+		7CD3873D02438CE974A0CC95F280426F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SSOKit-SSOKitBundle";
+			target = B4DBD4666A9A8493D9D8FE65D313D228 /* SSOKit-SSOKitBundle */;
+			targetProxy = EA4DC2BD5E87AB62E9E8C73EC7CD5280 /* PBXContainerItemProxy */;
+		};
+		CB8BE49FABE0957B11B954690D20B43A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSOKit;
+			target = C020ABA44473EEA76ED11CFCF1C69810 /* SSOKit */;
+			targetProxy = 34D72D3E755C3B93AB09986C39AE2926 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		22A0A3CC706F8ABE8638878E1C012D75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1575167FBA11B46BD189BD17A5FF53D /* ZMacAuth.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZMacAuth/ZMacAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZMacAuth/ZMacAuth-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/ZMacAuth/ZMacAuth.modulemap";
+				PRODUCT_MODULE_NAME = ZMacAuth;
+				PRODUCT_NAME = ZMacAuth;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		283C92375B01975C58C25897E844753B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C982AF3F7EA4DE6B5A1A1E6A31F6DF79 /* SSOKit.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SSOKit/SSOKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSOKit/SSOKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SSOKit/SSOKit.modulemap";
+				PRODUCT_MODULE_NAME = SSOKit;
+				PRODUCT_NAME = SSOKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		456FCBCAE24E65302BEF0832A8925D46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B87D389617C6A7EEAC8C5ED91C49A93F /* Pods-PackageTest.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PackageTest/Pods-PackageTest-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MODULEMAP_FILE = "Target Support Files/Pods-PackageTest/Pods-PackageTest.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		53FF3C942C68BCA8AB682569EAD6A6B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69D84BCF5C22BFFA5497BAAE27D5F993 /* ZMacAuth.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZMacAuth/ZMacAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZMacAuth/ZMacAuth-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/ZMacAuth/ZMacAuth.modulemap";
+				PRODUCT_MODULE_NAME = ZMacAuth;
+				PRODUCT_NAME = ZMacAuth;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		791433FB9936ED38D027BE18F3FD032B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66D7B99C99E07D8FAE789B7C34AE95D2 /* SSOKit.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SSOKit/SSOKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSOKit/SSOKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SSOKit/SSOKit.modulemap";
+				PRODUCT_MODULE_NAME = SSOKit;
+				PRODUCT_NAME = SSOKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7BD390D00F4B6FAA43DA1AB7878EAEE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DB780AB07C82C692367D756AD86CFED /* Pods-PackageTest-iOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PackageTest-iOS/Pods-PackageTest-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PackageTest-iOS/Pods-PackageTest-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C696A9E87B4CB6D17FCFE151E94FDA27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8A53268DF79B104604F8AB470209E8C /* Pods-PackageTest-iOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PackageTest-iOS/Pods-PackageTest-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PackageTest-iOS/Pods-PackageTest-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C7DC6AD3E6EADFC2117DC243226C55F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A408FC35AC8280AC555C16AF86AC965 /* Pods-PackageTest.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PackageTest/Pods-PackageTest-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MODULEMAP_FILE = "Target Support Files/Pods-PackageTest/Pods-PackageTest.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DF7A8BBF9065A086A267045CE140BFC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66D7B99C99E07D8FAE789B7C34AE95D2 /* SSOKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SSOKit";
+				IBSC_MODULE = SSOKit;
+				INFOPLIST_FILE = "Target Support Files/SSOKit/ResourceBundle-SSOKitBundle-SSOKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SSOKitBundle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		E8298328D5395B7F9A4E8FAB50908407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		EB8FA89C0FE8BBFEBDAA58E0A77066D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C982AF3F7EA4DE6B5A1A1E6A31F6DF79 /* SSOKit.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SSOKit";
+				IBSC_MODULE = SSOKit;
+				INFOPLIST_FILE = "Target Support Files/SSOKit/ResourceBundle-SSOKitBundle-SSOKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SSOKitBundle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		EE70BECA99B8FB1A60FA0ABA5FE073D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E85B6C9B23BD47000BAFB0677E271F0 /* Build configuration list for PBXNativeTarget "Pods-PackageTest-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD390D00F4B6FAA43DA1AB7878EAEE3 /* Debug */,
+				C696A9E87B4CB6D17FCFE151E94FDA27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36A38585F979451E02724E6D6D786DD4 /* Build configuration list for PBXNativeTarget "Pods-PackageTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7DC6AD3E6EADFC2117DC243226C55F6 /* Debug */,
+				456FCBCAE24E65302BEF0832A8925D46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8298328D5395B7F9A4E8FAB50908407 /* Debug */,
+				EE70BECA99B8FB1A60FA0ABA5FE073D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4ED4371CCC81EF8C035B2A31C753254 /* Build configuration list for PBXNativeTarget "ZMacAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53FF3C942C68BCA8AB682569EAD6A6B8 /* Debug */,
+				22A0A3CC706F8ABE8638878E1C012D75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAB6DB26E5E3455778D8B37E031D3572 /* Build configuration list for PBXNativeTarget "SSOKit-SSOKitBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB8FA89C0FE8BBFEBDAA58E0A77066D0 /* Debug */,
+				DF7A8BBF9065A086A267045CE140BFC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA721E0C69E4E259F125F72A8F562CFF /* Build configuration list for PBXNativeTarget "SSOKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				283C92375B01975C58C25897E844753B /* Debug */,
+				791433FB9936ED38D027BE18F3FD032B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

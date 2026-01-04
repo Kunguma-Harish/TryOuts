@@ -1,0 +1,19 @@
+syntax="proto3";
+package com.zoho.database;
+
+option java_package = "com.zoho.database";
+option java_outer_classname = "DatabaseTableDefinitionProtos";
+
+import "databasetablecolumn.proto";
+
+message DatabaseTableDefinition {
+	
+	optional string id = 1;	//this will be tableId
+
+	optional string name = 2;
+	
+	repeated DatabaseTableColumn columns = 3;
+
+	optional string dbId = 4;
+}
+

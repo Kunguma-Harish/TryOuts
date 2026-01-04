@@ -1,0 +1,34 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "DataLabelsProtos";
+
+import "chartline.proto";
+import "manuallayout.proto";
+import "charttext.proto";
+import "datalabeldetails.proto";
+
+//Label details for a series.
+message DataLabels {
+		
+	optional DataLabelDetails details = 1;
+		
+	repeated DataLabel labels = 2;
+	
+	optional ChartLine leaderLine = 3;
+
+	
+	message DataLabel {
+		
+		optional DataLabelDetails details = 1;
+
+		// Manually modified position.
+		optional ManualLayout layout =2;	
+		
+		optional ChartText tx = 3;	
+	}
+
+}
+

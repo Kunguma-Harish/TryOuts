@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "ಸರಿ";
+"SSKit.common.cancel" = "ರದ್ದುಮಾಡಿ";
+"SSKit.common.continue" = "ಮುಂದುವರಿಸಿ";
+"SSKit.common.untitledDocument" = "ಶೀರ್ಷಿಕೆ ಇಲ್ಲದ ಡಾಕ್ಯುಮೆಂಟ್";
+"SSKit.common.noNetwork" = "ನೆಟ್‌ವರ್ಕ್ ಇಲ್ಲ";
+"SSKit.common.noNetworkMessage" = "ನಿಮ್ಮ ಸಾಧನ ಇಂಟರ್‌ನೆಟ್‌ಗೆ ಸಂಪರ್ಕಗೊಂಡಿದೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.";
+"SSKit.common.openSettings" = "ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ತೆರೆಯಿರಿ";
+"SSKit.common.connected" = "ಸಂಪರ್ಕಪಡಿಸಲಾಗಿದೆ";
+"SSKit.common.connecting" = "ಸಂಪರ್ಕಪಡಿಸಲಾಗುತ್ತಿದೆ";
+"SSKit.common.waiting" = "ಕಾಯಲಾಗುತ್ತಿದೆ";
+"SSKit.common.update" = "ನವೀಕರಿಸಿ";
+"SSKit.common.minimise" = "ಕಿರಿದಾಗಿಸಿ";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "ಪ್ರಾರಂಭಿಸಿ";
+"SSKit.slideshow.end" = "ಕೊನೆ";
+"SSKit.slideshow.currentSlide" = "ಸ್ಲೈಡ್ %i ನ %i";
+"SSKit.slideshow.EndOfSlideshow" = "ಸ್ಲೈಡ್‌ಶೋನ ಅಂತ್ಯ";
+"SSKit.slideshow.blackout" = "ಸ್ಕ್ರೀನ್ ಅನ್ನು ಬ್ಲ್ಯಾಕ್ ಔಟ್ ಮಾಡಲಾಗಿದೆ";
+"SSKit.slideshow.backToLive" = "ಮರಳಿ ಲೈವ್‌ಗೆ";
+"SSKit.slideshow.notes" = "ಟಿಪ್ಪಣಿಗಳು";
+"SSKit.slideshow.clear" = "ತೆರವುಗೊಳಿಸಿ";
+"SSKit.slideshow.emptyNotes" = "ಈ ಸ್ಲೈಡ್‌ಗಾಗಿ ಯಾವುದೇ ಟಿಪ್ಪಣಿಗಳು ಲಭ್ಯವಿಲ್ಲ.";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "ಸೆಷನ್ ಸಮಾಪ್ತಿಗೊಳಿಸಲಾಗಿದೆ";
+"SSKit.shareplay.sessionTerminated.desc" = "ನಿಮ್ಮ Shareplay ಸೆಷನ್ ಸಮಾಪ್ತಿಗೊಳಿಸಲಾಗಿದೆ. ನಿಮ್ಮ ಸೆಷನ್ ಮರುಆರಂಭಿಸಲು ನೀವು ಆಯ್ಕೆಮಾಡಬಹುದು.";
+
+"SSKit.shareplay.syncWithPresenter" = "ಪ್ರಸ್ತುತಿದಾರನೊಂದಿಗೆ ಸಿಂಕ್ ಮಾಡಿ";
+
+"SSKit.shareplay.end.title" = "SharePlay ಕೊನೆಗೊಳಿಸಿ";
+"SSKit.shareplay.end.description" = "ನೀವು Shareplay ಕೊನೆಗೊಳಿಸಲು ಬಯಸುತ್ತೀರಾ? Shareplay ಕೊನೆಗೊಳಿಸುವುದರಿಂದ ಸೆಷನ್ ಸಮಾಪ್ತಿಯಾಗುತ್ತದೆ.";
+"SSKit.shareplay.requestToPresent.description" = "ಪ್ರಸ್ತುತಪಡಿಸಲು ವಿನಂತಿಸುತ್ತಿದ್ದಾರೆ";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "ದೋಷ";
+"SSKit.error.message" = "ಒಂದು ದೋಷ ಸಂಭವಿಸಿದೆ. ನಂತರ ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "ಪ್ಲೇಬ್ಯಾಕ್ ಆಡಿಯೊ";
+"SSKit.audio.resume" = "ಮುಂದುವರಿಸಿ";
+"SSKit.audio.pause" = "ವಿರಾಮಗೊಳಿಸಿ";
+"SSKit.audio.audioTitle" = "ಆಡಿಯೊ";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "ನಿಮ್ಮ Apple ಟಿವಿ ಆಯ್ಕೆ ಮಾಡಿ";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple ಟಿವಿಗಳಿಗಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ";
+"SSKit.mcPeerListing.streamingDescription" = "ನಿಮ್ಮ ಸಾಧನದಿಂದ Apple ಟಿವಿಗೆ ಸ್ಲೈಡ್‌ಗಳನ್ನು ಸ್ಟ್ರೀಮ್ ಮಾಡಲು.";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "ಸ್ಥಳೀಯ ನೆಟ್‌ವರ್ಕ್ ಪ್ರವೇಶ ಸಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ";
+
+"SSKit.mcPeerListing.disconnect.title" = "ಡಿಸ್‌ಕನೆಕ್ಟ್ ಮಾಡಿ";
+"SSKit.mcPeerListing.disconnect.message" = "ನೀವು Apple ಟಿವಿಯಿಂದ ಡಿಸ್‌ಕನೆಕ್ಟ್ ಮಾಡಲು ಬಯಸುವುದನ್ನು ಖಚಿತಪಡಿಸುತ್ತೀರಾ?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@ ಡಿಸ್‌ಕನೆಕ್ಟ್ ಮಾಡಿ";
+"SSKit.mcPeerListing.updateError" = "ಪೀರ್ ಹಳೆಯ ಆವೃತ್ತಿಯಲ್ಲಿ ಚಾಲನೆಯಲ್ಲಿರುವಂತೆ ಕಾಣುತ್ತಿದೆ. ಟಿವಿ ಆ್ಯಪ್ ಅಪ್‌-ಟು-ಡೇಟ್ ಆಗಿದೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ";

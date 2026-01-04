@@ -1,0 +1,66 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "ProjectMappingProtos";
+
+import "relationship.proto";
+import "time.proto";
+
+message ProjectMapping {
+
+	optional string projectId = 1;
+
+	message DocumentMapping {
+
+		optional com.zoho.common.Relationship documentRel = 1;
+
+		repeated com.zoho.common.Relationship screenRels = 2;
+
+		repeated com.zoho.common.Relationship dbRels = 3;
+
+		message DocumentPlaceHolderData {
+			
+			optional com.zoho.common.Relationship placeholderRel = 1;
+
+			enum ContentLanguage {
+				DEF_LANGUAGE = 0;
+				UNSPECIFIED_LANGUAGE = 1;
+				ENGLISH = 2;
+			}
+			optional ContentLanguage contentLanguage = 2;
+		}
+		repeated DocumentPlaceHolderData placeHolderDatas = 4;
+
+	}
+
+	message DocumentMappingDetails {
+
+		optional string documentId = 1; //client id
+
+		optional DocumentMapping mapping = 2; 
+		
+		message ComponentDetail {
+			
+			optional string id = 1;
+
+			optional string versionId = 2;
+			
+			optional com.zoho.common.Time time = 3;
+		}
+		repeated ComponentDetail componentDetails = 3;
+
+	}
+
+	repeated DocumentMappingDetails docMapping = 2;
+
+	repeated com.zoho.common.Relationship pictureRels = 3;
+
+	repeated com.zoho.common.Relationship commentPictureRels = 4;
+	
+	repeated com.zoho.common.Relationship mediaRels = 5;
+	
+	repeated com.zoho.common.Relationship commentMediaRels = 6;
+
+	repeated com.zoho.common.Relationship fileRels = 7;
+}

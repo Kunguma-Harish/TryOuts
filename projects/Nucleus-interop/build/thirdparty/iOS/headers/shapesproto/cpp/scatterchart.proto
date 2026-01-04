@@ -1,0 +1,25 @@
+syntax="proto3";
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "ScatterChartProtos";
+
+import "scatterchartdetails.proto";
+import "google/protobuf/protoextensions.proto";
+
+message ScatterChart {
+
+	optional ScatterChartDetails details = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	optional ScatterType type = 2;
+
+	enum ScatterType {
+		NONE = 0;
+		LINE = 1;
+		MARKER = 2;
+		SMOOTH = 3;
+		LINEMARKER = 4;
+		SMOOTHMARKER = 5;
+	}
+	
+}

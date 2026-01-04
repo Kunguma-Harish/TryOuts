@@ -1,0 +1,174 @@
+syntax="proto3";
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "ChartAxisProtos";
+
+import "titleelement.proto";
+import "horizontalaligntype.proto";
+import "properties.proto";
+import "textbody.proto";
+import "google/protobuf/protoextensions.proto";
+import "fields.proto";
+import "numberformat.proto";
+
+message ChartAxis { 
+
+	message AxisDetails {
+		
+		optional string axisId = 1 [(com.zoho.common.customOptions).requiredField = true]; // Actual axis ID. Unique identifier.
+
+		// Position of the axis , it could take any of the four side , a category Axis in a regular Bar-Chart would 
+		// take bottom side , in a column-chart it would be left-sde. 
+		optional Show.ChartField.PositionElement axPos = 2 [(com.zoho.common.customOptions).requiredField = true]; // Does not support Top-Right value.
+
+		// Id of the crossing axis
+		optional string crossAxisId = 3 [(com.zoho.common.customOptions).requiredField = true]; // Cross Axis ID. Unique Identifier.
+
+
+		// Order of the axis i.e. start from first element or last element.
+		message Scaling {
+			enum Orientation {
+				MINMAX = 0; // First To last
+				MAXMIN = 1; // Reverse the order.
+			}
+			optional Orientation orient = 1;
+
+			optional float min = 2;
+			optional float max = 3;
+		}
+		optional Scaling scaling = 4;
+
+		// At what point does this axis cross its perpendicular axis.
+		message Cross {
+			enum CrossType {
+				AUTOZERO = 0;
+				MIN = 1;
+				MAX = 2;
+				MANUAL = 3;
+			}
+			optional CrossType type = 4; 
+			// If the cross point is definied manually. i.e. someother point other than the usual co-ordinates.
+			optional float value = 5;
+		}
+		optional Cross cross = 5;
+		
+		// Title element for the axis.
+		optional TitleElement title = 6;
+
+		// Usually will contain only Stroke Value.	
+		optional com.zoho.shapes.Properties majorGrid = 7;
+		optional com.zoho.shapes.Properties minorGrid = 8;
+		
+		// Small mark on the axis , both Major and Minor.
+		optional Show.ChartField.TickMarkType majorTickMark = 9;
+		optional Show.ChartField.TickMarkType minorTickMark = 10;
+		
+		//Postion of the tick label 	
+		optional Show.ChartField.LabelPos labelPos = 11;
+
+		optional com.zoho.shapes.Properties props = 12;
+		optional com.zoho.shapes.TextBody textBody = 13;	
+		
+		optional bool hidden = 14; 
+
+		optional com.zoho.common.NumberFormat numberFormat = 15;
+	}
+	
+	message CategoryAxis {
+		optional AxisDetails details = 1 [(com.zoho.common.customOptions).requiredField = true];
+		
+		// Allignment of each label text.
+		optional com.zoho.common.HorizontalAlignType lblAlign = 2;
+
+		// Distance between axis and label in terms of chart values , with minimum of 0 and maximum of 1 (in value).
+		optional float lblOffset = 3;
+		
+		// Skip these many number of Tick labels, can contain one or more.
+		optional int32 skipTickLabel = 4;
+		
+		// Skip these many number of Tick Mark, can contain one or more.
+		optional int32 skipTickMark = 5;	
+	}
+	optional CategoryAxis category = 1;
+
+	message ValueAxis {
+		optional AxisDetails details = 1 [(com.zoho.common.customOptions).requiredField = true];
+		
+		// Value Axis to cross the other axis by default(i.e. from Start) or in the middle of a Category.
+		enum CrossBetween {
+			DEFAULT = 0;
+			MIDCAT = 1;
+		}
+		optional CrossBetween crossBetween = 2;
+
+		// How to split the value axis , usually a value axis with a higher value of 5 will be split in 0.5 decimals for major and 0.1 will be the minor.
+		// distance between major tick
+		optional float major = 3;
+		
+		// distance between minor tick
+		optional float minor = 4;
+
+		message DisplayUnit {
+			enum DisplayUnitType {
+				NONE = 0;
+				HUNDREDS = 1;
+				THOUSANDS = 2;
+				TENTHOUSANDS = 3;
+				HUNDREDTHOUSANDS = 4;
+				MILLIONS = 5;
+				TENMILLIONS = 6;
+				HUNDREDMILLIONS = 7;
+				BILLIONS = 8;
+				TRILLIONS = 9;
+				CUSTOM = 10;
+			}
+			optional DisplayUnitType type = 1;
+			optional float custom = 2;
+			
+			optional TitleElement label = 3;	
+		}
+		optional DisplayUnit displayUnit = 5;
+	}
+
+	optional ValueAxis value = 2;
+
+
+	message DateAxis {
+		optional AxisDetails details = 1 [(com.zoho.common.customOptions).requiredField = true];
+	
+		// Distance between axis and label in terms of chart values , with minimum of 0 and maximum of 1. 
+		optional float lblOffset = 2;	
+		
+		// How to split the value axis , usually a value axis with a higher value of 5 will be split in 0.5 decimals for major and 0.1 will be the minor.
+		// distance between major tick
+		optional float major = 3;
+		
+		// distance between minor tick
+		optional float minor = 4;
+
+		enum TimeUnit {
+			DAYS = 0;
+			MONTHS = 1;
+			YEARS = 2;
+		}
+		optional TimeUnit baseTimeUnit = 5;
+		optional TimeUnit majorTimeUnit = 6;
+		optional TimeUnit minorTimeUnit = 7;
+	}
+	optional DateAxis date = 3;	
+
+	message SeriesAxis {
+
+		optional AxisDetails details = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+		// Skip these many number of Tick labels, can contain one or more.
+		optional int32 skipTickLabel = 2;
+		
+		// Skip these many number of Tick Mark, can contain one or more.
+		optional int32 skipTickMark = 3;	
+
+	}
+	optional SeriesAxis series = 4;
+
+}

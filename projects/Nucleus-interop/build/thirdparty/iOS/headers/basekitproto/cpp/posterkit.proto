@@ -1,0 +1,22 @@
+syntax="proto3";
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "PosterKitProtos";
+
+message PosterKit {
+
+	enum PosterKitCategory {
+		UNKNOWN_POSTER_CATEGORY = 0;
+		EVENTS = 1;
+		SALES = 2;
+		PROMOTION = 3;
+        PRODUCT_INFO = 4;
+        CAMPAIGNS = 5;
+        INFOGRAPHICS = 6;
+        ADVERTISEMENTS = 7;
+        WRAPPED = 8;
+	}
+	optional PosterKitCategory type = 1;
+}
+

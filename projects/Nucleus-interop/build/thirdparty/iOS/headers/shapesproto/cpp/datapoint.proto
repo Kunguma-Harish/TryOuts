@@ -1,0 +1,20 @@
+syntax="proto3";
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "DataPointProtos";
+
+import "datamarker.proto";
+import "properties.proto";
+
+message DataPoint {
+	
+	optional bool invertColorIfNegative = 1; // Boolean to specify whether we will have to Invert the color if the value is negative
+	
+	optional DataMarker marker = 2;
+	
+	optional float explosion = 3; // Distance the data point should be moved from the center of the pie. 
+
+	optional com.zoho.shapes.Properties props = 4;
+				
+}

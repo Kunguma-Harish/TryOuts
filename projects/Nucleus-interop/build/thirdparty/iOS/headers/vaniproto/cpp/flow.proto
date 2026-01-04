@@ -1,0 +1,54 @@
+syntax="proto3";
+package com.zoho.remoteboard;
+
+option java_package = "com.zoho.remoteboard";
+option java_outer_classname = "FlowProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+message Flow {
+
+	optional string id = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	message FlowState {
+		
+		enum FlowStateType {
+			UNKNOWN_FLOW_STATE = 0;
+			FRAME_STATE = 1;
+			ANCHOR_POINT_STATE = 2;
+		}
+		optional FlowStateType type = 1;
+
+		message FrameState {
+			optional string frameId = 1;
+		}
+		optional FrameState frameState = 2;
+		
+		message AnchorPointState {
+			optional string anchorPointId = 1;
+		}
+		optional AnchorPointState anchorPointState = 3;
+	}
+	repeated FlowState states = 2;
+
+	message FlowPreference {
+		
+		message FlowTransition {
+
+			enum FlowTransitionType {
+				UNKNOWN_FLOW_TRANSITION_TYPE = 0;
+				STATIC = 1;
+				MOTION = 2;
+				
+			}
+			optional FlowTransitionType type = 1;
+		}
+		optional FlowTransition transition = 1;
+
+		
+	}
+
+	optional FlowPreference preference = 3;
+
+	optional string title = 4;
+}

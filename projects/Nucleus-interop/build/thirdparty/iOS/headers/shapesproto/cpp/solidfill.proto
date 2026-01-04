@@ -1,0 +1,12 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "SolidFillProtos";
+
+import "color.proto";
+
+message SolidFill {
+	optional Color color = 1; // color 
+}

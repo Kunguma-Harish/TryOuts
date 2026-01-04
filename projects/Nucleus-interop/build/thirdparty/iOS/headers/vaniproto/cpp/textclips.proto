@@ -1,0 +1,36 @@
+syntax="proto3";
+// Text Clipboard proto
+
+package com.zoho.clipboard;
+
+option java_package = "com.zoho.clipboard";
+option java_outer_classname = "TextClipsProtos";
+
+import "portion.proto";
+import "paragraph.proto";
+import "google/protobuf/protoextensions.proto";
+
+message TextClips {
+
+	enum TextType {
+		PARA = 0;
+		PORTION = 1;
+	}
+
+	optional TextType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	message ParaNode {
+		optional com.zoho.shapes.Paragraph para = 1 [(com.zoho.common.customOptions).requiredField = true]; // Cusom/User-Modified Style changes will be present in the Paragraph.
+		
+		optional com.zoho.shapes.Paragraph source = 2;
+	}
+	repeated ParaNode paras = 2; 
+
+	message PortionNode {
+		optional com.zoho.shapes.Portion portion = 1 [(com.zoho.common.customOptions).requiredField = true]; // Custom/User-Modified property changes will be present in the Portion.
+		
+		optional com.zoho.shapes.Portion source = 2;
+	}
+	repeated PortionNode portions = 3;
+		
+}

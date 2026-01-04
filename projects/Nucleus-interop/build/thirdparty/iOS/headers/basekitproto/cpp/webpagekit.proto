@@ -1,0 +1,50 @@
+syntax="proto3";
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "WebPageKitProtos";
+
+import "wireframekit.proto";
+
+message WebPageKit{
+
+    enum WebPageKitCategory {
+        UNKNOWN_WEBPAGEKIT = 0;
+        WEBPAGE_KIT = 1;
+        WEBBLOCK_KIT = 2;
+        WIREFRAME_KIT = 3;
+    }
+    optional WebPageKitCategory type = 1;
+
+    message WebPageProps {
+        enum WebPageType {
+            UNKNOWN_WEBPAGE = 0;
+            LANDINGPAGE = 1;
+            PORTFOLIOPAGE = 2;
+            PRODUCTPAGE = 3;
+            SOLUTIONPAGE = 4;
+            TESTIMONIALPAGE = 5;
+            BLOGPAGE = 6;
+            EVENTPAGE = 7;
+        }
+        optional WebPageType type = 1;        
+    }
+
+    optional WebPageProps webpagekit = 2;
+
+    message WebBlockProps {
+        enum WebBlockType {
+            UNKNOWN_WEBBLOCKTYPE = 0;
+            NAV_BAR = 1;
+            HERO_SECTION = 2;
+            BODY = 3;
+            FOOTER = 4;
+        }
+        optional WebBlockType type = 1;
+    }
+
+    optional WebBlockProps webblockkit = 3;
+
+    optional WireframeKit wireframekit = 4;
+
+}

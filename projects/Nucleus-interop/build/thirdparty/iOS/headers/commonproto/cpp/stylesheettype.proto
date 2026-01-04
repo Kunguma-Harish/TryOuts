@@ -1,0 +1,11 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "StyleSheetTypeProtos";
+
+enum StyleSheetType {
+    UNKNOWN_STYLE_SHEET = 0;
+    CSS = 1; 
+}
+

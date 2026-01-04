@@ -1,0 +1,6 @@
+framework module Painter {
+  umbrella header "Painter-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

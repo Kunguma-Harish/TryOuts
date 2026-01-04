@@ -1,0 +1,20 @@
+syntax="proto3";
+// Place Holder Type
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PlaceHolderProtos";
+
+import "fields.proto";
+import "google/protobuf/protoextensions.proto";
+
+message PlaceHolder {
+
+	optional Show.ShapeField.PlaceHolderType type = 1 [(com.zoho.common.customOptions).requiredField = true]; // Type of the Placeholder
+
+	optional string relId = 2; // relationship id - To indicate the relation between Placeholder in the slide and the Master SlideLayout.
+
+	// To be used as template for PH and is picked from template and acts like Cache.
+	optional string text = 3;
+}

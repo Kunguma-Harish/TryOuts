@@ -1,0 +1,48 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PictureFillProtos";
+
+import "picturevalue.proto";
+import "pictureproperties.proto";
+import "offset.proto";
+import "scale.proto";
+import "google/protobuf/protoextensions.proto";
+
+message PictureFill {
+
+	optional PictureValue value = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	// Contains properties like Color-Correction , Transparency etc...
+	optional PictureProperties props = 2; // picture properties	
+
+	// This value has been moved to "pictureproperties.proto" as variable "alpha" 
+	// So that we shall use it both For Picture and PictureFill. We will not use this any further for rendering.
+	optional float transparency = 3; // OBSOLETE 
+
+	message PictureFillType {
+		enum FillPictureAs {
+			FRAME = 0;
+			TILE = 1;
+			FILL = 2;
+			FIT = 3;
+		}
+		optional FillPictureAs type = 1 [(com.zoho.common.customOptions).requiredField = true]; //[default = FRAME];
+
+		optional Offset frame = 2;
+
+		optional Tile tile = 3; // Tile properties.
+		message Tile { 
+			optional float offsetX = 1; // x offset in px.
+			optional float offsetY = 2; // y offset in px.
+			optional Scale scale = 3; // To scale the image.
+		}
+
+		optional bool noAspectChange = 4; //Setting frame and tile without image aspect ratio change
+	}
+
+	optional PictureFillType type = 4 [(com.zoho.common.customOptions).requiredField = true]; // type of picture fill
+}
+

@@ -1,0 +1,32 @@
+syntax="proto3";
+
+package com.zoho.remoteboard;
+
+option java_package = "com.zoho.remoteboard";
+option java_outer_classname = "ProjectConfigurationsProtos";
+
+import "projectstate.proto";
+import "sketchtool.proto";
+import "projectdefaults.proto";
+
+message ProjectConfigurations {
+
+    message UserConfig{
+        optional ProjectState state = 1;
+
+        optional ProjectDefaults defaults = 2;
+
+        // Additional Pencil or Sketch for the user.
+        repeated SketchTool sketchTools = 3;
+    }
+
+
+    message ProjectConfigMapping {
+        optional string zuid = 1;
+        optional UserConfig UserConfig = 2;
+    }
+
+    repeated ProjectConfigMapping projectConfigMap = 1;		
+}
+
+

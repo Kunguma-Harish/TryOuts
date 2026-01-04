@@ -1,0 +1,17 @@
+syntax="proto3";
+
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "RGBTweakProtos";
+
+import "tweak.proto";
+
+
+message RGBTweak {
+	repeated com.zoho.common.Tweak red = 1; // modify red value
+	repeated com.zoho.common.Tweak green = 2; // modify green value
+	repeated com.zoho.common.Tweak blue = 3; // modify blue value
+}
+

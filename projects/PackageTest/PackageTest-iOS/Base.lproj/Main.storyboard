@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TP9-Qo-BUI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="2TD-oM-0P3">
+            <objects>
+                <viewController id="TP9-Qo-BUI" customClass="ViewController" customModule="WBExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kfq-2Q-FdF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0d-Ze-DuF">
+                                <rect key="frame" x="337" y="56" width="69" height="32"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleSignOutButtonTap:" destination="TP9-Qo-BUI" eventType="touchUpInside" id="8wM-mz-nM0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9y-Cu-yzn">
+                                <rect key="frame" x="164" y="428.5" width="86" height="53"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign in"/>
+                                <connections>
+                                    <action selector="signinButtonAction:" destination="TP9-Qo-BUI" eventType="touchUpInside" id="WMt-mp-69y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ec-P7-gGS">
+                                <rect key="frame" x="122.5" y="428.5" width="169" height="53"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Load WhiteBoard"/>
+                                <connections>
+                                    <action selector="loadWBButtonAction:" destination="TP9-Qo-BUI" eventType="touchUpInside" id="hSZ-be-HPN"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAX-dE-X0B" userLabel="WBContainer">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPh-iP-3Do">
+                                        <rect key="frame" x="8" y="8" width="51" height="32"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="closeButtonAction:" destination="TP9-Qo-BUI" eventType="touchUpInside" id="PCP-xN-1X6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zPh-iP-3Do" firstAttribute="leading" secondItem="dAX-dE-X0B" secondAttribute="leading" constant="8" id="Fex-ZZ-xG0"/>
+                                    <constraint firstItem="zPh-iP-3Do" firstAttribute="top" secondItem="dAX-dE-X0B" secondAttribute="top" constant="8" id="SxE-fa-kx1"/>
+                                    <constraint firstItem="zPh-iP-3Do" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="dAX-dE-X0B" secondAttribute="trailing" id="omE-rU-64H"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v0X-sA-b1G"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="8Ec-P7-gGS" firstAttribute="centerX" secondItem="v0X-sA-b1G" secondAttribute="centerX" id="2pX-gW-BPa"/>
+                            <constraint firstItem="P9y-Cu-yzn" firstAttribute="centerX" secondItem="v0X-sA-b1G" secondAttribute="centerX" id="N74-tZ-Tq8"/>
+                            <constraint firstItem="i0d-Ze-DuF" firstAttribute="top" secondItem="v0X-sA-b1G" secondAttribute="top" constant="8" id="QVN-LA-nc2"/>
+                            <constraint firstItem="dAX-dE-X0B" firstAttribute="centerX" secondItem="v0X-sA-b1G" secondAttribute="centerX" id="RQt-dm-HS9"/>
+                            <constraint firstItem="P9y-Cu-yzn" firstAttribute="centerY" secondItem="v0X-sA-b1G" secondAttribute="centerY" id="ZUr-6O-6XI"/>
+                            <constraint firstItem="dAX-dE-X0B" firstAttribute="height" secondItem="v0X-sA-b1G" secondAttribute="height" id="cxT-mb-Jfy"/>
+                            <constraint firstItem="i0d-Ze-DuF" firstAttribute="trailing" secondItem="v0X-sA-b1G" secondAttribute="trailing" constant="-8" id="hEL-ob-IKn"/>
+                            <constraint firstItem="dAX-dE-X0B" firstAttribute="width" secondItem="v0X-sA-b1G" secondAttribute="width" id="hM6-hn-RbA"/>
+                            <constraint firstItem="8Ec-P7-gGS" firstAttribute="centerY" secondItem="v0X-sA-b1G" secondAttribute="centerY" id="rdt-QJ-Cor"/>
+                            <constraint firstItem="dAX-dE-X0B" firstAttribute="centerY" secondItem="v0X-sA-b1G" secondAttribute="centerY" id="v4V-LE-bkz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadWBButton" destination="8Ec-P7-gGS" id="BHp-bQ-Y6u"/>
+                        <outlet property="signOutButton" destination="i0d-Ze-DuF" id="U0a-hb-zhG"/>
+                        <outlet property="signinButton" destination="P9y-Cu-yzn" id="Z5i-Iy-llf"/>
+                        <outlet property="wbContainerView" destination="dAX-dE-X0B" id="tvk-BZ-R3B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UfM-3X-xy1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

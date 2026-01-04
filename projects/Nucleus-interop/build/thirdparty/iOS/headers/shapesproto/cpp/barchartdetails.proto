@@ -1,0 +1,27 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "BarChartDetailsProtos";
+
+import "seriesdetails.proto";
+import "animationdata.proto";
+
+message BarChartDetails {	
+	
+	optional float gap = 1; // Gap size between each bar , in Pixel	
+
+	message BarChartSeries {
+	
+		optional SeriesDetails details = 1;		
+		optional bool invertColorIfNegative = 2;
+
+	}
+	repeated BarChartSeries series = 2;
+
+	// Animation details for each category
+	repeated com.zoho.shapes.AnimationData catAnim = 3;
+
+}
+

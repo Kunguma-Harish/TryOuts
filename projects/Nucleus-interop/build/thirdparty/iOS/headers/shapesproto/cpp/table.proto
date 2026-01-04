@@ -1,0 +1,120 @@
+syntax="proto2";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "TableProtos";
+
+import "fields.proto";
+import "textbody.proto";
+import "fill.proto";
+import "margin.proto";
+import "effects.proto";
+import "verticalaligntype.proto";
+import "tablecellstyle.proto";
+import "color.proto";
+import "animation.proto";
+import "animationdata.proto";
+
+message Table {
+	
+	message TableGrid {
+		message GridColumn {
+			required float width = 1 ; // width in pixels
+	
+			// Animation data for each column.	
+			repeated AnimationData animDatas = 2;
+
+            optional string id = 3; // An unique ID for each col of the table. Useful for Comment and Connectors
+		}
+		repeated GridColumn col = 1;
+	}
+	required TableGrid grid = 1 ;
+	
+	message TableRow {
+		required float height = 1 ; // height of the row in pixels.
+		
+		message TableCell {
+		
+			optional string id = 1; // Unique identifier for this cell.
+			optional TextBody textBody = 2;
+			
+			message MergeCell {
+				// Number of column/row the merged cell spans.
+				optional int32 span = 1;
+				
+				// Merge the previous column/row.
+				optional int32 merge = 2;
+			}
+			optional MergeCell col = 3;
+			optional MergeCell row = 4;
+
+			message TableCellProperties {
+				
+				optional TableCellStyle style = 1;
+					
+				//IDs of the header cells i.e. A table cell can contain two header cells , the ids of those header cells will be stored in this variable.
+				repeated string headers = 2;					
+				
+				// Some of the textbox props.
+				optional Margin margin = 3; // Margin values.
+				optional com.zoho.common.VerticalAlignType valign = 4[default = TOP];
+				
+				optional Show.TableField.TextDirection textDir = 5; //[default = HORIZONTAL];
+				
+				enum TextOverflow {
+					CLIP = 0; // Clip within the cell.
+					ALLOW = 1; // Allow it to overflow.
+				}		
+				optional TextOverflow textOverflow = 6;
+			}
+			optional TableCellProperties props = 5;	
+			// Animation data for each cell.
+			repeated AnimationData animDatas = 6;
+		}
+
+		repeated TableCell cell = 2;
+		// Animation data for each row.
+		repeated AnimationData animDatas = 3;
+
+		optional string datafieldId = 4;
+
+        optional string id = 5; // An unique ID for rach row of the table. Useful for Comment and Connectors
+	}
+	repeated TableRow row = 2;	
+		
+	
+	message TableProperties {
+		optional Fill fill = 1;
+		optional Effects effects = 2;
+		
+		// ID of the defined table-styles , present in document.proto 
+		optional string styleId = 3;
+		
+		// Apply table style depending on the the on/off state of the following variables.
+		optional bool firstRow = 4; //Enable/Disable first row formatting for a table style.
+		optional bool lastRow = 5; // last row.
+		optional bool bandCol = 6; // Banded Columns
+		optional bool bandRow = 7; // Banded Rows
+		optional bool firstCol = 8; // First Column
+		optional bool lastCol = 9; // Last Column 
+		
+		optional Color styleColor = 10; //base color for style-id , HOLDER value.
+		
+		repeated Animation anim = 11; // Animation 
+				 		
+	}
+	optional TableProperties props = 3;	
+	optional bool ignoreMinimumHeight = 4;
+	
+	// This datafieldId should ideally map to matrix data type and will create a table dynamically as per matrix terms.	
+	optional string datafieldId = 5;
+
+	enum TableDataType {
+
+		DEFAULT_TABLE_DATA = 0;
+		BASIC = 1;
+		DATAFIELD = 2;
+	}
+	optional TableDataType dataType = 6;
+
+}

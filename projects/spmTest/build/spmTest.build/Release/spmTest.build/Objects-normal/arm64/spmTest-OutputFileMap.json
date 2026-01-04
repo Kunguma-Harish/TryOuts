@@ -1,0 +1,45 @@
+{
+  "" : {
+    "const-values" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/spmTest-master.swiftconstvalues",
+    "dependencies" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/spmTest-master.d",
+    "diagnostics" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/spmTest-master.dia",
+    "emit-module-dependencies" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/spmTest-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/spmTest-master-emit-module.dia",
+    "swift-dependencies" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/spmTest-master.swiftdeps"
+  },
+  "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/DerivedSources/CoreDataGenerated/spmTest/Item+CoreDataClass.swift" : {
+    "index-unit-output-path" : "/spmTest.build/Release/spmTest.build/Objects-normal/arm64/Item+CoreDataClass.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/Item+CoreDataClass.bc",
+    "object" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/Item+CoreDataClass.o"
+  },
+  "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/DerivedSources/CoreDataGenerated/spmTest/Item+CoreDataProperties.swift" : {
+    "index-unit-output-path" : "/spmTest.build/Release/spmTest.build/Objects-normal/arm64/Item+CoreDataProperties.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/Item+CoreDataProperties.bc",
+    "object" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/Item+CoreDataProperties.o"
+  },
+  "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/DerivedSources/CoreDataGenerated/spmTest/spmTest+CoreDataModel.swift" : {
+    "index-unit-output-path" : "/spmTest.build/Release/spmTest.build/Objects-normal/arm64/spmTest+CoreDataModel.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/spmTest+CoreDataModel.bc",
+    "object" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/spmTest+CoreDataModel.o"
+  },
+  "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/spmTest.build/Release/spmTest.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  },
+  "/Users/kunguma-14252/Documents/projects/spmTest/spmTest/ContentView.swift" : {
+    "index-unit-output-path" : "/spmTest.build/Release/spmTest.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/ContentView.o"
+  },
+  "/Users/kunguma-14252/Documents/projects/spmTest/spmTest/Persistence.swift" : {
+    "index-unit-output-path" : "/spmTest.build/Release/spmTest.build/Objects-normal/arm64/Persistence.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/Persistence.bc",
+    "object" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/Persistence.o"
+  },
+  "/Users/kunguma-14252/Documents/projects/spmTest/spmTest/spmTestApp.swift" : {
+    "index-unit-output-path" : "/spmTest.build/Release/spmTest.build/Objects-normal/arm64/spmTestApp.o",
+    "llvm-bc" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/spmTestApp.bc",
+    "object" : "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/Objects-normal/arm64/spmTestApp.o"
+  }
+}

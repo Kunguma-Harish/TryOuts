@@ -1,0 +1,81 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "AnimationProtos";
+
+import "animationdata.proto";
+import "google/protobuf/protoextensions.proto";
+
+message Animation {
+	
+	enum AnimationObject {
+		SHAPE = 0; // Shape.
+		CHART = 1; // Chart. You will have a separate ChartAnimation message for this.
+		TABLE = 2;
+	}
+	optional AnimationObject obj = 1 [(com.zoho.common.customOptions).requiredField = true]; //[ default = SHAPE ];
+	
+	// Animation ID is present inside this data.
+	optional AnimationData data = 2 [(com.zoho.common.customOptions).requiredField = true]; // Animation Data
+	
+	// If an animation has to be overridden for a paragraph
+	// it is available inside the paragraph proto. 
+	message ShapeAnimation {
+
+		message TextAnimation {		
+			enum TextAnimationType {
+				BOX = 0; // whole box.
+				PARA = 1; // All Paras at the same time.	
+				LEVEL = 2; // Animate every para one by one till the indicated PARA level.
+			}
+			optional TextAnimationType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+			message LevelAnimation {
+				optional int32 num = 1; // Bullet Num (from 1-9).
+				optional float delay = 2; // Delay every para animation by a few seconds.
+			}	
+			optional LevelAnimation level = 2; // Bullet Level Animation
+			optional bool reverse = 3; // Reverse the text animation.	
+		}
+		optional TextAnimation text = 1 [(com.zoho.common.customOptions).requiredField = true];
+		optional bool animShape = 2; // Animate the attached Shape. 	
+	}
+	optional ShapeAnimation shapeAnim = 3; // Shape Animation
+
+	message ChartAnimation {
+		
+		enum ChartAnimationDeliveryModel {
+			
+			WHOLE = 0; // All elements in a chart
+			SERIES_VALUE = 1; // One Series at a time.
+			CATEGORY = 2; // One Category at a time.
+			PER_SERIES_VALUE = 3; // Each element in the series
+			PER_CATEGORY = 4; // Each element in category.
+		}
+
+		optional ChartAnimationDeliveryModel type = 1 [(com.zoho.common.customOptions).requiredField = true];
+	}
+	optional ChartAnimation chartAnim = 4;	
+
+	message TableAnimation {
+		enum TableAnimationDeliveryModel {
+			
+			WHOLE = 0;
+			ROW = 1;
+			COLUMN = 3;
+			CELL = 4;
+		}
+		optional TableAnimationDeliveryModel type = 1 [(com.zoho.common.customOptions).requiredField = true];
+		
+		enum CellDeliveryModel {
+			DEF_TABLECELL_DELIVERY_MODEL = 0;
+			ROW_WISE = 1;
+			COLUMN_WISE = 2;	
+		}
+		optional CellDeliveryModel cell = 2;
+
+		optional bool bandedFirst = 3;
+	}
+	optional TableAnimation tableAnim = 5;
+}

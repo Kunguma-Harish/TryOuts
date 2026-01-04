@@ -1,0 +1,4 @@
+module TestMyLibrary {
+    header "TestMyLibrary-umbrella.h"
+    export *
+}

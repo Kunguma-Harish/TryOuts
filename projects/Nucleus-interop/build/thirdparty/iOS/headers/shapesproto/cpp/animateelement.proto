@@ -1,0 +1,16 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "AnimateElementProtos";
+
+import "animationdata.proto";
+
+message AnimateElement {
+	
+	repeated AnimationData animationDatas = 1;
+	
+	// This boolean is used to denote that the particular overridden animation has been removed.	
+	optional bool removed = 2;	
+}

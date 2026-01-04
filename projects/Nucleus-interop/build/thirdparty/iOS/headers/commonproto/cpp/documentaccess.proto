@@ -1,0 +1,48 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "DocumentSettingProtos";
+
+import "time.proto";
+import "google/protobuf/protoextensions.proto";
+import "notificationsettings.proto";
+
+message DocumentSetting {
+	
+	repeated DocumentAccessedBy access = 1;	
+
+	message DocumentAccessedBy {
+		
+		optional string zuid = 1 [(com.zoho.common.customOptions).requiredField = true];
+		
+		message DocumentAccessDetail { 	
+			
+			optional Time opened = 1;
+
+			optional Time saved = 2;
+			
+			repeated CommentAccessDetail comment = 3;
+			message CommentAccessDetail {
+				
+				optional string id = 1 [(com.zoho.common.customOptions).requiredField = true]; // Comment ID.
+
+				optional Time date = 2; 
+				
+				optional string parentId = 3; // Parent ID of the comment list.
+			} 
+		}
+		optional DocumentAccessDetail detail = 2;
+	}
+	
+	message UserSetting {
+
+		optional string zuid = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+		optional NotificationSettings notificationSetting = 2;
+
+	}
+	repeated UserSetting userSetting = 2;
+
+}

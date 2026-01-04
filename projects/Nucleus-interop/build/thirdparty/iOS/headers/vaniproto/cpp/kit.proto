@@ -1,0 +1,168 @@
+syntax="proto3";
+package com.zoho.remoteboard.build;
+
+option java_package = "com.zoho.remoteboard.build";
+option java_outer_classname = "KitProtos";
+
+import "basemeta.proto";
+import "picturetype.proto";
+import "stylesheettype.proto";
+
+message Kit {
+
+    message KitData{
+
+        message UIDetails{
+            enum UIType{
+                UNKNOWN = 0;
+                TAB = 1;
+                GROUPING = 2;
+                LISTING = 3;
+            }
+
+            message Tab{
+                enum TabType{
+                    UNKNOWN_TAB_TYPE = 0;
+                    HORIZONTAL = 1;
+                    VERTICAL = 2;
+                }
+
+                message HorizontalTab{
+                    enum HorizontalTabType{
+                        UNKNOWN_HORIZONTAL_TAB_TYPE = 0;
+                        TYPE_1 = 1;
+                        TYPE_2 = 2;
+                        TYPE_3 = 3;
+                    }
+
+                    optional HorizontalTabType type = 1;
+                }
+
+                optional TabType tabType = 1;
+                optional bool needAllTab = 2;
+                optional HorizontalTab horizontalTab = 3;
+            }
+
+            message Grouping{
+                enum GroupingType{
+                    UNKNOWN_GROUPING = 0;
+                    HORIZONTAL = 1;
+                    VERTICAL = 2;
+                }
+
+                optional GroupingType type = 1;
+
+            }
+
+            message Lisitng{
+                enum ListingView{
+                    UNKNOWN_LISING_TYPE = 0;
+                    THUMBNAIL = 1;
+                    TABLE = 2;
+                }
+
+                optional ListingView view = 1;
+            }
+
+            optional UIType type = 1;
+            optional Tab tab = 2;
+            optional Grouping grouping = 3;
+            optional Lisitng listing = 4;
+        }
+
+
+        message Category{
+
+            enum CategoryType{
+                UNKNOWN = 0;
+                LEAF = 1;
+                CHILD = 2;
+            }
+
+            message Leaf{
+                optional UIDetails details = 1;
+                optional string contentLocatorId = 2;   // Check this in the KitResourceMapping
+            }
+
+            message Child{  // Inbetween categories - A Child, which also a parent
+                optional UIDetails details = 1;
+                repeated Category categories = 2;
+            }
+
+            optional string id = 1;
+            optional com.zoho.common.BaseMeta meta = 2; 
+            optional CategoryType type = 3;
+            optional Leaf leaf = 4;
+            optional Child child = 5;
+
+        }
+
+
+        message Root{
+            optional UIDetails details = 1;
+            repeated Category categories = 2;
+        }
+
+
+        optional string id = 1;
+
+        optional com.zoho.common.BaseMeta meta = 2;
+
+        optional Root parent = 3;   // Primary Category
+
+    }
+
+
+    message KitResource {
+
+        enum ContentType{
+            UNKNOWN_CONTENT_TYPE = 0;
+            WHOLE_FRAME = 1;	// The whole Frame is listed to be inserted as an object
+            ELEMENT_LEVEL = 2;	// elements inside the frame are listed for insertion. 
+        }
+
+        message ResourceIdentifier{
+            optional string projectId = 1;
+            optional string documentId = 2;
+            optional string frameId = 3;
+        }
+
+
+        optional string id = 1;
+        optional ContentType contentType = 2;
+        optional ResourceIdentifier resource = 3;
+
+        message AuxilaryResourceIdentifier {
+            enum AuxilaryResourceType{
+                DEFAULT_AUXILARY_RESOURCE_TYPE = 0;
+                PICTURE = 1;
+                STYLE = 2;
+            }
+            
+            optional AuxilaryResourceType type = 1;
+            optional string resourceId = 2;
+            
+            message PictureResource{
+                optional com.zoho.common.PictureType type = 1;
+            }
+
+            message StyleResource{
+                optional com.zoho.common.StyleSheetType type = 1;
+            }
+
+            optional PictureResource pictureResource = 3;
+            optional StyleResource styleResource = 4;
+        }
+
+        repeated AuxilaryResourceIdentifier auxilaries = 4;
+    }
+
+    message KitResourceMapping{
+        optional string id = 1;
+        optional KitResource resource = 2;
+    }
+
+    optional KitData kitData = 1;
+    repeated KitResourceMapping resourceMapping = 2;
+}
+

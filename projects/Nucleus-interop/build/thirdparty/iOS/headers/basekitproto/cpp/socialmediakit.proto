@@ -1,0 +1,24 @@
+syntax="proto3";
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "SocialMediaKitProtos";
+
+
+message SocialMediaKit{
+    
+    enum SocialMediaCategory{
+        UNKNOWN_SOCIALMEDIACATEGORY = 0;
+        INSTAGRAM_POST = 1;
+        INSTAGRAM_STORY = 2;
+        TWITTER_POST = 3;
+        TWITTER_HEADER = 4;
+        FACEBOOK_POST = 5;
+        FACEBOOK_COVER = 6;
+        YOUTUBE_COVER = 7;
+        YOUTUBE_THUMBNAIL = 8;
+        LINKEDIN_POST = 9;
+    }
+    optional SocialMediaCategory type = 1;
+
+}

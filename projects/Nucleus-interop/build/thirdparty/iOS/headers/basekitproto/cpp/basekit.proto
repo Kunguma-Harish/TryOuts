@@ -1,0 +1,79 @@
+syntax="proto3";
+
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "BaseKitProtos";
+
+
+import "networkkit.proto";
+import "designdiagramkit.proto";
+import "socialmediakit.proto";
+import "webpagekit.proto";
+import "emailkit.proto";
+import "businesscardkit.proto";
+import "posterkit.proto";
+import "pagekit.proto";
+import "advancedshapeskit.proto";
+import "flyerskit.proto";
+import "invoicekit.proto";
+import "brochureskit.proto";
+import "resumeskit.proto";
+import "letterheadskit.proto";
+import "newsletterskit.proto";
+
+message	BaseKit{
+
+	enum BaseKitCategory {
+		UNKNOWN_KIT = 0;
+		NETWORK = 1;
+		DESIGNDIAGRAM = 2;
+		SOCIALMEDIA = 3;
+		WEBPAGE = 4;
+		EMAIL = 5;
+		BUSINESSCARD = 6;
+		POSTER = 7;
+		PAGE = 8;
+		ADVANCEDSHAPES = 9;
+		FLYERS = 10;
+		INVOICE = 11;
+		BROCHURES = 12;
+		RESUMES = 13;
+		LETTERHEADS = 14;
+		NEWSLETTERS = 15;
+	}
+
+	optional BaseKitCategory type = 1;
+
+	optional NetworkKit network = 2;
+
+	optional DesignDiagramKit designdiagram = 3;
+
+	optional SocialMediaKit socialmedia = 4;
+
+	optional WebPageKit webpage = 5;
+
+	optional EmailKit email = 6; 
+
+	optional BusinesscardKit businesscard = 7;
+
+	optional PosterKit poster = 8;
+
+	optional PageKit page = 9;
+
+	optional AdvancedShapesKit advancedshapes = 10;
+
+	optional FlyersKit flyers = 11;
+
+	optional InvoiceKit invoice = 12;
+
+	optional BrochuresKit brochures = 13;
+
+	optional ResumesKit resumes = 14;
+
+	optional LetterheadsKit letterheads = 15;
+
+	optional NewslettersKit newsletters = 16;
+
+}
+

@@ -1,0 +1,61 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ModifiedFollowerProtos";
+
+import "properties.proto";
+import "portion.proto";
+import "textbody.proto";
+import "updatedleader.proto";
+import "google/protobuf/protoextensions.proto";
+
+message ModifiedFollower {
+
+	optional string id = 1 [(com.zoho.common.customOptions).requiredField = true];
+	
+	// Denotes which child has been modified. Should be traversed top->bottom.
+	repeated string child = 2;	
+
+	enum FollowerModificationStatus {
+		DEF_FOLLOWER_MODIFICATION_STATUS = 0;
+		NO_MODIFICATION = 1;
+		MODIFIED = 2;
+		REMOVED = 3;
+	} 
+	optional FollowerModificationStatus status = 3;
+
+	message ModificationDetails {
+
+		optional Properties props = 1;
+
+		repeated Portion portions = 2;
+
+		optional UpdatedLeader updatedLeader = 3;
+
+		message TextModficationDetails {
+			optional TextBody textBody = 1;
+
+			optional bool textEdited = 2;
+
+			optional bool styleEdited = 3;
+		}
+		optional TextModficationDetails text = 4;
+	}
+	
+	optional ModificationDetails modified = 4;
+
+	// 	containerModified has been replaced with containerModificationDetails
+	optional bool containerTransformModified = 5 [deprecated = true];
+
+	enum ContainerModificationParam {
+		NONE = 0;
+		TRANSFORM = 1;
+		ALPHA = 2;
+		BLEND = 3;
+	}
+
+	optional ContainerModificationParam containerModificationParam = 6;
+}
+

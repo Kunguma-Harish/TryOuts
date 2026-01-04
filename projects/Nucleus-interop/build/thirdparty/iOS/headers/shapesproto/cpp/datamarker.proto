@@ -1,0 +1,29 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "DataMarkerProtos";
+
+import "properties.proto";
+
+message DataMarker {
+	
+	enum DataMarkerType {
+		NONE = 0;
+		CIRCLE = 1;
+		DASH = 2;
+		DIAMOND = 3;
+		DOT = 4;
+		PICTURE = 5;
+		PLUS = 6;
+		SQUARE = 7;
+		STAR = 8;
+		TRIANGLE = 9;
+		XMARK = 10;	
+	}
+
+	optional DataMarkerType type = 1;
+	optional int32 size = 2;
+	optional com.zoho.shapes.Properties props = 3;		
+}

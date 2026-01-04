@@ -1,0 +1,28 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "CustomGeometryProtos";
+
+import "pathobject.proto";
+import "google/protobuf/protoextensions.proto";
+
+message CustomGeometry {
+	
+	message Path {
+		optional float width = 1 [(com.zoho.common.customOptions).requiredField = true];
+		optional float height = 2 [(com.zoho.common.customOptions).requiredField = true];
+		repeated PathObject path = 3; // Path list for Custom Shapes.
+	}
+	repeated Path pathList = 1; // Path for Custom Shapes.
+	repeated float textbox = 2; // Values for text box in order , left, top, right, bottom.
+
+	enum CustomGeometryType {
+		UNKNOWN_CUSTOM = 0;
+		PENCIL = 1;
+		SKETCH = 2;
+		HIGHLIGHTER = 3;
+	}
+	optional CustomGeometryType type = 3;	
+}

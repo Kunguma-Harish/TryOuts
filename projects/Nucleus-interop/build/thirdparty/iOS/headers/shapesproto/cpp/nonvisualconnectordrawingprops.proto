@@ -1,0 +1,60 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "NonVisualConnectorDrawingPropsProtos";
+
+import "locks.proto";
+import "google/protobuf/protoextensions.proto";
+import "tableelementlocator.proto";
+
+message NonVisualConnectorDrawingProps {	
+	
+	optional Locks locks = 1;
+	
+	message Connection {
+		
+		// <regex name="mathuuid"  value="^[a-f0-9A-F]{8}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{12}$" />
+		optional string id = 1 [(com.zoho.common.customOptions).requiredField = true]; // Id of the connected shape.
+
+		optional int32 index = 2; // Connector index. Every Shape has a connector table , this one specifies the connector point in that table.
+
+        optional string paragraphId = 3; // Id of the paragraph inside the shape - If the connector is connected to a paragraph
+
+        // In case of paragraph lets have only 2 connector points for now
+        // let 0 - be left and 1 - be right
+
+        optional string connectorPointId = 4;
+        // Instead of using the index directly - we are introducing an ID. The id will be mapped to a predefined connecting point or a dynamically created connecting point in the shape.
+
+        enum ConnectionBehaviour{
+          DEFAULT_CONNECTION_TYPE = 0;
+          STATIC = 1; 
+          DYNAMIC = 2;
+        }
+
+        // connectionType Options Overview:
+        // When shapes are moved, the connector endpoints can be adjusted to a different connection point on the shape, 
+        // which helps avoid complex connections. However, if the user wants to retain the original connector point, 
+        // this should be allowed. Below are the different options for connectionType:
+
+        /*
+         * 1. STATIC: Ensures that the connection remains fixed to the chosen connector point, even if it results in complex connector paths.
+         */
+
+        /*
+         * 2. DYNAMIC: Behavior: Allows the connector to change its endpoint to a different connection point on the shape to avoid complex paths and maintain optimal routing.
+         */
+
+         optional ConnectionBehaviour connectionType = 5;
+
+         optional TableElementLocator table = 6;
+    }
+
+	optional Connection start = 2;
+	optional Connection end = 3;
+
+
+    
+}

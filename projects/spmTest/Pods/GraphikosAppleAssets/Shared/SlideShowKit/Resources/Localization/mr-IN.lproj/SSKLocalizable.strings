@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "ठीक आहे";
+"SSKit.common.cancel" = "रद्द करा";
+"SSKit.common.continue" = "सुरु ठेवायचे";
+"SSKit.common.untitledDocument" = "अशीर्षकांकित दस्तऐवज";
+"SSKit.common.noNetwork" = "नेटवर्क नाही";
+"SSKit.common.noNetworkMessage" = "तुमचे डिव्हाइस इंटरनेटशी कनेक्ट केले असल्याची खात्री करा.";
+"SSKit.common.openSettings" = "सेटिंग्ज उघडा";
+"SSKit.common.connected" = "कनेक्ट केले";
+"SSKit.common.connecting" = "कनेक्ट करत आहे";
+"SSKit.common.waiting" = "प्रतीक्षा करत आहे";
+"SSKit.common.update" = "अपडेट करा";
+"SSKit.common.minimise" = "कमी करा";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "प्रारंभ करा";
+"SSKit.slideshow.end" = "समाप्त";
+"SSKit.slideshow.currentSlide" = "%i पैकी %i स्लाइड";
+"SSKit.slideshow.EndOfSlideshow" = "स्लाइडशो समाप्त";
+"SSKit.slideshow.blackout" = "स्क्रीन काळी झाली";
+"SSKit.slideshow.backToLive" = "लाइव्हवर परत";
+"SSKit.slideshow.notes" = "नोट्स";
+"SSKit.slideshow.clear" = "क्लिअर करा";
+"SSKit.slideshow.emptyNotes" = "या स्लाइडसाठी कोणत्याही नोट्स उपलब्ध नाहीत.";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "सेशन निरस्त केले";
+"SSKit.shareplay.sessionTerminated.desc" = "तुमचे Shareplay सेशन निरस्त केले गेले आहे. तुम्ही तुमचे सेशन रीस्टार्ट करणे निवडू शकता.";
+
+"SSKit.shareplay.syncWithPresenter" = "सादरकर्त्याशी सिंक्रोनाइज करा";
+
+"SSKit.shareplay.end.title" = "SharePlay समाप्त करा";
+"SSKit.shareplay.end.description" = "तुम्हाला shareplay समाप्त करायचे आहे का? Shareplay समाप्त करण्यामुळे सेशन निरस्त होईल.";
+"SSKit.shareplay.requestToPresent.description" = "सादर करण्याची विनंती करत आहे";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "त्रुटी";
+"SSKit.error.message" = "एरर आली. नंतर पुन्हा प्रयत्न करा";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "प्लेबॅक ऑडिओ";
+"SSKit.audio.resume" = "पुन्हा सुरू करा";
+"SSKit.audio.pause" = "विराम द्या";
+"SSKit.audio.audioTitle" = "ऑडिओ";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "तुमचा Apple TV निवडा";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple TV शोधत आहे";
+"SSKit.mcPeerListing.streamingDescription" = "तुमच्या डिव्हाइसवरून Apple TV वर स्लाइड स्ट्रीम करणे.";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "स्थानिक नेटवर्क अॅक्सेस करा आणि पुन्हा प्रयत्न करा";
+
+"SSKit.mcPeerListing.disconnect.title" = "डिस्कनेक्ट करा";
+"SSKit.mcPeerListing.disconnect.message" = "तुम्हाला Apple TV वरून डिस्कनेक्ट करायचे आहे याची तुम्हाला खात्री आहे का?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@ डिस्कनेक्ट करा";
+"SSKit.mcPeerListing.updateError" = "पीअर हे जुन्या आवृत्तीवर सुरू आहे असे दिसते. टीव्ही अॅप अप-टू-डेट असल्याची खात्री करा";

@@ -1,0 +1,44 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "MediaObjectProtos";
+
+import "time.proto";
+
+message MediaObject {
+
+	optional string mediaId = 1;
+
+	// Start the media at this specified time
+	optional Time startTime = 2;
+
+	// End the media at this specified time
+	optional Time endTime = 3;
+
+	// Bookmarks within media.
+	message BookMark {
+
+		optional Time time = 1;
+
+		optional string name = 2;
+
+		optional string description = 3;
+	}
+	repeated BookMark bookMarks = 4;
+
+	optional bool autoPlay = 5;
+
+	optional bool loop = 6;
+
+	// Rewind the media object to intial position.
+	optional bool rewind = 7;
+
+	optional bool playInFullscreen = 8;
+
+	// To be used for audio object.	
+	optional bool playInBackground = 9;
+
+}
+

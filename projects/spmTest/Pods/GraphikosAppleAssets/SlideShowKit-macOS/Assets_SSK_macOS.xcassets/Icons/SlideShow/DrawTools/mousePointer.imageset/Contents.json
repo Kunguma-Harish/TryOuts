@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "mousePointer.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

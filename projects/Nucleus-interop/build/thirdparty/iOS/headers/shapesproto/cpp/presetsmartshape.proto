@@ -1,0 +1,27 @@
+syntax="proto3";
+package com.zoho.shapes.build;
+
+option java_package = "com.zoho.shapes.build";
+option java_outer_classname = "PresetSmartShapeProtos";
+
+import "fields.proto";
+import "smartmodifier.proto";
+import "smarttextfield.proto";
+import "presetshape.proto";
+import "google/protobuf/protoextensions.proto";
+
+message PresetSmartShape {
+	
+	optional Show.GeometryField.PresetSmartShapeGeometry smartShape = 1 [(com.zoho.common.customOptions).requiredField = true];
+	
+	repeated SmartShapeComponent shapes = 2;
+ 
+	message SmartShapeComponent {
+
+		optional PresetShape presetShape = 1;
+		
+		repeated SmartModifier smartModifier = 2;
+
+		optional SmartTextField smartText = 3;
+	}					
+}

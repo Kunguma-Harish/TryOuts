@@ -1,0 +1,17 @@
+syntax="proto3";
+/* $Id$ */
+package com.zoho.show.build;
+
+option java_package = "com.zoho.show.build";
+option java_outer_classname = "FieldDefinitionProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+message ProtoFieldDefinition {
+	optional string name = 1 [(com.zoho.common.customOptions).requiredField = true];
+	optional string rule = 2 [(com.zoho.common.customOptions).requiredField = true];
+	optional string type = 3 [(com.zoho.common.customOptions).requiredField = true];
+	optional int32 number = 4 [(com.zoho.common.customOptions).requiredField = true];
+	repeated string values = 5;
+	optional string messageName = 6;
+}

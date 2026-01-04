@@ -1,0 +1,34 @@
+syntax="proto2";
+
+// Page Set up for a document - equates to slide setup in a presentation.
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "PageSetupProtos";
+
+import "pagesize.proto";
+import "freeflow.proto";
+
+message PageSetup {	
+
+	enum ScreenType {
+		FOUR_BY_THREE = 0; // On Screen 4:3 ratio (960 * 720) 
+		SIXTEEN_BY_NINE = 1; // On Screen 16:9 ratio (960 * 540) 
+		SIXTEEN_BY_TEN = 2; // On Screen 16:10 ratio (960 * 600) 
+		CUSTOM = 3; // Custom , to be set by the user , any width and height.
+		FREEFLOW = 4; // Either Width or Height or Both are of FreeFlow nature.	
+	}
+	
+	required ScreenType screenType = 1 ; //[default = FOUR_BY_THREE]; // Screen Type
+
+	enum PageOrientation {
+		PORTRAIT = 0; // height > width
+		LANDSCAPE = 1; // width > height
+	}
+	
+	required PageOrientation orient = 2 [default = LANDSCAPE]; // Slide orientation.
+		
+	optional PageSize size = 3;	
+
+	optional FreeFlow freeflow = 4;
+}

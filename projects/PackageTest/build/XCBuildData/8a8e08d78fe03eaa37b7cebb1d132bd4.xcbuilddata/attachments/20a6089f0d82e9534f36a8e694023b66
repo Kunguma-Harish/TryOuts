@@ -1,0 +1,4 @@
+module TraceKit {
+header "TraceKit-Swift.h"
+export *
+}

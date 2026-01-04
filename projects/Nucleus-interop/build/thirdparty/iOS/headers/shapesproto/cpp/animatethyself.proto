@@ -1,0 +1,60 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "AnimateThyselfProtos";
+
+import "displayanimation.proto";
+import "fields.proto";
+import "animationrepeat.proto";
+
+message AnimateThyself {
+
+	enum AnimateThyselfType {
+		DEF_ANIMATE_THYSELF_TYPE = 0;
+		MODIFIERS = 1;
+		TEXTFIELD = 2;
+		GROUPSHAPE = 3;
+	}
+	optional AnimateThyselfType type = 1;
+
+	// Sample ModifierCycle , values array will contain 
+	// 0 - 1 - 0 - 1 - 0 - 0.8 -- single cycle , 6 values
+	// 0 - 1 - 0.8 -- single cycle , 3 values
+	// 0 - 360 - 360 - 360 - 72 -- single cycle , 5 values , other way with three values : 0 - 1080 - 72
+	// 0 - 1 || 0 - 1 || 0 - 0.8 -- 3 cycles , 2 values in each cycle.
+	message ModifierCycle {    
+		repeated float values = 1;
+
+		optional float duration = 2; //In Percentage, if necessary
+	}
+	repeated ModifierCycle modifiers = 2;  
+
+	message TextCycle {
+		optional DisplayAnimation anim = 1;		
+	}  
+	optional TextCycle textfield = 3;
+
+	message GroupShapeCycle {
+		optional DisplayAnimation anim = 1;
+	}
+	optional GroupShapeCycle groupshape = 4;
+	
+	optional Show.AnimationField.AnimationStart start = 5;
+	
+	optional float delay = 6; // Delay the animation for given seconds.
+	optional float duration = 7; // Animation Duration in seconds
+	optional AnimationRepeat repeat = 8;
+
+	optional string id = 9;
+
+	// Use it for GroupShape 
+	message AnimationOrder {
+		optional string shapeId = 1;
+		optional string animId = 2;
+	}
+	repeated AnimationOrder animOrder = 10;
+
+}
+

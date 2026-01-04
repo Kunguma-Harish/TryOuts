@@ -1,0 +1,108 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "DisplayAnimationProtos";
+
+import "fields.proto";
+import "pathanimation.proto";
+import "google/protobuf/protoextensions.proto";
+
+message DisplayAnimation {
+	
+		
+	optional Show.AnimationField.TransitionType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+	
+	
+	message TransBlack {
+		optional bool thruBlack = 1;
+	}
+	
+	message Split {
+		optional Show.AnimationField.Axis dir = 1;
+		optional Show.AnimationField.TransitionDirection transDir = 2; 
+	}
+
+	message Reveal {
+		optional Show.AnimationField.Direction dir = 1;
+		optional bool thruBlack = 2;
+	}
+
+	message Geometric {
+		optional Show.GeometryField.PresetShapeGeometry geom = 1;
+		optional Show.AnimationField.TransitionDirection transDir = 2;		
+	}
+
+	message Glitter {
+		optional Show.AnimationField.Direction dir = 1;
+		optional Show.GeometryField.PresetShapeGeometry pattern = 2;	
+	}
+
+	message FlyThru {
+		optional Show.AnimationField.TransitionDirection transDir = 1;
+		optional bool bounce = 2;
+	}
+
+	message Shred {
+		optional Show.AnimationField.TransitionDirection transDir = 1;
+		optional Show.AnimationField.ObjectType type = 2;
+	}
+	
+	message WheelWipe {
+		optional Show.AnimationField.RotateDirection rot = 1;
+		optional int32 spokes = 2;
+	}
+
+	message Morph {
+		optional Show.AnimationField.AnimationMatchType matchType = 1;
+		
+		optional Show.AnimationField.AnimationMatchBasis matchBasis = 2; //Identifying Shapes based on matchBasis
+
+	}
+
+	optional Show.AnimationField.Axis blinds = 2;
+	optional Show.AnimationField.Axis checker = 3;
+	optional Show.AnimationField.Axis comb = 4;
+	optional Show.AnimationField.Direction cover = 5;
+	optional TransBlack cut = 6;
+	optional TransBlack fade = 7;
+	optional Show.AnimationField.Direction pull = 8;
+	optional Show.AnimationField.Direction push = 9;
+	optional Show.AnimationField.Axis randombar = 10;
+	optional Split split = 11;
+	optional Show.AnimationField.Direction strips = 12;
+	optional int32 wheel = 13; // denotes number of spokes in the wheel.
+	optional Show.AnimationField.Direction wipe = 14;
+	optional Show.AnimationField.TransitionDirection zoom = 15;
+	optional Show.AnimationField.Direction fly = 16;
+	optional Show.AnimationField.Direction float = 17;
+	optional Show.AnimationField.Direction revolvingdoor = 18;
+	optional Show.AnimationField.Direction pivot = 19;
+	optional Show.AnimationField.RotateDirection twirl = 20;
+	optional Show.AnimationField.Direction swap = 21;
+	optional Show.AnimationField.Direction flip = 22;
+	optional Show.AnimationField.Direction cube = 23;
+	optional Show.AnimationField.Direction gallery = 24;
+	optional Reveal reveal = 25;
+	optional Geometric geometric = 26;
+	optional Show.AnimationField.Direction ripple = 27;	
+	optional Glitter glitter = 28;
+	optional Show.AnimationField.Direction vortex = 29;
+	optional Show.AnimationField.Direction peek = 30;
+	optional Show.AnimationField.Axis swivel = 31;
+	optional Show.AnimationField.TransitionDirection fadedZoom = 32;
+	optional Show.AnimationField.Direction pan = 33;
+	optional Show.AnimationField.Direction ferriswheel = 34;	
+	optional Show.AnimationField.Direction conveyor = 35;
+	optional Show.AnimationField.Direction rotate = 36;
+	optional Show.AnimationField.Axis window = 37;
+	optional Show.AnimationField.Direction orbit = 38;
+	optional FlyThru flythru = 39;
+	optional Show.AnimationField.Direction box = 40;
+	optional Show.AnimationField.Axis door = 41;
+	optional Shred shred = 42;
+	optional WheelWipe wheelwipe = 43;
+	optional Show.AnimationField.Direction meteor = 44;	
+	optional PathAnimation path = 45;
+	optional Morph morph = 46;
+}

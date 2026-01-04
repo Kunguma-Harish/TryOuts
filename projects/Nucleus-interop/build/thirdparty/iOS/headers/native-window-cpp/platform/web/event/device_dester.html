@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Device Detector Test</title>
+    <style>
+        #result {
+            font-size: 20px;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+        const DeviceDetector = {
+            isMobileUA: () => /Mobi|Android|iPhone|iPad|iPod|IEMobile|Opera Mini/i.test(navigator.userAgent),
+            
+            hasTouchSupport: () => 'ontouchstart' in window,
+            
+            isRealMobileDevice: function() {
+                return this.isMobileUA() && 
+                       this.hasTouchSupport() && 
+                       navigator.maxTouchPoints > 1;
+            },
+            
+            isEmulator: function() {
+                return this.isMobileUA() && 
+                       this.hasTouchSupport() && 
+                       navigator.maxTouchPoints === 1;
+            }
+        };
+
+        function detectDevice() {
+            const result = document.getElementById('result');
+            const details = {
+                userAgent: navigator.userAgent,
+                maxTouchPoints: navigator.maxTouchPoints,
+                hasTouchSupport: DeviceDetector.hasTouchSupport(),
+                isMobileUA: DeviceDetector.isMobileUA(),
+                isRealMobile: DeviceDetector.isRealMobileDevice(),
+                isEmulator: DeviceDetector.isEmulator()
+            };
+
+            console.log('Device Details:', details);
+
+            if (DeviceDetector.isRealMobileDevice()) {
+                result.innerHTML = '📱 Real Mobile Device';
+                result.style.color = 'green';
+            } else if (DeviceDetector.isEmulator()) {
+                result.innerHTML = '🖥️ Mobile Emulator';
+                result.style.color = 'orange';
+            } else {
+                result.innerHTML = '💻 Browser/Desktop';
+                result.style.color = 'blue';
+            }
+        }
+
+        // Run detection
+        detectDevice();
+    </script>
+</body>
+</html>

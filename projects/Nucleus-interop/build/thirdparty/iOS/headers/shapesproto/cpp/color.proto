@@ -1,0 +1,51 @@
+syntax="proto2";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ColorProtos";
+
+import "colortweaks.proto";
+
+message Color {
+	
+	enum ColorReference {
+		HOLDER = 0; // Substitutes the holder color , Used in theme to indicate that the color choice.
+		BG1 = 1; // Background 1
+		TX1 = 2; // Text 1
+		BG2 = 3; // Background 2
+		TX2 = 4; // Text 2
+		A1 = 5; // Accent 1
+		A2 = 6; // Accent 2
+		A3 = 7; // Accent 3
+		A4 = 8; // Accent 4
+		A5 = 9; // Accent 5
+		A6 = 10; // Accent 6
+		HLINK = 11; // Hyperlink 
+		FOLLOWHLINK = 12; // Follow Hyperlink
+		CUSTOM = 13; // custom , Used in local properties of shape (fill, stroke ...) to indicate other colors.
+		LT1 = 14; // Light1 color of the theme.
+		DK1 = 15; // Dark1 color of the theme.
+	}
+	required ColorReference type = 1 [default = BG1];
+
+	repeated int32 rgb = 2; // If the type is Custom , rgb color values are stored in an array , order red , green , blue
+	
+	optional ColorTweaks tweaks = 3; 	// Color tweaks
+
+	enum ColorModelRepresentation {
+		DEFAULT_COLOR_MODEL = 0;
+		RGB = 1;
+		HSB = 2;	
+	}
+	optional ColorModelRepresentation colorModelRep = 4;
+
+	message HSBModel {
+
+		optional float hue = 1;
+		optional float saturation = 2;
+		optional float brightness = 3;
+	}
+	optional HSBModel hsb = 5;
+}
+

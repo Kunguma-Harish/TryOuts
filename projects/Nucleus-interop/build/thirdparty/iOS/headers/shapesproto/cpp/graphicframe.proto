@@ -1,0 +1,59 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "GraphicFrameProtos";
+
+import "nonvisualdrawingprops.proto";
+import "nonvisualprops.proto";
+import "locks.proto";
+import "transform.proto";
+import "chart.proto";
+import "table.proto";
+import "themesupercede.proto";
+import "uielement.proto";
+import "shapegeometry.proto";
+import "google/protobuf/protoextensions.proto";
+
+message GraphicFrame {
+
+	optional NonVisualGraphicFrameProps nvOProps = 1 [(com.zoho.common.customOptions).requiredField = true];
+	
+	optional GraphicFrameProps props = 2;
+	message GraphicFrameProps {
+		optional Transform transform = 1;
+		optional ShapeGeometry geom = 2; // needed for connectors & to draw rounded table.
+	}
+	
+	optional GraphicObject obj = 3;
+
+	message GraphicObject {
+		
+		optional GraphicObjectType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+		enum GraphicObjectType {
+			TABLE = 0;
+			CHART = 1;
+			UI_ELEMENT = 2;
+		}
+		
+		optional Table table = 2;
+		optional com.zoho.chart.Chart chart = 3;
+		optional UIElement uiElement = 4;
+
+	}				
+
+	message NonVisualGraphicFrameProps {
+
+		optional NonVisualDrawingProps nvDProps = 1 [(com.zoho.common.customOptions).requiredField = true];
+		optional NonVisualGraphicFrameDrawingProps nvODProps = 2;	
+		optional NonVisualProps nvProps = 3;
+		
+		message NonVisualGraphicFrameDrawingProps {
+			optional Locks locks = 1;
+		}	
+	}
+	
+    optional com.zoho.theme.ThemeSupercede theme = 4;
+			
+}

@@ -1,0 +1,13 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "TimeProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+message Time {
+
+	optional int64 seconds = 1 [(com.zoho.common.customOptions).requiredField = true]; // Time in CurrentTimeMillis.
+}

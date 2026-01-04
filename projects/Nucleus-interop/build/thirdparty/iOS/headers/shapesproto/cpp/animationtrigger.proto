@@ -1,0 +1,21 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "AnimationTriggerProtos";
+
+import "fields.proto";
+import "google/protobuf/protoextensions.proto";
+// Animation trigger	
+message AnimationTrigger {
+
+	optional Show.AnimationField.AnimationStart start = 1 [(com.zoho.common.customOptions).requiredField = true]; //[default = CLICK];
+
+	optional AnimationClick click = 2; // Defines Target for Click
+	message AnimationClick {		
+		optional string id = 1; // Trigger Animation on click of this shape ID.
+	}
+}
+
+	

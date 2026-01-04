@@ -1,0 +1,379 @@
+syntax="proto3";
+
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "WireframeKitProtos";
+
+message WireframeKit {
+	
+	enum ComponentType {
+		UNKNOWN_COMPONENT_TYPE = 0;
+		SCREEN = 1;
+		BUTTON = 2;
+		INPUT = 3;
+		TAB = 4;
+		DROPDOWN = 5;
+		SEARCH = 6;
+		LIST = 7;
+		CARD = 8;
+		DIALOG = 9;
+		PLACEHOLDER = 10;
+		LOADER = 11;
+		SHEET = 12;
+		DATE = 13;
+		TOOLTIP = 14;
+		TABLE = 15;
+		PAGINATION = 16;
+	}
+
+	optional ComponentType type = 1;
+
+	message ScreenComponent {
+
+		enum BaseScreenType {
+			UNKNOWN_BASE_SCREEN_TYPE = 0;
+			MOBILE = 1;
+			TABLET = 2;
+			BROWSER = 3;
+		}
+		optional BaseScreenType type = 1;
+
+		enum MobileScreenType {
+			UNKNOWN_MOBILE_SCREEN_TYPE = 0;
+			ANDROID_DEVICE = 1;
+			IOS = 2;
+		}
+		optional MobileScreenType mobileType = 2;
+
+		enum BaseResolutionType {
+			UNKNOWN_RESOLUTION_TYPE = 0;
+			SIXTEEN_BY_NINE = 1;
+			NINE_BY_SIXTEEN = 2;
+			SIXTEEN_BY_TEN = 3;
+			TEN_BY_SIXTEEN = 4;
+			FOUR_BY_THREE = 5;
+			THREE_BY_FOUR = 6;
+		}
+		optional BaseResolutionType resolution = 3;
+	}
+	optional ScreenComponent screen = 2;
+
+	enum ComponentState {
+		UNKNOWN_BUTTON_STATE = 0;
+		NORMAL = 1;
+		DISABLED = 2;
+	}
+
+
+	message ButtonComponent {
+
+		optional ComponentState state = 1;
+
+		enum ButtonCategory {
+			UNKNOWN_BUTTON_CATEGORY = 0;
+			PRIMARY = 1;
+			SECONDARY = 2;
+			TERTIARY = 3; // For text only.
+		}
+		optional ButtonCategory category = 2;
+
+		optional bool containsIcon = 3;
+	}
+	optional ButtonComponent button = 3;
+	
+	
+	message WireFrameSelectionInput {
+
+		enum SelectionInputType {
+
+			UNKNOWN_CHECKBOX_INPUT = 0;
+			SELECTED = 1;
+			UNSELECTED = 2;
+			INDETERMINATE = 3;
+		}
+	
+		optional SelectionInputType type = 1;
+
+		optional ComponentState state = 2;
+	}
+
+
+	message WireFrameInputComponent {
+
+		enum InputComponentType {
+			
+			UNKNOWN_INPUT_COMPONENT = 0;
+			TEXTFIELD = 1;
+			CHECKBOX = 2;
+			RADIO_INPUT = 3;
+			SLIDER = 4;
+			TEXTAREA = 5;
+			SWITCH = 6;
+			RATING = 7;
+			STEPPER = 8;
+			FILE = 9;
+		}
+
+		optional InputComponentType type = 1;
+	
+		optional WireFrameSelectionInput checkbox = 2;
+
+		optional WireFrameSelectionInput radio = 3;
+
+		message WireFrameTextFieldInput {
+			
+			enum TextFieldInputState {
+				UNKNOWN_TEXTFIELD = 0;
+				NORMAL = 1;
+				DISABLED = 2;
+				FOCUSED = 3;
+				ERROR = 4;
+			}
+			optional TextFieldInputState state = 1;
+		}
+		
+		optional WireFrameTextFieldInput textField = 4;
+
+		optional WireFrameTextFieldInput textArea = 5;
+
+		message WireFrameSliderInput {
+
+			enum SliderInputType {
+				UNKNOWN_SLIDER_INPUT = 0;
+				SINGLE_THUMB = 1;
+				DOUBLE_THUMB = 2;
+			}
+			optional SliderInputType type = 1;
+
+		}
+		optional WireFrameSliderInput slider = 6;
+
+		message WireFrameSwitchInput {
+			
+			enum SwitchInputType {
+				UNKNOWN_SWITCH_TYPE = 0;
+				SWITCH_ON = 1;
+				SWITCH_OFF = 2;
+			}
+			optional SwitchInputType type = 1;
+
+			optional ComponentState state = 2;
+		}
+		optional WireFrameSwitchInput switchInput = 7;   // Switch is a reserverd keyword
+
+		message WireFrameRatingInput {
+			
+			optional ComponentState state = 1;
+		}
+		optional WireFrameRatingInput rating = 8;
+
+		message WireFrameStepperInput {
+			
+			enum StepperInputType {
+				UNKNOWN_STEPPER_INPUT = 0;
+				HORIZONTAL_INCREMENT = 1;
+				VERTICAL_INCREMENT = 2;
+			}
+			optional StepperInputType type = 1;
+
+			optional ComponentState state = 2;
+		}
+		optional WireFrameStepperInput stepper = 9;
+
+		message WireFrameFileInput {
+			enum FileInputType {
+				UNKNOWN_FILE_INPUT = 0;
+				FILE_FIELD = 1;
+				FILE_DIALOG = 2;
+			}
+			optional FileInputType type = 1;
+		}
+		optional WireFrameFileInput file = 10;
+
+	}
+	optional WireFrameInputComponent input = 4;
+
+	message WireFrameTabBar {
+
+		enum TabBarType {
+			
+			UNKNOWN_TAB_BAR = 0;
+			NORMAL = 1;
+			SEGMENT_CONTROL = 2;
+			NAVIGATION_BAR = 3;
+		}
+		optional TabBarType type = 1;
+
+		message NormalTabBar {
+			enum NormalTabBarType {
+				UNKNOWN_NORMAL_TAB_BAR = 0;
+				HORIZONTAL_TAB = 1;
+				VERTICAL_TAB = 2;
+			}
+			optional NormalTabBarType type = 1;
+		}
+		optional NormalTabBar normal = 2;
+		
+	}
+	optional WireFrameTabBar tab = 5;
+
+	message WireFrameDropDown {
+		
+		enum DropDownType {
+			UNKNOWN_DROPDOWN = 0;
+			OPEN_DROPDOWN = 1;
+			CLOSED_DROPDOWN = 2;
+		}
+		optional DropDownType type = 1;
+
+		optional ComponentState state = 2;
+	}
+	optional WireFrameDropDown dropdown = 6;	
+
+	message Search {
+		enum SearchType {
+			UNKNOWN_SEARCH = 0;
+			WITH_FIELD = 1;
+			ONLY_ICON = 2;
+		}
+		optional SearchType type = 1;
+
+		optional ComponentState state = 2;
+	}
+	optional Search search = 7;
+
+	message WireFrameList {
+	
+		enum ListType {
+			UNKNOWN_LIST_TYPE = 0;
+			NORMAL_LIST = 1;
+			CHECKBOX_LIST = 2;
+			RADIO_LIST = 3;
+		}
+		optional ListType type = 1;
+
+		message NormalList {
+			
+			optional ComponentState state = 1;
+		}
+		optional NormalList normal = 2;
+
+		optional WireFrameSelectionInput checkbox = 3;
+
+		optional WireFrameSelectionInput radio = 4;		
+	}
+	optional WireFrameList list = 8;
+
+	message Card {
+		
+		enum CardType {
+			UNKNOWN_CARD = 0;
+			HORIZONTAL_SMALL = 1;
+			HORIZONTAL_LARGE = 2;
+			SQUARE = 3;
+		}
+		optional CardType type = 1;
+	}
+	optional Card card = 9;
+
+	message Dialog {
+		
+		enum DialogType {
+			UNKNOWN_DIALOG = 0;
+			BASIC = 1;
+			ALERT = 2;
+			BASIC_MODAL = 3;
+			ALERT_MODAL = 4;
+			ANDROID_BASIC = 5;
+			IOS_BASIC = 6;
+			TOAST = 7;
+		}
+		optional DialogType type = 1;
+	}
+	optional Dialog dialog = 10;
+	
+	message Placeholder {
+		
+		enum PlaceholderType {
+			UNKNOWN_PLACEHOLDER_TYPE = 0;
+			IMAGE = 1;
+			VIDEO = 2;
+			TEXT = 3;
+			SCRIBBLE = 4;
+			CAROUSEL = 5;
+		}
+		optional PlaceholderType type = 1;
+	}
+	optional Placeholder placehodler = 11;
+
+	message Loader {
+
+		enum LoaderType {
+			UNKNOWN_LOADER = 0;
+			INFINITE = 1;
+			FINITE_PROGRESS = 2;
+			INDICATE_PROGRESS = 3;
+		}
+		optional LoaderType type = 1;
+
+		enum LoaderCategory {
+			UNKNOWN_LOADER_CATEGORY = 0;
+			ICON = 1;
+			BAR = 2;
+		}
+		optional LoaderCategory category = 2;
+	}
+	optional Loader loader = 12;
+	
+	message SheetComponent {
+	
+		enum SheetComponentType {
+			UNKNOWN_SHEETCOMPONENT = 0;
+			ACTIVITY_VIEW = 1;
+			BOTTOM_SHEET = 2;
+			SIDE_DRAWER = 3;
+		}
+		optional SheetComponent type = 1;
+	}
+	optional SheetComponent sheet = 13;
+
+	message DateComponent {
+		
+		enum DateComponentType {
+			UNKNOWN_DATECOMPONENT = 0;
+			OPEN = 1;
+			CLOSED = 2;
+			PICKER = 3;
+		}
+		optional DateComponentType type = 1;
+
+		optional ComponentState state = 2;
+	}
+	optional DateComponent date = 14;
+
+	message Tooltip {
+		
+		enum TooltipType {
+			UNKNOWN_TOOLTIP = 0;
+			BASIC = 1;
+			RICH = 2;
+			MOBILE_ACTION = 3;
+		}
+		optional TooltipType type = 1;
+	}
+	optional Tooltip tooltip = 15;
+
+	message Pagination {
+		
+		enum PaginationType {
+			UNKNOWN_PAGINATION = 0;
+			PAGE_WISE = 1;
+			CIRCULAR = 2;
+
+		}
+		optional PaginationType type = 1;
+	}
+	optional Pagination pagination = 16;
+}
+

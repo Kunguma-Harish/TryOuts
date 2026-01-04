@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "जागोन";
+"SSKit.common.cancel" = "दानगार";
+"SSKit.common.continue" = "सोलिबाय था";
+"SSKit.common.untitledDocument" = "बिमुं गैयि खाख्रि";
+"SSKit.common.noNetwork" = "नेटवर्क गैया";
+"SSKit.common.noNetworkMessage" = "नोंथांनि डिभाइसआ नेटवर्कजों फोनांजाबनायखौ रोखा जा।";
+"SSKit.common.openSettings" = "सेटिंग्सखौ खुलि";
+"SSKit.common.connected" = "फोनांजाबबाय";
+"SSKit.common.connecting" = "फोनांजाबनाय";
+"SSKit.common.waiting" = "नेनाय";
+"SSKit.common.update" = "फोदान";
+"SSKit.common.minimise" = "फुदुइ";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "जुरि";
+"SSKit.slideshow.end" = "जोबथा";
+"SSKit.slideshow.currentSlide" = "%iनि %i स्लाइड";
+"SSKit.slideshow.EndOfSlideshow" = "स्लाइडस'नि जोबथा";
+"SSKit.slideshow.blackout" = "फैसालिया लांदाङै दोनजाबाय";
+"SSKit.slideshow.backToLive" = "मोगथांसिम थांफिन";
+"SSKit.slideshow.notes" = "रेबसुंफोर";
+"SSKit.slideshow.clear" = "क्लियार खालाम";
+"SSKit.slideshow.emptyNotes" = "बे स्लाइडनि थाखाय जेबो रेबसुंफोर गैया।";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "सेसना दानजाबाय";
+"SSKit.shareplay.sessionTerminated.desc" = "नोंथांनि Shareplay सेसना दानजाबाय। नोंथांनि सेसनखौ जागायफिननो थाखाय नोंथाङा बासिनो हायो।";
+
+"SSKit.shareplay.syncWithPresenter" = "दिन्थिफुंग्राजों साइनक खालाम";
+
+"SSKit.shareplay.end.title" = "जोबथा SharePlay";
+"SSKit.shareplay.end.description" = "नोंथाङा Shareplay जोबनायखौ लुबैयो ना? Shareplay जोबनाया सेसनखौ जोबहोगोन।";
+"SSKit.shareplay.requestToPresent.description" = "आ दिन्थिफुंनो खावलायदों";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "गोरोन्थि";
+"SSKit.error.message" = "मोनसे गोरोन्थि नुजाबाय।  उनाव नाजाफिन।";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "प्लेबेक अडिअ";
+"SSKit.audio.resume" = "दोनफिननाय";
+"SSKit.audio.pause" = "दोनथ’हो";
+"SSKit.audio.audioTitle" = "अडिअि";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "आपेल टिभिखौसायख'";
+"SSKit.mcPeerListing.lookingForTvs" = "एप्पल टिभिफोर नागिरदों";
+"SSKit.mcPeerListing.streamingDescription" = "नोंथांनि डिभाइसनिफ्राय एप्पल टिभिसिम स्लाइडखौ बोहैलांहोनो थाखाय।";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "जायगानि नेटवर्क हाबनायखौ हानाय खालाम आरो नाजाफिन";
+
+"SSKit.mcPeerListing.disconnect.title" = "फोनांजाबनायखौ दान";
+"SSKit.mcPeerListing.disconnect.message" = "एप्पल टिभिनिफ्राय फोनांजाबनायखौ दानगारनो नोंथाङा लुबैमारो ना?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "फोनांजाबनायखौ दान%@";
+"SSKit.mcPeerListing.updateError" = "समरा समरिफोरा गोजाम बिसानखौ सलायबाय थानायखौ नुनो मोनदों।  रोखा जा दि टिभि एपआ फोदाननाय";

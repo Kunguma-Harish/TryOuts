@@ -1,0 +1,18 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PointProtos";
+
+import "google/protobuf/protoextensions.proto";
+import "corner.proto";
+
+message Point {
+    optional float x = 1 [(com.zoho.common.customOptions).requiredField = true];
+    optional float y = 2 [(com.zoho.common.customOptions).requiredField = true];	
+
+    optional float radius = 3 [deprecated = true]; // use corner instead of radius
+    optional Corner corner = 4;
+}
+

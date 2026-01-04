@@ -1,0 +1,18 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "StickyNoteProtos";
+
+message StickyNote {
+
+  enum StickyNoteType {
+    UNKNOWN = 0;
+    SMALL = 1;
+    MEDIUM = 2;
+    LARGE = 3;
+  }
+
+  optional StickyNoteType type = 1;
+
+}

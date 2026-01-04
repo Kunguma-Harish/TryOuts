@@ -1,0 +1,34 @@
+package com.zoho.remoteboard;
+
+import "shapeobject.proto";
+import "frame.proto";
+import "document.proto";
+import "shapenodetype.proto";
+import "relationship.proto";
+// import "spot.proto";
+// import "spotresponse.proto";
+
+message Details {
+    optional int32 shapeObjectIndex = 1;
+    optional com.zoho.shapes.ShapeObject shapeObject = 2;
+    
+    optional com.zoho.remoteboard.Frame frame = 3; 
+    optional int32 frameIndex = 4;
+
+    // optional com.zoho.startwith.Spot spot = 5;
+    optional int32 spotIndex = 6;
+
+    optional com.zoho.common.Relationship rels = 7;
+    optional int32 relsIndex = 8;
+
+	// optional com.zoho.startwith.SpotResponse responseData = 9;
+    optional int32 responseIndex = 10;
+
+    optional com.zoho.remoteboard.Document.ScreenOrShapeElement element = 11;
+
+    repeated com.zoho.shapes.ShapeNodeType parentTypes = 12;
+    repeated string parentIds = 13;
+
+    optional string subType = 14;
+    optional string parentId = 15;
+}

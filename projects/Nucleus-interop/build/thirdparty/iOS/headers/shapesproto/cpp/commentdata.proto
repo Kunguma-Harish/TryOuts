@@ -1,0 +1,20 @@
+syntax="proto3";
+
+package com.zoho.comment;
+
+option java_package = "com.zoho.comment";
+option java_outer_classname = "CommentDataProtos";
+
+import "time.proto";
+import "google/protobuf/protoextensions.proto";
+
+message CommentData {
+
+	optional string userId = 1 [(com.zoho.common.customOptions).requiredField = true]; // Zoho UserId.
+
+	optional com.zoho.common.Time date = 2 [(com.zoho.common.customOptions).requiredField = true]; // Date in current time millis.
+	
+	optional string guestUser = 3; //If we at some point of time , let the guest user choose his name. 	  
+
+}
+

@@ -1,0 +1,32 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "DocumentStateProtos";
+
+import "locus.proto";
+
+message DocumentState {
+
+    optional string documentId = 1;
+
+    enum ViewMode {
+        UNKNOWN_MODE = 0;
+        FULL_CANVAS = 1;     //Full document view
+        SINGLE_SCREEN = 2;   //Single screen view
+    }
+    optional ViewMode mode = 2;
+
+    optional Locus fullCanvasView = 3;
+    
+    message SingleScreenView {
+
+        optional string screenId = 1; 
+        
+        optional Locus screenLocus = 2;
+
+    }
+
+    optional SingleScreenView singleScreenView = 4;
+
+}

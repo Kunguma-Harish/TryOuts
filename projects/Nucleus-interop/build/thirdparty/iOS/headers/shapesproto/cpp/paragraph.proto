@@ -1,0 +1,35 @@
+syntax="proto3";
+
+// A Paragrpah will contain a minimum of one portion.
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ParagraphProtos";
+
+import "parastyle.proto";
+import "portion.proto";
+import "animationdata.proto";
+import "reaction.proto";
+
+message Paragraph {
+		
+	repeated Portion portions = 1;// Portion list
+	optional ParaStyle style = 2; // Paragraph style properties.
+
+	// Do not use this , it has been replaced by the next variable.
+	optional AnimationData animData = 3; // OBSOLETE. 
+
+	// Override the Animation data present in the shape for this para alone. This should contain only overridden data.
+	// This data should not contain AnimationDatas for "Level" type text animation. 
+        // This can contain overridden animation data for all three animation types : Entry , Exit etc...	
+	repeated AnimationData animationDatas = 4;
+
+	// Comments associated with this Para.
+	repeated string commentIds = 5;                  
+
+	optional string id = 6; 	// A general ID to denote a paragraph.
+
+	repeated com.zoho.common.Reaction reactions = 7;
+ 
+}
+

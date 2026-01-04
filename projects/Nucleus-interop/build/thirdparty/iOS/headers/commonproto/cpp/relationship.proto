@@ -1,0 +1,13 @@
+syntax="proto3";
+// Contains properties of a document
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "RelationshipProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+message Relationship {
+	optional string key = 1 [(com.zoho.common.customOptions).requiredField = true]; // Database ID.
+	optional string id = 2 [(com.zoho.common.customOptions).requiredField = true]; // Unique ID.
+}

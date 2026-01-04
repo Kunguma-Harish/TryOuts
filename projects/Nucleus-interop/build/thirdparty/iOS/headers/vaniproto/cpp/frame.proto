@@ -1,0 +1,36 @@
+syntax="proto3";
+package com.zoho.remoteboard;
+
+option java_package = "com.zoho.remoteboard";
+option java_outer_classname = "FrameProtos";
+
+import "basemeta.proto";
+import "shapeobject.proto";
+import "properties.proto";
+import "reaction.proto";
+import "nonvisualframeprops.proto";
+import "framedata.proto";
+import "google/protobuf/protoextensions.proto";
+import "basekit.proto";
+
+message Frame {
+
+	optional string id = 1 [(com.zoho.common.customOptions).requiredField = true]; // Unique ID
+
+	optional com.zoho.common.BaseMeta meta = 2;
+
+	// Properties of Frame. Pos , Dim , Fill and Stroke.
+	optional com.zoho.shapes.Properties props = 3;
+
+	repeated com.zoho.shapes.ShapeObject shapes = 4; // Array of Shapes
+
+	repeated com.zoho.common.Reaction reactions = 5; //
+
+	optional NonVisualFrameProps nvOProps = 6;
+
+	optional FrameData frameData = 7;	
+
+	optional com.zoho.kits.BaseKit basekit = 8;
+
+	repeated string frameIds = 9;
+}

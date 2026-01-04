@@ -1,0 +1,33 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "CustomAnimationProtos";
+
+import "fill.proto";
+import "stroke.proto";
+import "transform.proto";
+import "customgeometry.proto";
+import "effects.proto";
+
+message CustomAnimation {
+
+	message CustomAnimationAttributes {
+
+		optional com.zoho.shapes.Transform transform = 1;
+
+		optional com.zoho.shapes.Fill fill = 2;
+		optional com.zoho.shapes.Stroke stroke = 3;
+
+		optional com.zoho.shapes.CustomGeometry path = 4;
+	
+		optional com.zoho.shapes.Effects effects = 5; // Effects list
+	}
+
+	optional CustomAnimationAttributes atStart = 1;
+	optional CustomAnimationAttributes byEnd = 2;
+
+	repeated com.zoho.shapes.CustomGeometry pathToFollow = 3; 
+}
+

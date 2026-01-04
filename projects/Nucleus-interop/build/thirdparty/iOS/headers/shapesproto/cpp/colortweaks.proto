@@ -1,0 +1,28 @@
+syntax="proto3";
+
+// Color Tweaks
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ColorTweaksProtos";
+
+import "hsltweak.proto";
+import "rgbtweak.proto";
+
+message ColorTweaks {
+	
+	// ranges from 0-1 , mix black with original color , 0.1 means 10% input color 90% black , 1 gives original color , 0 gives black
+	optional float shade = 1; 
+
+	// ranges from 0-1 , mix white with original color , 0.1 means 10% input color 90% white , 1 gives original color , 0 gives white
+	optional float tint = 2;
+	
+	// transparency ranges from 0-1 , 0 indicates none(opaque) , 1 indicates fully transparent.
+	optional float alpha = 3; 
+	
+	optional HSLTweak hsl = 4; // HSL Modification
+	  
+	optional RGBTweak rgb = 5; // RGB Modififcation	
+		
+}

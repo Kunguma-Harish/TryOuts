@@ -1,0 +1,42 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "NumberReferenceProtos";
+
+import "animateelement.proto";
+import "numberformat.proto";
+
+
+message NumberReference {
+	
+	optional string formula = 1; // This formula string can be understood only by Sheet Application.	
+
+	// We will be using NumberCache instead of this.
+	message NumCache {
+		optional string code = 1;
+		repeated float n = 2; // Array of numbers	
+	}
+	optional NumCache numCache = 2;
+
+	message NumberCache { 
+		optional float n = 1;
+	
+		optional AnimateElement animation = 2;
+
+		optional string datafieldId = 3;
+
+		optional com.zoho.common.NumberFormat numberFormat = 4;
+			
+		optional string code = 5; // Contains numberformat code used by Sheet application.
+
+	}
+	repeated NumberCache numberCache = 3;
+	
+	optional string code = 4; // Contains numberformat code used by Sheet application.
+
+	optional string datafieldId = 5;
+		
+	optional com.zoho.common.NumberFormat numberFormat = 6;
+}

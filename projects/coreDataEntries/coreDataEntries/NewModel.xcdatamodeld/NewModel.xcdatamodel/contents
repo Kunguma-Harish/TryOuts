@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23A344" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Admin" representedClassName="Admin" parentEntity="Common" syncable="YES" codeGenerationType="class">
+        <attribute name="empId" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Common" representedClassName=".Common" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="User" representedClassName=".User" parentEntity="Common" syncable="YES" codeGenerationType="class">
+        <attribute name="mail" optional="YES" attributeType="String"/>
+        <attribute name="pass" optional="YES" attributeType="String"/>
+    </entity>
+</model>

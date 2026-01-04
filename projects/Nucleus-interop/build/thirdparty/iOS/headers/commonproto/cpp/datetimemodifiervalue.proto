@@ -1,0 +1,38 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "DateTimeModifierValueProtos";
+
+import "time.proto";
+
+message DateTimeModifierValue {
+
+	enum DateTimeModifierValueType {
+		DATE = 0;
+		TIME = 1;
+		DATE_AND_TIME = 2;
+	}
+	optional DateTimeModifierValueType type = 1;			
+
+	enum DateTimeModifierValueConstant {
+		FIXED = 0;
+		REAL = 1; // Present Time.
+	}	
+	optional DateTimeModifierValueConstant constant = 2;
+
+	optional com.zoho.common.Time fixed = 3;
+	
+	enum TimeVariant {
+			
+			BASE_TIME = 0;
+			HOUR = 1;
+			MINUTE = 2;
+			SECOND = 3;
+			MERIDIEM = 4; // AM/PM
+	}
+	optional TimeVariant timeVariant = 4;
+	
+}
+

@@ -1,0 +1,24 @@
+syntax="proto3";
+
+// Reference Structure
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ReferenceProtos";
+
+import "color.proto";
+import "google/protobuf/protoextensions.proto";
+
+message Reference {
+	
+	enum Ref { 	
+		THEME = 0; // According to the theme 
+		THEMEINDEX = 1; // According to the theme index, if 1 is specificed , Theme.FillStyle[1]; ranges from 0-2.
+		CUSTOM = 2; // If the value is custom update/replace the old value.
+	}
+	
+	optional Ref ref = 1 [(com.zoho.common.customOptions).requiredField = true];
+	optional Color color = 2 [(com.zoho.common.customOptions).requiredField = true]; // Color for the reference.
+	optional int32 index = 3; // Theme Index Value. 
+}

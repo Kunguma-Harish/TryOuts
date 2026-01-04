@@ -1,0 +1,18 @@
+syntax="proto3";
+package com.zoho.remoteboard.build;
+
+option java_package = "com.zoho.remoteboard.build";
+option java_outer_classname = "DocumentDataProtos";
+
+import "document.proto";
+import "frame.proto";
+import "docbasemeta.proto";
+
+message DocumentData {
+
+	optional com.zoho.remoteboard.Document document = 1; //main document
+	
+	repeated com.zoho.remoteboard.Frame frames  = 2;
+
+	optional com.zoho.common.DocBaseMeta baseMeta = 3;
+}

@@ -1,0 +1,48 @@
+syntax="proto3";
+package com.zoho.database;
+
+option java_package = "com.zoho.database";
+option java_outer_classname = "WhereExpressionProtos";
+
+import "compositevalue.proto";
+import "fields.proto";
+import "columnidentifier.proto";
+
+message WhereExpression {
+
+	optional ColumnIdentifier column = 1;
+
+	optional Show.DatabaseField.WhereOperator whereOperator = 2;
+
+	message ComparisonClause {
+
+		optional Show.DatabaseField.ComparisonOperator comparisonOperator = 1;
+
+		optional com.zoho.common.CompositeValue value = 2;
+	}
+	optional ComparisonClause comparison = 3;
+
+	message PatternClause {
+
+		optional Show.DatabaseField.PatternOperator patternOperator = 1;
+
+		message INOperator {
+			repeated com.zoho.common.CompositeValue value = 1;
+		}
+		optional INOperator inOp = 2;
+
+		message BetweenOperator {
+			optional com.zoho.common.CompositeValue lower = 1;
+			optional com.zoho.common.CompositeValue upper = 2;
+		}
+		optional BetweenOperator betweenOp = 3;
+
+		message LikeOperator {
+			optional com.zoho.common.CompositeValue value = 1;
+		}
+		optional LikeOperator likeOp = 4;
+	}
+	optional PatternClause pattern = 4;
+}
+
+

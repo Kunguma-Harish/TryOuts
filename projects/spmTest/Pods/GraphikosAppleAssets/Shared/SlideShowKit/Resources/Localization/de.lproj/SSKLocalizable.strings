@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "OK";
+"SSKit.common.cancel" = "Abbrechen";
+"SSKit.common.continue" = "Fortsetzen";
+"SSKit.common.untitledDocument" = "Unbenanntes Dokument";
+"SSKit.common.noNetwork" = "Kein Netzwerk";
+"SSKit.common.noNetworkMessage" = "Achten Sie darauf, dass Ihr Gerät mit dem Internet verbunden ist.";
+"SSKit.common.openSettings" = "Einstellungen öffnen";
+"SSKit.common.connected" = "Verbunden";
+"SSKit.common.connecting" = "Verbinden";
+"SSKit.common.waiting" = "Warten";
+"SSKit.common.update" = "Aktualisieren";
+"SSKit.common.minimise" = "Minimieren";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "Start";
+"SSKit.slideshow.end" = "Ende";
+"SSKit.slideshow.currentSlide" = "Folie %i von %i";
+"SSKit.slideshow.EndOfSlideshow" = "Ende der Diaschau";
+"SSKit.slideshow.blackout" = "Bildschirm wurde schwarzgeschaltet.";
+"SSKit.slideshow.backToLive" = "Zurück zu Live";
+"SSKit.slideshow.notes" = "Anmerkungen";
+"SSKit.slideshow.clear" = "Aufheben";
+"SSKit.slideshow.emptyNotes" = "Es gibt keine Notizen zu dieser Folie.";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "Sitzung beendet";
+"SSKit.shareplay.sessionTerminated.desc" = "Ihre SharePlay-Sitzung wurde beendet. Sie können Ihre Sitzung auf Wunsch neu starten.";
+
+"SSKit.shareplay.syncWithPresenter" = "Mit Präsentator synchronisieren";
+
+"SSKit.shareplay.end.title" = "SharePlay beenden";
+"SSKit.shareplay.end.description" = "Möchten Sie SharePlay wirklich beenden? Damit wird auch Ihre Sitzung beendet.";
+"SSKit.shareplay.requestToPresent.description" = "bittet um Präsentation";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "Fehler";
+"SSKit.error.message" = "Fehler aufgetreten. Probieren Sie es nach etwas Wartezeit noch einmal";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "Audio abspielen";
+"SSKit.audio.resume" = "Fortsetzen";
+"SSKit.audio.pause" = "Anhalten";
+"SSKit.audio.audioTitle" = "Audio";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "Apple TV wählen";
+"SSKit.mcPeerListing.lookingForTvs" = "Suche nach Apple TVs";
+"SSKit.mcPeerListing.streamingDescription" = "Zum Folienstreamen von Ihrem Gerät zum Apple TV.";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "Aktivieren Sie lokalen Netzwerkzugriff, probieren Sie es anschließend noch einmal.";
+
+"SSKit.mcPeerListing.disconnect.title" = "Trennen";
+"SSKit.mcPeerListing.disconnect.message" = "Möchten Sie Apple TV wirklich trennen?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@ trennen";
+"SSKit.mcPeerListing.updateError" = "Der Kollege arbeitet offenbar mit einer älteren Version. Bitte sorgen Sie dafür, dass die TV-App auf dem neuesten Stand ist";

@@ -1,0 +1,53 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "CompositeValueProtos";
+
+import "fields.proto";
+import "value.proto";
+import "google/protobuf/protoextensions.proto";
+
+message CompositeValue {	
+
+	optional Show.CommonField.CompositeValueType type = 1;
+
+	optional Value basic = 2;
+
+	repeated Value array = 3;
+
+	message Matrix {
+
+		optional int32 row = 1 [(com.zoho.common.customOptions).requiredField = true]; // Number of rows
+
+		optional int32 column = 2 [(com.zoho.common.customOptions).requiredField = true]; // Number of columns
+
+		repeated Value values = 3;// Values ordered as in matrix terms. A matrix of 2*3 will have 6 values. The first three values denote the first row and the next three represent the second one. 
+	}
+
+	optional Matrix matrix = 4;				
+	
+	message DataMap {
+
+		message HashMap {
+
+			optional Value key = 1;
+			
+			repeated Value value = 2;
+		}
+		repeated HashMap hashMaps = 1;
+	}
+	optional DataMap dataMap = 5;
+
+	message JSONMap {
+
+		message Map {
+            
+			optional string key = 1;
+
+			optional CompositeValue value = 2;
+		}
+		repeated Map maps = 1;
+	}
+	optional JSONMap jsonMap = 6;
+}

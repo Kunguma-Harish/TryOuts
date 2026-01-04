@@ -1,0 +1,82 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "PlotAreaProtos";
+
+import "properties.proto";
+import "textbody.proto";
+import "manuallayout.proto";
+import "chartaxis.proto";
+import "datalabels.proto";
+import "google/protobuf/protoextensions.proto";
+import "barchart.proto";
+import "bar3dchart.proto";
+import "linechart.proto";
+import "line3dchart.proto";
+import "areachart.proto";
+import "piechart.proto";
+import "pie3dchart.proto";
+import "representivepiechart.proto";
+import "doughnutchart.proto";
+import "scatterchart.proto";
+import "bubblechart.proto";
+
+import "fields.proto";
+
+message PlotArea {
+
+	message ChartDetails {
+		
+		optional Show.ChartField.ChartType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+		// Unique Identifier for each axis. We will have two entries in this for x and y axis. 
+		// The ids will basically map itself with the catAx and valAx Ids present in plotarea.	
+		repeated string axisId = 2;
+		
+		optional bool varyColors = 3; // To determine if each data-point has a different color or not.	
+	
+		// Data Label details for entire series.			
+		optional DataLabels dataLabel = 4;
+
+		optional Show.ChartField.Grouping grouping = 5;	
+
+		optional BarChart bar = 6;
+		optional Bar3DChart bar3d = 7; 
+		optional LineChart line = 8;
+		optional Line3DChart line3d = 9; 
+		optional AreaChart area = 10;
+		optional PieChart pie = 11;
+		optional Pie3DChart pie3d = 12;
+		optional RepresentivePieChart reppie = 13;
+		optional DoughnutChart doughnut = 14;
+		optional ScatterChart scatter = 15;
+		optional BubbleChart bubble = 16;
+		
+	}	
+	repeated ChartDetails chart = 1;	
+	
+		
+	// Category , Value, Date , Series Axis details.
+	repeated ChartAxis axis = 2;	
+	
+	optional ManualLayout layout  = 3;
+
+	// Values for DataTable. 
+	// DataTable will be drawn if we this entry.	
+	message DataTable {
+		optional bool horizontalBorder = 1; // Display Horizontal Border or not.
+		optional bool verticalBorder = 2; // Display Vertical Border or not.
+		optional bool outline = 3; // Display outline or not.
+		optional bool legendKeys = 4; // Display legend keys or not.
+
+		optional com.zoho.shapes.Properties props = 5;
+		optional com.zoho.shapes.TextBody textBody = 6;
+	}
+	optional DataTable dataTable = 4;		 
+
+	optional com.zoho.shapes.Properties props = 5;	
+		
+}
+

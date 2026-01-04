@@ -1,0 +1,16 @@
+version: "Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)"
+options: "a3726e7d81d696a1dc96c3b6f970e3cca669da84e8296a1cc0f2152f3b4ede2f"
+build_start_time: [1719484043, 265943000]
+build_end_time: [1719484047, 499155000]
+inputs:
+  ? "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/DerivedSources/CoreDataGenerated/spmTest/Item+CoreDataClass.swift"
+  : [1719484043, 224802068]
+  ? "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/DerivedSources/CoreDataGenerated/spmTest/Item+CoreDataProperties.swift"
+  : [1719484043, 225524726]
+  ? "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/DerivedSources/CoreDataGenerated/spmTest/spmTest+CoreDataModel.swift"
+  : [1719484043, 222051808]
+  ? "/Users/kunguma-14252/Documents/projects/spmTest/build/spmTest.build/Release/spmTest.build/DerivedSources/GeneratedAssetSymbols.swift"
+  : [1719484042, 872948426]
+  "/Users/kunguma-14252/Documents/projects/spmTest/spmTest/ContentView.swift": [1718604761, 472015695]
+  "/Users/kunguma-14252/Documents/projects/spmTest/spmTest/Persistence.swift": [1717482447, 238459295]
+  "/Users/kunguma-14252/Documents/projects/spmTest/spmTest/spmTestApp.swift": [1717674277, 766222395]

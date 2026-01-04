@@ -1,0 +1,20 @@
+syntax="proto3";
+package com.zoho.database;
+
+option java_package = "com.zoho.database";
+option java_outer_classname = "DatabaseTableRowProtos";
+
+import "compositevalue.proto";
+import "columnidentifier.proto";
+
+message DatabaseTableRow {
+
+	optional string rowId = 1;
+
+	message TableCell {
+		optional ColumnIdentifier cell = 1;
+
+		optional com.zoho.common.CompositeValue value = 2;
+	}
+	repeated TableCell cells = 2;
+}	

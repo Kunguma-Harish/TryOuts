@@ -1,0 +1,94 @@
+{
+  "main_library": {
+    "exported_symbols": [
+      {
+        "data": {
+          "global": [
+            "_ZMacAuthVersionNumber",
+            "_kSecAttrKeySizeInBitsLength",
+            "_ZMacAuthVersionString"
+          ],
+          "objc_class": [
+            "ZMacAuth",
+            "PodsDummy_ZMacAuth",
+            "ZMacAuthKeyChainWrapper",
+            "ZMacAuthLoginViewController",
+            "ZMacAuthKeyPairUtil",
+            "ZMacAuthZIAMUtil",
+            "ZMacAuthNetworkManager",
+            "ZMacAuthUser",
+            "ZMacAuthProfileData"
+          ],
+          "objc_ivar": [
+            "ZMacAuthZIAMUtil.wmsCallBack",
+            "ZMacAuthZIAMUtil.sfview",
+            "ZMacAuthZIAMUtil.finalScopeEnhancementFailureBlock",
+            "ZMacAuthZIAMUtil.BaseUrl",
+            "ZMacAuthZIAMUtil.ClientID",
+            "ZMacAuthZIAMUtil.serialDispatchQueue",
+            "ZMacAuthZIAMUtil.endProgressBlock",
+            "ZMacAuthZIAMUtil.cachedFrequentlyUsedItemsDict",
+            "ZMacAuthZIAMUtil.expiresinMillis",
+            "ZMacAuthZIAMUtil.ScopeEnhancementUrl",
+            "ZMacAuthZIAMUtil.endPreloginProgressBlock",
+            "ZMacAuthZIAMUtil.finalSuccessBlock",
+            "ZMacAuthZIAMUtil.ContactsUrl",
+            "ZMacAuthZIAMUtil.setClientSecret",
+            "ZMacAuthZIAMUtil.setExpiresIn",
+            "ZMacAuthZIAMUtil.UrlParams",
+            "ZMacAuthZIAMUtil.setBas64DCL_Meta_Data",
+            "ZMacAuthZIAMUtil.UrlScheme",
+            "ZMacAuthZIAMUtil.User_ZUID",
+            "ZMacAuthZIAMUtil.UnconfirmedUserURL",
+            "ZMacAuthZIAMUtil.context",
+            "ZMacAuthZIAMUtil.setRefreshToken",
+            "ZMacAuthZIAMUtil.setProfileInfoDict",
+            "ZMacAuthZIAMUtil.logger",
+            "ZMacAuthZIAMUtil.stackBlocksDictionary",
+            "ZMacAuthZIAMUtil.setLocation",
+            "ZMacAuthZIAMUtil.finalFailureBlock",
+            "ZMacAuthZIAMUtil.setProfileImageData",
+            "ZMacAuthZIAMUtil.finalScopeEnhancementSuccessBlock",
+            "ZMacAuthZIAMUtil.setAccountsServerURL",
+            "ZMacAuthZIAMUtil.SignUpUrl",
+            "ZMacAuthZIAMUtil.setAccessToken",
+            "ZMacAuthZIAMUtil.Scopes",
+            "ZMacAuthZIAMUtil.showProgressBlock",
+            "ZMacAuthZIAMUtil.contentView",
+            "ZMacAuthZIAMUtil.AddSecondaryEmailURL",
+            "ZMacAuthZIAMUtil.finalAddEmailIDBlock",
+            "ZMacAuthZIAMUtil.showPreloginProgressBlock",
+            "ZMacAuthZIAMUtil.AppName",
+            "ZMacAuthZIAMUtil.ClientSecret"
+          ]
+        },
+        "text": {
+          "global": [
+            "_NewBase64Decode",
+            "_NewBase64Encode",
+            "_encodeLength"
+          ]
+        }
+      }
+    ],
+    "flags": [
+      {
+        "attributes": [
+          "not_app_extension_safe"
+        ]
+      }
+    ],
+    "install_names": [
+      {
+        "name": "@rpath/ZMacAuth.framework/Versions/A/ZMacAuth"
+      }
+    ],
+    "target_info": [
+      {
+        "min_deployment": "11",
+        "target": "arm64-macos"
+      }
+    ]
+  },
+  "tapi_tbd_version": 5
+}

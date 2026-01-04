@@ -1,0 +1,11 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "VerticalAlignTypeProtos";
+
+enum VerticalAlignType {
+	MIDDLE = 0;
+	TOP = 1;
+	BOTTOM = 2;
+}

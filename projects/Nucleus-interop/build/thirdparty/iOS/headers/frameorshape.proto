@@ -1,0 +1,10 @@
+package com.zoho.remoteboard;
+
+import "frame.proto";
+import "shapeobject.proto";
+
+
+message FrameOrShape{
+    repeated com.zoho.remoteboard.Frame frames = 1; 
+    repeated com.zoho.shapes.ShapeObject shapes = 2;
+}

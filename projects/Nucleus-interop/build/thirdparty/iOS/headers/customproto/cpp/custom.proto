@@ -1,0 +1,18 @@
+syntax="proto3";
+// custom docOp component for remoteboard/whiteboard
+
+package com.zoho.collaboration;
+
+option java_package = "com.zoho.collaboration";
+option java_outer_classname = "CustomProtos";
+
+message Custom {
+
+	message DocumentOrdering {
+		repeated string documentIds = 1;	//blue print ids of current documentIds in a project
+		optional string documentId = 2;	// id to be inserted
+	}
+
+	optional DocumentOrdering documentOrdering = 1;
+}
+

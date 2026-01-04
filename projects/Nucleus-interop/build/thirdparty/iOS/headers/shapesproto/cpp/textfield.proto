@@ -1,0 +1,42 @@
+syntax="proto3";
+// Text portion.
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "TextFieldProtos";
+
+import "fields.proto";
+import "userfield.proto";
+import "tagfield.proto";
+import "smarttextfield.proto";
+import "google/protobuf/protoextensions.proto";
+
+message TextField {
+	
+	enum FieldType {
+		DEF_TEXT_FIELD_TYPE = 0;
+		DATETIME = 1;
+		SLIDENUM = 2;
+		USER = 3; // Refers to a zoho user.
+		TAG = 4; // Refers to a tag.
+		SMART = 5;
+		DATAFIELD = 6;
+		EMOJI = 7;
+	}
+	optional FieldType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+	optional Show.PortionField.DateTimeField datetime = 2;
+	optional Show.PortionField.SlideNumberField slidenum = 3;	
+	optional com.zoho.common.UserField user = 4;		
+	optional com.zoho.common.TagField tag = 5;	
+	optional SmartTextField smart = 6;
+
+	optional string datafieldId = 7;
+	
+	message EmojiField {
+	    optional string unicode = 1;
+	}
+	
+	optional EmojiField emoji = 8;
+
+}

@@ -1,0 +1,28 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PointOnPathProtos";
+
+message PointOnPath{
+
+    message PathSegmentIdentifier{
+        // Here pathListIndex defines the index of the pathList of the shape
+        // and edgeIndex defines the index of the pathObject in that particular pathList
+        // If the shape is a custom shape - The pathObject will be part of the data
+        // In case of PRESET Shapes, the path is predefined and the Index is calculated from the predefined paths.
+
+        optional int32 pathListIndex = 1;
+        optional int32 edgeIndex = 2;    // Edge (PathObject Index in terms of proto definintion)
+    }
+
+    optional PathSegmentIdentifier pathSegmentIdentifier = 2;
+
+    // The "distance" has a value from 0 - 1.
+    //0 - being the start of the pathsegment and
+    //1 - being the end of the path segment.
+    // The basic idea is to have the ratio of distance of the point located in that particular pathsegment from the given vertex.
+
+    optional float distance = 3;     
+}

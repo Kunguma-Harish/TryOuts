@@ -1,0 +1,58 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "SmartTextProtos";
+
+import "datetimemodifiervalue.proto";
+
+message SmartText {
+
+	enum SmartTextType {
+		DEF_SMART_TEXT_TYPE = 0;
+		UNKNOWN_SMART_FIELDTYPE = 1;
+		NUMERIC = 2;
+		ALPHABETIC = 3;
+		CONTENT = 4;			
+		DATETIME = 5;	
+	}
+
+	optional SmartTextType type = 1;
+
+	enum OrderMethodology {
+
+		UNKNOWN_METHODOLOGY = 0;
+		ASCENDING = 1;
+		DESCENDING = 2;
+		RANDOM = 3;
+	}
+	optional OrderMethodology  orderBy = 2;
+
+
+	message NumericSmartText { 
+
+		optional float start = 1;
+		optional float end = 2;
+	}
+
+	optional NumericSmartText numeric = 3;
+
+	message ContentSmartText { 
+
+		repeated string content = 1;
+	}
+
+	optional ContentSmartText content = 4;
+
+	message AlphabeticSmartText {
+
+		optional string start = 1;
+		optional string end = 2;
+	}
+	optional AlphabeticSmartText alphabetic = 5;
+
+	optional com.zoho.common.DateTimeModifierValue datetime = 6;
+
+}
+

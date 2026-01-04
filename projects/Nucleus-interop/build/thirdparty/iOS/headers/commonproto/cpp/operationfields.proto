@@ -1,0 +1,91 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "OperationFieldsProtos";
+
+message OperationFields {
+    enum OperationFieldType {
+        UNKNOWN_OPERATION = 0;
+        MEMBER = 1;
+        SHARE = 2;
+        FILE = 3;
+        PUBLISH = 4;
+        EDIT = 5;
+    }
+
+    enum MemberOperationType {
+        UNKNOWN_MEMBER = 0;
+        REQUEST_TO_ADD = 1; // User requesting team admin to join the team
+        REQUEST_TO_ADD_INITIATED = 2;
+        ADDED = 3;
+        REMOVED = 4;
+        REQUEST_APPROVED = 5; // admin accepting user's request to join the team
+        REQUEST_DENIED = 6; // admin denying user's request to join the team
+        USER_INVITE_SENT = 7; // admin inviting a new user to the team
+    }
+
+    enum ShareOperationType {
+        UNKNOWN_SHARE_PERMISSION = 0;
+        VIEW = 1;
+        COMMENT_SHARE = 2;
+        EDIT_SHARE = 3;
+        CO_OWNER = 4;
+        REMOVE_SHARE = 5;
+        REQUEST_ACCESS = 6;
+        SHARE_REQUEST_DENIED = 7;
+        SHARE_REQUEST_APPROVED = 8;
+    }
+
+    enum FileOperationType{
+        UNKNOWN_FILE = 0;
+        CREATE = 1;
+        UPLOAD = 2;
+        COPY = 3;
+        TRASH = 4;
+        RESTORE = 5;
+    }
+
+    enum PublishOperationType {
+        UNKNOWN_PUBLISH = 0;
+        BASE = 1;   // Published for all collaborators
+        TEAM = 2;   // Team wide publish
+        ORG = 3;    // Org wide publish
+        WORLD = 4;  // World wide publish
+    }
+
+    enum EditOperationType {
+        UNKNOWN_EDIT = 0;
+        MODIFY = 1;
+        COMMENT = 2;
+        MENTION = 3;
+    }
+
+    enum ModifyOperationType {
+        UNKNOWN_MODIFY = 0;
+        META = 1;
+        CONTENT = 2;
+    }
+
+    enum CommentOperationType {
+        UNKNOWN_COMMENT = 0;
+        MENTION_COMMENT = 1;
+        REPLY = 2;
+        NEW = 3;
+        REACTION = 4;
+    }
+
+    enum MetaOperationType {
+		UNKNOWN_META_TYPE = 0;
+		RENAME = 1;
+		STATUS = 2;
+	}
+
+    enum CatchupOperationType {
+        UNKNOWN_CATCHUP = 0;
+        CATCHUP_IN_PROGRESS = 1;
+        SCHEDULED = 2;
+        DONE = 3;
+    }
+
+}

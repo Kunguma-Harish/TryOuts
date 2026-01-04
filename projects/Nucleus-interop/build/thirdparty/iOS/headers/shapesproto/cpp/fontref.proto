@@ -1,0 +1,12 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "FontRefProtos";
+
+enum FontRef {
+	MAJOR = 0;
+	MINOR = 1;
+	EMBEDDED = 2;
+}

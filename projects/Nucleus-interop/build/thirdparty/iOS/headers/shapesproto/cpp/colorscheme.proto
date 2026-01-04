@@ -1,0 +1,33 @@
+syntax="proto3";
+// Color style for the presentation
+package com.zoho.theme;
+
+option java_package = "com.zoho.theme";
+option java_outer_classname = "ColorSchemeProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+message ColorScheme  {
+	optional string id= 1 [(com.zoho.common.customOptions).requiredField = true]; // unique Id for the scheme.
+	optional string name = 2; // Color scheme can be from a different theme. 
+	optional ColorStyle colorStyle = 3 [(com.zoho.common.customOptions).requiredField = true];
+	message ColorStyle { 
+		repeated int32 dark1 = 1; // Dark Color for background , usually black
+		repeated int32 light1 = 2; // Light Color for text , usually white
+		repeated int32 dark2 = 3; // Dark color for background.
+		repeated int32 light2 = 4;// Light color for text.
+		repeated int32 accent1 = 5;// Accent Color 1 , will be used for objects drawn over the slide.
+		repeated int32 accent2 = 6;// Accent Color 2
+		repeated int32 accent3 = 7;// Accent Color 3
+		repeated int32 accent4 = 8;// Accent Color 4
+		repeated int32 accent5 = 9;// Accent Color 5
+		repeated int32 accent6 = 10;// Accent Color 6
+		repeated int32 hlink = 11; // for hyper link
+		repeated int32 followhlink = 12; // for followed hyper link
+	}
+	optional bool modified = 4; // Indicates whether the fontscheme has been modified or not. Will be updated for imported presentations too. 
+	
+	// Theme document ID. This is only temporary data , any code should check for schemes (and any other needed stuffs) using this document id and if not present should continue its check in the full list of docs.
+	optional string themeId = 99; 
+
+}

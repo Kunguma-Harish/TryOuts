@@ -1,0 +1,104 @@
+syntax="proto2";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ParaStyleProtos";
+
+import "margin.proto";
+import "color.proto";
+import "font.proto";
+import "portionprops.proto";
+import "horizontalaligntype.proto";
+import "picturevalue.proto";
+import "stylereferencedetails.proto";
+import "spacing.proto";
+
+message ParaStyle {
+	
+	optional com.zoho.common.HorizontalAlignType halign = 1 [default = LEFT]; // text horizontal alignment.
+	
+	optional int32 level = 2; // The level for the paragraph
+
+	message ListStyle {	
+
+		message BulletData {
+			enum BulletType {
+				NONE = 0;
+				CHARACTER = 1;
+				NUMBER = 2;
+				PICTURE = 3;
+				SELECTABLE = 4;
+			}
+			required BulletType type = 1 ; //[ default = NONE ]; // list type
+
+			message CharacterBullet {
+				required string ch = 1 ;  // Bullet unicode character.
+			}
+			optional CharacterBullet character = 2; // Character Bullet.
+			
+			message NumberedBullet {
+				enum NumberedBulletType {
+					NUMERIC = 0; // Numeric
+					UCROMAN = 1; // Upper Case Roman
+					LCROMAN = 2; // Lower Case Roman
+					UCALPHABET = 3; // Upper Case Alphabet
+					LCALPHABET = 4; // Lower Case Alphabet
+				}
+				required NumberedBulletType type = 1 ; // numbered bullet type
+
+				optional string prefix = 2; // Bullet to end with.
+				optional string suffix = 3; // Bullet to start with.
+
+				optional int32 startat = 4 [ default = 1 ]; // start the number at.
+			}
+			optional NumberedBullet number =  3;
+
+			message PictureBullet {
+				required PictureValue value = 1 ;
+			}
+			optional PictureBullet picture = 4;
+
+			message SelectableBullet {
+				enum SelectableBulletType {
+					UNKNOWN_SELECTABLE = 0;
+					SQUARE_SELECT = 1;
+					ROUND_SELECT = 2;
+				}
+				optional SelectableBulletType type = 1;
+
+				optional bool isSelected = 2;
+
+				enum SelectedStyle {
+					UNKNOWN_SELECTEDSTATE = 0;
+					TICK_STYLE = 1;
+					DOT_STYLE = 2;
+					DASH_STYLE = 3;
+				}
+				optional SelectedStyle selectedStyle = 3;
+			}
+			optional SelectableBullet selectable = 5;
+			
+		}
+		optional BulletData bullet = 1;	
+		optional Font font = 2; // font for the bullet.
+		optional Color color = 3; // Color for the bullet.
+		optional float size = 4; // Size of the bullet , depends on the font size of the para, ranges from 0-any. 0.1 represents 10% of font size
+	}
+	optional ListStyle listStyle = 3; // list style
+
+	optional com.zoho.common.Spacing spacing = 4;
+
+	optional Margin margin = 5; // Margin Left will be used for Paragrpah bullets. Will be in Pixels.
+	optional float indent = 6; // To indent the first line of the paragraph. For bullets the value will be in negative, shifting the bullet character alone
+	optional LangDirection dir = 7; //[default = LTR];
+	enum LangDirection {
+		LTR = 0;
+		RTL = 1;
+	} 
+
+	// Used by text styles to have Proerties for the Portion.
+	optional PortionProps defPrProps = 8;
+
+	optional StyleReferenceDetails styleRef = 9; 
+}

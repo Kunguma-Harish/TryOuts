@@ -1,0 +1,17 @@
+syntax="proto3";
+package com.zoho.common; 
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "DataLinkProtos";
+
+import "datafield.proto";
+import "datasource.proto";
+import "google/protobuf/protoextensions.proto";
+
+message DataLink {
+
+	optional DataField dataField = 1 [(com.zoho.common.customOptions).requiredField = true];
+		
+	optional DataSource dataSource = 2;
+}
+

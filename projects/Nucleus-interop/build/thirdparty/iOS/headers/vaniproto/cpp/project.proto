@@ -1,0 +1,34 @@
+syntax="proto3";
+
+package com.zoho.remoteboard;
+
+option java_package = "com.zoho.remoteboard";
+option java_outer_classname = "ProjectProtos";
+
+import "basemeta.proto";
+import "projectstate.proto";
+import "sketchtool.proto";
+import "projectdefaults.proto";
+
+message Project {
+	
+	// Document list - maintained order wise
+	repeated string documentIds = 1;
+	
+	optional com.zoho.common.BaseMeta meta = 2;
+	
+	message ProjectDetailMapping {
+		optional string zuid = 1;
+
+		optional ProjectState state = 2;
+		
+		optional ProjectDefaults defaults = 3;
+		
+		// Additional Pencil or Sketch for the user.
+		repeated SketchTool sketchTools = 4;
+	}
+
+	repeated ProjectDetailMapping mappings = 3	[deprecated = true];	// Use the ProjectUserDetails proto mapped to the project
+	
+
+}

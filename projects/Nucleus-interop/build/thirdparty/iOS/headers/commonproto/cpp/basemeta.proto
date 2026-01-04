@@ -1,0 +1,14 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "BaseMetaProtos";
+
+message BaseMeta {
+	
+	optional string name = 1;
+	
+	optional string description = 2;
+
+}
+

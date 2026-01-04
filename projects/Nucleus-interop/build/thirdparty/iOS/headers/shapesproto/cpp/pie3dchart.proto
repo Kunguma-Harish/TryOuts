@@ -1,0 +1,13 @@
+syntax="proto3";
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "Pie3DChartProtos";
+
+import "piechartdetails.proto";
+import "google/protobuf/protoextensions.proto";
+
+message Pie3DChart {
+
+	optional PieChartDetails details = 1 [(com.zoho.common.customOptions).requiredField = true];
+}

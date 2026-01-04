@@ -1,0 +1,40 @@
+syntax="proto3";
+package com.zoho.remoteboard;
+
+option java_package = "com.zoho.remoteboard";
+option java_outer_classname = "FrameDataProtos";
+
+import "elementcategory.proto";
+
+
+message FrameData {
+
+	enum FrameType {
+
+		UNKNOWN_FRAME_TYPE = 0;
+		PAGE = 1;
+	}
+	optional FrameType type = 1;
+
+	message PageFrame {
+
+		enum PageFrameType {
+
+			UNKNOWN_PAGE_FRAME_TYPE = 0;
+			A4 = 1;
+			A3 = 2;
+		}
+		optional PageFrameType type = 1;
+
+		enum PageFrameSubType {
+			UNKNOWN_PAGE_FRAME_SUB_TYPE = 0;
+			JOURNAL = 1;
+			ESSAY = 2;
+			NOTES = 3;
+		}
+		optional PageFrameSubType subType = 2;
+	}
+	optional PageFrame page = 2;
+
+	optional com.zoho.common.ElementCategory category = 3;
+}

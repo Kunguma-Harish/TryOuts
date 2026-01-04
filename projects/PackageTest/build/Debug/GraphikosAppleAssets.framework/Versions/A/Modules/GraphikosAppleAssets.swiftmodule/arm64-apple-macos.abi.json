@@ -1,0 +1,1862 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GraphikosAppleAssets",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AppKit.NSFontManager",
+        "printedName": "AppKit.NSFontManager",
+        "declKind": "Import",
+        "moduleName": "GraphikosAppleAssets"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FontHandler",
+        "printedName": "FontHandler",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FontHandler",
+                "printedName": "GraphikosAppleAssets.FontHandler",
+                "usr": "c:@M@GraphikosAppleAssets@objc(cs)FontHandler"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20GraphikosAppleAssets11FontHandlerC6sharedACvpZ",
+            "mangledName": "$s20GraphikosAppleAssets11FontHandlerC6sharedACvpZ",
+            "moduleName": "GraphikosAppleAssets",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FontHandler",
+                    "printedName": "GraphikosAppleAssets.FontHandler",
+                    "usr": "c:@M@GraphikosAppleAssets@objc(cs)FontHandler"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20GraphikosAppleAssets11FontHandlerC6sharedACvgZ",
+                "mangledName": "$s20GraphikosAppleAssets11FontHandlerC6sharedACvgZ",
+                "moduleName": "GraphikosAppleAssets",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "isAvailable",
+            "printedName": "isAvailable(fontFamily:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GraphikosAppleAssets11FontHandlerC11isAvailable10fontFamilySbSS_tF",
+            "mangledName": "$s20GraphikosAppleAssets11FontHandlerC11isAvailable10fontFamilySbSS_tF",
+            "moduleName": "GraphikosAppleAssets",
+            "isOpen": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isAvailable",
+            "printedName": "isAvailable(fontName:familyName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GraphikosAppleAssets11FontHandlerC11isAvailable8fontName06familyI0SbSSSg_SStF",
+            "mangledName": "$s20GraphikosAppleAssets11FontHandlerC11isAvailable8fontName06familyI0SbSSSg_SStF",
+            "moduleName": "GraphikosAppleAssets",
+            "isOpen": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPostscriptName",
+            "printedName": "getPostscriptName(forFamily:withStyle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GraphikosAppleAssets11FontHandlerC17getPostscriptName9forFamily9withStyleSSSgSS_SStF",
+            "mangledName": "$s20GraphikosAppleAssets11FontHandlerC17getPostscriptName9forFamily9withStyleSSSgSS_SStF",
+            "moduleName": "GraphikosAppleAssets",
+            "isOpen": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getNullableFontID",
+            "printedName": "getNullableFontID(forFamily:withStyle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GraphikosAppleAssets11FontHandlerC011getNullableD2ID9forFamily9withStyleSSSgSS_SStF",
+            "mangledName": "$s20GraphikosAppleAssets11FontHandlerC011getNullableD2ID9forFamily9withStyleSSSgSS_SStF",
+            "moduleName": "GraphikosAppleAssets",
+            "isOpen": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "modifiedFamilyName",
+            "printedName": "modifiedFamilyName(forFontFamily:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GraphikosAppleAssets11FontHandlerC18modifiedFamilyName03fordG0S2S_tF",
+            "mangledName": "$s20GraphikosAppleAssets11FontHandlerC18modifiedFamilyName03fordG0S2S_tF",
+            "moduleName": "GraphikosAppleAssets",
+            "isOpen": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getFontNames",
+            "printedName": "getFontNames(forFamily:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GraphikosAppleAssets11FontHandlerC03getD5Names9forFamilySaySSGSS_tF",
+            "mangledName": "$s20GraphikosAppleAssets11FontHandlerC03getD5Names9forFamilySaySSGSS_tF",
+            "moduleName": "GraphikosAppleAssets",
+            "isOpen": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getDefaultFontId",
+            "printedName": "getDefaultFontId(forStyle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GraphikosAppleAssets11FontHandlerC010getDefaultD2Id8forStyleS2S_tF",
+            "mangledName": "$s20GraphikosAppleAssets11FontHandlerC010getDefaultD2Id8forStyleS2S_tF",
+            "moduleName": "GraphikosAppleAssets",
+            "isOpen": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getStyleId",
+            "printedName": "getStyleId(forFont:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GraphikosAppleAssets11FontHandlerC10getStyleId03forD0S2S_tF",
+            "mangledName": "$s20GraphikosAppleAssets11FontHandlerC10getStyleId03forD0S2S_tF",
+            "moduleName": "GraphikosAppleAssets",
+            "isOpen": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getFontWeightLabel",
+            "printedName": "getFontWeightLabel(forStyle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GraphikosAppleAssets11FontHandlerC03getD11WeightLabel8forStyleSSSgSS_tF",
+            "mangledName": "$s20GraphikosAppleAssets11FontHandlerC03getD11WeightLabel8forStyleSSSgSS_tF",
+            "moduleName": "GraphikosAppleAssets",
+            "isOpen": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "convertPixelValueToPoints",
+            "printedName": "convertPixelValueToPoints(pixelValue:scale:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GraphikosAppleAssets11FontHandlerC25convertPixelValueToPoints05pixelH05scale14CoreFoundation7CGFloatVAI_AItF",
+            "mangledName": "$s20GraphikosAppleAssets11FontHandlerC25convertPixelValueToPoints05pixelH05scale12CoreGraphics7CGFloatVAI_AItF",
+            "moduleName": "GraphikosAppleAssets",
+            "isOpen": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "convertPointValueToPixels",
+            "printedName": "convertPointValueToPixels(pointValue:scale:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GraphikosAppleAssets11FontHandlerC25convertPointValueToPixels05pointH05scale14CoreFoundation7CGFloatVAI_AItF",
+            "mangledName": "$s20GraphikosAppleAssets11FontHandlerC25convertPointValueToPixels05pointH05scale12CoreGraphics7CGFloatVAI_AItF",
+            "moduleName": "GraphikosAppleAssets",
+            "isOpen": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@GraphikosAppleAssets@objc(cs)FontHandler",
+        "mangledName": "$s20GraphikosAppleAssets11FontHandlerC",
+        "moduleName": "GraphikosAppleAssets",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GraphikosAppleAssets",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Debugger",
+        "printedName": "Debugger",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "debug",
+            "printedName": "debug(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GraphikosAppleAssets8DebuggerO5debugyyypFZ",
+            "mangledName": "$s20GraphikosAppleAssets8DebuggerO5debugyyypFZ",
+            "moduleName": "GraphikosAppleAssets",
+            "static": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "warn",
+            "printedName": "warn(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GraphikosAppleAssets8DebuggerO4warnyyypFZ",
+            "mangledName": "$s20GraphikosAppleAssets8DebuggerO4warnyyypFZ",
+            "moduleName": "GraphikosAppleAssets",
+            "static": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deInit",
+            "printedName": "deInit(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExistentialMetatype",
+                "printedName": "AnyObject.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GraphikosAppleAssets8DebuggerO6deInityyyXlXpFZ",
+            "mangledName": "$s20GraphikosAppleAssets8DebuggerO6deInityyyXlXpFZ",
+            "moduleName": "GraphikosAppleAssets",
+            "static": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20GraphikosAppleAssets8DebuggerO",
+        "mangledName": "$s20GraphikosAppleAssets8DebuggerO",
+        "moduleName": "GraphikosAppleAssets",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GraphikosAppleAssets",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Bundle",
+        "printedName": "Bundle",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "graphikosAppleAssets",
+            "printedName": "graphikosAppleAssets",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So8NSBundleC20GraphikosAppleAssetsE09graphikoscD0ABvpZ",
+            "mangledName": "$sSo8NSBundleC20GraphikosAppleAssetsE09graphikoscD0ABvpZ",
+            "moduleName": "GraphikosAppleAssets",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So8NSBundleC20GraphikosAppleAssetsE09graphikoscD0ABvgZ",
+                "mangledName": "$sSo8NSBundleC20GraphikosAppleAssetsE09graphikoscD0ABvgZ",
+                "moduleName": "GraphikosAppleAssets",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "BundleType",
+            "printedName": "BundleType",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "showAssets",
+                "printedName": "showAssets",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.Bundle.BundleType.Type) -> Foundation.Bundle.BundleType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BundleType",
+                        "printedName": "Foundation.Bundle.BundleType",
+                        "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "Foundation.Bundle.BundleType.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "BundleType",
+                            "printedName": "Foundation.Bundle.BundleType",
+                            "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO04showD0yA2EmF",
+                "mangledName": "$sSo8NSBundleC20GraphikosAppleAssetsE10BundleTypeO04showD0yA2EmF",
+                "moduleName": "GraphikosAppleAssets"
+              },
+              {
+                "kind": "Var",
+                "name": "showResources",
+                "printedName": "showResources",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.Bundle.BundleType.Type) -> Foundation.Bundle.BundleType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BundleType",
+                        "printedName": "Foundation.Bundle.BundleType",
+                        "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "Foundation.Bundle.BundleType.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "BundleType",
+                            "printedName": "Foundation.Bundle.BundleType",
+                            "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO13showResourcesyA2EmF",
+                "mangledName": "$sSo8NSBundleC20GraphikosAppleAssetsE10BundleTypeO13showResourcesyA2EmF",
+                "moduleName": "GraphikosAppleAssets"
+              },
+              {
+                "kind": "Var",
+                "name": "painterResources",
+                "printedName": "painterResources",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.Bundle.BundleType.Type) -> Foundation.Bundle.BundleType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BundleType",
+                        "printedName": "Foundation.Bundle.BundleType",
+                        "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "Foundation.Bundle.BundleType.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "BundleType",
+                            "printedName": "Foundation.Bundle.BundleType",
+                            "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO16painterResourcesyA2EmF",
+                "mangledName": "$sSo8NSBundleC20GraphikosAppleAssetsE10BundleTypeO16painterResourcesyA2EmF",
+                "moduleName": "GraphikosAppleAssets"
+              },
+              {
+                "kind": "Var",
+                "name": "renderingResources",
+                "printedName": "renderingResources",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.Bundle.BundleType.Type) -> Foundation.Bundle.BundleType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BundleType",
+                        "printedName": "Foundation.Bundle.BundleType",
+                        "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "Foundation.Bundle.BundleType.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "BundleType",
+                            "printedName": "Foundation.Bundle.BundleType",
+                            "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO18renderingResourcesyA2EmF",
+                "mangledName": "$sSo8NSBundleC20GraphikosAppleAssetsE10BundleTypeO18renderingResourcesyA2EmF",
+                "moduleName": "GraphikosAppleAssets"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Bundle.BundleType?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BundleType",
+                        "printedName": "Foundation.Bundle.BundleType",
+                        "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO8rawValueAESgSS_tcfc",
+                "mangledName": "$sSo8NSBundleC20GraphikosAppleAssetsE10BundleTypeO8rawValueAESgSS_tcfc",
+                "moduleName": "GraphikosAppleAssets",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO8rawValueSSvp",
+                "mangledName": "$sSo8NSBundleC20GraphikosAppleAssetsE10BundleTypeO8rawValueSSvp",
+                "moduleName": "GraphikosAppleAssets",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO8rawValueSSvg",
+                    "mangledName": "$sSo8NSBundleC20GraphikosAppleAssetsE10BundleTypeO8rawValueSSvg",
+                    "moduleName": "GraphikosAppleAssets",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO",
+            "mangledName": "$sSo8NSBundleC20GraphikosAppleAssetsE10BundleTypeO",
+            "moduleName": "GraphikosAppleAssets",
+            "isFromExtension": true,
+            "enumRawTypeName": "String",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "getBundle",
+            "printedName": "getBundle(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "usr": "c:objc(cs)NSBundle"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BundleType",
+                "printedName": "Foundation.Bundle.BundleType",
+                "usr": "s:So8NSBundleC20GraphikosAppleAssetsE10BundleTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So8NSBundleC20GraphikosAppleAssetsE9getBundle3forA2bCE0F4TypeO_tFZ",
+            "mangledName": "$sSo8NSBundleC20GraphikosAppleAssetsE9getBundle3forA2bCE0F4TypeO_tFZ",
+            "moduleName": "GraphikosAppleAssets",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSBundle",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "objc_name": "NSBundle",
+        "declAttributes": [
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NSFont",
+        "printedName": "NSFont",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "fontFamilyName",
+            "printedName": "fontFamilyName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So6NSFontC20GraphikosAppleAssetsE14fontFamilyNameSSvp",
+            "mangledName": "$sSo6NSFontC20GraphikosAppleAssetsE14fontFamilyNameSSvp",
+            "moduleName": "GraphikosAppleAssets",
+            "isOpen": true,
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So6NSFontC20GraphikosAppleAssetsE14fontFamilyNameSSvg",
+                "mangledName": "$sSo6NSFontC20GraphikosAppleAssetsE14fontFamilyNameSSvg",
+                "moduleName": "GraphikosAppleAssets",
+                "isOpen": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSFont",
+        "moduleName": "AppKit",
+        "isOpen": true,
+        "objc_name": "NSFont",
+        "declAttributes": [
+          "ObjC",
+          "NonSendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "String",
+        "printedName": "String",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "matches",
+            "printedName": "matches(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:SS20GraphikosAppleAssetsE7matchesySbSSF",
+            "mangledName": "$sSS20GraphikosAppleAssetsE7matchesySbSSF",
+            "moduleName": "GraphikosAppleAssets",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:SS",
+        "mangledName": "$sSS",
+        "moduleName": "Swift",
+        "declAttributes": [
+          "Frozen"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CodingKeyRepresentable",
+            "printedName": "CodingKeyRepresentable",
+            "usr": "s:s22CodingKeyRepresentableP",
+            "mangledName": "$ss22CodingKeyRepresentableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_HasContiguousBytes",
+            "printedName": "_HasContiguousBytes",
+            "usr": "s:s19_HasContiguousBytesP",
+            "mangledName": "$ss19_HasContiguousBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_CustomPlaygroundQuickLookable",
+            "printedName": "_CustomPlaygroundQuickLookable",
+            "usr": "s:s30_CustomPlaygroundQuickLookableP",
+            "mangledName": "$ss30_CustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "TextOutputStream",
+            "printedName": "TextOutputStream",
+            "usr": "s:s16TextOutputStreamP",
+            "mangledName": "$ss16TextOutputStreamP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "TextOutputStreamable",
+            "printedName": "TextOutputStreamable",
+            "usr": "s:s20TextOutputStreamableP",
+            "mangledName": "$ss20TextOutputStreamableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByBuiltinUnicodeScalarLiteral",
+            "printedName": "_ExpressibleByBuiltinUnicodeScalarLiteral",
+            "usr": "s:s41_ExpressibleByBuiltinUnicodeScalarLiteralP",
+            "mangledName": "$ss41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByBuiltinExtendedGraphemeClusterLiteral",
+            "printedName": "_ExpressibleByBuiltinExtendedGraphemeClusterLiteral",
+            "usr": "s:s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByBuiltinStringLiteral",
+            "printedName": "_ExpressibleByBuiltinStringLiteral",
+            "usr": "s:s34_ExpressibleByBuiltinStringLiteralP",
+            "mangledName": "$ss34_ExpressibleByBuiltinStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByStringLiteral",
+            "printedName": "ExpressibleByStringLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringLiteralType",
+                "printedName": "StringLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s26ExpressibleByStringLiteralP",
+            "mangledName": "$ss26ExpressibleByStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ExtendedGraphemeClusterLiteralType",
+                "printedName": "ExtendedGraphemeClusterLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByUnicodeScalarLiteral",
+            "printedName": "ExpressibleByUnicodeScalarLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarLiteralType",
+                "printedName": "UnicodeScalarLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BidirectionalCollection",
+            "printedName": "BidirectionalCollection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Character",
+                    "printedName": "Swift.Character",
+                    "usr": "s:SJ"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Index",
+                "printedName": "Index",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Index",
+                    "printedName": "Swift.String.Index",
+                    "usr": "s:SS5IndexV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Substring",
+                    "printedName": "Swift.Substring",
+                    "usr": "s:Ss"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Indices",
+                "printedName": "Indices",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultIndices",
+                    "printedName": "Swift.DefaultIndices<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SI"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SK",
+            "mangledName": "$sSK"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Collection",
+            "printedName": "Collection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Character",
+                    "printedName": "Swift.Character",
+                    "usr": "s:SJ"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Index",
+                "printedName": "Index",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Index",
+                    "printedName": "Swift.String.Index",
+                    "usr": "s:SS5IndexV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "Swift.String.Iterator",
+                    "usr": "s:SS8IteratorV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Substring",
+                    "printedName": "Swift.Substring",
+                    "usr": "s:Ss"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Indices",
+                "printedName": "Indices",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultIndices",
+                    "printedName": "Swift.DefaultIndices<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SI"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sl",
+            "mangledName": "$sSl"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sequence",
+            "printedName": "Sequence",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Character",
+                    "printedName": "Swift.Character",
+                    "usr": "s:SJ"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "Swift.String.Iterator",
+                    "usr": "s:SS8IteratorV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:ST",
+            "mangledName": "$sST"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Comparable",
+            "printedName": "Comparable",
+            "usr": "s:SL",
+            "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "StringProtocol",
+            "printedName": "StringProtocol",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UTF8View",
+                "printedName": "UTF8View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UTF8View",
+                    "printedName": "Swift.String.UTF8View",
+                    "usr": "s:SS8UTF8ViewV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "UTF16View",
+                "printedName": "UTF16View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UTF16View",
+                    "printedName": "Swift.String.UTF16View",
+                    "usr": "s:SS9UTF16ViewV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarView",
+                "printedName": "UnicodeScalarView",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UnicodeScalarView",
+                    "printedName": "Swift.String.UnicodeScalarView",
+                    "usr": "s:SS17UnicodeScalarViewV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Substring",
+                    "printedName": "Swift.Substring",
+                    "usr": "s:Ss"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sy",
+            "mangledName": "$sSy"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByStringInterpolation",
+            "printedName": "ExpressibleByStringInterpolation",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringInterpolation",
+                "printedName": "StringInterpolation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultStringInterpolation",
+                    "printedName": "Swift.DefaultStringInterpolation",
+                    "usr": "s:s26DefaultStringInterpolationV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s32ExpressibleByStringInterpolationP",
+            "mangledName": "$ss32ExpressibleByStringInterpolationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LosslessStringConvertible",
+            "printedName": "LosslessStringConvertible",
+            "usr": "s:s25LosslessStringConvertibleP",
+            "mangledName": "$ss25LosslessStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RangeReplaceableCollection",
+            "printedName": "RangeReplaceableCollection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Substring",
+                    "printedName": "Swift.Substring",
+                    "usr": "s:Ss"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sm",
+            "mangledName": "$sSm"
+          },
+          {
+            "kind": "Conformance",
+            "name": "MirrorPath",
+            "printedName": "MirrorPath",
+            "usr": "s:s10MirrorPathP",
+            "mangledName": "$ss10MirrorPathP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSString",
+                    "printedName": "Foundation.NSString",
+                    "usr": "c:objc(cs)NSString"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Transferable",
+            "printedName": "Transferable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Representation",
+                "printedName": "Representation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some CoreTransferable.TransferRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransferRepresentation",
+                        "printedName": "CoreTransferable.TransferRepresentation",
+                        "usr": "s:16CoreTransferable22TransferRepresentationP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Sendable",
+                        "printedName": "Swift.Sendable",
+                        "usr": "s:s8SendableP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:16CoreTransferable0B0P",
+            "mangledName": "$s16CoreTransferable0B0P"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/kunguma-14252\/Documents\/projects\/spmTest\/Pods\/GraphikosAppleAssets\/Shared\/AssetManager\/Core\/Utilities\/Bundle+Helpers.swift",
+      "kind": "StringLiteral",
+      "offset": 491,
+      "length": 12,
+      "value": "\"ShowAssets\""
+    },
+    {
+      "filePath": "\/Users\/kunguma-14252\/Documents\/projects\/spmTest\/Pods\/GraphikosAppleAssets\/Shared\/AssetManager\/Core\/Utilities\/Bundle+Helpers.swift",
+      "kind": "StringLiteral",
+      "offset": 533,
+      "length": 15,
+      "value": "\"ShowResources\""
+    },
+    {
+      "filePath": "\/Users\/kunguma-14252\/Documents\/projects\/spmTest\/Pods\/GraphikosAppleAssets\/Shared\/AssetManager\/Core\/Utilities\/Bundle+Helpers.swift",
+      "kind": "StringLiteral",
+      "offset": 581,
+      "length": 18,
+      "value": "\"PainterResources\""
+    },
+    {
+      "filePath": "\/Users\/kunguma-14252\/Documents\/projects\/spmTest\/Pods\/GraphikosAppleAssets\/Shared\/AssetManager\/Core\/Utilities\/Bundle+Helpers.swift",
+      "kind": "StringLiteral",
+      "offset": 634,
+      "length": 20,
+      "value": "\"RenderingResources\""
+    },
+    {
+      "filePath": "\/Users\/kunguma-14252\/Documents\/projects\/spmTest\/Pods\/GraphikosAppleAssets\/Shared\/AssetManager\/Core\/Utilities\/Bundle+Helpers.swift",
+      "kind": "StringLiteral",
+      "offset": 491,
+      "length": 12,
+      "value": "\"ShowAssets\""
+    },
+    {
+      "filePath": "\/Users\/kunguma-14252\/Documents\/projects\/spmTest\/Pods\/GraphikosAppleAssets\/Shared\/AssetManager\/Core\/Utilities\/Bundle+Helpers.swift",
+      "kind": "StringLiteral",
+      "offset": 533,
+      "length": 15,
+      "value": "\"ShowResources\""
+    },
+    {
+      "filePath": "\/Users\/kunguma-14252\/Documents\/projects\/spmTest\/Pods\/GraphikosAppleAssets\/Shared\/AssetManager\/Core\/Utilities\/Bundle+Helpers.swift",
+      "kind": "StringLiteral",
+      "offset": 581,
+      "length": 18,
+      "value": "\"PainterResources\""
+    },
+    {
+      "filePath": "\/Users\/kunguma-14252\/Documents\/projects\/spmTest\/Pods\/GraphikosAppleAssets\/Shared\/AssetManager\/Core\/Utilities\/Bundle+Helpers.swift",
+      "kind": "StringLiteral",
+      "offset": 634,
+      "length": 20,
+      "value": "\"RenderingResources\""
+    },
+    {
+      "filePath": "\/Users\/kunguma-14252\/Documents\/projects\/spmTest\/Pods\/GraphikosAppleAssets\/Shared\/AssetManager\/Core\/Utilities\/FontHandler.swift",
+      "kind": "Dictionary",
+      "offset": 753,
+      "length": 882,
+      "value": "[(\"100\", [\"Thin\"]), (\"200\", [\"ExtraLight\", \"UltraLight\"]), (\"300\", [\"Light\"]), (\"400\", [\"\", \"Regular\", \"Roman\", \"Inline\"]), (\"500\", [\"Medium\"]), (\"600\", [\"DemiBold\", \"SemiBold\"]), (\"700\", [\"Bold\", \"Solid\"]), (\"800\", [\"Heavy\", \"ExtraBold\"]), (\"900\", [\"Black\"]), (\"100i\", [\"ThinItalic\", \"ThinOblique\"]), (\"200i\", [\"ExtraLightItalic\", \"UltraLightItalic\", \"ExtraLightOblique\", \"UltraLightOblique\"]), (\"300i\", [\"LightItalic\", \"LightOblique\"]), (\"400i\", [\"Italic\", \"Oblique\"]), (\"500i\", [\"MediumItalic\", \"MediumOblique\"]), (\"600i\", [\"DemiBoldItalic\", \"SemiBoldItalic\", \"DemiBoldOblique\", \"SemiBoldOblique\"]), (\"700i\", [\"BoldItalic\", \"BoldOblique\"]), (\"800i\", [\"HeavyItalic\", \"HeavyOblique\", \"ExtraBoldItalic\", \"ExtraBoldOblique\"]), (\"900i\", [\"BlackItalic\", \"BlackOblique\"])]"
+    },
+    {
+      "filePath": "\/Users\/kunguma-14252\/Documents\/projects\/spmTest\/Pods\/GraphikosAppleAssets\/Shared\/AssetManager\/Core\/Utilities\/FontHandler.swift",
+      "kind": "Dictionary",
+      "offset": 1699,
+      "length": 520,
+      "value": "[(\"100\", \"Thin\"), (\"100i\", \"Thin Italic\"), (\"200\", \"Ultralight\"), (\"200i\", \"Ultralight Italic\"), (\"300\", \"Light\"), (\"300i\", \"Light Italic\"), (\"400\", \"Regular\"), (\"400i\", \"Italic\"), (\"500\", \"Medium\"), (\"500i\", \"Medium Italic\"), (\"600\", \"Demibold\"), (\"600i\", \"Demibold Italic\"), (\"700\", \"Bold\"), (\"700i\", \"Bold Italic\"), (\"800\", \"Heavy\"), (\"800i\", \"Heavy Italic\"), (\"900\", \"Black\"), (\"900i\", \"Black Italic\")]"
+    },
+    {
+      "filePath": "\/Users\/kunguma-14252\/Documents\/projects\/spmTest\/Pods\/GraphikosAppleAssets\/Shared\/AssetManager\/Core\/Utilities\/FontHandler.swift",
+      "kind": "FloatLiteral",
+      "offset": 9025,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/kunguma-14252\/Documents\/projects\/spmTest\/Pods\/GraphikosAppleAssets\/Shared\/AssetManager\/Core\/Utilities\/FontHandler.swift",
+      "kind": "FloatLiteral",
+      "offset": 9195,
+      "length": 3,
+      "value": "1.0"
+    }
+  ]
+}

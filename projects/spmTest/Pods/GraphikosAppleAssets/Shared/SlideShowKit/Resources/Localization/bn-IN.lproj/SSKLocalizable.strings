@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "ঠিক আছে";
+"SSKit.common.cancel" = "বাতিল করুন";
+"SSKit.common.continue" = "এগিয়ে চলুন";
+"SSKit.common.untitledDocument" = "শিরোনামহীন ডকুমেন্ট";
+"SSKit.common.noNetwork" = "নেটওয়ার্ক নেই";
+"SSKit.common.noNetworkMessage" = "নিশ্চিত করুন আপনার ডিভাইসটি ইন্টারনেটের সাথে সংযুক্ত|";
+"SSKit.common.openSettings" = "সেটিংস খুলুন";
+"SSKit.common.connected" = "সংযোগ স্থাপন করা হয়েছে";
+"SSKit.common.connecting" = "সংযোগ স্থাপন করা হচ্ছে";
+"SSKit.common.waiting" = "অপেক্ষারত";
+"SSKit.common.update" = "আপডেট করুন";
+"SSKit.common.minimise" = "মিনিমাইজ করুন";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "সূচনা";
+"SSKit.slideshow.end" = "শেষ";
+"SSKit.slideshow.currentSlide" = "%i-এর %i স্লাইড";
+"SSKit.slideshow.EndOfSlideshow" = "স্লাইডশো শেষ হলো";
+"SSKit.slideshow.blackout" = "স্ক্রীন ব্ল্যাক আউট করা হয়েছে";
+"SSKit.slideshow.backToLive" = "লাইভে ফিরে";
+"SSKit.slideshow.notes" = "নোটসমূহ";
+"SSKit.slideshow.clear" = "পরিষ্কার করুন";
+"SSKit.slideshow.emptyNotes" = "এই স্লাইডটির জন্য কোন নোট উপলব্ধ নেই।";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "অধিবেশন সমাপ্ত";
+"SSKit.shareplay.sessionTerminated.desc" = "আপনার শেয়ারপ্লের সেশন বন্ধ করা হয়েছে। আপনি আপনার সেশন পুনরায় আরম্ভ করা বেছে নিতে পারেন।";
+
+"SSKit.shareplay.syncWithPresenter" = "উপস্থাপকের সাথে সিঙ্ক করুন";
+
+"SSKit.shareplay.end.title" = "শেয়ারপ্লে শেষ করুন";
+"SSKit.shareplay.end.description" = "আপনি কি শেয়ারপ্লে শেষ করতে চান? শেয়ারপ্লে শেষ হলে সেশনটি বন্ধ হয়ে যাবে।";
+"SSKit.shareplay.requestToPresent.description" = "উপস্থাপন করার জন্য অনুরোধ করছেন";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "ত্রুটি";
+"SSKit.error.message" = "কোনো ত্রুটি ঘটেছে। পরে আবার চেষ্টা করুন";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "প্লেব্যাক অডিও";
+"SSKit.audio.resume" = "পুনরারম্ভ করুন";
+"SSKit.audio.pause" = "পজ করুন";
+"SSKit.audio.audioTitle" = "অডিও";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "আপনার Apple টিভি নির্বাচন করুন";
+"SSKit.mcPeerListing.lookingForTvs" = "Apple টিভি খুঁজছি";
+"SSKit.mcPeerListing.streamingDescription" = "আপনার ডিভাইস থেকে Apple TV-তে স্লাইডগুলি স্ট্রিম করতে।";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "স্থানীয় নেটওয়ার্কের অ্যাক্সেস সক্ষম করুন এবং আবার চেষ্টা করুন";
+
+"SSKit.mcPeerListing.disconnect.title" = "বিচ্ছিন্ন করুন";
+"SSKit.mcPeerListing.disconnect.message" = "আপনি কি নিশ্চিত যে আপনি Apple TV থেকে বিচ্ছিন্ন হতে চান?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "%@ বিচ্ছিন্ন করুন";
+"SSKit.mcPeerListing.updateError" = "মনে হচ্ছে পিয়ার পুরোনো সংস্করণে চলছে। নিশ্চিত করুন যে TV অ্যাপটি আপ-টু-ডেট আছে";

@@ -1,0 +1,373 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "NotificationsProtos";
+
+import "fields.proto";
+import "time.proto";
+import "operationfields.proto";
+import "picproperties.proto";
+
+message Notifications {
+
+	message NotificationDetails {
+
+		enum NotificationType {
+			UNKNOWN_NOTIFICATION_TYPE = 0;
+			ORGANISATION = 1;
+			PROJECT = 2;
+		}
+
+		optional ProjectLevelNotification project = 1;
+
+		optional NotificationStatus status = 2;
+
+        optional NotificationType type = 3;
+
+		optional OrgLevelNotification organisation = 4;
+
+	}
+
+	repeated NotificationDetails notificationDetails = 1;
+
+	optional string lastConsumedId = 2;	    // Last read notification id
+}
+
+// This is to store the consumption of notification.
+// Consumer details for each notification is stored here. This could get overwhelming when we have a notification shared with millions of consumers , but for now we do not have such a case.
+
+message NotificationStatus {
+
+	enum Status {
+		UNKNOWN = 0;
+		UNREAD = 1;
+		READ = 2;
+	}
+	optional Status status = 1;
+
+	message Consumer {
+
+		optional com.zoho.common.Time time = 1;
+
+		message DeviceDetails {
+
+			enum DeviceType {
+
+				UNKNOWN_DEVICE = 0;
+				BROWSER = 1;
+				IOS = 2;
+				ANDROID_DEVICE = 3;
+			}
+			optional DeviceType type = 1;
+
+			message BrowserDetails {
+
+				enum BrowserName {
+					UNKNOWN_BROWSER = 0;
+					CHROME = 1;
+					FIREFOX = 2;
+					IE = 3;
+					EDGE = 4;
+					SAFARI = 5;
+				}
+				optional BrowserName name = 1;
+
+				optional string version = 2;
+			}
+
+			optional BrowserDetails browser = 2;
+
+			message OSDetails {
+				enum OSName {
+					UNKNOWN_OS = 0;
+					MACOS = 1;
+					IOS = 2;
+					TVOS = 3;
+					WATCHOS = 4;
+					ANDROID_OS = 5;
+					WINDOWS = 6;
+					CHROME_OS = 7;
+					LINUX = 8;
+				}
+				optional OSName name = 1;
+				optional string version = 2;
+			}
+			optional OSDetails os = 3;
+
+			optional string model = 4; // To store model of the device - IPhone 7 etc..
+
+		}
+		optional DeviceDetails device = 2;
+	}
+
+	optional Consumer consumer = 2;
+
+}
+
+message ResourceMeta {
+
+	optional string name = 1;
+
+	optional string description = 2;
+}
+
+message UserDetails {
+
+	optional string name = 1;
+
+	optional string nickName = 2;
+}
+
+message MemberDetails {
+
+	optional string id = 1;
+
+	optional UserDetails meta = 2;
+}
+
+message OrgDetails {
+
+    optional string id = 1;
+
+    optional ResourceMeta meta = 2;
+}
+
+message RenameDetails {
+
+	optional string name = 1;
+
+	optional string previousName = 2;
+}
+
+
+// Notification details.
+message ProjectLevelNotification {
+
+	optional string id = 1;
+
+	// Refers to Project in Nila and Board in RB
+	optional DocDetails project = 5;
+
+	message DocDetails {
+
+		// Refers to ProjectId for a project and documentId for a document
+		optional string resourceId = 1;
+
+		// ZUID of the creator , will help us identify if the doc is shared or owned.
+		optional string creatorId = 2;
+
+		enum ResourceType {
+			UNKNOWN = 0;
+			NON_NATIVE = 1;
+			NATIVE = 2;
+		}
+		optional ResourceType type = 3;
+
+		optional ResourceMeta meta = 4;
+
+		// this maintains the meta details for creator.
+		optional UserDetails creatorMeta = 5;
+
+		// this field maintains the org details for the project
+		optional OrgDetails org = 6;
+
+        // this maintains the team details for the project
+        optional OrgDetails team = 7;
+	}
+
+	// This refers to the documents in Show , Pages in Nila and Spaces in RB.
+	repeated DocDetails documents = 2;
+
+
+	message Operation {
+	    enum OperationType {
+			NO_OPERATION = 0;
+			SHARE = 1;
+			REMOVE_SHARE = 2;
+			CREATE = 3;
+			UPLOAD = 4;
+			COPY = 5;
+			TRASH = 6;
+			RESTORE = 7;
+			VIEW = 8;
+			EDIT = 9;
+			PUBLISH = 10;
+			CATCHUP = 11;
+			EXTERNAL_SHARE = 12;
+		}
+
+		optional OperationType type = 1;
+
+		optional string by = 2; // ZUID of the user who performed the operation.
+
+		optional com.zoho.common.OperationFields.EditOperationType editOperation =  3;
+
+		message ModifiedDetails {
+
+			optional com.zoho.common.OperationFields.ModifyOperationType modifyOperation = 1;
+
+			// FrameID refers to Slide in Show , ArtBoard/Screen in Nila , Frame/Container in RB.
+			optional string frameId = 2;
+
+		}
+		optional ModifiedDetails modifiedDetails = 4;
+
+		optional UserDetails byMeta = 5;
+
+		message CommentDetails {
+
+			optional com.zoho.common.OperationFields.CommentOperationType commentOperation = 1;
+
+			// Actual comment Id which contains the mention or constitutes the reply.
+			optional string commentId = 2;
+
+			// The ID of the comment for which the reply was added.
+			optional string repliedToId = 3;
+
+			// Commented text
+			optional string content = 4;
+
+            // pictures associated with the comment
+			repeated PicProperties pictures = 5;
+
+		}
+		optional CommentDetails commentDetails = 6;
+
+		message SharedDetails {
+			optional com.zoho.common.OperationFields.ShareOperationType permission = 1;
+
+			// ZUID of the user who shared the presentation.
+			optional string sharedBy = 2;
+
+			repeated MemberDetails memberDetails = 3;
+
+			optional string performedBy = 4; //ZUID of the user who approved or denied or raised the request (varies based on ShareOperationType)
+
+		}
+		optional SharedDetails sharedDetails = 7;
+
+		message MentionDetails {
+
+			message AssociatedObject {
+
+				optional string objectId = 1;
+
+				// FrameID refers to Slide in Show , ArtBoard/Screen in Nila , Frame/Container in RB.
+				optional string frameId = 2;
+			}
+			optional AssociatedObject association = 1;
+
+			// Mention text
+			optional string content = 4;
+
+		}
+		optional MentionDetails mentionDetails = 8;
+
+		message PublishDetails {
+
+			optional com.zoho.common.OperationFields.PublishOperationType type = 1;
+
+			optional string notes = 2;
+
+		}
+		optional PublishDetails publishDetails = 9;
+
+		message MetaDetails {
+
+        	optional com.zoho.common.OperationFields.MetaOperationType type = 1;
+
+        	message DocumentStatusDetails {
+
+                optional Show.DocumentStatusField.DocumentStatusType statusType = 1;
+
+                optional Show.DocumentStatusField.DocumentStatusType previousStatusType = 2;
+
+        		optional string notes = 3;
+
+        	}
+        	optional DocumentStatusDetails documentStatusDetails = 2;
+        }
+
+		optional MetaDetails metaDetails = 10;
+
+		message CatchupDetails {
+
+			optional com.zoho.common.OperationFields.CatchupOperationType catchupOperation = 1;
+
+			// catchupId
+			optional string catchupId = 2;
+
+			// Scheduled Time
+			optional com.zoho.common.Time time = 3;
+
+		}
+		optional CatchupDetails catchupDetails = 11;
+
+		message ExternalShareDetails {
+			optional com.zoho.common.OperationFields.ShareOperationType permission = 1;
+
+			optional bool hasPassword = 2;
+
+			message ExpiryDetails{
+				optional bool hasExpiryDate = 1;
+				optional com.zoho.common.Time expiryTime = 2;
+			}
+			optional ExpiryDetails expiryDetails = 3;
+		}
+
+		optional ExternalShareDetails externalShareDetails = 12;
+
+	}
+	optional Operation operation = 3;
+
+	optional com.zoho.common.Time time = 4;
+}
+
+message OrgLevelNotification {
+
+	optional string id = 1;
+
+	optional OrgDetails org = 2;
+
+	optional OrgDetails team = 3;
+
+	message Operation {
+
+		optional com.zoho.common.OperationFields.OperationFieldType type = 1;
+
+		optional com.zoho.common.OperationFields.MemberOperationType functionalType = 2;
+
+		optional string by = 3;
+
+		optional UserDetails byMeta = 4;
+
+		repeated MemberDetails memberDetails = 5;
+
+		optional Show.MemberField.MemberRoleType previousRole = 6;
+
+		optional Show.MemberField.MemberRoleType role = 7;
+
+		optional com.zoho.common.OperationFields.EditOperationType editType = 8;
+
+		message ModifiedDetails {
+
+			optional com.zoho.common.OperationFields.ModifyOperationType modifyOperation = 1;
+
+			message MetaDetails {
+
+				optional com.zoho.common.OperationFields.MetaOperationType type = 1;
+
+				optional RenameDetails renameDetails = 2;
+			}
+
+			optional MetaDetails metaDetails = 2;
+
+		}
+
+		optional ModifiedDetails modifiedDetails = 9;
+	}
+	optional Operation operation = 4;
+
+	optional com.zoho.common.Time time = 5;
+}

@@ -1,0 +1,49 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "PathObjectProtos";
+import "point.proto";
+
+import "google/protobuf/protoextensions.proto";
+
+// This defines the edge of a shape - Defining the path where to reach and how ?
+message PathObject {
+	
+	optional PathType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+	enum PathType {
+		M = 0;
+		L = 1;
+		CC = 2;
+		QC = 3;
+		C = 4;
+		EA = 5;
+		SCC = 6;
+		SQC = 7;	
+	}	
+
+	optional Point m = 2; // move to this point
+	optional Point l = 3; // draw line to this point
+	repeated Point cc = 4; // Cubic Curve , carries three points -> Control point 1 , Control Point 2 , End Point.
+	repeated Point qc = 5; // Quadratic Curve , carries two points -> Control Point1 , End Point.
+	optional bool c = 6; // Close the path
+
+	message EllipticalArc {
+		optional float xRadius = 1 [(com.zoho.common.customOptions).requiredField = true]; // X Radius
+		optional float yRadius = 2 [(com.zoho.common.customOptions).requiredField = true]; // Y Radius
+		optional float stAngle = 3 [(com.zoho.common.customOptions).requiredField = true]; // Starting Angle
+		optional float swAngle = 4 [(com.zoho.common.customOptions).requiredField = true]; // Sweep Angle in clockwise direction.
+		optional Point end = 5; // End point for the Arc
+	}
+	optional EllipticalArc ea = 7;
+
+	// Symmetric Cubic Curve - Contains two Points -> Control Point 1, End Point. The First Control point is assumed to be the reflection of the second control point of the previous command or the current point
+	repeated Point scc = 8;
+	
+	// Symmetric Quadratic Curve - Contains one Point -> End point. The Control point is assumed to be the reflection of the control point of the previous command or the current point.
+	repeated Point sqc = 9;
+
+	// Indicates the presence of control along with path values - mainly used by M and QC types.
+	optional bool editControlPoint = 10;
+}

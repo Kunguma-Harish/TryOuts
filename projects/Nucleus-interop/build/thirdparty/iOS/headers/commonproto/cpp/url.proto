@@ -1,0 +1,298 @@
+syntax="proto3";
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "URLProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+message URL {
+
+	enum ProtocolScheme {
+		NO_SCHEME = 0;
+		HTTP = 1;
+		HTTPS = 2;
+	}
+
+	optional ProtocolScheme scheme = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	message DomainName {
+
+		/** These are the allowed list of domains
+		 *  we have added extension like _COM , _NET to it because two different companies could hold the _COM , _NET domains
+		 *  Ex : bold.com , bold.io , We should be sure which one is allowed.
+		 *
+		 *	We have followed this process to validate the user requested domain
+		 *	https://writer.zoho.com/writer/open/ahaoa1c057b560751483a95d33e3aef6bed54
+		 */
+		enum AllowedDomains {
+
+			NO_DOMAIN = 0;
+			YOUKU_COM = 1;
+			SCREENCAST_COM = 2;
+			GOANIMATE_COM = 3;
+			_24TRU_COM = 4;
+			HISTORY_COM = 5;
+			SOUNDCLOUD_COM = 6;
+			REVERBNATION_COM = 7;
+			VOCAROO_COM = 8;
+			PREZI_COM = 9;
+			SCHOOLTUBE_COM = 10;
+			_4SHARED_COM = 11;
+			YOUTUBE_COM = 12;
+			SALESFORCE_COM = 13;
+			TEACHERTUBE_COM = 14;
+			ANIMOTO_COM = 15;
+			VIDDLER_COM = 16;
+			_360CITIES_NET = 17;
+			VOICETHREAD_COM = 18;
+			DOTSUB_COM = 19;
+			LIVESTREAM_COM = 20;
+			TED_COM = 21;
+			BLIP_TV = 22;
+			FLICKR_COM = 23;
+			VIMEO_COM = 24;
+			DAILYMOTION_COM = 25;
+			SLIDESHARE_NET = 26;
+			YAHOO_COM = 27;
+			FACEBOOK_COM = 28;
+			GOOGLE_COM = 29;
+			ZOHO_COM = 30;
+			YOUTU_BE = 31;
+			MYSPACE_COM = 32;
+			SLIDESHARECDN_COM = 33;
+			QUALVU_COM = 34;
+			CLICFLIC_COM = 35;
+			YIMG_COM = 36;
+			PHOTOBUCKET_COM = 37;
+			TUBECHOP_COM = 38;
+			GETLOUPE_COM = 39;
+			MLB_COM = 40;
+			PHOTOSYNTH_NET = 41;
+			NDTV_COM = 42;
+			PLANNINGCENTERONLINE_COM = 43;
+			AMCHARTS_COM = 44;
+			SKYDESK_JP = 45;
+			LATERALVISION_COM = 46;
+			ZOHOPUBLIC_COM = 47;
+			MIXER_COM = 48;
+			LIVE_COM = 49;
+
+			CUSTOM = 50;
+			MANAGEENGINE_COM = 51;
+			ZOHOWEBSTATIC_COM = 52;
+			ZOHO_EU = 53;
+			SKETCHUP_COM = 54;
+			ZOHOSTATIC_COM = 55;
+			CODEPEN_IO = 56;
+			ELFSIGHT_COM = 57;
+			ZOHOEXTERNAL_COM = 58;
+			ZOHOEXTERNAL_EU = 59;
+			ZOHOEXTERNAL_IN = 60;
+			ZOHOEXTERNAL_AU = 61;
+			ZOHOEXTERNAL_CN = 62;
+			QQ_COM = 63;
+			FLAT_IO = 64;
+			SPOTIFY_COM = 65;
+			MOMENTO360_COM = 66;
+			GIPHY_COM = 67;
+			ZOHO_IN = 68;
+			ZOHO_COM_CN = 69;
+			ZOHO_COM_AU = 70;
+			ZOHOPUBLIC_EU = 71;
+			ZOHOPUBLIC_IN = 72;
+			ZOHOPUBLIC_COM_CN = 73;
+			ZOHOPUBLIC_COM_AU = 74;
+			TABLEAU_COM = 75;
+			EDUCAPLAY_COM = 76;
+			PADLET_COM = 77;
+			CANVA_COM = 78;
+			WALLS_IO = 79;
+			INVESTING_COM = 80;
+			LOOM_COM = 81;
+			MENTIMETER_COM = 82;
+			WIDGETS_INVESTING_COM = 83;
+			RENDERFOREST_COM = 84;
+			CLIPCHAMP_COM = 85;
+			MIRO_COM = 86;
+			WOOCLAP_COM = 87;
+			FLIPPINGBOOK_COM = 88;
+			FIGMA_COM = 89;
+			LOCALZOHO_COM = 90; // For development in Local network. Not to be used in Production.
+			ONEDRIVE_COM = 91;
+			LINKEDIN_COM = 92;
+			WPCOMSTAGING_COM = 93;
+			WORDPRESS_COM = 94;
+			BLOGSPOT_COM = 95;
+			ARTICULATE_COM = 96;
+			YOUTUBE__HYPHEN__NOCOOKIE_COM = 97;
+			ZOHO_JP = 98;
+			ZOHOPUBLIC_JP = 99;
+			ALTOS_RE = 100;
+			GPSGATE_COM = 101;
+			NOTION_SO = 102;
+			METEOFRANCE_COM = 103;
+			VIZZLO_COM = 104;
+			ACTIVE911_COM = 105;
+			AIFORIA_COM = 106;
+			BIGCOMMAND_COM = 107;
+			COLORADO_EDU = 108;
+			LOSTUTORES_CO = 109;
+			EDU_BO = 110;
+			GENIAL_LY = 111;
+			NILA_CLOUD = 112;
+			INSTAGRAM_COM = 113;
+			DOMO_COM = 114;
+			ONEEIGHTYONE_COM = 115;
+			MINDMANAGER_COM = 116;
+			FLATICON_ES = 117;
+			BRITANNICA_COM = 118;
+			TIKTOK_COM = 119;
+			AUDIOMACK_COM = 120;
+			INSIGHTTIMER_COM = 121;
+			PLOT_LY = 122;		//Verified by Mani
+			WHEELDECIDE_COM = 123; //Verified by Mani
+			RHOMBUSSYSTEMS_COM = 124; //Verified by Mani
+			WEATHERWIDGET_IO = 125;//Verified by Mani
+			SLIDO_COM = 126; //Verified by Mani
+			LOTTIE_HOST = 127; //Verified by Mani
+			KUULA_CO = 128; //Verified by Mani
+			GAF_COM = 129; //Verified by Mani
+			BANYANBOARD_COM = 130; //Verified by Mani
+			DATAWRAPPER_DE = 131; //Verified by Mani
+			WEB_MICROSOFTSTREAM_COM = 132; //Verified by Mani
+			ZOHOCOMMERCE_COM = 133; //Verified by Mani
+			DESIGNRR_IO = 134; //Verified by Mani
+			FLOURISH_STUDIO = 135; //Verified by Mani
+			VCLOCK_COM = 136; //Verified by Mani
+			VANIHQ_COM = 137;
+			NEDERWEERT_NL = 138; //Verified by Mani
+			INSPIRITVR_COM = 139; //Verified by Mani
+			_163_COM = 140; //Verified by Mani
+			MUSE_AI = 141; //Verified by Mani
+			PHET_COLORADO_EDU = 142; //Verified by Mani
+			GEOGEBRA_ORG = 143; //Verified by Mani
+			HOSTNETDIRECT_DOTCOMPAL_COM = 144; // Verified by Mani
+			WORDWALL_NET = 145; // Verified by Mani
+			SINCLAIRSTORYLINE_COM = 146; // Verified by Mani
+			W3_MP_LURA_LIVE = 147; // Verified by Mani
+			APP_POWERBI_COM = 148; // Verified by Mani
+			UNTAPPD_COM = 149; // Verified by Mani
+			SLIDESAI_IO = 150; // Verified by Mani
+			CHAT_OPENAI_COM = 151; // Verified by Mani
+			LOCALMANAGEENGINE_COM = 152; // For development in Local network. Not to be used in Production.
+			MANAGEENGINE_EU = 153;
+			MANAGEENGINE_IN = 154;
+			MANAGEENGINE_JP = 155;
+			MANAGEENGINE_COM_CN = 156;
+			MANAGEENGINE_COM_AU = 157;
+			LEARNINGAPPS_ORG = 158; // Verified by Mani
+			PORTAL_DIETARYCARE_COM_AU = 159; // Verified by Mani
+			FREE_TIMEANDDATE_COM = 160; //Verified By Mani
+			CHART__HYPHEN__EMBED_SERVICE_EU_NEWRELIC_COM = 161; //Verified By Mani chart-embed.service.eu.newrelic.com
+			APP_TANGO_US = 162; // Verified by Mani
+			STAGETIMER_IO = 163; // Verified By Mani
+			FORECAST7_COM = 164;  // Verified By Mani
+			VSMCAMP_COM = 165;  // Verified By Mani
+			VANI_WORK = 166;
+			LOCALVANIHQ_NET = 167; // For development in Local network. Not to be used in Production.
+			BITEABLE_COM = 168; // Verified By Mani
+			TAXMANN_COM = 169; // Verified By Mani
+			API_VAKTIJA_BA = 170;  // Verified By Mani
+			TASTESWOON_COM = 171; // Verified By Mani
+			AUDIO_COM = 172; // Verified By Mani
+			ADOBE_COM = 173; // Verified By Mani
+			EXCALIDRAW_COM = 174; // Verified By Mani
+			DAKOTAPRO_BIZ = 175; // Verified By Mani
+			NAVATTIC_COM = 176; // Verified By Mani
+			WEERONLINE_NL = 177; // Verified By Mani
+			ZOHOCLOUD_CA = 178;
+			ZOHO_SA = 179;
+			ZOHOPUBLIC_CA = 180;
+			ZOHOPUBLIC_SA = 181;
+			ZOHOEXTERNAL_CA = 182;
+			ZOHOEXTERNAL_SA = 183;
+			ZOHOEXTERNAL_JP = 184;
+			VANIHQ_CA = 185;
+			VANIHQ_EU = 186;
+			VANIHQ_IN = 187;
+			VANIHQ_SA = 188;
+			VANIHQ_COM_AU = 189;
+			//	VANIHQ_COM_CN = 190;  Build hasn't been provisioned for this DC yet
+			//	VANIHQ_JP = 191;      Build hasn't been provisioned for this DC yet
+
+			ONEWEATHER_ORG= 192;  // Verified By Mani
+			TC_TOUCHCAST_COM = 193; // Verified By Mani
+			EVERSAFEACADEMY_COM_SG = 194; // Verified By Mani
+			PINTEREST_COM = 195; // Verified By Mani
+			ONLINEGDB_COM = 196; // Verified By Mani
+			QUIZGECKO_COM = 197; // Verified By Mani
+			METEORED_CL = 198; // Verified By Mani
+			CLARA_IO = 199; // Verified By Mani
+			RUMBLE_COM= 200; // Verified By Mani
+			BITCHUTE_COM = 201; // Verified By Mani
+			BRIGHTEON_COM = 202; // Verified By Mani
+			PODBEAN_COM=203; // Verified By Mani
+			BASTYON_COM=204; // Verified By Mani
+			MARCA_COM=205; // Verified By Mani
+			E__HYPHEN__SMARTKIDS_COM = 206; // Verified By Mani
+			STRAITSTIMES_COM = 207; // Verified By Mani
+			T2DS_COM = 208;// Verified By Mani
+			WEATHERSCAN_NET=209;// Verified By Mani
+			SOCIALBLADE_COM=210;// Verified By Mani
+			CHANNELNEWSASIA_COM=211;// Verified By Mani
+			WHIMSICAL_COM=212;// Verified By Mani
+			OERPROJECT_COM=213;// Verified By Mani
+			SCRIBEHOW_COM=214;// Verified By Mani
+			CLAUDE_SITE=215;// Verified By Mani
+			ATLASSIAN_NET=216;// Verified By Mani
+			DISCORD_COM=217;// Verified By Mani
+			SKETCHFAB_COM=218;// Verified By Mani
+			SURFERSEO_COM=219;// Verified By Mani
+			SEMRUSH_COM=220;// Verified By Mani
+			WEATHERWIDGET_ORG=221;// Verified By Mani
+			GOOGLE_FR=222; //Verified By Mani
+			LIVECOUNTS_NL=223; //Verified By Mani
+			THREADS_NET=224; //Verified By Mani
+			VANIPUBLIC_COM=225;
+			VANIPUBLIC_IN=226;
+			VANIPUBLIC_EU=227;
+			VANIPUBLIC_SA=228;
+			VANIPUBLIC_CA=229;	
+			VANIPUBLIC_COM_AU=230;
+			ZOHO_AE = 231;
+			ZOHOPUBLIC_AE = 232;
+			ZOHOEXTERNAL_AE = 233;
+			VANIHQ_AE = 234;
+			VANIPUBLIC_AE = 235;
+			NATURE_COM = 236;  //Verified By Mani
+		}
+
+		enum DomainType {
+
+			NO_DOMAIN_TYPE = 0;
+			ALLOWED_DOMAIN = 1;
+			IAM_TRUSTED_DOMAIN = 2;
+			USER_DOMAIN = 3; //Get the domain by the domainKey.
+		}
+
+		optional AllowedDomains main = 1;
+
+		optional string sub = 2;
+
+		optional string parent = 3;
+
+		optional string customDomain = 4;
+
+		optional DomainType type = 5;
+
+		//domainKey is the DB key for the added Domain. currently WD org admin can add their private domains and it will be maintained in the table.
+		optional string domainKey = 6;
+
+	}
+
+	optional DomainName domain = 2 [(com.zoho.common.customOptions).requiredField = true];
+
+	optional string path = 3;
+
+}

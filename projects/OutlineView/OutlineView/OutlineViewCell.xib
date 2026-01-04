@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner">
+            <connections>
+                <outlet property="titleLabel" destination="u5j-qc-lPy" id="8n4-Bk-62I"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <tableCellView identifier="OutlineViewCell" id="m0g-A6-5nF" customClass="OutlineViewCell" customModule="OutlineView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="16"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="u5j-qc-lPy">
+                    <rect key="frame" x="-2" y="0.0" width="104" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="8l1-e4-4Oq">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="u5j-qc-lPy" firstAttribute="top" secondItem="m0g-A6-5nF" secondAttribute="top" id="cDU-5K-etX"/>
+                <constraint firstAttribute="trailing" secondItem="u5j-qc-lPy" secondAttribute="trailing" id="dws-8R-ugj"/>
+                <constraint firstItem="u5j-qc-lPy" firstAttribute="leading" secondItem="m0g-A6-5nF" secondAttribute="leading" id="nXW-vR-15i"/>
+                <constraint firstAttribute="bottom" secondItem="u5j-qc-lPy" secondAttribute="bottom" id="yaa-ID-MWn"/>
+            </constraints>
+            <connections>
+                <outlet property="textField" destination="u5j-qc-lPy" id="RdB-gK-Ubs"/>
+                <outlet property="titleLabel" destination="u5j-qc-lPy" id="eXv-vm-AGf"/>
+            </connections>
+            <point key="canvasLocation" x="-226" y="302"/>
+        </tableCellView>
+    </objects>
+</document>

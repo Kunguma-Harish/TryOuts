@@ -1,0 +1,18 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "FreeFlowProtos";
+
+message FreeFlow {
+	enum FixedDimension {
+		NONE = 0;
+		WIDTH = 1;
+		HEIGHT = 2;
+	}
+	optional FixedDimension fixedDimension = 1;
+
+	optional float dimensionValue = 2;		
+}
+

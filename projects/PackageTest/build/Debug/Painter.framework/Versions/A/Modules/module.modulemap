@@ -1,0 +1,11 @@
+framework module Painter {
+  umbrella header "Painter-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Painter.Swift {
+  header "Painter-Swift.h"
+  requires objc
+}

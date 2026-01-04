@@ -1,0 +1,142 @@
+syntax="proto3";
+
+// Only one of the below shapes can be present. To put it in other words , this can either have Shape/GroupShape/any-other-shape.
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ShapeObjectProtos";
+
+import "nonvisualgroupshapeprops.proto";
+import "properties.proto";
+import "shape.proto";
+import "picture.proto";
+import "connector.proto";
+import "shapenodetype.proto";
+import "graphicframe.proto";
+import "paragraph.proto";
+import "fields.proto";
+import "nonvisualcombinedshapeprops.proto";
+import "elementcategory.proto";
+import "modifiedfollower.proto";
+import "scroll.proto";
+import "updatedleader.proto";
+import "google/protobuf/protoextensions.proto";
+import "basekit.proto";
+
+message ShapeObject {
+	
+	optional ShapeNodeType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+	optional Shape shape = 2; // Shape 
+	optional Picture picture = 3; // Picture 
+	optional Connector connector = 4; // Connector
+	optional GroupShape groupshape = 5; // Group Shape 
+	optional GraphicFrame graphicframe = 6; // GroupFrame to contain Tables, Charts and SmartArts.
+	optional ParagraphShape paragraph = 7;
+	optional CombinedObject combinedobject = 8;		
+	
+	message GroupShape {
+	
+		repeated ShapeObject shapes = 1; // Shapes Array.
+		optional NonVisualGroupShapeProps nvOProps = 2; // Non visual group shape props.
+		optional Properties props = 3; // Properties.
+	
+		optional ShapeObject mask = 4;
+
+		optional com.zoho.common.ElementCategory category = 5;
+	
+		repeated ModifiedFollower modifiedFollowers = 6 [deprecated = true];
+		
+		message AdditionalElement {
+			repeated ShapeObject shapesOnTop = 1;
+
+			repeated ShapeObject shapesBeneath = 2;
+		}
+		optional AdditionalElement additionalFollowers = 7;	
+
+		optional Scroll scroll = 8;
+		
+		repeated FollowerOverrides followerOverrides = 9;
+
+	}
+
+	message CombinedObject {
+
+		message CombinedNode {
+			enum CombinedNodeType{
+				UNKNOWN = 0;
+				SHAPE = 1;
+				COMBINEDOBJECT = 2;
+			}
+
+			optional CombinedNodeType type = 1 [(com.zoho.common.customOptions).requiredField = true];
+			optional Shape shape = 2;
+			optional CombinedObject combinedobject = 3;
+
+			optional Show.ShapeField.CombineRule rule = 4;
+		}
+
+		repeated CombinedNode combinedNodes = 1;
+
+		optional NonVisualCombinedShapeProps nvOProps = 2; // Non visual Combined shape props.
+		optional Properties props = 3; // Properties.
+	}
+
+	message ParagraphShape {
+		optional string id = 1 [(com.zoho.common.customOptions).requiredField = true];
+		optional Paragraph para = 2;
+	}			
+	
+	optional string associatorId = 9;
+
+	message FollowerOverrides {
+
+		optional string id = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+		// Denotes which child has been modified. Should be traversed top->bottom.
+		repeated string child = 2;	
+
+		enum FollowerOverrideStatus {
+			DEF_FOLLOWER_OVERRIDE_STATUS = 0;
+			NO_OVERRIDE = 1;
+			OVERRIDDEN = 2;
+			REMOVED = 3;
+		} 
+		optional FollowerOverrideStatus status = 3;
+
+		message OverrideDetails {
+
+			optional ShapeObject object = 1;
+
+			optional UpdatedLeader updatedLeader = 2;
+
+			enum OverrideParam {
+				NONE = 0;
+				TRANSFORM = 1;
+				FILLS = 2;
+				STROKES = 3;
+				STYLE_REF = 4;
+				EFFECTS = 5;
+				ALPHA = 6;
+				BLUR = 7;
+				NON_VISUAL_OBJECT_DRAWING_PROPS = 8;    // Depending on the ShapeObjectType appropriate nvOprops has to be considered
+				PICTURE_PROPS = 9;
+				PICTURE_VALUE = 10;
+				CROP = 11;
+				TEXT_CONTENT = 12;
+				TEXT_STYLE = 13;
+			}
+
+			repeated OverrideParam overrideParams = 3;
+		}
+
+		optional OverrideDetails overrides = 4;
+	}
+
+	optional com.zoho.kits.BaseKit basekit = 10;
+
+
+
+			
+}
+

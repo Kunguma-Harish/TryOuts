@@ -1,0 +1,30 @@
+
+syntax="proto3";
+package com.zoho.database;
+
+option java_package = "com.zoho.database";
+option java_outer_classname = "ColumnInputProtos";
+
+import "columnidentifier.proto";
+
+message ColumnInput {
+
+		
+	optional ColumnIdentifier column = 1;
+
+	message AggregateFunction {
+		
+		enum AggregateFunctionType {
+			
+			DEFAULT_AGGREGATE_FUNCTION = 0;
+			AVERAGE = 1;
+			COUNT = 2;
+			MAXIMUM = 3;
+			MINIMUM = 4;
+			TOTAL = 6; 
+			CONCAT = 7; // for string values.
+		}
+		optional AggregateFunctionType type = 1;
+	}
+	optional AggregateFunction aggregate = 2;	
+}

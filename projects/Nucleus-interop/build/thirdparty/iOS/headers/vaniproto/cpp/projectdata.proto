@@ -1,0 +1,35 @@
+syntax="proto3";
+package com.zoho.remoteboard.build;
+
+option java_package = "com.zoho.remoteboard.build";
+option java_outer_classname = "ProjectDataProtos";
+
+import "documentdata.proto";
+import "docbasemeta.proto";
+import "basemeta.proto";
+import "projectstate.proto";
+import "projectdefaults.proto";
+import "sketchtool.proto";
+import "google/protobuf/protoextensions.proto";
+
+message ProjectData {
+	
+	optional string id = 1 [(com.zoho.common.customOptions).requiredField = true];		
+
+	repeated DocumentData docDatas = 2;	
+	
+	optional com.zoho.common.BaseMeta meta = 3;
+
+	optional com.zoho.remoteboard.ProjectState state = 4;
+	
+	optional ProjectDefaults defaults = 5;
+		
+	// Additional Pencil or Sketch for the user.
+	repeated SketchTool sketchTools = 6;
+
+	// To inform if the space is marked as favourite by the user
+	optional bool isFavourite = 7;
+
+	optional com.zoho.common.DocBaseMeta baseMeta = 8;
+
+}

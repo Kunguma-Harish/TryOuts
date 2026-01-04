@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package com.zoho.remoteboard;
+
+option java_package = "com.zoho.remoteboard";
+option java_outer_classname = "CustomRendererProtos";
+
+import "shapeobject.proto";
+
+message CustomRenderer {
+
+	optional string id = 1;
+
+	optional com.zoho.shapes.ShapeObject renderObject = 2;
+}
+
+

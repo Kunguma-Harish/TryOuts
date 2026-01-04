@@ -1,0 +1,45 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "StructureProtos";
+
+message Structure {
+
+	enum StructureType {
+		DEFAULT_STRUCTURE_TYPE = 0;
+		LINEAR = 1;
+		HIERARCHICAL = 2;
+	}
+	optional StructureType type = 1;
+
+	message Linear {
+		enum LinearType{
+			DEFAULT_LINEAR_TYPE = 0;
+			STACK = 1;
+			TIMELINE = 2;
+			CIRCULAR = 3;
+		}
+		optional LinearType type = 1;
+	}
+	optional Linear linear = 2;
+
+	message Hierarchical {
+		enum HierarchicalType{
+			DEFAULT_HIERARCHICAL_TYPE = 0;
+			MIND_MAP = 1;
+			ORG_CHART = 2;
+		}
+		optional HierarchicalType type = 1;
+	}
+	optional Hierarchical hierarchical = 3;
+
+	enum DirectionType {
+		DEFAULT_DIRECTION_TYPE = 0;
+		VERTICAL = 1;
+		HORIZONTAL = 2;
+	}
+	optional DirectionType direction = 4;
+
+}
+

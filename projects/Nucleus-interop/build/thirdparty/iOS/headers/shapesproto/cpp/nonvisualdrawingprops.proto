@@ -1,0 +1,46 @@
+syntax="proto3";
+// Non Visual Properties for any object be it Shape / Connector / any-other
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "NonVisualDrawingPropsProtos";
+
+import "hyperlink.proto";
+import "google/protobuf/protoextensions.proto";
+
+//import "google/protobuf/descriptor.proto";
+
+/*message ProtoExtensions {
+	optional bool required_field = 1;
+}
+
+extend google.protobuf.FieldOptions {
+	optional bool required_field = 81000;
+}*/
+
+message NonVisualDrawingProps {
+		
+	// <regex name="mathuuid"  value="^[a-f0-9A-F]{8}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{12}$" />
+	optional string id = 1 [ (com.zoho.common.customOptions).requiredField = true ];	// ID of the object , should be unique.
+	
+	//<regex name="document_name" value="[0-9a-zA-Z_~`#%&amp;\^\*\(\)\{\}\[\]\+\*\|\=\-\.\$@\?\,\:;\'\/\!\P{InBasicLatin}\s]+"/>
+	optional string name = 2; // name for the object
+	
+	//<regex name="document_name" value="[0-9a-zA-Z_~`#%&amp;\^\*\(\)\{\}\[\]\+\*\|\=\-\.\$@\?\,\:;\'\/\!\P{InBasicLatin}\s]+"/>
+	optional string descr = 3; // Description for the object. Alternative text for the object.
+
+	//<regex name="document_name" value="[0-9a-zA-Z_~`#%&amp;\^\*\(\)\{\}\[\]\+\*\|\=\-\.\$@\?\,\:;\'\/\!\P{InBasicLatin}\s]+"/>
+	optional string title = 4; // Title for the object. Used for Caption.
+
+	// Will be mainly used by PlaceHolder shapes present in Slide Master and Slide Layout, to check whether to display the shape or not.
+	optional bool hidden = 5; //[default = false]; // Specifies the status of the object to be hidden / visible
+
+	optional HyperLink click = 6; // Hyperlink action on click.
+
+	optional HyperLink hover = 7; // Hyperlink action on mouseover.
+
+	optional string versionId = 8; // version id of the current change - will be changed for every update in the shape
+    
+	optional bool nameIsUserDefined = 9; // Indicates whether the name has been defined by the user. Mainly used for text shapes.
+}

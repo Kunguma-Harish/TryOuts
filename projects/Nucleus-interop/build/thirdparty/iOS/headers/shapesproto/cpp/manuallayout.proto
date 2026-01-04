@@ -1,0 +1,30 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "ManualLayoutProtos";
+/** Transform of a Chart Element */
+
+message ManualLayout {
+	message LayoutValue {
+		enum LayoutMode {
+			EDGE = 0;
+			FACTOR = 1;
+		}
+		optional LayoutMode mode = 1;
+		optional float val = 2;
+	}
+	optional LayoutValue left = 1;
+	optional LayoutValue top = 2;
+	optional LayoutValue width = 3;
+	optional LayoutValue height = 4;
+
+	enum LayoutTarget {
+		UNKNOWN_LAYOUT_TARGET = 0;
+		INNER = 1;
+		OUTER = 2;
+	}	
+	optional LayoutTarget target = 5;
+}
+

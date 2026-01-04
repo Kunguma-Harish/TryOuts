@@ -1,0 +1,16 @@
+syntax="proto3";
+
+import "google/protobuf/descriptor.proto";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "ProtoExtensionsProtos";
+
+extend google.protobuf.FieldOptions {
+    ProtoExtensions customOptions = 81001;
+}
+
+message ProtoExtensions {
+    optional bool requiredField = 1;
+}

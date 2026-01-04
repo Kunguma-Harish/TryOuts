@@ -1,0 +1,28 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "Bar3DChartProtos";
+
+import "barchartdetails.proto";
+import "google/protobuf/protoextensions.proto";
+
+message Bar3DChart {
+
+	optional BarChartDetails details = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	// Gap Depth, the z-axis. Ranges from 0-500
+	optional float 	depth = 2;
+
+	// Shape for the bar/column.
+	enum BarShapeType {
+		BOX = 0;
+		CONE = 1;
+		CYLINDER = 2;
+		PYRAMID = 3;
+	}
+	optional BarShapeType shape = 3;	
+
+}
+

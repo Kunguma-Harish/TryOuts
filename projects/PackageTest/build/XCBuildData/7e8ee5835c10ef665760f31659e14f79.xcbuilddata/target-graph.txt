@@ -1,0 +1,7 @@
+Target dependency graph (3 targets)
+Target 'PackageTest' in project 'PackageTest'
+➜ Implicit dependency on target 'Pods-PackageTest' in project 'Pods' via file 'Pods_PackageTest.framework' in build phase 'Link Binary'
+➜ Implicit dependency on target 'ZMacAuth' in project 'Pods' via options '-framework ZMacAuth' in build setting 'OTHER_LDFLAGS'
+Target 'Pods-PackageTest' in project 'Pods'
+➜ Explicit dependency on target 'ZMacAuth' in project 'Pods'
+Target 'ZMacAuth' in project 'Pods' (no dependencies)

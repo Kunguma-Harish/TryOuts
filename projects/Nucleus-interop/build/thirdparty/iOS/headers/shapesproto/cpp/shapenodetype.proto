@@ -1,0 +1,15 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "ShapeNodeTypeProtos";
+
+enum ShapeNodeType {
+	SHAPE = 0;
+	PICTURE = 1;
+	CONNECTOR = 2;
+	GROUPSHAPE = 3;
+	GRAPHICFRAME = 4;
+	PARAGRAPH = 5;
+	COMBINEDOBJECT = 6;
+}

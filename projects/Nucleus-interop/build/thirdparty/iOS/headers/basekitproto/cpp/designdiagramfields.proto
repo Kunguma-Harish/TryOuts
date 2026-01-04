@@ -1,0 +1,22 @@
+syntax="proto3";
+
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "DesignDiagramFieldsProtos";
+
+
+message DesignDiagramFields {
+  // Type of connection
+  enum Cardinality{
+    UNKNOWN_CARDINALITY = 0;
+    ONE = 1;  // At least one
+    MANY = 2; // Many
+    ONE_MANDATORY = 3; // Exactly One
+    ZERO_OR_ONE = 4;  
+    ONE_OR_MANY = 5;  
+    ZERO_OR_MANY = 6;
+  }
+
+}
+

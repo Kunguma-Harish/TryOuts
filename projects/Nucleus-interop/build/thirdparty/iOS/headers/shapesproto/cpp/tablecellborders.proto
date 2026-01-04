@@ -1,0 +1,25 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+import "stroke.proto";
+import "reference.proto";
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "TableCellBordersProtos";
+
+message TableCellBorders {
+	message CellBorder {
+		optional Stroke border = 1;
+		optional Reference ref = 2; // Stroke Reference
+	}
+	optional CellBorder left = 1;
+	optional CellBorder top = 2;
+	optional CellBorder right = 3;
+	optional CellBorder bottom = 4;
+	optional CellBorder blToTr = 5; // Bottom-Left to Top-Right
+	optional CellBorder tlToBr = 6; // Top-Left to Bottom-Right
+	optional CellBorder inHor = 7; // inside horizontal.
+	optional CellBorder inVer = 8; // inside vertical.
+}
+

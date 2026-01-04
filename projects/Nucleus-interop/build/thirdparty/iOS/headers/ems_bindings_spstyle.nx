@@ -1,0 +1,29 @@
+include {
+ spstyle.pb.h;
+  }
+class SPStyle  : com::zoho::remoteboard::SPStyle {
+  inherits Message;
+  constructor SPStyle : com::zoho::remoteboard::SPStyle();
+  function CopyFrom : nx_void CopyFrom(SPStyle& arg0);
+  function Clear : nx_void Clear();
+  property styles  : [own] nx_repeated_ptr_field[protobuf_array_SPStyle_TableStyleDefinition]* styles(nx_getter : temp_getstyles, nx_setter : temp_setstyles);
+  property fill  : [own] nx_repeated_ptr_field[protobuf_array_Fill]* fill(nx_getter : temp_getfill, nx_setter : temp_setfill);
+  }
+
+repeated_ptr_field  {
+protobuf_array_SPStyle : SPStyle;
+}
+
+class SPStyle_TableStyleDefinition  : com::zoho::remoteboard::SPStyle_TableStyleDefinition {
+  inherits Message;
+  constructor SPStyle_TableStyleDefinition : com::zoho::remoteboard::SPStyle_TableStyleDefinition();
+  function CopyFrom : nx_void CopyFrom(SPStyle_TableStyleDefinition& arg0);
+  function Clear : nx_void Clear();
+  function has_style : nx_bool has_style();
+  property style : [own] TableStyle*  style(nx_getter : temp_getstyle, nx_setter : temp_setstyle);
+  }
+
+repeated_ptr_field  {
+protobuf_array_SPStyle_TableStyleDefinition : SPStyle_TableStyleDefinition;
+}
+

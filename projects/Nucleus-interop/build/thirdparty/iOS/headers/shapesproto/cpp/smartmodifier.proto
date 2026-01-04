@@ -1,0 +1,58 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "SmartModifierProtos";
+
+import "animatethyself.proto";
+import "datetimemodifiervalue.proto";
+import "google/protobuf/protoextensions.proto";
+
+message SmartModifier {
+
+	optional int32 modiferIndex = 1 [(com.zoho.common.customOptions).requiredField = true];
+	
+	optional SmartModifierValue value = 2;	
+
+	optional AnimateThyself selfAnimate = 3;
+	
+	message SmartModifierValue { 
+
+		enum ModifierValueType {
+
+			UNKNOWN_VALUE_TYPE = 0;
+			NUMBER = 1;
+			DATETIME = 2;
+		}
+		optional ModifierValueType type = 1;
+
+		message ModifierOptions { 
+
+			optional float minimum = 1;
+			optional float maximum = 2;
+			// Handle Fixed , Real ( Variable ) time. 
+
+		}
+
+		optional ModifierOptions options = 2;
+
+		message NumberValue {
+			
+			enum NumberValueType {
+				WHOLE = 0;
+				PERCENTAGE = 1;
+				FRACTION = 2;
+			}
+			optional NumberValueType type = 1;
+
+			optional float value = 2;
+		}
+
+		optional NumberValue number = 3;
+		
+		optional com.zoho.common.DateTimeModifierValue datetime = 4;
+	}
+	
+}
+

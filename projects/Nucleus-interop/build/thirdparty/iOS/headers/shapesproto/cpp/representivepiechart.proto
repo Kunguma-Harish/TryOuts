@@ -1,0 +1,47 @@
+syntax="proto3";
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "RepresentivePieChartProtos";
+
+import "piechartdetails.proto";
+import "chartline.proto";
+import "google/protobuf/protoextensions.proto";
+
+message RepresentivePieChart {
+
+	optional PieChartDetails details = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	optional float gap = 2; // Gap size.
+
+	repeated ChartLine seriesLines = 3;		
+	
+	message SecondPlot {	
+		enum RepresentiveType {
+			PIE = 0; // Pie of pie
+			BAR = 1; // Bar of pie
+		}
+		optional RepresentiveType type = 1 [(com.zoho.common.customOptions).requiredField = true]; //[default = PIE];
+
+		optional int32 size = 2; // Size of the representive pie in Percentage.
+	
+		message SplitData {
+			// Second representaion is split on the basis of the specified type.
+			enum SplitType {
+				DEF_PIE_SPLIT_TYPE = 0;
+				POS = 1; // Contins the last 'n' values.
+				PERCENT = 2; // Values lesser than the speciend percentage.
+				VALUE = 3; // Values lesser than the specified value.
+				CUSTOM = 4; 
+			}
+			optional SplitType type = 1;
+			optional int32 pos = 2; // Position.
+			optional float percent = 3; // Percent Value.	
+			optional float value = 4; // Value.
+			repeated int32 custom = 5; // Customised array position.
+		}
+			
+		optional SplitData data = 3;
+	}
+	optional SecondPlot second = 4 [(com.zoho.common.customOptions).requiredField = true];
+}

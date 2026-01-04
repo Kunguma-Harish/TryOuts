@@ -1,0 +1,73 @@
+﻿/* 
+  Localizable.strings
+  SlideShowKit
+
+  Created by Sarath Kumar G on 30/01/22.
+  Copyright © 2022 Zoho Corporation Pvt. Ltd. All rights reserved.
+*/
+
+
+// MARK: - COMMON Content
+
+"SSKit.common.ok" = "ОК";
+"SSKit.common.cancel" = "Отмена";
+"SSKit.common.continue" = "Продолжить";
+"SSKit.common.untitledDocument" = "Документ без названия";
+"SSKit.common.noNetwork" = "Нет подключения к сети";
+"SSKit.common.noNetworkMessage" = "Убедитесь, что имеется подключение к сети Интернет.";
+"SSKit.common.openSettings" = "Открыть настройки";
+"SSKit.common.connected" = "Подключено";
+"SSKit.common.connecting" = "Подключение";
+"SSKit.common.waiting" = "Ожидание";
+"SSKit.common.update" = "Обновить";
+"SSKit.common.minimise" = "Свернуть";
+
+// MARK: - SLIDESHOW Content
+
+"SSKit.slideshow.start" = "Запуск";
+"SSKit.slideshow.end" = "Завершить";
+"SSKit.slideshow.currentSlide" = "Слайд %i из %i";
+"SSKit.slideshow.EndOfSlideshow" = "Конец презентации";
+"SSKit.slideshow.blackout" = "Экран затемнен";
+"SSKit.slideshow.backToLive" = "Назад в интерактивный режим";
+"SSKit.slideshow.notes" = "Примечания";
+"SSKit.slideshow.clear" = "Очистить";
+"SSKit.slideshow.emptyNotes" = "У этого слайда нет примечаний.";
+
+// MARK: - SHAREPLAY Content
+
+"SSKit.shareplay.sessionTerminated.title" = "Сеанс завершен";
+"SSKit.shareplay.sessionTerminated.desc" = "Сеанс SharePlay завершен. Можно перезапустить сеанс.";
+
+"SSKit.shareplay.syncWithPresenter" = "Синхронизировать с выступающим";
+
+"SSKit.shareplay.end.title" = "Завершить SharePlay";
+"SSKit.shareplay.end.description" = "Завершить SharePlay? Это приведет к завершению сеанса.";
+"SSKit.shareplay.requestToPresent.description" = "запрашивает демонстрацию";
+
+
+// MARK: - ERROR Content
+
+"SSKit.error.title" = "Ошибка";
+"SSKit.error.message" = "Произошла ошибка. Повторите попытку позже";
+
+
+// MARK: - PlaybackAudio Content
+
+"SSKit.audio.playbackAudio" = "Воспроизвести аудио";
+"SSKit.audio.resume" = "Возобновить";
+"SSKit.audio.pause" = "Приостановить";
+"SSKit.audio.audioTitle" = "Аудио";
+
+// Mark: - Apple TV Listing Content
+
+"SSKit.mcPeerListing.chooseAppleTVS" = "Выберите свое устройство Apple TV";
+"SSKit.mcPeerListing.lookingForTvs" = "Выполняется поиск устройств Apple TV";
+"SSKit.mcPeerListing.streamingDescription" = "Для демонстрации слайдов с вашего устройства на Apple TV.";
+
+"SSKit.mcPeerListing.connectToLocalNetwork.Message" = "Включите доступ по локальной сети и повторите попытку";
+
+"SSKit.mcPeerListing.disconnect.title" = "Отключить";
+"SSKit.mcPeerListing.disconnect.message" = "Действительно отключиться от устройства Apple TV?";
+"SSKit.mcPeerListing.disconnect.nameSuffix" = "Отключить %@";
+"SSKit.mcPeerListing.updateError" = "Похоже, коллега использует старую версию. Убедитесь, что установлена актуальная версия приложения для телевизора";

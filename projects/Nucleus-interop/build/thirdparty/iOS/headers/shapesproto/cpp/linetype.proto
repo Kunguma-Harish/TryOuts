@@ -1,0 +1,12 @@
+syntax="proto3";
+
+// Used for Striking / Underlining a portion
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "LineTypeProtos";
+
+enum LineType { 
+	NONE = 0;
+	SINGLE = 1;		
+}

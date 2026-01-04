@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DallE_Integration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Write to generate image." translatesAutoresizingMaskIntoConstraints="NO" id="Vev-Ac-fdl">
+                                <rect key="frame" x="16" y="91" width="361" height="56"/>
+                                <color key="barTintColor" red="0.90588235859999999" green="0.65882354970000001" blue="0.74901962280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pdI-Lu-jLX"/>
+                                </connections>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="k0o-XZ-ftV">
+                                <rect key="frame" x="16" y="172" width="361" height="201.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k0o-XZ-ftV" secondAttribute="height" multiplier="16:9" id="YR4-bX-1na"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.8078432083" green="0.43921568989999998" blue="0.48627454040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Vev-Ac-fdl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Cbp-SS-prR"/>
+                            <constraint firstItem="k0o-XZ-ftV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JVl-tF-1X8"/>
+                            <constraint firstItem="Vev-Ac-fdl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="Obb-aQ-S6u"/>
+                            <constraint firstItem="Vev-Ac-fdl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-32" id="SL1-Af-8fC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="k0o-XZ-ftV" secondAttribute="bottom" constant="32" id="hJI-fZ-lB7"/>
+                            <constraint firstItem="k0o-XZ-ftV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-32" id="hVv-Ok-Q9p"/>
+                            <constraint firstItem="k0o-XZ-ftV" firstAttribute="top" secondItem="Vev-Ac-fdl" secondAttribute="bottom" constant="24" id="oMi-zO-2Gq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="k0o-XZ-ftV" id="Gd7-aI-Nkb"/>
+                        <outlet property="searchBar" destination="Vev-Ac-fdl" id="jCn-eb-Nk3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+    </resources>
+</document>

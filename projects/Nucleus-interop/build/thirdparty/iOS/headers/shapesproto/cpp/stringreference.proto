@@ -1,0 +1,33 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "StringReferenceProtos";
+
+import "animateelement.proto";
+
+
+message StringReference {
+	
+	optional string formula = 1; // This formula string can be understood only by Sheet Application.
+	
+	// We will be using StringCache instead of this.
+	message StrCache {
+		repeated string t = 1; // An array of text values.
+	}
+	optional StrCache strCache = 2;
+
+	message StringCache {
+		optional string t = 1;
+
+		optional AnimateElement animation = 2;
+
+		optional string datafieldId = 3;
+	}	
+
+	repeated StringCache stringCache = 3;
+
+	optional string datafieldId = 4;	
+}
+

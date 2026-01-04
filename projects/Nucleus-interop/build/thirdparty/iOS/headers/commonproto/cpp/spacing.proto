@@ -1,0 +1,26 @@
+
+syntax="proto2";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "SpacingProtos";
+
+/** This was initially used only for line spacing between paragraph , now has been extended to be used for object spacing. */
+
+message Spacing {
+	message SpacingValue {
+		enum SpacingValueType {
+			PERCENT = 0;
+			ABSOLUTE = 1;
+			AUTO = 2; // auto spacing.
+		}
+		required SpacingValueType type = 1; //[default = PERCENT];
+		optional float percent = 2; // ranges from 0-any , depends on font size.
+		optional float absolute = 3; // Absolute line spacing value , will be pixels.
+	}
+	optional SpacingValue line = 1; // 1. Line Spacing / line-height for the paragraph , applies to each line. 2. space between objects.
+	optional SpacingValue before = 2;  // Space before the first paragraph / first shape.
+	optional SpacingValue after = 3; // Space after the last paragraph / last shape.
+	optional SpacingValue between = 4; // for object spacing - space between two children
+}

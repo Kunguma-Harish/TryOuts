@@ -1,0 +1,16 @@
+syntax="proto3";
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "BusinesscardKitProtos";
+
+message BusinesscardKit {
+
+	enum BusinesscardKitCategory {
+		UNKNOWN_BUSINESS_CARD_CATEGORY = 0;
+		HORIZONTAL = 1;
+		VERTICAL = 2;
+		SQUARE = 3;
+	}
+	optional BusinesscardKitCategory type = 1;
+}

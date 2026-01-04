@@ -1,0 +1,20 @@
+syntax="proto3";
+
+//  Offset distance, used for image crop , Picture Fill -> offset and in Radial/Rectangular Gradient Fill.
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "OffsetProtos";
+
+message Offset {
+	
+	// Contains both positive and negative values. 
+	// Positive Values indicate INSET and negative ones indicate OUTSET.
+	// Contains Relative values , where 1 represents 100%
+	optional float left = 1; 
+	optional float top = 2;
+	optional float right = 3;
+	optional float bottom = 4;
+	
+}

@@ -1,0 +1,17 @@
+syntax="proto3";
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "NewslettersKitProtos";
+
+message NewslettersKit {
+
+	enum NewslettersKitCategory {
+		UNKNOWN_NEWSLETTERS_CATEGORY = 0;
+        BUSINESS = 1;
+        COMPANY = 2;
+        MARKETING = 3;
+        ADVERTISING = 4;	
+	}
+	optional NewslettersKitCategory type = 1;
+}

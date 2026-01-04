@@ -1,0 +1,11 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "TagFieldProtos";
+
+message TagField {
+	optional string id = 1;		
+	optional string tag = 2;
+}

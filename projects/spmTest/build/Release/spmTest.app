@@ -1,0 +1,1 @@
+../../../../../../../tmp/spmTest.dst/Applications/spmTest.app

@@ -1,0 +1,38 @@
+syntax="proto3";
+
+// Font as shape.
+
+// This is an independent file, since it is a replacement for fonts.
+// Each font shape message is equivalent to one font file.
+// This proto should not used inside project data and has to always be separate.
+// Since it stores emoji images in bytes, this proto can be large in size.
+// Including it with project data, will increase download and upload time.
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "FontShapeProtos";
+
+import "pathobject.proto";
+
+message FontShape {
+
+
+	optional string postScriptName = 1;
+
+	optional float size = 2;
+
+	message CharacterShape {
+		optional int32 glyphIndex = 1;
+		optional string character = 2;
+
+		message PathList {
+			repeated PathObject path = 1;
+		}
+
+		repeated PathList pathList = 3;
+
+		optional bytes bitmap = 4; // Bitmap is generated for font size 60. Use dim in chBoxes of portion to render the image.
+	}
+	repeated CharacterShape characterShapes = 3;
+}

@@ -1,0 +1,45 @@
+syntax="proto3";
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "StyleReferenceDetailsProtos";
+
+import "stylereference.proto";
+
+message StyleReferenceDetails { 
+
+	enum ReferStyleFrom {
+		UNKNOWN_REFERENCE = 0;
+		DOCUMENT_STYLE = 1;
+		LOCAL_STYLE = 2;
+    }
+
+	optional ReferStyleFrom referStyle = 1;		
+
+	optional StyleReference docStyle = 2; // Style Reference for this shape - links to basic props.
+
+	message UseLocalStyle {
+
+		optional bool forFill = 1;
+
+		optional bool forStroke = 2;
+
+		optional bool forShadow = 3;
+
+		optional bool forBlur = 4;
+
+		optional bool forReflection = 5;
+		
+		optional bool forAlpha = 6;
+
+		optional bool forGeom = 7;	
+
+		optional bool forTextBoxProps = 8;
+
+		optional bool forParaStyle = 9;
+
+		optional bool forPortionProps = 10;
+	}
+
+	optional UseLocalStyle localStyle = 3;
+}

@@ -1,0 +1,6 @@
+framework module ZMacAuth {
+  umbrella header "ZMacAuth-umbrella.h"
+
+  export *
+  module * { export * }
+}

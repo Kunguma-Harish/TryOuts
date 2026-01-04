@@ -1,0 +1,34 @@
+syntax="proto3";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "AnimationDetailProtos";
+
+import "textanimationcategory.proto";
+import "animationrepeat.proto";
+import "animationeasing.proto";
+import "fields.proto";
+
+message AnimationDetail {
+	
+	optional float delay = 1; // Delay the animation for given seconds.
+	optional float duration = 2; // Animation Duration in seconds
+	optional AnimationRepeat repeat = 3; // Type of Animation Repeat
+
+	message TextAnimationVariant {
+		optional TextAnimationCategory type = 1;
+					
+		optional float delay = 2;	
+
+		optional Show.CommonField.ValueVariant delayVariant = 3;
+
+	}
+
+	optional TextAnimationVariant textVariant = 4;
+
+	optional AnimationEasing easing = 5;
+	
+
+}
+

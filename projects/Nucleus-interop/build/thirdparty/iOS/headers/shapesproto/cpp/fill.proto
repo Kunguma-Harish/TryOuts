@@ -1,0 +1,47 @@
+syntax="proto2";
+
+package com.zoho.shapes;
+
+option java_package = "com.zoho.shapes";
+option java_outer_classname = "FillProtos";
+
+import "fields.proto";
+import "presetprops.proto";
+import "solidfill.proto";
+import "gradientfill.proto";
+import "patternfill.proto";
+import "picturefill.proto";
+import "colortweaks.proto";
+
+message Fill {
+		
+	required Show.FillField.FillType type = 1 [ default = SOLID] ; // type of fill
+
+	optional SolidFill solid = 2; // Solid fill
+		
+	optional GradientFill gradient = 3;
+	
+	optional PictureFill pict = 4; // Picture URL
+
+	optional bool grp = 5;	
+	optional PresetProps preset = 6; // Preset Fill ID 
+
+	optional PatternFill pattern = 7;
+
+	optional Show.ShapeField.BlendMode blend = 8;
+
+	// transparency ranges from 0-1 , 0 indicates none(opaque) , 1 indicates fully transparent.
+	optional float alpha = 9;
+
+	// Hide the existing fill and act as if there is no fill. This gives a leeway to use the existing fill when enabled again.
+	optional bool hidden = 10;
+
+	optional Show.FillField.FillRule rule = 11;
+	
+	repeated ColorTweaks tweaks = 12;
+	// Added color tweaks to handle various fill options within a GroupShape.
+	//Some inner shapes now require specific adjustments, such as lighter/darker shades,
+	// or always being rendered in black/white. These tweaks allow inner shapes to
+	// override the color inherited from the parent GroupShape when necessary.
+	// Also having this as repeated - in case of multiple tweaks, this can be used. For now only one value will is enough.
+}

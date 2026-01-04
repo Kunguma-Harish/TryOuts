@@ -1,0 +1,38 @@
+include {
+ details.pb.h;
+  }
+class Details  : com::zoho::remoteboard::Details {
+  inherits Message;
+  constructor Details : com::zoho::remoteboard::Details();
+  function CopyFrom : nx_void CopyFrom(Details& arg0);
+  function Clear : nx_void Clear();
+  function has_shapeobjectindex : nx_bool has_shapeobjectindex();
+  property shapeObjectIndex : nx_int shapeObjectIndex(nx_getter : shapeobjectindex, nx_setter : set_shapeobjectindex); 
+  function has_shapeobject : nx_bool has_shapeobject();
+  property shapeObject : [own] ShapeObject*  shapeObject(nx_getter : temp_getshapeObject, nx_setter : temp_setshapeObject);
+  function has_frame : nx_bool has_frame();
+  property frame : [own] Frame*  frame(nx_getter : temp_getframe, nx_setter : temp_setframe);
+  function has_frameindex : nx_bool has_frameindex();
+  property frameIndex : nx_int frameIndex(nx_getter : frameindex, nx_setter : set_frameindex); 
+  function has_spotindex : nx_bool has_spotindex();
+  property spotIndex : nx_int spotIndex(nx_getter : spotindex, nx_setter : set_spotindex); 
+  function has_rels : nx_bool has_rels();
+  property rels : [own] Relationship*  rels(nx_getter : temp_getrels, nx_setter : temp_setrels);
+  function has_relsindex : nx_bool has_relsindex();
+  property relsIndex : nx_int relsIndex(nx_getter : relsindex, nx_setter : set_relsindex); 
+  function has_responseindex : nx_bool has_responseindex();
+  property responseIndex : nx_int responseIndex(nx_getter : responseindex, nx_setter : set_responseindex); 
+  function has_element : nx_bool has_element();
+  property element : [own] Document_ScreenOrShapeElement*  element(nx_getter : temp_getelement, nx_setter : temp_setelement);
+  property parentTypes  : [own] nx_repeated_field[nx_int]* parentTypes(nx_getter : temp_getparentTypes, nx_setter : temp_setparentTypes);
+  property parentIds  : [own] nx_repeated_field[nx_string]* parentIds(nx_getter : temp_getparentIds, nx_setter : temp_setparentIds);
+  function has_subtype : nx_bool has_subtype();
+  property subType : nx_string subType(nx_getter : subtype, nx_setter : set_subtype);
+  function has_parentid : nx_bool has_parentid();
+  property parentId : nx_string parentId(nx_getter : parentid, nx_setter : set_parentid);
+  }
+
+repeated_ptr_field  {
+protobuf_array_Details : Details;
+}
+

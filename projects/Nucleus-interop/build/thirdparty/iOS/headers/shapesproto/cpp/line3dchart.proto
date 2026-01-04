@@ -1,0 +1,18 @@
+syntax="proto3";
+
+package com.zoho.chart;
+
+option java_package = "com.zoho.chart";
+option java_outer_classname = "Line3DChartProtos";
+
+import "linechartdetails.proto";
+import "google/protobuf/protoextensions.proto";
+
+message Line3DChart {
+
+	optional LineChartDetails details = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	// Gap Depth, the z-axis. Ranges from 0-500
+	optional float 	depth = 2;
+
+}

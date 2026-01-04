@@ -1,0 +1,20 @@
+PODS:
+  - SSOKit (2.0.16)
+  - ZMacAuth (1.0.4-beta2)
+
+DEPENDENCIES:
+  - SSOKit (= 2.0.16)
+  - ZMacAuth (= 1.0.4-beta2)
+
+SPEC REPOS:
+  https://zrepository.zoho.com/zohocorp/zoho/zohopodspecs.git:
+    - SSOKit
+    - ZMacAuth
+
+SPEC CHECKSUMS:
+  SSOKit: 3a5d86f184d058035b4354e7f1aecdea107e5d2c
+  ZMacAuth: 64824e582f2bc1cd07eee117c4d3b99b94c06870
+
+PODFILE CHECKSUM: 2c76277cf289fe62f77b080bb9a068ad479e9ead
+
+COCOAPODS: 1.15.2

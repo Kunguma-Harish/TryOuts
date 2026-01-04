@@ -1,0 +1,14 @@
+syntax="proto3";
+package com.zoho.kits;
+
+option java_package = "com.zoho.kits";
+option java_outer_classname = "InvoiceKitProtos";
+
+message InvoiceKit {
+
+	enum InvoiceKitCategory {
+		UNKNOWN_INVOICE_CATEGORY = 0;
+        GENERAL = 1;	
+	}
+	optional InvoiceKitCategory type = 1;
+}

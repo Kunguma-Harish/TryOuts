@@ -1,0 +1,24 @@
+syntax="proto3";
+
+package com.zoho.common;
+
+option java_package = "com.zoho.common";
+option java_outer_classname = "GuideProtos";
+
+import "google/protobuf/protoextensions.proto";
+
+message Guide {
+	
+	enum GuideOrient {
+		DEF_GUIDE_ORIENTATION = 0;
+		HORIZONTAL = 1;
+		VERTICAL = 2;
+	}
+	optional GuideOrient orient = 1 [(com.zoho.common.customOptions).requiredField = true];
+
+	// Used in Show , we shall slowly deprecate this and move to variable "value" to store the data in float.
+	optional int32 pos = 2;
+
+	// For StartWith , we have decided to maintain the value of position in float other than int32.
+	optional float value = 3;
+}

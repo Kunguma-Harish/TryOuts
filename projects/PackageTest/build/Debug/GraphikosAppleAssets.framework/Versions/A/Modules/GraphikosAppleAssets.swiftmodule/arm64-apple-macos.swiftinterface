@@ -1,0 +1,58 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-macos11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name GraphikosAppleAssets
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AppKit
+import Foundation
+@_exported import GraphikosAppleAssets
+import AppKit.NSFontManager
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension Foundation.Bundle {
+  public static var graphikosAppleAssets: Foundation.Bundle {
+    get
+  }
+  public enum BundleType : Swift.String {
+    case showAssets
+    case showResources
+    case painterResources
+    case renderingResources
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public static func getBundle(for type: Foundation.Bundle.BundleType) -> Foundation.Bundle
+}
+extension AppKit.NSFont {
+  public var fontFamilyName: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FontHandler : ObjectiveC.NSObject {
+  public static let shared: GraphikosAppleAssets.FontHandler
+  @objc deinit
+}
+extension GraphikosAppleAssets.FontHandler {
+  public func isAvailable(fontFamily: Swift.String) -> Swift.Bool
+  public func isAvailable(fontName: Swift.String?, familyName: Swift.String) -> Swift.Bool
+  public func getPostscriptName(forFamily fontFamily: Swift.String, withStyle styleId: Swift.String) -> Swift.String?
+  public func getNullableFontID(forFamily fontFamily: Swift.String, withStyle styleId: Swift.String) -> Swift.String?
+  public func modifiedFamilyName(forFontFamily fontFamily: Swift.String) -> Swift.String
+  public func getFontNames(forFamily familyName: Swift.String) -> [Swift.String]
+  public func getDefaultFontId(forStyle styleId: Swift.String) -> Swift.String
+}
+extension GraphikosAppleAssets.FontHandler {
+  public func getStyleId(forFont fName: Swift.String) -> Swift.String
+  public func getFontWeightLabel(forStyle styleId: Swift.String) -> Swift.String?
+}
+extension GraphikosAppleAssets.FontHandler {
+  public func convertPixelValueToPoints(pixelValue: CoreFoundation.CGFloat, scale: CoreFoundation.CGFloat = 1.0) -> CoreFoundation.CGFloat
+  public func convertPointValueToPixels(pointValue: CoreFoundation.CGFloat, scale: CoreFoundation.CGFloat = 1.0) -> CoreFoundation.CGFloat
+}
+extension Foundation.Bundle.BundleType : Swift.Equatable {}
+extension Foundation.Bundle.BundleType : Swift.Hashable {}
+extension Foundation.Bundle.BundleType : Swift.RawRepresentable {}

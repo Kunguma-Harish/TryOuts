@@ -1,0 +1,4 @@
+module WMSPackage {
+header "WMSPackage-Swift.h"
+export *
+}
